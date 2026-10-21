@@ -6,13 +6,13 @@ Fișierul acesta te ajută să verifici dacă o frază e corectă ca formă: dac
 
 - **La redactare** scrii direct în română și te întrebi doar unde ai un dubiu: ce subiect are verbul, ce cuvânt determină genitivul, ce caz cere prepoziția. Regulile le folosești la recitirea ciornei.
 - **În corectură și în verificare** nu corectezi o formă doar pentru că „sună ciudat”. Înainte să judeci, citește [ce-nu-e-greseala.md](ce-nu-e-greseala.md): multe forme care par greșite sunt admise (acordul după „majoritatea”, „nici… nici”, „unul din”, „conform cu”, „copiii”, „votul a doi senatori”, „a finaliza” și altele).
-- **Nivelurile** sunt cele din SKILL.md. Normă înseamnă că forma contrazice DOOM 3, ÎOOP sau un dicționar (DEX ’98). Ghidul gov-md, scris pentru actele normative din Republica Moldova, singur nu face normă: când doar reia o normă DOOM sau ÎOOP, regula citează și norma (cu „nereverificat local” dacă n-am putut-o deschide), altfel e recomandare. Unde sursele se contrazic sau norma acceptă două acorduri, regula e recomandare sau disputată și nu se corectează ca greșeală.
+- **Nivelurile** sunt cele din SKILL.md. Normă înseamnă că forma contrazice DOOM 3, ÎOOP sau un dicționar (DEX ’98); la sintaxă (acord, regim, topica pronumelor neaccentuate), pe care aceste lucrări nu o tratează, forma contrazice gramatica academică (Coteanu) sau un manual aprobat care o aplică și o dă drept greșeală. Ghidul gov-md, scris pentru actele normative din Republica Moldova, singur nu face normă: când doar reia o normă DOOM sau ÎOOP, regula citează și norma (cu „nereverificat local” dacă n-am putut-o deschide), altfel e recomandare. Unde sursele se contrazic sau norma acceptă două acorduri, regula e recomandare sau disputată și nu se corectează ca greșeală.
 - **Citatul și textul de epocă nu se corectează.** O formă greșită dintr-un citat direct se lasă neschimbată; o semnalezi doar dacă te întreabă cineva despre ea.
 - **Rolul cuvântului decide.** Multe perechi se aud la fel și se scriu diferit după rol („s-a” / „sa”, „fi” / „fii”). Înainte să marchezi o greșeală, spui rolul cuvântului în frază.
 - **Calcurile gramaticale din engleză** (subiect nearticulat, juxtapunere, gerunziu fără subiect propriu) sunt tratate aici; calcurile de vocabular sunt în [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md).
 - **Articularea și pluralul împrumuturilor** (site-ul, e-mailuri) sunt în [imprumuturi.md](imprumuturi.md), iar semnele de punctuație, ghilimelele și majusculele în [tipografie.md](tipografie.md).
 
-Abrevierile din câmpul „Sursă”: Coteanu = I. Coteanu, *Gramatica de bază a limbii române*, 1982; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; curs = *Corectitudinea exprimării*, curs universitar din 2010, fără autor identificat (vezi [surse.md](surse.md)). Unde sursa nu a putut fi deschisă la redactare, câmpul se încheie cu „(nereverificat local)”.
+Abrevierile din câmpul „Sursă”: Coteanu = I. Coteanu, *Gramatica de bază a limbii române*, 1982; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; curs = *Corectitudinea exprimării*, curs universitar din 2010, fără autor identificat; manualele aprobate de Ministerul Educației sunt citate cu titlul, clasa, editura și anul (vezi [surse.md](surse.md)). Unde sursa nu a putut fi deschisă la redactare, câmpul se încheie cu „(nereverificat local)”.
 
 ## 1. Acordul predicatului cu subiectul
 
@@ -33,22 +33,22 @@ Bun:
 Cazul pe care îl lași neatins: acordul după înțeles sau prin atracție, unde normele acceptă două forme (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md), RO-NUG-019 și RO-NUG-021). „Majoritatea angajaților a votat” și „majoritatea angajaților au votat” sunt la fel de corecte; nu o rescrii pe una în cealaltă.
 
 ### RO-GRA-001 Subiect multiplu legat prin „și” sau virgulă
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Ministrul și secretarul de stat a semnat protocolul.” → Corect: „Ministrul și secretarul de stat au semnat protocolul.”
-- De ce: Doi sau mai mulți termeni uniți prin „și” sau prin virgulă formează un subiect multiplu, iar predicatul stă la plural. Dacă printre termeni e persoana I, verbul ia persoana I plural („Eu și Andrei ne pregătim”); dacă e persoana a II-a, fără persoana I, ia persoana a II-a plural.
-- Sursă: Coteanu, §33.1.2; ghid gov-md §7.3.1
+- De ce: Doi sau mai mulți termeni uniți prin „și” sau prin virgulă formează un subiect multiplu, iar predicatul stă la plural. Dacă printre termeni e persoana I, verbul ia persoana I plural („Eu și Andrei ne pregătim”); dacă e persoana a II-a, fără persoana I, ia persoana a II-a plural. Cu subiectul multiplu așezat după verb, acordul prin atracție cu primul termen se întâlnește în uz și se tratează la RO-GRA-004.
+- Sursă: Coteanu, §33.1.2; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 107; Limba și literatura română, cls. a V-a, Art Klett, 2022, lecția 11; ghid gov-md §7.3.1
 
 ### RO-GRA-002 „Sau”, „ori”, „fie… fie” cer singularul
 - Nivel: recomandare
 - Greșit: „Primarul sau viceprimarul vor semna actul.” → Corect: „Primarul sau viceprimarul va semna actul.”
 - De ce: Conjuncțiile disjunctive aleg unul dintre termeni, deci verbul stă la singular când termenii se exclud. Dacă nu se exclud („Mama sau tata pot veni”), gramaticile admit și pluralul, iar dacă un termen e la plural verbul se acordă cu el („Statul sau unitățile administrative au dreptul…”). Propui singularul în textele oficiale, fără să corectezi pluralul din uzul curent.
-- Sursă: ghid gov-md §7.3.4
+- Sursă: ghid gov-md §7.3.4; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 107 (termeni coordonați disjunctiv: singular)
 
 ### RO-GRA-003 „Nici… nici” cu termeni la singular și la plural
 - Nivel: recomandare
-- Greșit: „Nici mama, nici copiii nu a ajuns.” → Corect: „Nici mama, nici copiii nu au ajuns.”
-- De ce: Cu termeni la singular, sursele nu tranșează între singular și plural, deci nu corectezi niciuna dintre forme (RO-NUG-021). Când ultimul termen e la plural, verbul trece obligatoriu la plural.
-- Sursă: Coteanu, §33.1.2; ghid gov-md §7.3.3
+- Greșit: „Nici directorul, nici angajații nu a semnat.” → Corect: „Nici directorul, nici angajații nu au semnat.”
+- De ce: Cu termeni la singular, sursele nu tranșează între singular și plural (manualul aprobat acceptă ambele acorduri), deci nu corectezi niciuna dintre forme (RO-NUG-021). Când ultimul termen e la plural, propui verbul la plural, acordul sigur al subiectului multiplu. Pentru că manualul nu condamnă singularul nici aici, rămâne recomandare.
+- Sursă: Coteanu, §33.1.2; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 107; ghid gov-md §7.3.3
 
 ### RO-GRA-004 Subiectul multiplu pus după verb
 - Nivel: recomandare
@@ -71,14 +71,14 @@ Cazul pe care îl lași neatins: acordul după înțeles sau prin atracție, und
 ### RO-GRA-008 Colectiv la singular fără determinant plural
 - Nivel: recomandare
 - Greșit: „Consiliul de administrație au decis amânarea.” → Corect: „Consiliul de administrație a decis amânarea.”
-- De ce: Substantivele colective care numesc instituții (guvernul, consiliul, comisia, echipa) sunt la singular, iar ghidul gov-md cere predicatul la singular în textele oficiale; genitivul plural care le însoțește nu schimbă regula: „Comitetul de miniștri a decis”. Pluralul după înțeles se întâlnește în uz (broșura IL îl tolerează la „grup, mulțime, serie”), de aceea în alte texte doar propui singularul.
-- Sursă: ghid gov-md §7.3.19; B. Croitor et al., 2014, p. 56
+- De ce: Substantivele colective care numesc instituții (guvernul, consiliul, comisia, echipa) sunt la singular, iar ghidul gov-md cere predicatul la singular în textele oficiale; genitivul plural care le însoțește nu schimbă regula: „Comitetul de miniștri a decis”. Pluralul după înțeles se întâlnește în uz (broșura IL îl tolerează la „grup, mulțime, serie”), iar manualul aprobat îl numără printre abaterile de la regula acordului, dar îl dă ca admis la „majoritatea” (RO-NUG-019) și propune corectarea lui la un colectiv instituțional doar într-un exercițiu. De aceea, în alte texte doar propui singularul.
+- Sursă: ghid gov-md §7.3.19; B. Croitor et al., 2014, p. 56; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 107–108
 
-### RO-GRA-009 „Fiecare” și „orice” cer singularul
-- Nivel: recomandare
-- Greșit: „Comisia regretă orice întârzieri.” → Corect: „Comisia regretă orice întârziere.”
-- De ce: „Orice” și „fiecare” au sens distributiv și se acordă la singular, la fel și verbul care le urmează („fiecare dintre noi citește”). Ghidul gov-md dă formele cu plural drept greșite, dar vorbirea consemnează și acordul prin atracție, de aceea la redactare propui singularul, fără să-l impui în orice text.
-- Sursă: ghid gov-md §7.3.6
+### RO-GRA-009 „Fiecare” cere singularul, „orice” rămâne corect cu pluralul
+- Nivel: normă
+- Greșit: „Fiecare dintre angajați primesc un card.” → Corect: „Fiecare dintre angajați primește un card.”
+- De ce: „Fiecare” are sens distributiv și verbul se acordă cu el, la singular, chiar dacă după „dintre” urmează un plural („fiecare dintre noi citește”). Acordul la plural e un acord prin atracție cu cuvântul cel mai apropiat. „Orice” e invariabil și poate sta și lângă un substantiv la plural: „orice întârzieri”, „orice nelămuriri” sunt corecte și nu se schimbă în singular. Ghidul gov-md cere singularul și după „orice”, dar dicționarele normative dau chiar un exemplu cu plural.
+- Sursă: Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 107 (fiecare dintre…, acord prin atracție); DOOM 3, s.v. orice1 (adj. pr. invar., exemplul „~ nelămuriri”); ÎOOP6, s.v. orice1 (exemplul „orice nelămuriri”); ghid gov-md §7.3.6 (cere singularul și după „orice”)
 
 ### RO-GRA-010 „Care” subiect ia persoana cuvântului înlocuit
 - Nivel: normă
@@ -115,8 +115,8 @@ Bun:
 ### RO-GRA-013 Substantive de genuri diferite
 - Nivel: recomandare
 - Greșit: „Fata și băiatul ei sunt vesele.” → Corect: „Fata și băiatul ei sunt veseli.”
-- De ce: Cu nume de ființe de genuri diferite, numele predicativ ia de obicei masculinul plural. Cu nume de lucruri de genuri diferite, ghidul acordă cu substantivul mai apropiat („Muntele și valea sunt împădurite”), dar uzul variază și nu corectezi o variantă în alta.
-- Sursă: ghid gov-md §7.3.1
+- De ce: Cu nume de ființe de genuri diferite, numele predicativ ia de obicei masculinul plural; manualul aprobat dă același acord. Cu nume de lucruri de genuri diferite, ghidul acordă cu substantivul mai apropiat („Muntele și valea sunt împădurite”), pe când manualul dă prioritate femininului, iar uzul variază; nu corectezi o variantă în alta.
+- Sursă: ghid gov-md §7.3.1; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 107
 
 ### RO-GRA-014 Determinantul de tip „din punct de vedere” nu se acordă
 - Nivel: normă
@@ -178,7 +178,7 @@ Bun:
 - Nivel: recomandare
 - Greșit: „respectul onoarei, demnității și reputației sale” → Corect: „respectul onoarei, al demnității și al reputației sale”
 - De ce: Articolul genitival se reia înaintea fiecărui genitiv începând cu al doilea. Nu se reia când noțiunile formează o unitate („ministrul educației și cercetării”) sau când substantivul determinat e la plural și fiecare genitiv se leagă de singularul lui („acoperișurile școlii și spitalului”).
-- Sursă: ghid gov-md §7.3.14
+- Sursă: ghid gov-md §7.3.14; Limba și literatura română, cls. a VII-a, Art Klett, 2024, p. 111 (la genitivele cerute de prepoziție, articolul genitival se repetă la fiecare termen)
 
 ### RO-GRA-022 Doi determinanți coordonați
 - Nivel: recomandare
@@ -205,10 +205,10 @@ Bun:
 - Sursă: Coteanu, Gramatica de bază (1982), §29.3.1
 
 ### RO-GRA-142 Articolul genitival cu substantiv nearticulat sau cu intercalări
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „o casă vecinului” → Corect: „o casă a vecinului”
-- De ce: Articolul genitival lipsește doar când genitivul urmează direct după un substantiv cu articol hotărât („casa vecinului”). Rămâne obligatoriu după articol nehotărât sau demonstrativ („acest elev al profesorului”), după un adjectiv sau un text intercalat („elevul preferat al profesorului”) și înaintea fiecărui genitiv coordonat de la al doilea încolo.
-- Sursă: Coteanu, Gramatica de bază (1982), p. 113; B. Croitor et al., 2014 (nereverificat local pentru pagină)
+- De ce: Articolul genitival lipsește doar când genitivul urmează direct după un substantiv cu articol hotărât („casa vecinului”). Rămâne obligatoriu după articol nehotărât sau demonstrativ („acest elev al profesorului”) și după un adjectiv sau un text intercalat („elevul preferat al profesorului”). Repetarea lui la genitivele coordonate se tratează la RO-GRA-021.
+- Sursă: Coteanu, §11.1.3 și §11.9; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 64
 
 ### RO-GRA-174 Genitivul numelor feminine în -a
 - Nivel: recomandare
@@ -337,8 +337,8 @@ Bun:
 ### RO-GRA-183 „A mai multor”
 - Nivel: recomandare
 - Greșit: „realizarea a mai multor activități” → Corect: „realizarea mai multor activități”
-- De ce: După un substantiv nearticulat, genitivul pronumelui de cantitate nu primește „a”: „realizarea mai multor activități” (cu forma de genitiv) sau „realizarea a mai multe activități” (cu „a” și forma fără caz). Cumulul „a mai multor” e greșit.
-- Sursă: ghid gov-md §7.3.15
+- De ce: După un substantiv cu articol hotărât genitivul urmează direct, fără „a”: „realizarea mai multor activități” (cu forma de genitiv) sau, după ghid, „realizarea a mai multe activități” (cu „a” și forma fără caz). Cumulul „a mai multor” după un asemenea substantiv e greșit. „A” rămâne necesar când substantivul determinat nu are articol hotărât sau când între el și genitiv se intercalează ceva („prezența în sală a mai multor invitați”, RO-GRA-142).
+- Sursă: ghid gov-md §7.3.15; Coteanu, §11.1.3 (articolul genitival suplinește lipsa articolului hotărât)
 
 ## 6. Conjuncții și adverbe
 
@@ -417,8 +417,8 @@ Corelativele au două părți și se folosesc întregi: „fie… fie”, „nic
 ### RO-GRA-054 Pronumele subiect la persoanele I și a II-a
 - Nivel: recomandare
 - Greșit: „Noi considerăm că proiectul e gata.” → Corect: „Considerăm că proiectul e gata.”
-- De ce: Verbul arată singur persoana, deci pronumele subiect se omite, în afară de contrast sau insistență: „Noi am votat, nu ei”, „Încearcă tu asta”. Nu corectezi un pronume pus după verb pentru insistență. Engleza cere pronumele peste tot, de aceea omiterea lui e un semn de text scris în română.
-- Sursă: Coteanu, Gramatica de bază (1982), pronumele personal (nereverificat local, pagina)
+- De ce: Verbul arată singur persoana, deci pronumele subiect se omite, în afară de contrast sau insistență: „Noi am votat, nu ei”, „Încearcă tu asta”. Nu corectezi un pronume pus după verb pentru insistență. Engleza cere pronumele peste tot, de aceea omiterea lui e un semn de text scris în română. Un singur manual aprobat (cls. a VI-a, Art Klett) numește pronumele redundant „greșeală”; alt manual de aceeași clasă descrie doar subiectul inclus, fără să-l condamne, iar pronumele subiect nu contrazice nicio normă a limbii. De aceea rămâne recomandare.
+- Sursă: Limba și literatura română, cls. a VI-a, Art Klett, 2023, lecția 13; Limba și literatura română, cls. a VI-a, EDP, 2023 (subiectul neexprimat)
 
 ## 8. Substantivul: pluralul, genul și articolul
 
@@ -487,8 +487,8 @@ Bun:
 ### RO-GRA-149 Subiectul nearticulat dintr-un mesaj cu verb
 - Nivel: recomandare
 - Greșit: „Utilizator a fost șters.” → Corect: „Utilizatorul a fost șters.”
-- De ce: Într-o propoziție cu verb, subiectul care numește un referent anume se articulează enclitic, spre deosebire de engleză, unde „User was deleted” e uzual. Etichetele, titlurile și capetele de tabel fără verb pot rămâne nearticulate („Fișier salvat”), afară de cazul în care urmează un genitiv sau acordul cere articol. Același lucru pentru „the function” → „funcția”. Acordul unui termen luat dintr-un glosar cu fraza în care intră e tratat în RO-FID-010 din [fidelitate.md](fidelitate.md).
-- Sursă: DSL (substantivul singular apare rar nearticulat în română)
+- De ce: Într-o propoziție cu verb, subiectul care numește un referent anume se articulează enclitic, spre deosebire de engleză, unde „User was deleted” e uzual. Etichetele, titlurile și capetele de tabel fără verb pot rămâne nearticulate („Fișier salvat”), afară de cazul în care urmează un genitiv sau acordul cere articol. Același lucru pentru „the function” → „funcția”. Nici Coteanu, nici manualul aprobat nu interzic subiectul nearticulat: îl descriu ca pe o alegere (la sens general: „Copii citesc”), de aceea rămâne recomandare. Acordul unui termen luat dintr-un glosar cu fraza în care intră e tratat în RO-FID-010 din [fidelitate.md](fidelitate.md).
+- Sursă: Coteanu, §11.10; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 64 (alegerea articulării depinde de situația de comunicare); DSL (substantivul singular apare rar nearticulat în română)
 
 ### RO-GRA-150 Substantive alăturate după model englezesc
 - Nivel: recomandare
@@ -499,8 +499,8 @@ Bun:
 ### RO-GRA-154 Pronumele reia genul substantivului românesc
 - Nivel: normă
 - Greșit: „Funcția trebuie testată, apoi el se publică.” → Corect: „Funcția trebuie testată, apoi ea se publică.”
-- De ce: Pronumele reia genul substantivului din textul românesc, nu pe „it” din engleză: „funcția… ea”, „tabloul… el”, „tablourile… ele”. Neutrul e masculin la singular și feminin la plural. Aceeași regulă, cu exemplul „e-mail” neutru, e la RO-COE-026 din [coerenta.md](coerenta.md).
-- Sursă: DOOM 3, Îndrumări pentru consultarea dicționarului §7.8 (acordul pronumelor cu genul substantivului); DSL, s.v. ACORD (acordul substitutelor cu antecedentul)
+- De ce: Pronumele reia genul substantivului din textul românesc, nu pe „it” din engleză: „funcția… ea”, „tabloul… el”, „tablourile… ele”. Genul e o trăsătură a pronumelui personal de persoana a III-a (el, ea, ei, ele), deci regula e aceeași pentru toate genurile. Neutrul e masculin la singular și feminin la plural. Aceeași regulă, cu exemplul „e-mail” neutru, e la RO-COE-026 din [coerenta.md](coerenta.md).
+- Sursă: Coteanu, §5 (genul ca trăsătură și a pronumelor; neutrul primește „acest”, „aceste”) și §13.1 (el, ea, ei, ele după gen); Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 68; DOOM 3, Îndrumări pentru consultarea dicționarului §7.8 (acordul pronumelor cu genul substantivului); DSL, s.v. ACORD (acordul substitutelor cu antecedentul)
 
 ### RO-GRA-182 Substantivul după prepoziție
 - Nivel: recomandare
@@ -605,8 +605,8 @@ Bun:
 ### RO-GRA-159 Gerunziul fără subiect propriu
 - Nivel: recomandare
 - Greșit: „Mergând pe stradă, a început ploaia.” → Corect: „Pe când mergeam pe stradă, a început ploaia.”
-- De ce: Un gerunziu circumstanțial fără subiect propriu se raportează la subiectul verbului principal. Dacă acțiunea lui nu aparține acelui subiect, construcția e greșită și se rescrie cu o subordonată. Construcția absolută, cu subiect propriu, rămâne corectă („Venind iarna, păsările au plecat”, RO-NUG-060). La fel „Folosind datele, concluzia este…” → „Din date reiese că…”.
-- Sursă: Coteanu, Gramatica de bază (1982), gerunziul; DSL, s.v. ABSOLUT, -Ă (construcție ~)
+- De ce: Un gerunziu circumstanțial fără subiect propriu se raportează la subiectul verbului principal. Dacă acțiunea lui nu aparține acelui subiect, construcția e greșită și se rescrie cu o subordonată. Construcția absolută, cu subiect propriu, rămâne corectă („Venind iarna, păsările au plecat”, RO-NUG-060). La fel „Folosind datele, concluzia este…” → „Din date reiese că…”. Coteanu descrie gerunziul ca pe un determinant al predicatului, fără să condamne raportarea la alt subiect, de aceea rămâne recomandare.
+- Sursă: Coteanu, §23 (gerunziul); DSL, s.v. ABSOLUT, -Ă (construcție ~)
 
 ### RO-GRA-164 Imperativul lui „a tăia”
 - Nivel: recomandare
@@ -831,16 +831,16 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 - Sursă: DEX ’98 s.v. decât; GALR (nereverificat local)
 
 ### RO-GRA-169 Interogativa indirectă cu „dacă”
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „L-am întrebat că vine.” → Corect: „L-am întrebat dacă vine.”
 - De ce: Întrebarea indirectă la care se răspunde cu da sau nu se introduce prin „dacă”, nu prin „că”. Cu un cuvânt de întrebare, acesta rămâne fără „că” înainte: „M-a întrebat unde m-am dus”.
-- Sursă: Coteanu, Gramatica de bază (1982), vorbirea indirectă (nereverificat local pentru secțiune)
+- Sursă: Coteanu, §37.1 (propozițiile interogative trecute în vorbirea indirectă)
 
 ### RO-GRA-173 Negația dublă și domeniul negației
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Niciun fișier a fost găsit.” → Corect: „Niciun fișier nu a fost găsit.”
-- De ce: Cu „niciun”, „nimeni”, „nimic” româna cere și „nu” pe lângă verb. Ordinea negației după engleză schimbă sensul: „Toate fișierele nu au fost salvate” (engl. „not all”) se spune „Nu toate fișierele au fost salvate” sau „Niciun fișier nu a fost salvat”, după sens.
-- Sursă: ghid gov-md §7.3.11; Coteanu, Gramatica de bază (1982), §28.8 (nereverificat local)
+- De ce: Cu „niciun”, „nimeni”, „nimic” româna cere și „nu” pe lângă verb, oriunde ar sta pronumele negativ în enunț. Ordinea negației după engleză nu e greșeală de normă, ci ambiguitate: „Toate fișierele nu au fost salvate” (engl. „not all”) poate însemna că niciunul sau că doar unele nu s-au salvat. O semnalezi ca ambiguitate și o rescrii după sens: „Nu toate fișierele au fost salvate” sau „Niciun fișier nu a fost salvat”.
+- Sursă: Coteanu, §14.5.5 (pronumele negativ); Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 79 (concordanța negativă); ghid gov-md §7.3.11
 
 ### RO-GRA-141 „Mult” și „foarte”
 - Nivel: recomandare
@@ -849,10 +849,10 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 - Sursă: DEX ’98 s.v. foarte, mult
 
 ### RO-GRA-146 Genitivul după substantivul verbal
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „prin deschiderea un bug” → Corect: „prin deschiderea unui bug”
-- De ce: Substantivul articulat „deschiderea” cere complementul la genitiv: „deschiderea unui bug”.
-- Sursă: DSL, s.v. GENITIV (nereverificat local)
+- De ce: Substantivul articulat „deschiderea” cere complementul la genitiv („genitiv obiectiv”): „deschiderea unui bug”. Sintagma „deschiderea un bug” lasă complementul fără marca genitivului.
+- Sursă: Coteanu, §7.3.2
 
 ### RO-GRA-095 „Că” după verbele de declarație
 - Nivel: normă
@@ -863,8 +863,8 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 ### RO-GRA-097 Anacolut
 - Nivel: recomandare
 - Greșit: „Tata, când am plecat, i s-a făcut rău.” → Corect: „Tatei, când am plecat, i s-a făcut rău.”
-- De ce: Fraza începe cu o construcție și continuă cu alta; elementul pus în față nu primește cazul cerut de verbul care îl reia („Tata… i s-a făcut rău”). DEX ’98 definește anacolutul doar descriptiv, ca „ruptură logico-sintactică”, deci nu e o abatere de normă, ci un fapt de vorbire. În textul informativ propui forma cu cazul potrivit; în literatură și în citatul oral rămâne neschimbat.
-- Sursă: DEX ’98 s.v. anacolut
+- De ce: Fraza începe cu o construcție și continuă cu alta; elementul pus în față nu primește cazul cerut de verbul care îl reia („Tata… i s-a făcut rău”). DEX ’98 definește anacolutul doar descriptiv, ca „ruptură logico-sintactică”, deci nu e o abatere de normă, ci un fapt de vorbire; un manual aprobat îl tratează totuși ca greșeală sintactică într-un exercițiu de corectare. În textul informativ propui forma cu cazul potrivit; în literatură și în citatul oral rămâne neschimbat.
+- Sursă: DEX ’98 s.v. anacolut; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 108 (exercițiu de identificare a greșelii sintactice)
 
 ### RO-GRA-098 Contaminarea a două construcții
 - Nivel: normă
@@ -889,14 +889,14 @@ Bun:
 ### RO-GRA-099 Grupul verbal rămâne compact
 - Nivel: recomandare
 - Greșit: „nu mai l-a văzut” → Corect: „nu l-a mai văzut”
-- De ce: Ordinea în grupul verbal e negație, pronume neaccentuat, auxiliar, semiadverb („mai”, „cam”, „și”, „prea”, „tot”), apoi verbul: „nu l-a mai văzut”, „nu și-a mai amintit”. Semiadverbul nu se pune după verb în locul lui: nu „l-a văzut mai”.
-- Sursă: DSL, s.v. TOPICĂ
+- De ce: Ordinea în grupul verbal e negație, pronume neaccentuat, auxiliar, semiadverb („mai”, „cam”, „și”, „prea”, „tot”), apoi verbul: „nu l-a mai văzut”, „nu și-a mai amintit”. Coteanu fixează pronumele scurt înaintea auxiliarului și admite între auxiliar și participiu doar câteva semiadverbe; locul lui „mai” față de pronume nu e stabilit explicit, de aceea rămâne recomandare. Semiadverbul nu se pune după verb în locul lui: nu „l-a văzut mai”.
+- Sursă: Coteanu, §13.1.4 și §18.6; DSL, s.v. TOPICĂ
 
 ### RO-GRA-100 Pronumele neaccentuat înaintea verbului
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „A spus-le adevărul.” → Corect: „Le-a spus adevărul.”
-- De ce: Pronumele neaccentuat stă înaintea verbului; după verb doar la imperativul afirmativ: „le-a spus”, „spune-le!”, „nu le spune!”.
-- Sursă: DSL, s.v. TOPICĂ
+- De ce: Forma scurtă a pronumelui stă înaintea verbului la indicativ, la conjunctiv și la infinitiv, iar la timpurile compuse înaintea auxiliarului: „le-a spus”, „i-am dat”, „nu le spune!”. După verb stă doar la imperativul afirmativ și la gerunziu („spune-le!”, „spunându-le”); forma „o” stă după verb la perfectul compus și la condițional („am văzut-o”).
+- Sursă: Coteanu, §13.1.4; DSL, s.v. TOPICĂ
 
 ### RO-GRA-179 Verbul la finalul frazei sau al subordonatei
 - Nivel: recomandare
@@ -905,10 +905,10 @@ Bun:
 - Sursă: DSL, s.v. TOPICĂ; Al. Nicolae, *Ordinea constituenților*, 2015 (nereverificat local)
 
 ### RO-GRA-180 Auxiliarul despărțit de participiu
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Comisia a ieri după-amiază raportul trimis.” → Corect: „Comisia a trimis ieri după-amiază raportul.”
-- De ce: Auxiliarul „a, am, ai” rămâne lipit de participiu; circumstanțialele vin după grupul verbal sau la începutul frazei („Ieri după-amiază, comisia a trimis raportul”). Despărțirea auxiliarului de participiu prin circumstanțiale copiază ordinea altor limbi.
-- Sursă: DSL, s.v. TOPICĂ; B. Croitor et al., 2014 (nereverificat local pentru pagină)
+- De ce: Auxiliarul „a, am, ai” rămâne lângă participiu: între ele pot intra doar semiadverbe scurte („a mai trimis”, „a și plecat”). Circumstanțialele vin după grupul verbal sau la începutul frazei („Ieri după-amiază, comisia a trimis raportul”). Despărțirea auxiliarului de participiu prin circumstanțiale copiază ordinea altor limbi.
+- Sursă: Coteanu, §18.6 (timpurile compuse nu admit între auxiliar și participiu decât câteva adverbe); DSL, s.v. TOPICĂ
 
 ### RO-GRA-181 Atributul lung înaintea substantivului
 - Nivel: recomandare
