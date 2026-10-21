@@ -79,3 +79,54 @@ func TestDirectorInProzaNuEProblema(t *testing.T) { curat(t, "bun_dir") }
 func TestYamlBlocFaraEngleza(t *testing.T)        { verifica(t, "yaml_fara_en", "engleză") }
 func TestTitluIdInvalid(t *testing.T)             { verifica(t, "titlu_gresit", "ID invalid") }
 func TestTitluNivelGresit(t *testing.T)           { verifica(t, "titlu_gresit2", "###") }
+
+func TestPermiteReferinteLipsa(t *testing.T) {
+	opt := Optiuni{PermiteReferinteLipsa: true}
+
+	t.Run("cu optiunea: avertisment, nu problema", func(t *testing.T) {
+		pr, av, err := PachetCuOptiuni(filepath.Join("testdata", "rau", "legaturi_lipsa"), opt)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if len(pr) != 0 {
+			t.Fatalf("nu așteptam probleme: %v", pr)
+		}
+		if len(av) != 1 || !strings.Contains(av[0].Cale+" "+av[0].Motiv, "references/x.md") {
+			t.Fatalf("așteptam 1 avertisment despre references/x.md: %v", av)
+		}
+	})
+
+	t.Run("fara optiune: problema", func(t *testing.T) {
+		pr, av, err := PachetCuOptiuni(filepath.Join("testdata", "rau", "legaturi_lipsa"), Optiuni{})
+		if err != nil {
+			t.Fatal(err)
+		}
+		if len(pr) != 1 || len(av) != 0 {
+			t.Fatalf("așteptam 1 problemă și 0 avertismente: %v / %v", pr, av)
+		}
+		verifica(t, "legaturi_lipsa", "references/x.md") // Pachet rămâne strict
+	})
+
+	t.Run("alta problema ramane problema", func(t *testing.T) {
+		pr, av, err := PachetCuOptiuni(filepath.Join("testdata", "rau", "lipsa_si_sedila"), opt)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if len(pr) != 1 || !strings.Contains(pr[0].Motiv, "sedilă") {
+			t.Fatalf("așteptam 1 problemă (sedilă): %v", pr)
+		}
+		if len(av) != 1 {
+			t.Fatalf("așteptam 1 avertisment: %v", av)
+		}
+	})
+
+	t.Run("fisier orfan ramane problema", func(t *testing.T) {
+		pr, av, err := PachetCuOptiuni(filepath.Join("testdata", "rau", "legaturi_orfan"), opt)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if len(pr) != 1 || len(av) != 0 {
+			t.Fatalf("așteptam 1 problemă și 0 avertismente: %v / %v", pr, av)
+		}
+	})
+}

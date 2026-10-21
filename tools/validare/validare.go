@@ -38,15 +38,30 @@ var (
 	reLink    = regexp.MustCompile(`references/[A-Za-z0-9_./-]+`)
 )
 
-// Pachet validează directorul unui skill (cel care conține SKILL.md).
+// Optiuni reglează cât de strictă este validarea.
+type Optiuni struct {
+	// PermiteReferinteLipsa mută legăturile din SKILL.md spre fișiere
+	// inexistente din references/ din probleme în avertismente (pentru
+	// cârligul local de pre-commit; CI rămâne strict).
+	PermiteReferinteLipsa bool
+}
+
+// Pachet validează strict directorul unui skill (cel care conține SKILL.md).
 // Căile din probleme sunt relative la dirSkill.
 func Pachet(dirSkill string) ([]Problema, error) {
-	var pr []Problema
+	pr, _, err := PachetCuOptiuni(dirSkill, Optiuni{})
+	return pr, err
+}
+
+// PachetCuOptiuni validează ca Pachet, dar după opțiuni poate muta unele
+// probleme în avertismente. Orice altă problemă rămâne problemă.
+func PachetCuOptiuni(dirSkill string, o Optiuni) (probleme []Problema, avertismente []Problema, err error) {
+	var pr, av []Problema
 	adauga := func(cale, motiv string) { pr = append(pr, Problema{Cale: cale, Motiv: motiv}) }
 
 	continut, err := os.ReadFile(filepath.Join(dirSkill, "SKILL.md"))
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	skill := string(continut)
 	randuri := strings.Split(strings.TrimSuffix(skill, "\n"), "\n")
@@ -73,7 +88,7 @@ func Pachet(dirSkill string) ([]Problema, error) {
 		return nil
 	})
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	sort.Strings(refs)
 
@@ -97,7 +112,12 @@ func Pachet(dirSkill string) ([]Problema, error) {
 	}
 	sort.Strings(lipsa)
 	for _, l := range lipsa {
-		adauga("SKILL.md", "legătură spre fișier inexistent: "+l)
+		motiv := "legătură spre fișier inexistent: " + l
+		if o.PermiteReferinteLipsa {
+			av = append(av, Problema{Cale: "SKILL.md", Motiv: motiv})
+		} else {
+			adauga("SKILL.md", motiv)
+		}
 	}
 	for _, r := range refs {
 		if !mentionate[r] {
@@ -112,7 +132,7 @@ func Pachet(dirSkill string) ([]Problema, error) {
 		if rel != "SKILL.md" {
 			b, err := os.ReadFile(filepath.Join(dirSkill, filepath.FromSlash(rel)))
 			if err != nil {
-				return nil, err
+				return nil, nil, err
 			}
 			text = string(b)
 		}
@@ -147,7 +167,7 @@ func Pachet(dirSkill string) ([]Problema, error) {
 			}
 		}
 	}
-	return pr, nil
+	return pr, av, nil
 }
 
 // frontmatter verifică blocul dintre primele două linii „---”.
