@@ -61,7 +61,7 @@ Rămân neatinse:
 
 Verbele și adverbele care exprimă cât de sigură e o afirmație se pun pe o scară, și rescrierea rămâne pe aceeași treaptă. Aproximativ, de la mai sigur la mai puțin sigur: „e”, „trebuie” (obligație) sau „sigur” → „ar trebui” sau „se recomandă” → „probabil” → „poate” sau „ar putea” → „se spune că”. „Trebuie” are două lecturi: obligație („Trebuie să semnezi”) și presupunere („Trebuie să fie acasă”). Dacă textul nu lămurește despre care e vorba, nu hotărăști tu: semnalezi sau întrebi.
 
-Când mai multe mărci de nesiguranță se adună („e posibil ca, eventual, programul să ducă la o scădere”), le reduci la una singură care păstrează gradul („programul poate duce la o scădere”). Scoți ambalajul, nu gradul.
+Când mai multe mărci de nesiguranță se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), le reduci la una singură care păstrează gradul și condiția („măsura poate ajuta în unele cazuri”). Scoți ambalajul, nu gradul.
 
 ## Citate și atribuiri
 
@@ -165,17 +165,17 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 - De ce: Sursa afirmă cu certitudine („va schimba”). Rescrierea o înlocuiește cu o îndoială și inversează mesajul. Gradul de certitudine se păstrează în ambele sensuri: nici mai sigur, nici mai puțin sigur decât sursa (vezi RO-FID-021).
 - Sursă: regulă de fidelitate a skill-ului
 
-### RO-FID-018 Nu adaugi un adjectiv care colorează
+### RO-FID-018 Nu adaugi un adjectiv sau un adverb care colorează
 - Nivel: normă
-- Greșit: „Sursa: «Ritmul face parte din atmosfera piesei.» → «Ritmul susține atmosfera tensionată a piesei.»” → Corect: „Ritmul face parte din atmosfera piesei.”
-- De ce: „Tensionată” e o caracterizare pe care sursa nu o conține. Un adjectiv adăugat „ca să fie mai viu” spune ceva despre obiect. Dacă sursa nu spune cum e atmosfera, nu o descrii.
+- Greșit: „Sursa: «Corul a cântat la inaugurare.» → «Corul a cântat emoționant la inaugurare.»” → Corect: „Corul a cântat la inaugurare.”
+- De ce: „Emoționant” e o caracterizare pe care sursa nu o conține. Un adjectiv sau un adverb adăugat „ca să fie mai viu” spune ceva despre acțiune sau despre obiect. Dacă sursa nu spune cum a fost, nu descrii.
 - Sursă: regulă de fidelitate a skill-ului
 
-### RO-FID-019 Nu adaugi o calificare care sugerează o verificare
+### RO-FID-019 Nu adaugi o calificare care îi dă surselor un statut
 - Nivel: normă
-- Greșit: „Sursa: «Analiza se bazează pe date.» → «Analiza se bazează pe date reale.»” → Corect: „Analiza se bazează pe date.”
-- De ce: „Reale” sugerează că datele au fost verificate sau că altele ar fi fost false. Sursa spune doar că există date. O calificare adăugată pe un substantiv schimbă ce se afirmă despre el.
-- Sursă: regulă de fidelitate a skill-ului; DEX '98 s.v. real
+- Greșit: „Sursa: «Raportul citează mai multe surse.» → «Raportul citează mai multe surse oficiale.»” → Corect: „Raportul citează mai multe surse.”
+- De ce: „Oficiale” sugerează un statut (autoritate, verificare) pe care sursa nu-l afirmă. O calificare adăugată pe un substantiv schimbă ce se afirmă despre el.
+- Sursă: regulă de fidelitate a skill-ului; DEX '98 s.v. oficial
 
 ### RO-FID-020 Nu adaugi cifre, nume, date, locuri, surse, opinii
 - Nivel: normă
@@ -186,7 +186,7 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 ### RO-FID-021 Certitudinea rămâne cea din sursă
 - Nivel: normă
 - Greșit: „Sursa: «Metoda poate reduce erorile.» → «Metoda reduce erorile.»” → Corect: „Metoda poate reduce erorile.”
-- De ce: „Poate reduce” spune că se întâmplă uneori sau în anumite condiții, „reduce” spune că se întâmplă. A trece de la prima la a doua înseamnă a-i promite cititorului mai mult decât sursa. Când modalizatorii se adună („e posibil ca, eventual, programul să ducă la o scădere”), îi reduci la unul care păstrează gradul („programul poate duce la o scădere”), dar nu îl ridici.
+- De ce: „Poate reduce” spune că se întâmplă uneori sau în anumite condiții, „reduce” spune că se întâmplă. A trece de la prima la a doua înseamnă a-i promite cititorului mai mult decât sursa. Când modalizatorii se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), îi reduci la unul care păstrează gradul și condiția („măsura poate ajuta în unele cazuri”), dar nu îl ridici.
 - Sursă: regulă de fidelitate a skill-ului; DSL, s.v. MODALITATE
 
 ### RO-FID-022 Condițiile și mărcile de opinie se păstrează

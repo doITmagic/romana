@@ -40,7 +40,7 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 | Atribuire vagă | „Specialiștii recomandă…” | numești sursa sau renunți | RO-STI-231 |
 | Importanță declarată | „Nu trebuie uitat că…” | spui faptul | RO-STI-228 |
 | Antiteză falsă | „Nu e doar o băutură, ci un ritual” | spui ce este | RO-STI-233 |
-| Final fără afirmație | „Timpul va arăta…” | te oprești la ultimul fapt | RO-STI-210 |
+| Final fără afirmație | „Rămâneți aproape.” | te oprești la ultimul fapt | RO-STI-210 |
 
 ## Urmele conversației
 
@@ -127,8 +127,8 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 ### RO-STI-203 „Uite care e treaba:”
 - Nivel: recomandare
 - Greșit: „Uite care e treaba: stocul e aproape epuizat.” → Corect: „Problema e că stocul e aproape epuizat.”
-- De ce: Formula traduce o introducere conversațională din engleza de afaceri și coboară registrul („treaba”, „chestia” sunt familiare; vezi RO-STI-428 în [registru-si-adresare.md](registru-si-adresare.md)). Intri direct în subiect sau folosești o tranziție care spune ceva: „De fapt, …”, „Problema e că…”.
-- Sursă: DEX '98 s.v. treabă, chestiune
+- De ce: Formula traduce o introducere conversațională din engleza de afaceri și coboară registrul („uite care e treaba” e o formulă conversațională, iar „chestia” e familiară; vezi RO-STI-428 în [registru-si-adresare.md](registru-si-adresare.md)). Intri direct în subiect sau folosești o tranziție care spune ceva: „De fapt, …”, „Problema e că…”.
+- Sursă: DEX '98 s.v. chestiune
 
 ## Vocabular și laudă
 
@@ -159,7 +159,7 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 ### RO-STI-232 Inflația retorică
 - Nivel: recomandare
 - Greșit: „Piața centrală e o simfonie de culori și arome.” → Corect: „În piața centrală se vând [de completat: ce se vinde].”
-- De ce: Imaginea pompoasă ține locul unei descrieri. Metafora e o figură legitimă într-un text literar sau într-o reportare asumată; într-un text informativ, imaginea moderată copiată din engleză sună exagerat în română. Semnalezi epitetul de umplutură și densitatea lui, nu cuvintele.
+- De ce: Imaginea pompoasă ține locul unei descrieri. Metafora e o figură legitimă într-un text literar sau într-o reportare asumată; într-un text informativ, imaginea pompoasă sună artificială. Semnalezi epitetul de umplutură și densitatea lui, nu cuvintele.
 - Sursă: DSL, s.v. HIPERBOLĂ; tipar de stil
 
 ### RO-STI-224 Acumulările de adjective
@@ -170,8 +170,8 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 
 ### RO-STI-214 Expresii-cadru goale
 - Nivel: recomandare
-- Greșit: „Într-un peisaj în continuă schimbare, cofetăria a mutat comenzile online.” → Corect: „Cofetăria a mutat comenzile online.”
-- De ce: „Într-un peisaj în continuă schimbare”, „în ziua de azi”, „în dinamica pieței”, „bune practici” sunt cadraje care nu adaugă informație. Le scoți când nu trimit la nimic și le păstrezi când numesc chiar conceptul (o strategie de digitalizare, un obiectiv de dezvoltare durabilă). Pragul e mai strict decât la vocabular: aceeași expresie de două ori sau trei expresii diferite.
+- Greșit: „La ora actuală, pe fondul evoluțiilor din domeniu, cofetăria a mutat comenzile online.” → Corect: „Cofetăria a mutat comenzile online.”
+- De ce: „La ora actuală”, „pe fondul evoluțiilor din domeniu”, „în vremurile pe care le trăim” sunt cadraje care nu adaugă informație. Le scoți când nu trimit la nimic și le păstrezi când numesc chiar conceptul (o strategie de digitalizare, un plan de mobilitate urbană). Pragul e mai strict decât la vocabular: aceeași expresie de două ori sau trei expresii diferite.
 - Sursă: Mic ghid CE p. 11 (Rec. 9, jargonul); tipar de stil
 
 ## Importanță declarată
@@ -184,8 +184,8 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 
 ### RO-STI-201 Formulele impersonale de evidențiere
 - Nivel: recomandare
-- Greșit: „Se constată că vânzările au scăzut.” → Corect: „Vânzările au scăzut.”
-- De ce: Când numești formula într-o observație, o numești exact. „Se constată” are cliticul „se” și un verb, deci e un pasiv reflexiv (DSL dă exemplul „Cartea se citește cu plăcere”). „Merită remarcat că” e o construcție impersonală cu participiu, fără „se”. Toate sunt corecte în limbă; devin semnal doar când se adună și când nu aduc nimic. Formula rămâne dacă introduce o constatare asumată, cu sursă.
+- Greșit: „Se cuvine precizat că ședința a fost amânată.” → Corect: „Ședința a fost amânată.”
+- De ce: Când numești formula într-o observație, o numești exact. „Se cuvine precizat” are cliticul „se” și o construcție impersonală; „vrednic de reținut este că” e adjectiv plus supin, fără „se”. Niciuna nu e pasiv reflexiv în sens strict: în pasivul reflexiv subiectul real e obiectul acțiunii („Cartea se citește cu plăcere”, DSL). Toate sunt corecte în limbă; devin semnal doar când se adună și când nu aduc nimic. Formula rămâne dacă introduce o constatare asumată, cu sursă.
 - Sursă: DSL, s.v. PASIV; tipar de stil
 
 ### RO-STI-202 „Joacă un rol vital”
@@ -216,8 +216,8 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 
 ### RO-STI-229 Deschideri care amână subiectul
 - Nivel: recomandare
-- Greșit: „Într-o lume în care totul se mișcă repede, comerțul online contează tot mai mult.” → Corect: „Comerțul online contează tot mai mult [de completat: faptul, cu cifra sau sursa].”
-- De ce: Deschideri ca „Într-o lume în care…”, „Nimeni nu poate nega faptul că…” amână subiectul. Prima frază spune faptul. Dacă faptul nu e de notorietate, îl atribui.
+- Greșit: „Nu e un secret pentru nimeni că grădinăritul devine tot mai popular.” → Corect: „Grădinăritul devine tot mai popular [de completat: faptul, cu cifra sau sursa].”
+- De ce: Deschideri ca „Nu e un secret pentru nimeni că…”, „De când lumea și pământul…” amână subiectul. Prima frază spune faptul. Dacă faptul nu e de notorietate, îl atribui.
 - Sursă: tipar de stil
 
 ### RO-STI-223 Deschiderea fals sinceră
@@ -228,14 +228,14 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 
 ### RO-STI-216 Deschiderea cu întrebare retorică de șablon
 - Nivel: recomandare
-- Greșit: „Ce ar fi dacă facturile s-ar plăti singure? Aplicația plătește facturile automat, la scadență.” → Corect: „Aplicația plătește facturile automat, la scadență.”
+- Greșit: „Te-ai întrebat vreodată cât timp pierzi cu facturile? Aplicația le plătește automat, la scadență.” → Corect: „Aplicația plătește facturile automat, la scadență.”
 - De ce: Întrebarea retorică de șablon, care amână teza, se semnalează și se rescrie pornind direct de la teză. Interogația retorică e însă o figură de stil recunoscută (DSL), deci nu se semnalează în corpul unui text de opinie și nici când citezi o întrebare a sursei.
 - Sursă: DSL, s.v. INTEROGAȚIE; tipar de stil
 
 ### RO-STI-210 Finalul care nu afirmă nimic
 - Nivel: recomandare
-- Greșit: „Timpul va arăta ce urmează pentru comunitatea noastră.” → Corect: „[ultimul fapt din sursă sau pasul următor concret]”
-- De ce: „Rămâne de văzut ce ne rezervă viitorul”, „Viitorul abia începe” nu spun nimic verificabil. Dacă sursa are un pas următor concret, acela încheie textul; altfel textul se oprește la ultimul fapt.
+- Greșit: „Detaliile le vom afla la momentul potrivit, iar până atunci rămâneți aproape.” → Corect: „[ultimul fapt din sursă sau pasul următor concret]”
+- De ce: Încheieri ca „Drumul continuă”, „Rămâneți aproape”, „Detaliile vor veni la momentul potrivit” nu spun nimic verificabil. Dacă sursa are un pas următor concret (o dată, un loc, o acțiune), acela încheie textul; altfel textul se oprește la ultimul fapt.
 - Sursă: tipar de stil
 
 ### RO-STI-211 Formule goale de rezumat și de concluzie
@@ -261,7 +261,7 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 ### RO-STI-226 Formă mecanică: triade, bold, emoji
 - Nivel: recomandare
 - Greșit: „Un serviciu **rapid**, **sigur** și **simplu** 🚀” → Corect: „Un serviciu [de completat: ce îl face rapid, sigur sau simplu].”
-- De ce: Se semnalează, ca indicii și nu ca greșeli de limbă: emoji decorativ într-un text informativ, cuvinte îngroșate pus mecanic în mijlocul frazelor și gruparea forțată în câte trei elemente când conținutul are două sau patru. Fiecare caz se judecă în context: un emoji într-un mesaj prietenos, boldul într-un termen definit și o enumerare firească de trei lucruri nu sunt tipare.
+- De ce: Se semnalează, ca indicii și nu ca greșeli de limbă: emoji decorativ într-un text informativ, cuvinte îngroșate puse mecanic în mijlocul frazelor și gruparea forțată în câte trei elemente când conținutul are două sau patru. Fiecare caz se judecă în context: un emoji într-un mesaj prietenos, boldul într-un termen definit și o enumerare firească de trei lucruri nu sunt tipare.
 - Sursă: tipar de stil; DSL, s.v. ENUMERARE
 
 ### RO-STI-236 Regula densității

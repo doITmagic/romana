@@ -196,7 +196,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 
 ### RO-STI-435 Registrul se alege pentru fiecare suprafață a produsului
 - Nivel: recomandare
-- Greșit: „Rezultatul tău sugerează un risc ridicat. Du-te la medic!” → Corect: „Rezultatul indică un risc ridicat. Se recomandă un consult medical.”
+- Greșit: „Rezultatul tău sugerează un risc ridicat. Du-te la medic!” → Corect: „Rezultatul sugerează un risc ridicat. Se recomandă un consult medical.”
 - De ce: Registrul e o decizie explicită, luată pentru fiecare produs și, unde e cazul, pentru fiecare suprafață: de pildă formulă impersonală pentru rezultate și texte sensibile, medicale sau juridice, „tu” pentru progres și îndemnuri, „dumneavoastră” pentru întrebări frecvente. Exemplul presupune că produsul a hotărât formula impersonală pentru rezultate. Registrele diferite pe suprafețe diferite sunt acceptabile doar dacă așa a hotărât produsul; amestecate în același șir sau pe același ecran, ele încalcă RO-COE-019 din [coerenta.md](coerenta.md).
 - Sursă: convenții de localizare de produs (uz, nu normă); DSL, s.v. POLITEȚE
 
