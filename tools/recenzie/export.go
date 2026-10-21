@@ -16,18 +16,24 @@
 // fără pierderi titlul, conținutul, fișierul, lotul și ordinea. De aceea id-ul
 // trebuie să rămână stabil între exporturi: la reguli vine din ID-ul regulii
 // (RO-COE-001), deci nu se schimbă când textul se corectează. La secțiunile din
-// SKILL.md vine din poziția secțiunii (SKILL-s2 = a doua secțiune „## ”), deci
-// se schimbă dacă secțiunile se inserează sau se mută.
+// SKILL.md vine din poziția secțiunii (SKILL-s2 = a doua secțiune „## ”; s0 e
+// începutul), deci se schimbă dacă secțiunile se inserează sau se mută.
 //
 // # Ce intră
 //
-//   - SKILL.md: câte un element pentru fiecare secțiune „## ”, mereu în lotul
-//     „1-skill”. Frontmatter-ul, titlul „# ” și textul de dinaintea primei
-//     secțiuni „## ” nu se exportă; liniile „## ” din blocurile de cod nu sunt titluri.
+//   - SKILL.md, tot fișierul, în lotul „1-skill”: elementul SKILL-s0 ține
+//     frontmatter-ul (cu liniile „---”), titlul „# ” și tot textul de dinaintea
+//     primei secțiuni „## ” (apare doar dacă are text), apoi câte un element
+//     SKILL-sN pentru fiecare secțiune „## ”. Liniile „## ” din blocurile de
+//     cod nu sunt titluri.
 //   - references/: doar fișierele puse în harta loturilor; celelalte se sar.
-//     Regulile se citesc cu validare.Reguli. Formatul regulilor îl verifică
-//     validarea (go run ./tools/validare/cmd), nu exportul: o regulă cu câmpuri
-//     lipsă se exportă cu liniile pe care le are.
+//     Regulile se citesc cu validare.Reguli, iar conținutul fiecăreia se ia din
+//     rândurile ei brute, ca nimic să nu se piardă (a doua pereche pe aceeași
+//     linie, rânduri „Greșit:” repetate, continuări de rând, coada de după
+//     ghilimele). Formatul regulilor îl verifică validarea
+//     (go run ./tools/validare/cmd), nu exportul: ExportaCuProbleme întoarce
+//     problemele ca să poată fi arătate, iar o regulă incompletă se exportă
+//     cu rândurile pe care le are.
 //
 // # Extensie: cazurile de test (Task 10b)
 //
@@ -67,6 +73,9 @@ const (
 	LotEsantion = "4-esantion"
 
 	fisierSkill = "SKILL.md"
+
+	// titluInceput este titlul elementului SKILL-s0.
+	titluInceput = "Început (frontmatter și introducere)"
 )
 
 // Element este un document al paginii de recenzie. Numele câmpurilor JSON
@@ -78,7 +87,7 @@ type Element struct {
 	Tip        string `json:"tip"`        // TipRegula sau TipCaz
 	Fisier     string `json:"fisier"`     // calea față de directorul skill-ului, cu „/”
 	Titlu      string `json:"titlu"`      // textul titlului, fără ID
-	Continut   string `json:"continut"`   // text simplu, pe linii
+	Continut   string `json:"continut"`   // text simplu, pe linii (la reguli: rândurile regulii, fără „- ” la câmpuri)
 	Stare      string `json:"stare"`      // neverificat | ok | gresit
 	Comentariu string `json:"comentariu"` // al recenzentului; mereu gol la export
 	Ordine     int    `json:"ordine"`     // indexul global, de la 0, în ordinea fișierelor
@@ -102,25 +111,40 @@ func idSigur(cod string) string {
 // references/ care nu sunt în hartă se sar; lipsa directorului references/ nu
 // e eroare, dar un fișier listat și inexistent este.
 //
-// Ordine este indexul global al elementului (de la 0). Eroare dă: lipsa
+// Ordine este indexul global al elementului (de la 0). Problemele de format ale
+// regulilor se ignoră aici; ExportaCuProbleme le întoarce. Eroare dă: lipsa
 // SKILL.md, un fișier listat care nu poate fi citit, o cale care iese din
 // dirSkill, un lot gol sau două elemente cu același id, fiindcă id-ul e
 // cheia după care pagina îmbină re-exporturile.
 func Exporta(dirSkill string, loturi map[string]string) ([]Element, error) {
+	elemente, _, err := ExportaCuProbleme(dirSkill, loturi)
+	return elemente, err
+}
+
+// Problema este o problemă de format a unei reguli, așa cum o raportează
+// validare.Reguli, dar cu Cale față de dirSkill.
+type Problema = validare.Problema
+
+// ExportaCuProbleme face același lucru ca Exporta și întoarce în plus
+// problemele de format găsite în regulile exportate (câmpuri lipsă, nivel
+// invalid etc.). Elementele ies oricum; problemele sunt doar de arătat.
+func ExportaCuProbleme(dirSkill string, loturi map[string]string) ([]Element, []Problema, error) {
 	elemente, err := sectiuniSkill(dirSkill)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	cai, err := caiListate(loturi)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
+	var probleme []Problema
 	for _, c := range cai {
-		reguli, err := reguliFisier(dirSkill, c.cale, c.lot)
+		reguli, pr, err := reguliFisier(dirSkill, c.cale, c.lot)
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 		elemente = append(elemente, reguli...)
+		probleme = append(probleme, pr...)
 	}
 
 	vazute := map[string]string{}
@@ -128,11 +152,11 @@ func Exporta(dirSkill string, loturi map[string]string) ([]Element, error) {
 		e := &elemente[i]
 		e.Ordine = i
 		if prim, ok := vazute[e.ID]; ok {
-			return nil, fmt.Errorf("recenzie: id duplicat %q (%s și %s)", e.ID, prim, e.Fisier)
+			return nil, nil, fmt.Errorf("recenzie: id duplicat %q (%s și %s)", e.ID, prim, e.Fisier)
 		}
 		vazute[e.ID] = e.Fisier
 	}
-	return elemente, nil
+	return elemente, probleme, nil
 }
 
 type fisierLot struct{ cale, lot string }
@@ -163,16 +187,18 @@ func caiListate(loturi map[string]string) ([]fisierLot, error) {
 }
 
 // reguliFisier întoarce regulile unui fișier din skill, în lotul dat.
-func reguliFisier(dirSkill, cale, lot string) ([]Element, error) {
+func reguliFisier(dirSkill, cale, lot string) ([]Element, []Problema, error) {
 	full := filepath.Join(dirSkill, filepath.FromSlash(cale))
 	b, err := os.ReadFile(full)
 	if err != nil {
-		return nil, fmt.Errorf("recenzie: %s: %w", cale, err)
+		return nil, nil, fmt.Errorf("recenzie: %s: %w", cale, err)
 	}
 	randuri := strings.Split(string(b), "\n")
 
-	// Problemele de format sunt treaba validării, nu a exportului.
-	reguli, _ := validare.Reguli(full)
+	reguli, probleme := validare.Reguli(full)
+	for i := range probleme {
+		probleme[i].Cale = cale
+	}
 	el := make([]Element, 0, len(reguli))
 	for _, r := range reguli {
 		titlu := ""
@@ -191,36 +217,41 @@ func reguliFisier(dirSkill, cale, lot string) ([]Element, error) {
 			Tip:      TipRegula,
 			Fisier:   cale,
 			Titlu:    titlu,
-			Continut: continutRegula(r),
+			Continut: continutRegula(randuri, r.Rand),
 			Stare:    StareNeverificat,
 		})
 	}
-	return el, nil
+	return el, probleme, nil
 }
 
-// continutRegula scrie regula ca text simplu, câte o linie pe câmp.
-// Câmpurile goale (regulă incompletă) se omit.
-func continutRegula(r validare.Regula) string {
+// prefixeCamp sunt începuturile de rând ale câmpurilor unei reguli; la ele se
+// scoate „- ” din față.
+var prefixeCamp = []string{"- Nivel:", "- Greșit:", "- Corect:", "- De ce:", "- Sursă:"}
+
+// continutRegula scrie regula ca text simplu din rândurile ei brute: de la
+// rândul de după titlu (indexul rand) până la următorul rând care începe cu „#”.
+// Rândurile goale se sar, câmpurile pierd „- ”, iar orice alt rând
+// (continuare, câmp necunoscut) rămâne cum e, fără spațiile din margini.
+func continutRegula(randuri []string, rand int) string {
 	var l []string
-	if r.Nivel != "" {
-		l = append(l, "Nivel: "+r.Nivel)
-	}
-	switch {
-	case r.Gresit != "":
-		l = append(l, "Greșit: „"+r.Gresit+"” → Corect: „"+r.Corect+"”")
-	case r.Corect != "":
-		l = append(l, "Corect: „"+r.Corect+"”")
-	}
-	if r.DeCe != "" {
-		l = append(l, "De ce: "+r.DeCe)
-	}
-	if r.Sursa != "" {
-		l = append(l, "Sursă: "+r.Sursa)
+	for j := rand; j < len(randuri) && !strings.HasPrefix(randuri[j], "#"); j++ {
+		t := strings.TrimSpace(randuri[j])
+		if t == "" {
+			continue
+		}
+		for _, p := range prefixeCamp {
+			if strings.HasPrefix(randuri[j], p) {
+				t = strings.TrimSpace(strings.TrimPrefix(randuri[j], "- "))
+				break
+			}
+		}
+		l = append(l, t)
 	}
 	return strings.Join(l, "\n")
 }
 
-// sectiuniSkill întoarce câte un element pentru fiecare secțiune „## ” din SKILL.md.
+// sectiuniSkill întoarce elementele din SKILL.md: SKILL-s0 pentru tot ce e
+// înaintea primei secțiuni „## ” (dacă are text), apoi câte unul pe secțiune.
 func sectiuniSkill(dirSkill string) ([]Element, error) {
 	b, err := os.ReadFile(filepath.Join(dirSkill, fisierSkill))
 	if err != nil {
@@ -233,8 +264,10 @@ func sectiuniSkill(dirSkill string) ([]Element, error) {
 		corp  []string
 	}
 	var sectiuni []sectiune
+	fm := dupaFrontmatter(randuri)
+	inceput := append([]string(nil), randuri[:fm]...)
 	inCod, marcaj := false, ""
-	for _, rand := range randuri[dupaFrontmatter(randuri):] {
+	for _, rand := range randuri[fm:] {
 		if t := strings.TrimLeft(rand, " "); strings.HasPrefix(t, "```") || strings.HasPrefix(t, "~~~") {
 			switch {
 			case !inCod:
@@ -248,10 +281,24 @@ func sectiuniSkill(dirSkill string) ([]Element, error) {
 		}
 		if n := len(sectiuni); n > 0 {
 			sectiuni[n-1].corp = append(sectiuni[n-1].corp, rand)
+		} else {
+			inceput = append(inceput, rand)
 		}
 	}
 
-	el := make([]Element, 0, len(sectiuni))
+	el := make([]Element, 0, len(sectiuni)+1)
+	if text := strings.Join(taieGoale(inceput), "\n"); text != "" {
+		el = append(el, Element{
+			ID:       "SKILL-s0",
+			Cod:      "SKILL-§0",
+			Lot:      LotSkill,
+			Tip:      TipRegula,
+			Fisier:   fisierSkill,
+			Titlu:    titluInceput,
+			Continut: text,
+			Stare:    StareNeverificat,
+		})
+	}
 	for i, s := range sectiuni {
 		n := i + 1
 		el = append(el, Element{

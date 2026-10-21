@@ -78,10 +78,12 @@ func TestExportaSkillSectiuni(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(el) != 3 {
-		t.Fatalf("așteptam 3 elemente, am primit %d: %v", len(el), idUri(el))
+	if len(el) != 4 {
+		t.Fatalf("așteptam s0 + 3 secțiuni, am primit %d: %v", len(el), idUri(el))
 	}
 	asteptat := []struct{ id, cod, titlu, continut string }{
+		{"SKILL-s0", "SKILL-§0", titluInceput,
+			"---\nname: romana\ndescription: \"Test.\"\n---\n\n# Română\n\nIntroducere, nu e secțiune."},
 		{"SKILL-s1", "SKILL-§1", "Când se aplică", "Text unu.\n\nRând doi."},
 		{"SKILL-s2", "SKILL-§2", "Cum se corectează", "Text doi.\n\n```\n## nu e titlu, e în bloc de cod\n```"},
 		{"SKILL-s3", "SKILL-§3", "Ce nu se atinge", "Text trei."},
@@ -98,9 +100,51 @@ func TestExportaSkillSectiuni(t *testing.T) {
 	}
 }
 
-func TestSkillFaraSectiuniSiFaraReferences(t *testing.T) {
+// Frontmatter + introducere + 2 secțiuni: s0 ține tot ce e înaintea primului „## ”.
+func TestSkillInceputFrontmatterSiIntroducere(t *testing.T) {
 	dir := t.TempDir()
-	scrie(t, dir, "SKILL.md", "---\nname: romana\n---\n\n# Română\n\nProvizoriu.\n")
+	scrie(t, dir, "SKILL.md", "---\nname: romana\ndescription: \"Test.\"\n---\n\n# Română\n\nIntro.\n\n## Unu\nA.\n\n## Doi\nB.\n")
+
+	el, err := Exporta(dir, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got := fmt.Sprint(idUri(el)); got != "[SKILL-s0 SKILL-s1 SKILL-s2]" {
+		t.Fatalf("ids: %s", got)
+	}
+	if el[0].Titlu != titluInceput || el[0].Cod != "SKILL-§0" || el[0].Lot != "1-skill" || el[0].Tip != "regula" || el[0].Fisier != "SKILL.md" {
+		t.Errorf("s0: %+v", el[0])
+	}
+	if want := "---\nname: romana\ndescription: \"Test.\"\n---\n\n# Română\n\nIntro."; el[0].Continut != want {
+		t.Errorf("s0 continut:\n%q\nașteptam\n%q", el[0].Continut, want)
+	}
+	if el[1].Continut != "A." || el[2].Continut != "B." {
+		t.Errorf("secțiunile: %q, %q", el[1].Continut, el[2].Continut)
+	}
+}
+
+// Fără nicio secțiune „## ” tot fișierul e un singur element, s0.
+func TestSkillFaraSectiuniUnSingurElement(t *testing.T) {
+	dir := t.TempDir()
+	const fisier = "---\nname: romana\n---\n\n# Română\n\nProvizoriu.\n"
+	scrie(t, dir, "SKILL.md", fisier)
+
+	el, err := Exporta(dir, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(el) != 1 {
+		t.Fatalf("așteptam un element, am primit %d: %v", len(el), idUri(el))
+	}
+	if el[0].ID != "SKILL-s0" || el[0].Titlu != titluInceput || el[0].Continut != strings.TrimSuffix(fisier, "\n") || el[0].Ordine != 0 {
+		t.Errorf("%+v", el[0])
+	}
+}
+
+// Un SKILL.md fără text nu dă niciun element, iar JSON-ul listei goale e [].
+func TestSkillGolListaGoala(t *testing.T) {
+	dir := t.TempDir()
+	scrie(t, dir, "SKILL.md", "\n")
 
 	el, err := Exporta(dir, nil)
 	if err != nil {
@@ -133,11 +177,11 @@ func TestExportaReguli(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(el) != 5 {
-		t.Fatalf("așteptam 3 secțiuni + 2 reguli, am primit %d: %v", len(el), idUri(el))
+	if len(el) != 6 {
+		t.Fatalf("așteptam s0 + 3 secțiuni + 2 reguli, am primit %d: %v", len(el), idUri(el))
 	}
 
-	r1 := el[3]
+	r1 := el[4]
 	asteptat1 := Element{
 		ID: "RO-COE-001", Cod: "RO-COE-001", Lot: "3-cheie", Tip: "regula",
 		Fisier: "references/a.md", Titlu: "Același lucru, același nume",
@@ -145,30 +189,105 @@ func TestExportaReguli(t *testing.T) {
 			"Greșit: „Salvează fișierul. Apoi deschide documentul.” → Corect: „Salvează fișierul. Apoi deschide fișierul.”\n" +
 			"De ce: Dacă schimbi numele, cititorul crede că e alt lucru.\n" +
 			"Sursă: DOOM 3 §1",
-		Stare: "neverificat", Comentariu: "", Ordine: 3,
+		Stare: "neverificat", Comentariu: "", Ordine: 4,
 	}
 	if r1 != asteptat1 {
 		t.Errorf("regula 1:\n am primit  %+v\n așteptam   %+v", r1, asteptat1)
 	}
 
-	r2 := el[4]
+	r2 := el[5]
 	asteptat2 := Element{
 		ID: "RO-NUG-001", Cod: "RO-NUG-001", Lot: "3-cheie", Tip: "regula",
 		Fisier: "references/a.md", Titlu: "Variantă acceptată",
 		Continut: "Nivel: ce nu e greșeală\n" +
-			"Corect: „a se întâmpla”\n" +
+			"Corect: „a se întâmpla” (nu se corectează)\n" +
 			"De ce: Forma e acceptată.\n" +
 			"Sursă: DOOM 3 §2",
-		Stare: "neverificat", Comentariu: "", Ordine: 4,
+		Stare: "neverificat", Comentariu: "", Ordine: 5,
 	}
 	if r2 != asteptat2 {
 		t.Errorf("regula 2:\n am primit  %+v\n așteptam   %+v", r2, asteptat2)
 	}
 }
 
+// Conținutul regulii vine din rândurile ei brute: nu se pierde nimic din ce
+// nu încape în câmpurile citite de validare.
+func TestContinutRegulaDinRanduriBrute(t *testing.T) {
+	dir := t.TempDir()
+	scrie(t, dir, "SKILL.md", "\n")
+	scrie(t, dir, "references/a.md", `# Gramatică
+
+### RO-GRA-010 Perechi multiple
+- Nivel: normă
+- Greșit: „a” → Corect: „b”; „c” → Corect: „d”
+- Greșit: „e” → Corect: „f”
+- De ce: Prima frază
+  continuă pe rândul al doilea.
+
+  Și pe al treilea, după un rând gol.
+- Vezi și: RO-GRA-011
+- Sursă: DOOM 3 §4
+
+### RO-NUG-010 Tot nu se corectează
+- Nivel: ce nu e greșeală
+- Corect: „x” (nu se corectează „y”)
+- De ce: Forma e acceptată.
+- Sursă: DOOM 3 §5
+`)
+
+	el, err := Exporta(dir, map[string]string{"references/a.md": "3-cheie"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(el) != 2 {
+		t.Fatalf("așteptam 2 reguli, am primit %d: %v", len(el), idUri(el))
+	}
+	want1 := "Nivel: normă\n" +
+		"Greșit: „a” → Corect: „b”; „c” → Corect: „d”\n" +
+		"Greșit: „e” → Corect: „f”\n" +
+		"De ce: Prima frază\n" +
+		"continuă pe rândul al doilea.\n" +
+		"Și pe al treilea, după un rând gol.\n" +
+		"- Vezi și: RO-GRA-011\n" +
+		"Sursă: DOOM 3 §4"
+	if el[0].Continut != want1 {
+		t.Errorf("regula 1:\n%s\n--- așteptam ---\n%s", el[0].Continut, want1)
+	}
+	want2 := "Nivel: ce nu e greșeală\n" +
+		"Corect: „x” (nu se corectează „y”)\n" +
+		"De ce: Forma e acceptată.\n" +
+		"Sursă: DOOM 3 §5"
+	if el[1].Continut != want2 {
+		t.Errorf("regula 2:\n%s\n--- așteptam ---\n%s", el[1].Continut, want2)
+	}
+}
+
+// Problemele de format se întorc separat; Exporta le ignoră, dar elementele ies.
+func TestProblemeDeFormatRaportate(t *testing.T) {
+	dir := t.TempDir()
+	scrie(t, dir, "SKILL.md", "\n")
+	scrie(t, dir, "references/a.md", "### RO-GRA-001 Fără sursă\n- Nivel: normă\n- Greșit: „x” → Corect: „y”\n- De ce: z.\n")
+	loturi := map[string]string{"references/a.md": "3-cheie"}
+
+	el, probleme, err := ExportaCuProbleme(dir, loturi)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(el) != 1 || el[0].Continut != "Nivel: normă\nGreșit: „x” → Corect: „y”\nDe ce: z." {
+		t.Errorf("elemente: %+v", el)
+	}
+	if len(probleme) != 1 || probleme[0].Cale != "references/a.md" || !strings.Contains(probleme[0].Motiv, "Sursă") {
+		t.Errorf("probleme: %+v", probleme)
+	}
+	el2, err := Exporta(dir, loturi)
+	if err != nil || len(el2) != 1 {
+		t.Errorf("Exporta trebuia să ignore problema: %v, %v", el2, err)
+	}
+}
+
 func TestOrdineGlobalaPeFisiereSortate(t *testing.T) {
 	dir := t.TempDir()
-	scrie(t, dir, "SKILL.md", "# Română\n")
+	scrie(t, dir, "SKILL.md", "\n")
 	scrie(t, dir, "references/b.md", "### RO-GRA-002 B\n- Nivel: normă\n- Greșit: „x” → Corect: „y”\n- De ce: z.\n- Sursă: s\n")
 	scrie(t, dir, "references/a.md", "### RO-GRA-001 A\n- Nivel: normă\n- Greșit: „x” → Corect: „y”\n- De ce: z.\n- Sursă: s\n")
 
@@ -200,8 +319,8 @@ func TestFisierNelistatSarit(t *testing.T) {
 			t.Errorf("fișierul nelistat nu trebuia exportat: %+v", e)
 		}
 	}
-	if len(el) != 5 {
-		t.Errorf("așteptam 5 elemente, am primit %d: %v", len(el), idUri(el))
+	if len(el) != 6 {
+		t.Errorf("așteptam 6 elemente, am primit %d: %v", len(el), idUri(el))
 	}
 }
 
@@ -234,8 +353,8 @@ func TestSkillMdInLoturiNuSeDubleaza(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(el) != 3 {
-		t.Fatalf("așteptam 3 secțiuni, am primit %d", len(el))
+	if len(el) != 4 {
+		t.Fatalf("așteptam s0 + 3 secțiuni, am primit %d", len(el))
 	}
 	for _, e := range el {
 		if e.Lot != "1-skill" {
@@ -261,7 +380,7 @@ func TestIdSanitizat(t *testing.T) {
 
 	// prin Exporta: id sanitizat, cod păstrat exact
 	dir := t.TempDir()
-	scrie(t, dir, "SKILL.md", "# Română\n")
+	scrie(t, dir, "SKILL.md", "\n")
 	scrie(t, dir, "references/a.md", "### RO-COE-001.a/b Titlu\n- Nivel: normă\n- Greșit: „x” → Corect: „y”\n- De ce: z.\n- Sursă: s\n")
 	el, err := Exporta(dir, map[string]string{"references/a.md": "3-cheie"})
 	if err != nil {
@@ -274,7 +393,7 @@ func TestIdSanitizat(t *testing.T) {
 
 func TestIdDuplicatDupaSanitizare(t *testing.T) {
 	dir := t.TempDir()
-	scrie(t, dir, "SKILL.md", "# Română\n")
+	scrie(t, dir, "SKILL.md", "\n")
 	scrie(t, dir, "references/a.md",
 		"### RO-COE-001.a T1\n- Nivel: normă\n- Greșit: „x” → Corect: „y”\n- De ce: z.\n- Sursă: s\n\n"+
 			"### RO-COE-001-a T2\n- Nivel: normă\n- Greșit: „x” → Corect: „y”\n- De ce: z.\n- Sursă: s\n")
@@ -308,15 +427,15 @@ func TestEsantion(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(toate) != 33 {
-		t.Fatalf("așteptam 33 de elemente, am primit %d", len(toate))
+	if len(toate) != 34 {
+		t.Fatalf("așteptam 34 de elemente, am primit %d", len(toate))
 	}
 	copie := append([]Element(nil), toate...)
 
 	es := Esantioneaza(toate, 3)
-	// 3 secțiuni SKILL + 3 din a.md + 3 din b.md + 10 din c.md
-	if len(es) != 19 {
-		t.Fatalf("așteptam 19 elemente, am primit %d: %v", len(es), idUri(es))
+	// s0 + 3 secțiuni SKILL + 3 din a.md + 3 din b.md + 10 din c.md
+	if len(es) != 20 {
+		t.Fatalf("așteptam 20 de elemente, am primit %d: %v", len(es), idUri(es))
 	}
 	var a, b []string
 	nec := 0
@@ -355,10 +474,10 @@ func TestEsantion(t *testing.T) {
 	}
 
 	// n = 0 înseamnă tot; n >= numărul de reguli lasă fișierul întreg
-	if got := len(Esantioneaza(toate, 0)); got != 33 {
+	if got := len(Esantioneaza(toate, 0)); got != 34 {
 		t.Errorf("n=0: %d", got)
 	}
-	if got := len(Esantioneaza(toate, 10)); got != 33 {
+	if got := len(Esantioneaza(toate, 10)); got != 34 {
 		t.Errorf("n=10: %d", got)
 	}
 	// n care nu împarte exact: tot n elemente, primul mereu inclus
