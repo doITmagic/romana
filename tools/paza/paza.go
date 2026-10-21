@@ -23,7 +23,7 @@ func Verifica(radacina string) ([]Problema, error) {
 			return err
 		}
 		if d.IsDir() {
-			if d.Name() == ".git" {
+			if d.Name() == ".git" || d.Name() == ".superpowers" {
 				return filepath.SkipDir
 			}
 			return nil

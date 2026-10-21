@@ -12,3 +12,5 @@ jobs:
           go-version: '1.25'
       - run: go test ./...
       - run: go run ./tools/paza/cmd .
+      - run: |
+          if [ -d skills/romana ]; then go run ./tools/validare/cmd skills/romana; fi

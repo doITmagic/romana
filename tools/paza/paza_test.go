@@ -65,3 +65,15 @@ func TestPazaAccepta(t *testing.T) {
 		t.Fatalf("nu așteptam probleme: %v", probleme)
 	}
 }
+
+func TestPazaSareSuperpowers(t *testing.T) {
+	r := t.TempDir()
+	scrie(t, r, ".superpowers/mare.txt", 300*1024)
+	probleme, err := Verifica(r)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(probleme) != 0 {
+		t.Fatalf("nu așteptam probleme: %v", probleme)
+	}
+}

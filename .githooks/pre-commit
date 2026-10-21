@@ -1,3 +1,7 @@
 #!/bin/sh
-# Refuză comiterea de cărți, texte mari sau fișiere de cercetare.
-exec go run ./tools/paza/cmd .
+# Refuză comiterea de cărți, texte mari sau fișiere de cercetare,
+# apoi validează pachetul de skill (dacă există).
+go run ./tools/paza/cmd . || exit 1
+if [ -d skills/romana ]; then
+    go run ./tools/validare/cmd skills/romana || exit 1
+fi
