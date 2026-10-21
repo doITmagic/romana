@@ -5,7 +5,7 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Sursă:\nStudiul sugerează că dieta ar putea influența somnul.\n\nRescriere:\nPotrivit studiului, este posibil ca dieta să influențeze somnul.",
+  "intrare": "Sursă:\nStudiul sugerează că dieta ar putea influența somnul.\n\nRescriere:\nStudiul sugerează că este posibil ca dieta să influențeze somnul.",
   "confirmat": false,
   "asteptat": {
     "neatins": true
