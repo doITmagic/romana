@@ -10,7 +10,7 @@ Tipografia e ultima trecere din ordinea de lucru (vezi SKILL.md). O verifici dup
 - **În corectură** corectezi ce e normă și propui ce e recomandare. Un text corect rămâne neschimbat.
 - **În verificare** raportezi fiecare abatere cu nivelul ei. Unde sursele se contrazic (nivelul „disputat”), nu alegi tu o variantă: ceri doar ca alegerea să fie aceeași în tot textul.
 - **Citatul direct** păstrează cuvintele sursei. În citat corectezi doar tipografia: ghilimelele, diacriticele, spațiile.
-- **Înainte să corectezi, verifici lista „ce nu e greșeală”** din [ce-nu-e-greseala.md](ce-nu-e-greseala.md): linia de pauză, ghilimelele «…», apostroful, punctul și virgula, „de ex.”, bara oblică, „totuși” cu sau fără virgule sunt forme corecte.
+- **Înainte să corectezi, verifici lista „ce nu e greșeală”** din [ce-nu-e-greseala.md](ce-nu-e-greseala.md): linia de pauză, ghilimelele «…», apostroful, punctul-și-virgula, „de ex.”, bara oblică, „totuși” cu sau fără virgule sunt forme corecte.
 
 Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; ÎOOP6 = *Îndreptarul ortografic, ortoepic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); IER = Institutul European din România, *Ghid stilistic de traducere în limba română pentru uzul traducătorilor acquis-ului comunitar*, ed. a V-a, 2008 (practică de traducere juridică, nu normă pentru presă); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Legea 290/2018 = legea privind denumirile localităților din România. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină vine din materialul de lucru și n-a putut fi verificată pe text local.
 
@@ -38,18 +38,11 @@ Bun: aceeași frază, cu ș, ț și Ș cu virgulă (U+0219, U+021B, U+0218).
 - Sursă: ghid gov-md §2.1.3 și §2.1.5; DOOM 3 §1.1 (nereverificat local)
 - Vezi și: RO-TIP-117
 
-### RO-TIP-028 Numele străine își păstrează semnele limbii lor
-- Nivel: normă
-- Corect: „Škoda, München, Dvořák, Petőfi, Márquez, São Paulo”. Nu le „românizezi” și nu le simplifici la „Skoda” sau „Munchen”.
-- De ce: Numele proprii și împrumuturile din limbi cu alfabet latin se scriu cu semnele limbii de origine. Regula se aplică și sedilei: într-un nume turcesc, litera s cu sedilă (U+015F) e corectă, iar sedila se corectează doar în cuvintele românești. Ignorarea semnelor duce și la pronunții greșite.
-- Sursă: ghid gov-md §2.2.1; DOOM 3 §1.2 și §2.2 (nereverificat local)
-- Vezi și: RO-TIP-089, RO-TIP-117
-
 ### RO-TIP-029 Textul în altă limbă și adresele web nu se „diacritizează”
 - Nivel: normă
 - Corect: „The report covers Romania in 2025.” Aici „Romania” nu primește diacritice, la fel ca în adresa unei pagini.
 - De ce: Diacriticele românești se scriu în cuvinte românești. Un titlu englezesc, un citat într-o altă limbă, o adresă de e-mail, un URL sau un nume de fișier rămân cum sunt. Un verificator care marchează „Romania” dintr-un text englezesc ca „lipsă de diacritice” greșește.
-- Sursă: ghid gov-md §2.3.1–§2.3.3
+- Sursă: ghid gov-md §2.3.1–§2.3.3; DOOM 3 §1.2 și §2.2 (nereverificat local)
 - Vezi și: RO-TIP-089
 
 ### RO-TIP-030 Lipsa diacriticelor nu se repară după listă
@@ -61,9 +54,9 @@ Bun: aceeași frază, cu ș, ț și Ș cu virgulă (U+0219, U+021B, U+0218).
 
 ### RO-TIP-116 Diacriticele sunt obligatorii și în titluri, meta și profiluri
 - Nivel: normă
-- Greșit: „Cele mai bune paturi pentru copii” → Corect: „Cele mai bune pături pentru copii”
-- De ce: Diacriticele se scriu în orice text românesc, inclusiv în titluri, în descrierile de pagină, în titlul H1 și în profilurile publice; „paturi” și „pături” sunt cuvinte diferite, iar lipsa semnelor schimbă sensul. Rămân fără diacritice doar identificatorii tehnici: slug-ul din adresa paginii (de exemplu „cele-mai-bune-paturi-copii”), adresele de e-mail și numele de fișiere. Nu corectezi nici siglele consacrate care se scriu fără semne (ANIF, SNSPA) și nici numele proprii pe care purtătorii le scriu deliberat fără ele (de exemplu Hasdeu, nu Hașdeu, dacă așa își scrie familia numele).
-- Sursă: ghid gov-md §2.1.4, §2.1.5 și §2.3; INJ p. 93–94
+- Greșit: „Cum alegi o saltea potrivita pentru copii” → Corect: „Cum alegi o saltea potrivită pentru copii”
+- De ce: Diacriticele se scriu în orice text românesc, inclusiv în titluri, în descrierile de pagină, în titlul H1 și în profilurile publice; lipsa semnelor poate schimba sensul („pături” și „paturi” sunt cuvinte diferite), așa că și un titlu fără diacritice are nevoie de ele. Fraza „Cele mai bune paturi pentru copii” e însă corectă fără nicio diacritică lipsă; nu o „repari” fără un context care cere „pături” (vezi RO-TIP-030). Rămân fără diacritice doar identificatorii tehnici: slug-ul din adresa paginii (de exemplu „cele-mai-bune-paturi-copii”), adresele de e-mail și numele de fișiere. Nu corectezi nici siglele consacrate care se scriu fără semne (ANIF, SNSPA) și nici numele proprii pe care purtătorii le scriu deliberat fără ele (de exemplu Hasdeu, nu Hașdeu, dacă așa își scrie familia numele).
+- Sursă: ghid gov-md §2.1.4, §2.1.5 și §2.3; INJ p. 93–94; DOOM 3 §1.1 (nereverificat local)
 
 ### RO-TIP-119 Lipsa totală a diacriticelor se semnalează
 - Nivel: de semnalat
@@ -127,8 +120,8 @@ Bun:
 
 ### RO-TIP-022 „Domnia-sa” și „dumnealui” au literă mică
 - Nivel: normă
-- Greșit: „Domnia Sa, ministrul, a declarat” → Corect: „domnia-sa, ministrul, a declarat”
-- De ce: Pronumele de politețe formate recent, din seria „domnia-sa”, „domnia-voastră”, „domniile-lor”, „dumnealui”, se scriu cu literă mică. Scrierea cu cratimă e recomandată de DOOM 3; „domnia sa”, fără cratimă, nu se corectează. Forma cu majusculă și fără cratimă („Domnia Sa”) aparține locuțiunilor protocolare din RO-TIP-023. Cuvântul „domnia-sa” e în dicționar.
+- Greșit: „Am vorbit cu Dumnealui ieri.” → Corect: „Am vorbit cu dumnealui ieri.”
+- De ce: Pronumele de politețe formate recent, din seria „domnia-sa”, „domnia-voastră”, „domniile-lor”, „dumnealui”, se scriu cu literă mică. Scrierea cu cratimă („domnia-sa”) e recomandată de DOOM 3, iar „domnia sa”, fără cratimă, nu se corectează. Locuțiunea protocolară „Domnia Sa”, cu majusculă și fără cratimă, e corectă în stilul oficial și nu se atinge (vezi RO-TIP-023). Cuvântul „domnia-sa” e în dicționar.
 - Sursă: DOOM 3 cap. 3 și §6.7.2 (nereverificat local); ghid gov-md §4.1.5.11
 
 ### RO-TIP-023 Formulele protocolare vechi au majusculă
@@ -182,8 +175,8 @@ Bun:
 
 ### RO-TIP-086 Funcțiile străine au literă mică, ca cele românești
 - Nivel: normă
-- Greșit: „Președintele Macron” → Corect: „președintele Emmanuel Macron”
-- De ce: Numele funcției rămâne substantiv comun și se scrie cu literă mică, în orice țară ar fi exercitată. Numele persoanei se scrie cu majusculă și, la prima mențiune, complet.
+- Greșit: „Președintele Macron a ajuns la Berlin.” → Corect: „președintele Macron a ajuns la Berlin.”
+- De ce: Numele funcției rămâne substantiv comun și se scrie cu literă mică, în orice țară ar fi exercitată. Numele persoanei se scrie cu majusculă. Prenumele la prima mențiune e o preferință de stil la redactare; în corectură nu se adaugă, pentru că ar fi un conținut nou (vezi fidelitate.md).
 - Sursă: DOOM 3 §1.3 și §2.5 (nereverificat local); ghid gov-md §4.2.1.1
 - Vezi și: RO-TIP-111
 
@@ -192,20 +185,15 @@ Bun:
 ### RO-TIP-010 În titluri, doar primul cuvânt și numele proprii au majusculă
 - Nivel: normă
 - Greșit: „Guvernul Aprobă Noul Buget De Stat” → Corect: „Guvernul aprobă noul buget de stat”
-- De ce: Titlurile de opere, legi, documente, publicații, emisiuni, programe și articole se scriu cu majusculă la primul cuvânt și la numele proprii din interior. Majuscula la fiecare cuvânt (Title Case) imită engleza și e greșită. Excepțiile sunt la RO-TIP-127. La fel se scriu titlurile paginilor, ale secțiunilor și ale butoanelor.
-- Sursă: ghid gov-md §4.1.7.1; DOOM 3 §3.1 (nereverificat local)
+- De ce: Titlurile de opere, legi, documente, publicații, emisiuni, programe și articole se scriu cu majusculă la primul cuvânt și la numele proprii din interior. Majuscula la fiecare cuvânt (Title Case) imită engleza și e greșită. Excepțiile sunt la RO-TIP-127. La fel se scriu titlurile paginilor și ale secțiunilor, butoanele și meniurile. Un titlu tradus nu păstrează majusculele engleze („Cele mai recente articole”, nu „Cele mai Recente Articole”). Numele unei tehnici sau al unui concept nu e nume propriu: „chain of thought” se scrie cu litere mici. Numele de produs se scrie cum îl înregistrează titularul (iPhone, eBay).
+- Sursă: ghid gov-md §4.1.5.10 și §4.1.7.1; DOOM 3 §3.1 (nereverificat local)
+- Vezi și: RO-TIP-120
 
 ### RO-TIP-011 Sărbătorile naționale și unele documente de importanță națională fac excepție
 - Nivel: normă
 - Corect: „Ziua Națională a României”
 - De ce: Sărbătorile naționale oficiale și denumirile unor documente sau evenimente de importanță națională se scriu cu majusculă la toate cuvintele pline. Lista exactă a excepțiilor e la RO-TIP-127. Nu transformi o excepție în regulă: un titlu obișnuit rămâne cu literă mică.
 - Sursă: ghid gov-md §4.1.5.7 și §4.1.7.1; DOOM 3 cap. 3 (nereverificat local)
-
-### RO-TIP-120 Fără Title Case în titluri, pe butoane și în meniuri
-- Nivel: normă
-- Greșit: „Analiza Structurală” → Corect: „Analiza structurală”
-- De ce: În titluri, pe butoane și în meniuri majuscula apare doar la primul cuvânt și la numele proprii, inclusiv la toate cuvintele pline ale unei denumiri oficiale cuprinse în titlu. Un titlu tradus nu păstrează majusculele engleze: „Cele mai recente articole”, nu „Cele mai Recente Articole”. Numele unei tehnici sau al unui concept nu e nume propriu: „chain of thought” se scrie cu litere mici. Numele de produs se scrie cum îl înregistrează titularul (de exemplu iPhone, eBay).
-- Sursă: ghid gov-md §4.1.5.10 și §4.1.7.1; DOOM 3 §3.1 (nereverificat local)
 
 ### RO-TIP-127 Excepțiile de la regula cu un singur cuvânt cu majusculă
 - Nivel: normă
@@ -281,33 +269,33 @@ Bun:
 - De ce: Perioadele delimitate vag (epoca modernă, perioada postbelică) și războaiele fără nume propriu unic (războaiele balcanice, războiul din Afganistan) sunt denumiri descriptive și se scriu cu literă mică.
 - Sursă: ghid gov-md §4.2.1.4 și §4.2.1.5; DOOM 3 cap. 3 (nereverificat local)
 
-### 2.7 După două puncte, în citat, în liste
+### 2.7 După două-puncte, în citat, în liste
 
-### RO-TIP-024 După două puncte se continuă cu literă mică
+### RO-TIP-024 După două-puncte se continuă cu literă mică
 - Nivel: normă
-- Greșit: „A recunoscut: Bugetul nu ajunge.” → Corect: „A recunoscut: bugetul nu ajunge.”
-- De ce: Când după două puncte urmează o enumerare, o explicație, o concluzie sau o consecință, textul continuă cu literă mică, pentru că fraza nu s-a încheiat. Excepțiile sunt vorbirea directă și citatul din RO-TIP-025.
+- Greșit: „Motivul e simplu: Nu am timp.” → Corect: „Motivul e simplu: nu am timp.”
+- De ce: Când după două-puncte urmează o enumerare, o explicație, o concluzie sau o consecință, textul continuă cu literă mică, pentru că fraza nu s-a încheiat. Excepțiile sunt vorbirea directă și citatul din RO-TIP-025.
 - Sursă: ghid gov-md §4.1.3 și §9.4.5; DOOM 3 cap. 3 (nereverificat local)
 - Vezi și: RO-TIP-095, RO-TIP-126
 
 ### RO-TIP-025 Vorbirea directă și citatul-frază încep cu majusculă
 - Nivel: normă
 - Corect: „A spus: «Bugetul nu ajunge.»” În ghilimelele românești: A spus: „Bugetul nu ajunge.”
-- De ce: Vorbirea directă, fie între ghilimele, fie introdusă cu linie de dialog, și citatul redat ca enunț de sine stătător încep cu majusculă, chiar după două puncte. Citatul care e doar un fragment integrat în frază intră la RO-TIP-026.
+- De ce: Vorbirea directă, fie între ghilimele, fie introdusă cu linie de dialog, și citatul redat ca enunț de sine stătător încep cu majusculă, chiar după două-puncte. Citatul care e doar un fragment integrat în frază intră la RO-TIP-026.
 - Sursă: ghid gov-md §4.1.3 și §9.8.6; DOOM 3 cap. 3 (nereverificat local)
 - Vezi și: RO-TIP-034, RO-TIP-126
 
 ### RO-TIP-026 Citatul integrat în frază începe cu literă mică
 - Nivel: normă
-- Corect: „A vorbit despre un buget care nu ajunge, de fapt.” Fără două puncte înainte, fragmentul citat se scrie cu literă mică, între ghilimele românești.
-- De ce: Când citatul continuă propoziția autorului, fără două puncte, începe cu literă mică și punctul final stă după ghilimelele de închidere (RO-TIP-104). Majuscula ar înlocui o relație sintactică cu un început de frază.
+- Corect: „A vorbit despre «un buget care nu ajunge», de fapt.” Fără două-puncte înainte, fragmentul citat începe cu literă mică.
+- De ce: Când citatul continuă propoziția autorului, fără două-puncte, începe cu literă mică și punctul final stă după ghilimelele de închidere (RO-TIP-104). Majuscula ar înlocui o relație sintactică cu un început de frază.
 - Sursă: ghid gov-md §4.2.1.12 și §9.8.5; DOOM 3 cap. 3 (nereverificat local)
 - Vezi și: RO-TIP-034, RO-TIP-126
 
 ### RO-TIP-125 Elementele unei liste nu cer majusculă
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Ai nevoie de: Cont, Parolă, Adresă de e-mail.” → Corect: „Ai nevoie de: cont, parolă, adresă de e-mail.”
-- De ce: Elementele unei enumerări introduse prin două puncte și despărțite prin virgulă sau punct și virgulă încep cu literă mică. Majuscula la începutul fiecărui element e o convenție de casă, nu o normă; o impui numai dacă ți-o cere aplicația. Elementele care sunt fraze întregi, așezate pe rânduri separate, pot începe cu majusculă dacă toate au aceeași formă.
+- De ce: Elementele unei enumerări introduse prin două-puncte și despărțite prin virgulă sau punct-și-virgulă încep cu literă mică. Majuscula la începutul fiecărui element e o convenție de casă, nu o normă; o impui numai dacă ți-o cere aplicația. Elementele care sunt fraze întregi, așezate pe rânduri separate, pot începe cu majusculă dacă toate au aceeași formă.
 - Sursă: ghid gov-md §9.3.2, §9.4.5 și §4.1.11
 
 ### 2.8 Majuscule de accent
@@ -315,8 +303,8 @@ Bun:
 ### RO-TIP-122 Fără majuscule de accent în text
 - Nivel: recomandare
 - Greșit: „Oferta e destinată EXCLUSIV clienților noi.” → Corect: „Oferta e destinată exclusiv clienților noi.”
-- De ce: Majusculele integrale folosite pentru accent sunt o alegere de stil, nu de ortografie. În textul curent accentul se dă prin formulare sau, la nevoie, prin cursive. Fac excepție siglele, titlurile sau afișele scrise integral cu majuscule și formulele consacrate din acte (HOTĂRĂȘTE, DISPUNE).
-- Sursă: INJ p. 91–92
+- De ce: Majusculele integrale folosite pentru accent sunt o alegere de stil, nu de ortografie. În textul curent accentul se dă prin formulare sau, la nevoie, prin cursive. Fac excepție siglele, titlurile sau afișele scrise integral cu majuscule și formulele consacrate din acte (HOTĂRĂȘTE, DISPUNE). INJ admite majuscula folosită deliberat, în scop stilistic, pentru a scoate un cuvânt în evidență; un text în care autorul o folosește așa nu se corectează, doar se propune formularea.
+- Sursă: INJ p. 92
 
 ## 3. Virgula
 
@@ -338,7 +326,7 @@ Bun:
 
 > Directorul a anunțat că termenul se prelungește, iar angajații care au lucrat în weekend primesc un spor.
 
-Prima virgulă e greșită: completiva pusă după regentă nu se desparte. Lipsea virgula dinaintea lui „iar”. A treia desparte subiectul de predicat. Relativa „care au lucrat în weekend” e determinativă (arată care angajați primesc sporul) și nu se izolează.
+Virgula de după „anunțat” e greșită: completiva pusă după regentă nu se desparte. Lipsește virgula dinaintea lui „iar”. Virgula de după „weekend” desparte subiectul de predicat. Relativa „care au lucrat în weekend” e determinativă (arată care angajați primesc sporul) și nu se izolează.
 
 ### RO-TIP-036 Fără virgulă între subiect și predicat
 - Nivel: normă
@@ -370,7 +358,7 @@ Prima virgulă e greșită: completiva pusă după regentă nu se desparte. Lips
 - Nivel: normă
 - Greșit: „A citit raportul, și a plecat.” → Corect: „A citit raportul și a plecat.”
 - De ce: Părțile de propoziție și propozițiile legate prin „și” sau „sau” nu se despart prin virgulă. Excepțiile: perechile repetate („Au răspuns și clienții, și furnizorii”, „fie… fie”, „nici… nici”), unde virgula e obligatorie, și „și” cu sensul „iar”, urmat de negație („ghidurile publicate, și nu cele vechi”).
-- Sursă: ghid gov-md §9.2.1.9, §9.2.1.11 (N.B.), §9.2.1.15 și §9.2.2.1; Ghid UE §10.1.2.4–5 și §10.1.2.13 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.9, §9.2.1.11 (N.B.), §9.2.1.15 și §9.2.2.1; Ghid UE §10.1.2.4–5 și §10.1.2.13 (nereverificat local); ÎOOP6 §214–283 (nereverificat local)
 
 ### RO-TIP-041 „Desigur că”, „bineînțeles că”, „sigur că”: fără virgulă
 - Nivel: normă
@@ -380,7 +368,7 @@ Prima virgulă e greșită: completiva pusă după regentă nu se desparte. Lips
 - Vezi și: RO-TIP-098
 
 ### RO-TIP-042 Fără virgulă înainte de „etc.” și „ș.a.m.d.”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „mere, pere, etc.” → Corect: „mere, pere etc.”
 - De ce: „Etc.” înlocuiește ultimul element al enumerării și se leagă de el fără virgulă. Dacă propoziția se termină cu „etc.”, punctul abrevierii este și punctul final al frazei.
 - Sursă: ghid gov-md §9.2.1.17; Ghid UE §10.1.2.11 (nereverificat local)
@@ -401,10 +389,10 @@ Prima virgulă e greșită: completiva pusă după regentă nu se desparte. Lips
 - Nivel: normă
 - Greșit: „Ministerul a promis fonduri dar nu le-a alocat.” → Corect: „Ministerul a promis fonduri, dar nu le-a alocat.”
 - De ce: Conjuncțiile adversative „dar”, „iar”, „ci”, „însă” aflate la începutul unei propoziții sau al unei părți coordonate sunt precedate de virgulă. „Însă” din interiorul propoziției urmează RO-TIP-043.
-- Sursă: ghid gov-md §9.2.1.11 și §9.2.2.2; Ghid UE §10.1.2.7 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.11 și §9.2.2.2; Ghid UE §10.1.2.7 (nereverificat local); ÎOOP6 §214–283 (nereverificat local)
 
 ### RO-TIP-046 Virgulă înaintea lui „precum și”, „cât și”, „dar și”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „atât statul de origine cât și statul solicitat” → Corect: „atât statul de origine, cât și statul solicitat”
 - De ce: Locuțiunile „precum și”, „cât și” (după „atât”) și „dar și” sunt precedate de virgulă. Structura pe care o introduc nu e urmată de virgulă dacă face parte din subiect: „Atât directorul, cât și angajații au semnat.”
 - Sursă: ghid gov-md §9.2.1.10; Ghid UE §10.1.2.6 (nereverificat local)
@@ -439,7 +427,7 @@ Prima virgulă e greșită: completiva pusă după regentă nu se desparte. Lips
 - Nivel: normă
 - Corect: „Deputații, care au votat, au plecat” (toți au votat și toți au plecat) este altceva decât „Deputații care au votat au plecat” (au plecat doar cei care au votat).
 - De ce: Virgula schimbă sensul. Când contextul arată limpede una dintre lecturi și virgula o contrazice, e greșeală de punctuație; când textul rămâne ambiguu, semnalezi cazul și întrebi autorul (vezi RO-TIP-112).
-- Sursă: ghid gov-md §9.2.2.5; Ghid UE §10.1.2.17 (nereverificat local)
+- Sursă: ghid gov-md §9.2.2.5; Ghid UE §10.1.2.17 (nereverificat local); ÎOOP6 §214–283 (nereverificat local)
 - Vezi și: RO-TIP-100
 
 ### RO-TIP-052 Cauzala se desparte, în afară de cauza unică
@@ -466,16 +454,16 @@ Prima virgulă e greșită: completiva pusă după regentă nu se desparte. Lips
 - Nivel: normă
 - Greșit: „Notificați, când este gata.” → Corect: „Notificați când este gata.”
 - De ce: Subordonata pusă după regentă nu primește automat virgulă. Nu se despart: completiva („Am observat că funcționează”), relativa determinativă („Fișierul pe care l-ați selectat”) și temporala pusă după regentă („Notificați când este gata”). Virgula se pune la cauzală (de regulă), la condițională (de regulă), la consecutivă și la orice subordonată intercalată. A cere virgulă înaintea oricărei subordonate e hipercorectitudine.
-- Sursă: ghid gov-md §9.2.2.3, §9.2.2.5, §9.2.2.6 și §9.2.2.8
+- Sursă: ghid gov-md §9.2.2.3, §9.2.2.5, §9.2.2.6 și §9.2.2.8; ÎOOP6 §214–283 (nereverificat local)
 
 ### RO-TIP-114 Fără virgulă înaintea lui „sau” disjunctiv simplu
 - Nivel: normă
 - Greșit: „apasă pe legătură, sau lipește-o” → Corect: „apasă pe legătură sau lipește-o”
 - De ce: „Sau” simplu, între părți de propoziție sau între propoziții coordonate, nu cere virgulă. Virgula e corectă în trei cazuri: la perechea „sau… sau”, la „sau” cu sens explicativ („adică”), pus între virgule, și când înaintea lui se închide o incidentă sau o apoziție.
-- Sursă: ghid gov-md §9.2.1.9 și §9.2.2.1; INJ p. 67–70
+- Sursă: ghid gov-md §9.2.1.9 și §9.2.2.1; INJ p. 67–70; ÎOOP6 §214–283 (nereverificat local)
 
 ### RO-TIP-115 Virgulă înaintea lui „nu” de opoziție
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Scrie ș nu s.” → Corect: „Scrie ș, nu s.”
 - De ce: Când „nu” opune doi termeni fără conjuncție („X, nu Y”), coordonarea adversativă eliptică cere virgulă. La fel înaintea lui „și nu” cu sens adversativ („ghidurile publicate, și nu cele vechi”). Nu se pune virgulă când „nu” neagă verbul: „Fișierul nu există.”
 - Sursă: ghid gov-md §9.2.1.11 (N.B.) și §9.2.1.7
@@ -489,7 +477,7 @@ Ghilimelele românești sunt „…” (deschiderea jos, U+201E; închiderea sus
 Pașii:
 
 1. Verifici deschiderea și închiderea fiecărui citat: jos–sus, cu aceeași pereche.
-2. Punctul final: vezi mai jos (citat integrat sau frază completă după două puncte).
+2. Punctul final: vezi mai jos (citat integrat sau frază completă după două-puncte).
 3. Semnul întrebării și semnul exclamării care aparțin citatului stau înăuntru.
 4. Între ghilimele și textul citat nu se lasă spațiu.
 5. Citatul direct nu se corectează lingvistic, doar tipografic.
@@ -532,10 +520,10 @@ Atenție: ghilimelele curbe nu sunt un semn de text generat. „…” sunt chia
 - Sursă: ghid gov-md §9.1.2 și §9.4.4; ÎOOP6 §269 (nereverificat local)
 - Vezi și: RO-TIP-103
 
-### RO-TIP-058 Punctul după citatul-frază introdus prin două puncte
+### RO-TIP-058 Punctul după citatul-frază introdus prin două-puncte
 - Nivel: disputat
 - Corect: „Directorul a spus: „Nu plec.”” (punctul înăuntru) și „Directorul a spus: „Nu plec”.” (punctul după ghilimele).
-- De ce: Ghidul gov-md și Ghidul UE pun punctul înăuntru când citatul e o frază completă introdusă prin două puncte; alte ghiduri de presă îl pun după ghilimele. Nu corectezi niciuna; ceri consecvență în tot textul.
+- De ce: Ghidul gov-md și Ghidul UE pun punctul înăuntru când citatul e o frază completă introdusă prin două-puncte; alte ghiduri de presă îl pun după ghilimele. Nu corectezi niciuna; ceri consecvență în tot textul.
 - Sursă: ghid gov-md §9.1.2 și §9.8.6; Ghid UE §10.1 (nereverificat local)
 - Vezi și: RO-TIP-105
 
@@ -548,7 +536,7 @@ Atenție: ghilimelele curbe nu sunt un semn de text generat. „…” sunt chia
 ### RO-TIP-104 Citatul integrat în frază: punctul după ghilimele
 - Nivel: normă
 - Greșit: „A vorbit despre "un buget care nu ajunge."” → Corect: „A vorbit despre „un buget care nu ajunge”.”
-- De ce: Când citatul continuă fraza autorului, fără două puncte, punctul stă după ghilimelele de închidere. Citatul-frază completă introdus prin două puncte e cazul disputat de la RO-TIP-058.
+- De ce: Când citatul continuă fraza autorului, fără două-puncte, punctul stă după ghilimelele de închidere. Citatul-frază completă introdus prin două-puncte e cazul disputat de la RO-TIP-058.
 - Sursă: ghid gov-md §9.1.2 și §9.8.5; ÎOOP6 §269 (nereverificat local)
 
 ## 5. Linia de pauză, cratima și intervalele
@@ -585,7 +573,7 @@ Bun:
 ### RO-TIP-063 Cratima nu ține loc de linie de pauză
 - Nivel: normă
 - Greșit: „Ministrul - aflat la Bruxelles - a declarat” → Corect: „Ministrul – aflat la Bruxelles – a declarat”
-- De ce: Cratima cu spații în jur, în mijlocul frazei, e o linie de pauză scrisă greșit: fie „–” cu spații, fie „-” lipit. Excepție: liniuța de la începutul rândului, ca marcaj de listă.
+- De ce: Cratima cu spații în jur, în mijlocul frazei, e o linie de pauză scrisă greșit: nu „-” cu spații. Linia de pauză se scrie „–”, cu spații; cratima, fără spații, leagă cuvinte sau numere. Excepție: liniuța de la începutul rândului, ca marcaj de listă.
 - Sursă: ghid gov-md §9.9.1 și §9.11.9; DOOM 3 §1.2.5 (nereverificat local)
 - Vezi și: RO-TIP-106, RO-TIP-107
 
@@ -595,10 +583,10 @@ Bun:
 - De ce: Când incidenta dintre linii urmează unei construcții după care fraza cere oricum virgulă, virgula se pune după a doua linie, nu înaintea primei. Dacă fraza n-ar fi cerut virgulă, nu se pune nici după a doua linie.
 - Sursă: ghid gov-md §9.9.4; ÎOOP6 p. 47 (nereverificat local)
 
-### RO-TIP-065 Intervalele: cratimă fără spații sau linie de pauză
-- Nivel: disputat
+### RO-TIP-065 Intervalele: cratimă fără spații
+- Nivel: recomandare
 - Corect: „anii 2020-2021, orele 8-16, articolele 12-14, perioada 1-23 august, două-trei zile”
-- De ce: Pentru limite de timp, de spațiu și pentru aproximări DOOM 3 și ghidul gov-md preferă cratima fără spații; linia de pauză cu spații e admisă, dar mai lungă. Ghidul gov-md recomandă linia de pauză doar între două părți (RO-TIP-066) sau când cratima poate fi confundată cu un nume compus. Nu corectezi niciuna dintre variante; ceri consecvență.
+- De ce: Pentru limite de timp, de spațiu și pentru aproximări DOOM 3 și ghidul gov-md preferă cratima fără spații; linia de pauză cu spații e admisă de DOOM 3, dar socotită mai lungă fără rost. Ghidul gov-md recomandă linia de pauză doar între două părți (RO-TIP-066) sau când cratima poate fi confundată cu un nume compus. Propui cratima, fără spații, și ceri consecvență; linia de pauză nu se corectează ca greșeală.
 - Sursă: ghid gov-md §9.9.7 și §9.11.8; DOOM 3 §1.2.5 II (nereverificat local)
 
 ### RO-TIP-066 Relația dintre două părți: linia de pauză sau cratima
@@ -623,7 +611,7 @@ Bun:
 
 ### Metoda: ce nu are spațiu, ce are
 
-- Virgula, punctul, punctul și virgula, două puncte, semnul întrebării și semnul exclamării se lipesc de cuvântul dinainte și sunt urmate de spațiu.
+- Virgula, punctul, punctul-și-virgula, două-puncte, semnul întrebării și semnul exclamării se lipesc de cuvântul dinainte și sunt urmate de spațiu.
 - Între ghilimele sau paranteze și textul din interior nu se lasă spațiu.
 - Cratima, bara oblică și punctul din interiorul unei abrevieri nu au spații: „a.c.”, „km/h”, „lt.-maj.”.
 - Excepții la „spațiu după semn”: virgula zecimală (3,5), ora (12:30), numărul cu puncte (1.500), adresele web și de e-mail, punctul din abrevieri, semnul care e urmat de alt semn (ghilimele, paranteză închisă).
@@ -642,23 +630,18 @@ Verificări rapide (mecanice, dar cu ochii pe excepții):
 - De ce: Apostroful nu apare în cuvintele românești literare. Se folosește la anii prescurtați (’89, anii ’90, ante-’89), la rostirea familiară reprodusă (dom’le, dom’ profesor) și în nume străine (O’Neill, McDonald’s, D’Annunzio). Când cade un sunet și se formează o silabă nouă, se pune cratimă. Forma tipografică corectă a apostrofului este ’ (U+2019), care arată ca o virgulă ridicată; nu o confunda cu semnul prim (′) din matematică și nici cu apostroful drept de la tastatură, pe care un text îngrijit îl înlocuiește cu ’. În documentele oficiale anii se scriu întregi. Apostroful nu se scoate din formele de mai sus (vezi RO-NUG-096).
 - Sursă: ghid gov-md §9.13.1–9.13.5; DOOM 3 §1.2.1 (nereverificat local)
 
-### RO-TIP-068 Semnele de punctuație se lipesc de cuvântul dinainte
+### RO-TIP-068 Spațiul în jurul semnelor de punctuație
 - Nivel: normă
 - Greșit: „Ministrul a spus , apoi a plecat .” → Corect: „Ministrul a spus, apoi a plecat.”
-- De ce: Virgula, punctul, punctul și virgula, două-puncte, semnul întrebării și semnul exclamării nu sunt precedate de spațiu și sunt urmate de spațiu (sau de alt semn de punctuație).
-- Sursă: ghid gov-md §9.1.11, §9.2.1.1, §9.3.3 și §9.4.7; DOOM 3 §1.2.3 și §1.2.7 (nereverificat local)
+- De ce: Virgula, punctul, punctul-și-virgula, două-puncte, semnul întrebării, semnul exclamării și punctele de suspensie se lipesc de cuvântul dinainte și sunt urmate de spațiu (sau de alt semn de punctuație): „Gata. Continuă”, nu „Gata.Continuă”. Excepțiile sunt cele din metoda de mai sus: punctul din abrevieri, virgula zecimală, ora, numerele, adresele web și de e-mail, și cazul în care urmează alt semn. Un verificator mecanic care ignoră aceste excepții strică textul.
+- Sursă: ghid gov-md §9.1.11, §9.2.1.1, §9.3.3, §9.4.7, §9.10.2 și §9.14; DOOM 3 §1.2.3 și §1.2.7 (nereverificat local)
+- Vezi și: RO-TIP-123
 
 ### RO-TIP-069 Fără spații în jurul cratimei, al barei oblice și în interiorul abrevierilor
 - Nivel: normă
 - Greșit: „km / h, a . c., prim - ministru” → Corect: „km/h, a.c., prim-ministru”
 - De ce: Cratima, bara oblică și punctele din interiorul abrevierilor se scriu fără spații. Excepția e cratima-marcaj de listă, la început de rând.
 - Sursă: ghid gov-md §9.1.11, §9.11.9 și §9.12.4; ÎOOP6 §214–283 (nereverificat local)
-
-### RO-TIP-123 Spațiu după semnele de punctuație
-- Nivel: normă
-- Greșit: „Gata.Continuă” → Corect: „Gata. Continuă”
-- De ce: După punct, virgulă, punct și virgulă, două puncte, semnul întrebării, semnul exclamării și punctele de suspensie se lasă spațiu, iar înainte de ele nu se lasă. Excepțiile sunt cele din metoda de mai sus: punctul din abrevieri, virgula zecimală, ora, numerele, adresele web și de e-mail, și cazul în care urmează alt semn. Un verificator mecanic care ignoră aceste excepții strică textul.
-- Sursă: ghid gov-md §9.1.11, §9.10.2 și §9.14
 
 ### RO-TIP-035 Titlurile, subtitlurile și legendele nu se încheie cu punct
 - Nivel: normă
@@ -709,10 +692,10 @@ Bun:
 
 ### RO-TIP-071 Numele din alfabet latin: forma originală, cu diacriticele ei
 - Nivel: normă
-- Greșit: „Munich, Cracow, Skoda” → Corect: „München, Kraków, Škoda”
-- De ce: Numele proprii din limbi cu alfabet latin se scriu ca în original, cu diacriticele lor: München, Mickiewicz, Petőfi, Márquez, São Tomé. Nu le anglicizezi. Pentru orașele care au o formă românească tradițională se folosește aceasta (Cracovia, Londra); vezi RO-TIP-072.
+- Greșit: „Munich, Skoda” → Corect: „München, Škoda”
+- De ce: Numele proprii din limbi cu alfabet latin se scriu ca în original, cu diacriticele lor: München, Mickiewicz, Petőfi, Márquez, São Tomé. Nu le anglicizezi și nu le simplifici (Skoda, Munchen). Regula se aplică și sedilei: într-un nume turcesc, litera s cu sedilă (U+015F) e corectă, iar sedila se corectează doar în cuvintele românești. Pentru orașele care au o formă românească tradițională (Cracovia, Londra) se folosește aceasta, iar exonimul rămâne corect; vezi RO-TIP-072.
 - Sursă: ghid gov-md §3.5.1 și §2.2.1; DOOM 3 §1.3 și §2.5 (nereverificat local)
-- Vezi și: RO-TIP-096, RO-TIP-108
+- Vezi și: RO-TIP-028, RO-TIP-096, RO-TIP-108
 
 ### RO-TIP-072 Exonimele consacrate se folosesc în textul curent
 - Nivel: recomandare
@@ -745,7 +728,7 @@ Bun:
 - Nivel: normă
 - Greșit: „Chekhov, Tchaikovsky, Yeltsin, Navalny, Kyrgyzstan” → Corect: „Cehov, Ceaikovski, Elțân, Navalnâi, Kârgâzstan”
 - De ce: Numele rusești se transcriu după tabelul românesc, nu după forma englezească: ч devine c(e/i), ш devine ș, щ devine șc(i), ж devine j, х devine h, ц devine ț, ы devine â în interior (î la sfârșit de cuvânt), -ий devine i, я devine ia la început de cuvânt și după vocală și ea după consoană, к devine k, е rămâne e (nu ie), г rămâne g (gh înaintea lui e și i). Excepții tradiționale: Dostoievski, Turgheniev.
-- Sursă: ghid gov-md §3.3 și §3.4
+- Sursă: ghid gov-md §3.3 și §3.4; DOOM 3 §1.3.3.1 (nereverificat local)
 - Vezi și: RO-TIP-109
 
 ### RO-TIP-078 Bulgara

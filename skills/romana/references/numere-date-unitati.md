@@ -56,7 +56,7 @@ Bun:
 - Nivel: normă
 - Greșit: „10 milioane euro” → Corect: „10 milioane de euro”
 - De ce: Milioanele, miliardele și miile scrise în cuvinte cer „de” și înaintea substantivului numărat: „20 de milioane de locuitori”, „20 de miliarde de euro”, „40 de mii de lei”. Numărul de dinaintea lui „milioane” urmează regula obișnuită: „3 milioane de euro”, dar „20 de milioane de euro”.
-- Sursă: ghid gov-md §7.4.1.6; INJ p. 84–86
+- Sursă: ghid gov-md §7.4.1.6; INJ p. 84–86; DOOM 3 §6.5 (nereverificat local)
 - Vezi și: RO-NUM-039
 
 ### RO-NUM-004 Datele și anii nu cer „de”
@@ -81,6 +81,7 @@ Bun:
 - **Cifra 12** ia forma de feminin pe lângă substantivele feminine: „douăsprezece mii”, „ora douăsprezece”, „clasa a douăsprezecea”. La date se acceptă și masculinul: „doisprezece mai”.
 - **Ora** se spune „ora unu”, „ora două”, „ora douăzeci și unu” („ora una”, „ora doi” sunt considerate greșite).
 - **Numeralul „unu”** când numeri nu devine „unul”: „unu, doi, trei”.
+- **„Procent” și „la sută”** nu se pun împreună („un procent de 25 la sută”): vezi RO-SEM-243 în [paronime-si-pleonasme.md](paronime-si-pleonasme.md). Alegi una dintre forme: „2%”, „doi la sută” sau „două procente”.
 - **Genitivul și dativul cu numeral** se pot face cu „a” și „la” („votul a doi senatori”, „a dat note la doi elevi”). Sunt forme corecte; vezi RO-NUG-024 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md).
 
 Slab:
@@ -136,12 +137,6 @@ Bun:
 - De ce: Prima zi a lunii se numește cu ordinalul: „întâi mai”, „Întâi Decembrie”. Scrisă cu cifre („1 Decembrie”), se citește tot „întâi”. Majuscula la lună apare când data e o sărbătoare (vezi RO-TIP-013).
 - Sursă: DOOM 3, s.v. ianuarie (nereverificat local)
 
-### RO-NUM-012 „La sută” și „procente” nu se pun împreună
-- Nivel: normă
-- Greșit: „două procente la sută” → Corect: „două procente”
-- De ce: „Procent” înseamnă deja „la sută”. Alegi una dintre forme: „2%”, „doi la sută” sau „două procente”.
-- Sursă: DOOM 3, s.v. procent; DEX '98, s.v. procent
-
 ### RO-NUM-035 Ordinalele cu cifre: cratimă
 - Nivel: normă
 - Greșit: „al XXlea, a 3a” → Corect: „al XX-lea, a 3-a”
@@ -174,7 +169,7 @@ Bun:
 - Nivel: normă
 - Greșit: „12.5%” → Corect: „12,5%”
 - De ce: Zecimalele se despart prin virgulă: „12,5%”, „1,1 miliarde”, „3,5”. Punctul zecimal e englezesc. Excepție fac codul, datele tehnice și citatele în altă limbă.
-- Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local)
+- Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local); DOOM 3, s.v. miliard (nereverificat local)
 - Vezi și: RO-NUM-052
 
 ### RO-NUM-015 Punctul grupează miile
@@ -187,8 +182,8 @@ Bun:
 ### RO-NUM-016 Anii și numerele de pagină nu au separator
 - Nivel: normă
 - Greșit: „anul 2.024” → Corect: „anul 2024”
-- De ce: Anii, numerele de pagină, de articol și de telefon nu se grupează: „anul 2026”, „pagina 1000”.
-- Sursă: ghid gov-md §7.4.1.4 (N.B.); DOOM 3 §1.2.6 (nereverificat local)
+- De ce: Anii și numerele de pagină nu se grupează: „anul 2026”, „pagina 1000”. Numerele de telefon au altă convenție: ghidul gov-md le grupează în blocuri prin spații fixe (+373 22 250 392), forma care nu se corectează.
+- Sursă: ghid gov-md §7.4.1.4 (N.B.) și §17.1.2; DOOM 3 §1.2.6 (nereverificat local)
 - Vezi și: RO-NUM-052
 
 ### RO-NUM-043 Miile nu se despart cu virgulă
@@ -265,13 +260,13 @@ Bun:
 ### RO-NUM-024 Data în text: luna cu literă mică
 - Nivel: normă
 - Greșit: „3 Octombrie 2026” → Corect: „3 octombrie 2026”
-- De ce: În text data se scrie ziua, luna cu litere mici, anul. Luna nu se abreviază și nu se scrie cu majusculă (vezi RO-TIP-012). În scris, ziua nu primește zero în față: „3 septembrie 2022”, nu „03 septembrie 2022”.
-- Sursă: ghid gov-md §12.6; DOOM 3 §1.2.6 (nereverificat local)
+- De ce: În text data se scrie ziua, luna cu litere mici, anul. Luna se scrie cu literă mică (vezi RO-TIP-012). Abrevierea lunii în proză nu se corectează ca greșeală; ghidul gov-md o cere întreagă în acte și în tabele o admite, așa că întreagă e doar o recomandare de stil. În scris, ziua nu primește zero în față: „3 septembrie 2022”, nu „03 septembrie 2022”.
+- Sursă: ghid gov-md §4.2.1.10 și §12.6; DOOM 3 §3.2 II.2.11 și §1.2.6 (nereverificat local)
 
 ### RO-NUM-025 Ora: „12:30” sau „12.30”
 - Nivel: recomandare
 - Corect: „Ședința începe la ora 12:30.”
-- De ce: Ora se scrie cu două puncte (12:30), forma pe care o recomandă ÎOOP6 și ghidul gov-md; DOOM 3 admite și punctul (12.30). Nici una dintre forme nu e greșeală; ceri doar aceeași formă în tot textul.
+- De ce: Ora se scrie cu două-puncte (12:30), forma pe care o recomandă ÎOOP6 și ghidul gov-md; DOOM 3 admite și punctul (12.30). Nici una dintre forme nu e greșeală; ceri doar aceeași formă în tot textul.
 - Sursă: ghid gov-md §9.4.6; ÎOOP6 și DOOM 3 §1.2.6 (nereverificat local)
 
 ## 8. Sume de bani și monede
@@ -327,7 +322,7 @@ Bun:
 
 - Simbolurile unităților nu au punct și nu se acordă: km, kg, m, h, ha, l, MHz, km/h. Literele sunt cele din Sistemul Internațional: kg cu k mic, W și A cu majusculă (vin de la nume de oameni).
 - Între număr și simbol se lasă spațiu, de preferință fix: „50 km”, „20 °C”. Fără spațiu se scriu doar simbolul gradului unghiular (45°) și, în tabele dense, valorile lipite.
-- Unitatea se indică după ultima valoare dintr-un șir sau interval: „2,2; 2,4; 2,6 mm”, „de la 5 până la 10 kg”. Excepție: %, °C și °, care se repetă: „de la 65 % până la 70 %”.
+- Unitatea se indică după ultima valoare dintr-un șir sau interval: „2,2; 2,4; 2,6 mm”, „de la 5 până la 10 kg”. Excepție: %, °C și °, care se repetă: „de la 65% până la 70%”.
 - Bara oblică ține locul lui „pe” și nu are spații: „km/h”, „EUR/m²”.
 
 Slab:
@@ -371,16 +366,11 @@ Bun:
 
 ## 10. Cifrele la traducere și la rescriere
 
-Cifrele, datele, monedele și unitățile se compară cu originalul înainte de predare: valoarea nu se schimbă, doar scrierea. Regula completă despre fidelitate e în [fidelitate.md](fidelitate.md).
+Cifrele, datele, monedele și unitățile se compară cu originalul înainte de predare: valoarea nu se schimbă, doar scrierea. Regula completă despre fidelitate e în [fidelitate.md](fidelitate.md). Când un număr pare suspect, îl compari și cu ordinul de mărime al faptului (un buget, o populație): o diferență de o mie de ori sugerează o greșeală de scară (vezi RO-CAL-053).
 
 ### RO-NUM-048 Valoarea nu se schimbă, doar scrierea
 - Nivel: normă
 - Greșit: „3.5 million de dolari” → Corect: „3,5 milioane de dolari”
-- De ce: La traducere sau la rescriere compari fiecare cifră, dată, monedă și unitate cu originalul: „3.5 million” devine „3,5 milioane”, „1,500” (englezesc) devine „1.500”. Conversiile (mile în kilometri, monede) se fac doar cu sursa cursului sau a factorului; altfel păstrezi unitatea originală. O cifră schimbată e o abatere de la fidelitate cu gravitate P0.
-- Sursă: ghid gov-md §7.4.1.4; Mic ghid CE Rec. 9 (nereverificat local)
+- De ce: La traducere sau la rescriere compari fiecare cifră, dată, monedă și unitate cu originalul: „3.5 million” devine „3,5 milioane”, „1,500” (englezesc) devine „1.500”. Conversiile (mile în kilometri, monede) se fac doar cu sursa cursului sau a factorului; altfel păstrezi unitatea originală. O cifră schimbată e o abatere de la regula de fidelitate din SKILL.md, deci normă cu gravitatea P0 (vezi [fidelitate.md](fidelitate.md)).
+- Sursă: regula de fidelitate din SKILL.md; ghid gov-md §7.4.1.4
 
-### RO-NUM-047 Cum deosebești: compari cu ordinul de mărime
-- Nivel: normă
-- Corect: „Bugetul de 3 miliarde de lei nu e 3 milioane de lei.”
-- De ce: Când un număr pare suspect, îl compari cu originalul și cu ordinul de mărime al faptului (un buget, o populație). O diferență de o mie de ori sugerează o greșeală de scară (vezi RO-CAL-053).
-- Sursă: Mic ghid CE Rec. 9 (nereverificat local)
