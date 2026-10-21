@@ -43,35 +43,31 @@ Bun:
 - Greșit: „1.500 cazuri noi” → Corect: „1.500 de cazuri noi”
 - De ce: Decid ultimele două cifre. Când ele fac 20 sau mai mult, inclusiv 00, substantivul primește „de”: „20 de elevi”, „25 de persoane”, „1.500 de cazuri”, „100 de euro”, „300 de persoane”. Când fac de la 01 la 19, „de” nu se pune: „19 persoane”, „101 ani”, „201 ani”. Lista lungă de exemple din ghiduri nu înlocuiește regula: o aplici la orice număr.
 - Sursă: INJ p. 84–86; DOOM 3 §6.5.3; ÎOOP6 p. 108; CLDR, reguli de plural ro (categoria few)
-- Vezi și: RO-NUM-037, RO-NUM-038, RO-NUM-049
 
 ### RO-NUM-002 Fără „de” înaintea unui simbol sau a unei abrevieri
 - Nivel: recomandare
 - Greșit: „20 de kg” → Corect: „20 kg”
 - De ce: Înaintea unui simbol de unitate sau de monedă nu se scrie „de”: „20 kg”, „50 km”, „20 EUR”. Citit cu voce tare, simbolul se pronunță cu numele întreg și cu „de” („douăzeci de kilograme”). Cu numele întreg al unității „de” rămâne: „20 de kilograme”, „20 de euro”. Dacă numeralul urmează „milioane” sau „mii” scrise în cuvinte, „de” rămâne înaintea simbolului: „20 de milioane EUR”.
 - Sursă: ghid gov-md §7.4.1.6 și §16.2.3; INJ p. 85–86
-- Vezi și: RO-NUM-038, RO-NUM-051
 
 ### RO-NUM-003 „Milioane” și „miliarde” scrise în cuvinte cer „de” și înaintea substantivului
 - Nivel: normă
 - Greșit: „10 milioane euro” → Corect: „10 milioane de euro”
 - De ce: Milioanele, miliardele și miile scrise în cuvinte cer „de” și înaintea substantivului numărat: „20 de milioane de locuitori”, „20 de miliarde de euro”, „40 de mii de lei”. Numărul de dinaintea lui „milioane” urmează regula obișnuită: „3 milioane de euro”, dar „20 de milioane de euro”.
 - Sursă: ghid gov-md §7.4.1.6; INJ p. 84–86; DOOM 3 §6.5.1; DOOM 3, s.v. milion, miliard
-- Vezi și: RO-NUM-039
 
 ### RO-NUM-004 Datele și anii nu cer „de”
 - Nivel: recomandare
 - Greșit: „20 de mai” → Corect: „20 mai”
 - De ce: Data („20 mai”, „31 august”) și anul („anul 2020”, „în 2025”) nu intră sub regula cu „de”: ele nu numără obiecte.
 - Sursă: INJ p. 84–86; sprijin indirect: DOOM 3, s.v. doi2 („data de doi ianuarie”) și ÎOOP6 p. 108 (datele fără „de”), care nu condamnă însă expres „20 de mai”
-- Vezi și: RO-NUM-038
 
 ### RO-NUM-050 Fără „de” după numeralele zecimale
 - Nivel: recomandare
 - Greșit: „1,5 de fișiere” → Corect: „1,5 fișiere”
 - De ce: După un număr zecimal substantivul numărat nu primește „de”: „1,5 fișiere”, „4,775 milioane de euro” (în al doilea exemplu „de” rămâne doar înaintea lui „euro”, fiindcă îl cere cuvântul „milioane”). Aceasta este convenția skill-ului, de acord cu ghidul gov-md și cu categoria „few” din CLDR. Ghidul INJ cere „de” după zecimale citite ca 20 sau mai mult („4,25 de procente”); fiindcă sursele se contrazic, propui forma fără „de”, nu o impui, și ceri consecvență în tot textul.
 - Sursă: ghid gov-md §7.4.1.6 (N.B.) și §16.2.3; INJ p. 85–86; CLDR, reguli de plural ro (v ≠ 0)
-- Vezi și: RO-NUM-039
+- Vezi și: RO-NUM-003
 
 ## 2. Acord și forme ale numeralelor
 
@@ -115,21 +111,19 @@ Bun:
 - Greșit: „doisprezece mii de lei” → Corect: „douăsprezece mii de lei”
 - De ce: Cifra 12 ia forma de feminin pe lângă substantive feminine: „douăsprezece mii”, „ora douăsprezece”, „a douăsprezecea parte”. La date sunt admise ambele forme: „doisprezece mai” și „douăsprezece mai”.
 - Sursă: DOOM 3, s.v. doisprezece, douăsprezece; ÎOOP6 p. 108
-- Vezi și: RO-NUM-040
+- Vezi și: RO-NUM-009
 
 ### RO-NUM-009 „Ora unu”, „ora două”
 - Nivel: normă
 - Greșit: „ora una, ora doi” → Corect: „ora unu, ora două”
 - De ce: Numeralul care arată ora se spune „unu” (și „douăzeci și unu”), nu „una”, și „două”, nu „doi”: „ora unu”, „ora două”, „ora douăzeci și două”. La date „doisprezece mai” e corect; la oră, „ora douăsprezece”.
 - Sursă: DOOM 3, s.v. unu, doi; ÎOOP6 p. 108
-- Vezi și: RO-NUM-040
 
 ### RO-NUM-010 „Unu” când numeri
 - Nivel: normă
 - Greșit: „Numără: unul, doi, trei.” → Corect: „Numără: unu, doi, trei.”
 - De ce: Cardinalul 1 este „unu” când numără sau când e folosit ca număr: „nu doi, ci numai unu”. „Unul” este pronume („Unul a reușit, celălalt nu”); a-l pune în locul numeralului e hipercorectitudine.
 - Sursă: DOOM 3, s.v. unu, unul
-- Vezi și: RO-NUM-041
 
 ### RO-NUM-011 Prima zi a lunii: „întâi”
 - Nivel: normă
@@ -170,21 +164,21 @@ Bun:
 - Greșit: „12.5%” → Corect: „12,5%”
 - De ce: Zecimalele se despart prin virgulă: „12,5%”, „1,1 miliarde”, „3,5”. Punctul zecimal e englezesc. Excepție fac codul, datele tehnice și citatele în altă limbă.
 - Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local); ÎOOP6 p. 54 (Punctul-și-virgula, vii: zecimale scrise cu virgulă); DOOM 3 §1.2.6 II (indirect) și s.v. miliard (1,1 miliarde)
-- Vezi și: RO-NUM-052
+- Vezi și: RO-NUM-015
 
 ### RO-NUM-015 Punctul grupează miile
 - Nivel: recomandare
 - Greșit: „1 205 200” → Corect: „1.205.200”
 - De ce: DOOM 3 preferă punctul pentru mii (1.000; 1.205.200). Ghidul UE și ghidul gov-md folosesc spațiul fix (1 205 200), ca să nu se rupă numărul la capăt de rând; e convenția acelor acte și acolo nu se corectează. Într-un text obișnuit alegi punctul, aplicat consecvent.
 - Sursă: DOOM 3 §1.2.6 II și §1.2.3 pct. 5; ghid gov-md §7.4.1.4 și §12.5.5; Ghid UE §10.4 (nereverificat local)
-- Vezi și: RO-NUM-044, RO-NUM-052
+- Vezi și: RO-NUM-014
 
 ### RO-NUM-016 Anii și numerele de pagină nu au separator
 - Nivel: normă
 - Greșit: „anul 2.024” → Corect: „anul 2024”
 - De ce: Anii și numerele de pagină nu se grupează: „anul 2026”, „pagina 1000”. Numerele de telefon au altă convenție: ghidul gov-md le grupează în blocuri prin spații fixe (+373 22 250 392), forma care nu se corectează.
 - Sursă: ghid gov-md §7.4.1.4 (N.B.) și §17.1.2; DOOM 3 §1.2.6 II și §1.2.3 pct. 5
-- Vezi și: RO-NUM-052
+- Vezi și: RO-NUM-015
 
 ### RO-NUM-043 Miile nu se despart cu virgulă
 - Nivel: normă
@@ -221,7 +215,6 @@ Engl. „billion” înseamnă miliard, nu „bilion”: „3 billion dollars”
 - Greșit: „o perioadă de 5 ani” → Corect: „o perioadă de cinci ani”
 - De ce: În textul nestatistic, de la unu la nouă se scrie cu litere, de la 10 în sus cu cifre: „cinci ani”, „10 ani”. Cu cifre se scriu mereu datele, procentele, temperaturile, voturile, sumele și numeralele urmate de unități (8%, 7 °C, 3 kg). E o convenție de casă a ghidurilor UE și gov-md, nu o normă DOOM; ce contează e consecvența. În presă, „în 1 săptămână” sună administrativ: „într-o săptămână”.
 - Sursă: ghid gov-md §7.4.1.1, §7.4.1.2 și §12.5.6; Ghid UE §10.4.1 (nereverificat local)
-- Vezi și: RO-NUM-053
 
 ## 6. Procentul și spațiul înaintea simbolului
 
@@ -230,7 +223,6 @@ Engl. „billion” înseamnă miliard, nu „bilion”: „3 billion dollars”
 - Corect: „63 %” (cu spațiu fix) și „63%” (lipit).
 - De ce: Ghidul gov-md și Ghidul UE cer spațiu între număr și simbolul procentului, ca la orice unitate (63 %); alte ghiduri și uzul curent scriu „63%”. Nu corectezi niciuna; alegi una și o păstrezi. Înaintea unei unități de măsură (50 km, 20 °C) spațiul este cerut; fără spațiu se scrie doar simbolul gradului unghiular (45°). Spațiul fix (nonbreaking) împiedică ruperea cifrei de simbol la capăt de rând. În tabele foarte dense și în formule se admite scrierea lipită.
 - Sursă: ghid gov-md §12.5.1 și §9.14; Ghid UE §10.4 (nereverificat local)
-- Vezi și: RO-NUM-022
 
 ## 7. Date și ore
 
@@ -255,7 +247,6 @@ Bun:
 - Greșit: „12 . 11 . 2020” → Corect: „12.11.2020”
 - De ce: Data cu cifre se scrie zz.ll.aaaa, cu punct și fără spații. Se admit și bara oblică și cratima, iar forma ISO este aaaa-ll-zz. Formatele nu se amestecă în același text. Ziua nu se înlocuiește cu luna: 12.11.2020 înseamnă 12 noiembrie în România, dar poate fi citit ca 11 decembrie în alte țări; la traducere verifici sursa.
 - Sursă: ghid gov-md §9.1.9, §9.12.3 și §12.6; DOOM 3 §1.2.6 I (data cu cifre) și §1.2.4 III.3
-- Vezi și: RO-NUM-045
 
 ### RO-NUM-024 Data în text: luna cu literă mică
 - Nivel: normă
@@ -350,7 +341,6 @@ Bun:
 - Greșit: „10 km., 5 Kg, 100 kmh” → Corect: „10 km, 5 kg, 100 km/h”
 - De ce: Sistemul legal în România este SI. Simbolurile nu au punct și nu se acordă: nu există „kms” sau „kgs”. Literele se scriu cum le cere standardul: „kg”, nu „Kg”; „MHz”, nu „mhz”. Bara oblică nu are spații: „km/h”, „EUR/m²”.
 - Sursă: ghid gov-md §4.2.1.8, §9.1.8.3 și §9.12.4; DOOM 3 §1.2.6 I.5
-- Vezi și: RO-NUM-036, RO-NUM-046
 
 ### RO-NUM-032 Bara oblică ține locul lui „pe”
 - Nivel: recomandare
