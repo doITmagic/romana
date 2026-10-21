@@ -1,0 +1,13 @@
+{
+  "id": "curat-documentatie-05",
+  "mod": "verificare",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "## Importul datelor\n\nAplicația poate importa liste de contacte din fișiere CSV. Fișierul trebuie să respecte formatul descris mai jos, altfel fișierul este refuzat.\n\n### Formatul fișierului\n\nPrima linie conține numele coloanelor, separate prin virgulă: `nume`, `prenume`, `email` și, opțional, `telefon`. Fiecare linie următoare descrie un contact. Codificarea fișierului trebuie să fie UTF-8, ca diacriticele să se afișeze corect.\n\n### Pașii importului\n\n1. Deschideți pagina Contacte și apăsați Importați.\n2. Alegeți fișierul din calculator.\n3. Verificați previzualizarea primelor zece linii.\n4. Apăsați Confirmați importul.\n\nImportul poate dura câteva minute, în funcție de numărul de contacte. În acest timp puteți continua să lucrați în aplicație. La final primiți un mesaj cu numărul de contacte adăugate și cu numărul celor respinse.\n\n### Câmpuri opționale\n\nColoana `telefon` poate rămâne goală. Dacă o completați, numărul trebuie scris cu cifre, fără spații, cu prefixul țării dacă nu este un număr din România. Numerele scrise altfel sunt păstrate așa cum au fost introduse, dar nu pot fi folosite pentru trimiterea mesajelor.\n\n### Limite\n\nUn fișier poate avea cel mult 10.000 de linii și 5 MB. Pentru liste mai mari, împărțiți fișierul în mai multe părți și importați-le pe rând.\n\n### Contacte respinse\n\nUn contact este respins dacă adresa de e-mail lipsește sau nu are un format valid, sau dacă există deja în listă. Contactele respinse se pot descărca într-un fișier separat, `respinse.csv`, pentru a le corecta și a le importa din nou.\n\nDacă ați importat din greșeală un fișier, puteți anula importul în prima oră de la finalizare, din meniul Istoric. După o oră, contactele se pot șterge doar manual.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

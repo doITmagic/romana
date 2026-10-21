@@ -1,0 +1,18 @@
+{
+  "id": "hipercorectie-05",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Conform cu regulamentul, înscrierile se fac până pe 15 martie. Potrivit directorului, ar fi fost depuse deja 300 de cereri. Datorită vremii frumoase, festivalul a atras mulți vizitatori.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Conform cu regulamentul",
+      "ar fi fost depuse",
+      "Datorită vremii frumoase"
+    ]
+  }
+}

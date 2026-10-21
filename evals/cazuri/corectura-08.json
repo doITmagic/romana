@@ -1,0 +1,23 @@
+{
+  "id": "corectura-08",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Primarul a spus că \u201cnu vom crește taxele anul acesta”. Opoziția a numit promisiunea „electorală” și a cerut un calendar al cheltuielilor.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "\u201cnu vom crește taxele anul acesta”",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "„nu vom crește taxele anul acesta”",
+      "„electorală”"
+    ]
+  }
+}

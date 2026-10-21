@@ -1,0 +1,13 @@
+{
+  "id": "curat-blog-01",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Anul acesta am încercat să țin o grădină de legume pe balcon și pot spune că m-am ales cu mai multe lecții decât cu roșii. Prima lecție: balconul meu se uită spre nord, iar roșiile vor soare. Am aflat asta după șase săptămâni, când plantele erau lungi, subțiri și fără niciun fruct.\n\nA doua lecție a fost despre udat. Am crezut că, dacă ud puțin în fiecare zi, plantele cresc mai bine. De fapt, rădăcinile rămâneau la suprafață, iar la primul val de căldură s-au uscat. Vecina de la etajul trei, care are o grădină de invidiat, mi-a spus să ud mai rar și mai mult. Am încercat și a mers.\n\nPână la urmă, singurele care au dat roade au fost verdețurile: pătrunjelul, mărarul și busuiocul. Nu e o recoltă de lăudat, dar ne-a ajuns pentru salate până în octombrie. Anul viitor mut ghivecele pe balconul din față, cel de la sud, și îmi cumpăr ghivece cu rezervă de apă.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

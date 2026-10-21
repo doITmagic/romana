@@ -1,0 +1,13 @@
+{
+  "id": "curat-email-01",
+  "mod": "verificare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Bună ziua,\n\nVă scriu în legătură cu comanda nr. 48215, plasată pe 3 octombrie. Am primit coletul ieri, dar cutia era deteriorată, iar una dintre cele două lămpi are abajurul spart. Atașez două fotografii în care se vede starea pachetului și a produsului.\n\nAș vrea să primesc o lampă nouă sau, dacă nu mai aveți pe stoc, banii înapoi. Pot returna lampa spartă cu curierul, dacă mă anunțați când trece.\n\nVă mulțumesc pentru ajutor. Vă rog să-mi confirmați dacă ați primit mesajul.\n\nCu stimă,\nElena Marinescu",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

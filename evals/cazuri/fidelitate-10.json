@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-10",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nMinistrul a spus: „Nu putem promite nimic până nu vedem cifrele.”\n\nRescriere:\nMinistrul a promis că va rezolva problema după ce va vedea cifrele.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "a promis că va rezolva problema",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

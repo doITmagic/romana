@@ -1,0 +1,15 @@
+{
+  "id": "trigger-negativ-06",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie o poezie de dragoste în română, cu rimă, despre toamnă.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "romana"
+    ]
+  }
+}

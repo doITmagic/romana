@@ -1,0 +1,19 @@
+{
+  "id": "context-11",
+  "mod": "verificare",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sarcinile noului angajat constau din coordonarea echipei și din raportarea lunară.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "constau din coordonarea",
+        "nivel": "disputat",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

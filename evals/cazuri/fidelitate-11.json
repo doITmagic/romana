@@ -1,0 +1,24 @@
+{
+  "id": "fidelitate-11",
+  "mod": "verificare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nHotelul are 40 de camere și un restaurant.\n\nRescriere:\nHotelul, mai mare decât orice alt hotel din oraș, are 40 de camere și un restaurant rafinat.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "mai mare decât orice alt hotel din oraș",
+        "nivel": "normă",
+        "pilon": "coerență"
+      },
+      {
+        "fragment": "restaurant rafinat",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

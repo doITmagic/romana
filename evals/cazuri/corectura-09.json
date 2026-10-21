@@ -1,0 +1,33 @@
+{
+  "id": "corectura-09",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Firma are 15 angajați și 32 clienți permanenți. Anul trecut a încasat 2.5 milioane lei, față de 2 milioane de lei în anul dinainte.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "32 clienți",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "2.5",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "milioane lei",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "32 de clienți",
+      "2,5 milioane de lei"
+    ]
+  }
+}

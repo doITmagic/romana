@@ -1,0 +1,24 @@
+{
+  "id": "pastrare-07",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Valoarea contractului este de 1,250.50 EUR, plătibilă până la 15.11.2026. Penalitatea este de 0,1% pe zi de întârziere.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "1,250.50 EUR",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "1.250,50 EUR",
+      "15.11.2026",
+      "0,1%"
+    ]
+  }
+}

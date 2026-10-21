@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-15",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Formularele se depun la ghișeul unic până joi. Hotărârea a fost comunicată ieri. Voi, ca și ei, ați lucrat ani de zile la acest dosar.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Formularele se depun",
+      "Hotărârea a fost comunicată",
+      "ca și ei",
+      "ani de zile"
+    ]
+  }
+}

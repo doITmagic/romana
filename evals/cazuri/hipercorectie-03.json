@@ -1,0 +1,18 @@
+{
+  "id": "hipercorectie-03",
+  "mod": "corectura",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Vreau să fii sigur că ai salvat fișierul înainte să pleci. Copiii vecinilor au realizat abia târziu că planul nu funcționa, iar mama lor a aflat și mai târziu.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "să fii sigur",
+      "Copiii vecinilor",
+      "au realizat abia târziu că"
+    ]
+  }
+}

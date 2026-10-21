@@ -1,0 +1,19 @@
+{
+  "id": "context-09",
+  "mod": "verificare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Stimata doamna,\n\nVa multumim pentru cererea trimisa pe 12 octombrie. Am verificat dosarul si lipseste un singur document: copia certificatului de nastere. Il puteti incarca in contul dumneavoastra sau ni-l puteti trimite la aceasta adresa, in format PDF.\n\nDupa ce primim documentul, dosarul merge la comisie. Hotararea comisiei va fi comunicata in cel mult 30 de zile.\n\nCu respect,\nSecretariat",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Stimata doamna,",
+        "nivel": "de semnalat",
+        "pilon": "tipografie"
+      }
+    ]
+  }
+}

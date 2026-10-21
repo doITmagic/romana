@@ -1,0 +1,15 @@
+{
+  "id": "trigger-pozitiv-09",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Verifică diacriticele, ghilimelele și acordurile din acest comunicat de presă și spune-mi ce nu e în regulă.",
+  "confirmat": false,
+  "asteptat": {
+    "cerut": [
+      "romana"
+    ]
+  }
+}

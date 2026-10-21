@@ -1,0 +1,15 @@
+{
+  "id": "trigger-negativ-02",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Write a formal email to a customer in English about a delayed order.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "romana"
+    ]
+  }
+}

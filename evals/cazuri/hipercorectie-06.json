@@ -1,0 +1,18 @@
+{
+  "id": "hipercorectie-06",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Toți candidații – inclusiv cei independenți – au semnat codul de conduită. Moderatorul a spus: „Rugămintea mea e ca fiecare să răspundă cu «da» sau «nu».” În anii ’80, emisiunea se difuza lunar.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Toți candidații – inclusiv cei independenți – au semnat",
+      "«da» sau «nu»",
+      "anii ’80"
+    ]
+  }
+}

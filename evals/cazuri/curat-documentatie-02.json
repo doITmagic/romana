@@ -1,0 +1,13 @@
+{
+  "id": "curat-documentatie-02",
+  "mod": "verificare",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "## Configurare\n\nAplicația citește setările din fișierul `config.yaml`, aflat în directorul de lucru. Dacă fișierul lipsește, folosește valorile implicite.\n\nSetările principale sunt:\n\n- `port`: portul pe care ascultă serverul. Valoarea implicită este 8080.\n- `baza_de_date`: adresa bazei de date, în formatul `postgres://utilizator:parola@gazda/nume`.\n- `jurnal`: nivelul mesajelor din jurnal. Valorile admise sunt `eroare`, `avertisment` și `info`.\n\nDupă ce modificați fișierul, reporniți aplicația. Modificările nu se aplică în timpul rulării.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

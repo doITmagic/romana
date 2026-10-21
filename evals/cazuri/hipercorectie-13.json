@@ -1,0 +1,26 @@
+{
+  "id": "hipercorectie-13",
+  "mod": "corectura",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Bună ziua,\n\nAtașez tabelul corect. Tabelul care l-am atașat ieri era o versiune veche. Unul din totaluri s-a schimbat, iar restul au rămas la fel ca și anul trecut.\n\nCu stimă,\nMara",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Tabelul care l-am atașat",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "Tabelul pe care l-am atașat"
+    ],
+    "interzis": [
+      "Unul din totaluri",
+      "ca și anul trecut"
+    ]
+  }
+}

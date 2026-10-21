@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-12",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nUnii angajați au cerut mărirea salariilor.\n\nRescriere:\nToți angajații au cerut mărirea salariilor.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Toți angajații",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

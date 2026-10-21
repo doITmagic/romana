@@ -1,0 +1,13 @@
+{
+  "id": "curat-micro-interfata-02",
+  "mod": "verificare",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Nu s-a putut încărca fișierul „{nume}”. Verificați conexiunea la internet și încercați din nou.\nFișierul „{nume}” are {dimensiune} MB. Limita este de 10 MB.\nParola trebuie să aibă cel puțin 8 caractere.\nAdresa de e-mail nu este validă.\nAți introdus de prea multe ori o parolă greșită. Încercați din nou peste 15 minute.\nContul a fost creat. Verificați e-mailul pentru a-l activa.\nAceastă acțiune nu poate fi anulată. Sigur doriți să ștergeți proiectul „{proiect}”?\nȘtergeți\nPăstrați",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

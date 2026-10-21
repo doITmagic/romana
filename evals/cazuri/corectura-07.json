@@ -1,0 +1,28 @@
+{
+  "id": "corectura-07",
+  "mod": "corectura",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Oferte de iarnă la Bucure\u015fti: reduceri de până la 30%. \u0162ine minte, oferta se încheie duminică.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Bucure\u015fti",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "\u0162ine",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "București",
+      "Ține"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "curat-email-02",
+  "mod": "verificare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Bună dimineața, Radu,\n\nÎți trimit rezumatul ședinței de ieri, ca să îl ai la îndemână.\n\nAm hotărât ca lansarea noii versiuni să rămână pe 14 noiembrie. Mihaela termină testele până pe 7, iar Dan pregătește documentația pentru clienți. Dacă apare o problemă serioasă la teste, mutăm lansarea cu o săptămână, dar nu mai mult.\n\nPentru tine rămâne o singură sarcină: să verifici cu departamentul juridic textul noilor condiții de utilizare. Ai termen până vineri, 30 octombrie. Spune-mi dacă ai nevoie de ajutor.\n\nMulțumesc,\nIoana",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

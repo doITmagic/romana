@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-fum-01",
+  "mod": "verificare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Bună ziua,\n\nÎmi cer scuze pentru întârziere. Marea majoritate a documentelor au ajuns, dar unul din contracte lipsește încă. Conform cu legea, aveți dreptul să îl cereți din nou.\n\nCu stimă,\nTudor",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Îmi cer scuze",
+      "Marea majoritate a documentelor au ajuns",
+      "unul din contracte",
+      "Conform cu legea"
+    ]
+  }
+}

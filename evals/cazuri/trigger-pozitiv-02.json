@@ -1,0 +1,15 @@
+{
+  "id": "trigger-pozitiv-02",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie-mi un e-mail formal, în română, către o clientă nemulțumită de întârzierea unei livrări.",
+  "confirmat": false,
+  "asteptat": {
+    "cerut": [
+      "romana"
+    ]
+  }
+}

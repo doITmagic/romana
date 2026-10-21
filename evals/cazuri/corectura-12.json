@@ -1,0 +1,34 @@
+{
+  "id": "corectura-12",
+  "mod": "corectura",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Stimată doamnă director,\n\nNu am nici un motiv să mă îndoiesc de cifrele din raport, dar vă rog să-mi explicați de ce numai avem acces la datele din 2024. Am fost la arhivă doar odată și mi s-a spus că dosarele au fost mutate.\n\nCu respect,\nPaul Ilie",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "nici un motiv",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "numai avem acces",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "doar odată",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "niciun motiv",
+      "nu mai avem acces",
+      "o dată"
+    ]
+  }
+}

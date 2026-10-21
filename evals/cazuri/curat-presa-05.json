@@ -1,0 +1,13 @@
+{
+  "id": "curat-presa-05",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Cercetători de la Universitatea din Valea Arieșului au publicat un studiu despre cât durează până când o pădure de fag se reface după tăieri. Au măsurat creșterea a peste 3.000 de arbori în Apuseni, pe parcursul a douăsprezece ani. Concluzia lor: în suprafețele tăiate pe porțiuni mici, pădurea revine la densitatea inițială în aproximativ 40 de ani, iar în cele tăiate pe suprafețe mari, în mai bine de 70.\n\nCoordonatorul studiului, profesorul Andrei Vlad, a precizat că rezultatele se referă doar la fagul din zonele de deal și nu pot fi extinse la alte specii. Studiul nu analizează efectele asupra animalelor.\n\nCercetătorii vor continua măsurătorile încă cinci ani. Datele sunt publice, iar autorii spun că le pot folosi și silvicultorii, ca să planifice tăierile.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

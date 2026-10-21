@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-09",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nPrimăria a început lucrările în luna martie și le va încheia în toamnă.\n\nRescriere:\nPrimăria a început lucrările în martie și le-a încheiat în toamnă.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "le-a încheiat în toamnă",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

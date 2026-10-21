@@ -1,0 +1,24 @@
+{
+  "id": "fidelitate-05",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nMulți utilizatori preferă aplicațiile cu mai puține notificări.\n\nRescriere:\nPotrivit unui studiu din 2024, utilizatorii preferă aplicațiile cu mai puține notificări.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Potrivit unui studiu din 2024",
+        "nivel": "normă",
+        "pilon": "coerență"
+      },
+      {
+        "fragment": "utilizatorii preferă aplicațiile",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

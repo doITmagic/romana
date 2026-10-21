@@ -1,0 +1,13 @@
+{
+  "id": "curat-email-03",
+  "mod": "corectura",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Stimată doamnă Popa,\n\nVă mulțumim pentru cererea trimisă pe 12 octombrie. Am verificat dosarul și lipsește un singur document: copia certificatului de naștere. Îl puteți încărca în contul dumneavoastră sau ni-l puteți trimite la această adresă, în format PDF.\n\nDupă ce primim documentul, dosarul merge la comisie. Hotărârea comisiei va fi comunicată în cel mult 30 de zile, pe e-mail. Dacă aveți întrebări, ne puteți suna de luni până vineri, între 9:00 și 15:00.\n\nCu respect,\nSecretariatul Facultății de Științe",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

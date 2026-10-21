@@ -1,0 +1,24 @@
+{
+  "id": "pastrare-01",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Rulați comanda `git checkout -b nume-ramura` ca sa creați o ramură nouă, apoi faceți modificările în fișierul `src/principal.go`.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "ca sa creați",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "`git checkout -b nume-ramura`",
+      "`src/principal.go`",
+      "ca să creați"
+    ]
+  }
+}

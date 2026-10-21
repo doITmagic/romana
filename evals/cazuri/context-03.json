@@ -1,0 +1,19 @@
+{
+  "id": "context-03",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Suma actuală cheltuită pe restaurarea fațadei depășește cu mult bugetul din proiect. Diferența vine din materialele scumpite pe parcurs.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Suma actuală cheltuită",
+        "nivel": "de semnalat",
+        "pilon": "semantică"
+      }
+    ]
+  }
+}

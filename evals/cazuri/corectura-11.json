@@ -1,0 +1,28 @@
+{
+  "id": "corectura-11",
+  "mod": "corectura",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Nu fii îngrijorat, termenul se poate prelungi. Aș lucra mai repede dacă aș fii acolo, dar sunt plecat până luni.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Nu fii îngrijorat",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "aș fii acolo",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "Nu fi îngrijorat",
+      "aș fi acolo"
+    ]
+  }
+}

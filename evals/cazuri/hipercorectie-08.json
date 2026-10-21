@@ -1,0 +1,18 @@
+{
+  "id": "hipercorectie-08",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Studenții au predat lucrarea miercuri, iar noua lege a intrat în vigoare luni. Au sosit primele rezultate ale testelor. Banca comercială a anunțat dobânzi mai mici pentru împrumuturile pe termen lung.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Au sosit primele rezultate",
+      "Banca comercială",
+      "noua lege a intrat în vigoare luni"
+    ]
+  }
+}

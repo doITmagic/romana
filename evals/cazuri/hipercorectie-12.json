@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-12",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Am finalizat studiul de fezabilitate vineri. Rulați testele înainte de fiecare livrare. Vom aprofunda problema la întâlnirea următoare, bunăoară în privința costurilor. Strategia este bazată pe date.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Am finalizat",
+      "Rulați testele",
+      "bunăoară",
+      "bazată pe date"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "hipercorectie-02",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Unul din voluntari s-a oferit să conducă microbuzul. Marea majoritate a participanților au sosit înainte de ora opt, iar organizatorii își cer scuze pentru lipsa apei calde din prima dimineață.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Unul din voluntari",
+      "Marea majoritate a participanților au sosit",
+      "își cer scuze"
+    ]
+  }
+}

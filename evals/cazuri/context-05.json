@@ -1,0 +1,13 @@
+{
+  "id": "context-05",
+  "mod": "verificare",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Aplicația se actualizează în fiecare lună. Descărcați ultima versiune din magazinul de aplicații, apoi reporniți telefonul.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

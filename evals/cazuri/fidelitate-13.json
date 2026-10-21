@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-13",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nVânzările au scăzut în trimestrul trei. Compania a angajat zece oameni noi.\n\nRescriere:\nVânzările au scăzut în trimestrul trei, așa că compania a angajat zece oameni noi.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "așa că",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-11",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Asistentul medical îl asistă pe doctor în sala de operații. Pe agenda zilei sunt patru întâlniri, iar versiunea curentă a planului a fost votată. Omul mort în incendiu avea 52 de ani.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "îl asistă pe doctor",
+      "Pe agenda zilei",
+      "versiunea curentă",
+      "mort în incendiu"
+    ]
+  }
+}

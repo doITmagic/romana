@@ -1,0 +1,20 @@
+{
+  "id": "hipercorectie-04",
+  "mod": "verificare",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Serverul procesează fișierele încărcate în ordine cronologică. Echipa a implementat un modul nou de arhivare, iar programul rulează zilnic la miezul nopții. Costul per angajat este de 40 de lei pe lună, iar utilizatorii pot downloada arhivele din panoul de control.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "procesează fișierele",
+      "a implementat un modul",
+      "rulează zilnic",
+      "per angajat",
+      "downloada arhivele"
+    ]
+  }
+}

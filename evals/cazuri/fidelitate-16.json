@@ -1,0 +1,24 @@
+{
+  "id": "fidelitate-16",
+  "mod": "redactare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Cerere: Scrie o descriere de produs pentru un aspirator, în română, folosind doar datele de mai jos.\n\nDate: model AX-200; putere 700 W; filtru HEPA; garanție 24 de luni. Nu există alte informații.",
+  "confirmat": false,
+  "asteptat": {
+    "cerut": [
+      "AX-200",
+      "HEPA",
+      "24 de luni"
+    ],
+    "interzis": [
+      "dB",
+      " kg",
+      "litri",
+      "recenzii",
+      "cel mai bun"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-04",
+  "mod": "verificare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nReturul este gratuit dacă produsul nu a fost folosit și are ambalajul original.\n\nRescriere:\nReturul este gratuit.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Returul este gratuit.",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

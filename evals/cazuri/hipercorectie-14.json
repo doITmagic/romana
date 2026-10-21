@@ -1,0 +1,23 @@
+{
+  "id": "hipercorectie-14",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Ministerul a anunțat că va deschide ghișeele de la 1 februarie. Se vor face verificări pentru reducerea cozilor, iar în orașul Cluj, bunăoară, programul se prelungește. Directorul a spus că va fii o diferență vizibilă.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "va fii",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "interzis": [
+      "Se vor face verificări",
+      "bunăoară"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "pastrare-03",
+  "mod": "corectura",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Utilizator {nume} a fost adăugat în echipa {echipa}.\n{count, plural, one {# fișier} few {# fișiere} other {# de fișiere}}",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Utilizator {nume} a fost adăugat",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "{nume}",
+      "{echipa}",
+      "{count, plural, one {# fișier} few {# fișiere} other {# de fișiere}}",
+      "Utilizatorul {nume}"
+    ]
+  }
+}

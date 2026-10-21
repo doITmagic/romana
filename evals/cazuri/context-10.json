@@ -1,0 +1,19 @@
+{
+  "id": "context-10",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "O serie de probleme tehnice au fost semnalate de utilizatori în ultima lună, iar echipa le rezolvă pe rând.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "O serie de probleme tehnice au fost semnalate",
+        "nivel": "disputat",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

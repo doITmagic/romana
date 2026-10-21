@@ -1,0 +1,18 @@
+{
+  "id": "context-12",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Potrivit anchetatorilor, administratorul ar fi încasat sume în numerar fără chitanță, iar firma ar fi avut datorii de peste 200.000 de lei. Cercetările continuă.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [],
+    "neatins": true,
+    "interzis": [
+      "ar fi încasat",
+      "ar fi avut"
+    ]
+  }
+}

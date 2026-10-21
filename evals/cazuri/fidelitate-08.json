@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-08",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nPotrivit vecinilor, șoferul ar fi mers cu viteză mare.\n\nRescriere:\nȘoferul a mers cu viteză mare.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Șoferul a mers cu viteză mare.",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}
