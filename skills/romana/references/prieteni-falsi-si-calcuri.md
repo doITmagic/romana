@@ -7,7 +7,7 @@ Fișierul acesta te ajută să recunoști româna care sună tradusă din englez
 
 Pentru cuvintele românești apropiate ca formă (paronimele) vezi [paronime-si-pleonasme.md](paronime-si-pleonasme.md), pentru sensul cuvintelor în general [semantica.md](semantica.md), pentru forma împrumuturilor (cratima, pluralul, cuvântul englezesc lăsat în text) [imprumuturi.md](imprumuturi.md), iar pentru construcțiile gramaticale calchiate (subiectul nearticulat, topica limbii sursă, „ca și” cu sensul „în calitate de”) [gramatica.md](gramatica.md).
 
-Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2015; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026.
+Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; MDN '00 = *Marele dicționar de neologisme*; DEX '96 = *Dicționarul explicativ al limbii române*, ediția a II-a; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026.
 
 ## Cum judeci un prieten fals sau un calc
 
@@ -33,9 +33,9 @@ Nivelul îl alegi așa:
 - **normă:** dicționarul nu dă cuvântului acest sens și fraza ajunge să spună altceva pentru cine îl citește cu sensul românesc, sau construcția contrazice dicționarul ori gramatica (un verb intranzitiv cu complement direct, o expresie fixă schimbată);
 - **recomandare:** sensul englezesc e apropiat de unul românesc și cititorul înțelege corect, sau calcul e un clișeu pentru care româna are o formulare mai firească;
 - **de semnalat:** cuvântul admite și lectura românească, și pe cea englezească, iar contextul nu o alege pe cea bună;
-- **ce nu e greșeală:** sensul nou e deja înregistrat în dicționare (vezi „Ce nu e calc”, mai jos).
+- **ce nu e greșeală:** sensul nou e deja înregistrat în DEX '98 sau în DOOM 3 (vezi „Ce nu e calc”, mai jos).
 
-Sensurile sunt verificate în DEX '98. Un sens care lipsește de acolo poate apărea în dicționare mai noi. Dacă găsești sensul într-un dicționar mai nou, regula coboară la recomandare.
+Sensurile sunt verificate în DEX '98. Un sens care lipsește de acolo poate apărea în DOOM 3 (atunci nu e greșeală) sau doar într-un dicționar mai nou, de pildă unul de neologisme. Dacă îl găsești doar în acesta din urmă, regula coboară la recomandare.
 
 Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un dicționar bilingv. Dacă nu știi ce a vrut autorul (un cost „actual” poate fi „de acum” sau „real”), întrebi. La traducere pornești de la ce afirmă originalul (vezi [fidelitate.md](fidelitate.md) și [limbi-sursa/en.md](limbi-sursa/en.md)).
 
@@ -50,7 +50,7 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 ### RO-CAL-029 „Evidență” nu înseamnă „dovadă”
 - Nivel: normă
 - Greșit: „Nu există nicio evidență că datele clienților au fost accesate.” → Corect: „Nu există nicio dovadă că datele clienților au fost accesate.”
-- De ce: DEX '98 îi dă lui „evidență” sensurile „caracterul a ceea ce este evident, certitudine” și „înregistrarea și controlul unor bunuri, persoane sau operații” („evidența contabilă”). Sensul „dovadă, probă” vine din engl. „evidence”; la fel pluralul „evidențe” pentru „probe”. „A scoate în evidență” și „a ține evidența stocurilor” sunt corecte.
+- De ce: DEX '98 îi dă lui „evidență” sensurile „caracterul a ceea ce este evident, certitudine” și „înregistrarea și controlul proceselor, fenomenelor, lucrurilor, bunurilor, persoanelor etc.” (de pildă „evidența contabilă”). Sensul „dovadă, probă” vine din engl. „evidence”; la fel pluralul „evidențe” pentru „probe”. „A scoate în evidență” și „a ține evidența stocurilor” sunt corecte.
 - Sursă: DEX '98 s.v. evidență
 
 ### RO-CAL-081 „A suporta” nu înseamnă „a sprijini”
@@ -62,7 +62,7 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 ### RO-CAL-018 „A aplica pentru” un credit, un post
 - Nivel: normă
 - Greșit: „Am aplicat pentru un credit ipotecar.” → Corect: „Am solicitat un credit ipotecar.”
-- De ce: „A aplica” înseamnă „a pune un lucru peste altul”, „a pune în practică” și „a raporta un principiu la un caz” (DEX '98); e tranzitiv și nu se construiește cu „pentru”. Sensul „a cere, a candida” vine din engl. „to apply for”. După context spui „a solicita”, „a depune o cerere pentru”, „a candida la un post”, „a se înscrie la facultate”. „A aplica o metodă” și „a aplica o reducere” sunt corecte.
+- De ce: „A aplica” înseamnă „a pune un lucru peste altul”, „a pune în practică” și „a raporta un principiu la un caz” (DEX '98); e tranzitiv, deci cere un complement direct (ce aplici). Construcția fără complement direct, „a aplica pentru un credit, un post”, cu sensul „a cere, a candida”, vine din engl. „to apply for”. După context spui „a solicita”, „a depune o cerere pentru”, „a candida la un post”, „a se înscrie la facultate”. „A aplica o metodă”, „a aplica o reducere”, „a aplica un tratament pentru gripă” și „reducerea se aplică pentru comenzile online” sunt corecte.
 - Sursă: DEX '98 s.v. aplica
 
 ### RO-CAL-060 „Eventual” nu înseamnă „în cele din urmă”
@@ -74,13 +74,13 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 ### RO-CAL-061 „Sensibil” nu înseamnă „rezonabil”
 - Nivel: normă
 - Greșit: „A fost o decizie sensibilă să amânăm lansarea.” → Corect: „A fost o decizie rezonabilă să amânăm lansarea.”
-- De ce: În română, „sensibil” înseamnă „care simte puternic, emotiv”, „care se poate percepe prin simțuri” sau „care reacționează la cele mai mici variații” (DEX '98). Engl. „sensible” înseamnă „rezonabil, rațional, logic” (Mic ghid CE). Regula privește doar engl. „sensible”; nu o extinzi la alte îmbinări cu „sensibil”.
-- Sursă: Mic ghid CE p. 11; DEX '98 s.v. sensibil
+- De ce: În română, „sensibil” înseamnă „care simte puternic, emotiv”, „care se poate percepe prin simțuri” sau „care reacționează la cele mai mici variații” (DEX '98). Engl. „sensible” înseamnă „rațional, logic” (Mic ghid CE), adică „rezonabil” (DEX '98: „care are o judecată sau o comportare rațională”). Regula privește doar engl. „sensible”; nu o extinzi la alte îmbinări cu „sensibil”.
+- Sursă: Mic ghid CE p. 11; DEX '98 s.v. sensibil, rezonabil
 
 ### RO-CAL-024 „A complimenta” nu înseamnă „a completa”
 - Nivel: normă
 - Greșit: „Noile funcții complimentează serviciul de bază.” → Corect: „Noile funcții completează serviciul de bază.”
-- De ce: „A complimenta” înseamnă „a face complimente” (DEX '98). Engl. „to complement” se traduce „a completa”, „a întregi”, „a complini” (Mic ghid CE). Forma „a complementa” nu apare în dicționarele consultate.
+- De ce: „A complimenta” înseamnă „a face complimente” (DEX '98). Engl. „to complement” se traduce „a completa” sau „a complini” (Mic ghid CE), ori „a întregi” (DEX '98 s.v. completa). Forma „a complementa” nu apare în dicționarele consultate.
 - Sursă: Mic ghid CE p. 11; DEX '98 s.v. complimenta, completa
 
 ### RO-CAL-058 „A completa” nu înseamnă „a termina”
@@ -109,8 +109,8 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 
 ### RO-CAL-022 „Patetic” nu înseamnă „jalnic”
 - Nivel: normă
-- Greșit: „Scuza lui a fost patetică: nimeni n-a crezut-o.” → Corect: „Scuza lui a fost jalnică: nimeni n-a crezut-o.”
-- De ce: „Patetic” înseamnă „plin de patos, care emoționează” sau „plin de emfază” (DEX '98). Engl. „pathetic”, cu sens depreciativ, se traduce „jalnic”, „penibil”, „lamentabil”. „Un discurs patetic” (plin de patos) e corect.
+- Greșit: „Echipa a făcut un meci patetic și a pierdut cu 5 la 0.” → Corect: „Echipa a făcut un meci jalnic și a pierdut cu 5 la 0.”
+- De ce: „Patetic” înseamnă „plin de patos, care emoționează, impresionează, înduioșează; plin de emfază, de afectare” (DEX '98), deci o scuză sau un discurs „patetic” poate fi și unul teatral, afectat, iar acolo cuvântul e corect. Engl. „pathetic”, cu sens depreciativ, se traduce „jalnic”, „penibil”, „lamentabil”. Corectezi doar când contextul cere sensul depreciativ (un meci, o încercare, un rezultat).
 - Sursă: DEX '98 s.v. patetic
 
 ### RO-CAL-079 „Librărie” nu înseamnă „bibliotecă”
@@ -140,13 +140,13 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 ### RO-CAL-112 „Excitat” nu înseamnă „încântat”
 - Nivel: normă
 - Greșit: „Suntem excitați să vă prezentăm noua colecție.” → Corect: „Ne bucurăm să vă prezentăm noua colecție.”
-- De ce: „Excitat” înseamnă „asupra căruia s-a exercitat o excitație”, iar „a excita” înseamnă „a provoca intrarea în acțiune a unui organ” sau „a ațâța” (DEX '98). Engl. „excited” înseamnă „încântat, nerăbdător”. În română, cuvântul trimite la o stare fiziologică sau de agitație și poate face fraza jenantă, iar construcția „excitat să” nu există. Spui „ne bucurăm să”, „suntem încântați să”, „abia așteptăm să”.
+- De ce: „Excitat” înseamnă „asupra căruia s-a exercitat o excitație”, iar „a excita” înseamnă „a provoca intrarea în acțiune a unui organ”, „a ațâța, a întărâta” și „a provoca, a stârni o senzație, un sentiment” (DEX '98). Engl. „excited” înseamnă „încântat, nerăbdător”. Greșeala sigură e construcția „excitat să” cu acest sens, care nu există în română; în registrul comercial cuvântul poate suna și jenant. „Excitați de veste, copiii nu mai puteau dormi” (un sentiment stârnit) e corect și nu se corectează. Spui „ne bucurăm să”, „suntem încântați să”, „abia așteptăm să”.
 - Sursă: DEX '98 s.v. excita, excitat
 
-### RO-CAL-053 „Bilion” nu înseamnă „miliard”
-- Nivel: normă
-- Greșit: „Compania valorează 3 bilioane de dolari, potrivit raportului anual.” → Corect: „Compania valorează 3 miliarde de dolari, potrivit raportului anual.”
-- De ce: Engl. „billion” înseamnă o mie de milioane, adică un miliard. DEX '98 dă pentru „bilion” întâi sensul „o mie de miliarde” și abia apoi, „în unele țări”, sensul de miliard, deci cititorul român înțelege o sumă de o mie de ori mai mare. Când traduci, verifici fiecare cifră: engl. „trillion” e „bilion” în română. Scrierea cifrelor și a unităților e în [numere-date-unitati.md](numere-date-unitati.md).
+### RO-CAL-053 „Bilion” e ambiguu: miliard sau o mie de miliarde
+- Nivel: de semnalat
+- Greșit: „Compania valorează 3 bilioane de dolari, potrivit raportului anual.” → Corect: „Compania valorează 3 miliarde de dolari, potrivit raportului anual.” (numai dacă autorul are în minte 10⁹)
+- De ce: Engl. „billion” înseamnă o mie de milioane, adică un miliard. DEX '98 dă pentru „bilion” două valori, „o mie de miliarde” și, „în unele țări”, „un miliard”, iar la „miliard” îl trece pe „bilion” ca sinonim. Cuvântul poate fi deci citit 10⁹ sau 10¹², iar lectura greșită schimbă cifra de o mie de ori (P1). Semnalezi și întrebi dacă autorul are în minte 10⁹ sau 10¹²; abia după răspuns scrii „miliard” sau „o mie de miliarde”, nu schimbi cifra pe ghicite. Într-o traducere în care originalul spune „billion”, „bilion” e o abatere de fidelitate (normă, P0, vezi [fidelitate.md](fidelitate.md)), dar numai când poți verifica originalul. Engl. „trillion” e „bilion” (10¹², primul sens din DEX '98); când traduci, verifici fiecare cifră. Scrierea cifrelor și a unităților e în [numere-date-unitati.md](numere-date-unitati.md).
 - Sursă: DEX '98 s.v. bilion, miliard
 
 ### RO-CAL-030 „Specific” cu sensul „precis”
@@ -188,14 +188,14 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 ### RO-CAL-109 „A introduce” pe cineva
 - Nivel: recomandare
 - Greșit: „Vă introduc pe colegul meu, Andrei.” → Corect: „Vi-l prezint pe colegul meu, Andrei.”
-- De ce: „A introduce” pe cineva înseamnă „a face ca o persoană să fie primită de cineva sau admisă într-o organizație” și „a ajuta pe cineva să se inițieze într-un domeniu” (DEX '98): „l-a introdus în echipă”, „l-a introdus în tainele meseriei” sunt corecte. Când faci cunoștință între doi oameni, româna spune „a prezenta”. Sensul e apropiat de cel românesc, de aceea propui.
+- De ce: „A introduce” pe cineva înseamnă „a face ca o persoană să fie primită de cineva sau admisă într-o organizație” și „a ajuta pe cineva să se inițieze într-un domeniu” (DEX '98): „l-a introdus în echipă”, „l-a introdus în tainele meseriei” sunt corecte. Când îi prezinți pe doi oameni unul altuia, româna spune „a prezenta”. Sensul e apropiat de cel românesc, de aceea propui.
 - Sursă: DEX '98 s.v. introduce
 
 ### RO-CAL-031 „A performa”
 - Nivel: recomandare
 - Greșit: „Echipa a performat peste așteptări în primul trimestru.” → Corect: „Echipa a avut rezultate peste așteptări în primul trimestru.”
-- De ce: Verbul „a performa” nu apare în dicționarele consultate, inclusiv DOOM 3; există doar „performanță” și „performant”. E făcut după engl. „to perform”. La redactare nu-l folosești. În corectură și în verificare propui verbul care spune ce s-a întâmplat: „a avea rezultate”, „a funcționa”, „a da randament”, „a cânta”, „a juca”, „a interpreta”. Cuvintele neatestate se tratează după [cauta-nu-presupune.md](cauta-nu-presupune.md).
-- Sursă: DOOM 3 s.v. performanță, performant
+- De ce: Verbul „a performa” nu apare în dicționarele consultate, inclusiv DOOM 3; din aceeași familie sunt atestate doar substantive și adjective („performanță”, „performant”, „performer”). E făcut după engl. „to perform”. La redactare nu-l folosești. În corectură și în verificare propui verbul care spune ce s-a întâmplat: „a avea rezultate”, „a funcționa”, „a da randament”, „a cânta”, „a juca”, „a interpreta”. Cuvintele neatestate se tratează după [cauta-nu-presupune.md](cauta-nu-presupune.md).
+- Sursă: DOOM 3 s.v. performanță, performant, performer
 
 ### RO-CAL-056 „Actual”: de acum sau real?
 - Nivel: de semnalat
@@ -216,7 +216,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 ### RO-CAL-063 „A face sens”
 - Nivel: normă
 - Greșit: „Planul nu face sens dacă tăiem bugetul de promovare.” → Corect: „Planul nu are sens dacă tăiem bugetul de promovare.”
-- De ce: Cu sensul „temei rațional; logică, rost”, cuvântul „sens” se folosește cu „a avea” sau în locuțiuni ca „fără sens” (DEX '98). „A face sens” copiază engl. „to make sense”, iar „a face” nu are în română această construcție. După context spui „are sens”, „e logic”, „are rost” sau „se justifică”.
+- De ce: Cu sensul „temei rațional; logică, rost” (DEX '98), cuvântul „sens” apare în locuțiuni ca „fără sens”, iar îmbinarea curentă e „a avea sens”. „A face sens” copiază engl. „to make sense” (B. Croitor et al., 2014, p. 131) și nu e îmbinarea românească. După context spui „are sens”, „e logic”, „are rost” sau „se justifică”.
 - Sursă: DEX '98 s.v. sens; B. Croitor et al., 2014, p. 131
 
 ### RO-CAL-036 „A lua loc” cu sensul „a avea loc”
@@ -234,7 +234,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 ### RO-CAL-038 „A fi despre”
 - Nivel: recomandare
 - Greșit: „Campania este despre siguranța copiilor în trafic.” → Corect: „Campania are ca temă siguranța copiilor în trafic.”
-- De ce: „Despre” înseamnă „privitor la, referitor la” (DEX '98) și apare firesc după un verb de comunicare („vorbește despre”, „un articol despre”) sau în „e vorba despre”. „X este despre Y” copiază engl. „X is about Y”. Fraza se înțelege, de aceea propui „e vorba de”, „tratează”, „are ca temă”, „se referă la” sau „înseamnă”.
+- De ce: „Despre” înseamnă „privitor la, referitor la” (DEX '98) și apare firesc după un verb sau un substantiv care privește comunicarea („vorbește despre”, „un articol despre”) sau în „e vorba despre”. „X este despre Y” copiază engl. „X is about Y”. Fraza se înțelege, de aceea propui „e vorba de”, „tratează”, „are ca temă”, „se referă la” sau „înseamnă”.
 - Sursă: DEX '98 s.v. despre
 
 ### RO-CAL-040 „Situația este una gravă”
@@ -258,13 +258,13 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 ### RO-CAL-093 „Pe o bază zilnică”
 - Nivel: recomandare
 - Greșit: „Datele se actualizează pe o bază zilnică.” → Corect: „Datele se actualizează zilnic.”
-- De ce: Locuțiunile românești cu „bază” sunt „de bază”, „pe baza” și „pe bază de” (DEX '98). „Pe o bază zilnică” copiază engl. „on a daily basis”. Spui „zilnic”, „în fiecare zi”, „săptămânal”.
+- De ce: Locuțiunile românești cu „bază” din DEX '98 sunt „de bază”, „fără bază”, „pe (sau în) baza” și „pe bază de”; niciuna nu are sensul de frecvență. „Pe o bază zilnică” copiază engl. „on a daily basis”. Spui „zilnic”, „în fiecare zi”, „săptămânal”.
 - Sursă: DEX '98 s.v. bază
 
-### RO-CAL-094 „În termeni de”
+### RO-CAL-094 „În termeni de” cu sensul „cât privește”
 - Nivel: recomandare
 - Greșit: „În termeni de preț, oferta noastră e cea mai bună.” → Corect: „Ca preț, oferta noastră e cea mai bună.”
-- De ce: Româna are „în termen de” cu sens de timp („în termen de zece zile”, DEX '98), dar nu „în termeni de”, care copiază engl. „in terms of”. După sens spui „ca”, „în ceea ce privește”, „din punctul de vedere al” sau reformulezi: „Avem cel mai bun preț.”
+- De ce: Româna are „în termen de” cu sens de timp („în termen de zece zile”, DEX '98), dar „în termeni de” cu sensul „cât privește, în ceea ce privește” copiază engl. „in terms of”. După sens spui „ca”, „în ceea ce privește”, „din punctul de vedere al” sau reformulezi: „Avem cel mai bun preț.” Excepție: „a descrie / a exprima / a interpreta în termeni de X” (cu noțiunile lui X) și „în termeni juridici, de specialitate” folosesc sensul „cuvânt, noțiune” al lui „termen” (DEX '98 s.v. termen) și sunt corecte; apar și în DSL.
 - Sursă: DEX '98 s.v. termen
 
 ### RO-CAL-095 „Și mult mai mult” la sfârșitul unei enumerări
@@ -300,7 +300,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 ### RO-CAL-065 „Peisaj” la figurat
 - Nivel: recomandare
 - Greșit: „Am analizat peisajul competitiv din regiune.” → Corect: „Am analizat concurența din regiune.”
-- De ce: DEX '98 îi dă lui „peisaj” sensurile „priveliște”, „gen de pictură” și „descriere a naturii”. Sensul figurat („peisajul politic”) e folosit și de specialiști, deci nu e greșeală. Îl propui înlocuit când nu spune nimic precis, mai ales în tiparul „a naviga peisajul”: spui „piața”, „domeniul”, „situația”, „concurența”.
+- De ce: DEX '98 îi dă lui „peisaj” sensurile „priveliște”, „gen de pictură” și „descriere a naturii”. Sensul figurat („peisajul politic”) e folosit și de specialiști, deci nu e greșeală. Propui să-l înlocuiești când nu spune nimic precis, mai ales în tiparul „a naviga peisajul”: spui „piața”, „domeniul”, „situația”, „concurența”.
 - Sursă: DEX '98 s.v. peisaj
 
 ### RO-CAL-070 „A aduce valoare”
@@ -312,7 +312,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 ### RO-CAL-071 Un proiect care „rulează”
 - Nivel: recomandare
 - Greșit: „Programul de burse rulează până în iunie.” → Corect: „Programul de burse se desfășoară până în iunie.”
-- De ce: „A rula” înseamnă „a înfășura pe un sul”, „a proiecta un film”, „a face să circule bani” și „a înainta pe roți” (DEX '98). Pentru proiecte și programe de activitate, sensul vine din engl. „to run”. Spui „se desfășoară”, „se derulează”, „durează”. „Filmul rulează” și „aplicația rulează” (programul de calculator) sunt corecte (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
+- De ce: „A rula” înseamnă „a înfășura pe un sul”, „a proiecta un film”, „a face să circule bani” și „a înainta pe roți” (DEX '98). Pentru proiecte și programe de activitate, sensul vine din engl. „to run”. Spui „se desfășoară” sau „durează”. „Filmul rulează” și „aplicația rulează” (programul de calculator) sunt corecte (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
 - Sursă: DEX '98 s.v. rula
 
 ### RO-CAL-088 „A debloca potențialul”
@@ -335,15 +335,15 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 
 ### RO-CAL-083 „A împuternici” fără să spui pentru ce
 - Nivel: recomandare
-- Greșit: „Platforma împuternicește echipele.” → Corect: „Platforma le dă echipelor mai multă autonomie.”
-- De ce: „A împuternici” înseamnă „a da cuiva puterea de a face ceva” și, în drept, „a da mandat” (DEX '98): „Consiliul l-a împuternicit să semneze contractul” e corect. Folosit fără să spună ce poate face cel împuternicit, verbul copiază sloganul englezesc „empowers”. Spui ce câștigă concret cititorul.
+- Greșit: „Aplicația împuternicește micii comercianți.” → Corect: „Aplicația le permite micilor comercianți să [de completat: ce pot face singuri acum].”
+- De ce: „A împuternici” înseamnă „a da cuiva puterea de a face ceva” și, în drept, „a da mandat” (DEX '98): „Consiliul l-a împuternicit să semneze contractul” e corect. Sensul „a face mai puternic, a întări” există, dar DEX '98 îl marchează învechit și popular, deci nu ajută un text modern. Folosit fără să spună ce poate face cel împuternicit, verbul copiază sloganul englezesc „empowers”. Spui ce câștigă concret cititorul.
 - Sursă: DEX '98 s.v. împuternici
 
 ### RO-CAL-087 „Creșteți operațiunile”
 - Nivel: recomandare
 - Greșit: „Vă ajutăm să vă creșteți operațiunile.” → Corect: „Vă ajutăm să vă extindeți activitatea.”
-- De ce: Îmbinarea copiază engl. „to grow (sau to scale) your operations”. Tranzitiv, „a crește” are în DEX '98 doar sensurile „a îngriji, a educa un copil”, „a prăsi animale” și „a cultiva plante”; cu sensul „a se mări” verbul e intranzitiv („vânzările cresc”). Propui „a extinde activitatea” sau „a dezvolta afacerea”.
-- Sursă: DEX '98 s.v. crește
+- De ce: Îmbinarea copiază engl. „to grow (sau to scale) your operations”, iar „operațiuni” nu spune ce anume crește (producția, vânzările, echipa). Uzul tranzitiv „a crește” cu sensul „a mări” lipsește din DEX '98, care îl dă intranzitiv („vânzările cresc”), dar DSL îl folosește (s.v. SINONIMIE: „a ridica sau a crește prețurile”), deci „a crește prețurile”, „a crește vânzările” nu se corectează. Propui „a extinde activitatea” sau „a dezvolta afacerea”.
+- Sursă: DEX '98 s.v. crește; DSL, s.v. SINONIMIE
 
 ### RO-CAL-076 „Își pierde mințile” de entuziasm
 - Nivel: recomandare
@@ -371,8 +371,8 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 
 ### RO-CAL-086 „Manual de teren”
 - Nivel: recomandare
-- Greșit: „Am publicat un manual de teren pentru echipele de vânzări.” → Corect: „Am publicat un ghid practic pentru echipele de vânzări.”
-- De ce: În titlurile englezești, „field manual” înseamnă „ghid practic, de folosit în lucru”. În română, „pe teren” înseamnă „la fața locului” (DEX '98), deci „manual de teren” face cititorul să se gândească la muncă pe teren. Unde chiar e vorba de muncă pe teren (cercetare, geologie, armată), „ghid de teren” e corect.
+- Greșit: „Am publicat un manual de teren pentru agenții de vânzări.” → Corect: „Am publicat un ghid de lucru pentru agenții de vânzări.”
+- De ce: În titlurile englezești, „field manual” înseamnă „ghid de folosit în lucru, la îndemână”. În română, „pe teren” înseamnă „la fața locului” (DEX '98), deci „manual de teren” face cititorul să se gândească la muncă pe teren. Unde chiar e vorba de muncă pe teren (cercetare, geologie, armată), „ghid de teren” e corect.
 - Sursă: DEX '98 s.v. teren
 
 ### RO-CAL-113 „Confortabil cu” o idee
@@ -383,21 +383,21 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 
 ### RO-CAL-114 „Pozitiv” cu sensul „optimist”
 - Nivel: recomandare
-- Greșit: „Investitorii nu sunt la fel de pozitivi ca anul trecut.” → Corect: „Investitorii nu sunt la fel de optimiști ca anul trecut.”
+- Greșit: „Analiștii sunt pozitivi în privința trimestrului următor.” → Corect: „Analiștii sunt optimiști în privința trimestrului următor.”
 - De ce: Despre oameni, „pozitiv” înseamnă „realist, cu spirit practic” (DEX '98). Sensul „optimist, încrezător” vine din engl. „positive”. Spui „optimist”, „încrezător”, „bine dispus”. „O experiență pozitivă” și „un rezultat pozitiv” sunt corecte.
 - Sursă: DEX '98 s.v. pozitiv; B. Croitor et al., 2014, p. 131
 
 ### RO-CAL-115 „Sper că acest e-mail vă găsește bine”
 - Nivel: recomandare
 - Greșit: „Sper că acest e-mail vă găsește bine.” → Corect: „Sper că sunteți bine.”
-- De ce: Formula traduce cuvânt cu cuvânt engl. „I hope this email finds you well”. Formula românească apropiată, „Să te găsesc sănătos!”, o spune un om la despărțire (DEX '98 s.v. găsi); un mesaj nu „găsește” pe nimeni. Un e-mail românesc începe de obicei cu salutul și trece repede la scop. Formulele de e-mail sunt în [tipuri/email.md](tipuri/email.md).
-- Sursă: DEX '98 s.v. găsi
+- De ce: Formula traduce cuvânt cu cuvânt engl. „I hope this email finds you well”. Formula românească apropiată, „Să te găsesc sănătos!”, o spune un om la despărțire (DEX '96 s.v. găsi); un mesaj nu „găsește” pe nimeni. Un e-mail românesc începe de obicei cu salutul și trece repede la scop. Formulele de e-mail sunt în [tipuri/email.md](tipuri/email.md).
+- Sursă: DEX '96 s.v. găsi
 
 ### RO-CAL-105 Posesivul care traduce engl. „your”
 - Nivel: recomandare
 - Greșit: „Introduceți parola dumneavoastră și apăsați «Conectare».” → Corect: „Introduceți parola și apăsați «Conectare».”
-- De ce: Engleza pune posesivul aproape peste tot („your password”, „your phone”). În română, substantivul articulat arată de obicei singur a cui e lucrul, când posesorul e limpede din context: „Conectați telefonul”, „Introduceți parola”. Forma cu „dumneavoastră” e gramaticală, dar greoaie, de aceea o propui scurtată. Posesivul rămâne când face un contrast sau când lipsa lui ar crea echivoc („parola dumneavoastră, nu cea a administratorului”). Dativul posesiv pus lângă un posesiv („Salvați-vă munca dumneavoastră”) e tratat la RO-SEM-216 din [paronime-si-pleonasme.md](paronime-si-pleonasme.md).
-- Sursă: DSL, s.v. POSESIV
+- De ce: Engleza pune posesivul aproape peste tot („your password”, „your phone”). În română, substantivul articulat arată de obicei singur a cui e lucrul, când posesorul e limpede din context: „Conectați telefonul”, „Introduceți parola”. Forma cu „dumneavoastră” e gramaticală (și Mic ghid CE o folosește: „documentului dumneavoastră”), dar greoaie, de aceea o propui scurtată. Posesivul rămâne când face un contrast sau când lipsa lui ar crea echivoc („parola dumneavoastră, nu cea a administratorului”). Dativul posesiv pus lângă un posesiv („Salvați-vă munca dumneavoastră”) e tratat la RO-SEM-216 din [paronime-si-pleonasme.md](paronime-si-pleonasme.md).
+- Sursă: observație de stil, fără normă; posesivul explicit e gramatical
 
 ## Adjectivele compuse englezești
 
@@ -406,7 +406,7 @@ Engleza face ușor adjective din două cuvinte legate prin cratimă („user-fri
 ### RO-CAL-101 „User-friendly”
 - Nivel: recomandare
 - Greșit: „Avem o interfață user-friendly.” → Corect: „Avem o interfață ușor de folosit.”
-- De ce: „User-friendly” nu e în dicționarele consultate, iar calcul „utilizator-prietenos” nu există în română. Spui „ușor de folosit” sau, după context, „intuitiv” (DEX '98).
+- De ce: „User-friendly” nu e în dicționarele consultate, iar calcul „utilizator-prietenos” nu există în română. Spui „ușor de folosit”. „Intuitiv” e cuvânt românesc, dar DEX '98 îi dă doar sensul „care se bazează pe intuiție”; sensul „ușor de înțeles fără instrucțiuni” e o extensie neînregistrată acolo, de aceea nu e soluția principală.
 - Sursă: DEX '98 s.v. intuitiv
 
 ### RO-CAL-102 „Data-driven”
@@ -430,7 +430,7 @@ Engleza face ușor adjective din două cuvinte legate prin cratimă („user-fri
 ### RO-CAL-100 „AI-powered”
 - Nivel: recomandare
 - Greșit: „Lansăm un editor AI-powered.” → Corect: „Lansăm un editor bazat pe inteligență artificială.”
-- De ce: Compusul englezesc lăsat în text nu e românesc. Spui „bazat pe inteligență artificială”, „cu IA” sau „care folosește IA”. „Alimentat de IA” e gramatical și „a alimenta” înseamnă și „a furniza energie, materiale pentru funcționarea a ceva” (DEX '98), deci nu e greșeală; cel mult propui o formulare mai firească.
+- De ce: Compusul englezesc lăsat în text nu e românesc. Spui „bazat pe inteligență artificială”, „cu IA” sau „care folosește IA”. „Alimentat de IA” e gramatical: „a alimenta” înseamnă și a furniza materiale, energie sau utilaje unor instituții ori întreprinderi, pentru funcționarea lor (DEX '98), iar extinderea la un produs e mică, deci nu e greșeală; cel mult propui o formulare mai firească.
 - Sursă: DEX '98 s.v. alimenta
 
 ### RO-CAL-073 „End-to-end”
@@ -442,7 +442,7 @@ Engleza face ușor adjective din două cuvinte legate prin cratimă („user-fri
 ### RO-CAL-072 „Inter-funcțional” pentru engl. „cross-functional”
 - Nivel: recomandare
 - Greșit: „Am format o echipă inter-funcțională.” → Corect: „Am format o echipă interdepartamentală.”
-- De ce: Cratima e în sine o greșeală de normă, pentru că prefixele se scriu legat (RO-IMP-003 din [imprumuturi.md](imprumuturi.md)). Nici forma legată, „interfuncțional”, nu e o soluție bună: apare doar în dicționare de neologisme și sună a calc după engl. „cross-functional”. Spui „interdepartamentală” (DOOM 3) sau „formată din oameni din mai multe departamente”.
+- De ce: Cratima e în sine o greșeală de normă, pentru că prefixele se scriu legat (RO-IMP-003 din [imprumuturi.md](imprumuturi.md)). Nici forma legată, „interfuncțional”, nu e o soluție bună: apare în MDN '00 și în Dicționarul ortografic, dar nu în DEX și nici în DOOM 3, și sună a calc după engl. „cross-functional”. Spui „interdepartamentală” (DOOM 3) sau „formată din oameni din mai multe departamente”.
 - Sursă: DOOM 3 s.v. interdepartamental
 
 ## Ce nu e calc
