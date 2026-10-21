@@ -530,3 +530,116 @@ func TestJSONCampuri(t *testing.T) {
 		t.Errorf("caracterele <, > și & trebuie scrise ca atare: %s", text)
 	}
 }
+
+// proza: fixtură cu introducere, o secțiune cu text + sub-titlu + două reguli, și o secțiune doar de text.
+const referintaProza = `# Coerență
+
+Introducere înainte de prima secțiune.
+
+## Metodă
+
+Textul metodei, prima frază.
+
+### Exemplu
+
+Un exemplu care nu e regulă.
+
+### RO-COE-001 Prima regulă
+- Nivel: normă
+- Greșit: „x” → Corect: „y”
+- De ce: z.
+- Sursă: s
+
+### RO-COE-002 A doua regulă
+- Nivel: normă
+- Greșit: „a” → Corect: „b”
+- De ce: z.
+- Sursă: s
+
+## Altă secțiune
+
+Text final.
+`
+
+func TestProzaReferinte(t *testing.T) {
+	dir := t.TempDir()
+	scrie(t, dir, "SKILL.md", "\n")
+	scrie(t, dir, "references/sub/coerenta.md", referintaProza)
+
+	el, err := Exporta(dir, map[string]string{"references/sub/coerenta.md": "3-cheie"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got := fmt.Sprint(idUri(el)); got != "[sub-coerenta-p0 sub-coerenta-p1 RO-COE-001 RO-COE-002 sub-coerenta-p2]" {
+		t.Fatalf("ordinea: %s", got)
+	}
+	for i, e := range el {
+		if e.Ordine != i || e.Lot != "3-cheie" || e.Fisier != "references/sub/coerenta.md" ||
+			e.Stare != "neverificat" || e.Comentariu != "" {
+			t.Errorf("elementul %d, câmpuri fixe: %+v", i, e)
+		}
+	}
+	p0, p1, p2 := el[0], el[1], el[4]
+	if p0.Tip != "text" || p0.Cod != "sub/coerenta.md§0" || p0.Titlu != "Început" ||
+		p0.Continut != "# Coerență\n\nIntroducere înainte de prima secțiune." {
+		t.Errorf("p0: %+v", p0)
+	}
+	wantP1 := "## Metodă\n\nTextul metodei, prima frază.\n\n### Exemplu\n\nUn exemplu care nu e regulă."
+	if p1.Tip != "text" || p1.Cod != "sub/coerenta.md§1" || p1.Titlu != "Metodă" || p1.Continut != wantP1 {
+		t.Errorf("p1:\n%q\naștept\n%q (%+v)", p1.Continut, wantP1, p1)
+	}
+	if strings.Contains(p1.Continut, "RO-COE") || strings.Contains(p1.Continut, "Nivel:") {
+		t.Errorf("proza nu trebuie să conțină rânduri de regulă: %q", p1.Continut)
+	}
+	if p2.Tip != "text" || p2.Cod != "sub/coerenta.md§2" || p2.Titlu != "Altă secțiune" ||
+		p2.Continut != "## Altă secțiune\n\nText final." {
+		t.Errorf("p2: %+v", p2)
+	}
+	if el[2].Tip != "regula" || el[3].Tip != "regula" {
+		t.Errorf("regulile își păstrează tipul: %+v %+v", el[2], el[3])
+	}
+}
+
+func TestProzaGoalaNuSeEmite(t *testing.T) {
+	dir := t.TempDir()
+	scrie(t, dir, "SKILL.md", "\n")
+	scrie(t, dir, "references/a.md", "## Doar reguli\n\n"+reguliN(2)+"## Cu text\nCeva.\n")
+
+	el, err := Exporta(dir, map[string]string{"references/a.md": "3-cheie"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got := fmt.Sprint(idUri(el)); got != "[RO-GRA-001 RO-GRA-002 a-p2]" {
+		t.Fatalf("ids: %s", got)
+	}
+	if el[2].Continut != "## Cu text\nCeva." {
+		t.Errorf("p2: %q", el[2].Continut)
+	}
+}
+
+func TestEsantionPastreazaProza(t *testing.T) {
+	dir := t.TempDir()
+	scrie(t, dir, "SKILL.md", "\n")
+	scrie(t, dir, "references/a.md", "Intro.\n\n## Metodă\nText.\n\n"+reguliN(10))
+
+	toate, err := Exporta(dir, map[string]string{"references/a.md": "4-esantion"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(toate) != 12 {
+		t.Fatalf("așteptam 2 proze + 10 reguli, am primit %d: %v", len(toate), idUri(toate))
+	}
+	es := Esantioneaza(toate, 3)
+	var proza, reguli int
+	for _, e := range es {
+		switch e.Tip {
+		case "text":
+			proza++
+		case "regula":
+			reguli++
+		}
+	}
+	if proza != 2 || reguli != 3 {
+		t.Errorf("proză %d (așteptam 2), reguli %d (așteptam 3): %v", proza, reguli, idUri(es))
+	}
+}

@@ -1,4 +1,4 @@
-// Comanda recenzie exportă regulile din references/ și secțiunile din SKILL.md
+// Comanda recenzie exportă regulile și proza din references/ și secțiunile din SKILL.md
 // ca tablou JSON pentru pagina de recenzie:
 //
 //	go run ./tools/recenzie/cmd -skill skills/romana \

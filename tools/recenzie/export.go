@@ -34,6 +34,13 @@
 //     (go run ./tools/validare/cmd), nu exportul: ExportaCuProbleme întoarce
 //     problemele ca să poată fi arătate, iar o regulă incompletă se exportă
 //     cu rândurile pe care le are.
+//   - Proza fișierelor din references/ (tip „text”): fișierul se împarte în
+//     blocuri la liniile „## ”; fiecare bloc, fără blocurile regulilor (de la
+//     titlul „### RO-…” până la următoarea linie care începe cu „#”), devine un
+//     element <slug>-pN (slug = calea față de references/ fără „.md”, cu „-” în
+//     loc de „/”; N = 0 pentru textul dinaintea primului „## ”). Un bloc fără
+//     text în afara titlului nu dă element. Elementele unui fișier ies în
+//     ordinea documentului, deci proza blocului N vine înaintea regulilor lui.
 //
 // # Extensie: cazurile de test (Task 10b)
 //
@@ -61,6 +68,8 @@ import (
 const (
 	// TipRegula este tipul elementelor care vin din reguli și din SKILL.md.
 	TipRegula = "regula"
+	// TipText este tipul elementelor cu proza (metoda) din fișierele references/.
+	TipText = "text"
 	// TipCaz este rezervat cazurilor de test (Task 10b); Exporta nu-l produce.
 	TipCaz = "caz"
 
@@ -76,6 +85,9 @@ const (
 
 	// titluInceput este titlul elementului SKILL-s0.
 	titluInceput = "Început (frontmatter și introducere)"
+
+	// titluProzaInceput este titlul elementului de proză p0 din references/.
+	titluProzaInceput = "Început"
 )
 
 // Element este un document al paginii de recenzie. Numele câmpurilor JSON
@@ -200,6 +212,8 @@ func reguliFisier(dirSkill, cale, lot string) ([]Element, []Problema, error) {
 		probleme[i].Cale = cale
 	}
 	el := make([]Element, 0, len(reguli))
+	pozitii := make([]int, 0, len(reguli))
+	startReguli := map[int]bool{}
 	for _, r := range reguli {
 		titlu := ""
 		if r.Rand >= 1 && r.Rand <= len(randuri) {
@@ -220,8 +234,101 @@ func reguliFisier(dirSkill, cale, lot string) ([]Element, []Problema, error) {
 			Continut: continutRegula(randuri, r.Rand),
 			Stare:    StareNeverificat,
 		})
+		pozitii = append(pozitii, r.Rand-1)
+		startReguli[r.Rand-1] = true
 	}
-	return el, probleme, nil
+
+	// proza și regulile, în ordinea documentului
+	type poz struct {
+		linie int
+		el    Element
+	}
+	toate := make([]poz, 0, len(el))
+	for i, e := range el {
+		toate = append(toate, poz{pozitii[i], e})
+	}
+	for _, p := range prozaFisier(randuri, startReguli, cale, lot) {
+		toate = append(toate, poz{p.linie, p.el})
+	}
+	sort.SliceStable(toate, func(i, j int) bool { return toate[i].linie < toate[j].linie })
+	rez := make([]Element, len(toate))
+	for i, t := range toate {
+		rez[i] = t.el
+	}
+	return rez, probleme, nil
+}
+
+type prozaBloc struct {
+	linie int // indexul liniei unde începe blocul
+	el    Element
+}
+
+// prozaFisier întoarce elementele de proză ale unui fișier din references/:
+// blocurile „## ” fără rândurile regulilor (startReguli = indexurile liniilor
+// cu titlul unei reguli). Blocul 0 e textul de dinaintea primului „## ”.
+func prozaFisier(randuri []string, startReguli map[int]bool, cale, lot string) []prozaBloc {
+	rel := strings.TrimSuffix(strings.TrimPrefix(cale, "references/"), ".md")
+	slug := idSigur(strings.ReplaceAll(rel, "/", "-"))
+
+	type bloc struct {
+		titlu string
+		linie int
+		rand  []string
+	}
+	blocuri := []bloc{{titlu: titluProzaInceput}}
+	inCod, marcaj := false, ""
+	for i := 0; i < len(randuri); i++ {
+		rand := randuri[i]
+		if startReguli[i] {
+			// sare blocul regulii: până la următoarea linie care începe cu „#”
+			for i+1 < len(randuri) && !strings.HasPrefix(randuri[i+1], "#") {
+				i++
+			}
+			continue
+		}
+		if t := strings.TrimLeft(rand, " "); strings.HasPrefix(t, "```") || strings.HasPrefix(t, "~~~") {
+			switch {
+			case !inCod:
+				inCod, marcaj = true, t[:3]
+			case strings.HasPrefix(t, marcaj):
+				inCod = false
+			}
+		} else if !inCod && strings.HasPrefix(rand, "## ") {
+			blocuri = append(blocuri, bloc{titlu: strings.TrimSpace(rand[3:]), linie: i})
+		}
+		b := &blocuri[len(blocuri)-1]
+		b.rand = append(b.rand, rand)
+	}
+
+	var rez []prozaBloc
+	for n, b := range blocuri {
+		corp := b.rand
+		// titlul blocului nu e text: un bloc doar cu titlu (și reguli) nu se emite
+		if n == 0 {
+			corp = nil
+			for _, r := range b.rand {
+				if !strings.HasPrefix(r, "# ") {
+					corp = append(corp, r)
+				}
+			}
+		} else {
+			corp = corp[1:]
+		}
+		if len(taieGoale(corp)) == 0 {
+			continue
+		}
+		rez = append(rez, prozaBloc{b.linie, Element{
+			ID:       fmt.Sprintf("%s-p%d", slug, n),
+			Cod:      fmt.Sprintf("%s.md§%d", rel, n),
+			Lot:      lot,
+			Tip:      TipText,
+			Fisier:   cale,
+			Titlu:    b.titlu,
+			Continut: strings.Join(taieGoale(b.rand), "\n"),
+			Stare:    StareNeverificat,
+		}})
+	}
+	return rez
 }
 
 // prefixeCamp sunt începuturile de rând ale câmpurilor unei reguli; la ele se
@@ -340,7 +447,7 @@ func taieGoale(randuri []string) []string {
 	return randuri
 }
 
-// Esantioneaza păstrează din fiecare fișier cel mult n reguli din lotul
+// Esantioneaza (care nu atinge proza, tip „text”) păstrează din fiecare fișier cel mult n reguli din lotul
 // LotEsantion, alese la intervale egale (indexul j*total/n, deci prima regulă
 // e mereu inclusă și rezultatul e același la fiecare rulare). Fișierele cu n
 // reguli sau mai puține rămân întregi, ca orice element din alt lot sau cu
