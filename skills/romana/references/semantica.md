@@ -174,7 +174,7 @@ Două verbe cu regim diferit nu pot avea un complement comun („a beneficiat ș
 ### RO-SEM-414 „A sabota în mod intenționat”
 - Nivel: recomandare
 - Greșit: „Polițistul sabotează în mod intenționat anchetele.” → Corect: „Polițistul sabotează anchetele.”
-- De ce: Intenția e în sensul verbului: DEX ’98 definește „a sabota” prin „a frâna intenționat desfășurarea normală a unui proces”. Adverbul repetă ce spune verbul (în germană „gezielt sabotiert” leagă „gezielt”, „țintit”, de acțiune). Păstrezi adverbul doar dacă aduce altceva: „sistematic”, „pe ascuns”, „din interior”. Nu corectezi „sabotează deliberat” când contrastul cu o greșeală neintenționată e tema frazei.
+- De ce: Intenția e în sensul verbului: DEX ’98 definește „a sabota” prin „a împiedica (prin uneltiri) bunul mers al unei acțiuni”, iar în sens special „a frâna intenționat” un proces de producție. Adverbul repetă ce spune verbul (în germană „gezielt sabotiert” leagă „gezielt”, „țintit”, de acțiune). Păstrezi un adverb doar dacă aduce altceva: „sistematic”, „pe ascuns”, „din interior”. Nu corectezi „sabotează deliberat” când contrastul cu o greșeală neintenționată e tema frazei.
 - Sursă: DEX ’98 s.v. sabota
 
 ## Vezi și

@@ -70,12 +70,6 @@ Bun: aceeași frază, cu ș, ț și Ș cu virgulă (U+0219, U+021B, U+0218).
 - De ce: Formele fără diacritice sunt adesea ambigue: „importanta” poate fi „importantă”, „importanța” sau „importanță”; „tara” poate fi „țară”, „țara” sau „tară”. Din această cauză lipsa semnelor se semnalează, iar corectura mecanică produce erori noi. Restaurezi un cuvânt numai când contextul alege o singură formă: în exemplul de mai sus, „deciziei” cere un substantiv articulat, deci „importanța”.
 - Sursă: INJ p. 93–94; DEX ’98, s.v. țară, importanță
 
-### RO-TIP-128 Grafia cu „î” și „sînt”, aplicată consecvent
-- Nivel: de semnalat
-- Greșit: „Sînt cîrcotașă și, cînd am îmbătrînit, am rămas la fel.” → Corect: „Sunt cârcotașă și, când am îmbătrânit, am rămas la fel.” (doar cu acordul autorului; grafia cu „î” folosită consecvent în tot textul nu se corectează)
-- De ce: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost norma între 1953 și 1993, iar unii autori și unele publicații o păstrează ca opțiune editorială. Aplicată consecvent, de la un capăt la altul, e o convenție a autorului sau a redacției, nu o greșeală izolată: o semnalezi o singură dată, la început, și nu corectezi ocurențele fără acordul autorului. Dacă grafia e amestecată („sînt” și „sunt”, „cînd” și „când” în același text), nu mai e convenție, ci inconsecvență: atunci e normă și se unifică după DOOM 3 („â” în interior, „sunt, suntem”). În citat și în titlul unei opere se păstrează grafia originală (RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). RO-GRA-078 din [gramatica.md](gramatica.md) se aplică textelor care nu au această convenție.
-- Sursă: DOOM 3 §2.2.2 (norma actuală, nereverificat local); ÎOOP (nereverificat local)
-
 ## 2. Majusculele
 
 ### Metoda: întâi felul numelui, apoi regula

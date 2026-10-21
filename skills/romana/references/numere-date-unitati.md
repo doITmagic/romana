@@ -269,17 +269,17 @@ Bun:
 - De ce: Ora se scrie cu două-puncte (12:30), forma pe care o recomandă ÎOOP6 și ghidul gov-md; DOOM 3 admite și punctul (12.30). Nici una dintre forme nu e greșeală; ceri doar aceeași formă în tot textul.
 - Sursă: ghid gov-md §9.4.6; ÎOOP6 și DOOM 3 §1.2.6 (nereverificat local)
 
-### RO-NUM-056 „În jurul orei 19:02”
+### RO-NUM-056 „În jurul orei 19:02”: aproximare și minut exact
 - Nivel: recomandare
-- Greșit: „Spre seară, în jurul orei 19:02, animalul stătea din nou pe autostradă.” → Corect: „Spre seară, la 19:02, animalul stătea din nou pe autostradă.”
-- De ce: „În jurul orei” anunță o aproximare, iar minutul exact o contrazice. Calc după „gegen 19:02 Uhr”. Dacă sursa dă minutul, scrii „la 19:02” (sau „puțin după ora 19” când rotunjești). „În jurul orei 19” sau „pe la ora 16” sunt corecte. Același text avea „în jurul orei 15:50”.
-- Sursă: recomandare a skill-ului, fără normă; coerența textului (aproximare și minut exact); formatul orei: RO-NUM-025
+- Greșit: „Spre seară, în jurul orei 19:02, animalul stătea din nou pe autostradă.” → Corect: „Spre seară, în jurul orei 19, animalul stătea din nou pe autostradă.”
+- De ce: Sursa spune „gegen 19:02 Uhr”, deci aproximarea e în original și „în jurul orei 19:02” este traducerea fidelă; nu o transformi în oră exactă („la 19:02”), căci ai schimba certitudinea sursei (RO-FID). Doar că „în jurul” cu minut exact sună contradictoriu în română. Pentru lizibilitate rotunjești: „în jurul orei 19”, „puțin după ora 19”. „La 19:02” rămâne pentru cazul în care sursa dă ora exact. „În jurul orei 19:02” nu se raportează ca greșeală de normă.
+- Sursă: recomandare a skill-ului, fără normă; RO-FID din [fidelitate.md](fidelitate.md); formatul orei: RO-NUM-025
 
 ### RO-NUM-057 Nota germană „2–” nu se transpune ca atare
 - Nivel: de semnalat
 - Greșit: „Cronicarul dă episodului nota 2–.” → Corect: „Cronicarul dă episodului nota 2– (pe scara germană, unde 1 e cea mai bună și 6 cea mai slabă).”
-- De ce: În școala germană notele merg de la 1 („foarte bine”) la 6 („insuficient”); 2 înseamnă „bine”, iar semnul „–” coboară nota puțin. Cititorul român citește „2” pe scara lui, de la 1 la 10, adică aproape cel mai slab calificativ, deci pe dos de ce a vrut cronicarul (fidelitate, RO-FID, fidelitate.md). Nu convertești („nota 8”): conversia e a redacției și nu se face fără sursa factorului (RO-NUM-050 din acest fișier). Explici scara sau dai calificativul din original, cu „–” ca semn al notei.
-- Sursă: sistemul german de notare 1–6 (verificat pe internet, nereverificat local); fidelitate.md; RO-NUM-050
+- De ce: În școala germană notele merg de la 1 („foarte bine”) la 6 („insuficient”); 2 înseamnă „bine”, iar semnul „–” coboară nota puțin. Cititorul român citește „2” pe scara lui, de la 1 la 10, adică aproape cel mai slab calificativ, deci pe dos de ce a vrut cronicarul (fidelitate, RO-FID din [fidelitate.md](fidelitate.md)). Nu convertești („nota 8”): conversia e a redacției și nu se face fără sursa factorului (RO-NUM-033). Explici scara sau dai calificativul din original, cu „–” ca semn al notei.
+- Sursă: sistemul german de notare 1–6 (verificat pe internet, nereverificat local); fidelitate.md; RO-NUM-033
 
 ## 8. Sume de bani și monede
 
@@ -385,4 +385,3 @@ Cifrele, datele, monedele și unitățile se compară cu originalul înainte de 
 - Greșit: „3.5 million de dolari” → Corect: „3,5 milioane de dolari”
 - De ce: La traducere sau la rescriere compari fiecare cifră, dată, monedă și unitate cu originalul: „3.5 million” devine „3,5 milioane”, „1,500” (englezesc) devine „1.500”. Conversiile (mile în kilometri, monede) se fac doar cu sursa cursului sau a factorului; altfel păstrezi unitatea originală. O cifră schimbată e o abatere de la regula de fidelitate din SKILL.md, deci normă cu gravitatea P0 (vezi [fidelitate.md](fidelitate.md)).
 - Sursă: regula de fidelitate din SKILL.md; ghid gov-md §7.4.1.4
-

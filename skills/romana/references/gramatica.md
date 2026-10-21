@@ -657,8 +657,14 @@ Bun:
 ### RO-GRA-078 „Sunt”, nu „sînt”
 - Nivel: normă
 - Greșit: „Noi sîntem acasă.” → Corect: „Noi suntem acasă.”
-- De ce: Verbul „a fi” se scrie „sunt, suntem, sunteți”; seria „sînt” e greșită oriunde apare în textul de azi. La reproducerea unui text vechi, grafia originală se păstrează în citat.
+- De ce: Verbul „a fi” se scrie „sunt, suntem, sunteți”; seria „sînt” e greșită în textul de azi, în afara convenției asumate de autor (RO-TIP-128 de mai jos). La reproducerea unui text vechi, grafia originală se păstrează în citat.
 - Sursă: DOOM 3, §2.2.2
+
+### RO-TIP-128 Grafia cu „î” și „sînt”, aplicată consecvent
+- Nivel: de semnalat
+- Greșit: „Sînt cîrcotașă și, cînd am îmbătrînit, am rămas la fel.” → Corect: „Sunt cârcotașă și, când am îmbătrânit, am rămas la fel.” (doar cu acordul autorului; grafia cu „î” folosită consecvent în tot textul nu se corectează)
+- De ce: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost norma până la hotărârea Academiei Române din 1993, care a revenit la „â” și „sunt” (DOOM 3 §2.2.1–2.2.2); aplicată consecvent, de la un capăt la altul, poate fi alegerea deliberată a autorului sau a redacției, nu o greșeală izolată. O semnalezi o singură dată, la început, și nu corectezi ocurențele fără acordul autorului. Dacă grafia e amestecată („sînt” și „sunt”, „cînd” și „când” în același text), nu mai e convenție, ci inconsecvență: atunci e normă și se unifică după DOOM 3 („â” în interior, „sunt, suntem”, RO-GRA-078). În citat și în titlul unei opere se păstrează grafia originală (RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
+- Sursă: DOOM 3 §2.2.1–2.2.2 și Hotărârea Academiei Române din 17 februarie 1993 (anexa)
 
 ### RO-GRA-080 Eliziunea prepoziției cu articolul
 - Nivel: normă
