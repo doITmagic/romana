@@ -31,7 +31,7 @@ var niveluri = map[string]bool{
 }
 
 var (
-	reTitlu   = regexp.MustCompile(`^### (RO-[A-Z]+-\d+)\b`)
+	reTitlu   = regexp.MustCompile(`^(#+)\s+(RO-\S*)`)
 	reIDValid = regexp.MustCompile(`^RO-(GRA|SEM|STI|COE|TIP|NUM|IMP|CAL|INT|FID|NUG)-\d{3}$`)
 	reGresit  = regexp.MustCompile(`^- Greșit: „([^”]*)” → Corect: „([^”]*)”`)
 	reCorect  = regexp.MustCompile(`^- Corect: „([^”]*)”`)
@@ -81,7 +81,9 @@ func Pachet(dirSkill string) ([]Problema, error) {
 	mentionate := map[string]bool{}
 	for _, l := range reLink.FindAllString(skill, -1) {
 		l = strings.TrimRight(l, ".")
-		mentionate[l] = true
+		if strings.HasSuffix(l, ".md") {
+			mentionate[l] = true
+		}
 	}
 	exista := map[string]bool{}
 	for _, r := range refs {
@@ -165,12 +167,30 @@ func frontmatter(randuri []string) []Problema {
 		return prob("frontmatter-ul nu e închis (---)")
 	}
 	var nume, descriere string
-	for _, r := range randuri[1:sfarsit] {
-		if v, ok := strings.CutPrefix(r, "name:"); ok {
-			nume = strings.TrimSpace(v)
+	linii := randuri[1:sfarsit]
+	for i := 0; i < len(linii); i++ {
+		cheie, val, ok := strings.Cut(linii[i], ":")
+		if !ok || strings.HasPrefix(linii[i], " ") || strings.HasPrefix(linii[i], "\t") {
+			continue
 		}
-		if v, ok := strings.CutPrefix(r, "description:"); ok {
-			descriere = strings.TrimSpace(v)
+		val = strings.TrimSpace(val)
+		if val != "" && strings.Trim(val[:1], ">|") == "" {
+			// bloc scalar (> sau |): liniile indentate care urmează
+			var parti []string
+			for i+1 < len(linii) && (strings.TrimSpace(linii[i+1]) == "" || strings.HasPrefix(linii[i+1], " ") || strings.HasPrefix(linii[i+1], "\t")) {
+				i++
+				if t := strings.TrimSpace(linii[i]); t != "" {
+					parti = append(parti, t)
+				}
+			}
+			val = strings.Join(parti, " ")
+		}
+		val = fataDeGhilimele(val)
+		switch strings.TrimSpace(cheie) {
+		case "name":
+			nume = val
+		case "description":
+			descriere = val
 		}
 	}
 	var pr []Problema
@@ -201,7 +221,8 @@ func Reguli(fisier string) ([]Regula, []Problema) {
 		if m == nil {
 			continue
 		}
-		r := Regula{ID: m[1], Rand: i + 1}
+		r := Regula{ID: m[2], Rand: i + 1}
+		nivelTitlu := len(m[1])
 		var areNivel, areSursa, areDeCe, areExemplu bool
 		j := i + 1
 		for ; j < len(randuri) && !strings.HasPrefix(randuri[j], "#"); j++ {
@@ -233,6 +254,9 @@ func Reguli(fisier string) ([]Regula, []Problema) {
 		p := func(motiv string) {
 			pr = append(pr, Problema{Cale: fisier, Motiv: fmt.Sprintf("rândul %d: %s: %s", r.Rand, r.ID, motiv)})
 		}
+		if nivelTitlu != 3 {
+			p("titlul regulii trebuie să înceapă cu „###”")
+		}
 		if !reIDValid.MatchString(r.ID) {
 			p("ID invalid (se așteaptă RO-<PIL>-<NNN>, cu PIL dintre cele permise)")
 		}
@@ -254,4 +278,12 @@ func Reguli(fisier string) ([]Regula, []Problema) {
 		reguli = append(reguli, r)
 	}
 	return reguli, pr
+}
+
+// fataDeGhilimele scoate ghilimelele simple sau duble care înconjoară o valoare YAML.
+func fataDeGhilimele(v string) string {
+	if len(v) >= 2 && (v[0] == '"' || v[0] == '\'') && v[len(v)-1] == v[0] {
+		return v[1 : len(v)-1]
+	}
+	return v
 }

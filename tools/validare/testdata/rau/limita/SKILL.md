@@ -399,6 +399,3 @@ linia 394
 linia 395
 linia 396
 linia 397
-linia 398
-linia 399
-linia 400

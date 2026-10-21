@@ -61,3 +61,21 @@ func TestReguli(t *testing.T) {
 		t.Errorf("regula NUG ar trebui să aibă doar Corect: %+v", reguli[1])
 	}
 }
+
+func curat(t *testing.T, director string) {
+	t.Helper()
+	probleme, err := Pachet(filepath.Join("testdata", director))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(probleme) != 0 {
+		t.Fatalf("%s: nu așteptam probleme: %v", director, probleme)
+	}
+}
+
+func TestLimita400Bun(t *testing.T)               { curat(t, "bun400") }
+func TestYamlBlocSiGhilimele(t *testing.T)        { curat(t, "bun_yaml") }
+func TestDirectorInProzaNuEProblema(t *testing.T) { curat(t, "bun_dir") }
+func TestYamlBlocFaraEngleza(t *testing.T)        { verifica(t, "yaml_fara_en", "engleză") }
+func TestTitluIdInvalid(t *testing.T)             { verifica(t, "titlu_gresit", "ID invalid") }
+func TestTitluNivelGresit(t *testing.T)           { verifica(t, "titlu_gresit2", "###") }
