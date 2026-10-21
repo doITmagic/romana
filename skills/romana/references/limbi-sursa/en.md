@@ -57,47 +57,47 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 ### RO-CAL-501 Traducerea automată literală se reformulează, nu se repară gramatical
 - Nivel: de semnalat
 - Greșit: „să repete lucru în repository” → Corect: „indicații pe care le pot aplica din nou”
-- De ce: Un text tradus automat, cuvânt cu cuvânt, poate să nu aibă o greșeală de gramatică care să se corecteze și totuși să nu spună nimic. Aici originalul vorbea despre indicații care pot fi aplicate de mai multe ori (engl. «repeatable guidance»), iar traducerea a lipit cuvinte. Nu pui articolul sau acordul lipsă, ci cauți ce voia originalul și scrii asta. Dacă originalul nu e la îndemână și sensul nu se poate ghici, semnalezi fraza și întrebi.
+- De ce: Un text tradus automat, cuvânt cu cuvânt, poate să nu aibă o greșeală de gramatică care să se corecteze și totuși să nu spună nimic. Aici originalul vorbea despre indicații care pot fi aplicate de mai multe ori (engl. „repeatable guidance”), iar traducerea a lipit cuvinte. Nu pui articolul sau acordul lipsă, ci cauți ce voia originalul și scrii asta. Dacă originalul nu e la îndemână și sensul nu se poate ghici, semnalezi fraza și întrebi.
 - Sursă: recomandare a skill-ului, fără normă
 
 ### RO-CAL-502 Idiomurile se traduc după sens
 - Nivel: recomandare
 - Greșit: „Examenul a fost o bucată de prăjitură.” → Corect: „Examenul a fost floare la ureche.”
-- De ce: Engl. «a piece of cake» nu are în română imaginea prăjiturii; echivalentul consacrat e «floare la ureche», cu sensul „lucru de puțină importanță sau gravitate, foarte ușor de rezolvat” (DEX '98). Se poate spune și «simplu ca bună ziua». Când o imagine există și în română (cu aceeași formă), o păstrezi; când nu există, cauți expresia românească cu același sens și același registru. Dacă nu găsești una, spui sensul fără imagine.
+- De ce: Engl. „a piece of cake” nu are în română imaginea prăjiturii; echivalentul consacrat e „floare la ureche”, cu sensul „lucru de puțină importanță sau gravitate, foarte ușor de rezolvat” (DEX '98). Se poate spune și „simplu ca bună ziua”. Când o imagine există și în română (cu aceeași formă), o păstrezi; când nu există, cauți expresia românească cu același sens și același registru. Dacă nu găsești una, spui sensul fără imagine.
 - Sursă: DEX '98 s.v. floare, simplu
 
 ### RO-CAL-503 Se traduce sensul, nu cuvintele
 - Nivel: recomandare
-- Greșit: „Te fac faimos.” → Corect: „să-Ți facem cunoscut Numele”
-- De ce: Într-un text religios, engl. «make You famous» nu înseamnă celebritate lumească, ci a face cunoscut. «Te fac faimos» (DEX '98: «faimos» = foarte cunoscut, celebru) schimbă registrul și sensul. Variante după context: «să-Ți facem cunoscut Numele», «să Te vestim» («a vesti» = a aduce la cunoștință, a face cunoscut, DEX '98). Majusculele la pronumele care se referă la divinitate rămân cum le are textul.
+- Greșit: „Te fac faimos.” → Corect: „Te fac cunoscut.”
+- De ce: Într-un text religios, engl. „make You famous” nu înseamnă celebritate lumească, ci a face cunoscut. „Faimos” (DEX '98: „care a devenit extrem de cunoscut; vestit, celebru”) sună a glorie lumească și schimbă registrul; „cunoscut” sau „a vesti” („a aduce la cunoștință, a face cunoscut”, DEX '98) merg mai bine. Alegerea finală ține de registrul textului și de formula liturgică a limbii-țintă, nu de o regulă. Nu adaugi cuvinte pe care originalul nu le are, iar majusculele la pronumele care se referă la divinitate rămân cum le are textul.
 - Sursă: DEX '98 s.v. faimos, vesti
 
 ### RO-CAL-504 Termenul tradus: originalul în paranteză, o singură dată
 - Nivel: recomandare
 - Greșit: „echilibrarea încărcării (load balancing) … echilibrarea încărcării (load balancing)” → Corect: „echilibrarea încărcării (load balancing)” la prima apariție, apoi doar „echilibrarea încărcării”
-- De ce: Convenție de redactare, nu normă. Când traduci un termen tehnic, la prima apariție dai echivalentul românesc și originalul în paranteză, apoi folosești doar forma românească. Termenul păstrat ca împrumut („SQL”, „React”) nu primește paranteză; la nevoie îl explici la prima apariție. Titlul unei opere străine rămâne în original, între ghilimele românești, cu traducerea în paranteză la prima mențiune: „The Great Gatsby” (în română, «Marele Gatsby»). Ordinea e invers decât la termeni, pentru că titlul e numele operei, iar traducerea doar îl explică.
+- De ce: Convenție de redactare, nu normă. Când traduci un termen tehnic, la prima apariție dai echivalentul românesc și originalul în paranteză, apoi folosești doar forma românească. Termenul păstrat ca împrumut („SQL”, „React”) nu primește paranteză; la nevoie îl explici la prima apariție. Termenul străin dat în paranteză se scrie cu cursive dacă textul le permite (RO-TIP-060 din [tipografie.md](../tipografie.md)). Titlul unei opere străine rămâne în original, între ghilimele românești, cu traducerea în paranteză la prima mențiune: „The Great Gatsby” (în română, „Marele Gatsby”). Ordinea e invers decât la termeni, pentru că titlul e numele operei, iar traducerea doar îl explică.
 - Sursă: convenție de redactare, fără normă
 
 ### RO-CAL-505 Claritatea are prioritate față de literalitate
 - Nivel: recomandare
 - Greșit: „Utilizatorii sunt capabili de a realiza modificarea setărilor prin intermediul meniului.” → Corect: „Utilizatorii pot schimba setările din meniu.”
-- De ce: Se traduce sensul, nu structura frazei englezești, fără să se schimbe intenția sau conținutul mesajului. Prima variantă urmează engl. «are able to perform changes to settings via the menu»; a doua spune același lucru cu un verb și un complement. Regula nu te lasă să scurtezi ce contează: dacă originalul face o distincție („pot”, nu „trebuie”), o păstrezi.
+- De ce: Se traduce sensul, nu structura frazei englezești, fără să se schimbe intenția sau conținutul mesajului. Prima variantă urmează engl. „are able to perform changes to settings via the menu”; a doua spune același lucru cu un verb și un complement. Regula nu te lasă să scurtezi ce contează: dacă originalul face o distincție („pot”, nu „trebuie”), o păstrezi.
 - Sursă: Mic ghid CE, introducere (ghidul prezintă recomandări, nu reguli)
 
 ### RO-CAL-506 Întrebările retorice rămân întrebări
 - Nivel: recomandare
-- Greșit: „Condițiile se prezintă după cum urmează.” → Corect: „Și cum arată aceste condiții?”
-- De ce: Originalul («So what do these conditions look like?») pune o întrebare retorică, mijloc expresiv pe care româna îl are și el. O transformi în afirmație doar dacă registrul nu admite întrebări retorice (text juridic, administrativ, mesaje de sistem); altfel pierzi tonul autorului. Nici nu o calchiezi cuvânt cu cuvânt.
+- Corect: „Și cum arată aceste condiții?” (pentru engl. „So what do these conditions look like?”). Nu o transformi în „Condițiile se prezintă după cum urmează.”
+- De ce: Originalul pune o întrebare retorică, mijloc expresiv pe care româna îl are și el. O transformi în afirmație doar dacă registrul nu admite întrebări retorice (text juridic, administrativ, mesaje de sistem); altfel pierzi tonul autorului. Nici nu o calchiezi cuvânt cu cuvânt.
 - Sursă: recomandare a skill-ului, fără normă
 
 ### RO-CAL-042 Sensul din frază, nu primul echivalent din dicționar
 - Nivel: recomandare
 - Greșit: „Comitetul a rezolvat să amâne decizia.” → Corect: „Comitetul a hotărât să amâne decizia.”
-- De ce: Engl. «resolved to postpone» înseamnă că a luat hotărârea de a amâna. «A rezolva» are în română alt sens, „a găsi soluția unei probleme, a pune capăt unei controverse” (DEX '98), deci fraza spune altceva decât originalul. Echivalentul din dicționarul bilingv a fost alegerea greșită. Verbul românesc îl alegi după ce face subiectul în frază. Dacă nu poți deduce sensul, întrebi, nu ghicești.
+- De ce: Engl. „resolved to postpone” înseamnă că a luat hotărârea de a amâna. „A rezolva” are în română alt sens, „a găsi soluția unei probleme, a pune capăt unei controverse” (DEX '98), deci fraza spune altceva decât originalul. Echivalentul din dicționarul bilingv a fost alegerea greșită. Verbul românesc îl alegi după ce face subiectul în frază. Dacă nu poți deduce sensul, întrebi, nu ghicești.
 - Sursă: DEX '98 s.v. rezolva; DEX '96 s.v. hotărî
 
 ### RO-CAL-051 Cuvintele de umplutură ale originalului nu se traduc una câte una
 - Nivel: recomandare
 - Greșit: „Sincer, noi practic doar am vrut să facem într-adevăr lucrurile simple.” → Corect: „Am vrut să simplificăm lucrurile.”
-- De ce: Cuvinte ca «just», «really», «actually», «basically», «honestly» ajustează tonul fără să aducă informație. Traduse fiecare cu câte un adverb românesc, fac fraza grea și neutră, cum ar fi: *sincer, practic, doar, într-adevăr*. Le redai după sens (dacă schimbă ceva) sau le omiți, mai ales când se adună. Când cuvântul poartă informație („doar” = „numai”, „actually” = „de fapt, contrar așteptărilor”), îl păstrezi. În citat nu scoți nimic (vezi RO-FID-026 din [fidelitate.md](../fidelitate.md)).
+- De ce: Cuvinte ca „just”, „really”, „actually”, „basically”, „honestly” ajustează tonul fără să aducă informație. Traduse fiecare cu câte un adverb românesc, fac fraza grea și neutră, cum ar fi: *sincer, practic, doar, într-adevăr*. Le redai după sens (dacă schimbă ceva) sau le omiți, mai ales când se adună. Când cuvântul poartă informație („doar” = „numai”, „actually” = „de fapt, contrar așteptărilor”), îl păstrezi. În citat nu scoți nimic (vezi RO-FID-026 din [fidelitate.md](../fidelitate.md)).
 - Sursă: recomandare a skill-ului, fără normă

@@ -20,7 +20,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Ediție:** a III-a, revăzută și adăugită, Univers Enciclopedic Gold, București, 2021.
 - **Statut:** normă, pentru ortografie, ortoepie și morfologie (forme, accent, articulare, plural). Forma marcată cu asterisc este greșeală, chiar dacă o notă o introduce prin „de evitat”.
 - **Ce nu spune:** nu dă sensuri și nu e un dicționar explicativ. Absența unui cuvânt nu dovedește că e greșit, pentru că dicționarul nu cuprinde tot lexicul. Recomandările lui („de preferat”) nu fac din cealaltă variantă o greșeală. Nu spune nimic despre stil, topică sau claritate.
-- **Verificare:** textul din exportul local e trunchiat, așa că multe trimiteri la paragraf sunt marcate „(nereverificat local)”. Existența și formele unui cuvânt se pot verifica local.
+- **Verificare:** multe trimiteri la paragraf sunt marcate „(nereverificat local)”.
 
 ### DOOM 2
 - **Titlu:** *Dicționarul ortografic, ortoepic și morfologic al limbii române*.
@@ -41,11 +41,10 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Ediție:** a II-a, Univers Enciclopedic, București, 1998.
 - **Statut:** descriptiv. Dă sensurile, mărcile de registru (fam., pop., reg., arg., înv.) și variantele. Sensul din DEX '98 decide dacă un cuvânt „înseamnă” ceva, dar pentru formă are prioritate DOOM 3.
 - **Ce nu spune:** nu cuprinde cuvintele sau sensurile apărute după 1998 (multe din informatică sau din uzul recent). Absența unui sens de acolo nu dovedește că sensul e greșit; la regulile de sens, o definiție mai nouă care îl dă coboară nivelul. Nu e normă ortografică.
-- **Verificare:** se poate consulta integral local.
 
 ### DEX '96
 - **Titlu:** *Dicționarul explicativ al limbii române*.
-- **Ediție:** a II-a, 1996 (revăzută față de ediția din 1975, cu suplimentul inclus).
+- **Ediție:** a II-a, 1996 (revăzută față de ediția din 1975).
 - **Statut:** descriptiv, folosit când DEX '98 nu are intrarea.
 - **Ce nu spune:** aceleași limite ca DEX '98; mai vechi. Dacă cele două diferă, regula spune care a fost folosit.
 
@@ -53,17 +52,29 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** *Dicționarul explicativ al limbii române*.
 - **Ediție:** a II-a, revăzută și adăugită, Univers Enciclopedic Gold, 2009.
 - **Statut:** descriptiv, cu sensuri mai noi decât DEX '98.
-- **Ce nu spune:** textul definițiilor e disponibil local doar parțial, așa că trimiterea s.v. indică ce intrare s-a consultat, nu ce text se reia.
+- **Ce nu spune:** trimiterea s.v. indică intrarea consultată, nu un text reprodus.
 
-### DN, MDN '00, MDN '08, MDA2, DCR2, Ortografic
-- **Titluri:** *Dicționar de neologisme* (DN); *Marele dicționar de neologisme* (MDN '00; MDN '08 este ediția a 10-a, revăzută, augmentată și actualizată); *Micul dicționar academic*, ediția a II-a (MDA2); *Dicționar de cuvinte recente*, ediția a II-a (DCR2); *Dicționar ortografic al limbii române* (în trimiteri, „Ortografic”).
-- **Ediție:** autorii și anii exacți nu au putut fi confirmați independent; se citează după titlu și, la neologisme, după an (MDN '00, MDN '08).
-- **Statut:** descriptiv. Servesc la a verifica dacă un cuvânt nou, un neologism sau o formă apare în dicționare.
-- **Ce nu spune:** nu sunt norme. Textul lor e trunchiat local; sunt folosite pentru existența cuvântului, nu pentru reluarea definițiilor.
+### MDN '00 și MDN '08
+- **Titlu:** Florin Marcu, *Marele dicționar de neologisme*.
+- **Ediție:** MDN '00 este ediția din 2000, Saeculum I.O., București; MDN '08 este ediția a 10-a, revăzută, augmentată și actualizată.
+- **Statut:** descriptiv. Verifică dacă un neologism sau o formă apare în dicționare.
+- **Ce nu spune:** nu e normă. Se citează pentru existența cuvântului, nu pentru reluarea definițiilor.
+
+### DCR2
+- **Titlu:** Florica Dimitrescu, *Dicționar de cuvinte recente*.
+- **Ediție:** a II-a, Logos, București, 1997.
+- **Statut:** descriptiv, pentru cuvinte intrate în limbă în ultimele decenii ale secolului XX.
+- **Ce nu spune:** nu e normă; cuvintele apărute după 1997 lipsesc.
+
+### DN, MDA2 și „Ortografic”
+- **Titluri:** *Dicționar de neologisme* (DN); *Micul dicționar academic*, ediția a II-a (MDA2); *Dicționar ortografic al limbii române* (în trimiteri, „Ortografic”).
+- **Ediție:** neprecizată.
+- **Statut:** descriptiv. Servesc la verificarea existenței unui cuvânt.
+- **Ce nu spune:** nu sunt norme; autorul și anul nu au putut fi confirmați.
 
 ### DSL
 - **Titlu:** A. Bidu-Vrănceanu, C. Călărașu, L. Ionescu-Ruxăndoiu, M. Mancaș, G. Pană Dindelegan, *Dicționar general de științe. Științe ale limbii*.
-- **Ediție:** Editura Științifică, București, 1997. Lucrarea a avut ediții ulterioare cu titlul *Dicționar de științe ale limbii* (2001, 2005).
+- **Ediție:** Editura Științifică, București, 1997.
 - **Statut:** descriptiv. Definește termenii lingvistici (topică, coerență, pleonasm, registru, prezumtiv) și arată cum sunt folosiți în teoria limbii.
 - **Ce nu spune:** nu fixează norme și nu judecă corect sau greșit. Citat la „s.v.”, cu termenul scris cu majuscule, ca în dicționar.
 
@@ -75,15 +86,15 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Statut:** descriptiv, didactic. Descrie construcțiile și valorile modurilor și timpurilor verbale (condiționalul, conjunctivul, imperativul), articolul, acordul.
 - **Ce nu spune:** e anterioară DOOM 2 și DOOM 3: formele ortografice și morfologice se verifică în DOOM 3, nu aici. Nu dă reguli de stil.
 
-### Coteanu (coord.), *Stilistica funcțională a limbii române*
-- **Titlu:** I. Coteanu (coord.), *Stilistica funcțională a limbii române*, vol. 1, Editura Academiei, București.
-- **Ediție:** anii 1980 (anul exact nu este tipărit pe copia consultată).
+### Coteanu, *Stilistica funcțională a limbii române*
+- **Titlu:** Ion Coteanu, *Stilistica funcțională a limbii române. Stil, stilistică, limbaj*, vol. I.
+- **Ediție:** Editura Academiei, București, 1973 (volumul al II-lea e din 1985).
 - **Statut:** descriptiv. Trece în revistă stilurile funcționale (administrativ, publicistic etc.).
 - **Ce nu spune:** nu stabilește corect și greșit; nu e un ghid de redactare.
 
 ### GALR
 - **Titlu:** *Gramatica limbii române*, 2 vol. (*Cuvântul*, *Enunțul*), Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, Editura Academiei Române.
-- **Ediție:** 2005, sub coordonarea Valeriei Guțu Romalo; tiraj nou, revizuit, 2008, cu G. Pană Dindelegan în coordonare.
+- **Ediție:** 2005, sub coordonarea Valeriei Guțu Romalo; a doua tipărire, revizuită, în 2008.
 - **Statut:** descriptiv. Cea mai amplă descriere academică a gramaticii limbii române.
 - **Ce nu spune:** nu impune forme; unde diferă de DOOM, în materie de formă contează DOOM. Trimiterile la GALR din pachet sunt marcate „(nereverificat local)”.
 
@@ -91,7 +102,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** *Corectitudinea exprimării*, curs universitar.
 - **Ediție:** document din 2010, redactat în context chișinăuian (bibliografia citează lucrări până în 2009). În copia consultată nu apare niciun autor.
 - **Statut:** recomandare, didactic, care sintetizează norme ale vremii (inclusiv DOOM 2).
-- **Ce nu spune:** autorul nu e identificat; nu se poate cita ca lucrare de autor. Nu poate fi opera lui I. Coteanu, cum arată o prescurtare din `gramatica.md`: bibliografia cursului citează lucrări din 2009, mult după moartea lui Coteanu (1999). Normele din el se verifică în DOOM 3.
+- **Ce nu spune:** autorul nu e identificat; nu se poate cita ca lucrare de autor. Nu poate fi opera lui I. Coteanu: bibliografia cursului citează lucrări din 2009, mult după moartea lui (1999). Normele din el se verifică în DOOM 3.
 
 ## Ghiduri de redactare și îndrumare
 
@@ -144,7 +155,7 @@ Toate sunt **descriptive**. Susțin o idee sau o metodă, nu fixează norme.
 - **F. Thom**, *Limba de lemn*, traducere de Mona Antohi, Humanitas, București, 1993. Despre limba de lemn a regimurilor de tip sovietic (originalul francez e din 1987). **Nu spune** nimic despre româna de azi în afara exemplului istoric. Marcat „(nereverificat local)”.
 - **R. Zafiu**, articole („Datorie suverană”, „Plus că…”) despre uz și norme. Comentarii ale unei lingviste; locul și anul apariției nu au putut fi confirmate. **Nu sunt** norme.
 - **Al. Nicolae**, *Ordinea constituenților*, 2015, și **M. Avram**, citată prin G. Biriș: lucrări despre topică. **Nu spun** reguli de redactare; descriu ordinea cuvintelor. Titlul exact și ediția nu au putut fi confirmate independent; marcate „(nereverificat local)”.
-- **R. O. Miclea**: studiu despre substantivele compuse germane și traducerea lor în română; **A.-A. Dovgan**, 2017: studiu despre traducerea construcțiilor cu verb suport din germană în română, în domeniul juridic. Contrastive, descriptive. **Nu spun** ce e norma în presă; se referă la limbajul juridic. Titlurile exacte nu au putut fi confirmate; marcate „(nereverificat local)”.
+- **R. O. Miclea**: studiu despre substantivele compuse germane și traducerea lor în română; **A.-A. Dovgan**, „Die Übersetzbarkeit der Funktionsverbkonstruktionen aus dem Deutschen in die rumänische Sprache im juristischen Bereich”, 2017, într-un volum de germanistică al Universității Transilvania din Brașov (despre traducerea construcțiilor cu verb suport din germană în română, în domeniul juridic). Contrastive, descriptive. **Nu spun** ce e norma în presă; se referă la limbajul juridic. Titlul lui Miclea nu a putut fi confirmat; marcate „(nereverificat local)”.
 - **GALR (acordul cu subiectul multiplu)** și **revista *Limba Română* (Chișinău)**: citate generic, marcate „(nereverificat local)”.
 - **Raportul CNA, 2009**: raport al Consiliului Național al Audiovizualului despre limba din audiovizual, făcut cu Institutul de Lingvistică. Titlul exact n-a putut fi identificat; marcat „(nereverificat local)”.
 
@@ -152,10 +163,10 @@ Toate sunt **descriptive**. Susțin o idee sau o metodă, nu fixează norme.
 
 Patru surse de presă din `tipuri/presa.md` n-au putut fi verificate. Se știe doar ce spune fișierul care le citează. Regulile care le folosesc au nivelul „recomandare”, iar trimiterea e marcată „(nereverificat local)”.
 
-- **Monitorizarea presei IL** (Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, monitorizarea limbii din presa online, 2021–2022; o secțiune 4.4 e citată). Nu am găsit un document public cu acest titlu. **Nu se știe** ce spune la pagină. Statut probabil: descriptiv.
-- **Irimieș**, *Presa de agenție* (L. Irimieș, după materialul de lucru). Nu am găsit lucrarea. **Nu se știe** ediția sau editura. Statut probabil: recomandare.
+- **Monitorizarea presei IL** (Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, monitorizarea limbii din presa online, 2021–2022; o secțiune 4.4 e citată). Documentul nu a putut fi identificat. **Nu se știe** ce spune la pagină. Statut probabil: descriptiv.
+- **Irimieș**, *Presa de agenție* (L. Irimieș, după materialul de lucru). Lucrarea nu a putut fi identificată. **Nu se știe** ediția sau editura. Statut probabil: recomandare.
 - **Ghidul de jurnalism** (citat și ca „ghidjurnalism”): ghid de redactare pentru presă, cu autor și ediție neidentificate. Statut probabil: recomandare.
-- **Ghid de stil API**: ghid de stil atribuit Asociației Presei Independente din Republica Moldova. Nu am găsit un ghid publicat. Statut probabil: recomandare.
+- **Ghid de stil API**: ghid de stil atribuit Asociației Presei Independente din Republica Moldova. Un ghid publicat nu a putut fi identificat. Statut probabil: recomandare.
 
 ## Acte juridice
 
@@ -181,7 +192,7 @@ Câmpul „Sursă” poate spune și că regula nu are o sursă externă. Înțe
 
 ## Ce nu este acoperit
 
-- Nu există în pachet o sursă specifică pentru italiană; sensul italian al prietenilor falși din [limbi-sursa/it.md](limbi-sursa/it.md) e marcat „(nereverificat local)”, iar sensul românesc e verificat în DEX '98.
+- Pentru italiană nu e citată nicio sursă specifică; sensul italian al prietenilor falși din [limbi-sursa/it.md](limbi-sursa/it.md) e marcat „(nereverificat local)”, iar sensul românesc e verificat în DEX '98.
 - Pentru germană, studiile contrastive citate nu au putut fi deschise; regulile din [limbi-sursa/de.md](limbi-sursa/de.md) rămân recomandări.
 - Pentru texte de presă, vezi „Surse de presă (neverificate)”.
 - Cărțile și textul DOOM, ÎOOP sau al exportului dicționarului nu intră în pachet; se citează doar la paragraf, pagină sau cuvânt.
