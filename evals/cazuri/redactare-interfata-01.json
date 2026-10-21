@@ -1,0 +1,19 @@
+{
+  "id": "redactare-interfata-01",
+  "mod": "redactare",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie textele pentru o aplicație de notițe, cu adresare prin «tu»: butonul de salvare, mesajul de după salvare, mesajul pentru lista goală și mesajul de eroare când nu există conexiune la internet. Câte o linie pe text.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "dumneavoastră",
+      "Salvați",
+      "Oops",
+      "Whoops",
+      "a face sens"
+    ]
+  }
+}

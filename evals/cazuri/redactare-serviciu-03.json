@@ -1,0 +1,19 @@
+{
+  "id": "redactare-serviciu-03",
+  "mod": "redactare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie descrierea pentru pagina serviciului «Contabilitate pentru PFA» a unui cabinet din Iași. Faptele: ținem evidența veniturilor și cheltuielilor; depunem declarația unică; abonamentul costă 250 de lei pe lună; răspundem la mesaje în aceeași zi lucrătoare. Fără promisiuni în plus.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "a aplica pentru",
+      "fără costuri ascunse",
+      "economii",
+      "garantăm",
+      "rol esențial"
+    ]
+  }
+}

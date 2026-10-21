@@ -1,0 +1,19 @@
+{
+  "id": "redactare-interfata-02",
+  "mod": "redactare",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie mesajele pentru un formular de înregistrare, cu adresare prin «dumneavoastră»: eticheta și eroarea pentru e-mail invalid, eroarea pentru o parolă mai scurtă de 8 caractere, textul butonului și mesajul de confirmare după trimitere. Câte o linie pe text.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "poți",
+      "Introdu",
+      "parola ta",
+      "Oops",
+      "Whoops"
+    ]
+  }
+}

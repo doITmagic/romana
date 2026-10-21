@@ -1,0 +1,18 @@
+{
+  "id": "redactare-interfata-03",
+  "mod": "redactare",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie textele pentru setarea «Notificări» dintr-o aplicație, cu adresare prin «tu»: titlul, o explicație de o frază, cele trei opțiuni (toate, doar importante, niciuna) și mesajul de stare când notificările sunt oprite. Câte o linie pe text.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "dumneavoastră",
+      "Oops",
+      "Whoops",
+      "setting"
+    ]
+  }
+}

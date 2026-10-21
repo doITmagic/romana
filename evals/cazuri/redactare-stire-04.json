@@ -1,0 +1,19 @@
+{
+  "id": "redactare-stire-04",
+  "mod": "redactare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Tradu în română, ca știre de presă: „The city council voted 9 to 4 on Tuesday to ban cars from the old town on weekends. The measure takes effect on 1 January. Shop owners criticized the decision, while cyclists welcomed it.”",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "„",
+      "a aplica",
+      "a face sens",
+      "protest",
+      "comercianți furioși"
+    ]
+  }
+}

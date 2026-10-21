@@ -1,0 +1,19 @@
+{
+  "id": "redactare-email-02",
+  "mod": "redactare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie un e-mail scurt, informal (cu «tu»), către colegii din echipă, prin care muți ședința de marți, 14 octombrie, de la ora 10:00 la ora 14:00, pentru că sala e ocupată. Cere-le să confirme până miercuri dacă ora nouă le convine.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "Sper că acest e-mail",
+      "vă găsește bine",
+      "Cu stimă",
+      "dumneavoastră",
+      "Sigur!"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "redactare-blog-04",
+  "mod": "redactare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie paragraful de încheiere al unui articol de blog despre alegerea unui laptop pentru studenți. Autorul recomandă un laptop cu 16 GB de memorie și baterie de 10 ore, pentru un buget de până la 3.000 de lei. Încheie cu o recomandare, fără să numești mărci.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "Lenovo",
+      "Dell",
+      "Apple",
+      "Asus",
+      "ultima versiune",
+      "a face sens"
+    ]
+  }
+}

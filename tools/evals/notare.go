@@ -11,10 +11,14 @@ type Rezultat struct {
 	// Iesire este răspunsul brut al motorului (stdout, fără metadate).
 	Iesire string `json:"iesire"`
 
-	// PornitCunoscut / Pornit: la cazurile de tip trigger, dacă s-a putut
-	// stabili și dacă skill-ul „romana” a pornit. Doar motorul Claude raportează.
+	// PornitCunoscut / Pornit: dacă s-a putut stabili și dacă skill-ul „romana”
+	// a fost invocat. Doar motorul Claude raportează (din stream-json).
 	PornitCunoscut bool `json:"pornit_cunoscut,omitempty"`
 	Pornit         bool `json:"pornit,omitempty"`
+
+	// Skills: skill-urile văzute de Claude la pornire (evenimentul system/init),
+	// pentru audit.
+	Skills []string `json:"skills,omitempty"`
 
 	// Judecata este nota judecătorului LLM, doar la redactare (nil în rest).
 	Judecata *Judecata `json:"judecata,omitempty"`
@@ -22,7 +26,7 @@ type Rezultat struct {
 
 // Judecata este verdictul judecătorului pentru un text redactat, după lista
 // fixă din spec §10: calcuri, forme neatestate, tipare de text generat, plus
-// probleme de coerență.
+// probleme de coerență. Valorile sunt medianele pe mai multe judecăți.
 type Judecata struct {
 	Calcuri  int    `json:"calcuri"`
 	Coerenta int    `json:"coerenta"`
@@ -31,27 +35,38 @@ type Judecata struct {
 
 // Nota este scorul unui caz. Valori mai mici sunt mai bune, în afară de Fidelitate.
 //
-//   - Probleme: cât din ce nu avea voie să se întâmple s-a întâmplat. La
-//     verificare și corectură: câte elemente din Interzis au fost semnalate sau
-//     schimbate. La redactare: câte elemente din Interzis apar în ieșire, plus
-//     problemele numărate de judecător (calcuri și coerență). La trigger:
-//     1 dacă skill-ul a pornit și nu avea voie.
-//   - FalsPozitive: observații sau schimbări care nu erau așteptate. Include
-//     Interzis-ul semnalat sau schimbat (deci FalsPozitive >= acele Probleme).
-//     La un caz Neatins, orice observație sau schimbare e fals pozitiv.
-//   - Lipsa: observații așteptate care n-au apărut, plus elemente din Cerut
-//     care lipsesc.
+//   - Probleme: câte elemente din Interzis au fost încălcate. La verificare:
+//     semnalate (orice citat OBS care se potrivește cu ele, oricât de lung). La
+//     corectură: atinse de orice zonă schimbată, chiar dacă zona atinge și o
+//     observație așteptată. La redactare: apar în textul produs. La trigger: 1
+//     dacă skill-ul a pornit și nu avea voie.
+//   - Judecator: la redactare, calcurile plus problemele de coerență numărate de
+//     judecător (mediana judecăților). Separat de Probleme.
+//   - FalsPozitive: observații sau schimbări neașteptate. Verificare: un citat
+//     OBS care nu se potrivește cu nicio observație așteptată (la Neatins, orice
+//     citat). Corectură: la Neatins, numărul de tokeni schimbați; altfel 1 pentru
+//     o zonă schimbată care nu atinge nicio observație așteptată, iar pentru una
+//     care o atinge, tokenii cu care depășește fragmentul atins plus o margine de
+//     2 (o retranscriere totală nu trece drept corectură).
+//   - Lipsa: observații așteptate care n-au apărut, plus elemente din Cerut care
+//     lipsesc. La verificare un citat OBS se potrivește cu fragmentul așteptat
+//     doar dacă nu e mai lung de 3 ori fragmentul plus 40 de caractere, și nu acoperă mai mult de 70% din intrare.
 //   - Fidelitate: false dacă textul produs (corectat sau redactat) conține un
-//     număr care nu e în intrare, sau (la redactare) o formă din Interzis. La
+//     număr care nu e în intrare, sau (la redactare) o formă din Interzis. Nu se
+//     verifică numerele dispărute și nici numeralele scrise cu litere. La
 //     verificare nu există text produs: Fidelitate e false doar la cazurile
 //     fidelitate-*, când nu au fost prinse toate observațiile așteptate.
-//   - FaraMarcaj: la corectură, răspunsul n-a avut marcajele [[TEXT]]…[[/TEXT]];
-//     s-a notat tot răspunsul ca text corectat (nota e nesigură).
+//   - Nemasurat: nota nu poate fi folosită în sume (trigger pe un motor care nu
+//     raportează pornirea skill-ului; redactare fără judecător).
+//   - FaraMarcaj: la corectură și redactare, răspunsul n-a avut marcajele
+//     [[TEXT]]…[[/TEXT]]; s-a notat tot răspunsul (nota e nesigură).
 type Nota struct {
 	Probleme     int
+	Judecator    int
 	FalsPozitive int
 	Lipsa        int
 	Fidelitate   bool
+	Nemasurat    bool
 	FaraMarcaj   bool
 }
 
@@ -75,9 +90,38 @@ func ExtrageText(iesire string) (string, bool) {
 	return strings.TrimSpace(rest[:j]), true
 }
 
+var inlocuireSpatii = strings.NewReplacer("\u00a0", " ", "\u202f", " ", "\u2009", " ")
+
+// curata aduce spațiile speciale (NBSP, NNBSP, spațiu subțire) la spațiu simplu.
+func curata(s string) string { return inlocuireSpatii.Replace(s) }
+
+func curataCaz(c Caz) Caz {
+	c.Intrare = curata(c.Intrare)
+	a := c.Asteptat
+	a.Observatii = append([]ObsAsteptata(nil), a.Observatii...)
+	for i := range a.Observatii {
+		a.Observatii[i].Fragment = curata(a.Observatii[i].Fragment)
+	}
+	a.Interzis = curataLista(a.Interzis)
+	a.Cerut = curataLista(a.Cerut)
+	c.Asteptat = a
+	return c
+}
+
+func curataLista(l []string) []string {
+	out := make([]string, len(l))
+	for i, s := range l {
+		out[i] = curata(s)
+	}
+	return out
+}
+
 // Noteaza notează mecanic rezultatul unui caz. Nu cere nimic de la rețea sau
-// de la vreun motor: judecata de la redactare vine gata în Rezultat.
+// de la vreun motor: judecata de la redactare vine gata în Rezultat. NBSP și
+// celelalte spații speciale se normalizează la spațiu, peste tot.
 func Noteaza(c Caz, r Rezultat) Nota {
+	c = curataCaz(c)
+	r.Iesire = curata(r.Iesire)
 	n := Nota{Fidelitate: true}
 	switch c.Mod {
 	case "verificare":
@@ -96,6 +140,7 @@ func Noteaza(c Caz, r Rezultat) Nota {
 
 func noteazaTrigger(c Caz, r Rezultat, n *Nota) {
 	if !r.PornitCunoscut {
+		n.Nemasurat = true
 		return
 	}
 	for _, z := range c.Asteptat.Cerut {
@@ -125,10 +170,8 @@ func norm(s string) string {
 	return strings.TrimFunc(s, func(r rune) bool { return unicode.IsSpace(r) || strings.ContainsRune(".,;:!?…", r) })
 }
 
-func inclus(mic, mare string) bool { return mic != "" && strings.Contains(mare, mic) }
-
-// potrivire: două fragmente se potrivesc dacă unul îl conține pe celălalt
-// (minim 3 caractere pentru cel mai scurt).
+// potrivire: două fragmente se potrivesc dacă unul îl conține pe celălalt; dacă
+// unul are sub 3 caractere, trebuie să fie egale.
 func potrivire(a, b string) bool {
 	if len([]rune(a)) < 3 || len([]rune(b)) < 3 {
 		return a == b && a != ""
@@ -160,11 +203,7 @@ func FragmenteSemnalate(iesire, intrare string) []string {
 	in := norm(intrare)
 	var out []string
 	vazute := map[string]bool{}
-	for _, linie := range strings.Split(iesire, "\n") {
-		t := strings.TrimLeft(linie, " \t>*_-•|0123456789.)")
-		if !strings.HasPrefix(t, MarcaObs) {
-			continue
-		}
+	for _, t := range LinniiObs(iesire) {
 		for _, m := range reCitat.FindAllStringSubmatch(t, -1) {
 			q := norm(m[1] + m[2] + m[3] + m[4])
 			if len([]rune(q)) < 2 || !strings.Contains(in, q) {
@@ -180,6 +219,36 @@ func FragmenteSemnalate(iesire, intrare string) []string {
 	return out
 }
 
+// LinniiObs întoarce rândurile de observație (cele care încep cu „OBS:”, după
+// eventuale liniuțe, numere, asteriscuri sau «>»).
+func LinniiObs(iesire string) []string {
+	var out []string
+	for _, linie := range strings.Split(iesire, "\n") {
+		t := strings.TrimLeft(linie, " \t>*_-•|0123456789.)")
+		if strings.HasPrefix(t, MarcaObs) {
+			out = append(out, t)
+		}
+	}
+	return out
+}
+
+func lung(s string) int { return len([]rune(s)) }
+
+// limitaCitat: cât de lung poate fi un citat OBS față de fragmentul așteptat ca
+// să conteze drept observația lui. Un citat mai lung (de exemplu tot textul)
+// nu prinde nimic, dar tot poate încălca un Interzis.
+func limitaCitat(fragment string) int { return 3*lung(fragment) + 40 }
+
+// citatPrinde: citatul q prinde observația cu fragmentul nf dacă se potrivesc,
+// nu e prea lung față de fragment și nu acoperă aproape toată intrarea (decât
+// dacă și fragmentul e cam cât intrarea).
+func citatPrinde(q, nf, intrare string) bool {
+	if lung(q) > limitaCitat(nf) || !potrivire(q, nf) {
+		return false
+	}
+	return !(lung(q)*10 > lung(intrare)*7 && lung(nf)*2 < lung(intrare))
+}
+
 func noteazaVerificare(c Caz, r Rezultat, n *Nota) {
 	flagged := FragmenteSemnalate(r.Iesire, c.Intrare)
 	a := c.Asteptat
@@ -188,19 +257,19 @@ func noteazaVerificare(c Caz, r Rezultat, n *Nota) {
 	for _, q := range flagged {
 		asteptata := false
 		for i, o := range a.Observatii {
-			if potrivire(q, norm(o.Fragment)) {
+			if citatPrinde(q, norm(o.Fragment), norm(c.Intrare)) {
 				gasit[i] = true
 				asteptata = true
 			}
 		}
-		if asteptata {
-			continue
-		}
-		n.FalsPozitive++
+		// Interzis se verifică independent de potrivirea cu observațiile.
 		for i, z := range a.Interzis {
 			if potrivire(q, norm(z)) {
 				violat[i] = true
 			}
+		}
+		if !asteptata {
+			n.FalsPozitive++
 		}
 	}
 	for _, v := range violat {
@@ -213,8 +282,9 @@ func noteazaVerificare(c Caz, r Rezultat, n *Nota) {
 			n.Lipsa++
 		}
 	}
+	obs := strings.Join(LinniiObs(r.Iesire), "\n")
 	for _, z := range a.Cerut {
-		if !strings.Contains(r.Iesire, z) {
+		if !strings.Contains(obs, z) {
 			n.Lipsa++
 		}
 	}
@@ -324,22 +394,53 @@ func atinge(h hunk, iv [2]int) bool {
 	return h.a > iv[0] && h.a < iv[1]
 }
 
-var reNumar = regexp.MustCompile(`\d+(?:[.,]\d+)*`)
+var (
+	reNumar = regexp.MustCompile(`\d+(?:[.,]\d+)*`)
+	reGrupa = regexp.MustCompile(`(\d) (\d{3})\b`)
+	reMii   = regexp.MustCompile(`^\d{1,3}(?:[.,]\d{3})+$`)
+)
 
-func cifre(s string) string { return strings.NewReplacer(".", "", ",", "").Replace(s) }
+// lipesteGrupe unește grupele de cifre despărțite de spațiu („8 000” -> „8000”).
+func lipesteGrupe(s string) string {
+	for {
+		t := reGrupa.ReplaceAllString(s, "$1$2")
+		if t == s {
+			return s
+		}
+		s = t
+	}
+}
 
-// numereNoi spune dacă ieșirea are un număr (după cifre) care nu e în intrare.
+// valoare aduce un număr la o formă comparabilă: „1.000” și „1,000” (mii) ->
+// „1000”; „12,5” (zecimale) -> „12.5”, deci diferit de „125”.
+func valoare(x string) string {
+	if reMii.MatchString(x) {
+		return strings.NewReplacer(".", "", ",", "").Replace(x)
+	}
+	return strings.ReplaceAll(x, ",", ".")
+}
+
+// numereNoi spune dacă ieșirea are un număr (după valoare) care nu e în intrare.
+// Grupele de cifre despărțite prin spațiu se lipesc înainte. Numeralele scrise
+// cu litere și numerele dispărute nu se verifică.
 func numereNoi(intrare, iesire string) bool {
 	in := map[string]bool{}
-	for _, x := range reNumar.FindAllString(intrare, -1) {
-		in[cifre(x)] = true
+	for _, x := range reNumar.FindAllString(lipesteGrupe(curata(intrare)), -1) {
+		in[valoare(x)] = true
 	}
-	for _, x := range reNumar.FindAllString(iesire, -1) {
-		if !in[cifre(x)] {
+	for _, x := range reNumar.FindAllString(lipesteGrupe(curata(iesire)), -1) {
+		if !in[valoare(x)] {
 			return true
 		}
 	}
 	return false
+}
+
+func max2(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
 
 func noteazaCorectura(c Caz, r Rezultat, n *Nota) {
@@ -363,24 +464,36 @@ func noteazaCorectura(c Caz, r Rezultat, n *Nota) {
 	}
 	gasit := make([]bool, len(a.Observatii))
 	for _, h := range hunks {
-		asteptat := false
-		for i, ivs := range ivObs {
-			for _, iv := range ivs {
-				if atinge(h, iv) {
-					gasit[i] = true
-					asteptat = true
-				}
-			}
-		}
-		if asteptat {
-			continue
-		}
-		n.FalsPozitive++
+		marime := max2(h.b-h.a, h.d-h.c)
+		// Interzis: orice zonă care îl atinge e o problemă.
 		for i, ivs := range ivInt {
 			for _, iv := range ivs {
 				if atinge(h, iv) {
 					violat[i] = true
 				}
+			}
+		}
+		atins := map[[2]int]bool{}
+		for i, ivs := range ivObs {
+			for _, iv := range ivs {
+				if atinge(h, iv) {
+					gasit[i] = true
+					atins[iv] = true
+				}
+			}
+		}
+		switch {
+		case a.Neatins:
+			n.FalsPozitive += marime
+		case len(atins) == 0:
+			n.FalsPozitive++
+		default:
+			tokeniFragment := 0
+			for iv := range atins {
+				tokeniFragment += iv[1] - iv[0]
+			}
+			if extra := marime - (tokeniFragment + 2); extra > 0 {
+				n.FalsPozitive += extra
 			}
 		}
 	}
@@ -403,8 +516,13 @@ func noteazaCorectura(c Caz, r Rezultat, n *Nota) {
 
 // ---------------------------------------------------------------- redactare
 
+// noteazaRedactare notează doar textul produs (între marcaje), nu și
+// comentariile din jurul lui. Probleme = Interzis; Judecator = verdictul
+// judecătorului, raportate separat.
 func noteazaRedactare(c Caz, r Rezultat, n *Nota) {
-	low := strings.ToLower(r.Iesire)
+	text, ok := ExtrageText(r.Iesire)
+	n.FaraMarcaj = !ok
+	low := strings.ToLower(text)
 	for _, z := range c.Asteptat.Interzis {
 		if z != "" && strings.Contains(low, strings.ToLower(z)) {
 			n.Probleme++
@@ -412,14 +530,16 @@ func noteazaRedactare(c Caz, r Rezultat, n *Nota) {
 		}
 	}
 	for _, z := range c.Asteptat.Cerut {
-		if !strings.Contains(r.Iesire, z) {
+		if !strings.Contains(text, z) {
 			n.Lipsa++
 		}
 	}
-	if numereNoi(c.Intrare, r.Iesire) {
+	if numereNoi(c.Intrare, text) {
 		n.Fidelitate = false
 	}
-	if r.Judecata != nil {
-		n.Probleme += r.Judecata.Calcuri + r.Judecata.Coerenta
+	if r.Judecata == nil {
+		n.Nemasurat = true
+		return
 	}
+	n.Judecator = r.Judecata.Calcuri + r.Judecata.Coerenta
 }

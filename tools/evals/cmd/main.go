@@ -38,15 +38,23 @@ func run() error {
 		neconf    = flag.Bool("include-neconfirmate", false, "include cazurile neconfirmate în scor")
 		raport    = flag.String("raport", "", "fișierul Markdown cu raportul (implicit: stdout)")
 		brut      = flag.String("brut", "", "fișier JSON cu rulările și ieșirile brute")
-		flux      = flag.String("flux", os.ExpandEnv("$ROMANA_FLUX"), "flux.json din dinlume, pentru modelul Codex")
+		flux      = flag.String("flux", os.ExpandEnv("$ROMANA_FLUX"), "flux.json din dinlume, pentru modelul și efortul Codex")
 		paralel   = flag.Int("paralel", 3, "rulări simultane")
 		minute    = flag.Int("minute", 10, "limita de timp pe rulare")
+		repetari  = flag.Int("repetari", 1, "câte rulări pe caz și pe braț (raportul arată media și dispersia)")
+		judecator = flag.String("judecator", "opus", "modelul Claude al judecătorului de la redactare")
+		judecari  = flag.Int("judecari", 3, "câte judecăți pe un text (se ia mediana)")
 		dirPub    = flag.String("dir-public", "evals/cazuri", "directorul cu setul public")
 		ids       listaFlag
 	)
 	flag.Var(&ids, "caz", "ID de caz (repetabil)")
 	flag.Parse()
-	_ = ambele
+	if *ambele && (*cuSkill || *faraSkill) {
+		return fmt.Errorf("--ambele nu merge împreună cu --cu-skill sau --fara-skill")
+	}
+	if *repetari < 1 {
+		return fmt.Errorf("--repetari trebuie să fie cel puțin 1")
+	}
 
 	var cazuri []evals.Caz
 	switch *setF {
@@ -67,57 +75,41 @@ func run() error {
 		}
 		cazuri = append(cazuri, c...)
 	}
-	if !*neconf {
-		cazuri = evals.InScor(cazuri)
-	}
-	if len(ids) > 0 {
-		vrute := map[string]bool{}
-		for _, id := range ids {
-			vrute[id] = true
-		}
-		var filtrate []evals.Caz
-		for _, c := range cazuri {
-			if vrute[c.ID] {
-				filtrate = append(filtrate, c)
-				delete(vrute, c.ID)
-			}
-		}
-		for id := range vrute {
-			return fmt.Errorf("cazul %q nu există în setul ales (sau e neconfirmat, fără --include-neconfirmate)", id)
-		}
-		cazuri = filtrate
+	cazuri, err := evals.Selecteaza(cazuri, ids, *neconf)
+	if err != nil {
+		return err
 	}
 	if len(cazuri) == 0 {
 		return fmt.Errorf("niciun caz de rulat")
 	}
 
+	claude, codex := evals.MotorClaude, evals.MotorCodex
+	cfg, errFlux := evals.FluxVerificator(*flux)
+	if errFlux == nil {
+		codex.Model, codex.Efort = cfg.ModelCodex, cfg.EfortCodex
+		if cfg.EfortClaude != "" {
+			claude.Efort = cfg.EfortClaude
+		}
+	} else if *motorF != "claude" {
+		fmt.Fprintf(os.Stderr, "atenție: modelul Codex nu s-a citit din %s (%v); folosesc %s, efort %s\n", *flux, errFlux, codex.Model, codex.Efort)
+	}
 	var motoare []evals.Motor
 	switch *motorF {
 	case "claude":
-		motoare = []evals.Motor{evals.MotorClaude}
-	case "codex", "amandoua":
-		cx := evals.MotorCodex
-		if m, err := evals.ModelCodex(*flux); err == nil {
-			cx.Model = m
-		} else {
-			fmt.Fprintf(os.Stderr, "atenție: modelul Codex nu s-a citit din %s (%v); folosesc %s\n", *flux, err, cx.Model)
-		}
-		if *motorF == "amandoua" {
-			motoare = []evals.Motor{evals.MotorClaude, cx}
-		} else {
-			motoare = []evals.Motor{cx}
-		}
+		motoare = []evals.Motor{claude}
+	case "codex":
+		motoare = []evals.Motor{codex}
+	case "amandoua":
+		motoare = []evals.Motor{claude, codex}
 	default:
 		return fmt.Errorf("--motor invalid: %q", *motorF)
 	}
-	var variante []bool
+	variante := []bool{false, true}
 	switch {
-	case *cuSkill && !*faraSkill:
+	case *cuSkill:
 		variante = []bool{true}
-	case *faraSkill && !*cuSkill:
+	case *faraSkill:
 		variante = []bool{false}
-	default:
-		variante = []bool{false, true}
 	}
 
 	repo, err := evals.RadacinaRepo(".")
@@ -125,18 +117,22 @@ func run() error {
 		return err
 	}
 	type job struct {
-		c  evals.Caz
-		m  evals.Motor
-		cu bool
+		c   evals.Caz
+		m   evals.Motor
+		cu  bool
+		rep int
 	}
 	var jobs []job
 	for _, c := range cazuri {
 		for _, m := range motoare {
 			for _, cu := range variante {
-				jobs = append(jobs, job{c, m, cu})
+				for r := 0; r < *repetari; r++ {
+					jobs = append(jobs, job{c, m, cu, r})
+				}
 			}
 		}
 	}
+	opt := evals.Optiuni{ModelJudecator: *judecator, Judecari: *judecari}
 	rulari := make([]evals.Rulare, len(jobs))
 	var wg sync.WaitGroup
 	sem := make(chan struct{}, max(1, *paralel))
@@ -148,20 +144,20 @@ func run() error {
 			defer func() { <-sem }()
 			ctx, cancel := context.WithTimeout(context.Background(), time.Duration(*minute)*time.Minute)
 			defer cancel()
-			r, err := evals.RuleazaCu(ctx, evals.ExecReal, repo, j.c, j.m, j.cu)
-			ru := evals.Rulare{Caz: j.c.ID, Motor: j.m.Nume, Model: j.m.Model, CuSkill: j.cu, Rezultat: r}
+			r, err := evals.RuleazaCu(ctx, evals.ExecReal, repo, j.c, j.m, j.cu, opt)
+			ru := evals.Rulare{Caz: j.c.ID, Motor: j.m.Nume, Model: j.m.Model, CuSkill: j.cu, Repetare: j.rep, Rezultat: r}
 			if err != nil {
 				ru.Eroare = err.Error()
 			} else {
 				ru.Nota = evals.Noteaza(j.c, r)
 			}
 			rulari[i] = ru
-			fmt.Fprintf(os.Stderr, "%s %s skill=%v: %+v %s\n", j.c.ID, j.m.Nume, j.cu, ru.Nota, ru.Eroare)
+			fmt.Fprintf(os.Stderr, "%s %s skill=%v #%d: %+v %s\n", j.c.ID, j.m.Nume, j.cu, j.rep, ru.Nota, ru.Eroare)
 		}()
 	}
 	wg.Wait()
 
-	md := "# Evals\n\n" + evals.RaportMarkdown(cazuri, rulari)
+	md := "# Evals\n\n" + evals.RaportMarkdown(cazuri, rulari, evals.Meta{ModelJudecator: *judecator, Judecari: *judecari, Repetari: *repetari})
 	if *raport == "" {
 		fmt.Print(md)
 	} else if err := os.WriteFile(*raport, []byte(md), 0o644); err != nil {
