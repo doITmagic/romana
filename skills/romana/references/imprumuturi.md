@@ -4,7 +4,7 @@ Fișierul acesta privește forma cuvintelor împrumutate: cum le articulezi și 
 
 Un cuvânt nu e greșit doar pentru că e englezesc. DOOM 3 a înregistrat multe împrumuturi recente („browser”, „spam”, „a downloada”, „a focusa”), iar acestea sunt corecte (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). Problema apare în trei cazuri: forma e scrisă greșit, forma nu e atestată și e prezentată ca sigură, sau cuvântul străin ia locul unui cuvânt românesc la fel de clar.
 
-Abrevierile din câmpul „Sursă”: ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014.
+Abrevierile din câmpul „Sursă”: ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DN = *Dicționar de neologisme*; MDN '00 și MDN '08 = *Marele dicționar de neologisme*; MDA2 = *Micul dicționar academic*, ediția a II-a; DCR2 = *Dicționar de cuvinte recente*, ediția a II-a.
 
 ## 1. Articolul și pluralul: cu cratimă sau fără
 
@@ -31,13 +31,13 @@ Bun:
 
 „Linkul” și „e-mailul” sunt formele din DOOM 3: finalele „-k” și „-l” se citesc ca în română, deci articolul se leagă direct. Cratima din „e-mail” face parte din cuvânt și nu se repetă înaintea articolului. „Pluginul” e o formă dedusă: cuvântul nu e în dicționare, dar finala lui se citește ca în română.
 
-Surse pentru metodă: ghid gov-md §9.11.4, §9.11.5 și §7.2.2; INJ p. 102.
+Surse pentru metodă: ghid gov-md §9.11.4, §9.11.5 și §7.2.3; INJ p. 102.
 
 ### RO-IMP-004 Finala citită ca în română: articol și plural fără cratimă
 - Nivel: normă
 - Greșit: „Trend-ul s-a schimbat după weekend-ul trecut.” → Corect: „Trendul s-a schimbat după weekendul trecut.”
-- De ce: Când finala scrisă se citește ca în română, articolul și desinența se leagă direct de cuvânt. Formele atestate în DOOM 3 urmează regula: „trendul”, „weekenduri”, „summituri”, „linkuri”, „serverul”, „feedbackul”, „patternuri”, „businessuri”, „sprinturi”, „lobbyul”, „hobbyuri”. Cratima pusă la toate împrumuturile („plugin-ul”, „tool-ul”, „skill-ul”) e o regulă inventată, care contrazice DOOM 3.
-- Sursă: DOOM 3 s.v. trend, weekend, summit, lobby; ghid gov-md §9.11.4 și §7.2.2
+- De ce: Când finala scrisă se citește ca în română, articolul și desinența se leagă direct de cuvânt. Formele atestate în DOOM 3 urmează regula: „trendul”, „weekenduri”, „summituri”, „linkuri”, „serverul”, „feedbackul”, „patternuri”, „businessuri”, „sprinturi”, „lobbyul”, „hobbyuri”. Cratima pusă la toate împrumuturile („trend-ul”, „link-ul”, „server-ul”) e o regulă inventată, care contrazice DOOM 3. La cuvintele care lipsesc din DOOM 3 („plugin”, „tool”, „skill”) forma fără cratimă e dedusă; vezi RO-IMP-033 și RO-IMP-034.
+- Sursă: DOOM 3 s.v. trend, weekend, summit, lobby; ghid gov-md §9.11.4 și §7.2.3
 
 ### RO-IMP-005 Finala care nu se citește ca în română: cu cratimă
 - Nivel: normă
@@ -53,7 +53,7 @@ Surse pentru metodă: ghid gov-md §9.11.4, §9.11.5 și §7.2.2; INJ p. 102.
 
 ## 2. Forme atestate și forme deduse
 
-O formă e **atestată** când apare într-un dicționar; reperul normativ e DOOM 3. O formă e **dedusă** când cuvântul lipsește din DOOM 3 și din celelalte dicționare consultate, iar articolul și pluralul se construiesc după regula din secțiunea 1. O formă dedusă nu se impune ca normă:
+O formă e **atestată** când apare într-un dicționar; reperul normativ e DOOM 3. O formă e **dedusă** când DOOM 3 nu are cuvântul, iar articolul și pluralul nu apar în niciun dicționar consultat și se construiesc după regula din secțiunea 1; cuvântul poate fi totuși înregistrat într-un dicționar de neologisme (cazul lui „update”, din MDN '00). O formă dedusă nu se impune ca normă:
 
 - la redactare o folosești doar dacă termenul e necesar; altfel alegi un cuvânt românesc;
 - în corectură și în verificare propui forma dedusă, nu o corectezi ca greșeală de normă, și spui că e dedusă;
@@ -67,13 +67,13 @@ Regulile de mai jos sunt împărțite în două: întâi formele atestate, apoi 
 - Nivel: normă
 - Greșit: „Lucrăm la siteurile a trei clienți.” → Corect: „Lucrăm la site-urile a trei clienți.”
 - De ce: DOOM 3 dă „site”, articulat „site-ul”, plural „site-uri”, cu cratimă, pentru că „e” final nu se pronunță. Formele „siteuri” și „saituri” nu sunt formele normate.
-- Sursă: DOOM 3 s.v. site; ghid gov-md §7.2.2
+- Sursă: DOOM 3 s.v. site; ghid gov-md §7.2.3 și §9.11.4
 
 ### RO-IMP-011 E-mail, e-mailul, e-mailuri
 - Nivel: normă
 - Greșit: „Am trimis un email cu factura.” → Corect: „Am trimis un e-mail cu factura.”
 - De ce: Mesajul electronic se scrie „e-mail”, cu cratimă în interior; articolul și pluralul se leagă direct: „e-mailul”, „e-mailuri”, nu „e-mail-ul”. „Email”, fără cratimă, e alt cuvânt: un strat sticlos care protejează metalul sau ceramica, adică smalț, glazură (DEX '98).
-- Sursă: DOOM 3 s.v. e-mail; DEX '98 s.v. email; ghid gov-md §7.2.2
+- Sursă: DOOM 3 s.v. e-mail; DEX '98 s.v. email; ghid gov-md §7.2.3
 
 ### RO-IMP-012 OK, cu majuscule
 - Nivel: normă
@@ -102,8 +102,8 @@ Regulile de mai jos sunt împărțite în două: întâi formele atestate, apoi 
 ### RO-IMP-024 Weekend, weekenduri
 - Nivel: normă
 - Greșit: „Livrăm și în week-end-uri.” → Corect: „Livrăm și în weekenduri.”
-- De ce: DOOM 3 scrie „weekend”, legat, cu pluralul „weekenduri”. „Week-end” e forma din dicționarele mai vechi, iar cratima înaintea desinenței e greșită în orice variantă.
-- Sursă: DOOM 3 s.v. weekend
+- De ce: DOOM 3 scrie „weekend”, legat, cu pluralul „weekenduri” (la fel și DOOM 2). „Week-end”, cu pluralul „week-end-uri”, e forma din DEX '98, ieșită din normă; după DOOM 3, cratima înaintea desinenței nu mai e corectă.
+- Sursă: DOOM 3 s.v. weekend; DEX '98 s.v. week-end
 
 ### RO-IMP-028 Feedback, pattern, sprint, business
 - Nivel: normă
@@ -119,7 +119,7 @@ Regulile de mai jos sunt împărțite în două: întâi formele atestate, apoi 
 
 ### Forme deduse
 
-Cuvintele din regulile următoare nu sunt în DOOM 3 și nici în celelalte dicționare consultate. Formele lor articulate și pluralele sunt **forme deduse** după regula din secțiunea 1, de aceea regulile au nivelul recomandare.
+Cuvintele din regulile următoare nu sunt în DOOM 3, iar formele lor articulate și pluralele nu apar în dicționarele consultate. Ele sunt **forme deduse** după regula din secțiunea 1, de aceea regulile au nivelul recomandare.
 
 ### RO-IMP-033 Plugin, pluginul (formă dedusă)
 - Nivel: recomandare
@@ -142,7 +142,7 @@ Cuvintele din regulile următoare nu sunt în DOOM 3 și nici în celelalte dic�
 ### RO-IMP-017 Codebase, queue, update: cu cratimă (forme deduse)
 - Nivel: recomandare
 - Greșit: „Am curățat codebaseul și am golit queueul.” → Corect: „Am curățat codebase-ul și am golit queue-ul.”
-- De ce: Forme deduse. Finala scrisă nu se pronunță („e” și „ue” sunt mute), deci articolul se leagă prin cratimă, ca la modelele atestate „site-ul” și „barbecue-ul”. „Update” e înregistrat doar într-un dicționar de neologisme, nu în DOOM 3, așa că și „update-ul” e o formă dedusă. Pentru publicul larg propui „baza de cod”, „coada de așteptare”, „actualizarea”.
+- De ce: Forme deduse. Finala scrisă nu se pronunță („e” și „ue” sunt mute), deci articolul se leagă prin cratimă, ca la modelele atestate „site-ul” și „barbecue-ul”. „Update” e înregistrat în MDN '00, dar nu în DOOM 3 (acolo e doar verbul „a updata”), așa că „update-ul”, scris cu cratimă după regula din secțiunea 1, e o formă dedusă. Pentru publicul larg propui „baza de cod”, „coada de așteptare”, „actualizarea”.
 - Sursă: DOOM 3 s.v. site, barbecue (modelele)
 
 ## 3. Prefixele și compusele
@@ -170,7 +170,7 @@ Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
 - Nivel: normă
 - Greșit: „Exministrul susține o politică proUE.” → Corect: „Ex-ministrul susține o politică pro-UE.”
 - De ce: Prefixul „ex-” cu sensul „fost” se leagă prin cratimă („ex-ministru”, „ex-director”). Tot cu cratimă se scrie prefixul pus înaintea unei sigle, a unui nume propriu sau a unui an: „pro-UE”, „non-UE”, „anti-NATO”, „post-’89”. Fără cratimă, sigla sau numele nu se mai recunoaște. Excepțiile acestea nu se extind la derivatele obișnuite: „postbelic”, „proeuropean”, „nonprofit”.
-- Sursă: DEX '98 s.v. ex-; ghid gov-md §6.2.1 și §6.2.2; INJ p. 102
+- Sursă: DEX '98 s.v. ex-ministru; ghid gov-md §6.2.1 și §6.2.2; INJ p. 102
 
 ### RO-IMP-051 Prefixul îl arată dicționarul: „neguvernamental”
 - Nivel: normă
@@ -181,7 +181,7 @@ Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
 ### RO-IMP-045 Online și offline, legat
 - Nivel: normă
 - Greșit: „Magazinul vinde on-line și off-line.” → Corect: „Magazinul vinde online și offline.”
-- De ce: DOOM 3 scrie legat „online” și „offline”. „On-line” și „off-line” sunt formele din dicționarele mai vechi, inclusiv DOOM 2.
+- De ce: DOOM 3 scrie legat „online” și „offline”. „On-line” și „off-line” sunt formele din DEX '09 și MDN '00; DOOM 2 le admitea ca variante alături de „online” și „offline”, iar DOOM 3 păstrează doar formele legate.
 - Sursă: DOOM 3 s.v. online, offline
 
 ### RO-IMP-050 „Mega-” se scrie legat
@@ -192,8 +192,8 @@ Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
 
 ### RO-IMP-010 „Cvasi” nu se leagă prin cratimă
 - Nivel: normă
-- Greșit: „Cele două descrieri sunt cvasi-identice.” → Corect: „Cele două descrieri sunt aproape identice.”
-- De ce: DOOM 3 scrie legat compusele cu „cvasi-”: „cvasitotalitate”, „cvasiunanim”, „cvasinormal”. DEX '98 îl dă și ca adverb livresc, scris separat („cvasi identic”). Cratima nu apare în niciuna dintre forme. „Cvasiidentic” ar fi o formă dedusă, de aceea varianta sigură e „aproape identice”.
+- Greșit: „Cele două descrieri sunt cvasi-identice.” → Corect: „Cele două descrieri sunt cvasiidentice.”
+- De ce: DOOM 3 scrie legat compusele cu „cvasi-”: „cvasitotalitate”, „cvasiunanim”, „cvasinormal”. DEX '98 îl dă și ca adverb livresc, care precede adjectivele, deci scris separat (aici „cvasi identice” ar fi la fel de corect). Cratima nu apare în niciuna dintre forme. „Cvasiidentice” lipsește din dicționare, deci e o formă dedusă, după modelul atestat „cvasiunanim”. În textul neutru poți propune „aproape identice”.
 - Sursă: DOOM 3 s.v. cvasitotalitate, cvasiunanim, cvasinormal; DEX '98 s.v. cvasi; ghid gov-md §6.1
 
 ### RO-IMP-009 Termen-limită, cuvânt-cheie
@@ -206,9 +206,9 @@ Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
 
 Un împrumut e de prisos când româna are un cuvânt la fel de clar și la fel de precis, iar cititorul nu câștigă nimic din forma străină. Nivelul depinde de dicționar:
 
-- **anglicism evitabil:** forma e în DOOM 3, dar există un echivalent românesc firesc, iar sursele o socotesc împrumut de lux; propui echivalentul, iar la redactare îl folosești de la început;
+- **anglicism evitabil:** forma e în DOOM 3, dar există un echivalent românesc firesc, iar sursele o socotesc împrumut de lux; aici intră cuvintele generale de birou și de conducere pe care ghidul gov-md le dă cu echivalentul lor românesc („password”, „deadline”, „team”, „board”); propui echivalentul, iar la redactare îl folosești de la început;
 - **recomandare:** forma englezească nu e în dicționare (e lăsată ca atare în text); propui cuvântul românesc;
-- **ce nu e greșeală:** împrumutul e în DOOM 3 și e folosit firesc în domeniu („a downloada”, „a rula”, „refresh”, „computer”); nu îl semnalezi (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
+- **ce nu e greșeală:** împrumutul e în DOOM 3 și numește o acțiune sau un obiect din informatică, folosit firesc de cititorul domeniului („a downloada”, „a rula”, „refresh”, „computer”); nu îl semnalezi, chiar dacă ghidul gov-md îi dă în textele oficiale un echivalent („a descărca”). Limita dintre cele două niveluri o fixează acest criteriu, nu forma cuvântului (vezi RO-NUG-082 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
 
 Termenul tehnic consacrat într-un domeniu rămâne dacă cititorul îl folosește așa; la prima apariție îl poți explica. Termenii de interfață („dashboard”, „setări”, butoanele) sunt tratați ca recomandări în [tipuri/interfata.md](tipuri/interfata.md).
 
@@ -217,7 +217,7 @@ Surse pentru metodă: ghid gov-md §1.1; INJ p. 60; DSL, s.v. BARBARISM; B. Croi
 ### RO-IMP-042 Password, deadline, team, board
 - Nivel: anglicism evitabil
 - Greșit: „Schimbați-vă passwordul până la deadline-ul de vineri.” → Corect: „Schimbați-vă parola până la termenul-limită de vineri.”
-- De ce: „Password”, „deadline”, „team”, „board” sunt în DOOM 3, dar româna are cuvinte curente cu același sens: „parolă”, „termen-limită”, „echipă”, „consiliu de administrație” sau „conducere”. Ghidul gov-md cere forma românească atunci când există una consacrată. Propui echivalentul; la redactare îl folosești de la început.
+- De ce: „Password”, „deadline”, „team”, „board” sunt în DOOM 3, dar româna are cuvinte curente cu același sens: „parolă”, „termen-limită”, „echipă”, „consiliu de administrație” sau „conducere”. Ghidul gov-md cere forma românească atunci când există una consacrată. Propui echivalentul; la redactare îl folosești de la început. „A downloada” nu intră aici, deși ghidul îl dă în aceeași listă: e o acțiune de informatică și se tratează la RO-NUG-082.
 - Sursă: DOOM 3 s.v. password, deadline, team, board; ghid gov-md §1.1
 
 ### RO-IMP-048 Cuvinte englezești lăsate în textul românesc
@@ -259,8 +259,8 @@ Surse pentru metodă: ghid gov-md §1.1; INJ p. 60; DSL, s.v. BARBARISM; B. Croi
 ### RO-IMP-047 „A eleva” pentru engl. „to elevate”
 - Nivel: recomandare
 - Greșit: „Designul nou elevează experiența utilizatorilor.” → Corect: „Designul nou îmbunătățește experiența utilizatorilor.”
-- De ce: „A eleva” e un împrumut vechi din franceză, înregistrat doar în dicționarele de neologisme, nu în DOOM 3 și nici în DEX '98. Folosit pentru engl. „to elevate”, sună tradus. Propui „a îmbunătăți”, „a ridica”, „a înnobila”, după sens. Adjectivul „elevat” („nobil, superior, rafinat”, DEX '98) e corect.
-- Sursă: DEX '98 s.v. elevat; DN, MDN '00 s.v. eleva
+- De ce: „A eleva” e un împrumut vechi din franceză, înregistrat în dicționarele de neologisme și în MDA2, dar nu în DOOM 3 și nici în DEX '98. Folosit pentru engl. „to elevate”, sună tradus. Propui „a îmbunătăți”, „a ridica”, „a înnobila”, după sens. Adjectivul „elevat” („nobil, superior, rafinat”, DEX '98) e corect.
+- Sursă: DEX '98 s.v. elevat; DN, MDN '00, MDA2 s.v. eleva
 
 ### RO-IMP-044 „Aleator” și „aleatoriu”
 - Nivel: recomandare

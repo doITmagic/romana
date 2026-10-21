@@ -2,7 +2,7 @@
 
 Fișierul acesta adună forme corecte pe care unele liste de greșeli, reguli învățate la școală, ghiduri de stil traduse din engleză sau corectori automați le condamnă pe nedrept. Îl citești înainte de orice corectură sau verificare. Hipercorectitudinea, adică „repararea” unei forme corecte din teama că ar fi greșită, e la fel de gravă ca greșeala: strică un text bun și îl învață pe cititor o regulă falsă (DSL, s.v. HIPERCORECTITUDINE).
 
-Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2015; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Coteanu = I. Coteanu (coord.), *Gramatica de bază a limbii române*, 1982.
+Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Coteanu = I. Coteanu (coord.), *Gramatica de bază a limbii române*, 1982; ÎOOP6 = Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ediția a VI-a, 2022; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DEX '96 = *Dicționarul explicativ al limbii române*, ediția a II-a.
 
 ## Cum folosești fișierul
 
@@ -30,14 +30,14 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-019 „Majoritatea a votat” și „majoritatea au votat”
 - Nivel: ce nu e greșeală
 - Corect: „Majoritatea angajaților au votat propunerea.” La fel de corect e „Majoritatea angajaților a votat propunerea”. Nu treci verbul de la o formă la cealaltă.
-- De ce: Regula falsă: verbul s-ar acorda numai cu forma de singular a cuvântului „majoritate”. DOOM 3 admite și acordul după formă (singular), și acordul după înțeles (plural), mai ales când urmează un genitiv plural. DSL descrie acordul după înțeles chiar cu exemplul „Majoritatea au plecat”.
+- De ce: Regula falsă: verbul s-ar acorda numai cu forma de singular a cuvântului „majoritate”. DOOM 3 admite și acordul după formă (singular), și acordul după înțeles (plural), mai ales când urmează un genitiv plural. DSL îl numește „abatere” de la acordul formal, dar îl descrie ca frecvent la colective, cu exemplul „Majoritatea au plecat”; norma care îl admite e DOOM 3.
 - Sursă: DOOM 3, §6.5.2; DSL, s.v. ACORD
 
 ### RO-NUG-021 „Nici el, nici ea nu a venit” și „nu au venit”
-- Nivel: ce nu e greșeală
-- Corect: „Nici directorul, nici adjunctul lui nu a semnat.” La fel de corect e „nu au semnat”. Nu corectezi una dintre forme.
-- De ce: Regula falsă: cu „nici… nici” verbul ar trebui să stea obligatoriu la plural (sau obligatoriu la singular). Cu subiectele legate prin „nici… nici”, ambele acorduri sunt admise. Când ultimul subiect e la plural, verbul stă la plural („Nici mama, nici copiii nu au ajuns”).
-- Sursă: GALR (acordul cu subiectul multiplu)
+- Nivel: disputat
+- Corect: „Nici directorul, nici adjunctul lui nu au semnat.” Acordul la singular („nu a semnat”) nu îl corectezi.
+- De ce: Cu subiectele legate prin „nici… nici”, pluralul e acordul sigur, fiindcă subiectul multiplu cere predicatul la plural (Coteanu). Singularul poate fi socotit acord prin atracție (DSL îl numește „abatere”), dar se întâlnește în uz. Sursele consultate nu tranșează cazul, deci nu corectezi niciuna dintre forme; dacă îl pomenești, spui că există două uzuri. Când ultimul subiect e la plural, verbul stă la plural („Nici mama, nici copiii nu au ajuns”).
+- Sursă: Coteanu, §33.7.2; DSL, s.v. ACORD
 
 ### RO-NUG-022 „Conform legii” și „conform cu legea”
 - Nivel: ce nu e greșeală
@@ -47,9 +47,9 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 
 ### RO-NUG-023 Variantele duble din DOOM 3
 - Nivel: ce nu e greșeală
-- Corect: „ambii” și „amândoi”, „niveluri” și „nivele”, „prim-ministrul” și „primul-ministru”. Nu corectezi o variantă în cealaltă.
-- De ce: Regula falsă: dintre două forme ar fi corectă doar una, de obicei cea care „sună mai literar”. DOOM 3 păstrează pentru aceste cuvinte ambele variante. Într-un text alegi una și o folosești consecvent (vezi RO-COE-005 din [coerenta.md](coerenta.md)), dar varianta aleasă de autor nu se corectează.
-- Sursă: DOOM 3 s.v. ambii, amândoi, nivel, prim-ministru
+- Corect: „ambii” și „amândoi”, „prim-ministrul” și „primul-ministru”. Nu corectezi o variantă în cealaltă.
+- De ce: Regula falsă: dintre două forme ar fi corectă doar una, de obicei cea care „sună mai literar”. DOOM 3 înregistrează ambele cuvinte „ambii” și „amândoi”, iar ÎOOP6 permite articularea ambilor termeni ai compusului „prim-ministru” (ghidul gov-md recomandă totuși, în actele normative, articularea ultimului termen). Într-un text alegi una și o folosești consecvent (vezi RO-COE-005 din [coerenta.md](coerenta.md)), dar varianta aleasă de autor nu se corectează. Atenție la variantele care se despart după sens: „niveluri” e pluralul pentru înălțime și stadiu, iar „nivele” pentru instrumentul numit „nivelă” (DEX '98), deci o pereche se protejează numai după ce îi verifici sensul.
+- Sursă: DOOM 3 s.v. ambii, amândoi; ghid gov-md §6.2.3 (cu trimitere la ÎOOP6); DEX '98 s.v. nivel
 
 ### RO-NUG-024 „Votul a doi senatori”
 - Nivel: ce nu e greșeală
@@ -120,8 +120,8 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-084 „Îmi doresc”
 - Nivel: ce nu e greșeală
 - Corect: „Îmi doresc să lucrăm din nou împreună.” La fel de corect e „Doresc să lucrăm din nou împreună”. Nu corectezi una în alta.
-- De ce: Regula falsă: „îmi doresc” ar fi colocvial sau greșit, iar în scris s-ar folosi doar „doresc”. Ambele forme sunt corecte, iar alegerea ține de registru. Chiar textul introductiv al unei broșuri despre exprimarea corectă, publicate de Institutul de Lingvistică al Academiei, scrie „Nu ne dorim să...”.
-- Sursă: B. Croitor et al., 2014, p. 5
+- De ce: Regula falsă: „îmi doresc” ar fi colocvial sau greșit, iar în scris s-ar folosi doar „doresc”. Ambele forme sunt corecte, iar alegerea ține de registru. Broșura Institutului de Lingvistică al Academiei despre exprimarea corectă citează „Eu îmi doresc ca să fiu judecat...” și corectează în monitorizare doar „ca să” în loc de „să”, nu și „îmi doresc”.
+- Sursă: B. Croitor et al., 2014, p. 135
 
 ### RO-NUG-085 Pasivul folosit cu rost
 - Nivel: ce nu e greșeală
@@ -139,7 +139,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 - Nivel: ce nu e greșeală
 - Corect: „Datorită noului sistem, livrările durează două zile.” Nu corectezi „datorită” în „din cauza” sau în „grație”.
 - De ce: Regula falsă: „datorită” ar fi suspect oriunde arată o cauză. DEX '98 îl dă cu sensurile „mulțumită, grație; din cauza, din pricina”. Cu o cauză negativă („datorită ploii, meciul s-a amânat”), forma nu e o greșeală de normă: ghidurile recomandă „datorită” pentru contextele pozitive, deci acolo doar propui „din cauza” (recomandare, vezi [gramatica.md](gramatica.md)).
-- Sursă: DEX '98 s.v. datorit; ghid gov-md §7.1.6
+- Sursă: DEX '98 s.v. datorit; ghid gov-md §7.1.6; B. Croitor et al., 2014, p. 99
 
 ## Sensul cuvintelor
 
@@ -187,8 +187,8 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 
 ### RO-NUG-104 „A se traduce prin”
 - Nivel: ce nu e greșeală
-- Corect: „Creșterea prețurilor s-a tradus prin scăderea consumului.” Nu corectezi pe motiv de calc.
-- De ce: Regula falsă: „a se traduce prin” cu sensul „a avea ca efect” ar fi copiat din engleză. DEX '98 îi dă lui „a traduce” sensul figurat „a înfăptui, a pune în practică” și, la reflexiv, „a se manifesta”.
+- Corect: „Nemulțumirea angajaților s-a tradus prin demisii.” Nu corectezi pe motiv de calc.
+- De ce: Regula falsă: „a se traduce prin” ar fi copiat din engleză. DEX '98 îi dă lui „a traduce” sensul figurat „a înfăptui, a pune în practică” și, la reflexiv, „a se manifesta”: „s-a tradus prin demisii” înseamnă „s-a manifestat prin demisii”.
 - Sursă: DEX '98 s.v. traduce
 
 ### RO-NUG-103 „A câștiga dreptul la”
@@ -241,13 +241,13 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 
 ### RO-NUG-002 Femininele numelor de profesii
 - Nivel: ce nu e greșeală
-- Corect: „Ministra a semnat ordinul.” La fel de corecte: „dramaturgă”, „filologă” sau „filoloagă”, „deputată”, „judecătoare”, dar și masculinul spus despre o femeie: „Ea este filolog.” Nu corectezi nici într-un sens, nici în celălalt.
-- De ce: Regula falsă: femininele de acest fel ar fi familiare sau greșite, ori, invers, masculinul spus despre o femeie ar fi greșit. DOOM 3 înregistrează femininele, iar masculinul rămâne corect. Alegerea e a autorului sau a publicației; o păstrezi consecventă în text.
-- Sursă: DOOM 3 s.v. ministră, dramaturgă, filologă, filoloagă, deputată
+- Corect: „Ministra a semnat ordinul.” La fel de corecte: „dramaturgă”, „filologă”, „deputată”, „judecătoare”, dar și masculinul spus despre o femeie: „Ea este filolog.” Nu corectezi nici într-un sens, nici în celălalt.
+- De ce: Regula falsă: femininele de acest fel ar fi greșite, ori, invers, masculinul spus despre o femeie ar fi greșit. DOOM 3 înregistrează femininele; „ministră” are marca „fam.”, iar „filologă” marca „livr.”, dar sunt forme corecte. Ghidul gov-md recomandă femininul în comunicatele despre o persoană anume („Ministra justiției a prezentat proiectul”), iar masculinul rămâne corect când norma vizează funcția ca instituție. Alegerea e a autorului sau a publicației; o păstrezi consecventă în text.
+- Sursă: DOOM 3 s.v. ministră, dramaturgă, filologă, deputată, judecătoare; ghid gov-md §14.3–14.10
 
 ## Împrumuturi și cuvinte noi
 
-Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat sau un sens nou deja înregistrat în dicționar nu se corectează (vezi [imprumuturi.md](imprumuturi.md)).
+Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat sau un sens nou deja înregistrat în DEX '98 sau în DOOM 3 nu se corectează (vezi [imprumuturi.md](imprumuturi.md)); un sens găsit doar într-un dicționar mai nou rămâne recomandare (vezi [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
 
 ### RO-NUG-015 „Nutrient”, „a focusa”, „a impacta”
 - Nivel: ce nu e greșeală
@@ -264,19 +264,19 @@ Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat 
 ### RO-NUG-075 „A procesa” și „a implementa”
 - Nivel: ce nu e greșeală
 - Corect: „Sistemul procesează cererile în ordinea sosirii.” La fel de corect: „Am implementat noile reguli de facturare.” Nu le corectezi ca anglicisme.
-- De ce: Regula falsă: amândouă ar fi anglicisme de evitat. Verbele sunt în DOOM 3; DEX '98 dă „a procesa” din engl. „process”, iar DEX '96 dă „a implementa” („a pune în practică, în funcțiune, a aplica”). Pentru publicul larg poți alege, la redactare, „a prelucra” sau „a pune în aplicare”.
+- De ce: Regula falsă: amândouă ar fi anglicisme de evitat. Verbele sunt în DOOM 3; DEX '98 îi dă lui „a procesa” sensul tehnic de prelucrare prin procesor, din engl. „process”, iar DEX '96 dă „a implementa” („a pune în practică, în funcțiune, a aplica”). În informatică nu le corectezi. Despre activitatea oamenilor („dosarele sunt procesate la ghișeu”) poți propune, la redactare, „a prelucra”, „a soluționa” sau „a analiza”; pentru publicul larg poți alege „a pune în aplicare” în loc de „a implementa”.
 - Sursă: DOOM 3 s.v. procesa, implementa; DEX '98 s.v. procesa; DEX '96 s.v. implementa
 
 ### RO-NUG-082 „A downloada”
 - Nivel: ce nu e greșeală
 - Corect: „Puteți downloada raportul din pagina contului.” Nu corectezi în „descărca”.
-- De ce: Regula falsă: verbul n-ar exista în română. DOOM 3 îl înregistrează ca intrare nouă. Unele ghiduri cer „a descărca” în textele oficiale; la redactare poți urma această preferință, dar în corectură și în verificare nu îl semnalezi.
-- Sursă: DOOM 3 s.v. downloada
+- De ce: Regula falsă: verbul n-ar exista în română. DOOM 3 îl înregistrează ca intrare nouă. Ghidul gov-md (§1.1) cere „a descărca” în textele oficiale, nu „a downloada”; la redactare poți urma această preferință, dar în corectură și în verificare nu îl semnalezi, pentru că e o acțiune de informatică (criteriul din secțiunea 4 a fișierului [imprumuturi.md](imprumuturi.md)).
+- Sursă: DOOM 3 s.v. downloada; ghid gov-md §1.1
 
 ### RO-NUG-125 „Per”
 - Nivel: ce nu e greșeală
 - Corect: „Prețul per litru a crescut cu 20 de bani.” Nu corectezi în „pe litru”.
-- De ce: Regula falsă: „per” ar fi un anglicism care trebuie înlocuit mereu cu „pe”. „Per” e o prepoziție românească, din italiană și germană, folosită pentru prețul raportat la o unitate: „pentru, de fiecare” (DEX '98); DOOM 3 dă chiar exemplul „preț per litru”. „Pe” e la fel de corect; dacă îl preferi, îl propui doar ca alegere de stil.
+- De ce: Regula falsă: „per” ar fi un anglicism care trebuie înlocuit mereu cu „pe”. „Per” e o prepoziție românească, din italiană și germană, folosită pentru prețul raportat la o unitate: „pentru, de fiecare” (DEX '98); DOOM 3 dă chiar exemplul „preț per litru”. „Pe” e la fel de corect; la redactare îl poți alege, dar în corectură și în verificare nu înlocuiești „per”.
 - Sursă: DOOM 3 s.v. per; DEX '98 s.v. per
 
 ### RO-NUG-072 „Crucial”, „abordare”, „a valorifica”
@@ -303,11 +303,11 @@ Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat 
 - De ce: Regula falsă: „bazat pe” ar fi un calc după engleză. „A (se) baza” înseamnă „a (se) sprijini, a (se) întemeia pe ceva” (DEX '98), deci „bazat pe date” e o construcție românească. Calc e doar structura copiată a compusului englezesc („date-condus”, vezi RO-CAL-102 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
 - Sursă: DEX '98 s.v. baza
 
-### RO-NUG-080 „Computer”, „tablou de bord”, „valoare de retur”
+### RO-NUG-080 „Computer”
 - Nivel: ce nu e greșeală
-- Corect: „Datele se salvează pe computer.” La fel de corecte: „tabloul de bord al aplicației”, „valoarea de retur a funcției”. Nu le corectezi.
-- De ce: Regula falsă: „computer” ar fi interzis în proză, „tablou de bord” ar avea doar sensul de la mașină, iar „retur” ar ține de finanțe. „Computer” e în DOOM 3 și în DEX '98; extinderea figurată a lui „tablou de bord” nu contrazice nicio normă; „retur” înseamnă „întoarcere, revenire” (DEX '98). „Calculator”, „panou de control” sau „valoare returnată” pot fi propuse doar ca preferințe.
-- Sursă: DOOM 3 s.v. computer; DEX '98 s.v. computer, retur
+- Corect: „Datele se salvează pe computer.” Nu îl corectezi în „calculator”.
+- De ce: Regula falsă: „computer” ar fi interzis în proză. E în DOOM 3 și în DEX '98; „calculator” poate fi propus doar ca preferință. Termenii de interfață și de documentație („tablou de bord”, „valoare de retur”) se tratează ca recomandări în [tipuri/interfata.md](tipuri/interfata.md) și [tipuri/documentatie.md](tipuri/documentatie.md).
+- Sursă: DOOM 3 s.v. computer; DEX '98 s.v. computer
 
 ### RO-NUG-108 „Click”
 - Nivel: ce nu e greșeală
@@ -346,14 +346,14 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-068 „Verdict final”
 - Nivel: ce nu e greșeală
 - Corect: „Verdictul final se va pronunța după recurs.” Nu scoți „final”.
-- De ce: Regula falsă: un verdict ar fi prin definiție definitiv. „Verdict” înseamnă și „răspunsul juraților”, „sentința” (DEX '98), care poate fi atacată; „final” deosebește verdictul definitiv de unul intermediar. Doar în sensul figurat („opinie definitivă”) adjectivul ar repeta sensul.
+- De ce: Regula falsă: un verdict ar fi prin definiție definitiv. „Verdict” înseamnă și „răspunsul juraților”, „sentința” (DEX '98), care poate fi atacată; „final” deosebește verdictul definitiv de unul intermediar. Doar în sensul figurat („opinie definitivă”, ca în „verdictul final al criticilor”) adjectivul repetă sensul; nici acolo nu corectezi, dar la redactare poți renunța la „final”.
 - Sursă: DEX '98 s.v. verdict; DSL, s.v. PLEONASM
 
 ### RO-NUG-066 „De notorietate publică”
 - Nivel: ce nu e greșeală
 - Corect: „Faptul e de notorietate publică.” Nu scoți „publică”.
-- De ce: Regula falsă: notorietatea ar fi deja publică. „Notorietate” înseamnă și „reputație, faimă” (DEX '98), care poate exista doar într-un cerc restrâns, de exemplu într-o profesie. „Publică” spune că faptul e cunoscut de toată lumea. Îmbinarea e o formulă consacrată.
-- Sursă: DEX '98 s.v. notorietate; DSL, s.v. PLEONASM
+- De ce: Regula falsă: „publică” ar fi o repetiție care trebuie scoasă. DEX '98 definește notorietatea ca „faptul de a fi cunoscut de multă lume”, deci îmbinarea e pleonastică în esență; E. Grosu o numără totuși printre expresiile care nu se condamnă, fiindcă uzul le-a făcut tolerabile. Cazul e unul de uz curent, de aceea nu o corectezi.
+- Sursă: DEX '98 s.v. notorietate; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202–204
 
 ### RO-NUG-038 „Autoritate competentă”
 - Nivel: ce nu e greșeală
@@ -364,8 +364,8 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-045 „Rafale puternice”
 - Nivel: ce nu e greșeală
 - Corect: „Mâine sunt așteptate rafale puternice de vânt.” Nu scoți „puternice”.
-- De ce: Regula falsă: rafala ar fi prin definiție violentă. În prognoze, intensitatea rafalelor se gradează („rafale de până la 70 km/h”), iar „puternice” precizează gradul. Contextul alege sensul, deci adjectivul nu e de prisos.
-- Sursă: DEX '98 s.v. rafală; DSL, s.v. PLEONASM
+- De ce: Regula falsă: rafala ar fi prin definiție violentă. DEX '98 definește rafala ca „dezlănțuire bruscă, violentă”, deci violența ține de definiție. Ea e însă relativă: rafalele se gradează între ele în prognoze („rafale de până la 70 km/h”), iar „puternice” precizează gradul. Nicio sursă consultată nu discută îmbinarea, de aceea nu o corectezi; la redactare poți da direct intensitatea.
+- Sursă: DEX '98 s.v. rafală
 
 ### RO-NUG-069 „Sumă de bani”
 - Nivel: ce nu e greșeală
@@ -387,14 +387,14 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-128 Complementul de aceeași rădăcină care aduce un conținut
 - Nivel: ce nu e greșeală
-- Corect: „Bunicii au trăit o viață liniștită la țară.” La fel de corect: „a dormit un somn adânc”, „a scris o scrisoare lungă”. Nu scoți complementul.
-- De ce: Regula falsă: orice complement cu aceeași rădăcină ca verbul ar fi pleonasm. Gramatica descrie aceste construcții (obiectul intern), care spun ceva nou prin determinantul lor („liniștită”, „adânc”). Pleonasm e doar complementul care nu adaugă nimic, ca în „a întreba o întrebare” (RO-SEM-239 din [paronime-si-pleonasme.md](paronime-si-pleonasme.md)).
+- Corect: „Bunicii au trăit o viață liniștită la țară.” La fel de corect: „a visat un vis ciudat”. Nu scoți complementul.
+- De ce: Regula falsă: orice complement cu aceeași rădăcină ca verbul ar fi pleonasm. Gramatica numește obiect intern complementul verbelor cu tranzitivitate limitată („a visat un vis ciudat”), care spun ceva nou prin determinantul lor („liniștită”, „ciudat”). Complementul care numește rezultatul unui verb tranzitiv obișnuit („a scrie o scrisoare”) nu e pleonasm nici fără determinant. Pleonasm e doar complementul care repetă acțiunea fără să adauge nimic, ca în „a întreba o întrebare” (RO-SEM-239 din [paronime-si-pleonasme.md](paronime-si-pleonasme.md)).
 - Sursă: Coteanu, §16.1.3 (obiectul intern)
 
 ### RO-NUG-087 „L-am văzut cu ochii mei”
 - Nivel: ce nu e greșeală
 - Corect: „L-am văzut cu ochii mei intrând în clădire.” Nu scoți „cu ochii mei”.
-- De ce: Regula falsă: se vede doar cu ochii, deci complementul ar fi pleonasm. Îmbinarea e un pleonasm tolerat, cu rol de accent: vorbitorul subliniază că a fost martor. DEX '98 înregistrează expresia „a vedea cu ochii lui” („a vedea el însuși”), iar E. Grosu o dă printre pleonasmele care nu sunt greșeli. O lași mai ales în citat și la persoana I.
+- De ce: Regula falsă: se vede doar cu ochii, deci complementul ar fi pleonasm. Îmbinarea e un pleonasm tolerat, cu rol de accent: vorbitorul subliniază că a fost martor. DEX '98 înregistrează expresia „a vedea cu ochii lui” („a vedea el însuși”), iar E. Grosu o dă printre pleonasmele care nu sunt greșeli. O lași la orice persoană; DEX '98 dă expresia chiar la persoana a III-a („a vedea cu ochii lui”).
 - Sursă: DEX '98 s.v. ochi; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202
 
 ### RO-NUG-067 „Întârzierea și amânarea”
@@ -413,14 +413,14 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-098 Un conector izolat
 - Nivel: ce nu e greșeală
-- Corect: „Livrarea e gratuită. De asemenea, puteți returna produsele în 30 de zile.” Nu scoți conectorul și nu îl semnalezi ca tipar de text generat.
-- De ce: Regula falsă: orice „de asemenea”, „totodată” sau „în plus” ar fi un semn de text generat. Un conector care exprimă o relație reală e un mijloc normal de legătură între fraze. Semnal e doar aglomerarea lor la începutul aproape fiecărei fraze (RO-COE-016 din [coerenta.md](coerenta.md)).
+- Corect: „Livrarea e gratuită. De asemenea, puteți returna produsele în 30 de zile.” Nu îl corectezi și nu îl semnalezi ca tipar de text generat.
+- De ce: Regula falsă: orice „de asemenea”, „totodată” sau „în plus” ar fi un semn de text generat. Un conector care exprimă o relație reală e un mijloc normal de legătură între fraze. Semnal e doar aglomerarea lor la începutul aproape fiecărei fraze (RO-COE-016 din [coerenta.md](coerenta.md)). Regula privește semnalarea ca tipar de text generat; recomandările de registru din [stilistica.md](stilistica.md) (de pildă „totodată” în loc de „de asemenea” pentru publicul larg) rămân propuneri valabile, nu corecturi.
 - Sursă: ghid gov-md §10.1
 
 ### RO-NUG-061 Ordinea subiect, verb, complement
 - Nivel: ce nu e greșeală
 - Corect: „Echipa a terminat raportul joi.” Nu muți subiectul după verb ca fraza să sune „mai românește”.
-- De ce: Regula falsă: româna ar avea topică liberă, iar ordinea subiect, verb, complement ar fi copiată din engleză. Româna are o topică relativ liberă, cu o ordine obiectivă, socotită normală, și o ordine subiectivă, aleasă pentru efect (DSL). Ordinea subiect, verb, complement e o ordine normală și nu e semn de traducere. Semnele de traducere sunt altele: clișeele, ritmul uniform, topica limbii sursă (vezi [gramatica.md](gramatica.md)).
+- De ce: Regula falsă: fiindcă româna are o topică liberă, ordinea subiect, verb, complement ar fi copiată din engleză. Topica ei e doar relativ liberă, cu o ordine obiectivă, socotită normală, și o ordine subiectivă, aleasă pentru efect (DSL). Ordinea subiect, verb, complement e o ordine normală și nu e semn de traducere. Semnele de traducere sunt altele: clișeele, ritmul uniform, topica limbii sursă (vezi [gramatica.md](gramatica.md)).
 - Sursă: DSL, s.v. TOPICĂ
 
 ### RO-NUG-048 Subiectul după verb și circumstanțialul la început
@@ -455,20 +455,20 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-054 Numele proprii în grafia purtătorului
 - Nivel: ce nu e greșeală
-- Corect: „Romanul lui Gîrleanu a fost reeditat.” La fel: „Cîmpeanu”, „Topîrceanu”, „Coseriu”. Nu aplici regula lui „â” și nu adaugi diacritice.
-- De ce: Regula falsă: regulile de ortografie (â în interiorul cuvântului, diacriticele obligatorii) s-ar aplica și numelor de persoane. Numele de persoane se scriu cum le scrie purtătorul, după actul de identitate sau după tradiția familiei; numele străine își păstrează diacriticele lor.
+- Corect: „Poezia lui Topîrceanu a fost reeditată.” La fel: „Coseriu”, „Hasdeu”. Nu aplici regula lui „â” și nu adaugi diacritice acolo unde purtătorul le omite.
+- De ce: Regula falsă: regulile de ortografie (â în interiorul cuvântului, diacriticele obligatorii) s-ar aplica și numelor de persoane. Numele de persoane se scriu cum le scrie purtătorul, după actul de identitate sau după tradiția familiei; numele străine își păstrează diacriticele lor, iar unele nume de familie omit deliberat diacriticele (Coseriu, Hasdeu).
 - Sursă: ghid gov-md §2.1.2 și §2.1.4
 
 ### RO-NUG-086 Cacofonia
 - Nivel: ce nu e greșeală
-- Corect: „Ministrul a spus că cineva a greșit.” La fel de corect: „Mi-a spus că când ajunge, sună.” Nu reformulezi și nu semnalezi întâlnirea de sunete.
-- De ce: Regula falsă: o succesiune de silabe ca „că ca”, „că cu”, „ca ce” ar fi o greșeală de limbă. Cacofonia e un efect sonor neplăcut (DSL), nu o abatere de la normă; DOOM 3 nu o reglementează, iar unele cacofonii sunt acceptate și în textele oficiale (ghid gov-md). Cel mult poți face o notă de stil, opțională, într-un text citit cu voce tare. Dacă reformulezi, folosești o soluție firească (altă ordine, un sinonim, „în calitate de”), nu „ca și” fără comparație și nici o virgulă pusă doar ca să despartă sunetele.
+- Corect: „Politica comună a fost adoptată după o dezbatere lungă.” La fel de corecte: „Biserica Catolică”, „banca comercială”. Nu o tratezi ca greșeală.
+- De ce: Regula falsă: o succesiune de silabe ca „că ca”, „că cu”, „ca ce” ar fi o greșeală de limbă. Cacofonia e un efect sonor neplăcut (DSL), nu o abatere de la normă; ghidul gov-md acceptă unele cacofonii și în textele oficiale („politica comună”, „Biserica Catolică”), dar recomandă evitarea celor frecvente, ca „că/când”. Cel mult poți face o notă de stil, opțională, într-un text citit cu voce tare. Dacă reformulezi, folosești o soluție firească (altă ordine, un sinonim, „în calitate de”), nu „ca și” fără comparație și nici o virgulă pusă doar ca să despartă sunetele.
 - Sursă: DSL, s.v. CACOFONIE; ghid gov-md §8.1.1.2 și §8.1.2
 
 ### RO-NUG-034 „;”, „etc.”, „a efectua”
 - Nivel: ce nu e greșeală
 - Corect: „Plata se poate efectua cu cardul, prin virament etc.” Nu înlocuiești „etc.” cu „și altele” și nu spargi fraza la fiecare „;”.
-- De ce: Regula falsă: punctul și virgula, „etc.” și verbul „a efectua” ar fi greșite într-un text clar. Ghidurile de limbaj clar le evită ca preferință de stil pentru textele administrative, nu ca normă: „etc.” e o abreviere admisă, punctul și virgula e un semn normat (RO-NUG-003), iar „a efectua” înseamnă „a face, a realiza, a îndeplini” (DEX '98). Verbul devine o problemă doar într-un tipar de verb-paravan („a efectua realizarea plății”, vezi [stilistica.md](stilistica.md)).
+- De ce: Regula falsă: punctul-și-virgula, „etc.” și verbul „a efectua” ar fi greșite într-un text clar. Ghidurile de limbaj clar le evită ca preferință de stil pentru textele administrative, nu ca normă: „etc.” e o abreviere admisă, punctul-și-virgula e un semn normat (RO-NUG-003), iar „a efectua” înseamnă „a face, a realiza, a îndeplini” (DEX '98). Verbul devine o problemă doar într-un tipar de verb-paravan („a efectua realizarea plății”, vezi [stilistica.md](stilistica.md)).
 - Sursă: ghid gov-md §5.3.1.10 și §9.3; DEX '98 s.v. efectua
 
 ## Tipografie și punctuație
@@ -481,7 +481,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-092 Ghilimelele «…» pentru citatul din citat
 - Nivel: ce nu e greșeală
-- Corect: „Directorul a spus: «Nu demisionez».” Nu înlocuiești ghilimelele interioare «…» cu ghilimele drepte sau englezești.
+- Corect: „Directorul a spus: «Nu demisionez.»” (ce a spus directorul e un citat în interiorul citatului, iar punctul stă înaintea ghilimelelor de închidere). Nu înlocuiești ghilimelele interioare «…» cu ghilimele drepte sau englezești.
 - De ce: Regula falsă: ghilimelele «…» ar fi o tipografie veche sau străină de română. Sunt ghilimelele normate pentru citatul inclus în alt citat.
 - Sursă: ghid gov-md §9.8.2
 
@@ -493,15 +493,15 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-096 Apostroful
 - Nivel: ce nu e greșeală
-- Corect: „Ne vedem la dom' profesor după cursuri.” La fel de corecte: „anii '90”, „O'Neill”, „McDonald's”. Nu scoți apostroful.
+- Corect: „Ne vedem la dom’ profesor după cursuri.” La fel de corecte: „anii ’90”, „O’Neill”, „McDonald’s”. Nu scoți apostroful, iar în textul îngrijit îl scrii cu forma ’, nu cu semnul prim.
 - De ce: Regula falsă: apostroful n-ar fi folosit în română standard. Apostroful marchează căderea unor sunete în rostirea populară sau familiară, anii scurtați și apare în nume străine.
 - Sursă: ghid gov-md §9.13; DSL, s.v. APOSTROF
 
-### RO-NUG-003 Punctul și virgula
+### RO-NUG-003 Punctul-și-virgula
 - Nivel: ce nu e greșeală
 - Corect: „Clienții din oraș primesc coletul a doua zi; cei din restul țării, în trei zile.” Nu spargi fraza în două.
-- De ce: Regula falsă: fiecare „;” ar trebui transformat în punct. Punctul și virgula e un semn corect, care desparte părți ale frazei mai legate între ele decât două fraze separate. Ghidurile de limbaj clar îl evită ca preferință de stil, nu ca normă.
-- Sursă: ghid gov-md §9.3
+- De ce: Regula falsă: fiecare „;” ar trebui transformat în punct. Punctul-și-virgula (în DOOM 3: „punct-și-virgulă”) e un semn corect, care desparte părți ale frazei mai legate între ele decât două fraze separate. Ghidurile de limbaj clar îl evită ca preferință de stil, nu ca normă.
+- Sursă: ghid gov-md §9.3; DOOM 3 s.v. punct-și-virgulă
 
 ### RO-NUG-093 Bara oblică
 - Nivel: ce nu e greșeală
@@ -535,7 +535,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-115 Virgula înaintea condiționalei și a cauzalei
 - Nivel: ce nu e greșeală
-- Corect: „Apăsați «Continuă», dacă datele sunt corecte.” La fel de corect: „Nu se poate salva, deoarece fișierul lipsește.” Nu scoți virgula.
+- Corect: „Puteți salva documentul ca PDF, dacă aveți nevoie de o copie tipărită.” La fel de corect: „Nu se poate salva, deoarece fișierul lipsește.” Nu scoți virgula; fără virgulă e la fel de corect doar când arăți că e singura condiție.
 - De ce: Regula falsă: o subordonată pusă după regentă n-ar primi niciodată virgulă. Cauzala și condiționala se despart de obicei prin virgulă, oriunde ar sta. Fără virgulă rămân doar când autorul vrea să arate că e singura cauză sau singura condiție.
 - Sursă: ghid gov-md §9.2.2.9 și §9.2.2.10
 
@@ -558,8 +558,8 @@ Termenii și convențiile de interfață sunt în [tipuri/interfata.md](tipuri/i
 ### RO-NUG-090 „Încărcare reușită”
 - Nivel: ce nu e greșeală
 - Corect: „Încărcare reușită.” La fel de corect: „Conectare reușită.” Nu corectezi.
-- De ce: Regula falsă: „reușit” n-ar putea însoți substantivul unei acțiuni, deci mesajul ar fi un calc. „Reușit” înseamnă „bine realizat, izbutit” (DEX '98), deci se potrivește oricărei acțiuni duse la capăt. Calc ar fi doar „de succes” sau „cu succes” lipite mecanic.
-- Sursă: DEX '98 s.v. reușit
+- De ce: Regula falsă: „reușit” n-ar putea însoți substantivul unei acțiuni, deci mesajul ar fi un calc. „Reușit” înseamnă „bine realizat, izbutit” (DEX '98), deci se potrivește oricărei acțiuni duse la capăt. „Cu succes” e o îmbinare românească, pe care DEX '98 o folosește în definiții („a termina ceva cu succes”): „Încărcarea s-a încheiat cu succes” e la fel de corect.
+- Sursă: DEX '98 s.v. reușit, căpătâi
 
 ## Vezi și
 
