@@ -130,3 +130,17 @@ func TestPermiteReferinteLipsa(t *testing.T) {
 		}
 	})
 }
+
+func TestIdInexistent(t *testing.T) {
+	verifica(t, "id_inexistent", "a.md rândul 6: trimitere spre RO-GRA-009")
+}
+
+func TestIdInexistentNuEAvertisment(t *testing.T) {
+	pr, av, err := PachetCuOptiuni(filepath.Join("testdata", "rau", "id_inexistent"), Optiuni{PermiteReferinteLipsa: true})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(pr) != 1 || len(av) != 0 {
+		t.Fatalf("așteptam 1 problemă și 0 avertismente: %v / %v", pr, av)
+	}
+}

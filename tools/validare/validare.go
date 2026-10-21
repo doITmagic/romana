@@ -35,6 +35,7 @@ var (
 	reIDValid = regexp.MustCompile(`^RO-(GRA|SEM|STI|COE|TIP|NUM|IMP|CAL|INT|FID|NUG)-\d{3}$`)
 	reGresit  = regexp.MustCompile(`^- Greșit: „([^”]*)” → Corect: „([^”]*)”`)
 	reCorect  = regexp.MustCompile(`^- Corect: „([^”]*)”`)
+	reIDText  = regexp.MustCompile(`RO-(?:GRA|SEM|STI|COE|TIP|NUM|IMP|CAL|INT|FID|NUG)-\d{3}`)
 	reLink    = regexp.MustCompile(`references/[A-Za-z0-9_./-]+`)
 )
 
@@ -164,6 +165,28 @@ func PachetCuOptiuni(dirSkill string, o Optiuni) (probleme []Problema, avertisme
 				adauga(rel, fmt.Sprintf("rândul %d: ID duplicat %s (și în %s)", r.Rand, r.ID, prim))
 			} else {
 				vazute[r.ID] = rel
+			}
+		}
+	}
+
+	// trimiteri spre ID-uri care nu există (nici cu -permite-referinte-lipsa)
+	for _, rel := range fisiere {
+		if rel != "SKILL.md" && !strings.HasSuffix(rel, ".md") {
+			continue
+		}
+		text := skill
+		if rel != "SKILL.md" {
+			b, err := os.ReadFile(filepath.Join(dirSkill, filepath.FromSlash(rel)))
+			if err != nil {
+				return nil, nil, err
+			}
+			text = string(b)
+		}
+		for i, rand := range strings.Split(text, "\n") {
+			for _, id := range reIDText.FindAllString(rand, -1) {
+				if _, ok := vazute[id]; !ok {
+					adauga(rel, fmt.Sprintf("rândul %d: trimitere spre %s, care nu există ca titlu „### %s”", i+1, id, id))
+				}
 			}
 		}
 	}
