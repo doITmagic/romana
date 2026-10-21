@@ -1,0 +1,19 @@
+{
+  "id": "redactare-blog-02",
+  "mod": "redactare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Redactează introducerea (3–4 fraze) a unui articol de blog despre alergatul de dimineață, din perspectiva autorului: aleargă de 3 ani, 5 km, de 3 ori pe săptămână, și a slăbit 4 kilograme. Nu spune nimic despre alimentație sau despre alte sporturi.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "dietă",
+      "alimenta",
+      "înot",
+      "cercetări",
+      "specialiști"
+    ]
+  }
+}

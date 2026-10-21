@@ -1,0 +1,20 @@
+{
+  "id": "redactare-email-01",
+  "mod": "redactare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie un e-mail formal către un client (o firmă) prin care îl anunți că livrarea comenzii 4821 se amână de la 12 martie la 15 martie din cauza unei întârzieri la furnizor. Oferi o reducere de 5% la următoarea comandă. Semnează Ioana Pop, Departamentul Logistică.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "Sper că acest e-mail",
+      "vă găsește bine",
+      "Sigur! Iată",
+      "Iată e-mailul",
+      "transport gratuit",
+      "10%"
+    ]
+  }
+}

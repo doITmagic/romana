@@ -148,4 +148,23 @@ Toate cazurile de mai jos sunt texte originale scrise pentru acest proiect, făr
 | `trigger-pozitiv-09` | trigger | - |
 | `trigger-pozitiv-10` | trigger | - |
 | `trigger-pozitiv-11` | trigger | - |
-
+| `redactare-serviciu-01` | redactare | marketing |
+| `redactare-serviciu-02` | redactare | marketing |
+| `redactare-serviciu-03` | redactare | marketing |
+| `redactare-serviciu-04` | redactare | marketing |
+| `redactare-blog-01` | redactare | blog |
+| `redactare-blog-02` | redactare | blog |
+| `redactare-blog-03` | redactare | blog |
+| `redactare-blog-04` | redactare | blog |
+| `redactare-email-01` | redactare | e-mail |
+| `redactare-email-02` | redactare | e-mail |
+| `redactare-email-03` | redactare | e-mail |
+| `redactare-email-04` | redactare | e-mail |
+| `redactare-interfata-01` | redactare | interfață |
+| `redactare-interfata-02` | redactare | interfață |
+| `redactare-interfata-03` | redactare | interfață |
+| `redactare-interfata-04` | redactare | interfață |
+| `redactare-stire-01` | redactare | presă |
+| `redactare-stire-02` | redactare | presă |
+| `redactare-stire-03` | redactare | presă |
+| `redactare-stire-04` | redactare | presă |

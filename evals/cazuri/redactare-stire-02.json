@@ -1,0 +1,19 @@
+{
+  "id": "redactare-stire-02",
+  "mod": "redactare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Redactează o știre scurtă din aceste date: accident pe DN1, lângă Sinaia, miercuri dimineață; două mașini implicate; traficul a fost blocat 40 de minute; nu sunt victime, potrivit ISU Prahova. Nu spune nimic despre cauze.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "„",
+      "viteză",
+      "ceață",
+      "derap",
+      "vinovat"
+    ]
+  }
+}

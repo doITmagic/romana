@@ -1,0 +1,19 @@
+{
+  "id": "redactare-serviciu-04",
+  "mod": "redactare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Tradu în română, pentru pagina de servicii a unei firme: „Our team installs solar panels on residential roofs. Installation takes 2 days. We give a 10-year warranty on the panels and a 2-year warranty on the installation. Prices start at 4,500 euro.”",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "a aplica pentru",
+      "a face sens",
+      "15 ani",
+      "gratuit",
+      "subvenții"
+    ]
+  }
+}

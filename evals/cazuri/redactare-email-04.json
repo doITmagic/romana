@@ -1,0 +1,19 @@
+{
+  "id": "redactare-email-04",
+  "mod": "redactare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie un e-mail către un furnizor necunoscut, formal, prin care ceri copia certificatului de calitate pentru lotul 77, de care ai nevoie până vineri. Faptele: te cheamă Radu Marin, ești de la achiziții, telefonul tău e 0722 000 111.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "a aplica pentru",
+      "Sper că acest e-mail",
+      "vă găsește bine",
+      "este urgent",
+      "ASAP"
+    ]
+  }
+}
