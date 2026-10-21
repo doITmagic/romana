@@ -5,15 +5,14 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Pasărea se înălță deasupra apei, iar vântul bătu cu putere peste câmp. Joi, guvernul a adoptat bugetul. Am văzut-o cu ochii mei intrând în clădire.",
+  "intrare": "Am văzut-o cu ochii mei coborând din tren. Duminică, orașul a sărbătorit hramul bisericii. Au venit mii de oameni, iar străzile au rămas pline până seara.",
   "confirmat": false,
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "se înalță",
-      "a bătut",
-      "perfect simplu",
-      "cu ochii mei intrând"
+      "cu ochii mei",
+      "Duminică, orașul a sărbătorit",
+      "Au venit mii de oameni"
     ]
   }
 }

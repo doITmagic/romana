@@ -5,14 +5,14 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Poliția a anunțat că suspectul ar fi furat trei mașini în ultimele două luni. Potrivit procurorilor, bărbatul ar fi lucrat împreună cu un complice, încă neidentificat. Cercetările continuă.",
+  "intrare": "Potrivit anchetatorilor, administratorul ar fi încasat sume în numerar fără chitanță, iar firma ar fi avut datorii de peste 200.000 de lei. Cercetările continuă.",
   "confirmat": false,
   "asteptat": {
     "observatii": [],
     "neatins": true,
     "interzis": [
-      "a furat trei mașini",
-      "a lucrat împreună"
+      "ar fi încasat",
+      "ar fi avut"
     ]
   }
 }

@@ -5,15 +5,15 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Am finalizat raportul ieri. Rulați scriptul după instalare, apoi verificați datele. Vom aprofunda subiectul în capitolul următor, bunăoară în secțiunea despre securitate. Am luat o decizie bazată pe date.",
+  "intrare": "Am finalizat studiul de fezabilitate vineri. Rulați testele înainte de fiecare livrare. Vom aprofunda problema la întâlnirea următoare, bunăoară în privința costurilor. Strategia este bazată pe date.",
   "confirmat": false,
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "am terminat raportul",
-      "executați scriptul",
-      "de exemplu în secțiunea",
-      "pe baza datelor"
+      "Am finalizat",
+      "Rulați testele",
+      "bunăoară",
+      "bazată pe date"
     ]
   }
 }

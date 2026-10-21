@@ -5,15 +5,14 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Livrarea e gratuită. De asemenea, puteți returna produsele în 30 de zile. În plus, plata se poate efectua cu cardul, prin virament etc. Vă rugăm să ne scrieți dacă aveți întrebări.",
+  "intrare": "Bună ziua,\n\nTransportul este gratuit pentru comenzile peste 200 de lei. De asemenea, produsele se pot returna în două săptămâni. Plata se poate efectua prin card, ramburs, transfer bancar etc.\n\nO zi bună,\nEchipa magazinului",
   "confirmat": false,
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "și, de asemenea",
-      "și altele",
-      "și așa mai departe",
-      "Totodată"
+      "De asemenea, produsele se pot returna",
+      "Plata se poate efectua",
+      "transfer bancar etc."
     ]
   }
 }

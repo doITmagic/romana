@@ -5,17 +5,16 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Sistemul procesează cererile în ordinea sosirii. Am implementat noile reguli de facturare, iar rapoartele rulează noaptea. Puteți downloada raportul din pagina contului. Prețul per litru a crescut cu 20 de bani.",
+  "intrare": "Serverul procesează fișierele încărcate în ordine cronologică. Echipa a implementat un modul nou de arhivare, iar programul rulează zilnic la miezul nopții. Costul per angajat este de 40 de lei pe lună, iar utilizatorii pot downloada arhivele din panoul de control.",
   "confirmat": false,
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "a procesa",
-      "descărca",
-      "executa",
-      "pe litru",
-      "calc",
-      "anglicism"
+      "procesează fișierele",
+      "a implementat un modul",
+      "rulează zilnic",
+      "per angajat",
+      "downloada arhivele"
     ]
   }
 }

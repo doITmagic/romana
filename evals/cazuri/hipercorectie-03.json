@@ -5,15 +5,14 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Vreau să fii acolo la ora zece. Copiii se joacă în curte, iar eu am realizat abia seara că am uitat cheile. Abia după ședință am realizat că termenul era vineri.",
+  "intrare": "Vreau să fii sigur că ai salvat fișierul înainte să pleci. Copiii vecinilor au realizat abia târziu că planul nu funcționa, iar mama lor a aflat și mai târziu.",
   "confirmat": false,
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "să fi acolo",
-      "să fie acolo",
-      "Copii se joacă",
-      "mi-am dat seama"
+      "să fii sigur",
+      "Copiii vecinilor",
+      "au realizat abia târziu că"
     ]
   }
 }

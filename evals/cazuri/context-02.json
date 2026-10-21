@@ -5,7 +5,7 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Echipa nu are decât două zile la dispoziție. Proiectul e mai mare decât ne-am așteptat, iar clientul mai are decât o singură întrebare.",
+  "intrare": "Echipa nu are decât două zile la dispoziție. Proiectul e mai mare decât mă așteptam, iar clientul mai are decât o singură întrebare.",
   "confirmat": false,
   "asteptat": {
     "observatii": [
@@ -16,8 +16,7 @@
       }
     ],
     "interzis": [
-      "nu are decât două zile",
-      "mai mare decât ne-am așteptat"
+      "nu are decât două zile"
     ]
   }
 }

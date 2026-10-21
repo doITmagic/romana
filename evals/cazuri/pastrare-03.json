@@ -20,9 +20,6 @@
       "{echipa}",
       "{count, plural, one {# fișier} few {# fișiere} other {# de fișiere}}",
       "Utilizatorul {nume}"
-    ],
-    "interzis": [
-      "Utilizator {nume} a fost"
     ]
   }
 }

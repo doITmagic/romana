@@ -5,12 +5,12 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Măsurile de securitate constau din verificarea documentelor la intrare și din controlul periodic al camerelor.",
+  "intrare": "Sarcinile noului angajat constau din coordonarea echipei și din raportarea lunară.",
   "confirmat": false,
   "asteptat": {
     "observatii": [
       {
-        "fragment": "constau din",
+        "fragment": "constau din coordonarea",
         "nivel": "disputat",
         "pilon": "gramatică"
       }

@@ -3,7 +3,7 @@
 Fiecare caz din `evals/cazuri/` are aici sursa, licența, URL-ul și nota de atribuire. Setul public conține doar două feluri de texte:
 
 1. **Texte scrise de noi, sub licența MIT** a repo-ului. Persoanele, firmele, localitățile și cifrele din ele sunt inventate. Nu reprezintă fapte reale și nu trebuie citate ca atare.
-2. **Texte ApTI, sub CC BY 4.0**, păstrate nemodificate, ca extrase. Atribuirea de mai jos este cea cerută de licență.
+2. **Un text ApTI, sub CC BY 4.0**, păstrat nemodificat, ca extras (`corectura-apti-02`). Alte trei extrase ApTI, din articole ale proiectului „I'll miss you when I scroll” (cofinanțat AFCN), au fost mutate în setul privat. Atribuirea de mai jos este cea cerută de licență.
 
 Textele cu drepturi rezervate (presă, reviste, literatură, texte oficiale cu licență neclară) nu intră în repo. Ele stau doar local, în setul privat (`~/romana-privat/evals-privat/` sau calea din `ROMANA_EVALS_PRIVAT`), nu se redistribuie și nu apar în niciun fișier din repo.
 
@@ -11,13 +11,10 @@ Toate cazurile au `confirmat: false`. Doar Răzvan îl poate face `true`, după 
 
 ## Atribuire CC BY 4.0 (ApTI)
 
-Textele de mai jos sunt preluate de pe apti.ro, unde footerul spune: „Materialele de pe acest site sunt puse la dispoziție prin Licența Atribuire 4.0 România Creative Commons”, cu trimitere la <https://creativecommons.org/licenses/by/4.0/deed.ro>. Titlul, autorul, URL-ul și licența sunt trecute pentru fiecare text. Textele sunt **extrase**: din textul păstrat nu s-a schimbat nicio literă (au fost eliminate doar spațiile de la capăt de rând), iar greșelile din el sunt cele ale originalului; tocmai de aceea sunt folosite ca texte de corectat. Au fost scoase, în întregime: paragraful care introduce un citat din site-ul terț 56k.rip, secțiunea de soluții de la finalul unui articol, nota despre finanțarea AFCN și linkul de abonare. Nu s-a folosit niciun text din newsletterul ApTI (găzduit pe CleverReach, fără licență explicită). Fiecare caz ApTI arată doar cum e scris textul; nu exprimă o poziție a ApTI despre limba română. Nu se sugerează că ApTI susține acest proiect.
+Textul de mai jos este preluat de pe apti.ro, unde footerul spune: „Materialele de pe acest site sunt puse la dispoziție prin Licența Atribuire 4.0 România Creative Commons”, cu trimitere la <https://creativecommons.org/licenses/by/4.0/deed.ro>. Titlul, autorul, URL-ul și licența sunt trecute pentru fiecare text. Textele sunt **extrase**: din textul păstrat nu s-a schimbat nicio literă (au fost eliminate doar spațiile de la capăt de rând), iar greșelile din el sunt cele ale originalului; tocmai de aceea sunt folosite ca texte de corectat. Au fost scoase, în întregime: paragraful care introduce un citat din site-ul terț 56k.rip, secțiunea de soluții de la finalul unui articol, nota despre finanțarea AFCN și linkul de abonare. Nu s-a folosit niciun text din newsletterul ApTI (găzduit pe CleverReach, fără licență explicită). Fiecare caz ApTI arată doar cum e scris textul; nu exprimă o poziție a ApTI despre limba română. Nu se sugerează că ApTI susține acest proiect.
 
 | ID | Titlu, autor, dată | URL | Licență | Note |
 |---|---|---|---|---|
-| `context-apti-01` | „O privire retrospectivă și prospectivă asupra drepturilor digitale”, interviu cu Bogdan Manolea (ApTI), 21 septembrie 2026 | <https://apti.ro/o-privire-retrospectiva-si-prospectiva-asupra-drepturilor-digitale/> | CC BY 4.0 | Primul răspuns al lui Bogdan Manolea. Text din proiectul „I'll miss you when I scroll” (ApTI partener, cofinanțat AFCN); fără nota de finanțare |
-| `context-apti-02` | Același interviu | <https://apti.ro/o-privire-retrospectiva-si-prospectiva-asupra-drepturilor-digitale/> | CC BY 4.0 | Al doilea răspuns al lui Bogdan Manolea |
-| `corectura-apti-01` | „3 lucruri pe care ar trebui să le învățăm de la Internetul din 1996”, Bogdan Manolea (ApTI), 20 octombrie 2026 | <https://apti.ro/3-lucruri-de-invatat-de-la-internetul-din-1996/> | CC BY 4.0 | Extras (începutul și secțiunile 1–3); fără paragraful care introduce citatul din 56k.rip, fără soluții, fără nota AFCN. Articolul face parte din proiectul „I'll miss you when I scroll”, la care ApTI e partener |
 | `corectura-apti-02` | „Cum definim si clasificăm comportamentului inautentic coordonat (Coordinated Inauthentic Behaviour - CIB)”, ApTI, 8 octombrie 2026 | <https://apti.ro/cum-definim-si-clasificam-cib/> | CC BY 4.0 | Titlul și corpul paginii, fără linkul de abonare. Titlul are greșeli în original |
 
 ## Texte scrise de noi (MIT)
@@ -55,27 +52,34 @@ Toate cazurile de mai jos sunt texte originale scrise pentru acest proiect, făr
 | `curat-blog-03` | corectura | blog |
 | `curat-blog-04` | verificare | blog |
 | `curat-blog-05` | verificare | blog |
+| `curat-blog-06` | verificare | blog |
+| `curat-blog-07` | corectura | blog |
 | `curat-documentatie-01` | verificare | documentație |
 | `curat-documentatie-02` | verificare | documentație |
 | `curat-documentatie-03` | corectura | documentație |
 | `curat-documentatie-04` | verificare | documentație |
+| `curat-documentatie-05` | verificare | documentație |
 | `curat-email-01` | verificare | e-mail |
 | `curat-email-02` | verificare | e-mail |
 | `curat-email-03` | corectura | e-mail |
 | `curat-email-04` | verificare | e-mail |
-| `curat-interfata-01` | verificare | interfață |
-| `curat-interfata-02` | verificare | interfață |
-| `curat-interfata-03` | verificare | interfață |
+| `curat-email-05` | verificare | e-mail |
 | `curat-marketing-01` | verificare | marketing |
 | `curat-marketing-02` | verificare | marketing |
 | `curat-marketing-03` | corectura | marketing |
 | `curat-marketing-04` | verificare | marketing |
 | `curat-marketing-05` | verificare | marketing |
+| `curat-marketing-06` | verificare | marketing |
+| `curat-micro-interfata-01` | verificare | interfață |
+| `curat-micro-interfata-02` | verificare | interfață |
+| `curat-micro-interfata-03` | verificare | interfață |
 | `curat-presa-01` | verificare | presă |
 | `curat-presa-02` | corectura | presă |
 | `curat-presa-03` | verificare | presă |
 | `curat-presa-04` | verificare | presă |
 | `curat-presa-05` | verificare | presă |
+| `curat-presa-06` | verificare | presă |
+| `curat-presa-07` | verificare | presă |
 | `fidelitate-01` | verificare | presă |
 | `fidelitate-02` | verificare | presă |
 | `fidelitate-03` | verificare | presă |
@@ -93,8 +97,7 @@ Toate cazurile de mai jos sunt texte originale scrise pentru acest proiect, făr
 | `fidelitate-15` | redactare | presă |
 | `fidelitate-16` | redactare | marketing |
 | `fidelitate-17` | redactare | interfață |
-| `hipercorectie-01` | verificare | e-mail |
-| `hipercorectie-02` | corectura | presă |
+| `hipercorectie-02` | verificare | presă |
 | `hipercorectie-03` | corectura | blog |
 | `hipercorectie-04` | verificare | documentație |
 | `hipercorectie-05` | corectura | presă |
@@ -109,6 +112,8 @@ Toate cazurile de mai jos sunt texte originale scrise pentru acest proiect, făr
 | `hipercorectie-14` | verificare | presă |
 | `hipercorectie-15` | corectura | presă |
 | `hipercorectie-16` | verificare | blog |
+| `hipercorectie-17` | corectura | blog |
+| `hipercorectie-fum-01` | verificare | e-mail |
 | `pastrare-01` | corectura | documentație |
 | `pastrare-02` | corectura | marketing |
 | `pastrare-03` | corectura | interfață |

@@ -5,7 +5,7 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Is this Romanian sentence grammatically correct? „Documentul care l-am trimis ieri conține cifrele finale.”",
+  "intrare": "Can you check whether this Romanian sentence is correct? „Studenții care i-am întâlnit ieri sunt din Cluj.”",
   "confirmat": false,
   "asteptat": {
     "cerut": [

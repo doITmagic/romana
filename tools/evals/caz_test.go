@@ -71,15 +71,22 @@ func TestNumaiConfirmateInScor(t *testing.T) {
 
 func TestIncarcaRefuza(t *testing.T) {
 	cazuri := map[string]string{
-		"mod-necunoscut":   `{"id":"x1","mod":"scrie","set":"public","sursa":"s","licenta":"MIT","intrare":"T."}`,
-		"fragment-lipsa":   `{"id":"x2","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"observatii":[{"fragment":"altceva","nivel":"normă","pilon":"gramatică"}]}}`,
-		"nivel-necunoscut": `{"id":"x3","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"observatii":[{"fragment":"Text","nivel":"grav","pilon":"gramatică"}]}}`,
-		"pilon-necunoscut": `{"id":"x4","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"observatii":[{"fragment":"Text","nivel":"normă","pilon":"fonetică"}]}}`,
-		"camp-necunoscut":  `{"id":"x5","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"T.","altceva":1}`,
-		"set-necunoscut":   `{"id":"x6","mod":"verificare","set":"semi","sursa":"s","licenta":"MIT","intrare":"T."}`,
-		"neatins-cu-obs":   `{"id":"x7","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"neatins":true,"observatii":[{"fragment":"Text","nivel":"normă","pilon":"gramatică"}]}}`,
-		"id-gol":           `{"id":"","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"T."}`,
-		"intrare-goala":    `{"id":"x8","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":""}`,
+		"mod-necunoscut":    `{"id":"x1","mod":"scrie","set":"public","sursa":"s","licenta":"MIT","intrare":"T."}`,
+		"fragment-lipsa":    `{"id":"x2","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"observatii":[{"fragment":"altceva","nivel":"normă","pilon":"gramatică"}]}}`,
+		"nivel-necunoscut":  `{"id":"x3","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"observatii":[{"fragment":"Text","nivel":"grav","pilon":"gramatică"}]}}`,
+		"pilon-necunoscut":  `{"id":"x4","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"observatii":[{"fragment":"Text","nivel":"normă","pilon":"fonetică"}]}}`,
+		"camp-necunoscut":   `{"id":"x5","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"T.","altceva":1}`,
+		"set-necunoscut":    `{"id":"x6","mod":"verificare","set":"semi","sursa":"s","licenta":"MIT","intrare":"T."}`,
+		"neatins-cu-obs":    `{"id":"x7","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"neatins":true,"observatii":[{"fragment":"Text","nivel":"normă","pilon":"gramatică"}]}}`,
+		"id-gol":            `{"id":"","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"T."}`,
+		"intrare-goala":     `{"id":"x8","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":""}`,
+		"sursa-goala":       `{"id":"y1","mod":"verificare","set":"public","sursa":"","licenta":"MIT","intrare":"T."}`,
+		"licenta-goala":     `{"id":"y2","mod":"verificare","set":"public","sursa":"s","licenta":"","intrare":"T."}`,
+		"trigger-gol":       `{"id":"y3","mod":"trigger","set":"public","sursa":"s","licenta":"MIT","intrare":"Corectează."}`,
+		"fragment-dublu":    `{"id":"y4","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"Text și text.","asteptat":{"observatii":[{"fragment":"ex","nivel":"normă","pilon":"gramatică"}]}}`,
+		"interzis-absent":   `{"id":"y5","mod":"corectura","set":"public","sursa":"s","licenta":"MIT","intrare":"Text.","asteptat":{"interzis":["calc"]}}`,
+		"doua-obiecte":      `{"id":"y6","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"T."} {"id":"y7"}`,
+		"gunoi-dupa-vector": `[{"id":"y8","mod":"verificare","set":"public","sursa":"s","licenta":"MIT","intrare":"T."}] x`,
 	}
 	for nume, j := range cazuri {
 		t.Run(nume, func(t *testing.T) {
@@ -162,4 +169,23 @@ func TestSetPrivatSeIncarca(t *testing.T) {
 		}
 	}
 	t.Logf("%d cazuri private", len(cazuri))
+}
+
+func TestInterzisSubsirAlIntrarii(t *testing.T) {
+	for _, c := range incarcaPublic(t) {
+		if c.Mod != "verificare" && c.Mod != "corectura" {
+			continue
+		}
+		for _, z := range c.Asteptat.Interzis {
+			if !strings.Contains(c.Intrare, z) {
+				t.Errorf("%s: interzis %q nu e în intrare", c.ID, z)
+			}
+		}
+	}
+}
+
+func TestMicro(t *testing.T) {
+	if !Micro(Caz{ID: "curat-micro-interfata-01"}) || Micro(Caz{ID: "curat-presa-01"}) {
+		t.Error("Micro recunoaște greșit ID-urile")
+	}
 }

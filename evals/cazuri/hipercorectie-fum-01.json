@@ -1,5 +1,5 @@
 {
-  "id": "hipercorectie-01",
+  "id": "hipercorectie-fum-01",
   "mod": "verificare",
   "profil": "e-mail",
   "set": "public",
@@ -10,11 +10,10 @@
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "vă cer scuze",
-      "Marea majoritate a documentelor a",
-      "unul dintre contracte",
-      "conform legii",
-      "Conform legii"
+      "Îmi cer scuze",
+      "Marea majoritate a documentelor au ajuns",
+      "unul din contracte",
+      "Conform cu legea"
     ]
   }
 }

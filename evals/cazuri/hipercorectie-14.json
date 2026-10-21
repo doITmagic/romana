@@ -5,7 +5,7 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Guvernul a anunțat că va mări pensiile de la 1 ianuarie. Se vor lua măsuri pentru plata la timp, iar în orașul Cluj, bunăoară, plata se face în prima zi lucrătoare. Ministrul a spus că va fii o schimbare vizibilă.",
+  "intrare": "Ministerul a anunțat că va deschide ghișeele de la 1 februarie. Se vor face verificări pentru reducerea cozilor, iar în orașul Cluj, bunăoară, programul se prelungește. Directorul a spus că va fii o diferență vizibilă.",
   "confirmat": false,
   "asteptat": {
     "observatii": [
@@ -16,9 +16,8 @@
       }
     ],
     "interzis": [
-      "Se vor lua măsuri",
-      "bunăoară",
-      "va mări"
+      "Se vor face verificări",
+      "bunăoară"
     ]
   }
 }

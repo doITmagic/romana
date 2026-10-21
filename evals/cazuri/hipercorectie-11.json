@@ -5,16 +5,15 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Un medic rezident îl asistă pe chirurg în timpul operației. Pe agenda ședinței sunt trei puncte, iar versiunea curentă a regulamentului a fost aprobată. Bărbatul mort în 2024 era fostul partener al victimei.",
+  "intrare": "Asistentul medical îl asistă pe doctor în sala de operații. Pe agenda zilei sunt patru întâlniri, iar versiunea curentă a planului a fost votată. Omul mort în incendiu avea 52 de ani.",
   "confirmat": false,
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "îl ajută pe chirurg",
-      "ordinea de zi",
-      "versiunea actuală",
-      "decedat",
-      "răposat"
+      "îl asistă pe doctor",
+      "Pe agenda zilei",
+      "versiunea curentă",
+      "mort în incendiu"
     ]
   }
 }

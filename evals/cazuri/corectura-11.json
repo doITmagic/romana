@@ -5,28 +5,24 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Dacă ai întrebări, nu fii timid și scrie-mi. Dacă aș fii în locul tău, aș începe cu primul capitol, nu cu ultimul.",
+  "intrare": "Nu fii îngrijorat, termenul se poate prelungi. Aș lucra mai repede dacă aș fii acolo, dar sunt plecat până luni.",
   "confirmat": false,
   "asteptat": {
     "observatii": [
       {
-        "fragment": "nu fii timid",
+        "fragment": "Nu fii îngrijorat",
         "nivel": "normă",
         "pilon": "gramatică"
       },
       {
-        "fragment": "aș fii",
+        "fragment": "aș fii acolo",
         "nivel": "normă",
         "pilon": "gramatică"
       }
     ],
     "cerut": [
-      "nu fi timid",
-      "aș fi în locul tău"
-    ],
-    "interzis": [
-      "nu fii",
-      "aș fii"
+      "Nu fi îngrijorat",
+      "aș fi acolo"
     ]
   }
 }

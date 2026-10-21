@@ -18,9 +18,6 @@
     "cerut": [
       "`{\"status\": \"ok\", \"mesaj\": \"Cererea a fost procesată\"}`",
       "poate fi repetată"
-    ],
-    "interzis": [
-      "poate fii"
     ]
   }
 }

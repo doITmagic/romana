@@ -5,16 +5,15 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Datele se actualizează în timp real. Dați click pe butonul de salvare și apoi dați refresh paginii. Nu au fost găsite rezultate.",
+  "intrare": "Datele se sincronizează în timp real. Dați click pe pictogramă, apoi dați refresh listei. Nu au fost găsite rezultate pentru căutarea dvs.",
   "confirmat": false,
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "clic",
-      "reîncărcați",
-      "Nu s-au găsit rezultate",
-      "Nu am găsit rezultate",
-      "Niciun rezultat"
+      "în timp real",
+      "Dați click",
+      "dați refresh listei",
+      "Nu au fost găsite rezultate"
     ]
   }
 }

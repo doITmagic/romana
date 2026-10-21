@@ -5,18 +5,18 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Nu toate fișierele au fost încărcate. Niciun fișier a fost găsit în arhivă.",
+  "intrare": "Nu toți participanții au confirmat prezența. Nimeni a răspuns la invitația trimisă pe e-mail.",
   "confirmat": false,
   "asteptat": {
     "observatii": [
       {
-        "fragment": "Niciun fișier a fost găsit",
+        "fragment": "Nimeni a răspuns",
         "nivel": "normă",
         "pilon": "gramatică"
       }
     ],
     "interzis": [
-      "Nu toate fișierele au fost încărcate"
+      "Nu toți participanții au confirmat"
     ]
   }
 }

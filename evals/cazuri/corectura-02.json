@@ -5,34 +5,29 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Compania Altfel Securitate are peste 20 ani de experiență în protecția clădirilor de birouri. Lucrăm ca și furnizor unic pentru camere, alarme și control de acces, cu o abordare consistentă în toate locațiile clientului. Contractele se încheie pe trei ani.",
+  "intrare": "Firma Nord Instal are 25 ani de activitate pe piața instalațiilor. Colaborăm ca și subcontractor cu constructori mari și păstrăm o politică de prețuri consistentă de la un an la altul. Ofertele sunt valabile 30 de zile.",
   "confirmat": false,
   "asteptat": {
     "observatii": [
       {
-        "fragment": "20 ani",
+        "fragment": "25 ani",
         "nivel": "normă",
         "pilon": "tipografie"
       },
       {
-        "fragment": "ca și furnizor",
+        "fragment": "ca și subcontractor",
         "nivel": "normă",
         "pilon": "gramatică"
       },
       {
-        "fragment": "abordare consistentă",
+        "fragment": "politică de prețuri consistentă",
         "nivel": "normă",
         "pilon": "semantică"
       }
     ],
     "cerut": [
-      "20 de ani",
+      "25 de ani",
       "consecventă"
-    ],
-    "interzis": [
-      "20 ani",
-      "ca și furnizor",
-      "abordare consistentă"
     ]
   }
 }

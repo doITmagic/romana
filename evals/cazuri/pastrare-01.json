@@ -19,9 +19,6 @@
       "`git checkout -b nume-ramura`",
       "`src/principal.go`",
       "ca să creați"
-    ],
-    "interzis": [
-      "ca sa creați"
     ]
   }
 }

@@ -22,16 +22,26 @@
 //   - observatii: problemele pe care agentul trebuie să le găsească. Fiecare are
 //     fragmentul (citat exact din intrare), nivelul (unul dintre nivelurile din
 //     SKILL.md, fără „ce nu e greșeală”) și pilonul.
-//   - interzis: șiruri care nu au voie să apară. În corectură și redactare:
-//     în textul întors (forma greșită rămasă, o corectură greșită, un fapt
-//     inventat). În verificare: în observații (o formă corectă semnalată pe
-//     nedrept).
+//   - interzis, la verificare și corectură: fragmente din intrare (subșiruri ale
+//     ei) care nu au voie să apară ca fragment semnalat într-o observație (verificare)
+//     sau să fie schimbate (corectură): forme corecte sau protejate pe care un
+//     agent hipercorect le-ar „repara”. Niciodată cuvinte de categorie
+//     („calc”, „anglicism”) și niciodată formele greșite din intrare: pe acelea le
+//     acoperă „observatii”. Încărcarea refuză un element care nu e în intrare.
+//   - interzis, la redactare: forme care nu au voie să apară în textul produs
+//     (un fapt inventat, o certitudine în plus).
 //   - cerut: șiruri care trebuie să apară. În corectură și redactare: în textul
-//     întors (cod, citate, valori inserate, un „[de completat]”). În verificare:
-//     în observații.
+//     întors (forma corectată, cod, citate, valori inserate, un „[de completat]”).
+//     În verificare: în observații.
 //
 // La trigger, „cerut: [romana]” înseamnă că skill-ul trebuie să pornească, iar
 // „interzis: [romana]” că nu are voie să pornească.
+//
+// # Micro-texte
+//
+// Textele foarte scurte (șiruri de interfață) au ID-ul de forma curat-micro-*.
+// Pe ele rata de observații false e subestimată prin construcție, așa că scorul
+// le cântărește separat; Micro(c) le recunoaște.
 //
 // # Scor
 //
@@ -111,6 +121,9 @@ func DirPrivat() string {
 	return filepath.Join(home, "romana-privat", "evals-privat")
 }
 
+// Micro spune dacă e un micro-text (ID cu „-micro-”), de ponderat separat în scor.
+func Micro(c Caz) bool { return strings.Contains(c.ID, "-micro-") }
+
 // InScor întoarce doar cazurile confirmate.
 func InScor(cazuri []Caz) []Caz {
 	var out []Caz
@@ -165,18 +178,22 @@ func decodeaza(b []byte) ([]Caz, error) {
 	b = bytes.TrimSpace(b)
 	dec := json.NewDecoder(bytes.NewReader(b))
 	dec.DisallowUnknownFields()
+	var out []Caz
 	if len(b) > 0 && b[0] == '[' {
-		var v []Caz
-		if err := dec.Decode(&v); err != nil {
+		if err := dec.Decode(&out); err != nil {
 			return nil, err
 		}
-		return v, nil
+	} else {
+		var c Caz
+		if err := dec.Decode(&c); err != nil {
+			return nil, err
+		}
+		out = []Caz{c}
 	}
-	var c Caz
-	if err := dec.Decode(&c); err != nil {
-		return nil, err
+	if dec.More() {
+		return nil, fmt.Errorf("conținut după primul obiect JSON")
 	}
-	return []Caz{c}, nil
+	return out, nil
 }
 
 func valideaza(c Caz) error {
@@ -201,9 +218,16 @@ func valideaza(c Caz) error {
 	if c.Mod == "trigger" && len(a.Cerut)+len(a.Interzis) == 0 {
 		return fmt.Errorf("trigger fără cerut sau interzis")
 	}
+	if c.Mod == "verificare" || c.Mod == "corectura" {
+		for _, z := range a.Interzis {
+			if z == "" || !strings.Contains(c.Intrare, z) {
+				return fmt.Errorf("interzis %q nu e fragment din intrare", z)
+			}
+		}
+	}
 	for i, o := range a.Observatii {
-		if o.Fragment == "" || !strings.Contains(c.Intrare, o.Fragment) {
-			return fmt.Errorf("observația %d: fragmentul %q nu e în intrare", i+1, o.Fragment)
+		if o.Fragment == "" || strings.Count(c.Intrare, o.Fragment) != 1 {
+			return fmt.Errorf("observația %d: fragmentul %q trebuie să apară o dată în intrare", i+1, o.Fragment)
 		}
 		if !niveluri[o.Nivel] {
 			return fmt.Errorf("observația %d: nivel necunoscut %q", i+1, o.Nivel)

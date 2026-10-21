@@ -28,11 +28,6 @@
     "cerut": [
       "Utilizatorul a fost șters",
       "{titlu}"
-    ],
-    "interzis": [
-      "Utilizator a fost șters",
-      "{titlu}-ul",
-      "Îți trimitem"
     ]
   }
 }

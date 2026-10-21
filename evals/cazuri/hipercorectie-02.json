@@ -1,18 +1,18 @@
 {
   "id": "hipercorectie-02",
-  "mod": "corectura",
+  "mod": "verificare",
   "profil": "presă",
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Majoritatea angajaților au votat propunerea, iar nici directorul, nici adjunctul lui nu au semnat documentul. Votul a doi senatori a decis rezultatul.",
+  "intrare": "Unul din voluntari s-a oferit să conducă microbuzul. Marea majoritate a participanților au sosit înainte de ora opt, iar organizatorii își cer scuze pentru lipsa apei calde din prima dimineață.",
   "confirmat": false,
   "asteptat": {
     "neatins": true,
     "interzis": [
-      "Majoritatea angajaților a votat",
-      "nu a semnat",
-      "votul a doi senatori a fost"
+      "Unul din voluntari",
+      "Marea majoritate a participanților au sosit",
+      "își cer scuze"
     ]
   }
 }
