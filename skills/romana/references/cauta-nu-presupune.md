@@ -2,7 +2,7 @@
 
 Fișierul acesta te ajută să nu scrii și să nu lași în text cuvinte inventate sau forme nesigure. Un cuvânt inventat scapă tocmai pentru că nu te îndoiești de el: arată ca un cuvânt românesc, are terminația potrivită și se potrivește în frază. Metoda de mai jos schimbă asta: pentru fiecare cuvânt de care nu ești sigur faci un pas în plus, înainte să-l scrii sau să-l accepți. Regulile verificabile, la sfârșit, sunt cazuri concrete de forme care lipsesc din dicționare.
 
-Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DEX '98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998; DEX '09 = *Dicționarul explicativ al limbii române*, ediția a III-a, 2009; MDN '00 = *Marele dicționar de neologisme*, 2000.
+Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998; DEX ’09 = *Dicționarul explicativ al limbii române*, ediția a II-a, revăzută și adăugită, 2009; MDN ’00 = *Marele dicționar de neologisme*, 2000.
 
 ## Cum folosești fișierul
 
@@ -62,8 +62,8 @@ Nu orice verb din engleză e suspect. DOOM 3 înregistrează „a printa”, „
 ### RO-SEM-401 „Într-încoace”
 - Nivel: recomandare
 - Greșit: „Au privit într-încoace.” → Corect: „Au privit încoace.”
-- De ce: Formă dedusă: „într-încoace” nu apare în dicționarele consultate, nici ca formă, nici în textul vreunei definiții. „Încoace” e adverb de sine stătător, iar „într-acolo” apare în DEX '98 la „acolo”, cu sensul „spre acel loc”. Cuvântul pare firesc pentru că seamănă cu „într-acolo”, tocmai de aceea scapă.
-- Sursă: DEX '98 s.v. încoace, acolo
+- De ce: Formă dedusă: „într-încoace” nu apare în dicționarele consultate, nici ca formă, nici în textul vreunei definiții. „Încoace” e adverb de sine stătător, iar „într-acolo” apare în DEX ’98 la „acolo”, cu sensul „spre acel loc”. Cuvântul pare firesc pentru că seamănă cu „într-acolo”, tocmai de aceea scapă.
+- Sursă: DEX ’98 s.v. încoace, acolo
 
 ### RO-SEM-402 „A rankula”
 - Nivel: recomandare
@@ -74,8 +74,8 @@ Nu orice verb din engleză e suspect. DOOM 3 înregistrează „a printa”, „
 ### RO-SEM-403 „Calmitate”
 - Nivel: recomandare
 - Greșit: „A vorbit cu calmitate.” → Corect: „A vorbit calm.”
-- De ce: „Calmitate” lipsește din DOOM 3, DOOM 2, DEX '98 și DEX '09 și apare doar în MDN '00 și în dicționarul ortografic, deci e un cuvânt marginal, neînregistrat în normă. „Calm” e adjectiv și adverb și spune același lucru. Nu o tratezi ca greșeală, ci ca o formă rară pe care o înlocuiești cu cea obișnuită.
-- Sursă: DOOM 3 (cuvântul lipsește); MDN '00 s.v. calmitate
+- De ce: „Calmitate” lipsește din DOOM 3, DOOM 2, DEX ’98 și DEX ’09 și apare doar în MDN ’00 și în dicționarul ortografic, deci e un cuvânt marginal, neînregistrat în normă. „Calm” e adjectiv și adverb și spune același lucru. Nu o tratezi ca greșeală, ci ca o formă rară pe care o înlocuiești cu cea obișnuită.
+- Sursă: DOOM 3 (cuvântul lipsește); MDN ’00 s.v. calmitate
 
 ### RO-SEM-404 Verb format din engleză, fără intrare în dicționar
 - Nivel: recomandare
@@ -92,26 +92,26 @@ Nu orice verb din engleză e suspect. DOOM 3 înregistrează „a printa”, „
 ### RO-SEM-406 „Suprareprezent” și „ramare”
 - Nivel: recomandare
 - Greșit: „Femeile sunt suprareprezente în acest sector.” → Corect: „Femeile sunt reprezentate în număr mai mare decât s-ar aștepta în acest sector.”
-- De ce: Formă dedusă: „suprareprezent” nu există, pentru că nu există nici „reprezent”. „Suprareprezentat” se poate construi regulat (supra- + participiu), dar nici el nu apare în dicționarele consultate, deci îl marchezi ca dedus și, în text pentru public larg, preferi o perifrază. Un caz înrudit: „ramare” cu sensul „încadrare” nu e atestat; DEX '98 dă verbul „a rama” cu sensul „a vâsli” și substantivul „ramare” ca termen marinăresc, „acțiunea de a rama”, iar DEX '09 îl marchează rar. Pentru „încadrare” spui „încadrare”.
-- Sursă: DEX '98 s.v. rama, ramare; DOOM 3 s.v. încadrare
+- De ce: Formă dedusă: „suprareprezent” nu există, pentru că nu există nici „reprezent”. „Suprareprezentat” se poate construi regulat (supra- + participiu), dar nici el nu apare în dicționarele consultate, deci îl marchezi ca dedus și, în text pentru public larg, preferi o perifrază. Un caz înrudit: „ramare” cu sensul „încadrare” nu e atestat; DEX ’98 dă verbul „a rama” cu sensul „a vâsli” și substantivul „ramare” ca termen marinăresc, „acțiunea de a rama”, iar DEX ’09 îl marchează rar. Pentru „încadrare” spui „încadrare”.
+- Sursă: DEX ’98 s.v. rama, ramare; DOOM 3 s.v. încadrare
 
 ### RO-SEM-407 „A deleta”
 - Nivel: recomandare
 - Greșit: „Deletează fișierul din listă.” → Corect: „Șterge fișierul din listă.”
-- De ce: Formă dedusă: „a deleta” nu apare în dicționarele consultate, nici ca verb, nici ca formă flexionată („deletează”). „A șterge” e în DOOM 3 și în DEX '98 cu sensul „a face să nu se mai vadă un text scris”, iar în informatică e verbul obișnuit.
-- Sursă: DOOM 3 s.v. șterge; DEX '98 s.v. șterge
+- De ce: Formă dedusă: „a deleta” nu apare în dicționarele consultate, nici ca verb, nici ca formă flexionată („deletează”). „A șterge” e în DOOM 3 și în DEX ’98 cu sensul „a face să nu se mai vadă un text scris”, iar în informatică e verbul obișnuit.
+- Sursă: DOOM 3 s.v. șterge; DEX ’98 s.v. șterge
 
 ### RO-SEM-408 „A uploada”
 - Nivel: recomandare
 - Greșit: „Uploadează fotografiile în cont.” → Corect: „Încarcă fotografiile în cont.”
-- De ce: Formă dedusă: nici „a uploada”, nici „upload” nu apar în dicționarele consultate. „A încărca” e în DOOM 3 și în DEX, iar sensul informatic nu se vede în fragmentul local al DEX '98 (nereverificat local). Atenție la contrast: „a downloada” e atestat în DOOM 3 și rămâne corect (vezi RO-NUG-082 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
+- De ce: Formă dedusă: nici „a uploada”, nici „upload” nu apar în dicționarele consultate. „A încărca” e în DOOM 3 și în DEX, iar sensul informatic nu se vede în fragmentul local al DEX ’98 (nereverificat local). Atenție la contrast: „a downloada” e atestat în DOOM 3 și rămâne corect (vezi RO-NUG-082 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
 - Sursă: DOOM 3 s.v. încărca, downloada
 
 ### RO-SEM-409 „A customiza”
 - Nivel: recomandare
 - Greșit: „Poți customiza aspectul paginii.” → Corect: „Poți personaliza aspectul paginii.”
-- De ce: Formă dedusă: „a customiza” nu apare în dicționare, nici ca derivat („customizare”, „customizat”). „A personaliza” e în DOOM 3, DOOM 2, DEX '09 și MDN '00. După context se potrivește și „a adapta” sau „a configura”.
-- Sursă: DOOM 3 s.v. personaliza; MDN '00 s.v. personaliza
+- De ce: Formă dedusă: „a customiza” nu apare în dicționare, nici ca derivat („customizare”, „customizat”). „A personaliza” e în DOOM 3, DOOM 2, DEX ’09 și MDN ’00. După context se potrivește și „a adapta” sau „a configura”.
+- Sursă: DOOM 3 s.v. personaliza; MDN ’00 s.v. personaliza
 
 ### RO-SEM-410 „A scala” ca verb
 - Nivel: recomandare
@@ -122,8 +122,8 @@ Nu orice verb din engleză e suspect. DOOM 3 înregistrează „a printa”, „
 ### RO-SEM-411 „A randa”
 - Nivel: recomandare
 - Greșit: „Pagina randează lent.” → Corect: „Pagina se afișează lent.”
-- De ce: Formă dedusă: „a randa” nu apare în dicționare. Există doar substantivul „randă” (pânză trapezoidală pe catargul de la pupă, în DEX '98), fără legătură cu sensul informatic. Formele „randez”, „randează”, „randare” nu dau nicio intrare. În interfață și în documentație spui „a afișa” sau „a reda”, după context.
-- Sursă: DEX '98 s.v. randă; DOOM 3 s.v. afișa
+- De ce: Formă dedusă: „a randa” nu apare în dicționare. Există doar substantivul „randă” (pânză trapezoidală pe catargul de la pupă, în DEX ’98), fără legătură cu sensul informatic. Formele „randez”, „randează”, „randare” nu dau nicio intrare. În interfață și în documentație spui „a afișa” sau „a reda”, după context.
+- Sursă: DEX ’98 s.v. randă; DOOM 3 s.v. afișa
 
 ### RO-SEM-412 Verbele hibride în „-uiește”
 - Nivel: recomandare

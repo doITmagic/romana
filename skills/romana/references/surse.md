@@ -9,7 +9,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
   - **normă:** sursa fixează forma corectă (ortografie, ortoepie, morfologie, punctuație). O formă care o contrazice e greșeală, nivel „normă”;
   - **descriptiv:** sursa descrie cum e limba (sensuri, structuri, uz, terminologie). Susține o regulă, dar nu o impune;
   - **recomandare:** sursa propune o practică (ghid de redactare, convenție). Nu face dintr-o formă o greșeală.
-- **„(nereverificat local)”** la sfârșitul câmpului înseamnă că trimiterea (capitol, paragraf sau pagină) vine din materialul de lucru și n-a putut fi deschisă pe text în momentul redactării. Regula rămâne, dar trimiterea e mai puțin sigură.
+- **„(nereverificat local)”** la sfârșitul câmpului înseamnă că trimiterea (capitol, paragraf sau pagină) n-a putut fi deschisă pe text în momentul redactării. Regula rămâne, dar trimiterea e mai puțin sigură.
 - **Sursele de tipul „tipar de stil”, „regulă de fidelitate a skill-ului”, „convenție de registru a skill-ului”, „recomandare a skill-ului”, „observație de stil”, „convenție de redactare”, „convenție de localizare”** nu sunt cărți: spun că regula e o decizie a skill-ului sau un uz, fără normă în spate. Sunt tratate la sfârșit.
 - **Lipsa unei forme dintr-un dicționar** nu dovedește că forma e greșită, iar existența ei nu o recomandă. Formele care lipsesc din toate dicționarele consultate sunt marcate „formă dedusă” în regulile lor și nu pot fi normă.
 
@@ -36,27 +36,27 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 
 ## Dicționare
 
-### DEX '98
+### DEX ’98
 - **Titlu:** *Dicționarul explicativ al limbii române*, Academia Română, Institutul de Lingvistică „Iorgu Iordan”.
 - **Ediție:** a II-a, Univers Enciclopedic, București, 1998.
-- **Statut:** descriptiv. Dă sensurile, mărcile de registru (fam., pop., reg., arg., înv.) și variantele. Sensul din DEX '98 decide dacă un cuvânt „înseamnă” ceva, dar pentru formă are prioritate DOOM 3.
+- **Statut:** descriptiv. Dă sensurile, mărcile de registru (fam., pop., reg., arg., înv.) și variantele. Sensul din DEX ’98 decide dacă un cuvânt „înseamnă” ceva, dar pentru formă are prioritate DOOM 3.
 - **Ce nu spune:** nu cuprinde cuvintele sau sensurile apărute după 1998 (multe din informatică sau din uzul recent). Absența unui sens de acolo nu dovedește că sensul e greșit; la regulile de sens, o definiție mai nouă care îl dă coboară nivelul. Nu e normă ortografică.
 
-### DEX '96
+### DEX ’96
 - **Titlu:** *Dicționarul explicativ al limbii române*.
 - **Ediție:** a II-a, 1996 (revăzută față de ediția din 1975).
-- **Statut:** descriptiv, folosit când DEX '98 nu are intrarea.
-- **Ce nu spune:** aceleași limite ca DEX '98; mai vechi. Dacă cele două diferă, regula spune care a fost folosit.
+- **Statut:** descriptiv, folosit când DEX ’98 nu are intrarea.
+- **Ce nu spune:** aceleași limite ca DEX ’98; mai vechi. Dacă cele două diferă, regula spune care a fost folosit.
 
-### DEX '09
+### DEX ’09
 - **Titlu:** *Dicționarul explicativ al limbii române*.
 - **Ediție:** a II-a, revăzută și adăugită, Univers Enciclopedic Gold, 2009.
-- **Statut:** descriptiv, cu sensuri mai noi decât DEX '98.
+- **Statut:** descriptiv, cu sensuri mai noi decât DEX ’98.
 - **Ce nu spune:** trimiterea s.v. indică intrarea consultată, nu un text reprodus.
 
-### MDN '00 și MDN '08
+### MDN ’00 și MDN ’08
 - **Titlu:** Florin Marcu, *Marele dicționar de neologisme*.
-- **Ediție:** MDN '00 este ediția din 2000, Saeculum I.O., București; MDN '08 este ediția a 10-a, revăzută, augmentată și actualizată.
+- **Ediție:** MDN ’00 este ediția din 2000, Saeculum I.O., București; MDN ’08 este ediția a 10-a, revăzută, augmentată și actualizată.
 - **Statut:** descriptiv. Verifică dacă un neologism sau o formă apare în dicționare.
 - **Ce nu spune:** nu e normă. Se citează pentru existența cuvântului, nu pentru reluarea definițiilor.
 
@@ -120,13 +120,13 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 
 ### Ghid UE
 - **Titlu:** *Ghidul de redactare interinstituțional*, Oficiul pentru Publicații al Uniunii Europene, partea în limba română.
-- **Ediție:** publicat și actualizat continuu pe internet; nu are o ediție tipărită unică. Trimiterile din pachet merg la numerele de paragraf din materialul de lucru.
+- **Ediție:** publicat și actualizat continuu pe internet; nu are o ediție tipărită unică. Trimiterile din pachet merg la numere de paragraf.
 - **Statut:** recomandare, convenții ale actelor instituțiilor UE (spațiul la mii, scrierea numeralelor, monedele, statele din Anexa A5).
 - **Ce nu spune:** nu e normă generală a limbii române și nu se aplică presei sau textelor comerciale. Trimiterile sunt marcate „(nereverificat local)”.
 
 ### IER, *Ghid stilistic de traducere*
 - **Titlu:** Institutul European din România, *Ghid stilistic de traducere în limba română pentru uzul traducătorilor acquis-ului comunitar*.
-- **Ediție:** 2008 (ediția a V-a, după materialul de lucru; neconfirmată independent).
+- **Ediție:** 2008 (ediția a V-a; neconfirmată independent).
 - **Statut:** recomandare, practică de traducere juridică pentru acquis-ul UE.
 - **Ce nu spune:** nu e normă pentru presă sau pentru texte neoficiale. Trimiterile sunt marcate „(nereverificat local)”.
 
@@ -164,7 +164,7 @@ Toate sunt **descriptive**. Susțin o idee sau o metodă, nu fixează norme.
 Patru surse de presă din `tipuri/presa.md` n-au putut fi verificate. Se știe doar ce spune fișierul care le citează. Regulile care le folosesc au nivelul „recomandare”, iar trimiterea e marcată „(nereverificat local)”.
 
 - **Monitorizarea presei IL** (Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, monitorizarea limbii din presa online, 2021–2022; o secțiune 4.4 e citată). Documentul nu a putut fi identificat. **Nu se știe** ce spune la pagină. Statut probabil: descriptiv.
-- **Irimieș**, *Presa de agenție* (L. Irimieș, după materialul de lucru). Lucrarea nu a putut fi identificată. **Nu se știe** ediția sau editura. Statut probabil: recomandare.
+- **Irimieș**, *Presa de agenție* (L. Irimieș). Lucrarea nu a putut fi identificată. **Nu se știe** ediția sau editura. Statut probabil: recomandare.
 - **Ghidul de jurnalism** (citat și ca „ghidjurnalism”): ghid de redactare pentru presă, cu autor și ediție neidentificate. Statut probabil: recomandare.
 - **Ghid de stil API**: ghid de stil atribuit Asociației Presei Independente din Republica Moldova. Un ghid publicat nu a putut fi identificat. Statut probabil: recomandare.
 
@@ -192,7 +192,7 @@ Câmpul „Sursă” poate spune și că regula nu are o sursă externă. Înțe
 
 ## Ce nu este acoperit
 
-- Pentru italiană nu e citată nicio sursă specifică; sensul italian al prietenilor falși din [limbi-sursa/it.md](limbi-sursa/it.md) e marcat „(nereverificat local)”, iar sensul românesc e verificat în DEX '98.
+- Pentru italiană nu e citată nicio sursă specifică; sensul italian al prietenilor falși din [limbi-sursa/it.md](limbi-sursa/it.md) e marcat „(nereverificat local)”, iar sensul românesc e verificat în DEX ’98.
 - Pentru germană, studiile contrastive citate nu au putut fi deschise; regulile din [limbi-sursa/de.md](limbi-sursa/de.md) rămân recomandări.
 - Pentru texte de presă, vezi „Surse de presă (neverificate)”.
-- Cărțile și textul DOOM, ÎOOP sau al exportului dicționarului nu intră în pachet; se citează doar la paragraf, pagină sau cuvânt.
+- Cărțile și textul DOOM, ÎOOP sau al dicționarelor nu intră în pachet; se citează doar la paragraf, pagină sau cuvânt.

@@ -13,7 +13,7 @@ Skill-ul fixează patru alegeri, ca textele să fie consecvente între ele:
 
 Exemplu: „Bugetul a ajuns la 2,5 milioane de euro, adică 12,5% din cele 20 de milioane de euro ale anului trecut. Au participat 1.500 de persoane.”
 
-Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; DOOM 2 = ediția a II-a, 2005; ÎOOP6 = *Îndreptarul ortografic, ortoepic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; CLDR = regulile de plural pentru limba română din Unicode CLDR; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014. Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină vine din materialul de lucru și n-a putut fi verificată pe text local.
+Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; DOOM 2 = ediția a II-a, 2005; ÎOOP6 = *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; CLDR = regulile de plural pentru limba română din Unicode CLDR; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014. Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină n-a putut fi verificată pe text local.
 
 ## 1. „De” după numeral
 
@@ -102,13 +102,13 @@ Bun:
 - Nivel: normă
 - Greșit: „optisprezece” → Corect: „optsprezece”
 - De ce: Numeralele 17 și 18 au structura șapte/opt + spre + zece: „șaptesprezece”, „optsprezece”. Formele „optisprezece”, „optâsprezece” și „șaptisprezece” sunt pronunții greșite. Nu confunda cu variantele admise: „paisprezece/patrusprezece”, „șaisprezece/șasesprezece”, „șaizeci/șasezeci” sunt perechi atestate în dicționare, deci niciuna nu se corectează. Formele populare („unșpe”, „douășunu”) aparțin registrului familiar; nu le schimbi în citat.
-- Sursă: B. Croitor et al., 2014; DOOM 3, s.v. optsprezece, paisprezece; DEX '98, s.v. paisprezece, șaisprezece, șaizeci
+- Sursă: B. Croitor et al., 2014; DOOM 3, s.v. optsprezece, paisprezece; DEX ’98, s.v. paisprezece, șaisprezece, șaizeci
 
 ### RO-NUM-007 Ordinalele cu „cinci” și „opt”
 - Nivel: normă
 - Greșit: „a cincia, al optelea” → Corect: „a cincea, al optulea”
 - De ce: Ordinalele sunt „al cincilea / a cincea” și „al optulea / a opta”. Forma „al optelea” nu există în dicționar.
-- Sursă: DOOM 3, s.v. cincilea, optulea; DEX '98, s.v. cincilea, optulea
+- Sursă: DOOM 3, s.v. cincilea, optulea; DEX ’98, s.v. cincilea, optulea
 
 ### RO-NUM-008 „Douăsprezece” pe lângă substantive feminine
 - Nivel: normă
@@ -206,7 +206,7 @@ Engl. „billion” înseamnă miliard, nu „bilion”: „3 billion dollars”
 - Nivel: recomandare
 - Corect: „o mie de miliarde” (în loc de „un bilion” sau „un trilion”)
 - De ce: Dicționarele dau „bilion” ca „o mie de miliarde” și, în unele țări, ca „miliard”; „trilion” e un miliard de miliarde. Româna nu are o scară numerică fixată de normă. Dincolo de milion și miliard scrii valoarea explicit („o mie de miliarde”) sau eviți cuvintele „bilion” și „trilion”.
-- Sursă: DEX '98, s.v. bilion, trilion; DOOM 3, s.v. bilion (nereverificat local)
+- Sursă: DEX ’98, s.v. bilion, trilion; DOOM 3, s.v. bilion (nereverificat local)
 
 ### RO-NUM-020 În text: cuvinte, nu prescurtări
 - Nivel: recomandare
@@ -314,7 +314,7 @@ Bun:
 - Nivel: recomandare
 - Greșit: „100 de hryvnia” → Corect: „100 de grivne”
 - De ce: Se folosesc numele românești atestate: lira sterlină, francul elvețian, dolarul american, rubla, grivna (pl. grivne), leul moldovenesc, forintul (pl. forinți), zlotul (pl. zloți), yuanul (pl. yuani), won. Formele englezești („pound”) se înlocuiesc. Forma „hryvnia”, folosită într-un tabel al ghidului gov-md, nu apare în dicționarul consultat, deci e o formă dedusă din transliterare; „grivnă” este atestată în dicționare. Propui „grivnă”, nu o impui.
-- Sursă: ghid gov-md §16.4; DOOM 3, s.v. forint, zlot, yuan, grivnă (MDN '00); Ghid UE, Anexa A5 (nereverificat local)
+- Sursă: ghid gov-md §16.4; DOOM 3, s.v. forint, zlot, yuan, grivnă (MDN ’00); Ghid UE, Anexa A5 (nereverificat local)
 
 ## 9. Unități de măsură
 

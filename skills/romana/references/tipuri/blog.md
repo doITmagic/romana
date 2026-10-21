@@ -2,7 +2,7 @@
 
 Profilul acesta se aplică articolelor de blog, eseurilor și textelor de opinie. Aici vocea autorului are loc: persoana I, părerile lui, exemplele lui, un ton mai apropiat de cititor decât în presă. Normele nu se schimbă, iar fidelitatea se aplică întocmai: personalitatea vine de la autor, nu de la tine. Părerile, întâmplările și detaliile personale intră în text doar dacă le ai din sursă sau din cerere. Un text enciclopedic, tehnic sau juridic nu devine blog și rămâne neutru.
 
-Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; DEX '98 = *Dicționar explicativ al limbii române*, 1998; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a treia.
+Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; DEX ’98 = *Dicționar explicativ al limbii române*, 1998; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a treia.
 
 ## Ce se schimbă față de limba literară standard
 
@@ -38,26 +38,26 @@ Fiecare detaliu din varianta bună vine din ce a povestit autorul. Fără ele, v
 ### RO-STI-703 „Foarte” plus adjectiv
 - Nivel: recomandare
 - Greșit: „Cabana era foarte frumoasă.” → Corect: „Cabana avea o terasă cu vedere spre vale.”
-- De ce: „Foarte frumos”, „foarte mare”, „foarte trist” spun că ceva e cum e, fără să arate de ce. Când ai detaliul din sursă (terasa din exemplu e ilustrativă), îl pui în loc. „Foarte” plus adjectiv rămâne corect gramatical (superlativ absolut, DEX '98) și nu se înlocuiește mecanic, mai ales în textul informativ, unde poate însoți un fapt măsurabil („foarte puțin, doar 3%”).
-- Sursă: Mic ghid CE p. 9 (Rec. 7); DEX '98 s.v. foarte
+- De ce: „Foarte frumos”, „foarte mare”, „foarte trist” spun că ceva e cum e, fără să arate de ce. Când ai detaliul din sursă (terasa din exemplu e ilustrativă), îl pui în loc. „Foarte” plus adjectiv rămâne corect gramatical (superlativ absolut, DEX ’98) și nu se înlocuiește mecanic, mai ales în textul informativ, unde poate însoți un fapt măsurabil („foarte puțin, doar 3%”).
+- Sursă: Mic ghid CE p. 9 (Rec. 7); DEX ’98 s.v. foarte
 
 ### RO-STI-704 „Deodată”
 - Nivel: recomandare
 - Greșit: „Mergeam pe stradă și deodată s-a stins lumina.” → Corect: „Mergeam pe stradă. Lumina s-a stins.”
 - De ce: În povestire, „deodată” anunță surpriza în loc s-o construiască. Tensiunea se face prin ordinea faptelor și prin propoziții scurte. Cuvântul e corect (DOOM 3) și își păstrează locul când înseamnă „în același timp” („au vorbit deodată”) sau când textul e informativ.
-- Sursă: DOOM 3 s.v. deodată; DEX '98 s.v. deodată
+- Sursă: DOOM 3 s.v. deodată; DEX ’98 s.v. deodată
 
 ### RO-STI-705 „A învățat o lecție importantă”
 - Nivel: recomandare
 - Greșit: „Din această experiență am învățat o lecție importantă.” → Corect: „De atunci verific două ori fiecare factură.”
-- De ce: Concluzia anunțată („o lecție importantă”) îi ia cititorului deducția. Dacă autorul îți dă ce a învățat, spui asta direct; dacă nu, lași cititorul să deducă. Expresia e corectă (DEX '98, „lecție”) și nu e calc.
-- Sursă: DEX '98 s.v. lecție
+- De ce: Concluzia anunțată („o lecție importantă”) îi ia cititorului deducția. Dacă autorul îți dă ce a învățat, spui asta direct; dacă nu, lași cititorul să deducă. Expresia e corectă (DEX ’98, „lecție”) și nu e calc.
+- Sursă: DEX ’98 s.v. lecție
 
 ### RO-STI-706 Același superlativ repetat
 - Nivel: recomandare
 - Greșit: „Un loc minunat, o echipă minunată, o seară minunată și un meniu minunat.” → Corect: „Un loc liniștit, o echipă atentă, o seară lungă și un meniu cu produse din zonă.”
-- De ce: „Minunat” e un adjectiv corect (DEX '98), dar repetat de mai multe ori se golește de sens. Îl variezi sau, mai bine, îl înlocuiești cu ce se vede. Detaliile din varianta bună trebuie să existe în sursă; altfel variezi doar adjectivul. E o recomandare de stil.
-- Sursă: DEX '98 s.v. minunat
+- De ce: „Minunat” e un adjectiv corect (DEX ’98), dar repetat de mai multe ori se golește de sens. Îl variezi sau, mai bine, îl înlocuiești cu ce se vede. Detaliile din varianta bună trebuie să existe în sursă; altfel variezi doar adjectivul. E o recomandare de stil.
+- Sursă: DEX ’98 s.v. minunat
 
 ### RO-STI-701 Fără rețetele de platformă
 - Nivel: recomandare

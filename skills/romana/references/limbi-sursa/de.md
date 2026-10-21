@@ -2,7 +2,7 @@
 
 Fișierul acesta te ajută când traduci din germană sau când un text românesc păstrează urmele frazei germane: verbul pus la urmă, un lanț de determinanți înaintea substantivului, un compus lăsat cuvânt cu cuvânt. Metoda generală de traducere (sens întâi, apoi formă) e în [en.md](en.md); aici sunt capcanele germanei.
 
-Abrevierile din câmpul „Sursă”: DEX '98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a, 2021; Coteanu = I. Coteanu (coord.), *Gramatica de bază a limbii române*, 1982; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; IER = Institutul European din România, *Ghid stilistic de traducere în limba română pentru uzul traducătorilor acquis-ului comunitar*, 2008 (practică de traducere juridică, nu normă generală); ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026. Studiile contrastive germană–română (Miclea, Dovgan, Nicolae, Avram) sunt descrise în [surse.md](../surse.md). Unde sursa n-a putut fi deschisă la redactare, câmpul se încheie cu „(nereverificat local)”.
+Abrevierile din câmpul „Sursă”: DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a, 2021; Coteanu = I. Coteanu, *Gramatica de bază a limbii române*, 1982; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; IER = Institutul European din România, *Ghid stilistic de traducere în limba română pentru uzul traducătorilor acquis-ului comunitar*, 2008 (practică de traducere juridică, nu normă generală); ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026. Studiile contrastive germană–română (Miclea, Dovgan, Nicolae, Avram) sunt descrise în [surse.md](../surse.md). Unde sursa n-a putut fi deschisă la redactare, câmpul se încheie cu „(nereverificat local)”.
 
 ## Cum folosești fișierul
 
@@ -53,7 +53,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: normă
 - Greșit: „Guvernul a joi, la Berlin, o lege adoptat.” → Corect: „Guvernul a adoptat joi, la Berlin, o lege.”
 - De ce: Germana desparte auxiliarul de participiu printr-o paranteză în care intră circumstanțiale și complemente („Die Regierung hat am Donnerstag in Berlin ein Gesetz beschlossen”). În română auxiliarul rămâne lipit de participiu: aceeași greșeală ca în RO-GRA-180 din [gramatica.md](../gramatica.md), de unde ia și nivelul.
-- Sursă: Coteanu, Gramatica de bază (1982); B. Croitor et al., 2014 (nereverificat local pentru pagină)
+- Sursă: Coteanu, Gramatica de bază (1982), secțiunea nespecificată (nereverificat local); B. Croitor et al., 2014 (nereverificat local pentru pagină)
 
 ### RO-CAL-604 Atributul participial lung (Partizipialattribut)
 - Nivel: recomandare
@@ -76,8 +76,8 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 ### RO-CAL-607 Construcțiile cu verb suport (Funktionsverbgefüge)
 - Nivel: recomandare
 - Greșit: „Măsura a ajuns la aplicare joi.” → Corect: „Măsura a început să se aplice joi.”
-- De ce: Germana leagă un substantiv abstract de un verb aproape gol: „zur Anwendung kommen”, „zur Ausführung gelangen”, „unter Beschuss geraten”. Traduse piesă cu piesă, dau „a ajunge la aplicare”. Româna preferă verbul simplu, cu aspectul din original: „a se aplica” (stare) sau „a începe să se aplice” (început), „a fi executat”, „a fi atacat” sau „a fi criticat”, după context. Locuțiunile românești consacrate rămân: „in Kraft treten” = „a intra în vigoare” (DEX '98). Regula generală e RO-STI-005 din [stilistica.md](../stilistica.md).
-- Sursă: A.-A. Dovgan, 2017 (nereverificat local); DEX '98 s.v. intra
+- De ce: Germana leagă un substantiv abstract de un verb aproape gol: „zur Anwendung kommen”, „zur Ausführung gelangen”, „unter Beschuss geraten”. Traduse piesă cu piesă, dau „a ajunge la aplicare”. Româna preferă verbul simplu, cu aspectul din original: „a se aplica” (stare) sau „a începe să se aplice” (început), „a fi executat”, „a fi atacat” sau „a fi criticat”, după context. Locuțiunile românești consacrate rămân: „in Kraft treten” = „a intra în vigoare” (DEX ’98). Regula generală e RO-STI-005 din [stilistica.md](../stilistica.md).
+- Sursă: A.-A. Dovgan, 2017 (nereverificat local); DEX ’98 s.v. intra
 
 ### RO-CAL-608 Pasivul cu „werden”
 - Nivel: recomandare
@@ -89,7 +89,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: recomandare
 - Corect: „Potrivit poliției, suspectul a fugit.” (pentru „Laut Polizei, ist der Verdächtige geflohen”)
 - De ce: Echivalentul românesc obișnuit al lui „laut” și „zufolge” este „potrivit” sau „conform”. Cazul (dativul, „potrivit poliției”) și construcția cu „cu” sunt tratate în RO-GRA-033 din [gramatica.md](../gramatica.md) și în RO-NUG-022 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md); aici nu se repetă. Atribuirea rămâne la cine a spus.
-- Sursă: DOOM 3 s.v. conform, potrivit; DEX '98 s.v. potrivit, conform
+- Sursă: DOOM 3 s.v. conform, potrivit; DEX ’98 s.v. potrivit, conform
 
 ### RO-CAL-610 „Es gibt” nu se traduce literal
 - Nivel: recomandare
@@ -107,19 +107,19 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: recomandare
 - Greșit: „A spus că ar fi nevinovat.” → Corect: „A spus că e nevinovat.”
 - De ce: În germană Konjunktiv I („Er sagte, er sei unschuldig”) este forma obișnuită a vorbirii indirecte și nu arată îndoiala reporterului. „Ar fi” din română o arată (vezi RO-CAL-601). Redai cu indicativ după „a spune”, „a declara”, iar distanța, dacă originalul o vrea, o spui prin „potrivit lui”, „susține”. Când originalul folosește Konjunktiv II pentru îndoială („er wäre unschuldig”), condiționalul românesc cu sursa numită e corect.
-- Sursă: IER, Ghid stilistic de traducere, §3.3 (nereverificat local); Coteanu, §20 (condiționalul și optativul)
+- Sursă: IER, Ghid stilistic de traducere, §3.3.3 (nereverificat local); Coteanu, §20 (condiționalul și optativul)
 
 ### RO-CAL-613 „Umstritten” despre o cauză sau un fapt
 - Nivel: recomandare
 - Corect: „Cauza este disputată.” (pentru „Die Ursache ist umstritten”)
-- De ce: „Umstritten” spune că despre un fapt există păreri care se bat cap în cap. „Disputat” („care dă naștere la discuții vii, controversate”, DEX '98) îi corespunde. „Contestat” („a nu recunoaște dreptul sau valoarea cuiva sau a ceva”, DEX '98) este tot o formă corectă și nu o corectezi într-un text românesc; se potrivește însă mai bine când cineva atacă ceva anume (o decizie, un rezultat), nu când sursele dau explicații diferite. Dacă originalul numește cine dă care explicație, o spui așa; dacă nu, nu inventezi nume ([fidelitate.md](../fidelitate.md)). Sensul din frază, nu echivalentul din dicționar: RO-CAL-042 din [en.md](en.md).
-- Sursă: DEX '98 s.v. disputat, contesta; regulă de fidelitate a skill-ului
+- De ce: „Umstritten” spune că despre un fapt există păreri care se bat cap în cap. „Disputat” („care dă naștere la discuții vii, controversate”, DEX ’98) îi corespunde. „Contestat” („a nu recunoaște dreptul sau valoarea cuiva sau a ceva”, DEX ’98) este tot o formă corectă și nu o corectezi într-un text românesc; se potrivește însă mai bine când cineva atacă ceva anume (o decizie, un rezultat), nu când sursele dau explicații diferite. Dacă originalul numește cine dă care explicație, o spui așa; dacă nu, nu inventezi nume ([fidelitate.md](../fidelitate.md)). Sensul din frază, nu echivalentul din dicționar: RO-CAL-042 din [en.md](en.md).
+- Sursă: DEX ’98 s.v. disputat, contesta; regulă de fidelitate a skill-ului
 
 ### RO-CAL-614 „Umstritten” despre o măsură sau o persoană
 - Nivel: recomandare
 - Corect: „O măsură controversată.” (pentru „eine umstrittene Maßnahme”)
-- De ce: Despre o măsură sau o persoană care stârnește dispute, „umstritten” se traduce firesc prin „controversat” (DEX '98: „în privința căruia există o controversă”). „Contestat” este corect și rămâne într-un text românesc fără original german, mai ales când cineva a atacat formal măsura (de exemplu în instanță); alegerea ține de context.
-- Sursă: DEX '98 s.v. controversat, contesta
+- De ce: Despre o măsură sau o persoană care stârnește dispute, „umstritten” se traduce firesc prin „controversat” (DEX ’98: „în privința căruia există o controversă”). „Contestat” este corect și rămâne într-un text românesc fără original german, mai ales când cineva a atacat formal măsura (de exemplu în instanță); alegerea ține de context.
+- Sursă: DEX ’98 s.v. controversat, contesta
 
 ### RO-CAL-615 „An Bahnhöfen in drei Ländern”: nehotărârea originalului se păstrează
 - Nivel: ce nu e greșeală
@@ -137,19 +137,19 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: recomandare
 - Greșit: „Bundestag-ul a votat, iar Bundesrat-ul a confirmat.” → Corect: „Bundestagul a votat, iar Bundesratul a confirmat.”
 - De ce: Finala „-g” și „-t” se citește ca în română, deci articolul se leagă fără cratimă (RO-IMP-004 din [imprumuturi.md](../imprumuturi.md)). Formele „Bundestagul”, „Landtagul”, „Bundesratul” apar în datele de flexiune ale dicționarelor locale (cuvântul „Landtag” e în DOOM 3).
-- Sursă: ghid gov-md §9.11.4; MDN '00 s.v. bundestag, landtag, bundesrat
+- Sursă: ghid gov-md §9.11.4; MDN ’00 s.v. bundestag, landtag, bundesrat
 
 ### RO-CAL-618 „Bundesländer”: „landuri”
 - Nivel: recomandare
 - Greșit: „Cele șaisprezece Bundesländer, numite uneori «state federale», au semnat acordul.” → Corect: „Cele șaisprezece landuri au semnat acordul.”
-- De ce: Termenul românesc e „land”, pluralul „landuri”, substantiv neutru: „provincie autonomă în organizarea administrativă a Austriei și a Germaniei” (DEX '98). Folosești un singur termen în tot textul. La prima apariție poți da originalul în paranteză (RO-CAL-504 din [en.md](en.md)). „State federale” nu se amestecă cu „landuri” pentru aceleași entități.
-- Sursă: DEX '98 s.v. land; DOOM 3 s.v. land
+- De ce: Termenul românesc e „land”, pluralul „landuri”, substantiv neutru: „provincie autonomă în organizarea administrativă a Austriei și a Germaniei” (DEX ’98). Folosești un singur termen în tot textul. La prima apariție poți da originalul în paranteză (RO-CAL-504 din [en.md](en.md)). „State federale” nu se amestecă cu „landuri” pentru aceleași entități.
+- Sursă: DEX ’98 s.v. land; DOOM 3 s.v. land
 
 ### RO-CAL-619 Funcțiile germane se traduc și se scriu cu literă mică
 - Nivel: recomandare
 - Greșit: „Bundeskanzler Merz” → Corect: „cancelarul federal Merz”
-- De ce: Numele funcției rămâne substantiv comun, tradus și scris cu literă mică, în orice țară ar fi exercitată (RO-TIP-086 din [tipografie.md](../tipografie.md)). „Cancelar federal” = „șeful guvernului în Austria și în Germania” (DEX '98). Nu adaugi prenumele pe care originalul nu îl are. Pentru „Ministerpräsident” (șeful guvernului unui land) spui „prim-ministrul landului”, cu numele landului.
-- Sursă: DEX '98 s.v. cancelar; DOOM 3 s.v. prim-ministru
+- De ce: Numele funcției rămâne substantiv comun, tradus și scris cu literă mică, în orice țară ar fi exercitată (RO-TIP-086 din [tipografie.md](../tipografie.md)). „Cancelar federal” = „șeful guvernului în Austria și în Germania” (DEX ’98). Nu adaugi prenumele pe care originalul nu îl are. Pentru „Ministerpräsident” (șeful guvernului unui land) spui „prim-ministrul landului”, cu numele landului.
+- Sursă: DEX ’98 s.v. cancelar; DOOM 3 s.v. prim-ministru
 
 ### RO-CAL-620 Conceptele fără echivalent: descrierea românească, cu originalul la prima apariție
 - Nivel: recomandare

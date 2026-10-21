@@ -2,11 +2,11 @@
 
 Profilul acesta se aplică butoanelor, meniurilor, titlurilor, mesajelor, notificărilor, etichetelor și șirurilor de traducere dintr-o aplicație sau dintr-un site. Textul de interfață e scurt, e citit în trecere, apare adesea ca șir izolat, fără contextul din jur, și primește valori inserate automat (nume, numere, date). De aceea forma lui verbală depinde de tipul de text, valorile inserate nu primesc articol sau desinență, pluralul se scrie cu trei forme, iar etichetele se acordă cu ce descriu. Normele limbii nu se schimbă.
 
-Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a treia; DEX '98 = *Dicționar explicativ al limbii române*, 1998; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mozilla RO = ghidul de localizare în limba română al Mozilla, care fixează convenții de uz, nu norme ale limbii (nereverificat local); CLDR = regulile de plural pentru română din datele de localizare Unicode CLDR; ICU = formatul de mesaje ICU MessageFormat; gettext = formula de plural GNU gettext.
+Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a treia; DEX ’98 = *Dicționar explicativ al limbii române*, 1998; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mozilla RO = ghidul de localizare în limba română al Mozilla, care fixează convenții de uz, nu norme ale limbii (nereverificat local); CLDR = regulile de plural pentru română din datele de localizare Unicode CLDR; ICU = formatul de mesaje ICU MessageFormat; gettext = formula de plural GNU gettext.
 
 ## Cum citești perechile
 
-La o recomandare, forma din „Greșit” e forma de evitat, nu neapărat o greșeală de limbă. Dacă forma e corectă (RO-INT-013, 022, 025, 058), regula o spune în „De ce” și nu o corectezi, ci o propui. Doar nivelul „normă” cere corectare.
+La o recomandare, forma din „Greșit” e forma de evitat, nu neapărat o greșeală de limbă. Dacă forma e corectă (RO-INT-013, 022, 025, 057, 058), regula o spune în „De ce” și nu o corectezi, ci o propui. Doar nivelul „normă” cere corectare.
 
 ## Ce se schimbă față de limba literară standard
 
@@ -43,7 +43,7 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 - Nivel: recomandare
 - Greșit: „Ești sigur că vrei să ștergi acest semn de carte?” → Corect: „Sigur dorești să ștergi acest semn de carte?”
 - De ce: Genul utilizatorului nu se cunoaște, iar adjectivul „sigur” din „ești sigur” se acordă cu el. Folosit ca adverb, „sigur” e invariabil („cu siguranță”), deci propoziția rămâne corectă pentru orice utilizator. Masculinul generic nu e o greșeală gramaticală; formularea neutră e o recomandare.
-- Sursă: DEX '98 s.v. sigur
+- Sursă: DEX ’98 s.v. sigur
 
 ## Forma verbală pe tipuri de șir
 
@@ -100,19 +100,19 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 - Nivel: recomandare
 - Greșit: „Salvare de succes” → Corect: „Modificări salvate”
 - De ce: Mesajul de finalizare se formulează cu participiul: „Modificări salvate”, „Plată efectuată”. „De succes” e corect în sensul „care are succes” („afacere de succes”), deci nu se corectează în afara mesajelor de stare.
-- Sursă: DEX '98 s.v. succes
+- Sursă: DEX ’98 s.v. succes
 
 ### RO-INT-036 „Cu succes” ca umplutură
 - Nivel: recomandare
 - Greșit: „Modificările au fost salvate cu succes.” → Corect: „Modificările au fost salvate.”
 - De ce: Dacă mesajul apare după reușită, „cu succes” nu adaugă nimic. E o preferință de concizie: locuțiunea nu e greșită și rămâne firească unde reușita nu reiese din context („a absolvit cu succes”). Despre „Încărcare reușită” vezi RO-NUG-090 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md).
-- Sursă: DEX '98 s.v. succes
+- Sursă: DEX ’98 s.v. succes
 
 ### RO-INT-058 „Operațiune completă”
 - Nivel: recomandare
 - Greșit: „Operațiune completă” → Corect: „Operațiune finalizată”
-- De ce: „Operațiune completă” nu e greșeală: DEX '98 dă pentru „complet” sinonimele „întreg, desăvârșit, deplin, împlinit”, deci se poate înțelege și „împlinită”. Pentru engl. „operation complete” sensul „terminată” e mai clar cu „finalizată”, „încheiată” sau „Gata”. Pentru verbul „a completa” vezi RO-CAL-058 din [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md).
-- Sursă: DEX '98 s.v. complet
+- De ce: „Operațiune completă” nu e greșeală: DEX ’98 dă pentru „complet” sinonimele „întreg, desăvârșit, deplin, împlinit”, deci se poate înțelege și „împlinită”. Pentru engl. „operation complete” sensul „terminată” e mai clar cu „finalizată”, „încheiată” sau „Gata”. Pentru verbul „a completa” vezi RO-CAL-058 din [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md).
+- Sursă: DEX ’98 s.v. complet
 
 ### RO-INT-025 Starea goală
 - Nivel: recomandare
@@ -130,7 +130,7 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 - Nivel: recomandare
 - Greșit: „S-a întâmplat ceva prost.” → Corect: „A apărut o problemă. Încearcă din nou peste câteva minute.”
 - De ce: Un mesaj de eroare spune ce s-a întâmplat și ce urmează. „S-a întâmplat ceva prost” e corect (RO-NUG-113 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)); aici propui doar o formulare mai utilă, nu o corectezi ca greșeală.
-- Sursă: DEX '98 s.v. problemă; Mic ghid CE p. 4 (Rec. 2)
+- Sursă: DEX ’98 s.v. problemă; Mic ghid CE p. 4 (Rec. 2)
 
 ### RO-INT-038 Eroarea are predicat și pasul următor
 - Nivel: recomandare
@@ -160,27 +160,27 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 - Nivel: recomandare
 - Greșit: „Drag-and-drop fișierul aici” → Corect: „Trage și plasează fișierul aici”
 - De ce: Cu „tu”: „Trage și plasează”; cu „dumneavoastră”: „Trageți și plasați”. Ambele verbe sunt în dicționar (DOOM 3 are „trage” și „plasa”), iar formele de imperativ sunt corecte.
-- Sursă: DOOM 3 s.v. trage, plasa; DEX '98 s.v. trage
+- Sursă: DOOM 3 s.v. trage, plasa; DEX ’98 s.v. trage
 
 ### RO-INT-027 „Cancel”: „Renunță” sau „Anulează”
 - Nivel: recomandare
 - Greșit: „Cancel” → Corect: „Renunță”
 - De ce: Alegerea „Renunță” este o convenție de terminologie (Mozilla RO o alege pentru consecvență), nu o normă. „Anulează” sau „Anulare” e la fel de corect și nu se marchează ca greșeală. Alegi o formă și o ții în tot produsul.
-- Sursă: Mozilla RO (uz, nu normă); DEX '98 s.v. renunța, anula
+- Sursă: Mozilla RO (uz, nu normă); DEX ’98 s.v. renunța, anula
 
 ### RO-INT-028 „Toggle”
 - Nivel: recomandare
 - Greșit: „Toggle modul întunecat” → Corect: „Comută modul întunecat”
-- De ce: „A comuta” e verbul din DOOM 3 și din DEX '98 cu sensul tehnic de a schimba conexiunea sau starea; extinderea la starea unei opțiuni din interfață e firească. „Toggle” nu e în dicționare.
-- Sursă: DOOM 3 s.v. comuta; DEX '98 s.v. comuta
+- De ce: „A comuta” e verbul din DOOM 3 și din DEX ’98 cu sensul tehnic de a schimba conexiunea sau starea; extinderea la starea unei opțiuni din interfață e firească. „Toggle” nu e în dicționare.
+- Sursă: DOOM 3 s.v. comuta; DEX ’98 s.v. comuta
 
 ## Termeni de interfață
 
 ### RO-INT-001 „Share”: „partajează”
 - Nivel: recomandare
 - Greșit: „Împărtășește fișierul cu echipa.” → Corect: „Partajează fișierul cu echipa.”
-- De ce: Pentru resurse (fișiere, linkuri, ecran), „partajează” e echivalentul uzual din localizare. DEX '98 dă pentru „partaja” doar sensul juridic („a efectua un partaj”), deci sensul informatic e o extensie de terminologie. Pentru opinii, experiențe sau sentimente, „împărtășește” rămâne corect.
-- Sursă: DOOM 3 s.v. partaja; DEX '98 s.v. partaja, împărtăși
+- De ce: Pentru resurse (fișiere, linkuri, ecran), „partajează” e echivalentul uzual din localizare. DEX ’98 dă pentru „partaja” doar sensul juridic („a efectua un partaj”), deci sensul informatic e o extensie de terminologie. Pentru opinii, experiențe sau sentimente, „împărtășește” rămâne corect.
+- Sursă: DOOM 3 s.v. partaja; DEX ’98 s.v. partaja, împărtăși
 
 ### RO-INT-002 „Menu bar”: „bară de meniu”
 - Nivel: recomandare
@@ -191,38 +191,38 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 ### RO-INT-003 „Help”: „Asistență”
 - Nivel: recomandare
 - Greșit: „Help” → Corect: „Asistență”
-- De ce: „Asistență” are în DEX '98 sensul „sprijin, ajutor”, deci se potrivește. „Ajutor” e la fel de corect.
-- Sursă: DEX '98 s.v. asistență; Mozilla RO (uz, nu normă)
+- De ce: „Asistență” are în DEX ’98 sensul „sprijin, ajutor”, deci se potrivește. „Ajutor” e la fel de corect.
+- Sursă: DEX ’98 s.v. asistență; Mozilla RO (uz, nu normă)
 
 ### RO-INT-004 „Breadcrumbs”: „rută de navigare”
 - Nivel: recomandare
 - Greșit: „breadcrumbs” → Corect: „rută de navigare”
-- De ce: „Rută” e în DOOM 3 și în DEX '98 cu sensul „drum”, deci „rută de navigare” se formează corect și se înțelege. Alte echivalente descriptive nu se marchează ca greșeli.
-- Sursă: DOOM 3 s.v. rută; DEX '98 s.v. rută; Mozilla RO (uz, nu normă)
+- De ce: „Rută” e în DOOM 3 și în DEX ’98 cu sensul „drum”, deci „rută de navigare” se formează corect și se înțelege. Alte echivalente descriptive nu se marchează ca greșeli.
+- Sursă: DOOM 3 s.v. rută; DEX ’98 s.v. rută; Mozilla RO (uz, nu normă)
 
 ### RO-INT-005 „Bold”: „aldin”
 - Nivel: recomandare
 - Greșit: „Text bold” → Corect: „Text aldin”
-- De ce: „Aldin” e termenul tipografic românesc (DEX '98: caracter cu conturul mai gros, „gras”). „Bold” nu e greșit: DOOM 3 are intrarea nouă „bold” pentru font (vezi RO-IMP-048 din [imprumuturi.md](../imprumuturi.md)). În interfață propui „aldin”.
-- Sursă: DOOM 3 s.v. bold, aldin; DEX '98 s.v. aldin
+- De ce: „Aldin” e termenul tipografic românesc (DEX ’98: caracter cu conturul mai gros, „gras”). „Bold” nu e greșit: DOOM 3 are intrarea nouă „bold” pentru font (vezi RO-IMP-048 din [imprumuturi.md](../imprumuturi.md)). În interfață propui „aldin”.
+- Sursă: DOOM 3 s.v. bold, aldin; DEX ’98 s.v. aldin
 
 ### RO-INT-006 „Timer”: „cronometru”
 - Nivel: recomandare
 - Greșit: „Setează temporizatorul” → Corect: „Setează cronometrul”
-- De ce: În dicționare, „temporizator” este doar adjectiv, „care tărăgănează” (DEX '98), deci substantivul nu are bază lexicografică. „Cronometru” e instrumentul care măsoară timpul (DEX '98). Pentru numărătoarea inversă precizezi din context („cronometru cu numărătoare inversă”).
-- Sursă: DOOM 3 și DEX '98 s.v. temporizator, cronometru; Mozilla RO (uz, nu normă)
+- De ce: În dicționare, „temporizator” este doar adjectiv, „care tărăgănează” (DEX ’98), deci substantivul nu are bază lexicografică. „Cronometru” e instrumentul care măsoară timpul (DEX ’98). Pentru numărătoarea inversă precizezi din context („cronometru cu numărătoare inversă”).
+- Sursă: DOOM 3 și DEX ’98 s.v. temporizator, cronometru; Mozilla RO (uz, nu normă)
 
 ### RO-INT-007 „Sign in”: „Autentificare”, nu „Înregistrare”
 - Nivel: recomandare
 - Greșit: „Înregistrare” → Corect: „Autentificare”
-- De ce: „A înregistra” înseamnă „a înscrie într-un registru” (DEX '98), adică a crea un cont, nu a intra într-unul existent. Pentru „sign in” spui „Autentificare” sau „Autentifică-te”. Greșeala apare când butonul „Înregistrare” deschide un cont existent. Sensul „a intra în cont” nu e în DEX '98 pentru „autentificare”, deci regula e o convenție de terminologie. Judeci după ce face butonul, nu după etichetă; dacă nu știi ce face, întrebi.
-- Sursă: DEX '98 s.v. înregistra; Mozilla RO (uz, nu normă)
+- De ce: „A înregistra” înseamnă „a înscrie într-un registru” (DEX ’98), adică a crea un cont, nu a intra într-unul existent. Pentru „sign in” spui „Autentificare” sau „Autentifică-te”. Greșeala apare când butonul „Înregistrare” deschide un cont existent. Sensul „a intra în cont” nu e în DEX ’98 pentru „autentificare”, deci regula e o convenție de terminologie. Judeci după ce face butonul, nu după etichetă; dacă nu știi ce face, întrebi.
+- Sursă: DEX ’98 s.v. înregistra; Mozilla RO (uz, nu normă)
 
 ### RO-INT-008 „Sign up”: „Înregistrare” sau „Creează un cont”, nu „Autentificare”
 - Nivel: recomandare
 - Greșit: „Autentificare” → Corect: „Creează un cont”
-- De ce: „A autentifica” înseamnă „a legaliza, a face autentic” (DEX '98), adică a confirma o identitate. Greșeala apare pe butonul care creează un cont nou: „autentificarea” nu denumește crearea unui cont, pentru care se spune „Înregistrare” sau „Creează un cont”.
-- Sursă: DEX '98 s.v. autentifica, înregistra; Mozilla RO (uz, nu normă)
+- De ce: „A autentifica” înseamnă „a legaliza, a face autentic” (DEX ’98), adică a confirma o identitate. Greșeala apare pe butonul care creează un cont nou: „autentificarea” nu denumește crearea unui cont, pentru care se spune „Înregistrare” sau „Creează un cont”.
+- Sursă: DEX ’98 s.v. autentifica, înregistra; Mozilla RO (uz, nu normă)
 
 ### RO-INT-009 Sensul se deduce din context, nu din cuvânt
 - Nivel: recomandare
@@ -251,14 +251,14 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 ### RO-INT-018 „Funcționalitate” sau „funcție”
 - Nivel: recomandare
 - Greșit: „o nouă funcționalitate” → Corect: „o funcție nouă”
-- De ce: „Funcționalitate” e un cuvânt corect (DOOM 3, DEX '98 – „calitatea de a fi funcțional”) și nu se condamnă. În interfață, „funcție” e mai scurt și mai obișnuit.
-- Sursă: DOOM 3 s.v. funcționalitate; DEX '98 s.v. funcționalitate
+- De ce: „Funcționalitate” e un cuvânt corect (DOOM 3, DEX ’98 – „calitatea de a fi funcțional”) și nu se condamnă. În interfață, „funcție” e mai scurt și mai obișnuit.
+- Sursă: DOOM 3 s.v. funcționalitate; DEX ’98 s.v. funcționalitate
 
 ### RO-INT-053 „+3 mai multe”
 - Nivel: recomandare
 - Greșit: „+3 mai multe” → Corect: „încă 3”
-- De ce: Calcul după engl. „+3 more”. „Încă” înseamnă în DEX '98 „în plus, pe deasupra” („Au venit încă două persoane”), exact structura necesară: „încă 3 fișiere”. Substantivul se acordă după regula pluralului (vezi mai jos).
-- Sursă: DEX '98 s.v. încă
+- De ce: Calcul după engl. „+3 more”. „Încă” înseamnă în DEX ’98 „în plus, pe deasupra” („Au venit încă două persoane”), exact structura necesară: „încă 3 fișiere”. Substantivul se acordă după regula pluralului (vezi mai jos).
+- Sursă: DEX ’98 s.v. încă
 
 ### RO-INT-055 Tastele de acces
 - Nivel: recomandare

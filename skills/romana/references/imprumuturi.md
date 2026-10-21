@@ -4,7 +4,7 @@ Fișierul acesta privește forma cuvintelor împrumutate: cum le articulezi și 
 
 Un cuvânt nu e greșit doar pentru că e englezesc. DOOM 3 a înregistrat multe împrumuturi recente („browser”, „spam”, „a downloada”, „a focusa”), iar acestea sunt corecte (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). Problema apare în trei cazuri: forma e scrisă greșit, forma nu e atestată și e prezentată ca sigură, sau cuvântul străin ia locul unui cuvânt românesc la fel de clar.
 
-Abrevierile din câmpul „Sursă”: ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DN = *Dicționar de neologisme*; MDN '00 și MDN '08 = *Marele dicționar de neologisme*; DEX '09 = *Dicționarul explicativ al limbii române*, ediția a II-a revăzută și adăugită; MDA2 = *Micul dicționar academic*, ediția a II-a; DCR2 = *Dicționar de cuvinte recente*, ediția a II-a.
+Abrevierile din câmpul „Sursă”: ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DN = *Dicționar de neologisme*; MDN ’00 și MDN ’08 = *Marele dicționar de neologisme*; DEX ’09 = *Dicționarul explicativ al limbii române*, ediția a II-a revăzută și adăugită; MDA2 = *Micul dicționar academic*, ediția a II-a; DCR2 = *Dicționar de cuvinte recente*, ediția a II-a.
 
 ## 1. Articolul și pluralul: cu cratimă sau fără
 
@@ -48,12 +48,12 @@ Surse pentru metodă: ghid gov-md §9.11.4, §9.11.5 și §7.2.3; INJ p. 102.
 ### RO-IMP-001 Siglele și abrevierile primesc articolul și pluralul prin cratimă
 - Nivel: normă
 - Greșit: „Am primit trei CVuri și două SMSuri.” → Corect: „Am primit trei CV-uri și două SMS-uri.”
-- De ce: Siglele și abrevierile folosite ca substantive se articulează și se pun la plural cu cratimă: „ONG-uri”, „CV-ul”, „SMS-uri”, „pH-ul”, „TVA-ul”, „PR-ul”. Cratima le desparte de terminație și lasă sigla ușor de recunoscut.
+- De ce: Siglele și abrevierile folosite ca substantive se articulează și se pun la plural cu cratimă: „ONG-uri”, „CV-ul”, „SMS-uri”, „pH-ul”, „TVA-ul”, „PR-ul”. Cratima le desparte de terminație și lasă sigla ușor de recunoscut. Sigla poate rămâne și neflexionată, cu un cuvânt-reper (RO-GRA-094 din [gramatica.md](gramatica.md)).
 - Sursă: DOOM 3 s.v. CV, SMS, ONG; ghid gov-md §5.2.2.3 și §9.11.5
 
 ## 2. Forme atestate și forme deduse
 
-O formă e **atestată** când apare într-un dicționar; reperul normativ e DOOM 3. O formă e **dedusă** când DOOM 3 nu are cuvântul, iar articolul și pluralul nu apar într-un dicționar normativ și se construiesc după regula din secțiunea 1; cuvântul poate fi totuși înregistrat într-un dicționar de neologisme (cazul lui „update”, din MDN '00). O formă dedusă nu se impune ca normă:
+O formă e **atestată** când apare într-un dicționar; reperul normativ e DOOM 3. O formă e **dedusă** când DOOM 3 nu are cuvântul, iar articolul și pluralul nu apar într-un dicționar normativ și se construiesc după regula din secțiunea 1; cuvântul poate fi totuși înregistrat într-un dicționar de neologisme (cazul lui „update”, din MDN ’00). O formă dedusă nu se impune ca normă:
 
 - la redactare o folosești doar dacă termenul e necesar; altfel alegi un cuvânt românesc;
 - în corectură și în verificare propui forma dedusă, nu o corectezi ca greșeală de normă, și spui că e dedusă;
@@ -72,8 +72,8 @@ Regulile de mai jos sunt împărțite în două: întâi formele atestate, apoi 
 ### RO-IMP-011 E-mail, e-mailul, e-mailuri
 - Nivel: normă
 - Greșit: „Am trimis un email cu factura.” → Corect: „Am trimis un e-mail cu factura.”
-- De ce: Mesajul electronic se scrie „e-mail”, cu cratimă în interior; articolul și pluralul se leagă direct: „e-mailul”, „e-mailuri”, nu „e-mail-ul”. „Email”, fără cratimă, e alt cuvânt: un strat sticlos care protejează metalul sau ceramica, adică smalț, glazură (DEX '98).
-- Sursă: DOOM 3 s.v. e-mail; DEX '98 s.v. email; ghid gov-md §7.2.3
+- De ce: Mesajul electronic se scrie „e-mail”, cu cratimă în interior; articolul și pluralul se leagă direct: „e-mailul”, „e-mailuri”, nu „e-mail-ul”. „Email”, fără cratimă, e alt cuvânt: un strat sticlos care protejează metalul sau ceramica, adică smalț, glazură (DEX ’98).
+- Sursă: DOOM 3 s.v. e-mail; DEX ’98 s.v. email; ghid gov-md §7.2.3
 
 ### RO-IMP-012 OK, cu majuscule
 - Nivel: normă
@@ -102,8 +102,8 @@ Regulile de mai jos sunt împărțite în două: întâi formele atestate, apoi 
 ### RO-IMP-024 Weekend, weekenduri
 - Nivel: normă
 - Greșit: „Livrăm și în week-end-uri.” → Corect: „Livrăm și în weekenduri.”
-- De ce: DOOM 3 scrie „weekend”, legat, cu pluralul „weekenduri” (la fel și DOOM 2). „Week-end”, cu pluralul „week-end-uri”, e forma din DEX '98, ieșită din normă; după DOOM 3, cratima înaintea desinenței nu mai e corectă.
-- Sursă: DOOM 3 s.v. weekend; DEX '98 s.v. week-end
+- De ce: DOOM 3 scrie „weekend”, legat, cu pluralul „weekenduri” (la fel și DOOM 2). „Week-end”, cu pluralul „week-end-uri”, e forma din DEX ’98, ieșită din normă; după DOOM 3, cratima înaintea desinenței nu mai e corectă.
+- Sursă: DOOM 3 s.v. weekend; DEX ’98 s.v. week-end
 
 ### RO-IMP-028 Feedback, pattern, sprint, business
 - Nivel: normă
@@ -142,7 +142,7 @@ Cuvintele din regulile următoare nu sunt în DOOM 3, iar formele lor articulate
 ### RO-IMP-017 Codebase, queue, update: cu cratimă (forme deduse)
 - Nivel: recomandare
 - Greșit: „Am curățat codebaseul și am golit queueul.” → Corect: „Am curățat codebase-ul și am golit queue-ul.”
-- De ce: Forme deduse. Finala scrisă nu se pronunță („e” și „ue” sunt mute), deci articolul se leagă prin cratimă, ca la modelele atestate „site-ul” și „barbecue-ul”. „Update” e înregistrat în MDN '00, iar paradigma lexemului din dicționarele consultate dă „update-ul” și „update-uri”, cu cratimă, dar niciun dicționar normativ nu le atestă: DOOM 3 nu are cuvântul (are doar verbul „a updata”). De aceea „update-ul” se tratează ca formă dedusă, după regula din secțiunea 1, care dă același rezultat. Pentru publicul larg propui „baza de cod”, „coada de așteptare”, „actualizarea”.
+- De ce: Forme deduse. Finala scrisă nu se pronunță („e” și „ue” sunt mute), deci articolul se leagă prin cratimă, ca la modelele atestate „site-ul” și „barbecue-ul”. „Update” e înregistrat în MDN ’00, iar paradigma lexemului din dicționarele consultate dă „update-ul” și „update-uri”, cu cratimă, dar niciun dicționar normativ nu le atestă: DOOM 3 nu are cuvântul (are doar verbul „a updata”). De aceea „update-ul” se tratează ca formă dedusă, după regula din secțiunea 1, care dă același rezultat. Pentru publicul larg propui „baza de cod”, „coada de așteptare”, „actualizarea”.
 - Sursă: DOOM 3 s.v. site, barbecue (modelele)
 
 ## 3. Prefixele și compusele
@@ -170,7 +170,7 @@ Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
 - Nivel: normă
 - Greșit: „Exministrul susține o politică proUE.” → Corect: „Ex-ministrul susține o politică pro-UE.”
 - De ce: Prefixul „ex-” cu sensul „fost” se leagă prin cratimă („ex-ministru”, „ex-director”). Tot cu cratimă se scrie prefixul pus înaintea unei sigle, a unui nume propriu sau a unui an: „pro-UE”, „non-UE”, „anti-NATO”, „post-’89”. Fără cratimă, sigla sau numele nu se mai recunoaște. Excepțiile acestea nu se extind la derivatele obișnuite: „postbelic”, „proeuropean”, „nonprofit”.
-- Sursă: DEX '98 s.v. ex-ministru; ghid gov-md §6.2.1 și §6.2.2; INJ p. 102
+- Sursă: DEX ’98 s.v. ex-ministru; ghid gov-md §6.2.1 și §6.2.2; INJ p. 102
 
 ### RO-IMP-051 Prefixul îl arată dicționarul: „neguvernamental”
 - Nivel: normă
@@ -181,25 +181,25 @@ Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
 ### RO-IMP-045 Online și offline, legat
 - Nivel: normă
 - Greșit: „Magazinul vinde on-line și off-line.” → Corect: „Magazinul vinde online și offline.”
-- De ce: DOOM 3 scrie legat „online” și „offline”. „On-line” și „off-line” sunt formele din DEX '09 și MDN '00; DOOM 2 le admitea ca variante alături de „online” și „offline”, iar DOOM 3 păstrează doar formele legate.
+- De ce: DOOM 3 scrie legat „online” și „offline”. „On-line” și „off-line” sunt formele din DEX ’09 și MDN ’00; DOOM 2 le admitea ca variante alături de „online” și „offline”, iar DOOM 3 păstrează doar formele legate.
 - Sursă: DOOM 3 s.v. online, offline
 
 ### RO-IMP-050 „Mega-” se scrie legat
 - Nivel: normă
 - Greșit: „Primăria a anunțat un mega proiect de reabilitare.” → Corect: „Primăria a anunțat un megaproiect de reabilitare.”
 - De ce: „Mega-” e element de compunere și se leagă de cuvânt: DOOM 3 are „megastar” și „megahit”, iar „megaproiect” apare într-un dicționar de neologisme. „Mega” singur, cu valoare de adjectiv sau de adverb („mega bun”), nu e în DOOM 3 și apare doar în dicționarul de argou; în textul neutru propui „foarte bun”.
-- Sursă: DOOM 3 s.v. megastar, megahit; MDN '08 s.v. megaproiect
+- Sursă: DOOM 3 s.v. megastar, megahit; MDN ’08 s.v. megaproiect
 
 ### RO-IMP-010 „Cvasi” nu se leagă prin cratimă
 - Nivel: normă
 - Greșit: „Cele două descrieri sunt cvasi-identice.” → Corect: „Cele două descrieri sunt cvasiidentice.”
-- De ce: DOOM 3 scrie legat compusele cu „cvasi-”: „cvasitotalitate”, „cvasiunanim”, „cvasinormal”. DEX '98 îl dă și ca adverb livresc, care precede adjectivele, deci scris separat (aici „cvasi identice” ar fi la fel de corect). Cratima nu apare în niciuna dintre forme. „Cvasiidentice” lipsește din dicționare, deci e o formă dedusă, după modelul atestat „cvasiunanim”. În textul neutru poți propune „aproape identice”.
-- Sursă: DOOM 3 s.v. cvasitotalitate, cvasiunanim, cvasinormal; DEX '98 s.v. cvasi; ghid gov-md §6.1
+- De ce: DOOM 3 scrie legat compusele cu „cvasi-”: „cvasitotalitate”, „cvasiunanim”, „cvasinormal”. DEX ’98 îl dă și ca adverb livresc, care precede adjectivele, deci scris separat (aici „cvasi identice” ar fi la fel de corect). Cratima nu apare în niciuna dintre forme. „Cvasiidentice” lipsește din dicționare, deci e o formă dedusă, după modelul atestat „cvasiunanim”. În textul neutru poți propune „aproape identice”.
+- Sursă: DOOM 3 s.v. cvasitotalitate, cvasiunanim, cvasinormal; DEX ’98 s.v. cvasi; ghid gov-md §6.1
 
 ### RO-IMP-009 Termen-limită, cuvânt-cheie
 - Nivel: normă
 - Greșit: „Termenul limită pentru înscriere e vineri.” → Corect: „Termenul-limită pentru înscriere e vineri.”
-- De ce: Compusele în care al doilea substantiv îl caracterizează pe primul se scriu cu cratimă: „termen-limită” (plural „termene-limită”), „cuvânt-cheie” („cuvinte-cheie”), „situație-limită”. Se articulează și se pune la plural doar primul termen.
+- De ce: Compusele în care al doilea substantiv îl caracterizează pe primul se scriu cu cratimă: „termen-limită” (plural „termene-limită”), „cuvânt-cheie” („cuvinte-cheie”), „situație-limită”. Se articulează și se pune la plural doar primul termen. Regula generală a compuselor cu cratimă e RO-GRA-082 din [gramatica.md](gramatica.md).
 - Sursă: DOOM 3 s.v. termen-limită, cuvânt-cheie, situație-limită; ghid gov-md §6.2.3
 
 ## 4. Împrumutul de care nu e nevoie
@@ -229,8 +229,8 @@ Surse pentru metodă: ghid gov-md §1.1; INJ p. 60; DSL, s.v. BARBARISM; B. Croi
 ### RO-IMP-049 Jargonul englezesc într-un text pentru publicul larg
 - Nivel: recomandare
 - Greșit: „Versiunea nouă aduce câteva fix-uri pentru useri.” → Corect: „Versiunea nouă aduce câteva remedieri pentru utilizatori.”
-- De ce: „Fix” cu sensul „remediere” și „user” nu sunt în dicționarele consultate; forma „ușer” din dicționare e alt cuvânt, un dregător de la curtea domnească (DEX '98). Pentru specialiști, jargonul poate rămâne; pentru publicul larg propui „remediere” și „utilizator”.
-- Sursă: DEX '98 s.v. ușer; ghid gov-md §1.1
+- De ce: „Fix” cu sensul „remediere” și „user” nu sunt în dicționarele consultate; forma „ușer” din dicționare e alt cuvânt, un dregător de la curtea domnească (DEX ’98). Pentru specialiști, jargonul poate rămâne; pentru publicul larg propui „remediere” și „utilizator”.
+- Sursă: DEX ’98 s.v. ușer; ghid gov-md §1.1
 
 ### RO-IMP-039 „Best-effort”
 - Nivel: recomandare
@@ -259,14 +259,14 @@ Surse pentru metodă: ghid gov-md §1.1; INJ p. 60; DSL, s.v. BARBARISM; B. Croi
 ### RO-IMP-047 „A eleva” pentru engl. „to elevate”
 - Nivel: recomandare
 - Greșit: „Designul nou elevează experiența utilizatorilor.” → Corect: „Designul nou îmbunătățește experiența utilizatorilor.”
-- De ce: „A eleva” e un împrumut vechi din franceză, înregistrat în dicționarele de neologisme și în MDA2, dar nu în DOOM 3 și nici în DEX '98. Folosit pentru engl. „to elevate”, sună tradus. Propui „a îmbunătăți”, „a ridica”, „a înnobila”, după sens. Adjectivul „elevat” („nobil, superior, rafinat”, DEX '98) e corect.
-- Sursă: DEX '98 s.v. elevat; DN, MDN '00, MDA2 s.v. eleva
+- De ce: „A eleva” e un împrumut vechi din franceză, înregistrat în dicționarele de neologisme și în MDA2, dar nu în DOOM 3 și nici în DEX ’98. Folosit pentru engl. „to elevate”, sună tradus. Propui „a îmbunătăți”, „a ridica”, „a înnobila”, după sens. Adjectivul „elevat” („nobil, superior, rafinat”, DEX ’98) e corect.
+- Sursă: DEX ’98 s.v. elevat; DN, MDN ’00, MDA2 s.v. eleva
 
 ### RO-IMP-044 „Aleator” și „aleatoriu”
 - Nivel: recomandare
 - Greșit: „Generăm un număr aleator pentru fiecare sesiune.” → Corect: „Generăm un număr aleatoriu pentru fiecare sesiune.”
-- De ce: DOOM 3 înregistrează doar „aleatoriu, aleatorie”, plural „aleatorii”. DEX '98 dă și „aleator, aleatoare”, dar ca variantă a lui „aleatoriu”. Propui forma din DOOM 3; nu o impui, pentru că varianta e atestată.
-- Sursă: DOOM 3 s.v. aleatoriu; DEX '98 s.v. aleator, aleatoriu
+- De ce: DOOM 3 înregistrează doar „aleatoriu, aleatorie”, plural „aleatorii”. DEX ’98 dă și „aleator, aleatoare”, dar ca variantă a lui „aleatoriu”. Propui forma din DOOM 3; nu o impui, pentru că varianta e atestată.
+- Sursă: DOOM 3 s.v. aleatoriu; DEX ’98 s.v. aleator, aleatoriu
 
 ## Vezi și
 

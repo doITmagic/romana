@@ -40,20 +40,20 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 ### RO-STI-603 „A precizat”, „a transmis”, „a punctat”
 - Nivel: ce nu e greșeală
 - Corect: „Ministrul a precizat că termenul rămâne neschimbat.” La fel de corecte: „ministrul a transmis”, „ministrul a punctat”. Nu le corectezi în „a spus”.
-- De ce: Regula falsă: orice verb de declarație în afară de „a spune” ar fi un clișeu de eliminat. „A preciza” înseamnă „a arăta în mod precis, exact” (DEX '98), iar „a puncta” are sensul figurat „a scoate în evidență, a sublinia” (DEX '98), deci se apropie de verbele de aprobare, dar rămâne corect. Cel mult propui „a spune” ca variantă mai simplă. Tiparul „a preciza foarte clar” e altceva (vezi [paronime-si-pleonasme.md](../paronime-si-pleonasme.md)).
-- Sursă: DEX '98 s.v. preciza, puncta
+- De ce: Regula falsă: orice verb de declarație în afară de „a spune” ar fi un clișeu de eliminat. „A preciza” înseamnă „a arăta în mod precis, exact” (DEX ’98), iar „a puncta” are sensul figurat „a scoate în evidență, a sublinia” (DEX ’98), deci se apropie de verbele de aprobare, dar rămâne corect. Cel mult propui „a spune” ca variantă mai simplă. Tiparul „a preciza foarte clar” e altceva (vezi [paronime-si-pleonasme.md](../paronime-si-pleonasme.md)).
+- Sursă: DEX ’98 s.v. preciza, puncta
 
 ### RO-STI-618 Verbul nu spune mai mult decât sursa
 - Nivel: de semnalat
 - Greșit: „Directorul a recunoscut că livrarea ajunge în două zile.” → Corect: „Directorul a declarat că livrarea ajunge în două zile.”
-- De ce: „A recunoaște” înseamnă „a admite ca existent, ca valabil”, deci cere ca sursa să fi făcut o concesie (DEX '98). „A admite” cere la fel, iar „a demonstra” înseamnă „a arăta în mod convingător, prin argumente” și cere dovezi (DEX '98). Textul singur nu arată dacă sursa a făcut o concesie, deci nu schimbi verbul pe baza lui. Dacă sursa doar a afirmat un lucru, verbul care promite concesie sau dovadă schimbă ce a spus ea. Semnalezi și întrebi ce a făcut sursa; până primești răspunsul, treci la un verb neutru (vezi [fidelitate.md](../fidelitate.md)).
-- Sursă: DEX '98 s.v. recunoaște, admite, demonstra; Irimieș; Ghidul de jurnalism (ghidjurnalism) (nereverificat local)
+- De ce: „A recunoaște” înseamnă „a admite ca existent, ca valabil”, deci cere ca sursa să fi făcut o concesie (DEX ’98). „A admite” cere la fel, iar „a demonstra” înseamnă „a arăta în mod convingător, prin argumente” și cere dovezi (DEX ’98). Textul singur nu arată dacă sursa a făcut o concesie, deci nu schimbi verbul pe baza lui. Dacă sursa doar a afirmat un lucru, verbul care promite concesie sau dovadă schimbă ce a spus ea. Semnalezi și întrebi ce a făcut sursa; până primești răspunsul, treci la un verb neutru (vezi [fidelitate.md](../fidelitate.md)).
+- Sursă: DEX ’98 s.v. recunoaște, admite, demonstra; Irimieș; Ghidul de jurnalism (ghidjurnalism) (nereverificat local)
 
 ### RO-STI-604 Vorbirea directă nu se amestecă cu cea indirectă
 - Nivel: normă
 - Greșit: „Directorul a declarat că «v-am invitat la inaugurare».” → Corect: „Directorul a declarat: «V-am invitat la inaugurare».” sau „Directorul a declarat că i-a invitat la inaugurare.”
 - De ce: După „a declarat că” urmează reformularea la persoana a III-a, fără ghilimele. Cuvintele exacte stau după două puncte, între ghilimele. Fraza greșită păstrează în citat persoana și timpul vorbitorului, deși fraza ei le-a schimbat. Un fragment care se potrivește sintactic cu fraza („A spus că tariful rămâne «în limitele anului trecut».”) nu e amestec. Ghilimelele reproduc întocmai un text (ghid gov-md §9.8.1).
-- Sursă: monitorizarea presei IL, secțiunea 4.4 (nereverificat local); ghid gov-md §9.8.1
+- Sursă: Coteanu, Gramatica de bază (1982), vorbirea indirectă (nereverificat local); monitorizarea presei IL, secțiunea 4.4 (nereverificat local); ghid gov-md §9.8.1
 
 ### RO-STI-605 Un „nu” spus ca răspuns rămâne răspuns
 - Nivel: recomandare
@@ -104,19 +104,19 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 ### RO-STI-611 Registrul nu se amestecă în știre
 - Nivel: recomandare
 - Greșit: „Mai mulți suspecți au fost săltați de poliție de lângă gară.” → Corect: „Mai mulți suspecți au fost arestați de poliție lângă gară.”
-- De ce: Într-o știre nu amesteci registrul popular sau argotic cu cel livresc. „A sălta” cu sensul „a aresta” nu apare în DEX '98, care dă doar sensuri legate de salt, deci e argou. Același lucru e valabil pentru exprimările administrative: „în 1 săptămână” se scrie „într-o săptămână”. Cuvintele argotice rămân în citat sau ca efect asumat al autorului într-un reportaj. În plus, „a aresta” are un sens juridic precis, pe care textul nu-l poate lua de la sine; alegi verbul după fapta din sursă.
-- Sursă: monitorizarea presei IL; Irimieș; Ghidul de jurnalism (ghidjurnalism); Ghid de stil API (nereverificat local); DEX '98 s.v. sălta
+- De ce: Într-o știre nu amesteci registrul popular sau argotic cu cel livresc. „A sălta” cu sensul „a aresta” nu apare în DEX ’98, care dă doar sensuri legate de salt, deci e argou. Același lucru e valabil pentru exprimările administrative: „în 1 săptămână” se scrie „într-o săptămână”. Cuvintele argotice rămân în citat sau ca efect asumat al autorului într-un reportaj. În plus, „a aresta” are un sens juridic precis, pe care textul nu-l poate lua de la sine; alegi verbul după fapta din sursă.
+- Sursă: monitorizarea presei IL; Irimieș; Ghidul de jurnalism (ghidjurnalism); Ghid de stil API (nereverificat local); DEX ’98 s.v. sălta
 
 ### RO-STI-613 Jargonul și termenul tehnic se explică la prima folosire
 - Nivel: recomandare
-- Greșit: „Fondul și-a majorat expunerea pe piața derivatelor.” → Corect: „Fondul și-a majorat investițiile în derivate, adică în contracte a căror valoare depinde de prețul altui bun.”
+- Greșit: „Fondul și-a majorat expunerea pe piața derivatelor.” → Corect: „Fondul și-a majorat expunerea, adică suma pe care o poate pierde, pe piața derivatelor, a contractelor a căror valoare depinde de prețul altui bun.”
 - De ce: Jargonul și termenul tehnic se explică la prima folosire, inclusiv când apar într-un citat; explicația se pune lângă citat, nu în el. Termenul consacrat, pe care cititorul îl folosește (de pildă „datoria suverană” în presa economică), rămâne ca atare și nu se parafrazează fără motiv. Se parafrazează un termen tradus cuvânt cu cuvânt care induce în eroare.
 - Sursă: Mic ghid CE p. 11–13 (Rec. 9)
 
 ### RO-STI-619 Sigla puțin cunoscută se scrie desfășurat la prima apariție
 - Nivel: recomandare
 - Greșit: „ANRE a anunțat noile tarife. ANRE a mai spus că…” → Corect: „Autoritatea Națională de Reglementare în Domeniul Energiei (ANRE) a anunțat noile tarife. ANRE a mai spus că…”
-- De ce: Sigla puțin cunoscută se scrie desfășurat la prima apariție, cu sigla între paranteze, apoi se folosește forma scurtă. Siglele pe care le știe orice cititor (NATO, UE, ONU) nu se explică. Jargonul se tratează la fel (RO-STI-613).
+- De ce: Regula este RO-TIP-088 din [tipografie.md](../tipografie.md): sigla puțin cunoscută se scrie desfășurat la prima apariție, cu sigla între paranteze, apoi se folosește forma scurtă. Jargonul se tratează la fel (RO-STI-613).
 - Sursă: Mic ghid CE p. 11–13 (Rec. 9)
 
 ## Lista de verificare pentru presa online

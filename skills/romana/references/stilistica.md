@@ -10,7 +10,7 @@ Fișierul acesta te ajută să scrii firesc și să judeci dacă un text sună a
 - **Citatul și textul juridic sau administrativ nu se rescriu.** Formulele de act rămân în acte și în citatele din documente.
 - **Tiparele textului generat** (copula ocolită, verbele-paravan, importanța declarată, formulele de chatbot) sunt în [tipare-text-generat.md](tipare-text-generat.md). Registrul și adresarea („tu” sau „dumneavoastră”) sunt în [registru-si-adresare.md](registru-si-adresare.md), iar profilurile pe genuri în [tipuri/](tipuri/). Traducerea propriu-zisă e în [limbi-sursa/en.md](limbi-sursa/en.md).
 
-Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2015; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997. Unde sursa nu a putut fi deschisă la redactare, câmpul se încheie cu „(nereverificat local)”.
+Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997. Unde sursa nu a putut fi deschisă la redactare, câmpul se încheie cu „(nereverificat local)”.
 
 ## 1. Cum scrii firesc: de la ce vrei să spui
 
@@ -234,7 +234,7 @@ Ce pui în loc: cifra, data, persoana și acțiunea. Dacă nu le ai din sursă, 
 - Nivel: recomandare
 - Greșit: „Căutăm o echipă orientată pe performanță.” → Corect: „Căutăm o echipă care [de completat: ce face concret, cu ce rezultat].”
 - De ce: Formula e vagă, nu greșită: „a orienta” și „performanță” sunt cuvinte normale. La redactare ceri ce anume face omul sau textul. Nu inventezi tu comportamentul: dacă sursa nu îl spune, lași „[de completat: …]”. Pentru „a aduce valoare” vezi RO-CAL-070.
-- Sursă: Mic ghid CE p. 9 (Rec. 7); DEX '98 s.v. orienta
+- Sursă: Mic ghid CE p. 9 (Rec. 7); DEX ’98 s.v. orienta
 
 ### RO-STI-025 „Maximizând impactul”
 - Nivel: recomandare
@@ -246,7 +246,7 @@ Ce pui în loc: cifra, data, persoana și acțiunea. Dacă nu le ai din sursă, 
 - Nivel: recomandare
 - Greșit: „Proiectul întâmpină ceva dificultăți.” → Corect: „Proiectul întârzie din cauza [de completat: dificultatea concretă].”
 - De ce: Când cuvintele vagi țin locul unei informații pe care autorul o are, scrii informația concretă. Rămân când obiectul nu e cunoscut sau când atenuarea e voită și onestă. Cuvintele în sine sunt corecte.
-- Sursă: Mic ghid CE p. 9 (Rec. 7); DEX '98 s.v. cumva, oarecum
+- Sursă: Mic ghid CE p. 9 (Rec. 7); DEX ’98 s.v. cumva, oarecum
 
 ## 6. Formule de umplutură
 
@@ -314,25 +314,25 @@ Bun:
 - Nivel: recomandare
 - Greșit: „Pe de o parte e rapid, pe de altă parte e ieftin.” → Corect: „E rapid și ieftin.”
 - De ce: Structura e corectă și nu cere contrast. O simplifici când doar înșiră două însușiri ale aceluiași lucru. Ghidul Comisiei dă construcția înrudită „atât din punctul de vedere al lui A, cât și din punctul de vedere al lui B” drept redundantă.
-- Sursă: Mic ghid CE p. 6 (Rec. 4) (formula „atât din punctul de vedere al lui A, cât și…”); DEX '98 s.v. parte
+- Sursă: Mic ghid CE p. 6 (Rec. 4) (formula „atât din punctul de vedere al lui A, cât și…”); DEX ’98 s.v. parte
 
 ### RO-STI-037 „A valorifica” cu sensul „a folosi”
 - Nivel: recomandare
 - Greșit: „Valorificați formularul vechi.” → Corect: „Folosiți formularul vechi.”
 - De ce: Înlocuirea e potrivită doar când contextul înseamnă pur și simplu folosire. „A valorifica” nu e un calc (RO-NUG-072); se păstrează când înseamnă „a pune în valoare” (valorificarea deșeurilor) sau „a transforma în bani” (valorificarea bunurilor).
-- Sursă: DEX '98 s.v. valorifica
+- Sursă: DEX ’98 s.v. valorifica
 
 ### RO-STI-045 „Se pretează în mod excelent”
 - Nivel: recomandare
 - Greșit: „Aplicația se pretează în mod excelent pentru lucrul în echipă.” → Corect: „Aplicația e foarte potrivită pentru lucrul în echipă.”
-- De ce: „A se preta” cu sens pozitiv nu e greșit (DEX '98, sensul 2). Problema e registrul pretențios, la care se adaugă umplutura „în mod excelent”.
-- Sursă: DEX '98 s.v. preta
+- De ce: „A se preta” cu sens pozitiv nu e greșit (DEX ’98, sensul 2). Problema e registrul pretențios, la care se adaugă umplutura „în mod excelent”.
+- Sursă: DEX ’98 s.v. preta
 
 ### RO-STI-042 „Totodată”
 - Nivel: recomandare
 - Greșit: „Totodată, vă rugăm să semnați formularul.” → Corect: „De asemenea, vă rugăm să semnați formularul.”
 - De ce: Propunere opțională de registru, doar în textele pentru public larg și doar când „totodată” înseamnă „și” sau „în plus”. Se păstrează când are sensul de simultaneitate („în același timp”). Nu o semnalezi ca greșeală și nu e semn de text generat (RO-NUG-098).
-- Sursă: DEX '98 s.v. totodată
+- Sursă: DEX ’98 s.v. totodată
 
 ## 7. Politețea preluată din engleză
 
@@ -361,14 +361,14 @@ Formula de deschidere „Sper că acest e-mail vă găsește bine” e tratată 
 ### RO-STI-026 „Persoană cu ADHD”
 - Nivel: recomandare
 - Greșit: „Copilul este bolnav de ADHD.” → Corect: „Copilul are ADHD.”
-- De ce: Regulă de stil pentru domeniul sănătății, nu normă gramaticală. „Bolnav” înseamnă „care suferă de o boală” (DEX '98); formulările de tipul „persoană cu…” sau „are…” evită etichetarea persoanei prin starea ei. Skill-ul nu se pronunță medical asupra naturii tulburării.
-- Sursă: DEX '98 s.v. bolnav (sensul cuvântului); recomandare de stil a skill-ului
+- De ce: Regulă de stil pentru domeniul sănătății, nu normă gramaticală. „Bolnav” înseamnă „care suferă de o boală” (DEX ’98); formulările de tipul „persoană cu…” sau „are…” evită etichetarea persoanei prin starea ei. Skill-ul nu se pronunță medical asupra naturii tulburării.
+- Sursă: DEX ’98 s.v. bolnav (sensul cuvântului); recomandare de stil a skill-ului
 
 ### RO-STI-027 Rezultatul unui test de screening
 - Nivel: recomandare
 - Greșit: „Rezultatul testului: ai ADHD.” → Corect: „Rezultatul testului: răspunsurile tale sunt compatibile cu trăsături de ADHD.”
-- De ce: Un test de screening nu pune diagnostic; diagnosticul înseamnă „determinarea precisă a bolii pe baza datelor clinice și a examenelor de laborator” (DEX '98). Rezultatul se formulează ca probabilitate sau ca trăsături compatibile, nu ca „ai ADHD” și nici „test de diagnostic”.
-- Sursă: DEX '98 s.v. diagnostic
+- De ce: Un test de screening nu pune diagnostic; diagnosticul înseamnă „determinarea precisă a bolii pe baza datelor clinice și a examenelor de laborator” (DEX ’98). Rezultatul se formulează ca probabilitate sau ca trăsături compatibile, nu ca „ai ADHD” și nici „test de diagnostic”.
+- Sursă: DEX ’98 s.v. diagnostic
 
 ## 9. Ce nu există
 

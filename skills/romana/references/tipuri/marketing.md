@@ -2,7 +2,7 @@
 
 Profilul acesta se aplică paginilor de site, de produs și de serviciu, descrierilor de produs, reclamelor și altor texte care urmăresc să convingă. Marketingul are toleranțe mai largi la ton decât celelalte profiluri. Normele nu se schimbă: calcurile care contrazic dicționarul sau gramatica și cuvintele inventate rămân greșeli și aici.
 
-Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; DEX '98 = *Dicționar explicativ al limbii române*, 1998; Coteanu = I. Coteanu (coord.), *Stilistica funcțională a limbii române*, vol. 1.
+Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; DEX ’98 = *Dicționar explicativ al limbii române*, 1998; Coteanu = I. Coteanu, *Stilistica funcțională a limbii române*, vol. I, Editura Academiei, 1973.
 
 ## Ce se schimbă față de limba literară standard
 
@@ -24,7 +24,7 @@ O pagină care trebuie să fie găsită într-un motor de căutare primește ră
 - Nivel: recomandare
 - Greșit: „Hei, prieteni! Poliță de asigurare de viață la prețuri de nebunie!” → Corect: „Asigurarea de viață care acoperă familia ta, cu prima lunară fixă.”
 - De ce: Tonul se potrivește obiectului și cititorului: o asigurare, un medicament sau un contract cer alt ton decât un gadget sau o aplicație de joacă. Într-o descriere dată, tonul rămâne același de la primul rând la ultimul; un salt de la solemn la glumeț sau invers se vede ca o rupere de registru. E o recomandare de adecvare, nu o normă.
-- Sursă: Mic ghid CE p. 4 (Rec. 2: cititorul are întâietate); Coteanu, *Stilistica funcțională a limbii române*, vol. 1 (nereverificat local)
+- Sursă: Mic ghid CE p. 4 (Rec. 2: cititorul are întâietate); Coteanu, *Stilistica funcțională a limbii române*, vol. I, 1973 (nereverificat local)
 
 ### RO-STI-655 Fără urgență, vină sau milă puse de la sine
 - Nivel: recomandare

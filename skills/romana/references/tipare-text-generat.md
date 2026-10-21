@@ -4,7 +4,7 @@ Fișierul acesta te ajută să recunoști și să corectezi tiparele care fac un
 
 Un lucru contează mai mult decât restul: **tiparele nu sunt greșeli de limbă.** Fiecare cuvânt și fiecare construcție de aici există în dicționare și în gramatici și, luate separat, sunt corecte. Un semnal izolat nu se raportează. Ce contează e grupul: același tic repetat, sau mai multe tipare diferite strânse într-un pasaj. De aceea toate regulile de aici sunt recomandări, gravitatea e de regulă P2, și se aplică doar când semnalele se adună.
 
-Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DEX '98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998. „Tipar de stil” înseamnă că tiparul nu are o normă în spate: e o observație de stil, care se semnalează doar în grup.
+Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998. „Tipar de stil” înseamnă că tiparul nu are o normă în spate: e o observație de stil, care se semnalează doar în grup.
 
 ## Cum folosești fișierul
 
@@ -67,8 +67,8 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 ### RO-STI-212 Copula ocolită
 - Nivel: recomandare
 - Greșit: „Brânza de capră reprezintă un aliment bogat în calciu.” → Corect: „Brânza de capră e un aliment bogat în calciu.”
-- De ce: Un verb mai solemn ține locul lui „a fi” sau al unui verb simplu: „reprezintă”, „se prezintă ca”, „se constituie ca”, „vine în sprijinul” (în loc de „ajută”). Nu e greșeală de limbă (DEX '98 atestă sensul „a fi”) și nu se înlocuiește unde are sens propriu: „a reprezenta pe cineva”, „reprezintă 60% din total”, „constituie infracțiune” în drept.
-- Sursă: DEX '98 s.v. reprezenta, constitui; Mic ghid CE p. 8 (Rec. 6)
+- De ce: Un verb mai solemn ține locul lui „a fi” sau al unui verb simplu: „reprezintă”, „se prezintă ca”, „se constituie ca”, „vine în sprijinul” (în loc de „ajută”). Nu e greșeală de limbă (DEX ’98 atestă sensul „a fi”) și nu se înlocuiește unde are sens propriu: „a reprezenta pe cineva”, „reprezintă 60% din total”, „constituie infracțiune” în drept.
+- Sursă: DEX ’98 s.v. reprezenta, constitui; Mic ghid CE p. 8 (Rec. 6)
 
 ### RO-STI-227 Verbele-paravan
 - Nivel: recomandare
@@ -128,7 +128,7 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 - Nivel: recomandare
 - Greșit: „Uite care e treaba: stocul e aproape epuizat.” → Corect: „Problema e că stocul e aproape epuizat.”
 - De ce: Formula traduce o introducere conversațională din engleza de afaceri și coboară registrul („uite care e treaba” e o formulă conversațională, iar „chestia” e familiară; vezi RO-STI-428 în [registru-si-adresare.md](registru-si-adresare.md)). Intri direct în subiect sau folosești o tranziție care spune ceva: „De fapt, …”, „Problema e că…”.
-- Sursă: DEX '98 s.v. chestiune
+- Sursă: DEX ’98 s.v. chestiune
 
 ## Vocabular și laudă
 
@@ -142,19 +142,19 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 - Nivel: recomandare
 - Greșit: „Un aspect capital, major și determinant pentru buna funcționare a orașului.” → Corect: „[de completat: ce depinde de acest aspect]”
 - De ce: „Capital”, „major”, „determinant” (la fel „fundamental”, „vital”) sunt adjective corecte. Devin semnal doar ca intensificator fără justificare, mai ales strânse în același pasaj. Sensurile tehnice rămân („drepturi fundamentale”, „semne vitale”, „Banca Centrală”).
-- Sursă: DOOM 3 s.v. capital, major, determinant; DEX '98
+- Sursă: DOOM 3 s.v. capital, major, determinant; DEX ’98
 
 ### RO-STI-205 Adjective-laudă goale
 - Nivel: recomandare
 - Greșit: „soluție robustă” → Corect: „soluție care rezistă la [de completat: ce anume]”
 - De ce: „Robust”, „cuprinzător”, „de ultimă generație” sunt laude fără conținut: nu spun ce rezistă, ce acoperă, ce tehnologie e. Spui proprietatea măsurabilă sau tehnologia pe nume. Sensurile tehnice rămân („statistică robustă”).
-- Sursă: DOOM 3 s.v. robust, cuprinzător; DEX '98; Mic ghid CE p. 9 (Rec. 7)
+- Sursă: DOOM 3 s.v. robust, cuprinzător; DEX ’98; Mic ghid CE p. 9 (Rec. 7)
 
 ### RO-STI-220 Limbaj de reclamă pe vocea unui text informativ
 - Nivel: recomandare
 - Greșit: „Pensiunea te îmbie cu priveliști de vis și o atmosferă de poveste.” → Corect: „Din camerele pensiunii se vede [de completat: ce se vede].”
 - De ce: „Te îmbie cu”, „de vis”, „de poveste”, „o experiență de neuitat” sunt laude fără conținut verificabil, puse pe vocea unui text care ar trebui să informeze. În profilul marketing toleranța e mai mare, dar faptele rămân cele din sursă.
-- Sursă: tipar de stil; DEX '98
+- Sursă: tipar de stil; DEX ’98
 
 ### RO-STI-232 Inflația retorică
 - Nivel: recomandare
@@ -191,14 +191,14 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 ### RO-STI-202 „Joacă un rol vital”
 - Nivel: recomandare
 - Greșit: „Apa joacă un rol vital în funcționarea unui oraș.” → Corect: „Apa [de completat: ce anume face] în funcționarea unui oraș.”
-- De ce: „A juca un rol” e o expresie corectă și consacrată (DEX '98), nu un calc. Se semnalează doar formula goală, când nu spune ce anume face subiectul. Spui ce face: ce transportă, ce reglează, ce schimbă.
-- Sursă: DEX '98 s.v. rol; tipar de stil
+- De ce: „A juca un rol” e o expresie corectă și consacrată (DEX ’98), nu un calc. Se semnalează doar formula goală, când nu spune ce anume face subiectul. Spui ce face: ce transportă, ce reglează, ce schimbă.
+- Sursă: DEX ’98 s.v. rol; tipar de stil
 
 ### RO-STI-218 Importanța umflată
 - Nivel: recomandare
 - Greșit: „Inaugurarea a fost un moment definitoriu pentru oraș.” → Corect: „Inaugurarea a schimbat [de completat: ce s-a schimbat, cu sursa].”
 - De ce: „Un moment definitoriu”, „o pagină de istorie”, „va rămâne în memoria orașului” țin locul faptului printr-o etichetă de importanță. Expresiile sunt corecte; se semnalează doar când sunt goale. Rămân în citat și acolo unde fraza spune în continuare ce s-a schimbat.
-- Sursă: DOOM 3; DEX '98
+- Sursă: DOOM 3; DEX ’98
 
 ### RO-STI-221 Formule care pretind profunzime
 - Nivel: recomandare
@@ -242,7 +242,7 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 - Nivel: recomandare
 - Greșit: „Așadar, în concluzie, parcarea nouă are 80 de locuri.” → Corect: „Parcarea nouă are 80 de locuri.”
 - De ce: „Pe scurt, putem spune că…”, „Așadar, în concluzie…” amână afirmația. Concluzia se spune direct și se atribuie dacă nu e a autorului. Problema e de stil, nu de vocabular: „a concluziona” e corect (DOOM 3). Rezumatul se taie întreg dacă nu aduce nimic nou.
-- Sursă: DOOM 3 s.v. concluziona; DEX '98
+- Sursă: DOOM 3 s.v. concluziona; DEX ’98
 
 ## Ritm și structură
 
@@ -268,7 +268,7 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 - Nivel: recomandare
 - Greșit: „Textul conține un singur «esențial» și este raportat ca text generat.” → Corect: „Un singur «esențial» nu se raportează; se raportează grupul.”
 - De ce: Detecția caută grupuri de semnale, adică densitatea unui tic, nu apariția lui izolată. Regula se aplică și la conectori și la adjectivele-semnal: „esențial”, „crucial”, „semnificativ” sunt cuvinte literare din DEX și DOOM 3. Chiar peste prag, verdictul spune „probabil”, nu „e scris de un model”.
-- Sursă: DOOM 3; DEX '98; tipar de stil
+- Sursă: DOOM 3; DEX ’98; tipar de stil
 
 ## Vezi și
 

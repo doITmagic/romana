@@ -12,7 +12,7 @@ Tipografia e ultima trecere din ordinea de lucru (vezi SKILL.md). O verifici dup
 - **Citatul direct** păstrează cuvintele sursei. În citat corectezi doar tipografia: ghilimelele, diacriticele, spațiile.
 - **Înainte să corectezi, verifici lista „ce nu e greșeală”** din [ce-nu-e-greseala.md](ce-nu-e-greseala.md): linia de pauză, ghilimelele «…», apostroful, punctul-și-virgula, „de ex.”, bara oblică, „totuși” cu sau fără virgule sunt forme corecte.
 
-Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; ÎOOP6 = *Îndreptarul ortografic, ortoepic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); IER = Institutul European din România, *Ghid stilistic de traducere în limba română pentru uzul traducătorilor acquis-ului comunitar*, ed. a V-a, 2008 (practică de traducere juridică, nu normă pentru presă); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Legea 290/2018 = legea privind denumirile localităților din România. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină vine din materialul de lucru și n-a putut fi verificată pe text local.
+Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; ÎOOP6 = *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); IER = Institutul European din România, *Ghid stilistic de traducere în limba română pentru uzul traducătorilor acquis-ului comunitar*, ed. a V-a, 2008 (practică de traducere juridică, nu normă pentru presă); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Legea 290/2018 = legea privind denumirile localităților din România. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină n-a putut fi verificată pe text local.
 
 ## 1. Diacriticele
 
@@ -68,7 +68,7 @@ Bun: aceeași frază, cu ș, ț și Ș cu virgulă (U+0219, U+021B, U+0218).
 - Nivel: normă
 - Greșit: „Importanta deciziei a crescut.” → Corect: „Importanța deciziei a crescut.”
 - De ce: Formele fără diacritice sunt adesea ambigue: „importanta” poate fi „importantă”, „importanța” sau „importanță”; „tara” poate fi „țară”, „țara” sau „tară”. Din această cauză lipsa semnelor se semnalează, iar corectura mecanică produce erori noi. Restaurezi un cuvânt numai când contextul alege o singură formă: în exemplul de mai sus, „deciziei” cere un substantiv articulat, deci „importanța”.
-- Sursă: INJ p. 93–94; DEX '98, s.v. țară, importanță
+- Sursă: INJ p. 93–94; DEX ’98, s.v. țară, importanță
 
 ## 2. Majusculele
 
@@ -357,7 +357,7 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 ### RO-TIP-040 Fără virgulă înaintea lui „și” și „sau” simple
 - Nivel: normă
 - Greșit: „A citit raportul, și a plecat.” → Corect: „A citit raportul și a plecat.”
-- De ce: Părțile de propoziție și propozițiile legate prin „și” sau „sau” nu se despart prin virgulă. Excepțiile: perechile repetate („Au răspuns și clienții, și furnizorii”, „fie… fie”, „nici… nici”), unde virgula e obligatorie, și „și” cu sensul „iar”, urmat de negație („ghidurile publicate, și nu cele vechi”).
+- De ce: Părțile de propoziție și propozițiile legate prin „și” sau „sau” nu se despart prin virgulă. Excepțiile: perechile repetate („Au răspuns și clienții, și furnizorii”, „fie… fie”, „nici… nici”), unde virgula e obligatorie, și „și” cu sensul „iar”, urmat de negație („ghidurile publicate, și nu cele vechi”). Pentru „sau” disjunctiv, cazurile sunt la RO-TIP-114.
 - Sursă: ghid gov-md §9.2.1.9, §9.2.1.11 (N.B.), §9.2.1.15 și §9.2.2.1; Ghid UE §10.1.2.4–5 și §10.1.2.13 (nereverificat local); ÎOOP6 §214–283 (nereverificat local)
 
 ### RO-TIP-041 „Desigur că”, „bineînțeles că”, „sigur că”: fără virgulă
@@ -640,7 +640,7 @@ Verificări rapide (mecanice, dar cu ochii pe excepții):
 ### RO-TIP-069 Fără spații în jurul cratimei, al barei oblice și în interiorul abrevierilor
 - Nivel: normă
 - Greșit: „km / h, a . c., prim - ministru” → Corect: „km/h, a.c., prim-ministru”
-- De ce: Cratima, bara oblică și punctele din interiorul abrevierilor se scriu fără spații. Excepția e cratima-marcaj de listă, la început de rând.
+- De ce: Cratima, bara oblică și punctele din interiorul abrevierilor se scriu fără spații. Excepția e cratima-marcaj de listă, la început de rând. Ce compuse se scriu cu cratimă spune RO-GRA-082 din [gramatica.md](gramatica.md); scrierea siglelor (fără puncte între litere), RO-GRA-090 din același fișier.
 - Sursă: ghid gov-md §9.1.11, §9.11.9 și §9.12.4; ÎOOP6 §214–283 (nereverificat local)
 
 ### RO-TIP-035 Titlurile, subtitlurile și legendele nu se încheie cu punct
@@ -708,7 +708,7 @@ Bun:
 - Nivel: normă
 - Corect: „versuri shakespeariene”. Derivatele păstrează grafia numelui de la care vin: shakespearian, darwinism, washingtonian.
 - De ce: Un derivat de la un nume propriu se scrie cu grafia numelui, nu se „românizează”. Forma „shakespearian” e în dicționar.
-- Sursă: ghid gov-md §3.5.4; DEX '98, s.v. shakespearian
+- Sursă: ghid gov-md §3.5.4; DEX ’98, s.v. shakespearian
 
 ### RO-TIP-074 Toponimul fără normă românească: nicio formă nu e greșeală
 - Nivel: ce nu e greșeală
@@ -786,16 +786,16 @@ Bun:
 ### RO-TIP-088 Sigla puțin cunoscută se desfășoară la prima apariție
 - Nivel: recomandare
 - Corect: „Agenția Internațională pentru Energie Atomică (AIEA) a publicat raportul. AIEA recomandă...”
-- De ce: La prima apariție sigla puțin cunoscută se introduce între paranteze, după denumirea desfășurată, apoi se folosește forma scurtă. Sigla se folosește cu măsură și cu aceeași formă în tot textul.
-- Sursă: ghid gov-md §5.1.3.3 și §5.2.2.1
+- De ce: La prima apariție sigla puțin cunoscută se introduce între paranteze, după denumirea desfășurată, apoi se folosește forma scurtă. Sigla se folosește cu măsură și cu aceeași formă în tot textul. Siglele pe care le știe orice cititor (NATO, UE, ONU) nu se explică. Regula e valabilă în orice gen de text, presa o aplică la fel (RO-STI-619 din [presa.md](tipuri/presa.md)).
+- Sursă: ghid gov-md §5.1.3.3 și §5.2.2.1; Mic ghid CE p. 11–13 (Rec. 9)
 
 ## 9. Localitățile din România
 
 ### RO-TIP-033 Numele localităților se scriu cum le dă legea
 - Nivel: recomandare
 - Greșit: „Târgu-Mureș” → Corect: „Târgu Mureș”
-- De ce: Denumirile oficiale ale localităților sunt cele din anexa legii de organizare administrativă (Legea 290/2018), care a unificat și grafia cu „â” în loc de „î”. Forma din anexă pentru reședința județului Mureș e „Târgu Mureș”, fără cratimă, iar „Târgu-Neamț” are cratimă; „Cluj-Napoca”, „Satu Mare” și „Râmnicu Vâlcea” se scriu și ele ca în anexă. Folosirea locală nu e uniformă (autoritățile locale și presa scriu și cu cratimă), de aceea abaterea se propune, nu se impune. Orașele pot fi articulate în text: Bucureștiul, Clujul.
-- Sursă: Legea 290/2018, anexa (verificat parțial online; nereverificat local)
+- De ce: Denumirile oficiale ale localităților sunt cele din anexa Legii 2/1968 privind organizarea administrativă a teritoriului României, așa cum a fost modificată prin Legea 290/2018. Forma din anexă pentru reședința județului Mureș e „Târgu Mureș”, fără cratimă, iar „Târgu-Neamț” are cratimă; „Cluj-Napoca”, „Satu Mare” și „Râmnicu Vâlcea” se scriu și ele ca în anexă. Folosirea locală nu e uniformă (autoritățile locale și presa scriu și cu cratimă), de aceea abaterea se propune, nu se impune. Orașele pot fi articulate în text: Bucureștiul, Clujul.
+- Sursă: Legea 2/1968 privind organizarea administrativă a teritoriului României, anexa, în forma dată de Legea 290/2018 (nereverificat local)
 
 ## 10. Urmele lăsate de un chatbot
 

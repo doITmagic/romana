@@ -2,7 +2,7 @@
 
 Fișierul acesta te ajută în două situații: traduci sau adaptezi un text din engleză în română, ori primești un text românesc care sună tradus din engleză. Regulile de limbă ale textului final sunt cele din restul fișierelor. Aici găsești metoda de traducere și cazurile care nu au alt loc.
 
-Abrevierile din câmpul „Sursă”: DEX '98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013 (ghidul prezintă recomandări, nu reguli); ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026 (recomandare, fără caracter normativ). Detaliile sunt în [surse.md](../surse.md).
+Abrevierile din câmpul „Sursă”: DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013 (ghidul prezintă recomandări, nu reguli); ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026 (recomandare, fără caracter normativ). Detaliile sunt în [surse.md](../surse.md).
 
 ## Cum folosești fișierul
 
@@ -63,14 +63,14 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 ### RO-CAL-502 Idiomurile se traduc după sens
 - Nivel: recomandare
 - Greșit: „Examenul a fost o bucată de prăjitură.” → Corect: „Examenul a fost floare la ureche.”
-- De ce: Engl. „a piece of cake” nu are în română imaginea prăjiturii; echivalentul consacrat e „floare la ureche”, cu sensul „lucru de puțină importanță sau gravitate, foarte ușor de rezolvat” (DEX '98). Se poate spune și „simplu ca bună ziua”. Când o imagine există și în română (cu aceeași formă), o păstrezi; când nu există, cauți expresia românească cu același sens și același registru. Dacă nu găsești una, spui sensul fără imagine.
-- Sursă: DEX '98 s.v. floare, simplu
+- De ce: Engl. „a piece of cake” nu are în română imaginea prăjiturii; echivalentul consacrat e „floare la ureche”, cu sensul „lucru de puțină importanță sau gravitate, foarte ușor de rezolvat” (DEX ’98). Se poate spune și „simplu ca bună ziua”. Când o imagine există și în română (cu aceeași formă), o păstrezi; când nu există, cauți expresia românească cu același sens și același registru. Dacă nu găsești una, spui sensul fără imagine.
+- Sursă: DEX ’98 s.v. floare, simplu
 
 ### RO-CAL-503 Se traduce sensul, nu cuvintele
 - Nivel: recomandare
 - Greșit: „Te fac faimos.” → Corect: „Te fac cunoscut.”
-- De ce: Într-un text religios, engl. „make You famous” nu înseamnă celebritate lumească, ci a face cunoscut. „Faimos” (DEX '98: „care a devenit extrem de cunoscut; vestit, celebru”) sună a glorie lumească și schimbă registrul; „cunoscut” sau „a vesti” („a aduce la cunoștință, a face cunoscut”, DEX '98) merg mai bine. Alegerea finală ține de registrul textului și de formula liturgică a limbii-țintă, nu de o regulă. Nu adaugi cuvinte pe care originalul nu le are, iar majusculele la pronumele care se referă la divinitate rămân cum le are textul.
-- Sursă: DEX '98 s.v. faimos, vesti
+- De ce: Într-un text religios, engl. „make You famous” nu înseamnă celebritate lumească, ci a face cunoscut. „Faimos” (DEX ’98: „care a devenit extrem de cunoscut; vestit, celebru”) sună a glorie lumească și schimbă registrul; „cunoscut” sau „a vesti” („a aduce la cunoștință, a face cunoscut”, DEX ’98) merg mai bine. Alegerea finală ține de registrul textului și de formula liturgică a limbii-țintă, nu de o regulă. Nu adaugi cuvinte pe care originalul nu le are, iar majusculele la pronumele care se referă la divinitate rămân cum le are textul.
+- Sursă: DEX ’98 s.v. faimos, vesti
 
 ### RO-CAL-504 Termenul tradus: originalul în paranteză, o singură dată
 - Nivel: recomandare
@@ -93,8 +93,8 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 ### RO-CAL-042 Sensul din frază, nu primul echivalent din dicționar
 - Nivel: recomandare
 - Greșit: „Comitetul a rezolvat să amâne decizia.” → Corect: „Comitetul a hotărât să amâne decizia.”
-- De ce: Engl. „resolved to postpone” înseamnă că a luat hotărârea de a amâna. „A rezolva” are în română alt sens, „a găsi soluția unei probleme, a pune capăt unei controverse” (DEX '98), deci fraza spune altceva decât originalul. Echivalentul din dicționarul bilingv a fost alegerea greșită. Verbul românesc îl alegi după ce face subiectul în frază. Dacă nu poți deduce sensul, întrebi, nu ghicești.
-- Sursă: DEX '98 s.v. rezolva; DEX '96 s.v. hotărî
+- De ce: Engl. „resolved to postpone” înseamnă că a luat hotărârea de a amâna. „A rezolva” are în română alt sens, „a găsi soluția unei probleme, a pune capăt unei controverse” (DEX ’98), deci fraza spune altceva decât originalul. Echivalentul din dicționarul bilingv a fost alegerea greșită. Verbul românesc îl alegi după ce face subiectul în frază. Dacă nu poți deduce sensul, întrebi, nu ghicești.
+- Sursă: DEX ’98 s.v. rezolva; DEX ’96 s.v. hotărî
 
 ### RO-CAL-051 Cuvintele de umplutură ale originalului nu se traduc una câte una
 - Nivel: recomandare

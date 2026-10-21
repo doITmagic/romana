@@ -2,7 +2,7 @@
 
 Fișierul acesta te ajută să alegi tonul unui text și felul în care te adresezi cititorului: „tu”, „dumneavoastră” sau formulă impersonală, un cuvânt neutru sau unul familiar, o formă literară sau una populară. Registrul nu schimbă normele (acordul rămâne acord, ortografia rămâne ortografie), dar schimbă ce cuvinte și ce construcții se potrivesc. Profilurile de text (presă, marketing, blog, e-mail, interfață, documentație) își au convențiile lor, în `tipuri/`; aici sunt regulile generale.
 
-Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DOOM 2 = aceeași lucrare, ediția a II-a; DEX '98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998. Mărcile de registru din DOOM 3 și DEX (*fam.* familiar, *pop.* popular, *reg.* regional, *arg.* argotic) sunt cele pe care se sprijină regulile de mai jos.
+Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DOOM 2 = aceeași lucrare, ediția a II-a; DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998. Mărcile de registru din DOOM 3 și DEX (*fam.* familiar, *pop.* popular, *reg.* regional, *arg.* argotic) sunt cele pe care se sprijină regulile de mai jos.
 
 ## Cum folosești fișierul
 
@@ -53,26 +53,26 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-402 „Ăsta”, „ăla”, „ăst”
 - Nivel: recomandare
 - Greșit: „Omul ăsta a declarat că vine.” → Corect: „Omul acesta a declarat că vine.”
-- De ce: DOOM 3 marchează „ăsta” și „ăla” familiare și „ăst” popular; DEX '98 le dă „pop. și fam.”. În registrul neutru folosești „acesta”, „acela”, „acest”: „omul acesta”, „lucrul acela”, sau pronumele singur („Acesta a declarat că vine”). Când e vorba de un registru familiar ales, vezi RO-STI-436.
-- Sursă: DOOM 3 s.v. ăsta, ăla, ăst; DEX '98 s.v. ăsta, ăla
+- De ce: DOOM 3 marchează „ăsta” și „ăla” familiare și „ăst” popular; DEX ’98 le dă „pop. și fam.”. În registrul neutru folosești „acesta”, „acela”, „acest”: „omul acesta”, „lucrul acela”, sau pronumele singur („Acesta a declarat că vine”). Când e vorba de un registru familiar ales, vezi RO-STI-436.
+- Sursă: DOOM 3 s.v. ăsta, ăla, ăst; DEX ’98 s.v. ăsta, ăla
 
 ### RO-STI-403 „Aiesta”, „aista”
 - Nivel: recomandare
 - Greșit: „Aista nu mai vine.” → Corect: „Acesta nu mai vine.”
-- De ce: Formele sunt regionale: DOOM 3 și DEX '98 le dau cu marca *reg.* și le glosează prin „acesta”. În textul tău folosești forma literară.
-- Sursă: DOOM 3 s.v. aiesta; DEX '98 s.v. aiesta, aista
+- De ce: Formele sunt regionale: DOOM 3 și DEX ’98 le dau cu marca *reg.* și le glosează prin „acesta”. În textul tău folosești forma literară.
+- Sursă: DOOM 3 s.v. aiesta; DEX ’98 s.v. aiesta, aista
 
 ### RO-STI-404 „Fain”
 - Nivel: recomandare
 - Greșit: „Un film fain.” → Corect: „Un film frumos.”
-- De ce: „Fain” e marcat în DOOM 3 *reg., fam.* și în DEX '98 „reg. și fam.” („de foarte bună calitate; frumos, minunat”). În registrul neutru alegi după sens: „frumos”, „bun”, „reușit”.
-- Sursă: DOOM 3 s.v. fain; DEX '98 s.v. fain
+- De ce: „Fain” e marcat în DOOM 3 *reg., fam.* și în DEX ’98 „reg. și fam.” („de foarte bună calitate; frumos, minunat”). În registrul neutru alegi după sens: „frumos”, „bun”, „reușit”.
+- Sursă: DOOM 3 s.v. fain; DEX ’98 s.v. fain
 
 ### RO-STI-405 „Oleacă”
 - Nivel: recomandare
 - Greșit: „Mai așteaptă oleacă.” → Corect: „Mai așteaptă puțin.”
-- De ce: „Oleacă” e cuvânt popular (DOOM 3, DEX '98: „pop., puțin, nițel”). Registrul neutru cere „puțin”.
-- Sursă: DOOM 3 s.v. oleacă; DEX '98 s.v. oleacă
+- De ce: „Oleacă” e cuvânt popular (DOOM 3, DEX ’98: „pop., puțin, nițel”). Registrul neutru cere „puțin”.
+- Sursă: DOOM 3 s.v. oleacă; DEX ’98 s.v. oleacă
 
 ### RO-STI-407 „Super” în loc de „foarte”
 - Nivel: recomandare
@@ -83,13 +83,13 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-408 „Mișto”, „nașpa”
 - Nivel: recomandare
 - Greșit: „O idee mișto.” → Corect: „O idee reușită.”
-- De ce: Ambele sunt argotice: DOOM 3 și DEX '98 marchează „mișto” *arg.* („foarte bun, foarte frumos”), iar DOOM 3 marchează „nașpa” *arg.*. Le ocolești în textul redacțional: „mișto” devine „bun”, „frumos”, „reușit”; „nașpa” devine „prost”, „neplăcut”. Expresia „a lua la mișto” devine „a ironiza” sau „a-și bate joc”. În citat rămân.
-- Sursă: DOOM 3 s.v. mișto, nașpa; DEX '98 s.v. mișto
+- De ce: Ambele sunt argotice: DOOM 3 și DEX ’98 marchează „mișto” *arg.* („foarte bun, foarte frumos”), iar DOOM 3 marchează „nașpa” *arg.*. Le ocolești în textul redacțional: „mișto” devine „bun”, „frumos”, „reușit”; „nașpa” devine „prost”, „neplăcut”. Expresia „a lua la mișto” devine „a ironiza” sau „a-și bate joc”. În citat rămân.
+- Sursă: DOOM 3 s.v. mișto, nașpa; DEX ’98 s.v. mișto
 
 ### RO-STI-410 Genitivul și dativul populare, cu prepoziție
 - Nivel: recomandare
 - Greșit: „Cu ajutorul lu' domnu' doctor, a reușit.” → Corect: „Cu ajutorul domnului doctor, a reușit.”
-- De ce: În vorbirea populară genitivul și dativul se fac uneori cu prepoziția „la” sau „lu'”, pe când româna literară le face sintetic, prin forma flexionată: „domnului doctor”. La fel, „în fața la 100.000 de oameni” devine „în fața a 100.000 de oameni”. În citat, formele populare rămân. Sursa e o monitorizare a limbii presei (nereverificat local).
+- De ce: În vorbirea populară genitivul și dativul se fac uneori cu prepoziția „la” sau „lu’”, pe când româna literară le face sintetic, prin forma flexionată: „domnului doctor”. La fel, „în fața la 100.000 de oameni” devine „în fața a 100.000 de oameni”. În citat, formele populare rămân. Sursa e o monitorizare a limbii presei (nereverificat local).
 - Sursă: Institutul de Lingvistică, monitorizarea limbii presei, 2021–2022 (nereverificat local); raportul CNA, 2009 (nereverificat local)
 
 ### RO-STI-411 „Ca… să” cu conjunctivul, „că” cu indicativul
@@ -119,8 +119,8 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-418 Exprimări populare sau administrative în știre
 - Nivel: recomandare
 - Greșit: „Suspectul a fost săltat de polițiști.” → Corect: „Suspectul a fost [de completat: măsura, după sursă: reținut sau arestat] de polițiști.”
-- De ce: „Săltat” cu sensul „arestat” e argotic. DEX '98 are „săltat” cu sensurile „sprinten”, „care se află mai sus” și, familiar, „crescut, înalt” (despre copii și plante), deci sensul din știre nu e în dicționarul explicativ. „Reținut” și „arestat” sunt măsuri diferite, așa că verbul care îl înlocuiește se alege după sursă, nu după impresie. La fel, exprimările administrative ca „în 1 săptămână” devin „într-o săptămână”. În citat sau în reportaj, ca efect asumat, formele rămân.
-- Sursă: monitorizarea limbii presei, 2021–2022 (nereverificat local); DEX '98 s.v. săltat
+- De ce: „Săltat” cu sensul „arestat” e argotic. DEX ’98 are „săltat” cu sensurile „sprinten”, „care se află mai sus” și, familiar, „crescut, înalt” (despre copii și plante), deci sensul din știre nu e în dicționarul explicativ. „Reținut” și „arestat” sunt măsuri diferite, așa că verbul care îl înlocuiește se alege după sursă, nu după impresie. La fel, exprimările administrative ca „în 1 săptămână” devin „într-o săptămână”. În citat sau în reportaj, ca efect asumat, formele rămân.
+- Sursă: monitorizarea limbii presei, 2021–2022 (nereverificat local); DEX ’98 s.v. săltat
 
 ### RO-STI-422 „Isus” și „Iisus”
 - Nivel: recomandare
@@ -144,7 +144,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Am terminat raportul. Chiar l-am verificat, tocmai ieri. Totuși, merge.” → Corect: „Am terminat raportul și l-am verificat ieri. Merge.”
 - De ce: „Chiar”, „tocmai”, „totuși” și „măcar” au sens (accent, concesie, restricție) și se pun unde îl au. Presărate în fiecare frază ca să pară textul vorbit, devin un tic. O particulă cu rost nu se scoate.
-- Sursă: DOOM 3; DEX '98 s.v. chiar, tocmai, totuși, măcar
+- Sursă: DOOM 3; DEX ’98 s.v. chiar, tocmai, totuși, măcar
 
 ### RO-STI-426 „Păi” și alte mărci ale vorbirii spontane
 - Nivel: recomandare
@@ -155,14 +155,14 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-427 „Taman”, „niscaiva”, „nițel”
 - Nivel: recomandare
 - Greșit: „Taman asta voiam să spun.” → Corect: „Exact asta voiam să spun.”
-- De ce: „Taman” e popular (DOOM 3, DEX '98: „tocmai, exact, de-abia”); la fel, „niscaiva” (pop., „niște”) și „nițel” (reg. în DOOM 3, fam. în DEX '98: „puțin”). În registrul neutru le înlocuiești după sens cu „exact” sau „tocmai”, „niște” și „puțin”. Folosite ca „română mai autentică”, dau un ton folcloric nepotrivit.
-- Sursă: DOOM 3 s.v. taman, niscaiva, nițel; DEX '98 s.v. taman, nițel
+- De ce: „Taman” e popular (DOOM 3, DEX ’98: „tocmai, exact, de-abia”); la fel, „niscaiva” (pop., „niște”) și „nițel” (reg. în DOOM 3, fam. în DEX ’98: „puțin”). În registrul neutru le înlocuiești după sens cu „exact” sau „tocmai”, „niște” și „puțin”. Folosite ca „română mai autentică”, dau un ton folcloric nepotrivit.
+- Sursă: DOOM 3 s.v. taman, niscaiva, nițel; DEX ’98 s.v. taman, nițel
 
 ### RO-STI-428 „Chestie”
 - Nivel: recomandare
 - Greșit: „O chestie importantă a rămas nerezolvată.” → Corect: „Un lucru important a rămas nerezolvat.”
-- De ce: „Chestie” e varianta lui „chestiune”, iar sensul „lucru, întâmplare, fapt” e marcat familiar (DEX '98, chestiune, sensul 2: „fam.”). Nu e greșeală de normă, ci de registru. Înlocuiești după sens: „lucru”, „fapt”, „întâmplare”, „problemă”, „chestiune”; „subiect” doar când înseamnă temă.
-- Sursă: DOOM 3 s.v. chestie, chestiune; DEX '98 s.v. chestiune
+- De ce: „Chestie” e varianta lui „chestiune”, iar sensul „lucru, întâmplare, fapt” e marcat familiar (DEX ’98, chestiune, sensul 2: „fam.”). Nu e greșeală de normă, ci de registru. Înlocuiești după sens: „lucru”, „fapt”, „întâmplare”, „problemă”, „chestiune”; „subiect” doar când înseamnă temă.
+- Sursă: DOOM 3 s.v. chestie, chestiune; DEX ’98 s.v. chestiune
 
 ### RO-STI-430 „Gen”, „mno”, „mda”, „lol” ca umplutură
 - Nivel: recomandare
@@ -173,14 +173,14 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-431 „Nu-i bai”
 - Nivel: recomandare
 - Greșit: „Nu-i bai că a întârziat.” → Corect: „Nu e nicio problemă că a întârziat.”
-- De ce: „Bai” e regionalism (DOOM 3, DEX '98: „necaz, bucluc”), iar expresia „nu-i bai” înseamnă „nu face nimic, nu e nicio pagubă”. În textul redacțional alegi „nu e nicio problemă”, „nu-i nimic” sau „nu contează”. În citat rămâne.
-- Sursă: DOOM 3 s.v. bai; DEX '98 s.v. bai
+- De ce: „Bai” e regionalism (DOOM 3, DEX ’98: „necaz, bucluc”), iar expresia „nu-i bai” înseamnă „nu face nimic, nu e nicio pagubă”. În textul redacțional alegi „nu e nicio problemă”, „nu-i nimic” sau „nu contează”. În citat rămâne.
+- Sursă: DOOM 3 s.v. bai; DEX ’98 s.v. bai
 
 ### RO-STI-432 „De rahat”
 - Nivel: recomandare
 - Greșit: „Un serviciu de rahat.” → Corect: „Un serviciu de proastă calitate.”
-- De ce: Cuvântul „rahat” în sens figurat ține de registrul familiar și vulgar (DEX '98: „fig., fam., lucru fără importanță”) și nu intră în textul redacțional. Îl înlocuiești cu „prost”, „de proastă calitate”, „neîngrijit”. În citat rămâne numai când contează formularea exactă.
-- Sursă: DOOM 3 s.v. rahat; DEX '98 s.v. rahat
+- De ce: Cuvântul „rahat” în sens figurat ține de registrul familiar și vulgar (DEX ’98: „fig., fam., lucru fără importanță”) și nu intră în textul redacțional. Îl înlocuiești cu „prost”, „de proastă calitate”, „neîngrijit”. În citat rămâne numai când contează formularea exactă.
+- Sursă: DOOM 3 s.v. rahat; DEX ’98 s.v. rahat
 
 ### RO-STI-433 „Hai” în texte formale
 - Nivel: recomandare
@@ -204,13 +204,13 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Manualul ăsta explică pașii.” → Corect: „Manualul acesta explică pașii.”
 - De ce: Într-un text neutru, formele marcate familiar în DOOM 3 („ăsta”, „asta”, „ăla”) nu intră în registrul neutru; acolo devin „acesta”, „acest manual”. Le folosești doar într-un registru familiar ales explicit și ținut în tot textul, sau într-un citat.
-- Sursă: DOOM 3 s.v. ăsta; DOOM 2; DEX '98 s.v. ăsta
+- Sursă: DOOM 3 s.v. ăsta; DOOM 2; DEX ’98 s.v. ăsta
 
 ### RO-STI-437 Idiomurile nu se cer în locul formulărilor neutre
 - Nivel: recomandare
 - Greșit: „Echipa a dat cu bâta în baltă.” → Corect: „Echipa a greșit.”
-- De ce: Un idiom e atestat și românesc, dar are o nuanță și un registru pe care un agent le poate rata: „a da cu bâta în baltă” nu înseamnă pur și simplu „a greșit”, ci a face un gest sau a spune o vorbă care stânjenește prin caracterul ei nedelicat sau insolit (DEX '98), iar „a-i sări muștarul” înseamnă „a se înfuria” și e familiar. Aici exemplul presupune că sursa spunea simplu că echipa a greșit. Nu înlocuiești o formulare neutră cu un idiom ca să sune „mai românesc”. Un idiom folosit de autor, cu sensul lui, rămâne.
-- Sursă: DEX '98 s.v. baltă, muștar
+- De ce: Un idiom e atestat și românesc, dar are o nuanță și un registru pe care un agent le poate rata: „a da cu bâta în baltă” nu înseamnă pur și simplu „a greșit”, ci a face un gest sau a spune o vorbă care stânjenește prin caracterul ei nedelicat sau insolit (DEX ’98), iar „a-i sări muștarul” înseamnă „a se înfuria” și e familiar. Aici exemplul presupune că sursa spunea simplu că echipa a greșit. Nu înlocuiești o formulare neutră cu un idiom ca să sune „mai românesc”. Un idiom folosit de autor, cu sensul lui, rămâne.
+- Sursă: DEX ’98 s.v. baltă, muștar
 
 ### RO-STI-438 „Dumneavoastră” într-un context clar informal
 - Nivel: recomandare
@@ -222,7 +222,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Binevoiți să ne scrieți când aveți timp!” → Corect: „Scrieți-ne când aveți timp!”
 - De ce: Exemplul e un mesaj între colegi. „A binevoi” e corect (DOOM 3, DEX) și rămâne în cereri și în corespondența oficială: „Vă rog să binevoiți…”. În alte contexte îl înlocuiești după registru, păstrând adresarea: neutru-politicos „vă rugăm să…”, sau imperativul. Adresarea nu se schimbă o dată cu verbul.
-- Sursă: DOOM 3 s.v. binevoi; DEX '98 s.v. binevoi
+- Sursă: DOOM 3 s.v. binevoi; DEX ’98 s.v. binevoi
 
 ### RO-STI-440 Limba de stat în textele despre Republica Moldova
 - Nivel: de semnalat

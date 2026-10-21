@@ -117,7 +117,7 @@ Surse pentru metodă: DSL, s.v. COEZIUNE; Mic ghid CE p. 14 (Rec. 10).
 - **exemplu:** „de exemplu”, „de pildă”;
 - **reformulare:** „adică”, „cu alte cuvinte”.
 
-Dacă nu poți numi relația, nu pui conector. Dacă o poți numi, verifici dacă nu cumva ordinea frazelor o spune deja: două fapte puse unul după altul se citesc firesc ca succesiune sau ca adăugare. Conectorul trebuie acolo unde, fără el, cititorul ar ghici greșit relația, mai ales la contrast, la concesie și la condiție. Același cuvânt poate avea două valori: „astfel” înseamnă „în felul acesta”, dar și „prin urmare” (DEX '98), iar „or” înseamnă „însă”, dar și „deci”. Valoarea o arată contextul.
+Dacă nu poți numi relația, nu pui conector. Dacă o poți numi, verifici dacă nu cumva ordinea frazelor o spune deja: două fapte puse unul după altul se citesc firesc ca succesiune sau ca adăugare. Conectorul trebuie acolo unde, fără el, cititorul ar ghici greșit relația, mai ales la contrast, la concesie și la condiție. Același cuvânt poate avea două valori: „astfel” înseamnă „în felul acesta”, dar și „prin urmare” (DEX ’98), iar „or” înseamnă „însă”, dar și „deci”. Valoarea o arată contextul.
 
 Slab:
 
@@ -158,8 +158,8 @@ Surse pentru metodă: ghid gov-md §10.1 și §10.2; DSL, s.v. CONECTOR; C. Tint
 ### RO-COE-017 Conectorul înlocuit păstrează relația
 - Nivel: normă
 - Greșit: „Am automatizat facturarea. De asemenea, costurile au scăzut.” → Corect: „Am automatizat facturarea. Prin urmare, costurile au scăzut.”
-- De ce: Textul de pornire spunea „Astfel, costurile au scăzut”, iar „astfel” arăta aici consecința (DEX '98 îi dă și sensul „prin urmare”). „De asemenea” o transformă într-o simplă adăugare. La fel de greșite sunt „în contextul crizei” rescris „din cauza crizei” (apare o cauză care nu era în text) și „Pentru a atinge acest obiectiv” rescris „Așadar” (scopul devine concluzie). „Pe de altă parte” devine „dar” sau „însă” doar dacă frazele chiar se opun.
-- Sursă: DEX '98 s.v. astfel, așadar; ghid gov-md §10.2
+- De ce: Textul de pornire spunea „Astfel, costurile au scăzut”, iar „astfel” arăta aici consecința (DEX ’98 îi dă și sensul „prin urmare”). „De asemenea” o transformă într-o simplă adăugare. La fel de greșite sunt „în contextul crizei” rescris „din cauza crizei” (apare o cauză care nu era în text) și „Pentru a atinge acest obiectiv” rescris „Așadar” (scopul devine concluzie). „Pe de altă parte” devine „dar” sau „însă” doar dacă frazele chiar se opun.
+- Sursă: DEX ’98 s.v. astfel, așadar; ghid gov-md §10.2
 
 ### RO-COE-016 Aglomerarea de conectori se semnalează, conectorul izolat nu
 - Nivel: recomandare
@@ -226,7 +226,7 @@ Surse pentru metodă: DSL, s.v. ANAFORĂ și DEIXIS; C. Tintiuc, *Levels of Text
 ### RO-COE-026 Pronumele preia genul românesc al substantivului
 - Nivel: normă
 - Greșit: „Ați primit un e-mail de confirmare. Aceasta conține linkul de activare.” → Corect: „Ați primit un e-mail de confirmare. Acesta conține linkul de activare.”
-- De ce: Pronumele se acordă în gen și în număr cu substantivul pe care îl reia. „E-mail” e neutru în română (pluralul e „e-mailuri”), deci la singular se reia cu „acesta” sau cu „el”. În engleză, „it” nu arată genul, iar traducerea pune ușor genul cuvântului la care se gândea traducătorul („pagina”, „aplicația”). „Aceasta” cu sensul „acest lucru” reia o idee întreagă, nu un substantiv.
+- De ce: Pronumele se acordă în gen și în număr cu substantivul pe care îl reia. „E-mail” e neutru în română (pluralul e „e-mailuri”), deci la singular se reia cu „acesta” sau cu „el”. În engleză, „it” nu arată genul, iar traducerea pune ușor genul cuvântului la care se gândea traducătorul („pagina”, „aplicația”). „Aceasta” cu sensul „acest lucru” reia o idee întreagă, nu un substantiv. Regula generală a acordului pronumelui cu antecedentul este RO-GRA-154 din [gramatica.md](gramatica.md).
 - Sursă: DOOM 3 s.v. e-mail; ghid gov-md §7.3.17
 
 ### RO-COE-025 Trimiterile din text arată locul exact

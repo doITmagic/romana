@@ -2,7 +2,7 @@
 
 Profilul acesta se aplică e-mailurilor și scrisorilor. Ce îl deosebește de celelalte profiluri e raportul dintre cine scrie și cine citește: formulele de deschidere și de încheiere, registrul ales după destinatar și locul în care apare scopul mesajului. Normele nu se schimbă.
 
-Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a treia; DEX '98 = *Dicționar explicativ al limbii române*, 1998; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013.
+Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a treia; DEX ’98 = *Dicționar explicativ al limbii române*, 1998; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013.
 
 ## Ce se schimbă față de limba literară standard
 
@@ -17,15 +17,15 @@ Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepi
 
 ### RO-STI-751 Către o instituție: „Bună ziua”, „În regulă”
 - Nivel: recomandare
-- Greșit: „Salut! Ok, aștept răspunsul.” → Corect: „Bună ziua! În regulă, aștept răspunsul.”
+- Greșit: „Salut, ok, aștept răspunsul.” → Corect: „Bună ziua, în regulă, aștept răspunsul.”
 - De ce: Către o instituție salutul potrivit e „Bună ziua”, nu „Salut”, iar acordul formal se spune „În regulă” sau „De acord”, nu „Ok”. „OK” e înregistrat în DOOM 3 ca formă familiară, deci nu e greșit, doar nepotrivit în registrul formal. Între colegi sau cunoștințe, „Salut” și „OK” sunt la locul lor și nu se corectează. Forma „Ok” nu e cea din DOOM 3 (vezi RO-IMP-012 din [imprumuturi.md](../imprumuturi.md)).
-- Sursă: DOOM 3 s.v. OK; DEX '98 s.v. salut
+- Sursă: DOOM 3 s.v. OK; DEX ’98 s.v. salut
 
 ### RO-STI-752 Deschiderea și încheierea în e-mailul formal
 - Nivel: recomandare
-- Greșit: „Hey! Ți-am atașat contractul. Pa!” → Corect: „Bună ziua! V-am atașat contractul. Cu stimă,”
-- De ce: Registrul formal cere formule consacrate. Pentru deschidere: „Bună ziua,” sau „Stimată doamnă…,” / „Stimate domnule…,”. Pentru încheiere: „Cu stimă,” sau „Cu respect,”. DEX '98 înregistrează „cu stimă” ca formulă de politețe folosită la încheierea unei scrisori. „Hey”, „Salut” și „Pa” sunt familiare. Formula de adresare și cea de încheiere se despart de text prin virgulă, iar numele de după încheiere nu primește punct.
-- Sursă: DEX '98 s.v. stimă; ghid gov-md §9.1.8.2
+- Greșit: „Hey! Ți-am atașat contractul. Pa!” → Corect: „Bună ziua, v-am atașat contractul. Cu stimă,”
+- De ce: Registrul formal cere formule consacrate. Pentru deschidere: „Bună ziua,” sau „Stimată doamnă…,” / „Stimate domnule…,”. Pentru încheiere: „Cu stimă,” sau „Cu respect,”. DEX ’98 înregistrează „cu stimă” ca formulă de politețe folosită la încheierea unei scrisori. „Hey”, „Salut” și „Pa” sunt familiare. Formula de adresare și cea de încheiere se despart de text prin virgulă, iar numele de după încheiere nu primește punct.
+- Sursă: DEX ’98 s.v. stimă; ghid gov-md §9.1.8.2
 
 ### RO-STI-754 După formula de adresare, textul începe cu majusculă
 - Nivel: recomandare

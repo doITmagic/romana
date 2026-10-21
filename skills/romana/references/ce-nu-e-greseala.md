@@ -2,7 +2,7 @@
 
 Fișierul acesta adună forme corecte pe care unele liste de greșeli, reguli învățate la școală, ghiduri de stil traduse din engleză sau corectori automați le condamnă pe nedrept. Îl citești înainte de orice corectură sau verificare. Hipercorectitudinea, adică „repararea” unei forme corecte din teama că ar fi greșită, e la fel de gravă ca greșeala: strică un text bun și îl învață pe cititor o regulă falsă (DSL, s.v. HIPERCORECTITUDINE).
 
-Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Coteanu = I. Coteanu (coord.), *Gramatica de bază a limbii române*, 1982; ÎOOP6 = Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ediția a VI-a, 2022; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DEX '96 = *Dicționarul explicativ al limbii române*, ediția a II-a.
+Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Coteanu = I. Coteanu, *Gramatica de bază a limbii române*, 1982; ÎOOP6 = Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ediția a VI-a, 2024; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DEX ’96 = *Dicționarul explicativ al limbii române*, ediția a II-a.
 
 ## Cum folosești fișierul
 
@@ -18,14 +18,14 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-005 „Unul din” și „unul dintre”
 - Nivel: ce nu e greșeală
 - Corect: „Unul din candidați s-a retras.” Nu corectezi în „unul dintre candidați”; ambele forme sunt corecte.
-- De ce: Regula falsă: înaintea unui plural s-ar putea folosi doar „dintre”. DEX '98 îi dă lui „din” și sensul partitiv, glosat chiar prin „dintre”, cu exemplul „într-una din zile”. „Dintre” e la fel de corect; alegerea ține de stil.
-- Sursă: DEX '98 s.v. din, dintre
+- De ce: Regula falsă: înaintea unui plural s-ar putea folosi doar „dintre”. DEX ’98 îi dă lui „din” și sensul partitiv, glosat chiar prin „dintre”, cu exemplul „într-una din zile”. „Dintre” e la fel de corect; alegerea ține de stil.
+- Sursă: DEX ’98 s.v. din, dintre
 
 ### RO-NUG-006 „Îmi cer scuze”
 - Nivel: ce nu e greșeală
 - Corect: „Îmi cer scuze pentru întârziere.” Nu corectezi în „vă cer scuze” sau în „vă rog să mă scuzați”.
-- De ce: Regula falsă: „îmi cer scuze” ar însemna că vorbitorul își cere scuze sieși. DEX '98 dă expresia „a cere scuze”, adică „a-și exprima părerea de rău pentru o greșeală”. Pronumele „îmi” arată, ca în „îmi cer iertare”, că vorbitorul e cel care face gestul, nu cel căruia i se adresează scuzele.
-- Sursă: DEX '98 s.v. scuză
+- De ce: Regula falsă: „îmi cer scuze” ar însemna că vorbitorul își cere scuze sieși. DEX ’98 dă expresia „a cere scuze”, adică „a-și exprima părerea de rău pentru o greșeală”. Pronumele „îmi” arată, ca în „îmi cer iertare”, că vorbitorul e cel care face gestul, nu cel căruia i se adresează scuzele.
+- Sursă: DEX ’98 s.v. scuză
 
 ### RO-NUG-019 „Majoritatea a votat” și „majoritatea au votat”
 - Nivel: ce nu e greșeală
@@ -37,19 +37,19 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 - Nivel: disputat
 - Corect: „Nici directorul, nici adjunctul lui nu au semnat.” Acordul la singular („nu a semnat”) nu îl corectezi.
 - De ce: Cu subiectele legate prin „nici… nici”, pluralul e acordul sigur, fiindcă subiectul multiplu cere predicatul la plural (Coteanu). Singularul poate fi socotit acord prin atracție (DSL îl numește „abatere”), dar se întâlnește în uz. Sursele consultate nu tranșează cazul, deci nu corectezi niciuna dintre forme; dacă îl pomenești, spui că există două uzuri. Când ultimul subiect e la plural, verbul stă la plural („Nici mama, nici copiii nu au ajuns”).
-- Sursă: Coteanu, §33.7.2; DSL, s.v. ACORD
+- Sursă: Coteanu, §33.1.2; DSL, s.v. ACORD
 
 ### RO-NUG-022 „Conform legii” și „conform cu legea”
 - Nivel: ce nu e greșeală
 - Corect: „Am procedat conform cu legea.” La fel de corecte sunt „conform legii”, „potrivit legii” și „potrivit cu legea”. Nu corectezi o construcție în alta.
-- De ce: Regula falsă: „conform” ar cere numai dativul, iar „conform cu” ar fi greșit (sau invers). DOOM 3 îl dă pe „conform” și ca adverb, iar DEX '98 îl glosează „în conformitate cu..., la fel cu..., după”; „potrivit” are aceeași dublă construcție (DEX '98: „conform cu..., în concordanță cu...”). Greșită e doar forma fără dativ și fără „cu”, ca în „conform datele” (vezi [gramatica.md](gramatica.md)).
-- Sursă: DOOM 3 s.v. conform, potrivit; DEX '98 s.v. conform, potrivit
+- De ce: Regula falsă: „conform” ar cere numai dativul, iar „conform cu” ar fi greșit (sau invers). DOOM 3 îl dă pe „conform” și ca adverb, iar DEX ’98 îl glosează „în conformitate cu..., la fel cu..., după”; „potrivit” are aceeași dublă construcție (DEX ’98: „conform cu..., în concordanță cu...”). Greșită e doar forma fără dativ și fără „cu”, ca în „conform datele” (vezi [gramatica.md](gramatica.md)).
+- Sursă: DOOM 3 s.v. conform, potrivit; DEX ’98 s.v. conform, potrivit
 
 ### RO-NUG-023 Variantele duble din DOOM 3
 - Nivel: ce nu e greșeală
 - Corect: „ambii” și „amândoi”, „prim-ministrul” și „primul-ministru”. Nu corectezi o variantă în cealaltă.
-- De ce: Regula falsă: dintre două forme ar fi corectă doar una, de obicei cea care „sună mai literar”. DOOM 3 înregistrează ambele cuvinte „ambii” și „amândoi”, iar ÎOOP6 permite articularea ambilor termeni ai compusului „prim-ministru” (ghidul gov-md recomandă totuși, în actele normative, articularea ultimului termen). Într-un text alegi una și o folosești consecvent (vezi RO-COE-005 din [coerenta.md](coerenta.md)), dar varianta aleasă de autor nu se corectează. Atenție la variantele care se despart după sens: „niveluri” e pluralul pentru înălțime și stadiu, iar „nivele” pentru instrumentul numit „nivelă” (DEX '98), deci o pereche se protejează numai după ce îi verifici sensul.
-- Sursă: DOOM 3 s.v. ambii, amândoi; ghid gov-md §6.2.3 (cu trimitere la ÎOOP6); DEX '98 s.v. nivel
+- De ce: Regula falsă: dintre două forme ar fi corectă doar una, de obicei cea care „sună mai literar”. DOOM 3 înregistrează ambele cuvinte „ambii” și „amândoi”, iar ÎOOP6 permite articularea ambilor termeni ai compusului „prim-ministru” (ghidul gov-md recomandă totuși, în actele normative, articularea ultimului termen). Într-un text alegi una și o folosești consecvent (vezi RO-COE-005 din [coerenta.md](coerenta.md)), dar varianta aleasă de autor nu se corectează. Atenție la variantele care se despart după sens: „niveluri” e pluralul pentru înălțime și stadiu, iar „nivele” pentru instrumentul numit „nivelă” (DEX ’98), deci o pereche se protejează numai după ce îi verifici sensul.
+- Sursă: DOOM 3 s.v. ambii, amândoi; ghid gov-md §6.2.3 (cu trimitere la ÎOOP6); DEX ’98 s.v. nivel
 
 ### RO-NUG-024 „Votul a doi senatori”
 - Nivel: ce nu e greșeală
@@ -72,7 +72,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-056 „Să fii”
 - Nivel: ce nu e greșeală
 - Corect: „Vreau să fii acolo la ora zece.” Nu corectezi în „să fi” sau în „să fie”.
-- De ce: Regula falsă: „fii” ar fi doar imperativul („Fii atent!”), deci după „să” s-ar scrie „să fi”. „Să fii” e conjunctivul prezent, persoana a II-a singular, al verbului „a fi”; „să fie” e persoana a III-a și ar schimba sensul. Cu un participiu se scrie „să fi” („să fi ajuns”), pentru că acolo „fi” e auxiliar și nu se schimbă după persoană.
+- De ce: Regula falsă: „fii” ar fi doar imperativul („Fii atent!”), deci după „să” s-ar scrie „să fi”. „Să fii” e conjunctivul prezent, persoana a II-a singular, al verbului „a fi”; „să fie” e persoana a III-a și ar schimba sensul. Cu un participiu se scrie „să fi” („să fi ajuns”), pentru că acolo „fi” e auxiliar și nu se schimbă după persoană (RO-GRA-065 din [gramatica.md](gramatica.md)).
 - Sursă: Coteanu, §19 (conjunctivul)
 
 ### RO-NUG-057 „Copiii”
@@ -84,14 +84,14 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-011 „Unul” care ține locul unui substantiv
 - Nivel: ce nu e greșeală
 - Corect: „Au fost aleși doi reprezentanți, nu unul.” Nu corectezi în „nu unu”.
-- De ce: Regula falsă: numeralul ar trebui scris mereu „unu”, iar „unul” ar fi o formă „mai literară” pusă din greșeală. DEX '98 arată că numeralul are forma „un, o” înaintea unui substantiv și forma „unul, una” când ține locul unui substantiv, ca aici. „Unu” se folosește când numeri sau numești cifra: „unu, doi, trei”, „pagina unu”.
-- Sursă: DEX '98 s.v. unu
+- De ce: Regula falsă: numeralul ar trebui scris mereu „unu”, iar „unul” ar fi o formă „mai literară” pusă din greșeală. DEX ’98 arată că numeralul are forma „un, o” înaintea unui substantiv și forma „unul, una” când ține locul unui substantiv, ca aici. „Unu” se folosește când numeri sau numești cifra: „unu, doi, trei”, „pagina unu”.
+- Sursă: DEX ’98 s.v. unu
 
 ### RO-NUG-059 „Mă tem ca nu cumva să plouă”
 - Nivel: ce nu e greșeală
 - Corect: „Mă tem ca nu cumva să plouă la deschidere.” Nu corectezi în „Mă tem să nu plouă”; ambele sunt corecte.
-- De ce: Regula falsă: construcția cu „ca nu cumva să” ar fi o greșeală de construcție. Locuțiunea e corectă, cu nuanță literară sau emfatică; DEX '98 o folosește chiar în definiția unei alte locuțiuni („de teamă ca nu cumva să...”). „Mă tem să nu plouă” e varianta mai simplă.
-- Sursă: DEX '98 s.v. milă
+- De ce: Regula falsă: construcția cu „ca nu cumva să” ar fi o greșeală de construcție. Locuțiunea e corectă, cu nuanță literară sau emfatică; DEX ’98 o folosește chiar în definiția unei alte locuțiuni („de teamă ca nu cumva să...”). „Mă tem să nu plouă” e varianta mai simplă.
+- Sursă: DEX ’98 s.v. milă
 
 ### RO-NUG-060 Gerunziul cu subiect propriu
 - Nivel: ce nu e greșeală
@@ -109,12 +109,12 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 - Nivel: ce nu e greșeală
 - Corect: „Casa sa e la marginea orașului.” La fel de corecte: „va pleca”, „nu are decât o zi”, „omul care a sunat”. Nu corectezi un cuvânt doar pentru că apare.
 - De ce: Regula falsă: unele cuvinte ar fi suspecte prin simpla apariție („sa” ar fi mereu „s-a”, „decât” ar fi greșit). Rolul din frază decide: „sa” e posesiv („casa sa”), „s-a” e pronume și auxiliar („s-a dus”); „decât” restrictiv cere negație („nu are decât o zi”). Când semnalezi o greșeală reală, explici rolul cuvântului.
-- Sursă: DEX '98 s.v. său, decât
+- Sursă: DEX ’98 s.v. său, decât
 
 ### RO-NUG-114 „Să începem”
 - Nivel: ce nu e greșeală
 - Corect: „Să începem cu bugetul.” Nu corectezi în „Hai să începem” și nu îl numești calc.
-- De ce: Regula falsă: conjunctivul de îndemn ar fi un calc după engl. „let's”. Conjunctivul care exprimă un îndemn sau o rugăminte e o construcție veche a limbii, descrisă de gramatici („Să trecem la vot!”, „Să-mi spuneți dacă ajunge coletul”).
+- De ce: Regula falsă: conjunctivul de îndemn ar fi un calc după engl. „let’s”. Conjunctivul care exprimă un îndemn sau o rugăminte e o construcție veche a limbii, descrisă de gramatici („Să trecem la vot!”, „Să-mi spuneți dacă ajunge coletul”).
 - Sursă: Coteanu, §19 (conjunctivul), p. 207–208
 
 ### RO-NUG-084 „Îmi doresc”
@@ -138,46 +138,46 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-123 „Datorită” cu o cauză pozitivă sau neutră
 - Nivel: ce nu e greșeală
 - Corect: „Datorită noului sistem, livrările durează două zile.” Nu corectezi „datorită” în „din cauza” sau în „grație”.
-- De ce: Regula falsă: „datorită” ar fi suspect oriunde arată o cauză. DEX '98 îl dă cu sensurile „mulțumită, grație; din cauza, din pricina”. Cu o cauză negativă („datorită ploii, meciul s-a amânat”), forma nu e o greșeală de normă: ghidurile recomandă „datorită” pentru contextele pozitive, deci acolo doar propui „din cauza” (recomandare, vezi [gramatica.md](gramatica.md)).
-- Sursă: DEX '98 s.v. datorit; ghid gov-md §7.1.6; B. Croitor et al., 2014, p. 99
+- De ce: Regula falsă: „datorită” ar fi suspect oriunde arată o cauză. DEX ’98 îl dă cu sensurile „mulțumită, grație; din cauza, din pricina”. Cu o cauză negativă („datorită ploii, meciul s-a amânat”), forma nu e o greșeală de normă: ghidurile recomandă „datorită” pentru contextele pozitive, deci acolo doar propui „din cauza” (recomandare, vezi [gramatica.md](gramatica.md)).
+- Sursă: DEX ’98 s.v. datorit; ghid gov-md §7.1.6; B. Croitor et al., 2014, p. 99
 
 ## Sensul cuvintelor
 
 ### RO-NUG-062 „A realiza” cu sensul „a-și da seama”
 - Nivel: ce nu e greșeală
 - Corect: „Abia după ședință am realizat că termenul era vineri.” Nu corectezi în „mi-am dat seama”.
-- De ce: Regula falsă: sensul „a-și da seama” ar fi un anglicism sau un franțuzism neacceptat. DEX '98 îi dă lui „a realiza” și sensul „a-și face o idee precisă despre..., a reuși să înțeleagă”. Dacă fraza se poate citi și cu sensul „a înfăptui” („am realizat proiectul”), semnalezi ambiguitatea, nu sensul.
-- Sursă: DEX '98 s.v. realiza
+- De ce: Regula falsă: sensul „a-și da seama” ar fi un anglicism sau un franțuzism neacceptat. DEX ’98 îi dă lui „a realiza” și sensul „a-și face o idee precisă despre..., a reuși să înțeleagă”. Dacă fraza se poate citi și cu sensul „a înfăptui” („am realizat proiectul”), semnalezi ambiguitatea, nu sensul.
+- Sursă: DEX ’98 s.v. realiza
 
 ### RO-NUG-063 „A asista” pe cineva
 - Nivel: ce nu e greșeală
 - Corect: „Un medic rezident îl asistă pe chirurg în timpul operației.” Nu corectezi în „îl ajută” pe motiv de prieten fals.
-- De ce: Regula falsă: „a asista” ar însemna doar „a fi de față”, iar sensul „a ajuta” ar veni din engleză. DEX '98 îi dă și sensul tranzitiv „a sta lângă cineva pentru a-l ajuta”. Când ajutorul e general, poți propune „a ajuta” la redactare, dar nu corectezi.
-- Sursă: DEX '98 s.v. asista
+- De ce: Regula falsă: „a asista” ar însemna doar „a fi de față”, iar sensul „a ajuta” ar veni din engleză. DEX ’98 îi dă și sensul tranzitiv „a sta lângă cineva pentru a-l ajuta”. Când ajutorul e general, poți propune „a ajuta” la redactare, dar nu corectezi.
+- Sursă: DEX ’98 s.v. asista
 
 ### RO-NUG-064 „Agendă” cu sensul „ordine de zi”
 - Nivel: ce nu e greșeală
 - Corect: „Pe agenda ședinței sunt trei puncte.” Nu corectezi în „ordinea de zi”.
-- De ce: Regula falsă: „agendă” ar însemna doar „carnet”, iar sensul „ordine de zi” ar fi un prieten fals. DEX '98 îi dă ambele sensuri. Prieten fals e doar sensul „intenții, obiective” („o agendă ascunsă”, vezi RO-CAL-019 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
-- Sursă: DEX '98 s.v. agendă
+- De ce: Regula falsă: „agendă” ar însemna doar „carnet”, iar sensul „ordine de zi” ar fi un prieten fals. DEX ’98 îi dă ambele sensuri. Prieten fals e doar sensul „intenții, obiective” („o agendă ascunsă”, vezi RO-CAL-019 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
+- Sursă: DEX ’98 s.v. agendă
 
 ### RO-NUG-065 „Suport” cu sensul „sprijin”
 - Nivel: ce nu e greșeală
 - Corect: „Echipa ne-a oferit tot suportul de care aveam nevoie.” Nu corectezi în „sprijinul” pe motiv de anglicism.
-- De ce: Regula falsă: „suport” ar însemna doar „obiect care susține ceva”. DOOM 3 are o intrare separată pentru „suport” cu sensul „sprijin”, iar DEX '98 îi dă sensul figurat „ajutor, sprijin, reazem”. Verbul „a suporta” cu sensul „a sprijini” e altă problemă (RO-CAL-081 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
-- Sursă: DOOM 3 s.v. suport; DEX '98 s.v. suport
+- De ce: Regula falsă: „suport” ar însemna doar „obiect care susține ceva”. DOOM 3 are o intrare separată pentru „suport” cu sensul „sprijin”, iar DEX ’98 îi dă sensul figurat „ajutor, sprijin, reazem”. Verbul „a suporta” cu sensul „a sprijini” e altă problemă (RO-CAL-081 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
+- Sursă: DOOM 3 s.v. suport; DEX ’98 s.v. suport
 
 ### RO-NUG-078 „Curent” cu sensul „actual”
 - Nivel: ce nu e greșeală
 - Corect: „Versiunea curentă a aplicației e 4.2.” La fel de corect e „versiunea actuală”. Nu corectezi una în alta.
-- De ce: Regula falsă: „curent” ar fi un prieten fals după engl. „current”. DEX '98 îi dă sensurile „care este în curs; prezent” și „actual”.
-- Sursă: DEX '98 s.v. curent
+- De ce: Regula falsă: „curent” ar fi un prieten fals după engl. „current”. DEX ’98 îi dă sensurile „care este în curs; prezent” și „actual”.
+- Sursă: DEX ’98 s.v. curent
 
 ### RO-NUG-018 „Poziție” cu sensul „rang”
 - Nivel: ce nu e greșeală
 - Corect: „Și-a consolidat poziția în conducerea partidului.” Nu corectezi pe motiv de calc.
-- De ce: Regula falsă: sensul „rang, situație socială” ar veni din engl. „position”. DEX '98 îi dă lui „poziție” și sensul „situație (înaltă) pe care o deține cineva în viața socială, politică; rang”. Pentru un loc de muncă anume, „post” sau „funcție” pot fi mai precise, dar asta e o alegere de stil.
-- Sursă: DEX '98 s.v. poziție
+- De ce: Regula falsă: sensul „rang, situație socială” ar veni din engl. „position”. DEX ’98 îi dă lui „poziție” și sensul „situație (înaltă) pe care o deține cineva în viața socială, politică; rang”. Pentru un loc de muncă anume, „post” sau „funcție” pot fi mai precise, dar asta e o alegere de stil.
+- Sursă: DEX ’98 s.v. poziție
 
 ### RO-NUG-016 „Narativ” ca substantiv
 - Nivel: ce nu e greșeală
@@ -188,56 +188,56 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-104 „A se traduce prin”
 - Nivel: ce nu e greșeală
 - Corect: „Nemulțumirea angajaților s-a tradus prin demisii.” Nu corectezi pe motiv de calc.
-- De ce: Regula falsă: „a se traduce prin” ar fi copiat din engleză. DEX '98 îi dă lui „a traduce” sensul figurat „a înfăptui, a pune în practică” și, la reflexiv, „a se manifesta”: „s-a tradus prin demisii” înseamnă „s-a manifestat prin demisii”.
-- Sursă: DEX '98 s.v. traduce
+- De ce: Regula falsă: „a se traduce prin” ar fi copiat din engleză. DEX ’98 îi dă lui „a traduce” sensul figurat „a înfăptui, a pune în practică” și, la reflexiv, „a se manifesta”: „s-a tradus prin demisii” înseamnă „s-a manifestat prin demisii”.
+- Sursă: DEX ’98 s.v. traduce
 
 ### RO-NUG-103 „A câștiga dreptul la”
 - Nivel: ce nu e greșeală
 - Corect: „Echipa și-a câștigat dreptul la replică.” Nu corectezi în „a meritat”.
-- De ce: Regula falsă: construcția ar copia engl. „to earn the right”. „A câștiga” înseamnă și „a dobândi, a obține”, iar DEX '98 folosește chiar construcția „a câștiga dreptul la” în definiția verbului „a binemerita”.
-- Sursă: DEX '98 s.v. câștiga, binemerita
+- De ce: Regula falsă: construcția ar copia engl. „to earn the right”. „A câștiga” înseamnă și „a dobândi, a obține”, iar DEX ’98 folosește chiar construcția „a câștiga dreptul la” în definiția verbului „a binemerita”.
+- Sursă: DEX ’98 s.v. câștiga, binemerita
 
 ### RO-NUG-105 „A-și pierde mințile” cu sensul „a înnebuni”
 - Nivel: ce nu e greșeală
 - Corect: „După accident, și-a pierdut mințile.” Nu corectezi.
-- De ce: Regula falsă: expresia ar fi un calc după engl. „to lose one's mind”. DEX '98 o înregistrează cu sensul „a înnebuni”. Calc e doar folosirea pentru entuziasm (RO-CAL-076 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
-- Sursă: DEX '98 s.v. minte
+- De ce: Regula falsă: expresia ar fi un calc după engl. „to lose one’s mind”. DEX ’98 o înregistrează cu sensul „a înnebuni”. Calc e doar folosirea pentru entuziasm (RO-CAL-076 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
+- Sursă: DEX ’98 s.v. minte
 
 ### RO-NUG-102 „A asigura” și „a garanta”
 - Nivel: ce nu e greșeală
 - Corect: „Firma asigură transportul gratuit.” Nu socotești înlocuirea cu „garantează” (sau invers) o schimbare de fapt numai din cauza cuvântului.
-- De ce: Regula falsă: „a garanta” ar promite mereu mai mult decât „a asigura”, deci înlocuirea ar schimba sensul. DEX '98 și DEX '96 definesc fiecare verb prin celălalt. La o rescriere verifici doar dacă sursa promite o garanție, adică un angajament (vezi [fidelitate.md](fidelitate.md)).
-- Sursă: DEX '98 s.v. asigura; DEX '96 s.v. garanta
+- De ce: Regula falsă: „a garanta” ar promite mereu mai mult decât „a asigura”, deci înlocuirea ar schimba sensul. DEX ’98 și DEX ’96 definesc fiecare verb prin celălalt. La o rescriere verifici doar dacă sursa promite o garanție, adică un angajament (vezi [fidelitate.md](fidelitate.md)).
+- Sursă: DEX ’98 s.v. asigura; DEX ’96 s.v. garanta
 
 ### RO-NUG-113 „S-a întâmplat ceva prost”
 - Nivel: ce nu e greșeală
 - Corect: „A fost o zi proastă pentru bursă.” La fel de corect: „S-a întâmplat ceva prost.” Nu corectezi pe motiv de registru.
-- De ce: Regula falsă: „prost” s-ar spune doar despre oameni și ar fi familiar. DEX '98 îi dă sensul „neplăcut, nefavorabil”, spus despre situații, știri, întâmplări, fără marcă de registru. Într-un mesaj de interfață, „A apărut o problemă” poate fi mai potrivit, dar asta e o propunere (vezi [tipuri/interfata.md](tipuri/interfata.md)).
-- Sursă: DEX '98 s.v. prost
+- De ce: Regula falsă: „prost” s-ar spune doar despre oameni și ar fi familiar. DEX ’98 îi dă sensul „neplăcut, nefavorabil”, spus despre situații, știri, întâmplări, fără marcă de registru. Într-un mesaj de interfață, „A apărut o problemă” poate fi mai potrivit, dar asta e o propunere (vezi [tipuri/interfata.md](tipuri/interfata.md)).
+- Sursă: DEX ’98 s.v. prost
 
 ### RO-NUG-110 „Bunăoară”
 - Nivel: ce nu e greșeală
 - Corect: „Unele orașe, bunăoară Clujul, au extins rețeaua de piste.” Nu corectezi în „de exemplu” pe motiv că ar fi învechit.
-- De ce: Regula falsă: „bunăoară” ar fi un cuvânt învechit sau popular. DEX '98 îl dă cu sensul „de exemplu, de pildă”, fără nicio marcă de registru, iar INJ îl folosește în propriul text.
-- Sursă: DEX '98 s.v. bunăoară; INJ p. 60
+- De ce: Regula falsă: „bunăoară” ar fi un cuvânt învechit sau popular. DEX ’98 îl dă cu sensul „de exemplu, de pildă”, fără nicio marcă de registru, iar INJ îl folosește în propriul text.
+- Sursă: DEX ’98 s.v. bunăoară; INJ p. 60
 
 ### RO-NUG-055 „Întrucât”
 - Nivel: ce nu e greșeală
 - Corect: „Ședința s-a amânat, întrucât lipsea cvorumul.” Nu îl numeri printre conectorii de umplutură ai textului generat.
-- De ce: Regula falsă: „întrucât” ar fi o formulă de tranziție, un tic de conectare. E o conjuncție cauzală, cu sensul „deoarece, pentru că, fiindcă” (DEX '98), și leagă o cauză reală.
-- Sursă: DEX '98 s.v. întrucât
+- De ce: Regula falsă: „întrucât” ar fi o formulă de tranziție, un tic de conectare. E o conjuncție cauzală, cu sensul „deoarece, pentru că, fiindcă” (DEX ’98), și leagă o cauză reală.
+- Sursă: DEX ’98 s.v. întrucât
 
 ### RO-NUG-073 „Durabil”
 - Nivel: ce nu e greșeală
 - Corect: „Am ales un material durabil pentru acoperiș.” Nu corectezi pe motiv că „durabil” s-ar spune doar despre mediu.
-- De ce: Regula falsă: „durabil” ar avea doar sensul ecologic, din „dezvoltare durabilă”. DEX '98 îi dă ca sens de bază „care durează mult timp; trainic, rezistent”. Sensul legat de mediu e cel nou.
-- Sursă: DEX '98 s.v. durabil
+- De ce: Regula falsă: „durabil” ar avea doar sensul ecologic, din „dezvoltare durabilă”. DEX ’98 îi dă ca sens de bază „care durează mult timp; trainic, rezistent”. Sensul legat de mediu e cel nou.
+- Sursă: DEX ’98 s.v. durabil
 
 ### RO-NUG-124 „A finaliza”
 - Nivel: ce nu e greșeală
 - Corect: „Am finalizat raportul ieri.” Nu corectezi în „am terminat” pe motiv că „a finaliza” ar însemna doar „a da formă finală”.
-- De ce: Regula falsă: „a finaliza” ar fi greșit cu sensul „a termina”. DEX '98 îl definește chiar „a duce, a realiza ceva până la sfârșit”. La redactare poți alege verbul mai obișnuit („a termina”, „a încheia”), dar nu corectezi.
-- Sursă: DEX '98 s.v. finaliza
+- De ce: Regula falsă: „a finaliza” ar fi greșit cu sensul „a termina”. DEX ’98 îl definește chiar „a duce, a realiza ceva până la sfârșit”. La redactare poți alege verbul mai obișnuit („a termina”, „a încheia”), dar nu corectezi.
+- Sursă: DEX ’98 s.v. finaliza
 
 ### RO-NUG-002 Femininele numelor de profesii
 - Nivel: ce nu e greșeală
@@ -247,7 +247,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 
 ## Împrumuturi și cuvinte noi
 
-Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat sau un sens nou deja înregistrat în DEX '98 sau în DOOM 3 nu se corectează (vezi [imprumuturi.md](imprumuturi.md)); un sens găsit doar într-un dicționar mai nou rămâne recomandare (vezi [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
+Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat sau un sens nou deja înregistrat în DEX ’98 sau în DOOM 3 nu se corectează (vezi [imprumuturi.md](imprumuturi.md)); un sens găsit doar într-un dicționar mai nou rămâne recomandare (vezi [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
 
 ### RO-NUG-015 „Nutrient”, „a focusa”, „a impacta”
 - Nivel: ce nu e greșeală
@@ -259,13 +259,13 @@ Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat 
 - Nivel: ce nu e greșeală
 - Corect: „Rulați scriptul după instalare.” Nu corectezi în „executați” și nu îl numești anglicism.
 - De ce: Regula falsă: „a rula” ar fi un anglicism de evitat. Verbul e în DOOM 3 și vine din franceză („rouler”); sensul „a executa un program” e o extindere obișnuită în informatică. „Filmul rulează” e la fel de corect. Doar folosirea pentru proiecte („proiectul rulează”) e un calc (RO-CAL-071 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
-- Sursă: DOOM 3 s.v. rula; DEX '98 s.v. rula
+- Sursă: DOOM 3 s.v. rula; DEX ’98 s.v. rula
 
 ### RO-NUG-075 „A procesa” și „a implementa”
 - Nivel: ce nu e greșeală
 - Corect: „Sistemul procesează cererile în ordinea sosirii.” La fel de corect: „Am implementat noile reguli de facturare.” Nu le corectezi ca anglicisme.
-- De ce: Regula falsă: amândouă ar fi anglicisme de evitat. Verbele sunt în DOOM 3; DEX '98 îi dă lui „a procesa” sensul tehnic de prelucrare prin procesor, din engl. „process”, iar DEX '96 dă „a implementa” („a pune în practică, în funcțiune, a aplica”). În informatică nu le corectezi. Despre activitatea oamenilor („dosarele sunt procesate la ghișeu”) poți propune, la redactare, „a prelucra”, „a soluționa” sau „a analiza”; pentru publicul larg poți alege „a pune în aplicare” în loc de „a implementa”.
-- Sursă: DOOM 3 s.v. procesa, implementa; DEX '98 s.v. procesa; DEX '96 s.v. implementa
+- De ce: Regula falsă: amândouă ar fi anglicisme de evitat. Verbele sunt în DOOM 3; DEX ’98 îi dă lui „a procesa” sensul tehnic de prelucrare prin procesor, din engl. „process”, iar DEX ’96 dă „a implementa” („a pune în practică, în funcțiune, a aplica”). În informatică nu le corectezi. Despre activitatea oamenilor („dosarele sunt procesate la ghișeu”) poți propune, la redactare, „a prelucra”, „a soluționa” sau „a analiza”; pentru publicul larg poți alege „a pune în aplicare” în loc de „a implementa”.
+- Sursă: DOOM 3 s.v. procesa, implementa; DEX ’98 s.v. procesa; DEX ’96 s.v. implementa
 
 ### RO-NUG-082 „A downloada”
 - Nivel: ce nu e greșeală
@@ -276,44 +276,44 @@ Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat 
 ### RO-NUG-125 „Per”
 - Nivel: ce nu e greșeală
 - Corect: „Prețul per litru a crescut cu 20 de bani.” Nu corectezi în „pe litru”.
-- De ce: Regula falsă: „per” ar fi un anglicism care trebuie înlocuit mereu cu „pe”. „Per” e o prepoziție românească, din italiană și germană, folosită pentru prețul raportat la o unitate: „pentru, de fiecare” (DEX '98); DOOM 3 dă chiar exemplul „preț per litru”. „Pe” e la fel de corect; la redactare îl poți alege, dar în corectură și în verificare nu înlocuiești „per”.
-- Sursă: DOOM 3 s.v. per; DEX '98 s.v. per
+- De ce: Regula falsă: „per” ar fi un anglicism care trebuie înlocuit mereu cu „pe”. „Per” e o prepoziție românească, din italiană și germană, folosită pentru prețul raportat la o unitate: „pentru, de fiecare” (DEX ’98); DOOM 3 dă chiar exemplul „preț per litru”. „Pe” e la fel de corect; la redactare îl poți alege, dar în corectură și în verificare nu înlocuiești „per”.
+- Sursă: DOOM 3 s.v. per; DEX ’98 s.v. per
 
 ### RO-NUG-072 „Crucial”, „abordare”, „a valorifica”
 - Nivel: ce nu e greșeală
 - Corect: „Prima lună e crucială pentru proiect.” La fel de corecte: „o abordare nouă”, „a valorifica resursele”. Nu le numești calcuri recente.
-- De ce: Regula falsă: aceste cuvinte ar fi calcuri după engleză, apărute odată cu textele generate. Sunt cuvinte vechi: „crucial” vine din franceză („de o importanță capitală”), „a aborda” din fr. „aborder” („a începe studierea unei probleme”), iar „a valorifica” e format în română de la „valoare” (DEX '98). Se poate semnala doar folosirea lor excesivă, în grup (vezi [tipare-text-generat.md](tipare-text-generat.md)).
-- Sursă: DEX '98 s.v. crucial, aborda, valorifica
+- De ce: Regula falsă: aceste cuvinte ar fi calcuri după engleză, apărute odată cu textele generate. Sunt cuvinte vechi: „crucial” vine din franceză („de o importanță capitală”), „a aborda” din fr. „aborder” („a începe studierea unei probleme”), iar „a valorifica” e format în română de la „valoare” (DEX ’98). Se poate semnala doar folosirea lor excesivă, în grup (vezi [tipare-text-generat.md](tipare-text-generat.md)).
+- Sursă: DEX ’98 s.v. crucial, aborda, valorifica
 
 ### RO-NUG-106 „A aprofunda”
 - Nivel: ce nu e greșeală
 - Corect: „Vom aprofunda subiectul în capitolul următor.” Nu îl numești calc după engl. „to delve”.
-- De ce: Regula falsă: verbul ar fi un tic al textului generat, tradus din engleză. E un cuvânt vechi, făcut după fr. „approfondir”, cu sensul „a cerceta profund, în amănunt o problemă” (DEX '98).
-- Sursă: DEX '98 s.v. aprofunda
+- De ce: Regula falsă: verbul ar fi un tic al textului generat, tradus din engleză. E un cuvânt vechi, făcut după fr. „approfondir”, cu sensul „a cerceta profund, în amănunt o problemă” (DEX ’98).
+- Sursă: DEX ’98 s.v. aprofunda
 
 ### RO-NUG-074 „În timp real”
 - Nivel: ce nu e greșeală
 - Corect: „Datele se actualizează în timp real.” Nu corectezi pe motiv de calc.
-- De ce: Regula falsă: îmbinarea ar fi un calc de evitat. E o expresie stabilă în română: DEX '98 o folosește nemarcată, chiar în textul unei definiții (s.v. vocoder).
-- Sursă: DEX '98 s.v. vocoder
+- De ce: Regula falsă: îmbinarea ar fi un calc de evitat. E o expresie stabilă în română: DEX ’98 o folosește nemarcată, chiar în textul unei definiții (s.v. vocoder).
+- Sursă: DEX ’98 s.v. vocoder
 
 ### RO-NUG-107 „Bazat pe date”
 - Nivel: ce nu e greșeală
 - Corect: „Am luat o decizie bazată pe date.” Nu corectezi în „pe baza datelor” când e nevoie de un adjectiv.
-- De ce: Regula falsă: „bazat pe” ar fi un calc după engleză. „A (se) baza” înseamnă „a (se) sprijini, a (se) întemeia pe ceva” (DEX '98), deci „bazat pe date” e o construcție românească. Calc e doar structura copiată a compusului englezesc („date-condus”, vezi RO-CAL-102 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
-- Sursă: DEX '98 s.v. baza
+- De ce: Regula falsă: „bazat pe” ar fi un calc după engleză. „A (se) baza” înseamnă „a (se) sprijini, a (se) întemeia pe ceva” (DEX ’98), deci „bazat pe date” e o construcție românească. Calc e doar structura copiată a compusului englezesc („date-condus”, vezi RO-CAL-102 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
+- Sursă: DEX ’98 s.v. baza
 
 ### RO-NUG-080 „Computer”
 - Nivel: ce nu e greșeală
 - Corect: „Datele se salvează pe computer.” Nu îl corectezi în „calculator”.
-- De ce: Regula falsă: „computer” ar fi interzis în proză. E în DOOM 3 și în DEX '98; „calculator” poate fi propus doar ca preferință. Termenii de interfață și de documentație („tablou de bord”, „valoare de retur”) se tratează ca recomandări în [tipuri/interfata.md](tipuri/interfata.md) și [tipuri/documentatie.md](tipuri/documentatie.md).
-- Sursă: DOOM 3 s.v. computer; DEX '98 s.v. computer
+- De ce: Regula falsă: „computer” ar fi interzis în proză. E în DOOM 3 și în DEX ’98; „calculator” poate fi propus doar ca preferință. Termenii de interfață și de documentație („tablou de bord”, „valoare de retur”) se tratează ca recomandări în [tipuri/interfata.md](tipuri/interfata.md) și [tipuri/documentatie.md](tipuri/documentatie.md).
+- Sursă: DOOM 3 s.v. computer; DEX ’98 s.v. computer
 
 ### RO-NUG-108 „Click”
 - Nivel: ce nu e greșeală
 - Corect: „Dați click pe butonul de salvare.” Nu corectezi în „clic”.
-- De ce: Regula falsă: forma corectă ar fi doar „clic”. DOOM 3 a introdus intrarea nouă „click” (din engleză), iar „clic” e, în dicționare, cuvântul care imită un zgomot sec, scurt (DEX '98). În interfață, verbul simplu („Apăsați”, „Selectați”) poate fi mai firesc (vezi [tipuri/interfata.md](tipuri/interfata.md)).
-- Sursă: DOOM 3 s.v. click; DEX '98 s.v. clic
+- De ce: Regula falsă: forma corectă ar fi doar „clic”. DOOM 3 a introdus intrarea nouă „click” (din engleză), iar „clic” e, în dicționare, cuvântul care imită un zgomot sec, scurt (DEX ’98). În interfață, verbul simplu („Apăsați”, „Selectați”) poate fi mai firesc (vezi [tipuri/interfata.md](tipuri/interfata.md)).
+- Sursă: DOOM 3 s.v. click; DEX ’98 s.v. clic
 
 ### RO-NUG-101 „Refresh”
 - Nivel: ce nu e greșeală
@@ -324,8 +324,8 @@ Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat 
 ### RO-NUG-111 „A remedia”
 - Nivel: ce nu e greșeală
 - Corect: „Vom remedia problema în versiunea următoare.” Nu corectezi verbul.
-- De ce: Regula falsă: „a remedia” ar fi un calc după engl. „to remedy”. E un verb românesc vechi, din fr. „remédier”, cu sensul „a îndrepta, a îmbunătăți o situație” (DEX '98).
-- Sursă: DEX '98 s.v. remedia
+- De ce: Regula falsă: „a remedia” ar fi un calc după engl. „to remedy”. E un verb românesc vechi, din fr. „remédier”, cu sensul „a îndrepta, a îmbunătăți o situație” (DEX ’98).
+- Sursă: DEX ’98 s.v. remedia
 
 ## Îmbinări care doar par pleonasme
 
@@ -334,56 +334,56 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-012 „Ani de zile”
 - Nivel: ce nu e greșeală
 - Corect: „Am lucrat ani de zile la acest proiect.” Nu scoți „de zile”.
-- De ce: Regula falsă: „ani de zile” ar fi pleonasm, pentru că anii sunt făcuți din zile. „De zile” e o construcție consacrată care subliniază durata: DEX '98 o înregistrează la „zi”, ca determinant al cuvintelor „an” și „lună”.
-- Sursă: DEX '98 s.v. zi
+- De ce: Regula falsă: „ani de zile” ar fi pleonasm, pentru că anii sunt făcuți din zile. „De zile” e o construcție consacrată care subliniază durata: DEX ’98 o înregistrează la „zi”, ca determinant al cuvintelor „an” și „lună”.
+- Sursă: DEX ’98 s.v. zi
 
 ### RO-NUG-007 „Marea majoritate”
 - Nivel: ce nu e greșeală
 - Corect: „Marea majoritate a locuitorilor au votat pentru proiect.” Nu scoți „marea”.
-- De ce: Regula falsă: majoritatea ar fi deja „partea cea mai mare”, deci „marea” ar repeta sensul. O majoritate poate fi strânsă sau covârșitoare (DEX '98 deosebește chiar „majoritate absolută” și „majoritate relativă”), iar „marea” spune că e covârșitoare. DEX '96 folosește îmbinarea în propriile definiții.
-- Sursă: DEX '98 s.v. majoritate; DEX '96 s.v. general
+- De ce: Regula falsă: majoritatea ar fi deja „partea cea mai mare”, deci „marea” ar repeta sensul. O majoritate poate fi strânsă sau covârșitoare (DEX ’98 deosebește chiar „majoritate absolută” și „majoritate relativă”), iar „marea” spune că e covârșitoare. DEX ’96 folosește îmbinarea în propriile definiții.
+- Sursă: DEX ’98 s.v. majoritate; DEX ’96 s.v. general
 
 ### RO-NUG-068 „Verdict final”
 - Nivel: ce nu e greșeală
 - Corect: „Verdictul final se va pronunța după recurs.” Nu scoți „final”.
-- De ce: Regula falsă: un verdict ar fi prin definiție definitiv. „Verdict” înseamnă și „răspunsul juraților”, „sentința” (DEX '98), care poate fi atacată; „final” deosebește verdictul definitiv de unul intermediar. Doar în sensul figurat („opinie definitivă”, ca în „verdictul final al criticilor”) adjectivul repetă sensul; nici acolo nu corectezi, dar la redactare poți renunța la „final”.
-- Sursă: DEX '98 s.v. verdict; DSL, s.v. PLEONASM
+- De ce: Regula falsă: un verdict ar fi prin definiție definitiv. „Verdict” înseamnă și „răspunsul juraților”, „sentința” (DEX ’98), care poate fi atacată; „final” deosebește verdictul definitiv de unul intermediar. Doar în sensul figurat („opinie definitivă”, ca în „verdictul final al criticilor”) adjectivul repetă sensul; nici acolo nu corectezi, dar la redactare poți renunța la „final”.
+- Sursă: DEX ’98 s.v. verdict; DSL, s.v. PLEONASM
 
 ### RO-NUG-066 „De notorietate publică”
 - Nivel: ce nu e greșeală
 - Corect: „Faptul e de notorietate publică.” Nu scoți „publică”.
-- De ce: Regula falsă: „publică” ar fi o repetiție care trebuie scoasă. DEX '98 definește notorietatea ca „faptul de a fi cunoscut de multă lume”, deci îmbinarea e pleonastică în esență; E. Grosu o numără totuși printre expresiile care nu se condamnă, fiindcă uzul le-a făcut tolerabile. Cazul e unul de uz curent, de aceea nu o corectezi.
-- Sursă: DEX '98 s.v. notorietate; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202–204
+- De ce: Regula falsă: „publică” ar fi o repetiție care trebuie scoasă. DEX ’98 definește notorietatea ca „faptul de a fi cunoscut de multă lume”, deci îmbinarea e pleonastică în esență; E. Grosu o numără totuși printre expresiile care nu se condamnă, fiindcă uzul le-a făcut tolerabile. Cazul e unul de uz curent, de aceea nu o corectezi.
+- Sursă: DEX ’98 s.v. notorietate; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202–204
 
 ### RO-NUG-038 „Autoritate competentă”
 - Nivel: ce nu e greșeală
 - Corect: „Cererea se depune la autoritatea competentă.” Nu scoți „competentă”.
-- De ce: Regula falsă: orice autoritate ar fi competentă. „Competent” înseamnă aici „care are atribuția legală să facă ceva” (DEX '98), deci adjectivul alege, dintre toate autoritățile, pe cea care răspunde de cazul dat. E un termen juridic, folosit chiar în modelele de redactare din ghidul gov-md.
-- Sursă: DEX '98 s.v. competent; ghid gov-md §1.1
+- De ce: Regula falsă: orice autoritate ar fi competentă. „Competent” înseamnă aici „care are atribuția legală să facă ceva” (DEX ’98), deci adjectivul alege, dintre toate autoritățile, pe cea care răspunde de cazul dat. E un termen juridic, folosit chiar în modelele de redactare din ghidul gov-md.
+- Sursă: DEX ’98 s.v. competent; ghid gov-md §1.1
 
 ### RO-NUG-045 „Rafale puternice”
 - Nivel: ce nu e greșeală
 - Corect: „Mâine sunt așteptate rafale puternice de vânt.” Nu scoți „puternice”.
-- De ce: Regula falsă: „puternice” ar repeta sensul din definiție, fiindcă DEX '98 definește rafala ca „dezlănțuire bruscă, violentă”. Violența din definiție e relativă: rafalele se gradează între ele în prognoze („rafale de până la 70 km/h”), iar „puternice” precizează gradul. Nicio sursă consultată nu discută îmbinarea, de aceea nu o corectezi; la redactare poți da direct intensitatea.
-- Sursă: DEX '98 s.v. rafală
+- De ce: Regula falsă: „puternice” ar repeta sensul din definiție, fiindcă DEX ’98 definește rafala ca „dezlănțuire bruscă, violentă”. Violența din definiție e relativă: rafalele se gradează între ele în prognoze („rafale de până la 70 km/h”), iar „puternice” precizează gradul. Nicio sursă consultată nu discută îmbinarea, de aceea nu o corectezi; la redactare poți da direct intensitatea.
+- Sursă: DEX ’98 s.v. rafală
 
 ### RO-NUG-069 „Sumă de bani”
 - Nivel: ce nu e greșeală
 - Corect: „A primit o sumă de bani drept despăgubire.” Nu scoți „de bani”.
-- De ce: Regula falsă: o sumă ar fi mereu de bani. DEX '98 dă ca prim sens al cuvântului „sumă” rezultatul unei adunări, un total, și abia ca al doilea „cantitate de bani”. „De bani” alege sensul. DEX '98 folosește îmbinarea în zeci de definiții.
-- Sursă: DEX '98 s.v. sumă
+- De ce: Regula falsă: o sumă ar fi mereu de bani. DEX ’98 dă ca prim sens al cuvântului „sumă” rezultatul unei adunări, un total, și abia ca al doilea „cantitate de bani”. „De bani” alege sensul. DEX ’98 folosește îmbinarea în zeci de definiții.
+- Sursă: DEX ’98 s.v. sumă
 
 ### RO-NUG-126 „Pedeapsă penală”
 - Nivel: ce nu e greșeală
 - Corect: „Fapta se sancționează cu pedeapsă penală, nu cu amendă contravențională.” Nu scoți „penală”.
-- De ce: Regula falsă: orice pedeapsă ar fi penală. „Pedeapsă” înseamnă în general „sancțiune aplicată celui care a greșit” (DEX '98), iar sancțiunile pot fi și disciplinare sau contravenționale. „Penală” precizează felul pedepsei; DEX '98 folosește îmbinarea în definiția cuvântului „detențiune”.
-- Sursă: DEX '98 s.v. pedeapsă, detențiune
+- De ce: Regula falsă: orice pedeapsă ar fi penală. „Pedeapsă” înseamnă în general „sancțiune aplicată celui care a greșit” (DEX ’98), iar sancțiunile pot fi și disciplinare sau contravenționale. „Penală” precizează felul pedepsei; DEX ’98 folosește îmbinarea în definiția cuvântului „detențiune”.
+- Sursă: DEX ’98 s.v. pedeapsă, detențiune
 
 ### RO-NUG-127 „Prețuri scumpe”
 - Nivel: ce nu e greșeală
 - Corect: „Prețurile sunt scumpe în centrul orașului.” Nu corectezi în „prețurile sunt mari”.
-- De ce: Regula falsă: lucrurile ar putea fi scumpe, dar prețurile doar mari, deci „prețuri scumpe” ar fi pleonasm. DEX '98 îi dă lui „scump” și sensul „(despre prețuri) mare, ridicat”.
-- Sursă: DEX '98 s.v. scump
+- De ce: Regula falsă: lucrurile ar putea fi scumpe, dar prețurile doar mari, deci „prețuri scumpe” ar fi pleonasm. DEX ’98 îi dă lui „scump” și sensul „(despre prețuri) mare, ridicat”.
+- Sursă: DEX ’98 s.v. scump
 
 ### RO-NUG-128 Complementul de aceeași rădăcină care aduce un conținut
 - Nivel: ce nu e greșeală
@@ -394,14 +394,14 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-087 „L-am văzut cu ochii mei”
 - Nivel: ce nu e greșeală
 - Corect: „L-am văzut cu ochii mei intrând în clădire.” Nu scoți „cu ochii mei”.
-- De ce: Regula falsă: se vede doar cu ochii, deci complementul ar fi pleonasm. Îmbinarea e un pleonasm tolerat, cu rol de accent: vorbitorul subliniază că a fost martor. DEX '98 înregistrează expresia „a vedea cu ochii lui” („a vedea el însuși”), iar E. Grosu o dă printre pleonasmele care nu sunt greșeli. O lași la orice persoană; DEX '98 dă expresia chiar la persoana a III-a („a vedea cu ochii lui”).
-- Sursă: DEX '98 s.v. ochi; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202
+- De ce: Regula falsă: se vede doar cu ochii, deci complementul ar fi pleonasm. Îmbinarea e un pleonasm tolerat, cu rol de accent: vorbitorul subliniază că a fost martor. DEX ’98 înregistrează expresia „a vedea cu ochii lui” („a vedea el însuși”), iar E. Grosu o dă printre pleonasmele care nu sunt greșeli. O lași la orice persoană; DEX ’98 dă expresia chiar la persoana a III-a („a vedea cu ochii lui”).
+- Sursă: DEX ’98 s.v. ochi; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202
 
 ### RO-NUG-067 „Întârzierea și amânarea”
 - Nivel: ce nu e greșeală
 - Corect: „Clientul a cerut despăgubiri pentru întârzierea și amânarea livrării.” Nu scoți unul dintre substantive.
-- De ce: Regula falsă: cele două cuvinte ar fi sinonime, deci alăturarea lor ar fi o repetiție. Nu înseamnă același lucru: întârzierea e producerea a ceva mai târziu decât era prevăzut, iar amânarea e mutarea voită a unui termen (DEX '98).
-- Sursă: DEX '98 s.v. întârziere, amânare
+- De ce: Regula falsă: cele două cuvinte ar fi sinonime, deci alăturarea lor ar fi o repetiție. Nu înseamnă același lucru: întârzierea e producerea a ceva mai târziu decât era prevăzut, iar amânarea e mutarea voită a unui termen (DEX ’98).
+- Sursă: DEX ’98 s.v. întârziere, amânare
 
 ### RO-NUG-083 „În anul 2080 d.Hr.”
 - Nivel: ce nu e greșeală
@@ -468,8 +468,8 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-034 „;”, „etc.”, „a efectua”
 - Nivel: ce nu e greșeală
 - Corect: „Plata se poate efectua cu cardul, prin virament etc.” Nu înlocuiești „etc.” cu „și altele” și nu spargi fraza la fiecare „;”.
-- De ce: Regula falsă: punctul-și-virgula, „etc.” și verbul „a efectua” ar fi greșite într-un text clar. Ghidurile de limbaj clar le evită ca preferință de stil pentru textele administrative, nu ca normă: „etc.” e o abreviere admisă, punctul-și-virgula e un semn normat (RO-NUG-003), iar „a efectua” înseamnă „a face, a realiza, a îndeplini” (DEX '98). Verbul devine o problemă doar într-un tipar de verb-paravan („a efectua realizarea plății”, vezi [stilistica.md](stilistica.md)).
-- Sursă: ghid gov-md §5.3.1.10 și §9.3; DEX '98 s.v. efectua
+- De ce: Regula falsă: punctul-și-virgula, „etc.” și verbul „a efectua” ar fi greșite într-un text clar. Ghidurile de limbaj clar le evită ca preferință de stil pentru textele administrative, nu ca normă: „etc.” e o abreviere admisă, punctul-și-virgula e un semn normat (RO-NUG-003), iar „a efectua” înseamnă „a face, a realiza, a îndeplini” (DEX ’98). Verbul devine o problemă doar într-un tipar de verb-paravan („a efectua realizarea plății”, vezi [stilistica.md](stilistica.md)).
+- Sursă: ghid gov-md §5.3.1.10 și §9.3; DEX ’98 s.v. efectua
 
 ## Tipografie și punctuație
 
@@ -558,8 +558,8 @@ Termenii și convențiile de interfață sunt în [tipuri/interfata.md](tipuri/i
 ### RO-NUG-090 „Încărcare reușită”
 - Nivel: ce nu e greșeală
 - Corect: „Încărcare reușită.” La fel de corect: „Conectare reușită.” Nu corectezi.
-- De ce: Regula falsă: „reușit” n-ar putea însoți substantivul unei acțiuni, deci mesajul ar fi un calc. „Reușit” înseamnă „bine realizat, izbutit” (DEX '98), deci se potrivește oricărei acțiuni duse la capăt. „Cu succes” e o îmbinare românească, pe care DEX '98 o folosește în definiții („a termina ceva cu succes”): „Încărcarea s-a încheiat cu succes” e la fel de corect.
-- Sursă: DEX '98 s.v. reușit, căpătâi
+- De ce: Regula falsă: „reușit” n-ar putea însoți substantivul unei acțiuni, deci mesajul ar fi un calc. „Reușit” înseamnă „bine realizat, izbutit” (DEX ’98), deci se potrivește oricărei acțiuni duse la capăt. „Cu succes” e o îmbinare românească, pe care DEX ’98 o folosește în definiții („a termina ceva cu succes”): „Încărcarea s-a încheiat cu succes” e la fel de corect.
+- Sursă: DEX ’98 s.v. reușit, căpătâi
 
 ## Vezi și
 

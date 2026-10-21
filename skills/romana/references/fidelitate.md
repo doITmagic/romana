@@ -4,7 +4,7 @@ Fișierul acesta te ajută când rescrii, corectezi sau traduci un text care are
 
 Fidelitatea nu e o normă de limbă, ci o regulă a skill-ului. De aceea o abatere de la ea are nivelul normă, gravitatea P0 și pilonul coerență (vezi SKILL.md), chiar dacă fraza rescrisă e corectă gramatical.
 
-Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; DEX '98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998.
+Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998.
 
 ## Cum folosești fișierul
 
@@ -78,8 +78,8 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 ### RO-FID-001 Forme populare din gura vorbitorului: citatul rămâne sau devine vorbire indirectă
 - Nivel: normă
 - Greșit: „«Voiam să plec mai devreme», a spus martorul.” → Corect: „«Vroiam să plec mai devreme», a spus martorul.”
-- De ce: În exemplu, sursa spune „vroiam”, iar varianta greșită a „reparat-o” în „voiam”. Citatul reproduce cuvintele vorbitorului, inclusiv formele populare sau nestandard („vroiam”, „plus că”, un „decât” afirmativ, o frază începută și lăsată neterminată). Norma se aplică textului tău, nu citatului. Dacă nu ești sigur cum a sunat exact fraza, treci la vorbirea indirectă („Martorul a spus că voia să plece mai devreme”), care îți dă voie să folosești forma standard. „Vroiam” nu e nici măcar o greșeală: DEX '98 înregistrează „vroi” ca variantă a lui „vrea”.
-- Sursă: regulă de fidelitate a skill-ului; ghid gov-md §9.8.1; DEX '98 s.v. vroi
+- De ce: În exemplu, sursa spune „vroiam”, iar varianta greșită a „reparat-o” în „voiam”. Citatul reproduce cuvintele vorbitorului, inclusiv formele populare sau nestandard („vroiam”, „plus că”, un „decât” afirmativ, o frază începută și lăsată neterminată). Norma se aplică textului tău, nu citatului. Dacă nu ești sigur cum a sunat exact fraza, treci la vorbirea indirectă („Martorul a spus că voia să plece mai devreme”), care îți dă voie să folosești forma standard. „Vroiam” nu e nici măcar o greșeală: DEX ’98 înregistrează „vroi” ca variantă a lui „vrea”.
+- Sursă: regulă de fidelitate a skill-ului; ghid gov-md §9.8.1; DEX ’98 s.v. vroi
 
 ### RO-FID-003 Pasivul din original rămâne pasiv când agentul lipsește
 - Nivel: normă
@@ -120,7 +120,7 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 ### RO-FID-010 Traducerea se acordă gramatical cu fraza în care intră
 - Nivel: normă
 - Greșit: „Contul Utilizator a fost șters.” → Corect: „Contul utilizatorului a fost șters.”
-- De ce: Un termen luat dintr-un glosar sau dintr-o listă apare în forma de dicționar, dar în frază are rol, caz și număr. Traducerea înseamnă și acordul: articolul, cazul, genul, pluralul. Un termen lăsat în forma de bază ca să nu fie „atins” produce o frază agramată.
+- De ce: Un termen luat dintr-un glosar sau dintr-o listă apare în forma de dicționar, dar în frază are rol, caz și număr. Traducerea înseamnă și acordul: articolul, cazul, genul, pluralul. Un termen lăsat în forma de bază ca să nu fie „atins” produce o frază agramată. Articularea subiectului dintr-un mesaj cu verb („Utilizatorul a fost șters”, nu „Utilizator a fost șters”) e RO-GRA-149 din [gramatica.md](gramatica.md).
 - Sursă: regulă de fidelitate a skill-ului
 
 ### RO-FID-011 O etapă a procesului nu se înlocuiește cu alta
@@ -139,19 +139,19 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 - Nivel: normă
 - Greșit: „Sursa: «Reforma va fi decisivă și hotărâtoare pentru sistem.» → «Reforma va fi utilă pentru sistem.»” → Corect: „Reforma va fi decisivă pentru sistem.”
 - De ce: Cele două adjective sunt aproape sinonime, deci poți păstra unul, dar cel păstrat trebuie să aibă aceeași forță. „Utilă” coboară afirmația de la „hotărâtoare” la „de folos”. Când scurtezi o repetiție, scoți dublura, nu gradul.
-- Sursă: regulă de fidelitate a skill-ului; DEX '98 s.v. decisiv, util
+- Sursă: regulă de fidelitate a skill-ului; DEX ’98 s.v. decisiv, util
 
 ### RO-FID-014 Calificativul nu se schimbă cu altul de alt fel
 - Nivel: normă
 - Greșit: „Sursa: «Serviciul e partenerul principal al firmei.» → «Serviciul e un partener bun al firmei.»” → Corect: „Serviciul e partenerul principal al firmei.”
 - De ce: „Principal” spune ce loc ocupă serviciul, iar „bun” spune ce calități are. Un calificativ înlocuit cu unul care măsoară altceva introduce o evaluare nouă. Înlocuiești un calificativ doar cu unul care spune același lucru.
-- Sursă: regulă de fidelitate a skill-ului; DEX '98 s.v. principal, bun
+- Sursă: regulă de fidelitate a skill-ului; DEX ’98 s.v. principal, bun
 
 ### RO-FID-015 Nu adaugi repere de timp
 - Nivel: normă
 - Greșit: „Sursa: «Piața s-a schimbat.» → «Între timp, piața s-a schimbat.»” → Corect: „Piața s-a schimbat.”
 - De ce: „Între timp” leagă schimbarea de altceva, petrecut în același răstimp, și cititorul înțelege o simultaneitate pe care sursa n-o spune. Repere ca „între timp”, „după aceea”, „de atunci” sunt informație despre timp, nu ornament.
-- Sursă: regulă de fidelitate a skill-ului; DEX '98 s.v. timp
+- Sursă: regulă de fidelitate a skill-ului; DEX ’98 s.v. timp
 
 ### RO-FID-016 Nu adaugi o concluzie sau o comparație
 - Nivel: normă
@@ -175,7 +175,7 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 - Nivel: normă
 - Greșit: „Sursa: «Raportul citează mai multe surse.» → «Raportul citează mai multe surse oficiale.»” → Corect: „Raportul citează mai multe surse.”
 - De ce: „Oficiale” sugerează un statut (autoritate, verificare) pe care sursa nu-l afirmă. O calificare adăugată pe un substantiv schimbă ce se afirmă despre el.
-- Sursă: regulă de fidelitate a skill-ului; DEX '98 s.v. oficial
+- Sursă: regulă de fidelitate a skill-ului; DEX ’98 s.v. oficial
 
 ### RO-FID-020 Nu adaugi cifre, nume, date, locuri, surse, opinii
 - Nivel: normă
@@ -205,7 +205,7 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 - Nivel: normă
 - Greșit: „Sursa: «Studenții au participat la anchetă.» → «Studenții au condus ancheta.»” → Corect: „Studenții au participat la anchetă.”
 - De ce: Cuvântul pus în locul unuia umflat sau greoi trebuie să spună același lucru, cu aceeași forță. „A participa” înseamnă a lua parte, „a conduce” înseamnă a avea rolul principal; un verb mai puternic schimbă faptul relatat. La fel, „un set complet” nu devine „un set integrat”: „complet” înseamnă că nu lipsește nimic, iar „integrat” că părțile funcționează împreună. Înlocuitorul se alege după dicționar, nu după impresia de sinonimie.
-- Sursă: regulă de fidelitate a skill-ului; DEX '98 s.v. participa, conduce, complet, integrat
+- Sursă: regulă de fidelitate a skill-ului; DEX ’98 s.v. participa, conduce, complet, integrat
 
 ### RO-FID-025 „Ar trebui” nu devine „trebuie”
 - Nivel: normă
