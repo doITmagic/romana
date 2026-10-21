@@ -158,7 +158,7 @@ Pleonasmele obișnuite au câteva tipare:
 - doi conectori cu același sens, puși alături („dar însă”);
 - un determinant pe care definiția substantivului îl conține deja („o inovație nouă”).
 
-Nivelul îl dai după cât de vizibilă e repetarea și după surse. E **normă** când vorbitorul obișnuit vede repetarea (prefixul, cuvântul sau sensul repetat îi sunt cunoscute) și sursele nu tolerează alăturarea. E **recomandare** când repetarea e ascunsă într-un element împrumutat sau savant pe care vorbitorul obișnuit nu-l recunoaște, chiar dacă definiția din dicționar o arată (DSL numește aceste pleonasme latente: „muncă laborioasă”, „a cronometra timpul”, „a aduce aportul”), când unele surse o socotesc tolerată de uz sau când al doilea cuvânt poate aduce o nuanță. Pleonasmul pus voit, pentru accent sau pentru efect, în poezie, în citat ori în vorbirea redată a cuiva, nu se corectează.
+Nivelul îl dai după cât de vizibilă e repetarea și după surse. E **normă** când vorbitorul obișnuit vede repetarea (prefixul, cuvântul sau sensul repetat îi sunt cunoscute) și sursele nu tolerează alăturarea. E **recomandare** când repetarea e ascunsă într-un element împrumutat sau savant pe care vorbitorul obișnuit nu-l recunoaște, chiar dacă definiția din dicționar o arată (DSL, după Th. Hristea, le numește latente: „muncă laborioasă”, „a cronometra timpul”, „a aduce aportul”), când unele surse o socotesc tolerată de uz sau când al doilea cuvânt poate aduce o nuanță. Pleonasmul pus voit, pentru accent sau pentru efect, în poezie, în citat ori în vorbirea redată a cuiva, nu se corectează.
 
 Surse pentru metodă: DSL, s.v. PLEONASM; ghid gov-md §8.2; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202–204.
 
@@ -175,7 +175,7 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 ### RO-SEM-201 Determinantul pe care definiția îl conține deja
 - Nivel: normă
 - Greșit: „Lansăm o inovație nouă pentru clienții noștri.” → Corect: „Lansăm o inovație pentru clienții noștri.”
-- De ce: „Inovația” e chiar o noutate (DEX '98), iar sensul „ceva nou” al cuvântului îl cunoaște orice vorbitor, deci repetarea se vede și „nouă” nu adaugă nimic. Proba pentru orice pleonasm de acest fel e aceeași: cauți definiția substantivului și verifici dacă ea conține deja sensul determinantului; dacă repetarea se vede doar din originea cuvântului, e un pleonasm latent (RO-SEM-203). Dacă autorul vrea să spună altceva (că inovația e mai recentă decât alta), o spune explicit.
+- De ce: „Inovația” e chiar o noutate (DEX '98), iar sensul „ceva nou” al cuvântului îl cunoaște orice vorbitor, deci repetarea se vede și „nouă” nu adaugă nimic. Proba pentru orice pleonasm de acest fel e aceeași: cauți definiția substantivului și verifici dacă ea conține deja sensul determinantului; dacă repetarea e ascunsă într-un element împrumutat sau savant pe care vorbitorul obișnuit nu-l recunoaște, chiar dacă definiția o arată, e un pleonasm latent (RO-SEM-203). Dacă autorul vrea să spună altceva (că inovația e mai recentă decât alta), o spune explicit.
 - Sursă: DEX '98 s.v. inovație; DSL, s.v. PLEONASM
 
 ### RO-SEM-202 Prefixul „re-” repetat de „din nou” sau „încă o dată”
@@ -283,7 +283,7 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 ### RO-SEM-213 Puteri plenipotențiare
 - Nivel: normă
 - Greșit: „Delegatul a primit puteri plenipotențiare pentru negociere.” → Corect: „Delegatul a primit puteri depline pentru negociere.”
-- De ce: „Plenipotențiar” se spune despre o persoană și înseamnă „care are puteri depline” (DEX '98). „Puteri plenipotențiare” repetă ideea și pune adjectivul pe alt substantiv decât cel pe care îl descrie. Spui „puteri depline” sau „delegat plenipotențiar”. Titlul oficial „ambasador extraordinar și plenipotențiar” rămâne neschimbat.
+- De ce: „Plenipotențiar” se spune despre o persoană și înseamnă „care are puteri depline” (DEX '98). „Puteri plenipotențiare” repetă ideea și pune adjectivul pe alt substantiv decât cel pe care îl descrie. E normă din cauza folosirii greșite a adjectivului, nu a repetării, care e latentă. Spui „puteri depline” sau „delegat plenipotențiar”. Titlul oficial „ambasador extraordinar și plenipotențiar” rămâne neschimbat.
 - Sursă: DEX '98 s.v. plenipotențiar
 
 ### RO-SEM-215 Despăgubirea pagubelor
@@ -310,7 +310,7 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 - De ce: „A urca” înseamnă „a se deplasa către un loc mai sus”, „a coborî” înseamnă „a se deplasa în jos”, iar „a avansa”, „a înainta” (DEX '98), deci direcția e spusă de verb. Unele surse tolerează „a urca sus” și „a coborî jos” în vorbirea populară și în expresii cu valoare de accent, iar în poezie apar voit. În textul neutru propui varianta fără adverb.
 - Sursă: DEX '98 s.v. urca, coborî, avansa; INJ p. 72; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202–203
 
-### RO-SEM-203 Pleonasmul care se vede doar din etimologie
+### RO-SEM-203 Pleonasmul latent (ascuns într-un element savant)
 - Nivel: recomandare
 - Greșit: „Antrenorul a cronometrat timpul fiecărui alergător.” → Corect: „Antrenorul l-a cronometrat pe fiecare alergător.”
 - De ce: „A cronometra” înseamnă „a măsura durata unei acțiuni cu ajutorul unui cronometru” (DEX '98, din fr. „chronométrer”), iar elementul „crono-” vine din grecescul pentru „timp”. DSL dă chiar îmbinarea „a cronometra timpul” ca exemplu de pleonasm latent: repetarea e ascunsă într-un element savant pe care vorbitorul obișnuit nu-l recunoaște, iar asemenea pleonasme s-au impus în limbă. De aceea e o neglijență pentru un cititor cultivat, nu o greșeală, și doar o propui. Tot aici intră „muncă laborioasă” („laborios” = „care cere multă muncă”, DEX '98) și „glicemie în sânge” (glicemia e cantitatea de glucoză din sânge, DEX '96): dicționarul arată repetarea, dar vorbitorul obișnuit nu o vede.
@@ -337,7 +337,7 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 ### RO-SEM-217 A-și aduce aportul
 - Nivel: recomandare
 - Greșit: „Fiecare voluntar și-a adus aportul la organizarea târgului.” → Corect: „Fiecare voluntar a contribuit la organizarea târgului.”
-- De ce: Aportul e o contribuție adusă de cineva (DEX '98), iar cuvântul vine din franțuzescul „apporter”, „a aduce”. Repetarea se vede mai ales din etimologie, de aceea o propui, nu o corectezi. Spui „a contribui” sau „a-și aduce contribuția”. „Aport” folosit singur e corect („aportul lui a fost decisiv”).
+- De ce: Aportul e o contribuție adusă de cineva (DEX '98), iar cuvântul vine din franțuzescul „apporter”, „a aduce”. Repetarea e ascunsă în cuvântul împrumutat și vorbitorul obișnuit nu o vede (DSL o dă ca pleonasm latent), de aceea o propui, nu o corectezi. Spui „a contribui” sau „a-și aduce contribuția”. „Aport” folosit singur e corect („aportul lui a fost decisiv”).
 - Sursă: DEX '98 s.v. aport; DSL, s.v. PLEONASM
 
 ### RO-SEM-231 Perioadă de timp
