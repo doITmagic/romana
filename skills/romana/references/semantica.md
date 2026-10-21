@@ -36,9 +36,9 @@ Un sens care lipsește din DEX '98 poate fi înregistrat în dicționare mai noi
 - Sursă: DEX '98 s.v. adormi; B. Croitor et al., 2014, p. 84–85
 
 ### RO-SEM-002 Adjectivul care își schimbă sensul după loc
-- Nivel: normă
+- Nivel: de semnalat
 - Greșit: „Am primit diferite răspunsuri, deși am pus de trei ori aceeași întrebare.” → Corect: „Am primit răspunsuri diferite, deși am pus de trei ori aceeași întrebare.”
-- De ce: Câteva adjective au alt sens înaintea substantivului (DEX '98): „diferite răspunsuri” înseamnă „mai multe, de tot felul”, iar „răspunsuri diferite”, „care nu se potrivesc între ele”; „un simplu angajat” înseamnă „doar un angajat”, iar „un angajat simplu” spune ceva despre felul lui de a fi; „singurul drum” înseamnă „unicul drum”. Aici „deși” arată că autorul vorbește despre răspunsuri care se contrazic. Corectezi când contextul sau sursa arată sensul voit; altfel semnalezi și întrebi.
+- De ce: Câteva adjective au alt sens înaintea substantivului (DEX '98): „diferite răspunsuri” înseamnă „mai multe, de tot felul”, iar „răspunsuri diferite”, „care nu se potrivesc între ele”; „un simplu angajat” înseamnă „doar un angajat”, iar „un angajat simplu” spune ceva despre felul lui de a fi; „singurul drum” înseamnă „unicul drum”. Ambele forme sunt corecte, fiecare cu sensul ei: „diferite răspunsuri” e o lectură posibilă și aici. Pentru că „deși” sugerează răspunsuri care se contrazic, semnalezi și propui forma cu adjectivul după substantiv, care spune limpede acest sens. Într-o traducere, când sursa arată sensul, alegi forma care îl redă.
 - Sursă: DEX '98 s.v. diferit, simplu, singur
 
 ### RO-SEM-009 Pluralul care desparte sensurile

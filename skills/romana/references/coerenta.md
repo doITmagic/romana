@@ -50,12 +50,12 @@ Surse pentru metodă: DSL, s.v. TEMĂ și REMĂ; C. Tintiuc, *Levels of Text Ana
 ### RO-COE-014 Un subiect nou se anunță
 - Nivel: recomandare
 - Greșit: „Cursul are opt lecții, câte două pe săptămână. Parcarea se plătește separat. La final primiți un certificat.” → Corect: „Cursul are opt lecții, câte două pe săptămână, iar la final primiți un certificat. Un detaliu practic: parcarea se plătește separat.”
-- De ce: Firul se rupe când o frază pornește de la ceva ce nu a fost pomenit și nu ține de ce s-a spus. Un lucru care ține firesc de subiect (un curs are lecții, profesori, un preț) poate deschide fraza fără anunț. Un subiect străin se anunță sau își primește locul lui, după ce subiectul de până atunci s-a încheiat.
+- De ce: Firul se rupe când o frază pornește de la ceva ce nu a fost pomenit și nu ține de ce s-a spus. Un lucru care ține firesc de subiect (un curs are lecții, profesori, un preț) poate deschide fraza fără anunț. Un subiect străin se anunță sau își primește locul, după ce subiectul de până atunci s-a încheiat.
 - Sursă: C. Tintiuc, Levels of Text Analysis in the Hierarchy of Linguistic Units, 2020, p. 74 și p. 77; DSL, s.v. COERENȚĂ
 
 ### RO-COE-001 Informația nouă nu se ascunde la mijlocul frazei
 - Nivel: recomandare
-- Greșit: „În ceea ce privește termenul de livrare, acesta a fost redus de noi, începând de luni, la două zile.” → Corect: „Începând de luni, termenul de livrare se reduce la două zile.”
+- Greșit: „În ceea ce privește termenul de livrare, acesta a fost redus de noi, începând de luni, la două zile.” → Corect: „Am redus termenul de livrare la două zile, începând de luni.”
 - De ce: Cititorul reține mai ales finalul frazei. Formulele de deschidere („În ceea ce privește…”) și segmentele puse între verb și complement împing informația nouă la mijloc, unde se pierde. Pui la sfârșit ce vrei să rămână în minte.
 - Sursă: Mic ghid CE p. 7 (Rec. 5); ghid gov-md §1.8
 
@@ -151,21 +151,21 @@ Surse pentru metodă: ghid gov-md §10.1 și §10.2; DSL, s.v. CONECTOR; C. Tint
 
 ### RO-COE-028 Un conector de adăugare nu introduce un argument contrar
 - Nivel: normă
-- Greșit: „Aplicația e ușor de folosit. Mai mult, abonamentul costă dublu față de anul trecut.” → Corect: „Aplicația e ușor de folosit. În schimb, abonamentul costă dublu față de anul trecut.”
-- De ce: „În plus”, „mai mult”, „de asemenea” adaugă un argument în aceeași direcție cu cel dinainte, iar „mai mult” îl anunță pe cel mai puternic. Când a doua frază trage în sens opus, de exemplu un dezavantaj după un avantaj, relația e de contrast și o spun „dar”, „însă” sau „în schimb”. Regula nu privește o înșiruire de fapte neutre („Camera are 20 de metri pătrați. În plus, are balcon.”), unde adăugarea e reală.
+- Greșit: „Merită să treceți la aplicația noastră: e ușor de folosit. Mai mult, abonamentul costă dublu față de anul trecut.” → Corect: „Merită să treceți la aplicația noastră: e ușor de folosit, chiar dacă abonamentul costă dublu față de anul trecut.”
+- De ce: „În plus”, „mai mult”, „de asemenea” adaugă un argument în aceeași direcție cu cel dinainte, iar „mai mult” îl anunță pe cel mai puternic. Când a doua frază trage în sens opus, de exemplu un dezavantaj după un avantaj, relația e de contrast sau de concesie și o spun „dar”, „însă”, „în schimb” sau „chiar dacă”. E normă doar când textul argumentează o concluzie (aici, că merită să treceți la aplicație) și conectorul aditiv introduce argumentul opus; altfel, de exemplu când textul doar alătură un plus și un minus, e recomandare. Regula nu privește o înșiruire de fapte neutre („Camera are 20 de metri pătrați. În plus, are balcon.”), unde adăugarea e reală.
 - Sursă: A. N. Pavel Dicu, „Conectorii aditivi și rolul lor în argumentare”, 2015, p. 106–108; ghid gov-md §10.2.3 și §10.2.4
 
 ### RO-COE-017 Conectorul înlocuit păstrează relația
 - Nivel: normă
-- Greșit: „Am automatizat facturarea. Și costurile au scăzut.” → Corect: „Am automatizat facturarea. Prin urmare, costurile au scăzut.”
-- De ce: Textul de pornire spunea „Astfel, costurile au scăzut”, iar „astfel” arăta aici consecința (DEX '98 îi dă și sensul „prin urmare”). „Și” o transformă într-o simplă adăugare. La fel de greșite sunt „în contextul crizei” rescris „din cauza crizei” (apare o cauză care nu era în text) și „Pentru a atinge acest obiectiv” rescris „Așadar” (scopul devine concluzie). „Pe de altă parte” devine „dar” sau „însă” doar dacă frazele chiar se opun.
+- Greșit: „Am automatizat facturarea. De asemenea, costurile au scăzut.” → Corect: „Am automatizat facturarea. Prin urmare, costurile au scăzut.”
+- De ce: Textul de pornire spunea „Astfel, costurile au scăzut”, iar „astfel” arăta aici consecința (DEX '98 îi dă și sensul „prin urmare”). „De asemenea” o transformă într-o simplă adăugare. La fel de greșite sunt „în contextul crizei” rescris „din cauza crizei” (apare o cauză care nu era în text) și „Pentru a atinge acest obiectiv” rescris „Așadar” (scopul devine concluzie). „Pe de altă parte” devine „dar” sau „însă” doar dacă frazele chiar se opun.
 - Sursă: DEX '98 s.v. astfel, așadar; ghid gov-md §10.2
 
 ### RO-COE-016 Aglomerarea de conectori se semnalează, conectorul izolat nu
 - Nivel: recomandare
 - Greșit: „Livrarea e gratuită. Totodată, comenzile ajung în două zile. De asemenea, puteți returna produsele în 30 de zile.” → Corect: „Livrarea e gratuită, comenzile ajung în două zile și puteți returna produsele în 30 de zile.”
 - De ce: Un conector care spune o relație reală e un mijloc normal de legătură, chiar dacă apare des în textele oficiale. Semnalul e grupul: conectori la începutul aproape fiecărei fraze, mai ales când textul doar înșiră lucruri. Semnalezi o dată tot pasajul, nu fiecare conector.
-- Sursă: ghid gov-md §10.2.8
+- Sursă: ghid gov-md §10.1 și §10.2.8 (ghidul vorbește de abundența de conectori într-o frază; regula de aici o extinde la frazele consecutive)
 
 ### RO-COE-027 O serie de conectori se continuă la fel
 - Nivel: recomandare

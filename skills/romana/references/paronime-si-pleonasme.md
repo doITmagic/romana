@@ -23,7 +23,7 @@ Bun:
 
 O strategie aprobată se adoptă, adică se acceptă și se aplică. „A adapta o strategie” ar însemna că firma a modificat o strategie existentă ca să se potrivească unor condiții noi, ceea ce fraza nu spune.
 
-Nu sunt paronime două forme ale aceluiași cuvânt („conjunctură” și „conjunctura”) și nici două cuvinte fără apropiere de formă. Nu e confuzie nici paronomaza, adică alăturarea voită a două paronime într-un joc de cuvinte, frecventă în reclame și în titluri („Nu e o glumă, e o gumă”). O lași cum e.
+Nu sunt paronime două forme ale aceluiași cuvânt („conjunctură” și „conjuncturi”) și nici două cuvinte fără apropiere de formă. Nu e confuzie nici paronomaza, adică alăturarea voită a două paronime într-un joc de cuvinte, frecventă în reclame și în titluri („Nu e o glumă, e o gumă”). O lași cum e.
 
 Surse pentru metodă: DSL, s.v. PARONIM(E) și PARONOMAZĂ; A. Grădinaru, „Valori semantico-stilistice ale paronimiei”, 2006, p. 143–144.
 
@@ -90,7 +90,7 @@ Surse pentru metodă: DSL, s.v. PARONIM(E) și PARONOMAZĂ; A. Grădinaru, „Va
 ### RO-SEM-221 Conjunctură și conjectură
 - Nivel: normă
 - Greșit: „Nu avem date, avem doar conjuncturi despre cauza avariei.” → Corect: „Nu avem date, avem doar conjecturi despre cauza avariei.”
-- De ce: „Conjectură” înseamnă „presupunere”, iar „conjunctură”, „concurs de împrejurări” (DEX '98). Intră în lista paronimelor doar perechile verificate astfel în dicționar: două forme ale aceluiași cuvânt („conjunctură”, „conjunctura”) nu sunt paronime.
+- De ce: „Conjectură” înseamnă „presupunere”, iar „conjunctură”, „concurs de împrejurări” (DEX '98). Intră în lista paronimelor doar perechile verificate astfel în dicționar: două forme ale aceluiași cuvânt („conjunctură”, „conjuncturi”) nu sunt paronime.
 - Sursă: DEX '98 s.v. conjunctură, conjectură; DSL, s.v. PARONIM(E)
 
 ### RO-SEM-232 A evalua și a evolua
@@ -181,14 +181,14 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 ### RO-SEM-202 Prefixul „re-” repetat de „din nou” sau „încă o dată”
 - Nivel: normă
 - Greșit: „Echipa a revenit din nou la varianta inițială.” → Corect: „Echipa a revenit la varianta inițială.”
-- De ce: „A reveni” înseamnă „a veni din nou, a se întoarce”, „a relua” înseamnă „a lua din nou” sau „a începe din nou”, iar „a reitera”, „a repeta” (DEX '98). Adverbul de repetare spune a doua oară ce spune deja prefixul. Dacă vrei să arăți că revenirea s-a produs de mai multe ori, o spui cu un număr („a treia oară”).
+- De ce: „A reveni” înseamnă „a veni din nou, a se întoarce”, „a relua” înseamnă „a lua din nou” sau „a începe din nou”, iar „a reitera”, „a repeta” (DEX '98). Aici adverbul de repetare spune a doua oară ce spune deja prefixul: echipa s-a întors o dată la varianta inițială. E normă doar în acest caz. Când revenirea însăși se repetă (echipa a mai revenit o dată la aceeași variantă), „din nou” aduce o informație și nu se corectează.
 - Sursă: DEX '98 s.v. reveni, relua, reitera; ghid gov-md §8.2.2
 
-### RO-SEM-228 A se reîntoarce înapoi
+### RO-SEM-228 A se reîntoarce înapoi, a reveni înapoi
 - Nivel: normă
 - Greșit: „Delegația s-a reîntors înapoi la București.” → Corect: „Delegația s-a întors la București.”
-- De ce: „A se reîntoarce” înseamnă „a se întoarce din nou la locul de plecare, a reveni” (DEX '98), deci conține și ideea de „înapoi”. Sunt corecte și „s-a reîntors la București”, și „s-a întors la București”.
-- Sursă: DEX '98 s.v. reîntoarce
+- De ce: „A se reîntoarce” înseamnă „a se întoarce din nou la locul de plecare, a reveni” (DEX '98), deci conține și ideea de „înapoi”. Sunt corecte și „s-a reîntors la București”, și „s-a întors la București”. La fel, „a reveni” înseamnă „a se întoarce” (DEX '98), deci „a revenit înapoi” devine „a revenit”.
+- Sursă: DEX '98 s.v. reîntoarce, reveni
 
 ### RO-SEM-229 Încă o dată din nou
 - Nivel: normă
@@ -217,7 +217,7 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 ### RO-SEM-222 Intensificatorul lângă un adjectiv cu sens de superlativ
 - Nivel: normă
 - Greșit: „Am găsit cea mai optimă soluție pentru depozit.” → Corect: „Am găsit soluția optimă pentru depozit.”
-- De ce: „Optim” înseamnă „cel mai bun” (DEX '98), iar „excelent”, „excepțional de bun”, deci „cel mai optim” și „foarte excelent” pun un superlativ peste altul. La fel „cel mai superior”, „foarte extrem”. Adjectivul rămâne singur.
+- De ce: „Optim” înseamnă „cel mai bun sau foarte bun” (DEX '98), iar „excelent”, „excepțional de bun”, deci „cel mai optim” și „foarte excelent” pun un superlativ peste altul. La fel „cel mai superior”, „foarte extrem”. Adjectivul rămâne singur.
 - Sursă: DEX '98 s.v. optim, excelent; ghid gov-md §8.2.2
 
 ### RO-SEM-242 „Poate fi posibil”
@@ -312,9 +312,9 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 
 ### RO-SEM-203 Pleonasmul care se vede doar din etimologie
 - Nivel: recomandare
-- Greșit: „Analizele arată o glicemie în sânge de 140 mg/dl.” → Corect: „Analizele arată o glicemie de 140 mg/dl.”
-- De ce: „Glicemia” e cantitatea de glucoză din sânge (DEX '96), iar „-emie” vine din grecescul pentru „sânge”. Repetarea nu se vede pentru cine nu știe originea cuvântului, de aceea e o neglijență pentru un cititor cultivat, nu o greșeală gravă. La fel „muncă laborioasă” („laborios” = care cere multă muncă).
-- Sursă: DEX '96 s.v. glicemie; DEX '98 s.v. laborios; DSL, s.v. PLEONASM
+- Greșit: „Proiectul a cerut o muncă laborioasă de documentare.” → Corect: „Proiectul a cerut o documentare laborioasă.”
+- De ce: „Laborios” înseamnă „care cere multă muncă” (DEX '98) și vine din latinescul „labor”, „muncă”, deci „muncă laborioasă” spune de două ori „muncă”. Repetarea nu se vede pentru cine nu știe originea cuvântului, de aceea e o neglijență pentru un cititor cultivat, nu o greșeală gravă. „Glicemie în sânge” nu intră aici: definiția glicemiei conține chiar „sânge” (DEX '96), deci repetarea se vede din dicționar și e un pleonasm obișnuit, ca la RO-SEM-201 („o glicemie de 140 mg/dl”).
+- Sursă: DEX '98 s.v. laborios; DEX '96 s.v. glicemie; DSL, s.v. PLEONASM
 
 ### RO-SEM-212 A preciza foarte clar
 - Nivel: recomandare
