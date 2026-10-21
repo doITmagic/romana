@@ -61,7 +61,7 @@ Rămân neatinse:
 
 Verbele și adverbele care exprimă cât de sigură e o afirmație se pun pe o scară, și rescrierea rămâne pe aceeași treaptă. Aproximativ, de la mai sigur la mai puțin sigur: „e”, „trebuie” (obligație) sau „sigur” → „ar trebui” sau „se recomandă” → „probabil” → „poate” sau „ar putea” → „se spune că”. „Trebuie” are două lecturi: obligație („Trebuie să semnezi”) și presupunere („Trebuie să fie acasă”). Dacă textul nu lămurește despre care e vorba, nu hotărăști tu: semnalezi sau întrebi.
 
-Când mai multe mărci de nesiguranță se adună („ar putea eventual să contribuie la posibila…”), le reduci la una singură care păstrează gradul („poate contribui la…”). Scoți ambalajul, nu gradul.
+Când mai multe mărci de nesiguranță se adună („e posibil ca, eventual, programul să ducă la o scădere”), le reduci la una singură care păstrează gradul („programul poate duce la o scădere”). Scoți ambalajul, nu gradul.
 
 ## Citate și atribuiri
 
@@ -186,7 +186,7 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 ### RO-FID-021 Certitudinea rămâne cea din sursă
 - Nivel: normă
 - Greșit: „Sursa: «Metoda poate reduce erorile.» → «Metoda reduce erorile.»” → Corect: „Metoda poate reduce erorile.”
-- De ce: „Poate reduce” spune că se întâmplă uneori sau în anumite condiții, „reduce” spune că se întâmplă. A trece de la prima la a doua înseamnă a-i promite cititorului mai mult decât sursa. Când modalizatorii se adună („ar putea eventual să contribuie la posibila reducere”), îi reduci la unul care păstrează gradul („poate contribui la reducere”), dar nu îl ridici.
+- De ce: „Poate reduce” spune că se întâmplă uneori sau în anumite condiții, „reduce” spune că se întâmplă. A trece de la prima la a doua înseamnă a-i promite cititorului mai mult decât sursa. Când modalizatorii se adună („e posibil ca, eventual, programul să ducă la o scădere”), îi reduci la unul care păstrează gradul („programul poate duce la o scădere”), dar nu îl ridici.
 - Sursă: regulă de fidelitate a skill-ului; DSL, s.v. MODALITATE
 
 ### RO-FID-022 Condițiile și mărcile de opinie se păstrează
@@ -197,7 +197,7 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 
 ### RO-FID-023 Nu se fabrică perspectiva vorbitorului
 - Nivel: normă
-- Greșit: „Sursa: «Autoritatea a introdus taxa de parcare în centru.» → «Sincer, nu știu ce să cred despre taxa de parcare din centru.»” → Corect: „Autoritatea a introdus taxa de parcare în centru.”
+- Greșit: „Sursa: «Autoritatea a introdus taxa de parcare în centru.» → «Mărturisesc că sunt împărțit în privința taxei de parcare din centru.»” → Corect: „Autoritatea a introdus taxa de parcare în centru.”
 - De ce: Să scrii „viu” nu înseamnă să adaugi opinii, reacții sau experiențe la persoana I care nu sunt în sursă. O schimbare de voce cerută explicit poate reformula o poziție care există deja în sursă, dar nu poate crea una.
 - Sursă: regulă de fidelitate a skill-ului
 
@@ -216,13 +216,13 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 ### RO-FID-026 Textul citat nu se corectează
 - Nivel: normă
 - Greșit: „În scrisoare, autorul spune: «Eu sunt aici de o lună.»” → Corect: „În scrisoare, autorul spune: «Eu sînt aici de o lună.»”
-- De ce: Aici scrisoarea are „sînt”, iar varianta greșită l-a „modernizat”. Citatul reproduce exact cuvintele sursei. Grafia veche („sînt”, „î” din „i” în texte din Republica Moldova) sau forma populară nu e greșeala celui care citează. În citat corectezi doar tipografia: ghilimelele „…” și «…», diacriticele ș și ț cu virgulă. Vezi și RO-NUG-039 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md).
+- De ce: Trimitere: regula e RO-FID-001 și RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md). Aici scrisoarea are „sînt” (grafia veche, folosită și azi în unele texte din Republica Moldova), iar varianta greșită l-a „modernizat”. În citat corectezi doar tipografia.
 - Sursă: regulă de fidelitate a skill-ului; ghid gov-md §9.8.1
 
 ### RO-FID-027 Semnele scrisului uman se păstrează
 - Nivel: recomandare
-- Greșit: „Sursa: «Am ajuns târziu (autobuzul de 7 a întârziat din nou) și am găsit sala goală.» → «Am ajuns târziu și am găsit sala goală.»” → Corect: „Am ajuns târziu (autobuzul de 7 a întârziat din nou) și am găsit sala goală.”
-- De ce: Detaliile concrete, trimiterile locale, paranteza spusă în treacăt, autocorectura, frazele de lungimi diferite și o tensiune lăsată nerezolvată sunt ce face un text să sune ca scris de cineva anume. O rescriere care le netezește în numele „fluenței” șterge conținut și voce, nu defecte. Sunt chestiuni de conținut și de stil, nu de normă, deci recomandarea e să le păstrezi.
+- Greșit: „Sursa: «Plec mâine… adică, nu, poimâine.» → «Plec poimâine.»” → Corect: „Plec mâine… adică, nu, poimâine.”
+- De ce: Autocorectura, paranteza spusă în treacăt, frazele de lungimi diferite, referințele locale și o tensiune lăsată nerezolvată sunt ce face un text să sune ca scris de cineva anume. O rescriere care le netezește în numele „fluenței” șterge voce, nu defecte. În exemplu niciun fapt nu se schimbă, de aceea regula e recomandare; ștergerea unui detaliu concret (o cifră, un nume, un loc) e altceva și intră sub RO-FID-020, unde nivelul e normă.
 - Sursă: regulă de fidelitate a skill-ului
 
 ### RO-FID-028 Rescrierile date ca exemplu nu inventează fapte

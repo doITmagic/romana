@@ -34,7 +34,7 @@ Româna are trei trepte de politețe la persoana a II-a: „tu”, „dumneata�
 
 ## Registrul neutru
 
-Registrul implicit, când nimeni nu cere altul, este limba literară standard, a vorbitorului instruit: nici livrescă, nici familiară. Pentru textele publicate în presă, în documentație, în comunicare oficială, formele marcate în DOOM 3 sau în DEX ca familiare, populare, regionale ori argotice se înlocuiesc în vocea ta și rămân în citat. Nu cobori registrul ca să pară textul „mai uman”: un text familiar pus peste un conținut oficial nu e mai viu, ci nepotrivit. Pentru textul oficial, ghid gov-md cere o exprimare neutră, neemfatică (§1.8).
+Registrul implicit, când nimeni nu cere altul, este limba literară standard, a vorbitorului instruit: nici livrescă, nici familiară. Pentru textele publicate în presă, în documentație, în comunicare oficială, formele marcate în DOOM 3 sau în DEX ca familiare, populare, regionale ori argotice se înlocuiesc în vocea ta și rămân în citat. Nu cobori registrul ca să pară textul „mai uman”: un text familiar pus peste un conținut oficial nu e mai viu, ci nepotrivit. Pentru textul oficial, ghid gov-md cere o topică firească, neemfatică (§1.8).
 
 Regulile de mai jos sunt recomandări de registru. Cuvintele pe care le numesc nu sunt greșite; sunt potrivite în alt registru.
 
@@ -46,14 +46,14 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 
 ### RO-STI-401 Registrul neutru: limba literară standard
 - Nivel: recomandare
-- Greșit: „Ministrul a zis că treaba asta e oleacă mai complicată.” → Corect: „Ministrul a spus că situația este puțin mai complicată.”
-- De ce: Textul public se scrie în limba literară standard. Formele pe care DOOM 3 și DEX le marchează *fam.*, *pop.*, *reg.* sau *arg.* sunt corecte în dicționar, dar aparțin altor registre, deci în vocea ta le înlocuiești cu forma neutră. În citat și în reportajul unde sunt alese ca efect, rămân.
+- Greșit: „Ministrul a spus că lucrul ăsta e oleacă mai complicat.” → Corect: „Ministrul a spus că lucrul acesta e puțin mai complicat.”
+- De ce: Textul public se scrie în limba literară standard. Formele pe care DOOM 3 și DEX le marchează *fam.*, *pop.*, *reg.* sau *arg.* („ăsta”, „oleacă”) sunt corecte în dicționar, dar aparțin altor registre, deci în vocea ta le înlocuiești cu forma neutră. Cuvintele nemarcate („a spune”, „e”) nu se schimbă. În citat și în reportajul unde formele marcate sunt alese ca efect, ele rămân.
 - Sursă: DOOM 3 (mărcile fam., pop., reg., arg.); DSL, s.v. REGISTRU
 
 ### RO-STI-402 „Ăsta”, „ăla”, „ăst”
 - Nivel: recomandare
-- Greșit: „Omul ăsta a declarat că vine.” → Corect: „Acesta a declarat că vine.”
-- De ce: DOOM 3 marchează „ăsta” și „ăla” familiare și „ăst” popular; DEX '98 le dă „pop. și fam.”. În registrul neutru folosești „acesta”, „acela”, „acest”: „omul acesta”, „lucrul acela”. Când e vorba de un registru familiar ales, vezi RO-STI-436.
+- Greșit: „Omul ăsta a declarat că vine.” → Corect: „Omul acesta a declarat că vine.”
+- De ce: DOOM 3 marchează „ăsta” și „ăla” familiare și „ăst” popular; DEX '98 le dă „pop. și fam.”. În registrul neutru folosești „acesta”, „acela”, „acest”: „omul acesta”, „lucrul acela”, sau pronumele singur („Acesta a declarat că vine”). Când e vorba de un registru familiar ales, vezi RO-STI-436.
 - Sursă: DOOM 3 s.v. ăsta, ăla, ăst; DEX '98 s.v. ăsta, ăla
 
 ### RO-STI-403 „Aiesta”, „aista”
@@ -118,8 +118,8 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 
 ### RO-STI-418 Exprimări populare sau administrative în știre
 - Nivel: recomandare
-- Greșit: „Suspectul a fost săltat de polițiști.” → Corect: „Suspectul a fost arestat de polițiști.”
-- De ce: „Săltat” cu sensul „arestat” e argotic; sensul nu apare în DEX '98, care îl dă doar pe „sprinten” și „care se află mai sus”. Alegi verbul care corespunde faptului: „reținut” și „arestat” sunt măsuri diferite, deci nu le interschimbi fără sursă. La fel, exprimările administrative ca „în 1 săptămână” devin „într-o săptămână”. În citat sau în reportaj, ca efect asumat, formele rămân.
+- Greșit: „Suspectul a fost săltat de polițiști.” → Corect: „Suspectul a fost [de completat: măsura, după sursă: reținut sau arestat] de polițiști.”
+- De ce: „Săltat” cu sensul „arestat” e argotic. DEX '98 are „săltat” cu sensurile „sprinten”, „care se află mai sus” și, familiar, „crescut, înalt” (despre copii și plante), deci sensul din știre nu e în dicționarul explicativ. „Reținut” și „arestat” sunt măsuri diferite, așa că verbul care îl înlocuiește se alege după sursă, nu după impresie. La fel, exprimările administrative ca „în 1 săptămână” devin „într-o săptămână”. În citat sau în reportaj, ca efect asumat, formele rămân.
 - Sursă: monitorizarea limbii presei, 2021–2022 (nereverificat local); DEX '98 s.v. săltat
 
 ### RO-STI-422 „Isus” și „Iisus”
@@ -131,13 +131,13 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-423 Textul oficial rămâne oficial
 - Nivel: recomandare
 - Greșit: „Sursa: «Solicitantul depune cererea la registratură.» → «Omul trebuie să ducă hârtia la registratură.»” → Corect: „Solicitantul depune cererea la registratură.”
-- De ce: Textul administrativ, juridic sau academic își păstrează registrul când îl rescrii. Din el scoți doar tiparele artificiale: lanțurile de genitive, umflarea, emfaza. Ghid gov-md cere pentru textul juridico-administrativ o exprimare neutră, neemfatică. O rescriere care coboară registrul în familiar schimbă nu doar tonul, ci și ce transmite sursa.
-- Sursă: ghid gov-md §1.8
+- De ce: Textul administrativ, juridic sau academic își păstrează registrul când îl rescrii. Din el scoți doar tiparele artificiale: lanțurile de genitive, umflarea, emfaza. Ghid gov-md cere pentru textul juridico-administrativ o topică firească, neemfatică (§1.8) și evită metaforele și expresiile emoționale (§1.1). O rescriere care coboară registrul în familiar schimbă nu doar tonul, ci și ce transmite sursa.
+- Sursă: ghid gov-md §1.1, §1.8
 
 ### RO-STI-424 Registrul implicit al agentului este cel standard
 - Nivel: recomandare
-- Greșit: „Cerere: «scrie un anunț pentru clienți». Răspuns: «Salut! Uite ce am pregătit pentru tine.»” → Corect: „Bună ziua! Am pregătit următorul anunț:”
-- De ce: Când cererea nu fixează un registru, folosești limba literară standard, nici livrescă, nici familiară. Registrul familiar îl alegi doar la cererea explicită a utilizatorului sau când genul textului îl cere. Un registru casual ca punct de plecare produce texte nepotrivite pentru majoritatea cititorilor.
+- Greșit: „Salut, dragilor! Să știți că vineri închidem mai devreme, pe la 14.” → Corect: „Vă informăm că vineri programul se încheie în jurul orei 14.”
+- De ce: Exemplul e anunțul scris la cererea „scrie un anunț pentru clienți”. Când cererea nu fixează un registru, anunțul se scrie în limba literară standard, nici livrescă, nici familiară; „pe la” devine „în jurul”. Registrul familiar îl alegi doar la cererea explicită a utilizatorului sau când genul textului îl cere. Un registru casual ca punct de plecare produce texte nepotrivite pentru majoritatea cititorilor.
 - Sursă: DOOM 3 (mărcile de registru); DSL, s.v. REGISTRU
 
 ### RO-STI-425 Particulele nu se pun ca semn de naturalețe
@@ -184,20 +184,20 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 
 ### RO-STI-433 „Hai” în texte formale
 - Nivel: recomandare
-- Greșit: „Hai să discutăm bugetul.” → Corect: „Propun să discutăm bugetul.”
-- De ce: „Hai” e marcat familiar în DOOM 3, iar îndemnul „hai (să)” aparține vorbirii. În comunicate, acte și rapoarte folosești o formulă neutră: „Propun să discutăm”, „Să discutăm”. În chat, în social media și în orice text cu ton conversațional ales, „hai” e firesc și nu se elimină. Conjunctivul de îndemn („Să începem”) nu e vizat (vezi RO-NUG-114 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
-- Sursă: DOOM 3 s.v. hai; DEX '96 s.v. hai (nereverificat local)
+- Greșit: „Hai să discutăm bugetul.” → Corect: „Să discutăm bugetul.”
+- De ce: Convenție de registru, nu marcă de dicționar: în DOOM 3 marca *fam.* stă la substantivul „hai”, iar interjecția „hai” nu are marcă. Totuși îndemnul „hai (să)” aparține vorbirii, deci în comunicate, acte și rapoarte folosești conjunctivul de îndemn („Să discutăm”), care e neutru (vezi RO-NUG-114 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). În chat, în social media și în orice text cu ton conversațional ales, „hai” e firesc și nu se elimină. Nu adaugi o persoană („Propun să…”) dacă sursa nu o avea (vezi [fidelitate.md](fidelitate.md)).
+- Sursă: convenție de registru a skill-ului; DOOM 3 s.v. hai
 
 ### RO-STI-434 Textul pentru ro-RO evită formele moldovenești și calcurile după rusă
 - Nivel: recomandare
 - Greșit: „Acordul de finanțare (în continuare – Acord) intră în vigoare la semnare.” → Corect: „Acordul de finanțare (denumit în continuare Acord) intră în vigoare la semnare.”
 - De ce: Pentru un public din România, norma de referință este DOOM 3, iar regionalismele (inclusiv cele moldovenești) și rusismele lexicale și sintactice se evită. Ghid gov-md însuși respinge forma cu linie de pauză „(în continuare – X)” ca pe un calc după rusă și cere formula completă cu participiu.
-- Sursă: ghid gov-md §1.9.7; DOOM 3
+- Sursă: ghid gov-md §1.6; DOOM 3
 
 ### RO-STI-435 Registrul se alege pentru fiecare suprafață a produsului
 - Nivel: recomandare
-- Greșit: „Același ecran: «Hai să începem!» și, dedesubt, «Vă rugăm să vă completați datele».” → Corect: „Același ecran: «Să începem!» și «Vă rugăm să vă completați datele».”
-- De ce: Registrul e o decizie explicită, luată pentru fiecare produs și, unde e cazul, pentru fiecare suprafață: de pildă formulă impersonală pentru rezultate și texte sensibile („Se recomandă evaluarea clinică detaliată”), „tu” pentru progres și îndemnuri, „dumneavoastră” pentru întrebări frecvente și avertismente. Registrele diferite pe suprafețe diferite sunt acceptabile doar dacă așa a hotărât produsul, niciodată amestecate în același șir sau pe același ecran. Alegerea între „tu” și „dumneavoastră” rămâne a produsului.
+- Greșit: „Rezultatul tău sugerează un risc ridicat. Du-te la medic!” → Corect: „Rezultatul indică un risc ridicat. Se recomandă un consult medical.”
+- De ce: Registrul e o decizie explicită, luată pentru fiecare produs și, unde e cazul, pentru fiecare suprafață: de pildă formulă impersonală pentru rezultate și texte sensibile, medicale sau juridice, „tu” pentru progres și îndemnuri, „dumneavoastră” pentru întrebări frecvente. Exemplul presupune că produsul a hotărât formula impersonală pentru rezultate. Registrele diferite pe suprafețe diferite sunt acceptabile doar dacă așa a hotărât produsul; amestecate în același șir sau pe același ecran, ele încalcă RO-COE-019 din [coerenta.md](coerenta.md).
 - Sursă: convenții de localizare de produs (uz, nu normă); DSL, s.v. POLITEȚE
 
 ### RO-STI-436 Familiarismele se folosesc doar ca registru ales
@@ -214,14 +214,14 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 
 ### RO-STI-438 „Dumneavoastră” într-un context clar informal
 - Nivel: recomandare
-- Greșit: „Salut, bine ai venit pe blogul meu! Vă mulțumesc că mă citiți.” → Corect: „Salut, bine ai venit pe blogul meu! Îți mulțumesc că mă citești.”
-- De ce: Alegi „tu” sau „dumneavoastră” după cititor și canal: în comunicarea apropiată și pe rețelele sociale „tu”, în corespondența oficială sau cu un public necunoscut „dumneavoastră”, și ții aceeași formă în tot textul. „Dumneavoastră” se înlocuiește cu „tu” doar dacă restul textului și canalul sunt clar informale. Nu e o greșeală de normă.
+- Greșit: „Bun venit pe blogul meu! Vă mulțumesc că mă citiți și vă invit să-mi scrieți ce părere aveți.” → Corect: „Bine ai venit pe blogul meu! Îți mulțumesc că mă citești și te invit să-mi scrii ce părere ai.”
+- De ce: Alegi „tu” sau „dumneavoastră” după cititor și canal: în comunicarea apropiată, pe un blog personal sau pe rețelele sociale „tu”, în corespondența oficială sau cu un public necunoscut „dumneavoastră”. Ambele variante din exemplu sunt consecvente; recomandarea ține doar de potrivirea cu canalul. „Dumneavoastră” se înlocuiește cu „tu” doar dacă restul textului și canalul sunt clar informale. Nu e o greșeală de normă.
 - Sursă: DSL, s.v. POLITEȚE, ADRESARE
 
 ### RO-STI-439 „A binevoi”
 - Nivel: recomandare
-- Greșit: „Binevoiți să ne scrieți când aveți timp!” → Corect: „Scrie-ne când ai timp!”
-- De ce: Exemplul e un mesaj între colegi. „A binevoi” e corect (DOOM 3, DEX) și rămâne în cereri și în corespondența oficială: „Vă rog să binevoiți…”. În alte contexte îl înlocuiești după registru: neutru-politicos „vă rugăm să…”, informal „te rog” sau imperativul.
+- Greșit: „Binevoiți să ne scrieți când aveți timp!” → Corect: „Scrieți-ne când aveți timp!”
+- De ce: Exemplul e un mesaj între colegi. „A binevoi” e corect (DOOM 3, DEX) și rămâne în cereri și în corespondența oficială: „Vă rog să binevoiți…”. În alte contexte îl înlocuiești după registru, păstrând adresarea: neutru-politicos „vă rugăm să…”, sau imperativul. Adresarea nu se schimbă o dată cu verbul.
 - Sursă: DOOM 3 s.v. binevoi; DEX '98 s.v. binevoi
 
 ### RO-STI-440 Limba de stat în textele despre Republica Moldova
@@ -231,10 +231,10 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Sursă: Curtea Constituțională a Republicii Moldova, Hotărârea nr. 36 din 5 decembrie 2013; Legea nr. 52 din 16 martie 2023
 
 ### RO-STI-441 Adresarea se alege explicit, o dată pentru tot textul
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Vă rugăm să-ți completezi datele.” → Corect: „Vă rugăm să vă completați datele.”
-- De ce: Adresarea („tu”, „voi”, „dumneavoastră” sau formula impersonală) se alege o dată pentru fiecare text sau produs, după gen și public, și se ține în verbe, în posesive și în imperative. Amestecul în același text trădează lipsa unei decizii și îl derutează pe cititor. Registrele tehnic, administrativ, business și juridic se tratează separat, fiecare cu convențiile lui (vezi RO-COE-019 în [coerenta.md](coerenta.md)).
-- Sursă: DSL, s.v. POLITEȚE, ADRESARE; ghid gov-md §1.8
+- De ce: Amestecul de adresări în același text e normă încălcată: vezi RO-COE-019 în [coerenta.md](coerenta.md). Aici rămâne partea de alegere: adresarea („tu”, „voi”, „dumneavoastră” sau formula impersonală) se decide o dată pentru fiecare text sau produs, după gen și public, și se ține în verbe, în posesive și în imperative.
+- Sursă: DSL, s.v. POLITEȚE, ADRESARE; ghid gov-md §1.5
 
 ### RO-STI-442 „Dumneavoastră” ca alegere implicită în comunicarea instituțională
 - Nivel: recomandare

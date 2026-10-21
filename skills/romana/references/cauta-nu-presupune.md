@@ -92,8 +92,8 @@ Nu orice verb din engleză e suspect. DOOM 3 înregistrează „a printa”, „
 ### RO-SEM-406 „Suprareprezent” și „ramare”
 - Nivel: recomandare
 - Greșit: „Femeile sunt suprareprezente în acest sector.” → Corect: „Femeile sunt reprezentate în număr mai mare decât s-ar aștepta în acest sector.”
-- De ce: Formă dedusă: „suprareprezent” nu există, pentru că nu există nici „reprezent”. „Suprareprezentat” se poate construi regulat (supra- + participiu), dar nici el nu apare în dicționarele consultate, deci îl marchezi ca dedus și, în text pentru public larg, preferi o perifrază. Un caz înrudit: „ramare” cu sensul „încadrare” nu e atestat; DEX '98 dă verbul „a rama” cu sensul „a vâsli”, iar în DEX '09 substantivul „ramare” e marcat rar. Pentru „încadrare” spui „încadrare”.
-- Sursă: DEX '98 s.v. rama; DOOM 3 s.v. încadrare
+- De ce: Formă dedusă: „suprareprezent” nu există, pentru că nu există nici „reprezent”. „Suprareprezentat” se poate construi regulat (supra- + participiu), dar nici el nu apare în dicționarele consultate, deci îl marchezi ca dedus și, în text pentru public larg, preferi o perifrază. Un caz înrudit: „ramare” cu sensul „încadrare” nu e atestat; DEX '98 dă verbul „a rama” cu sensul „a vâsli” și substantivul „ramare” ca termen marinăresc, „acțiunea de a rama”, iar DEX '09 îl marchează rar. Pentru „încadrare” spui „încadrare”.
+- Sursă: DEX '98 s.v. rama, ramare; DOOM 3 s.v. încadrare
 
 ### RO-SEM-407 „A deleta”
 - Nivel: recomandare
