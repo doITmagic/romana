@@ -645,7 +645,7 @@ Bun:
 ### RO-GRA-074 „Î” la început și la sfârșit, „â” în interior
 - Nivel: normă
 - Greșit: „âncă” → Corect: „încă”
-- De ce: „Î” se scrie la începutul și la sfârșitul cuvântului („în”, „încă”, „a coborî”), iar „â” în interior („român”, „cuvânt”, „râu”, „câmp”). Formele „ân”, „âncă”, „rîu”, „cîmp” sunt greșite. Un „î” în interiorul cuvântului nu e însă automat greșit (vezi RO-GRA-075).
+- De ce: „Î” se scrie la începutul și la sfârșitul cuvântului („în”, „încă”, „a coborî”), iar „â” în interior („român”, „cuvânt”, „râu”, „câmp”). Formele „ân”, „âncă” sunt greșite oricând; „rîu”, „cîmp” sunt greșite în textul de azi, în afara convenției asumate de autor și aplicate consecvent (RO-TIP-128). Un „î” în interiorul cuvântului nu e însă automat greșit (vezi RO-GRA-075).
 - Sursă: DOOM 3, §2.2.1
 
 ### RO-GRA-075 „Î” după prefix și în compuse
