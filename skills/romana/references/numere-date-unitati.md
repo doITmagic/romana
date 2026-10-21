@@ -13,7 +13,7 @@ Skill-ul fixează patru alegeri, ca textele să fie consecvente între ele:
 
 Exemplu: „Bugetul a ajuns la 2,5 milioane de euro, adică 12,5% din cele 20 de milioane de euro ale anului trecut. Au participat 1.500 de persoane.”
 
-Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; DOOM 2 = ediția a II-a, 2005; ÎOOP6 = *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; CLDR = regulile de plural pentru limba română din Unicode CLDR; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014. Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină n-a putut fi verificată pe text local.
+Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; ÎOOP6 = *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; CLDR = regulile de plural pentru limba română din Unicode CLDR; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014. Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină n-a putut fi verificată pe text local.
 
 ## 1. „De” după numeral
 
@@ -42,7 +42,7 @@ Bun:
 - Nivel: normă
 - Greșit: „1.500 cazuri noi” → Corect: „1.500 de cazuri noi”
 - De ce: Decid ultimele două cifre. Când ele fac 20 sau mai mult, inclusiv 00, substantivul primește „de”: „20 de elevi”, „25 de persoane”, „1.500 de cazuri”, „100 de euro”, „300 de persoane”. Când fac de la 01 la 19, „de” nu se pune: „19 persoane”, „101 ani”, „201 ani”. Lista lungă de exemple din ghiduri nu înlocuiește regula: o aplici la orice număr.
-- Sursă: INJ p. 84–86; DOOM 3 §6.5 (nereverificat local); CLDR, reguli de plural ro (categoria few)
+- Sursă: INJ p. 84–86; DOOM 3 §6.5.3; ÎOOP6 p. 108; CLDR, reguli de plural ro (categoria few)
 - Vezi și: RO-NUM-037, RO-NUM-038, RO-NUM-049
 
 ### RO-NUM-002 Fără „de” înaintea unui simbol sau a unei abrevieri
@@ -56,14 +56,14 @@ Bun:
 - Nivel: normă
 - Greșit: „10 milioane euro” → Corect: „10 milioane de euro”
 - De ce: Milioanele, miliardele și miile scrise în cuvinte cer „de” și înaintea substantivului numărat: „20 de milioane de locuitori”, „20 de miliarde de euro”, „40 de mii de lei”. Numărul de dinaintea lui „milioane” urmează regula obișnuită: „3 milioane de euro”, dar „20 de milioane de euro”.
-- Sursă: ghid gov-md §7.4.1.6; INJ p. 84–86; DOOM 3 §6.5 (nereverificat local)
+- Sursă: ghid gov-md §7.4.1.6; INJ p. 84–86; DOOM 3 §6.5.1; DOOM 3, s.v. milion, miliard
 - Vezi și: RO-NUM-039
 
 ### RO-NUM-004 Datele și anii nu cer „de”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „20 de mai” → Corect: „20 mai”
 - De ce: Data („20 mai”, „31 august”) și anul („anul 2020”, „în 2025”) nu intră sub regula cu „de”: ele nu numără obiecte.
-- Sursă: INJ p. 84–86; DOOM 3 §6.5 (nereverificat local)
+- Sursă: INJ p. 84–86; sprijin indirect: DOOM 3, s.v. doi2 („data de doi ianuarie”) și ÎOOP6 p. 108 (datele fără „de”), care nu condamnă însă expres „20 de mai”
 - Vezi și: RO-NUM-038
 
 ### RO-NUM-050 Fără „de” după numeralele zecimale
@@ -82,7 +82,7 @@ Bun:
 - **Ora** se spune „ora unu”, „ora două”, „ora douăzeci și unu” („ora una”, „ora doi” sunt considerate greșite).
 - **Numeralul „unu”** când numeri nu devine „unul”: „unu, doi, trei”.
 - **„Procent” și „la sută”** nu se pun împreună („un procent de 25 la sută”): vezi RO-SEM-243 în [paronime-si-pleonasme.md](paronime-si-pleonasme.md). Alegi una dintre forme: „2%”, „doi la sută” sau „două procente”.
-- **Genitivul și dativul cu numeral** se pot face cu „a” și „la” („votul a doi senatori”, „a dat note la doi elevi”). Sunt forme corecte; vezi RO-NUG-024 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md).
+- **Genitivul și dativul cu numeral** se pot face cu „a” („votul a doi senatori”, „dorința a mulți copii”; ÎOOP6 p. 103). Construcțiile cu „la” cu valoare de genitiv sunt neliterare („din cauza la doctor”); „la” cu dativul se admite doar la adjectivele din lista DOOM 3 §6.1.1 (anumit, numeros …). Vezi RO-NUG-024 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md).
 
 Slab:
 
@@ -96,7 +96,7 @@ Bun:
 - Nivel: normă
 - Greșit: „acești milioane de lei, câțiva zeci de kilometri” → Corect: „aceste milioane de lei, câteva zeci de kilometri”
 - De ce: „Milioane” (plural de la „milion”), „zeci”, „sute” și „mii” sunt substantive; determinantul se acordă cu ele, nu cu ce se numără. DOOM 3 formulează regula ca recomandare, dar dă forma cu masculin cu asterisc, ca greșită, deci o tratăm ca normă.
-- Sursă: DOOM 3 §6.5.1 (nereverificat local); DOOM 3, s.v. milion
+- Sursă: DOOM 3 §6.5.1; DOOM 3, s.v. milion
 
 ### RO-NUM-006 Formele numeralelor 14–18
 - Nivel: normă
@@ -114,34 +114,34 @@ Bun:
 - Nivel: normă
 - Greșit: „doisprezece mii de lei” → Corect: „douăsprezece mii de lei”
 - De ce: Cifra 12 ia forma de feminin pe lângă substantive feminine: „douăsprezece mii”, „ora douăsprezece”, „a douăsprezecea parte”. La date sunt admise ambele forme: „doisprezece mai” și „douăsprezece mai”.
-- Sursă: DOOM 2 §6.4; DOOM 3 §6.5 (nereverificat local)
+- Sursă: DOOM 3, s.v. doisprezece, douăsprezece; ÎOOP6 p. 108
 - Vezi și: RO-NUM-040
 
 ### RO-NUM-009 „Ora unu”, „ora două”
 - Nivel: normă
 - Greșit: „ora una, ora doi” → Corect: „ora unu, ora două”
 - De ce: Numeralul care arată ora se spune „unu” (și „douăzeci și unu”), nu „una”, și „două”, nu „doi”: „ora unu”, „ora două”, „ora douăzeci și două”. La date „doisprezece mai” e corect; la oră, „ora douăsprezece”.
-- Sursă: DOOM 2 §6.4; DOOM 3 §6.5 (nereverificat local)
+- Sursă: DOOM 3, s.v. unu, doi; ÎOOP6 p. 108
 - Vezi și: RO-NUM-040
 
 ### RO-NUM-010 „Unu” când numeri
 - Nivel: normă
 - Greșit: „Numără: unul, doi, trei.” → Corect: „Numără: unu, doi, trei.”
 - De ce: Cardinalul 1 este „unu” când numără sau când e folosit ca număr: „nu doi, ci numai unu”. „Unul” este pronume („Unul a reușit, celălalt nu”); a-l pune în locul numeralului e hipercorectitudine.
-- Sursă: DOOM 2 §6.4; DOOM 3 §6.5 (nereverificat local)
+- Sursă: DOOM 3, s.v. unu, unul
 - Vezi și: RO-NUM-041
 
 ### RO-NUM-011 Prima zi a lunii: „întâi”
 - Nivel: normă
 - Greșit: „Unu Decembrie” → Corect: „Întâi Decembrie”
 - De ce: Prima zi a lunii se numește cu ordinalul: „întâi mai”, „Întâi Decembrie”. Scrisă cu cifre („1 Decembrie”), se citește tot „întâi”. Majuscula la lună apare când data e o sărbătoare (vezi RO-TIP-013).
-- Sursă: DOOM 3, s.v. ianuarie (nereverificat local)
+- Sursă: DOOM 3, s.v. decembrie, ianuarie, întâi; ÎOOP6 p. 108 (Numeralul ordinal)
 
 ### RO-NUM-035 Ordinalele cu cifre: cratimă
 - Nivel: normă
 - Greșit: „al XXlea, a 3a” → Corect: „al XX-lea, a 3-a”
 - De ce: Formanții ordinalelor se leagă prin cratimă de numeralul scris cu cifre arabe sau romane: „al XX-lea”, „a 3-a”, „secolul al XXI-lea”, „16-ime”. Secolul se poate scrie și „secolul XXI”.
-- Sursă: ghid gov-md §9.11.6 și §12.6; DOOM 3 §1.2.4 I.6 (nereverificat local)
+- Sursă: ghid gov-md §9.11.6 și §12.6; DOOM 3 §1.2.4 I.6
 
 ## 3. Separatorii: mii și zecimale
 
@@ -169,28 +169,28 @@ Bun:
 - Nivel: normă
 - Greșit: „12.5%” → Corect: „12,5%”
 - De ce: Zecimalele se despart prin virgulă: „12,5%”, „1,1 miliarde”, „3,5”. Punctul zecimal e englezesc. Excepție fac codul, datele tehnice și citatele în altă limbă.
-- Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local); DOOM 3 §1.2.6 (nereverificat local)
+- Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local); ÎOOP6 p. 54 (Punctul-și-virgula, vii: zecimale scrise cu virgulă); DOOM 3 §1.2.6 II (indirect) și s.v. miliard (1,1 miliarde)
 - Vezi și: RO-NUM-052
 
 ### RO-NUM-015 Punctul grupează miile
 - Nivel: recomandare
 - Greșit: „1 205 200” → Corect: „1.205.200”
 - De ce: DOOM 3 preferă punctul pentru mii (1.000; 1.205.200). Ghidul UE și ghidul gov-md folosesc spațiul fix (1 205 200), ca să nu se rupă numărul la capăt de rând; e convenția acelor acte și acolo nu se corectează. Într-un text obișnuit alegi punctul, aplicat consecvent.
-- Sursă: DOOM 3 §1.2.6 (nereverificat local); ghid gov-md §7.4.1.4 și §12.5.5; Ghid UE §10.4 (nereverificat local)
+- Sursă: DOOM 3 §1.2.6 II și §1.2.3 pct. 5; ghid gov-md §7.4.1.4 și §12.5.5; Ghid UE §10.4 (nereverificat local)
 - Vezi și: RO-NUM-044, RO-NUM-052
 
 ### RO-NUM-016 Anii și numerele de pagină nu au separator
 - Nivel: normă
 - Greșit: „anul 2.024” → Corect: „anul 2024”
 - De ce: Anii și numerele de pagină nu se grupează: „anul 2026”, „pagina 1000”. Numerele de telefon au altă convenție: ghidul gov-md le grupează în blocuri prin spații fixe (+373 22 250 392), forma care nu se corectează.
-- Sursă: ghid gov-md §7.4.1.4 (N.B.) și §17.1.2; DOOM 3 §1.2.6 (nereverificat local)
+- Sursă: ghid gov-md §7.4.1.4 (N.B.) și §17.1.2; DOOM 3 §1.2.6 II și §1.2.3 pct. 5
 - Vezi și: RO-NUM-052
 
 ### RO-NUM-043 Miile nu se despart cu virgulă
 - Nivel: normă
 - Greșit: „1,500 de oameni” → Corect: „1.500 de oameni”
 - De ce: Virgula la mii e modelul englezesc, iar în română se citește ca zecimală (1,5). Miile se grupează cu punct (RO-NUM-015). Anii și paginile nu au separator (RO-NUM-016).
-- Sursă: DOOM 3 §1.2.6 II (nereverificat local); ghid gov-md §7.4.1.4
+- Sursă: DOOM 3 §1.2.6 II; ghid gov-md §7.4.1.4
 
 ### RO-NUM-017 Sumele cu multe zecimale
 - Nivel: recomandare
@@ -206,7 +206,7 @@ Engl. „billion” înseamnă miliard, nu „bilion”: „3 billion dollars”
 - Nivel: recomandare
 - Corect: „o mie de miliarde” (în loc de „un bilion” sau „un trilion”)
 - De ce: Dicționarele dau „bilion” ca „o mie de miliarde” și, în unele țări, ca „miliard”; „trilion” e un miliard de miliarde. Româna nu are o scară numerică fixată de normă. Dincolo de milion și miliard scrii valoarea explicit („o mie de miliarde”) sau eviți cuvintele „bilion” și „trilion”.
-- Sursă: DEX ’98, s.v. bilion, trilion; DOOM 3, s.v. bilion (nereverificat local)
+- Sursă: DEX ’98, s.v. bilion, trilion; DOOM 3, s.v. bilion
 
 ### RO-NUM-020 În text: cuvinte, nu prescurtări
 - Nivel: recomandare
@@ -254,20 +254,20 @@ Bun:
 - Nivel: normă
 - Greșit: „12 . 11 . 2020” → Corect: „12.11.2020”
 - De ce: Data cu cifre se scrie zz.ll.aaaa, cu punct și fără spații. Se admit și bara oblică și cratima, iar forma ISO este aaaa-ll-zz. Formatele nu se amestecă în același text. Ziua nu se înlocuiește cu luna: 12.11.2020 înseamnă 12 noiembrie în România, dar poate fi citit ca 11 decembrie în alte țări; la traducere verifici sursa.
-- Sursă: ghid gov-md §9.1.9, §9.12.3 și §12.6; DOOM 3 §1.2.6 (nereverificat local)
+- Sursă: ghid gov-md §9.1.9, §9.12.3 și §12.6; DOOM 3 §1.2.6 I (data cu cifre) și §1.2.4 III.3
 - Vezi și: RO-NUM-045
 
 ### RO-NUM-024 Data în text: luna cu literă mică
 - Nivel: normă
 - Greșit: „3 Octombrie 2026” → Corect: „3 octombrie 2026”
 - De ce: În text data se scrie ziua, luna cu litere mici, anul. Luna se scrie cu literă mică (vezi RO-TIP-012). Abrevierea lunii în proză nu se corectează ca greșeală; ghidul gov-md o cere întreagă în acte și în tabele o admite, așa că întreagă e doar o recomandare de stil. În scris, ziua nu primește zero în față: „3 septembrie 2022”, nu „03 septembrie 2022”.
-- Sursă: ghid gov-md §4.2.1.10 și §12.6; DOOM 3 §3.2 II.2.11 și §1.2.6 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.10 și §12.6; DOOM 3 §3.2 II.2.11 și §1.2.6 I
 
 ### RO-NUM-025 Ora: „12:30” sau „12.30”
 - Nivel: recomandare
 - Corect: „Ședința începe la ora 12:30.”
 - De ce: Ora se scrie cu două-puncte (12:30), forma pe care o recomandă ÎOOP6 și ghidul gov-md; DOOM 3 admite și punctul (12.30). Nici una dintre forme nu e greșeală; ceri doar aceeași formă în tot textul.
-- Sursă: ghid gov-md §9.4.6; ÎOOP6 și DOOM 3 §1.2.6 (nereverificat local)
+- Sursă: ghid gov-md §9.4.6; DOOM 3 §1.2.6 I; ÎOOP6 p. 108 (Numeralul cardinal)
 
 ### RO-NUM-056 „În jurul orei 19:02”: aproximare și minut exact
 - Nivel: recomandare
@@ -326,7 +326,7 @@ Bun:
 - Nivel: recomandare
 - Greșit: „100 de hryvnia” → Corect: „100 de grivne”
 - De ce: Se folosesc numele românești atestate: lira sterlină, francul elvețian, dolarul american, rubla, grivna (pl. grivne), leul moldovenesc, forintul (pl. forinți), zlotul (pl. zloți), yuanul (pl. yuani), won. Formele englezești („pound”) se înlocuiesc. Forma „hryvnia”, folosită într-un tabel al ghidului gov-md, nu apare în dicționarul consultat, deci e o formă dedusă din transliterare; „grivnă” este atestată în dicționare. Propui „grivnă”, nu o impui.
-- Sursă: ghid gov-md §16.4; DOOM 3, s.v. forint, zlot, yuan, grivnă (MDN ’00); Ghid UE, Anexa A5 (nereverificat local)
+- Sursă: ghid gov-md §16.4; DOOM 3, s.v. forint, zlot, yuan, won; MDN ’00, s.v. grivnă; Ghid UE, Anexa A5 (nereverificat local)
 
 ## 9. Unități de măsură
 
@@ -349,7 +349,7 @@ Bun:
 - Nivel: normă
 - Greșit: „10 km., 5 Kg, 100 kmh” → Corect: „10 km, 5 kg, 100 km/h”
 - De ce: Sistemul legal în România este SI. Simbolurile nu au punct și nu se acordă: nu există „kms” sau „kgs”. Literele se scriu cum le cere standardul: „kg”, nu „Kg”; „MHz”, nu „mhz”. Bara oblică nu are spații: „km/h”, „EUR/m²”.
-- Sursă: ghid gov-md §4.2.1.8, §9.1.8.3 și §9.12.4; DOOM 3 §1.2.6 I.5 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.8, §9.1.8.3 și §9.12.4; DOOM 3 §1.2.6 I.5
 - Vezi și: RO-NUM-036, RO-NUM-046
 
 ### RO-NUM-032 Bara oblică ține locul lui „pe”
@@ -384,4 +384,5 @@ Cifrele, datele, monedele și unitățile se compară cu originalul înainte de 
 - Nivel: normă
 - Greșit: „3.5 million de dolari” → Corect: „3,5 milioane de dolari”
 - De ce: La traducere sau la rescriere compari fiecare cifră, dată, monedă și unitate cu originalul: „3.5 million” devine „3,5 milioane”, „1,500” (englezesc) devine „1.500”. Conversiile (mile în kilometri, monede) se fac doar cu sursa cursului sau a factorului; altfel păstrezi unitatea originală. O cifră schimbată e o abatere de la regula de fidelitate din SKILL.md, deci normă cu gravitatea P0 (vezi [fidelitate.md](fidelitate.md)).
-- Sursă: regula de fidelitate din SKILL.md; ghid gov-md §7.4.1.4
+- Sursă: DOOM 3, s.v. milion, miliard (pl. milioane; „1,1 miliarde”); ÎOOP6 p. 54 (vii); regula de fidelitate din SKILL.md; ghid gov-md §7.4.1.4
+

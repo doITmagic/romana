@@ -2,7 +2,7 @@
 
 Fișierul acesta adună forme corecte pe care unele liste de greșeli, reguli învățate la școală, ghiduri de stil traduse din engleză sau corectori automați le condamnă pe nedrept. Îl citești înainte de orice corectură sau verificare. Hipercorectitudinea, adică „repararea” unei forme corecte din teama că ar fi greșită, e la fel de gravă ca greșeala: strică un text bun și îl învață pe cititor o regulă falsă (DSL, s.v. HIPERCORECTITUDINE).
 
-Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Coteanu = I. Coteanu, *Gramatica de bază a limbii române*, 1982; ÎOOP6 = Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ediția a VI-a, 2024; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DEX ’96 = *Dicționarul explicativ al limbii române*, ediția a II-a.
+Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Coteanu = I. Coteanu, *Gramatica de bază a limbii române*, 1982; ÎOOP6 = Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ediția a VI-a, 2024; DEX ’96 = *Dicționarul explicativ al limbii române*, ediția a II-a.
 
 ## Cum folosești fișierul
 
@@ -55,7 +55,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 - Nivel: ce nu e greșeală
 - Corect: „Votul a doi senatori a decis rezultatul.” La fel, „opiniile a numeroși experți”. Nu corectezi construcția cu „a” înaintea numeralului.
 - De ce: Regula falsă: „a” ar fi aici articolul genitival, care trebuie acordat („al doi senatori”), sau construcția ar fi greșită. Un grup nearticulat care începe cu un numeral („doi senatori”) sau cu un cuvânt ca „numeroși” nu are formă de genitiv, de aceea genitivul se face cu prepoziția „a”, care nu se acordă.
-- Sursă: DOOM 2, §6.1, §6.4
+- Sursă: ÎOOP6 p. 103 (Substantivul, genitiv-dativ); DOOM 3 §6.1.1 (adjectivele din listă: anumit … numeros)
 
 ### RO-NUG-025 „Vreo zece oameni”
 - Nivel: ce nu e greșeală
@@ -500,7 +500,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-095 Ghilimelele „…”
 - Nivel: ce nu e greșeală
 - Corect: „Orașul după ploaie” (un titlu pus între ghilimelele românești). Nu înlocuiești „…” cu ghilimele drepte.
-- De ce: Regula falsă, preluată din ghidurile pentru engleză: ghilimelele curbe ar fi un semn de text generat și trebuie înlocuite cu cele drepte. În română, ghilimelele normate sunt „…” (jos, apoi sus) și «…»; ghilimelele drepte sunt greșite în textul îngrijit.
+- De ce: Regula falsă, preluată din ghidurile pentru engleză: ghilimelele curbe ar fi un semn de text generat și trebuie înlocuite cu cele drepte. În română, ghilimelele normate sunt „…” (jos, apoi sus) și «…»; ghilimelele drepte nu sunt forma recomandată în textul îngrijit (ÎOOP6 p. 43).
 - Sursă: ghid gov-md §9.8
 
 ### RO-NUG-096 Apostroful

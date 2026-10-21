@@ -266,7 +266,7 @@ Bun:
 - Nivel: recomandare
 - Greșit: „Amintim faptul că hotărârea a fost publicată.” → Corect: „Amintim că hotărârea a fost publicată.”
 - De ce: „Faptul că” rămâne necesar unde verbul cere prepoziție („se referă la faptul că”, RO-GRA-039). Unde nu cere, „că” ajunge.
-- Sursă: Mic ghid CE p. 7 (Rec. 4); DOOM 3, §6.4.2 (nereverificat local)
+- Sursă: Mic ghid CE p. 7 (Rec. 4); DOOM 3, §6.4.2
 
 ### RO-STI-002 „În cadrul” și „la nivelul” unde ajung „în” și „la”
 - Nivel: recomandare

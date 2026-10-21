@@ -50,7 +50,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 - Sursă: DEX ’98 s.v. recunoaște, admite, demonstra; Irimieș; Ghidul de jurnalism (ghidjurnalism) (nereverificat local)
 
 ### RO-STI-604 Vorbirea directă nu se amestecă cu cea indirectă
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Directorul a declarat că «v-am invitat la inaugurare».” → Corect: „Directorul a declarat: «V-am invitat la inaugurare».” sau „Directorul a declarat că i-a invitat la inaugurare.”
 - De ce: După „a declarat că” urmează reformularea la persoana a III-a, fără ghilimele. Cuvintele exacte stau după două puncte, între ghilimele. Fraza greșită păstrează în citat persoana și timpul vorbitorului, deși fraza ei le-a schimbat. Un fragment care se potrivește sintactic cu fraza („A spus că tariful rămâne «în limitele anului trecut».”) nu e amestec. Ghilimelele reproduc întocmai un text (ghid gov-md §9.8.1).
 - Sursă: Coteanu, Gramatica de bază (1982), vorbirea indirectă (nereverificat local); monitorizarea presei IL, secțiunea 4.4 (nereverificat local); ghid gov-md §9.8.1
