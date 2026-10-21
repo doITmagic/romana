@@ -153,8 +153,8 @@ Pentru intertitlu, același procedeu: în loc de eticheta „Ce urmează” (sla
 
 În presa curentă atribuirea se face o dată pe grup de fapte, nu pe fiecare frază. Regula practică:
 
-- **Sursa stă la capătul frazei** („…, relatează AFP”, „…, notează Bloomberg”, „…, au transmis autoritățile, citate de Reuters”) sau la începutul paragrafului, cu „potrivit”, când se schimbă sursa. Regula: numești sursa o dată, în aceeași frază cu afirmația sau în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă.
-- **Formulele anaforice** („Tot Handelsblatt scrie”, „Același ziar notează”, „Potrivit aceleiași publicații”) repetă lista de atribuiri cu alt început de frază. Soluția e cea din RO-STI-620: numești sursa o dată, în aceeași frază cu afirmația sau în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă.
+- **Sursa stă la capătul frazei** („…, relatează AFP”, „…, notează Bloomberg”, „…, au transmis autoritățile, citate de Reuters”) sau la începutul paragrafului, cu „potrivit”, când se schimbă sursa. Regula: numești sursa o dată, în prima frază care îi aparține sau cel târziu în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă.
+- **Formulele anaforice** („Tot Handelsblatt scrie”, „Același ziar notează”, „Potrivit aceleiași publicații”) repetă lista de atribuiri cu alt început de frază. Soluția e cea din RO-STI-620: numești sursa o dată, în prima frază care îi aparține sau cel târziu în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă.
 - **Limita** o pune fidelitatea: dacă în același paragraf vorbesc surse diferite, le numești pe fiecare, iar atribuirea nu trece peste o sursă la alta (RO-STI-618, RO-STI-621).
 
 Slab:
@@ -200,7 +200,7 @@ Sursă pentru listă: monitorizarea presei IL (nereverificat local).
 ### RO-STI-620 Atribuirea nu deschide fiecare frază
 - Nivel: recomandare
 - Greșit: „Potrivit Handelsblatt, decretul a fost publicat vineri. Potrivit Handelsblatt, legea fusese semnată în septembrie. Potrivit Handelsblatt, taxele urmau să intre în vigoare automat.” → Corect: „Potrivit Handelsblatt, decretul a fost publicat vineri. Legea fusese semnată în septembrie, iar taxele urmau să intre în vigoare automat.”
-- De ce: Când aproape fiecare frază începe cu „potrivit”, cititorul vede o listă de atribuiri, nu faptul; în articolele de test aceeași sursă era atribuită de trei ori la rând. Markerul „potrivit” nu e greșit și nu se înlocuiește (vezi începutul secțiunii); se rărește: numești sursa o dată, în aceeași frază cu afirmația sau în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă. Sursa poate sta la coada frazei („…, scrie Der Spiegel”) sau în fraza dinainte. Formulele care reiau sursa („ziarul”, „aceeași publicație”, „tot ea”) repetă lista de atribuiri cu alt început de frază. Fiecare afirmație își păstrează sursa: nu comasezi afirmații din surse diferite sub o singură atribuire (RO-STI-618).
+- De ce: Când aproape fiecare frază începe cu „potrivit”, cititorul vede o listă de atribuiri, nu faptul; în articolele de test aceeași sursă era atribuită de trei ori la rând. Markerul „potrivit” nu e greșit și nu se înlocuiește (vezi începutul secțiunii); se rărește: numești sursa o dată, în prima frază care îi aparține sau cel târziu în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă. Sursa poate sta la începutul frazei („Potrivit Der Spiegel, …”) sau la coada ei („…, scrie Der Spiegel”). Formulele care reiau sursa („ziarul”, „aceeași publicație”, „tot ea”) repetă lista de atribuiri cu alt început de frază. Fiecare afirmație își păstrează sursa: nu comasezi afirmații din surse diferite sub o singură atribuire (RO-STI-618).
 - Sursă: recomandare a skill-ului, fără normă
 
 ### RO-STI-621 Lanțul de atribuire: cel mult două trepte
