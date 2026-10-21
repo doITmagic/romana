@@ -94,7 +94,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Ce nu spune:** nu stabilește corect și greșit; nu e un ghid de redactare.
 
 ### Manuale aprobate de Ministerul Educației
-- **Titluri:** *Gramatica aplicată a limbii române*, clasa a IX-a (M.-C. Anisie, A. Ciobotaru, M. Lascăr, M.-R. Nedea, A.-D. Petrache, C. Pleșa), Editura Didactică și Pedagogică, 2026; manualele de *Limba și literatura română* pentru clasele a V-a (2022), a VI-a (2023) și a VII-a (2024), Editura Art Klett (F. Sâmihăian, S. Dobra, M. Halaszi, A. Davidoiu-Roman, H. Corcheș), și pentru clasa a VI-a, Editura Didactică și Pedagogică, 2023.
+- **Titluri:** *Gramatica aplicată a limbii române*, clasa a IX-a (M.-C. Anisie, A. Ciobotaru, M. Lascăr, M.-R. Nedea, A.-D. Petrache, C. Pleșa), Editura Didactică și Pedagogică, 2026; manualele de *Limba și literatura română* pentru clasele a V-a (2022), a VI-a (2023) și a VII-a (2024), Editura Art Klett (F. Sâmihăian, S. Dobra, M. Halaszi, A. Davidoiu-Roman, H. Corcheș), și pentru clasa a VI-a, Editura Didactică și Pedagogică, 2023 (M. Norel, P. Bucurenciu, M. Dragu).
 - **Statut:** descriptiv-didactic, aplică norma academică; aprobate de Ministerul Educației. Se citează la pagină (*Gramatica aplicată*) sau la lecție (manualele Art Klett și EDP de gimnaziu).
 - **Ce nu spun:** nu sunt norme ale limbii; unde diferă de DOOM 3 sau de ÎOOP6, contează acestea. Exercițiile de corectare nu au cheie de răspuns în textul consultat, așa că un exercițiu arată ce socotește manualul greșeală, dar nu e dovadă. Manualele diferă între ele (de exemplu la pronumele subiect exprimat în plus), iar un singur manual nu face dintr-o preferință o normă. Nu tratează stilul, claritatea sau calcurile din engleză.
 

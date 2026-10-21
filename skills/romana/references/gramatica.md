@@ -849,9 +849,9 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 - Sursă: DEX ’98 s.v. foarte, mult
 
 ### RO-GRA-146 Genitivul după substantivul verbal
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „prin deschiderea un bug” → Corect: „prin deschiderea unui bug”
-- De ce: Substantivul articulat „deschiderea” cere complementul la genitiv („genitiv obiectiv”): „deschiderea unui bug”. Sintagma „deschiderea un bug” lasă complementul fără marca genitivului.
+- De ce: Substantivul articulat „deschiderea” cere complementul la genitiv („genitiv obiectiv”): „deschiderea unui bug”. Forma fără marca genitivului e agramaticală, dar sursele consultate (Coteanu) descriu genitivul obiectiv fără să numească greșită lipsa lui, de aceea rămâne recomandare.
 - Sursă: Coteanu, §7.3.2
 
 ### RO-GRA-095 „Că” după verbele de declarație
@@ -887,10 +887,10 @@ Bun:
 > Reprezentanții anunță că comisia a trimis ieri raportul. Comisia a trimis raportul ieri. Contractului semnat joi de director îi lipsește o clauză.
 
 ### RO-GRA-099 Grupul verbal rămâne compact
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „nu mai l-a văzut” → Corect: „nu l-a mai văzut”
-- De ce: Ordinea în grupul verbal e negație, pronume neaccentuat, auxiliar, semiadverb („mai”, „cam”, „și”, „prea”, „tot”), apoi verbul: „nu l-a mai văzut”, „nu și-a mai amintit”. Coteanu fixează pronumele scurt înaintea auxiliarului și admite între auxiliar și participiu doar câteva semiadverbe; locul lui „mai” față de pronume nu e stabilit explicit, de aceea rămâne recomandare. Semiadverbul nu se pune după verb în locul lui: nu „l-a văzut mai”.
-- Sursă: Coteanu, §13.1.4 și §18.6; DSL, s.v. TOPICĂ
+- De ce: Ordinea în grupul verbal e negație, pronume neaccentuat, auxiliar, „mai”, apoi verbul: „nu l-a mai văzut”, „nu și-a mai amintit”. ÎOOP6 dă „Mai aș dori”, „Mai a venit” și „Mai îl aștept” drept incorecte: „mai” stă în imediata vecinătate a verbului lexical. Pentru celelalte semiadverbe („cam”, „prea”, „tot”, „și”) nu există o sursă care să le fixeze locul la fel, deci le propui, nu le corectezi. Semiadverbul nu se pune după verb în locul lui: nu „l-a văzut mai”.
+- Sursă: ÎOOP6 p. 115–116 (așezarea lui „mai”); Coteanu, §13.1.4 și §18.6; DSL, s.v. TOPICĂ
 
 ### RO-GRA-100 Pronumele neaccentuat înaintea verbului
 - Nivel: normă
@@ -907,8 +907,8 @@ Bun:
 ### RO-GRA-180 Auxiliarul despărțit de participiu
 - Nivel: normă
 - Greșit: „Comisia a ieri după-amiază raportul trimis.” → Corect: „Comisia a trimis ieri după-amiază raportul.”
-- De ce: Auxiliarul „a, am, ai” rămâne lângă participiu: între ele pot intra doar semiadverbe scurte („a mai trimis”, „a și plecat”). Circumstanțialele vin după grupul verbal sau la începutul frazei („Ieri după-amiază, comisia a trimis raportul”). Despărțirea auxiliarului de participiu prin circumstanțiale copiază ordinea altor limbi.
-- Sursă: Coteanu, §18.6 (timpurile compuse nu admit între auxiliar și participiu decât câteva adverbe); DSL, s.v. TOPICĂ
+- De ce: Auxiliarul „a, am, ai” rămâne lângă participiu: Coteanu admite între ele doar câteva adverbe scurte („a mai trimis”, „a și plecat”), iar ÎOOP6 fixează locul lui „mai” lângă verbul lexical. Regula privește circumstanțialele de loc și de timp cu mai multe cuvinte („joi, la Berlin”), care vin după grupul verbal sau la începutul frazei („Ieri după-amiază, comisia a trimis raportul”). Adverbele scurte uzuale („a fost deja trimis”, „a venit recent”) nu se semnalează. Despărțirea auxiliarului de participiu prin circumstanțiale copiază ordinea altor limbi.
+- Sursă: Coteanu, §18.6 (timpurile compuse nu admit între auxiliar și participiu decât câteva adverbe); ÎOOP6 p. 115–116; DSL, s.v. TOPICĂ
 
 ### RO-GRA-181 Atributul lung înaintea substantivului
 - Nivel: recomandare

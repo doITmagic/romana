@@ -53,7 +53,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: normă
 - Greșit: „Guvernul a joi, la Berlin, o lege adoptat.” → Corect: „Guvernul a adoptat joi, la Berlin, o lege.”
 - De ce: Germana desparte auxiliarul de participiu printr-o paranteză în care intră circumstanțiale și complemente („Die Regierung hat am Donnerstag in Berlin ein Gesetz beschlossen”). În română auxiliarul rămâne lipit de participiu: aceeași greșeală ca în RO-GRA-180 din [gramatica.md](../gramatica.md), de unde ia și nivelul.
-- Sursă: Coteanu, §18.6 (timpurile compuse nu admit între auxiliar și participiu decât câteva adverbe); B. Croitor et al., 2014 (nereverificat local pentru pagină)
+- Sursă: Coteanu, §18.6 (timpurile compuse nu admit între auxiliar și participiu decât câteva adverbe); ÎOOP6 p. 115–116 (așezarea lui „mai”); B. Croitor et al., 2014 (nereverificat local pentru pagină)
 
 ### RO-CAL-604 Atributul participial lung (Partizipialattribut)
 - Nivel: recomandare
