@@ -1,0 +1,15 @@
+{
+  "id": "trigger-negativ-04",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Scrie o funcție în Go care primește o dată în formatul zz.ll.aaaa și întoarce ziua săptămânii.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "romana"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "fidelitate-01",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nNoul program de reciclare a început în septembrie și a fost primit bine de locuitori.\n\nRescriere:\nNoul program de reciclare, lansat în septembrie, a crescut cu 35% cantitatea de deșeuri colectate selectiv în cele 12 cartiere.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "a crescut cu 35%",
+        "nivel": "normă",
+        "pilon": "coerență"
+      },
+      {
+        "fragment": "cele 12 cartiere",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

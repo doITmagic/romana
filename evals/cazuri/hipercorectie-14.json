@@ -1,0 +1,24 @@
+{
+  "id": "hipercorectie-14",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Guvernul a anunțat că va mări pensiile de la 1 ianuarie. Se vor lua măsuri pentru plata la timp, iar în orașul Cluj, bunăoară, plata se face în prima zi lucrătoare. Ministrul a spus că va fii o schimbare vizibilă.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "va fii",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "interzis": [
+      "Se vor lua măsuri",
+      "bunăoară",
+      "va mări"
+    ]
+  }
+}

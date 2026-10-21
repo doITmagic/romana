@@ -1,0 +1,19 @@
+{
+  "id": "context-10",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "O serie de măsuri au fost luate de primărie pentru reducerea zgomotului din centrul vechi, iar controalele vor continua până în primăvară.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "O serie de măsuri au fost luate",
+        "nivel": "disputat",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

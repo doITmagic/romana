@@ -1,0 +1,30 @@
+{
+  "id": "pastrare-11",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Componenta „Dashboard” afișează activitatea recentă. Faceți click pe „Dashboard”, apoi alegeți filtrul dorit. Dashboard-ul se actualizează la fiecare 30 secunde.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "30 secunde",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "„Dashboard”",
+      "Dashboard-ul",
+      "30 de secunde"
+    ],
+    "interzis": [
+      "Panou",
+      "tablou de bord",
+      "Tablou",
+      "30 secunde"
+    ]
+  }
+}

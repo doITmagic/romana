@@ -1,0 +1,29 @@
+{
+  "id": "pastrare-05",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "În acest contract, „Beneficiarul” este persoana care primește serviciul, iar „Prestatorul” este firma care îl oferă. Prestatorul se obligă să livreze lucrarea în termen de 30 zile.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "30 zile",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "„Beneficiarul”",
+      "„Prestatorul”",
+      "30 de zile"
+    ],
+    "interzis": [
+      "30 zile",
+      "Clientul",
+      "Furnizorul"
+    ]
+  }
+}

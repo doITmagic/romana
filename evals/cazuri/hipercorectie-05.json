@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-05",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Potrivit procurorilor, suspectul ar fi furat trei mașini. Datorită noului sistem de alertare, poliția a ajuns în zece minute. Ședința s-a amânat, întrucât lipsea cvorumul.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "a furat",
+      "din cauza noului sistem",
+      "deoarece lipsea",
+      "pentru că lipsea"
+    ]
+  }
+}

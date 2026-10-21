@@ -1,0 +1,37 @@
+{
+  "id": "corectura-06",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Aplicația acceptă fișiere de până la 1,500 MB. Selectați opțiunea \"Import\" din meniu. După încărcare, platforma verifică formatul și vă trimite un raport pe e-mail.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "1,500 MB",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "\"Import\"",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "platforma verifică",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ],
+    "cerut": [
+      "1.500 MB",
+      "„Import”"
+    ],
+    "interzis": [
+      "1,500 MB",
+      "\"Import\""
+    ]
+  }
+}

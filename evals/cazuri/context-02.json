@@ -1,0 +1,23 @@
+{
+  "id": "context-02",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Echipa nu are decât două zile la dispoziție. Proiectul e mai mare decât ne-am așteptat, iar clientul mai are decât o singură întrebare.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "mai are decât o singură întrebare",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "interzis": [
+      "nu are decât două zile",
+      "mai mare decât ne-am așteptat"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "fidelitate-17",
+  "mod": "redactare",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Cerere: Tradu în română mesajul de interfață, păstrând sensul.\n\nMesaj: The update may take a few minutes. Do not close the app.",
+  "confirmat": false,
+  "asteptat": {
+    "cerut": [
+      "câteva minute"
+    ],
+    "interzis": [
+      "10 minute",
+      "5 minute",
+      "garantat",
+      "nu se poate"
+    ]
+  }
+}

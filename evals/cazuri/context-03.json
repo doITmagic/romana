@@ -1,0 +1,19 @@
+{
+  "id": "context-03",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Costul actual al lucrării a fost de 12.000 de lei, nu de 9.000, cât se anunțase inițial. Diferența vine din materialele scumpite pe parcurs.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Costul actual",
+        "nivel": "de semnalat",
+        "pilon": "semantică"
+      }
+    ]
+  }
+}

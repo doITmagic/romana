@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-07",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nRaportul nu exclude posibilitatea unui incendiu intenționat.\n\nRescriere:\nRaportul exclude posibilitatea unui incendiu intenționat.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Raportul exclude",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "curat-blog-04",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Am citit anul acesta 31 de cărți și vreau să vorbesc despre două. Prima, un roman despre o familie de pescari din Delta Dunării, m-a ținut treaz două nopți la rând. Autorul scrie cu o precizie care amintește de reportaj, iar personajele nu sunt nici eroi, nici victime. Am fost mereu curios ce se va întâmpla în capitolul următor.\n\nA doua carte, un eseu despre cum se schimbă orașele, mi-a plăcut mai puțin decât m-am așteptat. Ideile sunt bune, dar autoarea le repetă de prea multe ori, iar ultimele cincizeci de pagini aproape că nu aduc nimic nou. Bănuiesc că ar fi ieșit un articol excelent.\n\nDacă ar fi să aleg o singură carte pentru vacanță, o aleg pe prima. Nu pentru că cealaltă e proastă, ci pentru că romanul se citește ușor, iar eseul cere liniște.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

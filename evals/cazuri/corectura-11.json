@@ -1,0 +1,32 @@
+{
+  "id": "corectura-11",
+  "mod": "corectura",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Dacă ai întrebări, nu fii timid și scrie-mi. Dacă aș fii în locul tău, aș începe cu primul capitol, nu cu ultimul.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "nu fii timid",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "aș fii",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "nu fi timid",
+      "aș fi în locul tău"
+    ],
+    "interzis": [
+      "nu fii",
+      "aș fii"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "hipercorectie-02",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Majoritatea angajaților au votat propunerea, iar nici directorul, nici adjunctul lui nu au semnat documentul. Votul a doi senatori a decis rezultatul.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Majoritatea angajaților a votat",
+      "nu a semnat",
+      "votul a doi senatori a fost"
+    ]
+  }
+}

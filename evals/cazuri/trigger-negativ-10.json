@@ -1,0 +1,15 @@
+{
+  "id": "trigger-negativ-10",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Explică-mi diferența dintre un mutex și un semafor, cu un exemplu.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "romana"
+    ]
+  }
+}

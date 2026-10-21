@@ -1,0 +1,27 @@
+{
+  "id": "pastrare-06",
+  "mod": "corectura",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Apăsați butonul „Sign in” ca să vă autentificați. Dacă nu aveți cont, apăsați „Sign up\", apoi urmați pașii.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "„Sign up\"",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "„Sign in”",
+      "„Sign up”"
+    ],
+    "interzis": [
+      "„Autentificare”",
+      "„Înregistrare”"
+    ]
+  }
+}

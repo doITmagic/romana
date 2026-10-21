@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-16",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Pasărea se înălță deasupra apei, iar vântul bătu cu putere peste câmp. Joi, guvernul a adoptat bugetul. Am văzut-o cu ochii mei intrând în clădire.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "se înalță",
+      "a bătut",
+      "perfect simplu",
+      "cu ochii mei intrând"
+    ]
+  }
+}

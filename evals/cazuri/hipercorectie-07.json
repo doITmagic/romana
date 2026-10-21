@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-07",
+  "mod": "corectura",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Livrarea e gratuită. De asemenea, puteți returna produsele în 30 de zile. În plus, plata se poate efectua cu cardul, prin virament etc. Vă rugăm să ne scrieți dacă aveți întrebări.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "și, de asemenea",
+      "și altele",
+      "și așa mai departe",
+      "Totodată"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "context-11",
+  "mod": "verificare",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Măsurile de securitate constau din verificarea documentelor la intrare și din controlul periodic al camerelor.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "constau din",
+        "nivel": "disputat",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

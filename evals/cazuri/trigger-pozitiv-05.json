@@ -1,0 +1,15 @@
+{
+  "id": "trigger-pozitiv-05",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Rescrie descrierea acestui produs pentru magazinul meu online, în română, fără să adaugi informații: «Căști fără fir, 30 de ore de autonomie, încărcare rapidă.»",
+  "confirmat": false,
+  "asteptat": {
+    "cerut": [
+      "romana"
+    ]
+  }
+}

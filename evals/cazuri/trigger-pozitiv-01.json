@@ -1,0 +1,15 @@
+{
+  "id": "trigger-pozitiv-01",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Corectează greșelile din textul ăsta în română: „Am aplicat pentru un credit și sa aprobat.”",
+  "confirmat": false,
+  "asteptat": {
+    "cerut": [
+      "romana"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "pastrare-08",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Pentru a instala pachetul, rulați:\n\n    sudo apt install pachet-romana\n\nInstalarea durează aproximativ 20 minute. Apoi verificați versiunea cu `pachet --version`.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "20 minute",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "    sudo apt install pachet-romana",
+      "`pachet --version`",
+      "20 de minute"
+    ],
+    "interzis": [
+      "20 minute"
+    ]
+  }
+}

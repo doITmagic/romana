@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-03",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nEchipa a pierdut finala. Antrenorul a demisionat luni.\n\nRescriere:\nEchipa a pierdut finala, din cauza căreia antrenorul a demisionat luni.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "din cauza căreia",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

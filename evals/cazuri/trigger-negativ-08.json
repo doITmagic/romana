@@ -1,0 +1,15 @@
+{
+  "id": "trigger-negativ-08",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Refactorizează funcția `normalizeRomanianName` ca să folosească mai puțină memorie.",
+  "confirmat": false,
+  "asteptat": {
+    "interzis": [
+      "romana"
+    ]
+  }
+}

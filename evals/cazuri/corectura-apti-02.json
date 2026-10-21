@@ -1,0 +1,47 @@
+{
+  "id": "corectura-apti-02",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "ApTI (Asociația pentru Tehnologie și Internet), „Cum definim si clasificăm comportamentului inautentic coordonat (Coordinated Inauthentic Behaviour - CIB)”, 8 octombrie 2026, https://apti.ro/cum-definim-si-clasificam-cib/ . Extras nemodificat (titlul și corpul paginii, fără linkul de abonare)",
+  "licenta": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.ro)",
+  "intrare": "Cum definim si clasificăm comportamentului inautentic coordonat (Coordinated Inauthentic Behaviour - CIB)\n\nAcest document este o prezentare simplă a termenilor legați de comportamentului inautentic coordonat (Coordinated Inauthentic Behaviour - CIB), văzut în special în contextul DSA - Regulamentului (UE) 2022/2065. Documentul este rezultatul unui proces de consultare și discuții informale pe această temă în ultimele luni, pe baza unui text propus de ApTI (coordonat de Andrei Petre) și a unor membri ai societății civile, cum ar fi ExpertForum, ActiveWatch și Funky Citizens. De asemena, în acest context ANCOM a prezentat liniile generale ale Regulamentului (UE) 2022/2065.\n\nScopul propunerii cadru este să propună un set de explicații și definiții agreate comun despre CIB, pentru a oferi o imagine generală a fenomenului, utilă în a înțelege riscurile de nivel macro (și nu de cazuri punctuale, individuale) ale folosirii unei infrastructuri care poate să promoveze CIB, dar și problemele specifice de identificare, clasificare (de ex. legal/ilegal) sau chiar folosire legală de metode de coordonare aparent similare.\n\nDocumentul e licențiat liber, astfel încât să poată fi copiat, distribuit sau îmbunătățit de oricine.\n\nPuteți citi documentul final aici. ApTI a realizat și un infografic care prezintă această informație într-o formă mai ușor de digerat, sumarizată, care poată servi și ca punct de pornire pentru discuții și workshop-uri.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "definim si clasificăm",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "clasificăm comportamentului",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "legați de comportamentului inautentic coordonat",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "De asemena",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "care poată servi",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "De asemenea",
+      "care să poată servi"
+    ],
+    "interzis": [
+      "De asemena,",
+      "care poată servi"
+    ]
+  }
+}

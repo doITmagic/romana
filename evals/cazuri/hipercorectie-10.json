@@ -1,0 +1,20 @@
+{
+  "id": "hipercorectie-10",
+  "mod": "verificare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Am ales un material durabil pentru acoperiș și o abordare nouă pentru finisaje. Prima lună e crucială pentru proiect, iar prețurile sunt scumpe în centrul orașului, dar valorificăm resursele locale.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "calc",
+      "engl",
+      "anglicism",
+      "to leverage",
+      "to delve"
+    ]
+  }
+}

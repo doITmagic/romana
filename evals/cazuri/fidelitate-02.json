@@ -1,0 +1,19 @@
+{
+  "id": "fidelitate-02",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nMedicamentul ar putea reduce riscul de recidivă, spun cercetătorii.\n\nRescriere:\nMedicamentul reduce riscul de recidivă, spun cercetătorii.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Medicamentul reduce riscul",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

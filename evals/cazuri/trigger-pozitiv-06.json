@@ -1,0 +1,15 @@
+{
+  "id": "trigger-pozitiv-06",
+  "mod": "trigger",
+  "profil": "",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Is this Romanian sentence grammatically correct? „Documentul care l-am trimis ieri conține cifrele finale.”",
+  "confirmat": false,
+  "asteptat": {
+    "cerut": [
+      "romana"
+    ]
+  }
+}

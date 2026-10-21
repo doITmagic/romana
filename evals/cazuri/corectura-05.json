@@ -1,0 +1,38 @@
+{
+  "id": "corectura-05",
+  "mod": "corectura",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Utilizator a fost șters.\nAți terminat {titlu}-ul.\nVă mulțumim pentru comandă. Îți trimitem factura pe e-mail.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Utilizator a fost șters.",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "{titlu}-ul",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "Îți trimitem factura pe e-mail.",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ],
+    "cerut": [
+      "Utilizatorul a fost șters",
+      "{titlu}"
+    ],
+    "interzis": [
+      "Utilizator a fost șters",
+      "{titlu}-ul",
+      "Îți trimitem"
+    ]
+  }
+}

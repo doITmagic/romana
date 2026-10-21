@@ -1,0 +1,13 @@
+{
+  "id": "curat-presa-04",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Compania de transport public din Iași a anunțat că, începând de luni, patru linii de autobuz își schimbă traseul din cauza lucrărilor la conducta de apă din zona gării. Liniile 28, 30 și 43 vor ocoli strada Cuza Vodă, iar linia 5 se oprește temporar în stația Podu Roș.\n\nCălătorii pot afla traseele noi din aplicația companiei și de pe panourile din stații. Reprezentanții companiei spun că vor monta indicatoare provizorii pe cele mai aglomerate străzi, în cursul acestei săptămâni. Lucrările durează, potrivit constructorului, până la mijlocul lunii viitoare, dacă vremea permite.\n\nLa ora de vârf, autobuzele din zona gării circulă deja cu întârzieri de câte zece-cincisprezece minute. Primăria a promis că va trimite agenți ai poliției locale în intersecțiile cele mai încărcate, ca să fluidizeze traficul în dimineața de luni.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

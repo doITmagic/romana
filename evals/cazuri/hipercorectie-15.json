@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-15",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Cererile se depun la registratură până vineri. Contractul a fost semnat ieri. Eu, ca și tine, plec mâine, iar ei au lucrat ani de zile la acest proiect.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "Depuneți cererile",
+      "Registratura primește",
+      "ca tine",
+      "ani la acest"
+    ]
+  }
+}

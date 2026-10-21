@@ -1,0 +1,19 @@
+{
+  "id": "context-07",
+  "mod": "verificare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Bună ziua,\n\nFurnizorul i-a scris clientului că factura e plătită, dar el a spus că nu a primit-o. Vă rog să verificați extrasul de cont și să ne spuneți ce găsiți.\n\nMulțumesc,\nCarmen",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "dar el a spus",
+        "nivel": "de semnalat",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

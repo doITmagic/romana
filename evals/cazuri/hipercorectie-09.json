@@ -1,0 +1,20 @@
+{
+  "id": "hipercorectie-09",
+  "mod": "corectura",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Datele se actualizează în timp real. Dați click pe butonul de salvare și apoi dați refresh paginii. Nu au fost găsite rezultate.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "clic",
+      "reîncărcați",
+      "Nu s-au găsit rezultate",
+      "Nu am găsit rezultate",
+      "Niciun rezultat"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "context-apti-01",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "ApTI, „O privire retrospectivă și prospectivă asupra drepturilor digitale”, interviu (răspunsurile lui Bogdan Manolea, ApTI), 21 septembrie 2026, https://apti.ro/o-privire-retrospectiva-si-prospectiva-asupra-drepturilor-digitale/ . Text produs în proiectul „I'll miss you when I scroll” (ApTI e partener; proiect cofinanțat de AFCN). Extras nemodificat, fără nota despre finanțare",
+  "licenta": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.ro)",
+  "intrare": "Bogdan Manolea: La început am fost interesat, mai degrabă, dintr-un motiv academic pur, în sensul în care eram student, mi s-a părut interesantă legătura între calculatoare, Internet și drept. Am început să citesc multe articole specifice, în special din străinătate și multe erau legate de zona asta de drepturi digitale și dincolo de anumite aspecte tehnice pe care le-am învățat atunci, multe din subiectele prezentate erau inclusiv din zona asta. Practic, am început să înțeleg că sunt anumite aspecte pe care Internetul le-ar putea potența sau afecta. În momentul în care am zis că e o chestie foarte, foarte serioasă și ar trebui să o studiem și mai mult în România era la începutul anilor 2000, în care au fost o serie de dezvăluiri legate de mai multe subiecte, cred că erau justiție și servicii și așa mai departe. S-au numit Armaghedon și în care cineva cu un cont anonim le trimisese către ambasadele din România și pe mail și către anumite redacții și ele au fost publicate inclusiv online. Era Năstase la vremea respectivă care a încercat să le limiteze și am văzut că este un efect real în ceea ce trăim noi și atunci mi s-a apărut că trebuie să discutăm mai mult despre asta, trebuie să le notăm, trebuie să le înțelegem și trebuie să vedem cum le păstrăm.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "mi s-a apărut",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "interzis": [
+      "Era Năstase",
+      "chestie foarte, foarte serioasă"
+    ]
+  }
+}

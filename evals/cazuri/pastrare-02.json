@@ -1,0 +1,27 @@
+{
+  "id": "pastrare-02",
+  "mod": "corectura",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Pentru informații vizitați https://exemplu.ro/contact_us?lang=ro sau scrieți la contact@exemplu.ro. Răspundem în cel mult 20 zile.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "20 zile",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "https://exemplu.ro/contact_us?lang=ro",
+      "contact@exemplu.ro",
+      "20 de zile"
+    ],
+    "interzis": [
+      "20 zile"
+    ]
+  }
+}

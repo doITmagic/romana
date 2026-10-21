@@ -1,0 +1,32 @@
+{
+  "id": "corectura-01",
+  "mod": "corectura",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Bună ziua,\n\nVă trimit documentul care l-am pregătit ieri împreună cu colegii. Am discutat cu directorul, iar sa hotărât să amânăm semnarea contractului cu o săptămână. Revin cu un mesaj imediat ce aflu data.\n\nCu stimă,\nAnca Georgescu",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "documentul care l-am pregătit",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      },
+      {
+        "fragment": "sa hotărât",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "documentul pe care l-am pregătit",
+      "s-a hotărât"
+    ],
+    "interzis": [
+      "documentul care l-am pregătit",
+      "sa hotărât"
+    ]
+  }
+}

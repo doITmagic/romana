@@ -1,0 +1,18 @@
+{
+  "id": "context-12",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Poliția a anunțat că suspectul ar fi furat trei mașini în ultimele două luni. Potrivit procurorilor, bărbatul ar fi lucrat împreună cu un complice, încă neidentificat. Cercetările continuă.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [],
+    "neatins": true,
+    "interzis": [
+      "a furat trei mașini",
+      "a lucrat împreună"
+    ]
+  }
+}

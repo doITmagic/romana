@@ -1,0 +1,33 @@
+{
+  "id": "corectura-04",
+  "mod": "corectura",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Familia vecinilor a adaptat anul trecut un cățel dintr-un adăpost. Povestea lor face sens doar dacă îi cunoști pe cei doi copii, care visau de ani de zile la un câine.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "a adaptat",
+        "nivel": "normă",
+        "pilon": "semantică"
+      },
+      {
+        "fragment": "face sens",
+        "nivel": "normă",
+        "pilon": "semantică"
+      }
+    ],
+    "cerut": [
+      "a adoptat",
+      "are sens",
+      "ani de zile"
+    ],
+    "interzis": [
+      "a adaptat",
+      "face sens"
+    ]
+  }
+}

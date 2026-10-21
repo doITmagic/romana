@@ -1,0 +1,37 @@
+{
+  "id": "corectura-03",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Consiliul Local s-a reunit marți, 14 Octombrie, pentru a dezbate bugetul. Consilierii opoziției au cerut ca proiectul să revină înapoi în comisie, pentru că au avut decât o zi la dispoziție ca să-l citească.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "14 Octombrie",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "revină înapoi",
+        "nivel": "normă",
+        "pilon": "semantică"
+      },
+      {
+        "fragment": "au avut decât o zi",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "14 octombrie"
+    ],
+    "interzis": [
+      "14 Octombrie",
+      "revină înapoi",
+      "avut decât o zi"
+    ]
+  }
+}

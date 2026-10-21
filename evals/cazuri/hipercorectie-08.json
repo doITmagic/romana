@@ -1,0 +1,18 @@
+{
+  "id": "hipercorectie-08",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Echipa a terminat raportul joi, iar controversata reformă a fost adoptată ieri. A intrat în vigoare legea privind protecția datelor. Politica comună a fost adoptată după o dezbatere lungă.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "cacofonie",
+      "inversiune",
+      "topică"
+    ]
+  }
+}

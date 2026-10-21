@@ -1,0 +1,30 @@
+{
+  "id": "hipercorectie-13",
+  "mod": "corectura",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Bună ziua,\n\nÎmi cer scuze, documentul care l-am trimis ieri conținea o greșeală. Marea majoritate a cifrelor sunt corecte, dar totalul din ultimul tabel nu corespunde. Vă trimit versiunea corectată, conform cu legea contabilității.\n\nCu stimă,\nMara",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "documentul care l-am trimis",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "documentul pe care l-am trimis",
+      "Îmi cer scuze",
+      "Marea majoritate a cifrelor sunt corecte",
+      "conform cu legea"
+    ],
+    "interzis": [
+      "vă cer scuze",
+      "marea majoritate a cifrelor este",
+      "conform legii"
+    ]
+  }
+}

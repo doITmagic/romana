@@ -1,0 +1,13 @@
+{
+  "id": "curat-marketing-04",
+  "mod": "verificare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Fabrica de mobilă Stejarul lucrează la comandă din lemn masiv de stejar și de nuc, în Brașov. Fiecare piesă pornește de la măsurătorile din casa ta: venim, măsurăm și desenăm împreună un proiect. După ce îl aprobi, ai de așteptat între șase și zece săptămâni.\n\nMontăm mobila noi, cu echipa noastră, și o garantăm cinci ani. Dacă o ușă se strâmbă sau un sertar se blochează în acest interval, venim și îl reparăm gratuit. Lemnul vine de la furnizori din Carpați, cu acte de proveniență, pe care ți le arătăm la cerere.\n\nUn dulap de dormitor costă, în medie, între 4.500 și 7.000 de lei, în funcție de dimensiuni. Oferta exactă o primești după vizită, nu înainte.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

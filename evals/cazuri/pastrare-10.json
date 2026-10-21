@@ -1,0 +1,26 @@
+{
+  "id": "pastrare-10",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Serverul întoarce un obiect JSON, de exemplu `{\"status\": \"ok\", \"mesaj\": \"Cererea a fost procesată\"}`, iar o cerere eșuată poate fii repetată după 5 minute.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "poate fii repetată",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "`{\"status\": \"ok\", \"mesaj\": \"Cererea a fost procesată\"}`",
+      "poate fi repetată"
+    ],
+    "interzis": [
+      "poate fii"
+    ]
+  }
+}

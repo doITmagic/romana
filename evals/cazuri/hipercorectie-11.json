@@ -1,0 +1,20 @@
+{
+  "id": "hipercorectie-11",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Un medic rezident îl asistă pe chirurg în timpul operației. Pe agenda ședinței sunt trei puncte, iar versiunea curentă a regulamentului a fost aprobată. Bărbatul mort în 2024 era fostul partener al victimei.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "îl ajută pe chirurg",
+      "ordinea de zi",
+      "versiunea actuală",
+      "decedat",
+      "răposat"
+    ]
+  }
+}

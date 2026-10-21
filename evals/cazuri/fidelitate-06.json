@@ -1,0 +1,24 @@
+{
+  "id": "fidelitate-06",
+  "mod": "verificare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sursă:\nCompania a lansat un nou serviciu de livrare.\n\nRescriere:\nSuntem mândri că am lansat un nou serviciu de livrare și credem că vă va schimba viața.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Suntem mândri",
+        "nivel": "normă",
+        "pilon": "coerență"
+      },
+      {
+        "fragment": "vă va schimba viața",
+        "nivel": "normă",
+        "pilon": "coerență"
+      }
+    ]
+  }
+}

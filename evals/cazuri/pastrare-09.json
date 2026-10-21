@@ -1,0 +1,29 @@
+{
+  "id": "pastrare-09",
+  "mod": "corectura",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Poezia lui Topîrceanu a fost reeditată, iar fișierul `topirceanu_antologie.pdf` poate fi descărcat gratuit. Antologia a împlinit 20 ani de la prima ediție.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "20 ani",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "Topîrceanu",
+      "`topirceanu_antologie.pdf`",
+      "20 de ani"
+    ],
+    "interzis": [
+      "Topârceanu",
+      "topârceanu_antologie",
+      "20 ani"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "curat-marketing-03",
+  "mod": "corectura",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Aplicația Cumpărat ține la un loc lista de cumpărături a familiei. Fiecare membru adaugă produse de pe telefonul lui, iar lista se actualizează la toți în câteva secunde. Când cineva bifează un produs în magazin, ceilalți văd imediat că nu mai trebuie să-l ia.\n\nPoți grupa produsele pe rafturi, în ordinea în care le găsești în magazinul tău obișnuit. Aplicația învață și sugerează ce cumperi des, iar tu alegi dacă adaugi sugestia sau nu. Nu primești reclame și nu vindem datele nimănui.\n\nCumpărat e gratuită pentru familii de până la patru persoane. Pentru grupuri mai mari, abonamentul costă 5 lei pe lună. Se instalează în două minute, pe Android și pe iPhone.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true
+  }
+}

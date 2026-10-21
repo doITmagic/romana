@@ -1,0 +1,19 @@
+{
+  "id": "hipercorectie-06",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Toate partidele – inclusiv cele din opoziție – au votat legea. Directorul a spus: «Nu demisionez.» Anii ’90 au adus schimbări mari, iar „Orașul după ploaie” a fost reeditat.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "partidele, inclusiv",
+      "partidele - inclusiv",
+      "'Nu demisionez.'",
+      "anii 90"
+    ]
+  }
+}

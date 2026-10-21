@@ -1,0 +1,27 @@
+{
+  "id": "pastrare-04",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Martorul a declarat, că nu a văzut incidentul. „Vroiam să plec mai devreme, plus că mă aștepta nevasta acasă”, a spus el.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "declarat, că",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "„Vroiam să plec mai devreme, plus că mă aștepta nevasta acasă”",
+      "declarat că"
+    ],
+    "interzis": [
+      "Voiam să plec",
+      "declarat, că"
+    ]
+  }
+}
