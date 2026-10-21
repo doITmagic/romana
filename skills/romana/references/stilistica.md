@@ -1,12 +1,12 @@
 # Stilistica
 
-Fișierul acesta te ajută să scrii firesc și să judeci dacă un text sună a român care cunoaște subiectul sau a text tradus ori făcut din formule. Aici nu e vorba de greșeli de limbă, ci de alegeri: câte substantive abstracte încap într-o frază, cine face acțiunea, cât de lungă e fraza, ce formule pot dispărea fără pierdere. De aceea aproape toate regulile sunt recomandări, iar metodele contează mai mult decât regulile.
+Fișierul acesta te ajută să scrii firesc și să judeci dacă un text sună a român care cunoaște subiectul sau a text tradus ori făcut din formule. Aici nu e vorba de greșeli de limbă, ci de alegeri: câte substantive abstracte încap într-o frază, cine face acțiunea, cât de lungă e fraza, ce formule pot dispărea fără pierdere. De aceea toate regulile sunt recomandări, iar metodele contează mai mult decât regulile.
 
 ## Cum folosești fișierul
 
 - **Obiectiv = corectezi, gust = propui.** Dacă singura justificare a unei schimbări e „sună mai bine”, e gust și rămâne propunere. În acest fișier nu găsești norme; găsești recomandări cu sursă (în special *Mic ghid de redactare clară* al Comisiei Europene și ghidul gov-md) și semnale pe care le judeci în grup, nu izolat.
 - **La redactare** aplici metodele de mai jos înainte să scrii: ce vrei să spui, cine face acțiunea, ce știe deja cititorul. Listele de formule le folosești abia la recitirea ciornei.
-- **În corectură și în verificare** nu transformi mecanic. O trăsătură izolată (un pasiv, un substantiv verbal, un „totodată”) nu e greșeală și nu se semnalează. Semnalezi pasajul în care trăsăturile se adună și faptul dispare.
+- **În corectură și în verificare** nu transformi mecanic. O trăsătură izolată (un pasiv, un substantiv verbal, un „totodată”) nu e greșeală și nu se semnalează ca problemă; la redactare poți totuși alege forma mai simplă. Semnalezi pasajul în care trăsăturile se adună și faptul dispare.
 - **Citatul și textul juridic sau administrativ nu se rescriu.** Formulele de act rămân în acte și în citatele din documente.
 - **Tiparele textului generat** (copula ocolită, verbele-paravan, importanța declarată, formulele de chatbot) sunt în [tipare-text-generat.md](tipare-text-generat.md). Registrul și adresarea („tu” sau „dumneavoastră”) sunt în [registru-si-adresare.md](registru-si-adresare.md), iar profilurile pe genuri în [tipuri/](tipuri/). Traducerea propriu-zisă e în [limbi-sursa/en.md](limbi-sursa/en.md).
 
@@ -60,7 +60,7 @@ Pentru ordinea cuvintelor, regula practică e simplă: ce e nou stă spre sfâr�
 
 ### RO-STI-007 Lungimea frazei nu are normă
 - Nivel: recomandare
-- Greșit: „Echipa, care analizase datele și care le trimisese conducerii, care ceruse o decizie, aștepta un răspuns, având în vedere că termenul trecuse.” → Corect: „Echipa analizase datele și le trimisese conducerii, care trebuia să decidă. Termenul trecuse, iar răspunsul întârzia.”
+- Greșit: „Echipa, care analizase datele și care le trimisese conducerii, care ceruse o decizie, aștepta un răspuns, având în vedere că termenul trecuse.” → Corect: „Echipa analizase datele și le trimisese conducerii, care trebuia să decidă. Termenul trecuse, iar echipa aștepta un răspuns.”
 - De ce: Ghidul Comisiei Europene vorbește despre o medie, nu despre un plafon, și cere conectori când spargi fraza, ca să nu se piardă relațiile logice. Frazele cu relative și gerunzii în lanț se sparg cel mai des, iar o frază lungă cu un singur fir e bună.
 - Sursă: Mic ghid CE p. 6 (Rec. 4)
 
@@ -88,16 +88,10 @@ Pentru ordinea cuvintelor, regula practică e simplă: ce e nou stă spre sfâr�
 - De ce: Cuvintele care restrâng sau subliniază stau imediat înaintea cuvântului vizat. „Doar ieri” restrânge timpul („nu altă zi”), „doar decizia” restrânge obiectul („nu și motivele”). Dacă ordinea schimbă sensul, alegi poziția care spune ce vrei.
 - Sursă: DSL, s.v. TOPICĂ
 
-### RO-STI-010 Adjectivul după substantiv
+### RO-STI-010 Seria de adjective antepuse
 - Nivel: recomandare
-- Greșit: „Au criticat controversata reformă.” → Corect: „Au criticat reforma controversată.”
-- De ce: Adjectivul stă de regulă după substantiv; pus înainte, are rol expresiv și ia articolul. Adjectivul antepus nu e greșeală (RO-NUG-050). Semnalezi doar o serie de adjective antepuse fără efect stilistic („o importantă decizie”, „relevantele date”), tipică pentru text tradus din engleză. Se păstrează formulele fixe („bună ziua”, „dragi prieteni”) și cazurile în care poziția schimbă sensul („noua versiune”, „sărmanul copil”).
-- Sursă: DSL, s.v. TOPICĂ
-
-### RO-STI-011 Ordinalele și adjectivele pronominale stau înainte
-- Nivel: recomandare
-- Greșit: „pasul primul” → Corect: „primul pas”
-- De ce: Numeralele ordinale și adjectivele pronominale (acest, fiecare, orice) stau de regulă înaintea substantivului: „primul pas”, „fiecare stat”. Este o ordine obișnuită, pe care o respecți în text nou.
+- Greșit: „O importantă decizie a fost luată pe baza relevantelor date.” → Corect: „O decizie importantă a fost luată pe baza datelor relevante.”
+- De ce: Adjectivul stă de regulă după substantiv; pus înainte, are rol expresiv și ia articolul. Un adjectiv antepus pentru accent nu e greșeală și nu se mută („Controversata reformă”, RO-NUG-050). Semnalezi doar seria de adjective antepuse fără efect stilistic, tipică textului tradus din engleză. Se păstrează formulele fixe („bună ziua”, „dragi prieteni”) și cazurile în care poziția schimbă sensul („noua versiune”, „sărmanul copil”).
 - Sursă: DSL, s.v. TOPICĂ
 
 ## 3. Verbe în loc de substantive abstracte
@@ -135,7 +129,7 @@ Bun:
 ### RO-STI-006 Cuvântul concret în locul celui abstract
 - Nivel: recomandare
 - Greșit: „oportunități de muncă” → Corect: „locuri de muncă”
-- De ce: Ghidul cere cuvântul concret acolo unde amândouă înseamnă același lucru: „a demara” → „a începe”, „evoluție negativă” → „recesiune”, „a identifica soluții” → „a găsi soluții”. Dacă ai motive să păstrezi cuvântul abstract (termen de specialitate, nuanță), îl păstrezi.
+- De ce: Ghidul cere cuvântul concret acolo unde amândouă înseamnă același lucru: „a demara” → „a începe”, „evoluție negativă” → „recesiune”, „a identifica soluții” → „a găsi soluții”. Dacă ai motive să păstrezi cuvântul abstract (termen de specialitate, nuanță), îl păstrezi. Înlocuirea nu schimbă sensul: „evoluție negativă” devine „recesiune” doar dacă sursa vorbește într-adevăr de recesiune; altfel păstrezi sau întrebi autorul.
 - Sursă: Mic ghid CE p. 9 (Rec. 7)
 
 ### RO-STI-029 Mai mult de un substantiv verbal abstract pe frază
@@ -158,7 +152,7 @@ Bun:
 
 ### RO-STI-043 Nominalizările nu se rescriu cu gerunzii în lanț
 - Nivel: recomandare
-- Greșit: „Realizând obiectivele, creând condiții și asigurând accesul, proiectul continuă.” → Corect: „Proiectul atinge obiectivele, creează condiții și asigură accesul.”
+- Greșit: „Realizând obiectivele, creând condiții și asigurând accesul, proiectul continuă.” → Corect: „Proiectul atinge obiectivele, creează condiții și asigură accesul, apoi continuă.”
 - De ce: Un șir de nominalizări („realizarea obiectivelor, crearea condițiilor, asigurarea accesului”) se rescrie cu verbe la mod personal, cu subiect exprimat. Un lanț de gerunzii înlocuiește un tic cu altul. Un singur gerunziu cu subiect clar e admis („Cultivarea plantelor perene poate îmbunătăți solul, favorizând creșterea stratului vegetal”).
 - Sursă: Mic ghid CE p. 8 (Rec. 6)
 
@@ -181,7 +175,7 @@ Pasivul rămâne bun când agentul e evident sau fără importanță: „Moțiun
 ### RO-STI-004 Pasivul nu e greșeală
 - Nivel: recomandare
 - Greșit: „S-a decis închiderea spitalului.” → Corect: „Ministerul Sănătății a decis închiderea spitalului.”
-- De ce: Când sursa numește cine a făcut și contează cine, propui activul. Dacă sursa nu îl numește, pasivul rămâne și nu inventezi un agent. Pasivul cu „a fi” și reflexivul pasiv sunt construcții românești (RO-NUG-085).
+- De ce: Perechea presupune că sursa numește ministerul ca cel care a decis și că asta contează. Atunci propui activul. Dacă sursa nu numește agentul, pasivul rămâne și nu inventezi unul. Pasivul cu „a fi” și reflexivul pasiv sunt construcții românești (RO-NUG-085).
 - Sursă: Mic ghid CE p. 10 (Rec. 8)
 
 ## 5. Limba de lemn, registrul birocratic, jargonul
@@ -202,7 +196,7 @@ Ce pui în loc: cifra, data, persoana și acțiunea. Dacă nu le ai din sursă, 
 
 ### RO-STI-003 Limba de lemn se judecă în grup
 - Nivel: recomandare
-- Greșit: „Se impune accelerarea procesului de implementare a măsurilor necesare.” → Corect: „Echipa aplică măsurile până vineri.”
+- Greșit: „Se impune accelerarea procesului de implementare a măsurilor necesare.” → Corect: „[De completat: cine aplică ce măsuri și până când.]”
 - De ce: Semnalezi pasajul în care substantive abstracte, pasiv, impersonal și comparative fără termen se adună până nu se mai vede cine face ce. O trăsătură izolată nu se semnalează. Cifra, data și agentul le iei din sursă.
 - Sursă: F. Thom, *Limba de lemn*, trad. Mona Antohi, Humanitas, 1993 (nereverificat local)
 
@@ -210,13 +204,13 @@ Ce pui în loc: cifra, data, persoana și acțiunea. Dacă nu le ai din sursă, 
 - Nivel: recomandare
 - Greșit: „Se aduce la cunoștință că programarea se face la momentul depunerii cererii.” → Corect: „Vă informăm că vă puteți programa când depuneți cererea.”
 - De ce: Formulele de act („se aduce la cunoștință”, „(ca) urmare a analizării”, „…, motiv pentru care”, „la momentul depunerii”) îngreunează un text pentru public. În acte rămân. Reformularea nu inventează un „noi” care nu e în sursă: „după ce am analizat” se folosește doar dacă expeditorul a analizat.
-- Sursă: Mic ghid CE p. 6 (Rec. 4)
+- Sursă: Mic ghid CE p. 6 (Rec. 4) (jargon și expresii redundante; formulele citate nu apar în ghid)
 
 ### RO-STI-041 Registrul birocratic arhaizant
 - Nivel: recomandare
 - Greșit: „Sus-numitul a depus prezentul memoriu.” → Corect: „Ion Popescu a depus acest memoriu.”
-- De ce: În textele care nu sunt administrative sau juridice, „sus-numitul”, „prezentul” (document), „menționatul” și „respectivul” folosit ca reluare sună arhaic. Reiei cu numele, cu „acest document” sau cu „acesta”, dar numai dacă nu poate fi confundat cu altă persoană. În acte și în citatele din documente formele rămân neschimbate.
-- Sursă: Mic ghid CE p. 11 (Rec. 9)
+- De ce: În textele care nu sunt administrative sau juridice, „sus-numitul”, „prezentul” (document), „menționatul” și „respectivul” folosit ca reluare sunt jargon de act; ghidul cere să eviți jargonul instituțional în textele pentru public larg. Reiei cu numele, cu „acest document” sau cu „acesta”, dar numai dacă nu poate fi confundat cu altă persoană. În acte și în citatele din documente formele rămân neschimbate.
+- Sursă: Mic ghid CE p. 11 (Rec. 9, jargonul; formulele citate nu apar în ghid)
 
 ### RO-STI-046 „Urmează a proceda la…”
 - Nivel: recomandare
@@ -226,31 +220,31 @@ Ce pui în loc: cifra, data, persoana și acțiunea. Dacă nu le ai din sursă, 
 
 ### RO-STI-048 Registrul birocratic nepotrivit și limbajul publicitar în texte neutre
 - Nivel: recomandare
-- Greșit: „Sus-numitul produs, revoluționar și fără egal, este de neegalat.” → Corect: „Produsul pornește în zece secunde și costă 99 de lei.”
-- De ce: Formulele administrative apărute în texte care nu sunt administrative și superlativele publicitare („revoluționar”, „fără egal”) în texte neutre sau informative se semnalează. Nu se semnalează în actele administrative și nici sensurile proprii („ediție unică” = singura, „mișcare revoluționară”). Cifrele din exemplul bun vin din sursă; altfel lași „[de completat: …]”.
-- Sursă: Mic ghid CE p. 9 (Rec. 7)
+- Greșit: „Sus-numitul produs, revoluționar și fără egal, este de neegalat.” → Corect: „Produsul [de completat: ce face, cât costă].”
+- De ce: Formulele administrative apărute în texte care nu sunt administrative și superlativele publicitare („revoluționar”, „fără egal”) în texte neutre sau informative se semnalează. Nu se semnalează în actele administrative și nici sensurile proprii („ediție unică” = singura, „mișcare revoluționară”). Faptele concrete le iei din sursă; altfel lași „[de completat: …]”.
+- Sursă: Mic ghid CE p. 9 (Rec. 7); p. 11 (Rec. 9, jargonul)
 
 ### RO-STI-049 Limbajul corporatist umflat
 - Nivel: recomandare
-- Greșit: „Livrăm rezultate palpabile de excepție prin sublinieri strategice.” → Corect: „Reducem costul cu 12%, în trei luni.”
+- Greșit: „Livrăm rezultate palpabile de excepție prin sublinieri strategice.” → Corect: „Reducem costul cu [de completat: cât], în [de completat: cât timp].”
 - De ce: Formulările corporatiste abstracte, fără conținut verificabil („rezultate palpabile de excepție”, „livrează excelență”), se înlocuiesc cu varianta concretă: ce anume, cât, când. Ghidul spune că un limbaj abstract abundent îl poate face pe cititor să creadă că motivele autorului sunt îndoielnice. Terminologia de specialitate folosită precis nu intră aici.
 - Sursă: Mic ghid CE p. 9 (Rec. 7)
 
 ### RO-STI-024 „Orientat pe performanță”
 - Nivel: recomandare
-- Greșit: „Căutăm o echipă orientată pe performanță.” → Corect: „Căutăm o echipă care verifică fiecare cifră înainte să o publice.”
+- Greșit: „Căutăm o echipă orientată pe performanță.” → Corect: „Căutăm o echipă care [de completat: ce face concret, cu ce rezultat].”
 - De ce: Formula e vagă, nu greșită: „a orienta” și „performanță” sunt cuvinte normale. La redactare ceri ce anume face omul sau textul. Nu inventezi tu comportamentul: dacă sursa nu îl spune, lași „[de completat: …]”. Pentru „a aduce valoare” vezi RO-CAL-070.
 - Sursă: Mic ghid CE p. 9 (Rec. 7); DEX '98 s.v. orienta
 
 ### RO-STI-025 „Maximizând impactul”
 - Nivel: recomandare
-- Greșit: „Maximizăm impactul comunicării.” → Corect: „Scriem astfel încât cititorul să înțeleagă din prima frază ce are de făcut.”
+- Greșit: „Maximizăm impactul comunicării.” → Corect: „Scriem astfel încât cititorul să [de completat: efectul urmărit].”
 - De ce: Formula e vagă; „impact” are sensul „influență” în dicționar și nu se marchează ca greșit. La redactare o înlocuiești cu efectul concret. Efectul trebuie să vină din sursă, nu din imaginația redactorului.
 - Sursă: Mic ghid CE p. 9 (Rec. 7)
 
 ### RO-STI-028 Cuvinte vagi: „ceva”, „cumva”, „oarecum”, „într-un fel”
 - Nivel: recomandare
-- Greșit: „Proiectul întâmpină ceva dificultăți.” → Corect: „Proiectul întârzie din cauza lipsei de personal.”
+- Greșit: „Proiectul întâmpină ceva dificultăți.” → Corect: „Proiectul întârzie din cauza [de completat: dificultatea concretă].”
 - De ce: Când cuvintele vagi țin locul unei informații pe care autorul o are, scrii informația concretă. Rămân când obiectul nu e cunoscut sau când atenuarea e voită și onestă. Cuvintele în sine sunt corecte.
 - Sursă: Mic ghid CE p. 9 (Rec. 7); DEX '98 s.v. cumva, oarecum
 
@@ -272,55 +266,55 @@ Bun:
 - Nivel: recomandare
 - Greșit: „Amintim faptul că hotărârea a fost publicată.” → Corect: „Amintim că hotărârea a fost publicată.”
 - De ce: „Faptul că” rămâne necesar unde verbul cere prepoziție („se referă la faptul că”, RO-GRA-039). Unde nu cere, „că” ajunge.
-- Sursă: Mic ghid CE p. 6 (Rec. 4); DOOM 3, §6.4.2 (nereverificat local)
+- Sursă: Mic ghid CE p. 7 (Rec. 4); DOOM 3, §6.4.2 (nereverificat local)
 
 ### RO-STI-002 „În cadrul” și „la nivelul” unde ajung „în” și „la”
 - Nivel: recomandare
 - Greșit: „profesor în cadrul Universității” → Corect: „profesor la Universitate”
 - De ce: Ghidul gov-md cere să eviți folosirea excesivă a lui „în cadrul” și „la nivelul” în locul lui „în” și „la”: „Dezbaterea se organizează la minister”, nu „la nivelul ministerului”. Ghidul CE dă și „în cadrul” → „în”. Fiecare cu rostul lui: „la nivelul orașului” rămâne când înseamnă „pe plan local”.
-- Sursă: ghid gov-md §7.1.7; Mic ghid CE p. 6 (Rec. 4)
+- Sursă: ghid gov-md §7.1.7; Mic ghid CE p. 7 (Rec. 4)
 
 ### RO-STI-014 Formule de umplutură cu corespondent mai scurt
 - Nivel: recomandare
 - Greșit: „având în vedere faptul că” → Corect: „întrucât”
-- De ce: Ghidul dă corespondențe mai scurte: „având în vedere faptul că” → „întrucât”, „un anumit număr de” → „mulți/multe” (nu „câțiva”, care schimbă sensul), „o mare parte dintre” → „majoritatea”, „în scopul de” → „pentru”, „cu referire la” → „referitor la / despre”. Formulele „după cum este bine cunoscut” și „un plus de” (clișeu publicitar) se scot.
-- Sursă: Mic ghid CE p. 6 (Rec. 4)
+- De ce: Ghidul dă corespondențe mai scurte: „având în vedere faptul că” → „întrucât”, „în cadrul” → „în”, „în scopul de” → „pentru”, „cu referire la” → „referitor la / despre”, „un anumit număr de” → „mulți/multe” (nu „câțiva”), „o mare parte dintre” → „majoritatea”. Ultimele două schimbă întinderea: le folosești doar dacă sursa spune că e vorba de un număr mare, respectiv de mai mult de jumătate; altfel păstrezi formularea originală (fidelitate). Formula „după cum este bine cunoscut” se scoate. „Un plus de” (clișeu publicitar) e o observație a noastră, nu a ghidului.
+- Sursă: Mic ghid CE p. 7 (Rec. 4)
 
 ### RO-STI-038 Perechi de claritate
 - Nivel: recomandare
 - Greșit: „în cazul în care ajungeți mai devreme” → Corect: „dacă ajungeți mai devreme”
 - De ce: Formele lungi sunt corecte; ghidul le dă ca preferințe pentru claritate: „în cazul în care” → „dacă”, „dacă acesta este cazul” → „atunci”, „drept rezultat” sau „în consecință” → „prin urmare”.
-- Sursă: Mic ghid CE p. 6 (Rec. 4)
+- Sursă: Mic ghid CE p. 7 (Rec. 4)
 
 ### RO-STI-044 „Din cauza faptului că”
 - Nivel: recomandare
 - Greșit: „Termenul s-a amânat din cauza faptului că echipa nu a răspuns.” → Corect: „Termenul s-a amânat pentru că echipa nu a răspuns.”
 - De ce: Umplutură, nu greșeală: „din cauza faptului că” este corectă și apare în proză îngrijită. O scurtezi (pentru că, deoarece, din cauză că) doar în textul propriu, nu ca „corectură” într-un citat.
-- Sursă: Mic ghid CE p. 6 (Rec. 4)
+- Sursă: Mic ghid CE p. 6 (Rec. 4) (principiul: eviți expresiile redundante; formula însăși nu apare în ghid)
 
 ### RO-STI-033 „Nu în ultimul rând”
 - Nivel: recomandare
 - Greșit: „Nu în ultimul rând, mulțumim voluntarilor.” → Corect: „Mulțumim și voluntarilor.”
 - De ce: „Nu în ultimul rând” închide o enumerare și spune că ultimul element nu e cel mai puțin important. Nu e greșeală, dar se scoate sau se înlocuiește cu „și” când nu adaugă nimic.
-- Sursă: Mic ghid CE p. 6 (Rec. 4)
+- Sursă: Mic ghid CE p. 6 (Rec. 4) (principiul: eviți expresiile redundante; formula însăși nu apare în ghid)
 
 ### RO-STI-034 „În acest context”
 - Nivel: recomandare
-- Greșit: „În acest context, echipa a decis să amâne lansarea.” → Corect: „După scumpirea materialelor, echipa a decis să amâne lansarea.”
+- Greșit: „În acest context, echipa a decis să amâne lansarea.” → Corect: „După [împrejurarea descrisă în fraza anterioară], echipa a decis să amâne lansarea.”
 - De ce: „În acest context” se șterge când nu trimite la nimic precis din fraza anterioară. Când leagă o decizie de o împrejurare descrisă înainte, se înlocuiește cu „de aceea”, „așadar” sau cu numele împrejurării. Împrejurarea o iei din text; nu o inventezi.
-- Sursă: Mic ghid CE p. 6 (Rec. 4)
+- Sursă: Mic ghid CE p. 6 (Rec. 4) (principiul: eviți expresiile redundante; formula însăși nu apare în ghid)
 
 ### RO-STI-035 „La nivel general”
 - Nivel: recomandare
 - Greșit: „La nivel general, rezultatele sunt bune.” → Corect: „Rezultatele sunt bune.”
 - De ce: „La nivel general” se șterge când nu restrânge nimic. Dacă autorul face o evaluare de ansamblu cu excepții, scrii „în general” sau „per ansamblu”, ca să nu devină afirmație absolută.
-- Sursă: ghid gov-md §7.1.7
+- Sursă: Mic ghid CE p. 6 (Rec. 4) (principiul: eviți expresiile redundante; formula însăși nu apare în ghid)
 
 ### RO-STI-036 „Pe de o parte… pe de altă parte” fără contrast
 - Nivel: recomandare
 - Greșit: „Pe de o parte e rapid, pe de altă parte e ieftin.” → Corect: „E rapid și ieftin.”
 - De ce: Structura e corectă și nu cere contrast. O simplifici când doar înșiră două însușiri ale aceluiași lucru. Ghidul Comisiei dă construcția înrudită „atât din punctul de vedere al lui A, cât și din punctul de vedere al lui B” drept redundantă.
-- Sursă: Mic ghid CE p. 6 (Rec. 4); DEX '98 s.v. parte
+- Sursă: Mic ghid CE p. 6 (Rec. 4) (formula „atât din punctul de vedere al lui A, cât și…”); DEX '98 s.v. parte
 
 ### RO-STI-037 „A valorifica” cu sensul „a folosi”
 - Nivel: recomandare
@@ -337,7 +331,7 @@ Bun:
 ### RO-STI-042 „Totodată”
 - Nivel: recomandare
 - Greșit: „Totodată, vă rugăm să semnați formularul.” → Corect: „De asemenea, vă rugăm să semnați formularul.”
-- De ce: Recomandare opțională, doar în textele pentru public larg, când „totodată” înseamnă doar „și” sau „în plus”. Se păstrează când are sensul de simultaneitate („în același timp”). Un singur „totodată” nu e semn de text generat (RO-NUG-098).
+- De ce: Propunere opțională de registru, doar în textele pentru public larg și doar când „totodată” înseamnă „și” sau „în plus”. Se păstrează când are sensul de simultaneitate („în același timp”). Nu o semnalezi ca greșeală și nu e semn de text generat (RO-NUG-098).
 - Sursă: DEX '98 s.v. totodată
 
 ## 7. Politețea preluată din engleză
@@ -360,15 +354,15 @@ Formula de deschidere „Sper că acest e-mail vă găsește bine” e tratată 
 - Nivel: recomandare
 - Greșit: „Aș fi extrem de recunoscător dacă ați putea avea amabilitatea să ne trimiteți documentele.” → Corect: „Vă rugăm să ne trimiteți documentele.”
 - De ce: Semnalezi cumulul de formule de politețe pe aceeași frază și rescrii cu o singură formulă, potrivită actului de vorbire. „V-aș fi recunoscător dacă…”, folosită singură, nu e greșeală.
-- Sursă: Mic ghid CE p. 6 (Rec. 4)
+- Sursă: Mic ghid CE p. 6 (Rec. 4) (cuvinte inutile; politețea cumulată nu e tratată explicit în ghid)
 
 ## 8. Domenii sensibile
 
 ### RO-STI-026 „Persoană cu ADHD”
 - Nivel: recomandare
 - Greșit: „Copilul este bolnav de ADHD.” → Corect: „Copilul are ADHD.”
-- De ce: Regulă de stil pentru domeniul sănătății, nu normă gramaticală. ADHD e o tulburare, nu o boală, iar „bolnav” înseamnă „care suferă de o boală” (DEX '98); „persoană cu ADHD” e și mai puțin stigmatizant.
-- Sursă: DEX '98 s.v. bolnav
+- De ce: Regulă de stil pentru domeniul sănătății, nu normă gramaticală. „Bolnav” înseamnă „care suferă de o boală” (DEX '98); formulările de tipul „persoană cu…” sau „are…” evită etichetarea persoanei prin starea ei. Skill-ul nu se pronunță medical asupra naturii tulburării.
+- Sursă: DEX '98 s.v. bolnav (sensul cuvântului); recomandare de stil a skill-ului
 
 ### RO-STI-027 Rezultatul unui test de screening
 - Nivel: recomandare

@@ -6,7 +6,7 @@ Fișierul acesta te ajută să verifici dacă o frază e corectă ca formă: dac
 
 - **La redactare** scrii direct în română și te întrebi doar unde ai un dubiu: ce subiect are verbul, ce cuvânt determină genitivul, ce caz cere prepoziția. Regulile le folosești la recitirea ciornei.
 - **În corectură și în verificare** nu corectezi o formă doar pentru că „sună ciudat”. Înainte să judeci, citește [ce-nu-e-greseala.md](ce-nu-e-greseala.md): multe forme care par greșite sunt admise (acordul după „majoritatea”, „nici… nici”, „unul din”, „conform cu”, „copiii”, „votul a doi senatori”, „a finaliza” și altele).
-- **Nivelurile** sunt cele din SKILL.md. Normă înseamnă că forma contrazice un dicționar sau o lucrare normativă (DOOM 3, ÎOOP, DEX '98). Unde sursele se contrazic sau norma acceptă două acorduri, regula e recomandare sau disputată și nu se corectează ca greșeală.
+- **Nivelurile** sunt cele din SKILL.md. Normă înseamnă că forma contrazice DOOM 3, ÎOOP sau un dicționar (DEX '98). Ghidul gov-md, scris pentru actele normative din Republica Moldova, singur nu face normă: când doar reia o normă DOOM sau ÎOOP, regula citează și norma (cu „nereverificat local” dacă n-am putut-o deschide), altfel e recomandare. Unde sursele se contrazic sau norma acceptă două acorduri, regula e recomandare sau disputată și nu se corectează ca greșeală.
 - **Citatul și textul de epocă nu se corectează.** O formă greșită dintr-un citat direct se lasă neschimbată; o semnalezi doar dacă te întreabă cineva despre ea.
 - **Rolul cuvântului decide.** Multe perechi se aud la fel și se scriu diferit după rol („s-a” / „sa”, „fi” / „fii”). Înainte să marchezi o greșeală, spui rolul cuvântului în frază.
 - **Calcurile gramaticale din engleză** (subiect nearticulat, juxtapunere, gerunziu fără subiect propriu) sunt tratate aici; calcurile de vocabular sunt în [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md).
@@ -39,16 +39,16 @@ Cazul pe care îl lași neatins: acordul după înțeles sau prin atracție, und
 - Sursă: Coteanu, §33.1.2; ghid gov-md §7.3.1
 
 ### RO-GRA-002 „Sau”, „ori”, „fie… fie” cer singularul
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Primarul sau viceprimarul vor semna actul.” → Corect: „Primarul sau viceprimarul va semna actul.”
-- De ce: Conjuncțiile disjunctive aleg unul dintre termeni, deci verbul stă la singular. Dacă un termen e la plural, verbul se acordă cu el („Statul sau unitățile administrative au dreptul…”).
+- De ce: Conjuncțiile disjunctive aleg unul dintre termeni, deci verbul stă la singular când termenii se exclud. Dacă nu se exclud („Mama sau tata pot veni”), gramaticile admit și pluralul, iar dacă un termen e la plural verbul se acordă cu el („Statul sau unitățile administrative au dreptul…”). Propui singularul în textele oficiale, fără să corectezi pluralul din uzul curent.
 - Sursă: ghid gov-md §7.3.4
 
 ### RO-GRA-003 „Nici… nici” cu termeni la singular și la plural
 - Nivel: normă
 - Greșit: „Nici mama, nici copiii nu a ajuns.” → Corect: „Nici mama, nici copiii nu au ajuns.”
-- De ce: Cu termeni la singular, verbul poate sta la singular sau la plural și nu corectezi niciuna dintre forme (RO-NUG-021). Când ultimul termen e la plural, verbul trece obligatoriu la plural.
-- Sursă: ghid gov-md §7.3.3
+- De ce: Cu termeni la singular, sursele nu tranșează între singular și plural, deci nu corectezi niciuna dintre forme (RO-NUG-021). Când ultimul termen e la plural, verbul trece obligatoriu la plural.
+- Sursă: ghid gov-md §7.3.3; DOOM 3, cap. 6 (nereverificat local)
 
 ### RO-GRA-004 Subiectul multiplu pus după verb
 - Nivel: recomandare
@@ -57,22 +57,22 @@ Cazul pe care îl lași neatins: acordul după înțeles sau prin atracție, und
 - Sursă: DSL, s.v. ACORD; ghid gov-md §7.3.2
 
 ### RO-GRA-005 Reflexivul pasiv cu subiectul după verb
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Prin contracte se prevede supervizarea și controlul.” → Corect: „Prin contracte se prevăd supervizarea și controlul.”
-- De ce: În construcția „se prevăd supervizarea și controlul”, termenii de după verb sunt subiectul, nu complementul direct, deci predicatul se acordă cu ei la plural. Acordul la singular vine din interpretarea greșită a lui „se” ca impersonal; ghidul cere acordul corect în actele oficiale, chiar dacă vorbirea colocvială acceptă atracția.
+- De ce: În construcția „se prevăd supervizarea și controlul”, termenii de după verb sunt subiectul, nu complementul direct, deci predicatul se acordă cu ei la plural. Acordul la singular vine din interpretarea lui „se” ca impersonal. Ghidul gov-md cere acordul corect în actele oficiale, dar admite atracția în vorbirea colocvială, de aceea în alte texte doar propui pluralul (ca la RO-GRA-004).
 - Sursă: ghid gov-md §7.3.2
 
 ### RO-GRA-007 „O serie de”, „un număr de”, „o mulțime de” + plural
 - Nivel: disputat
-- Greșit: „O serie de măsuri a fost luată.” → Corect: „O serie de măsuri au fost luate.”
-- De ce: Sursele se contrazic. Unii autori resping verbul la plural după un nume de cantitate (acord după formă, la singular); altele socotesc pluralul acord după înțeles, tolerat de normă, și dau exemple cu ambele forme („o serie de accidente se produce / se produc”). Perechea arată un uz, nu singurul corect. Nu corectezi, ci semnalezi cele două uzuri și lași alegerea autorului; într-un text, păstrezi aceeași alegere de la un capăt la altul.
-- Sursă: B. Croitor et al., 2014, p. 56; ghid gov-md §7.3.20
+- Corect: „O serie de măsuri au fost luate.” La fel de corectă e „O serie de măsuri a fost luată.” Nu corectezi una în alta.
+- De ce: Sursele se contrazic. Unii autori preferă acordul după formă (singular); broșura Institutului de Lingvistică socotește acordul la plural, după înțeles, o toleranță a normei și dă ambele forme („o serie de accidente se produce / se produc”). Semnalezi cele două uzuri, fără să alegi tu unul; într-un text păstrezi aceeași alegere de la un capăt la altul.
+- Sursă: B. Croitor et al., 2014, p. 56
 
 ### RO-GRA-008 Colectiv la singular fără determinant plural
 - Nivel: normă
 - Greșit: „Consiliul de administrație au decis amânarea.” → Corect: „Consiliul de administrație a decis amânarea.”
 - De ce: Substantivele colective care numesc instituții (guvernul, consiliul, comisia, echipa) sunt la singular și impun predicatul la singular. Genitivul plural care le însoțește nu schimbă regula: „Comitetul de miniștri a decis”.
-- Sursă: ghid gov-md §7.3.19
+- Sursă: ghid gov-md §7.3.19; DOOM 3, cap. 6 (nereverificat local)
 
 ### RO-GRA-009 „Fiecare” și „orice” cer singularul
 - Nivel: recomandare
@@ -113,9 +113,9 @@ Bun:
 - Sursă: DOOM 3, §6.1.8
 
 ### RO-GRA-013 Substantive de genuri diferite
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Fata și băiatul ei sunt vesele.” → Corect: „Fata și băiatul ei sunt veseli.”
-- De ce: Cu nume de ființe de genuri diferite, numele predicativ ia masculinul plural. Cu nume de lucruri de genuri diferite, acordul se face cu substantivul mai apropiat („Muntele și valea sunt împădurite”). Nu corectezi uzurile care variază aici.
+- De ce: Cu nume de ființe de genuri diferite, numele predicativ ia de obicei masculinul plural. Cu nume de lucruri de genuri diferite, ghidul acordă cu substantivul mai apropiat („Muntele și valea sunt împădurite”), dar uzul variază și nu corectezi o variantă în alta.
 - Sursă: ghid gov-md §7.3.1
 
 ### RO-GRA-014 Determinantul de tip „din punct de vedere” nu se acordă
@@ -160,7 +160,7 @@ Bun:
 - Nivel: normă
 - Greșit: „un caiet a meu” → Corect: „un caiet al meu”
 - De ce: Articolul se acordă în gen și număr cu substantivul determinat: „un caiet al meu”, „doi frați ai mamei”, „două rapoarte ale echipei”. Cazul „indicele de răspândire al virusului” e tratat la RO-GRA-019. Genitivul cu „a” înaintea unui numeral sau a unui cuantificator invariabil („votul a doi senatori”) e corect și nu se corectează (RO-NUG-024); greșit e „a” înaintea unui cuantificator care are formă proprie de genitiv (RO-GRA-183).
-- Sursă: ghid gov-md §7.3.15
+- Sursă: ghid gov-md §7.3.15; DOOM 3, cap. 6 (nereverificat local)
 
 ### RO-GRA-019 Substantiv + de + substantiv + genitiv
 - Nivel: normă
@@ -175,13 +175,13 @@ Bun:
 - Sursă: DOOM 2, §6.3 (nereverificat local)
 
 ### RO-GRA-021 Genitivele coordonate
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „respectul onoarei, demnității și reputației sale” → Corect: „respectul onoarei, al demnității și al reputației sale”
 - De ce: Articolul genitival se reia înaintea fiecărui genitiv începând cu al doilea. Nu se reia când noțiunile formează o unitate („ministrul educației și cercetării”) sau când substantivul determinat e la plural și fiecare genitiv se leagă de singularul lui („acoperișurile școlii și spitalului”).
 - Sursă: ghid gov-md §7.3.14
 
 ### RO-GRA-022 Doi determinanți coordonați
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „în sarcina unui sau mai multor moștenitori” → Corect: „în sarcina unui sau a mai multor moștenitori”
 - De ce: Între doi determinanți de genitiv coordonați, articolul genitival se pune și înaintea celui de-al doilea.
 - Sursă: ghid gov-md §7.3.14
@@ -199,10 +199,10 @@ Bun:
 - Sursă: DOOM 3, §6.8.4–6.8.5 (nereverificat local)
 
 ### RO-GRA-026 Complementul indirect stă la dativ
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Le-am mulțumit la cei care m-au ajutat.” → Corect: „Le-am mulțumit celor care m-au ajutat.”
-- De ce: Complementul indirect al unui verb ca „a mulțumi” se pune la dativ, nu cu „la”. Construcția cu „la” e literară doar cu numeral sau cu determinant invariabil: „la trei dintre ei”, „la asemenea oameni”.
-- Sursă: Coteanu, Gramatica de bază (1982), §11 (nereverificat local)
+- De ce: Complementul indirect al unui verb ca „a mulțumi” se pune de obicei la dativ („celor care m-au ajutat”). Coteanu descrie și un dativ cu „la” („Spune-mi la cine vrei”), posibil numai cu nume de ființe și mai ales în vorbire; în text îngrijit propui dativul. Cu numeral sau determinant invariabil construcția cu „la” rămâne literară: „la trei dintre ei”, „la asemenea oameni”.
+- Sursă: Coteanu, Gramatica de bază (1982), §29.3.1
 
 ### RO-GRA-142 Articolul genitival cu substantiv nearticulat sau cu intercalări
 - Nivel: normă
@@ -252,7 +252,7 @@ Bun:
 
 ### Metoda
 
-Cauți cazul pe care îl cere prepoziția (genitiv, dativ, acuzativ) și verifici dacă termenul care urmează îl are. La coordonare, vezi dacă prepoziția cere reluarea marcii de genitiv („în fața Guvernului și a Parlamentului”) sau nu („datorită publicului și încurajărilor”).
+Cauți cazul pe care îl cere prepoziția (genitiv, dativ, acuzativ) și verifici dacă termenul care urmează îl are. „Din” și „dintre” înaintea unui plural nu se corectează una în alta (RO-NUG-005). La coordonare, vezi dacă prepoziția cere reluarea marcii de genitiv („în fața Guvernului și a Parlamentului”) sau nu („datorită publicului și încurajărilor”).
 
 Slab:
 
@@ -266,7 +266,7 @@ Bun:
 - Nivel: normă
 - Greșit: „datorită publicului și a încurajărilor” → Corect: „datorită publicului și încurajărilor”
 - De ce: Cele trei prepoziții cer dativul. Cu numeral sau cuantificator invariabil se leagă prin „a”: „grație a mulți parlamentari”, nu „grație la mulți parlamentari”. La coordonare, marca „a” nu se reia înaintea celui de-al doilea termen.
-- Sursă: ghid gov-md §7.1.7, §7.1.10
+- Sursă: ghid gov-md §7.1.7, §7.1.10; DOOM 3, §6.6.4 (nereverificat local)
 
 ### RO-GRA-031 Sensul lui „datorită”
 - Nivel: recomandare
@@ -275,7 +275,7 @@ Bun:
 - Sursă: ghid gov-md §7.1.6; DEX '98 s.v. datorit
 
 ### RO-GRA-032 „Din cauza” cere genitivul
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „din cauza la vremea urâtă” → Corect: „din cauza vremii urâte”
 - De ce: Locuțiunea „din cauza” se construiește cu genitivul, fără „la”.
 - Sursă: ghid gov-md §7.1.4
@@ -287,9 +287,9 @@ Bun:
 - Sursă: DOOM 3 s.v. conform, potrivit; DEX '98 s.v. conform
 
 ### RO-GRA-034 „De” și „de către” la pasiv
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Rezultatele au fost înregistrate de către aparate.” → Corect: „Rezultatele au fost înregistrate de aparate.”
-- De ce: „De către” se folosește doar pentru agentul uman sau pentru colectivități de persoane (instituții, țări): „de către istorici”, „de către Ministerul Educației”. Cu lucruri se folosește „de”.
+- De ce: „De către” se folosește de obicei pentru agentul uman sau pentru colectivități de persoane (instituții, țări): „de către istorici”, „de către Ministerul Educației”. Cu lucruri se folosește „de”. Ghidul gov-md formulează restricția, dar DOOM 3 nu tratează cazul, de aceea e recomandare.
 - Sursă: ghid gov-md §7.1.3
 
 ### RO-GRA-035 „Dinainte” conține deja „de”
@@ -308,28 +308,22 @@ Bun:
 - Nivel: normă
 - Greșit: „șef secție” → Corect: „șef de secție”
 - De ce: Substantivul care numește funcția cere „de” înaintea domeniului: „șef de secție”, „director de școală”. Excepție: compușii cu adjectiv (director adjunct, director general).
-- Sursă: ghid gov-md §7.1.4
+- Sursă: ghid gov-md §7.1.4; DOOM 3, §6.6.3
 
 ### RO-GRA-038 „La nivelul Bucureștiului”
 - Nivel: normă
 - Greșit: „la nivel de București” → Corect: „la nivelul Bucureștiului”
 - De ce: Prepoziția „de” nu ține locul genitivului unui nume. „La nivel de miniștri” (rangul participanților) nu intră sub regulă. Pentru „în cadrul” și „la nivelul” ca umplutură vezi RO-STI-002.
-- Sursă: ghid gov-md §7.1.4
+- Sursă: ghid gov-md §7.1.4; DOOM 3, §6.6.3
 
 ### RO-GRA-039 „A se referi la”
 - Nivel: normă
 - Greșit: „Titlul se referă că…” → Corect: „Titlul se referă la faptul că…”
 - De ce: „A se referi” cere prepoziția „la”; înaintea unei completive se intercalează „faptul că”.
-- Sursă: ghid gov-md §7.1.7
-
-### RO-GRA-040 „Din” și „dintre”
-- Nivel: disputat
-- Greșit: „una din candidate” → Corect: „una dintre candidate”
-- De ce: Ghidul gov-md cere „dintre” la plural numărabil și „din” la întreg („o parte din buget”). DEX '98 dă însă „din” cu sens partitiv, glosat chiar prin „dintre”, iar „unul din candidați” și „unul dintre candidați” sunt amândouă curente (RO-NUG-005). Nu corectezi niciuna.
-- Sursă: ghid gov-md §7.1.2; DEX '98 s.v. din, dintre
+- Sursă: DEX '98 s.v. referi; ghid gov-md §7.1.7
 
 ### RO-GRA-041 „Între” și „dintre” la reciprocitate
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Relațiile între prestatorii de servicii” → Corect: „Relațiile dintre prestatorii de servicii”
 - De ce: Cu termenul determinat nearticulat se folosește „între” („acord între două guverne”), cu termenul articulat „dintre” („acordul dintre guverne”). După unele substantive (distanța, legătura, schimbul) se admit ambele.
 - Sursă: ghid gov-md §7.1.1
@@ -341,7 +335,7 @@ Bun:
 - Sursă: ghid gov-md §7.1.8
 
 ### RO-GRA-183 „A mai multor”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „realizarea a mai multor activități” → Corect: „realizarea mai multor activități”
 - De ce: După un substantiv nearticulat, genitivul pronumelui de cantitate nu primește „a”: „realizarea mai multor activități” (cu forma de genitiv) sau „realizarea a mai multe activități” (cu „a” și forma fără caz). Cumulul „a mai multor” e greșit.
 - Sursă: ghid gov-md §7.3.15
@@ -356,7 +350,7 @@ Corelativele au două părți și se folosesc întregi: „fie… fie”, „nic
 - Nivel: normă
 - Greșit: „L-au numit ca și consilier.” → Corect: „L-au numit consilier.”
 - De ce: „Ca și” e corect doar în comparație („Eu, ca și tine, plec mâine”), unde poate fi înlocuit cu „la fel ca”. Pentru calitate se spune „ca”, „drept” sau „în calitate de”, nu „ca și”, nici măcar ca să ocolești o cacofonie. Vezi RO-NUG-081 pentru comparație.
-- Sursă: ghid gov-md §7.1.5
+- Sursă: ghid gov-md §7.1.5; DOOM 3, §6.6.2 (nereverificat local)
 
 ### RO-GRA-044 „Or” și „ori”
 - Nivel: normă
@@ -368,25 +362,25 @@ Corelativele au două părți și se folosesc întregi: „fie… fie”, „nic
 - Nivel: normă
 - Greșit: „fie în autorizație sau în normele generale” → Corect: „fie în autorizație, fie în normele generale”
 - De ce: Corelativele se folosesc întregi și de același fel: „fie… fie”, „sau… sau”, „ori… ori”, „atât… cât și”. „Fie… sau” amestecă două conjuncții. „Ministrul cât și angajații au venit” devine „Atât ministrul, cât și angajații au venit”.
-- Sursă: ghid gov-md §7.3.10
+- Sursă: ghid gov-md §7.3.10; DOOM 3, §6.4.3 (nereverificat local)
 
 ### RO-GRA-046 Corelativul stă înaintea fiecărui element coordonat
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Se va desfășura fie în sistem clasic, fie online.” → Corect: „Se va desfășura în sistem fie clasic, fie online.”
 - De ce: Corelativul stă la același nivel înaintea fiecărui element. Când primul element include prepoziția, o poți lăsa înaintea corelativului dacă repeți și prepoziția la al doilea: „fie în sistem clasic, fie în sistem online”. Ce nu faci e să amesteci nivelurile.
-- Sursă: ghid gov-md §7.3.10
+- Sursă: DOOM 3, §6.4.3 (nereverificat local)
 
 ### RO-GRA-047 „Decât” restrictiv cere negație
 - Nivel: normă
 - Greșit: „Are decât trei zile.” → Corect: „Nu are decât trei zile.”
 - De ce: „Decât” cu sensul „doar” apare numai într-o propoziție negativă. Fără negație folosești „doar” sau „numai”. „Mai mare decât” (comparativ) e corect oricând, iar „nu mai” se scrie separat de „numai” (RO-GRA-087).
-- Sursă: ghid gov-md §7.3.12
+- Sursă: DEX '98 s.v. decât; ghid gov-md §7.3.12
 
 ### RO-GRA-048 „Maximum” și „maxim”
 - Nivel: normă
 - Greșit: „formată din maxim trei experți” → Corect: „formată din maximum trei experți”
 - De ce: „Maximum” și „minimum” sunt adverbe sau stau pe lângă numerale („la maximum”, „maximum cinci secții”); „maxim” și „minim” sunt adjective („termen maxim”). Ca substantive se folosesc „un maxim”, „maximul”.
-- Sursă: ghid gov-md §7.3.13
+- Sursă: DEX '98 s.v. maximum, minimum; ghid gov-md §7.3.13
 
 ## 7. Pronume și determinanți
 
@@ -406,7 +400,7 @@ Corelativele au două părți și se folosesc întregi: „fie… fie”, „nic
 - Nivel: normă
 - Greșit: „Eu însumi mă gândesc, spune ea.” → Corect: „Eu însămi mă gândesc, spune ea.”
 - De ce: „Însumi, însuți, însuși, însăși, însămi” se acordă în persoană și în gen cu cel care vorbește sau cu antecedentul. „Aceeași” e feminin singular, „aceiași” masculin plural, „același” masculin singular. Genitiv-dativul femininului e „aceleiași”, nu „aceleeași”.
-- Sursă: ghid gov-md §7.3.18
+- Sursă: ghid gov-md §7.3.18; DOOM 3 s.v. același, însuși (nereverificat local)
 
 ### RO-GRA-052 Genitiv-dativul lui „amândoi”
 - Nivel: normă
@@ -446,19 +440,19 @@ Bun:
 - Nivel: normă
 - Greșit: „Părinții și copii lor au venit.” → Corect: „Părinții și copiii lor au venit.”
 - De ce: Substantivele masculine care au la singular -u vocalic (ministru, arbitru) sau -i (copil → copii) primesc la plural articulat un „i” în plus: „miniștrii”, „copiii”, „codrii”. Fără articol rămâne un singur „i” (NUG-057 apără forma „copiii” când substantivul e articulat).
-- Sursă: ghid gov-md §7.2.1
+- Sursă: ghid gov-md §7.2.1; Coteanu, §11.2 (formele articolului hotărât)
 
-### RO-GRA-056 Substantivele în consoană + r sau l și „noștri”, „voștri”
+### RO-GRA-056 Un singur „i” la plural nearticulat
 - Nivel: normă
 - Greșit: „acești membrii” → Corect: „acești membri”
 - De ce: La nearticulat, pluralul are un singur „i”: „acești membri”, „doi miniștri”. Doi „i” apar doar cu articol: „membrii partidului”. „Noștri” și „voștri” au mereu un singur „i” („ai noștri”). Proprii are două forme: „proprii” (nearticulat) și „propriii” (articulat), după ghidul gov-md.
-- Sursă: ghid gov-md §7.2.1
+- Sursă: ghid gov-md §7.2.1; Coteanu, §11.2 (formele articolului hotărât)
 
 ### RO-GRA-175 „Membrii ai”
 - Nivel: normă
 - Greșit: „membrii ai partidului” → Corect: „membri ai partidului”
 - De ce: Articolul genitival „ai” se leagă de un substantiv nearticulat; un substantiv care are deja articol hotărât ia genitivul direct („membrii partidului”). Cele două articole nu se cumulează.
-- Sursă: ghid gov-md §7.2.1, §7.3.15
+- Sursă: ghid gov-md §7.2.1, §7.3.15; Coteanu, §11.2
 
 ### RO-GRA-057 „Membru” ca parte a unei grupări
 - Nivel: normă
@@ -482,7 +476,7 @@ Bun:
 - Nivel: normă
 - Greșit: „Mass-media au relatat evenimentul.” → Corect: „Mass-media a relatat evenimentul.”
 - De ce: „Mass-media” e feminin singular, iar predicatul și determinanții se acordă la singular. Genitiv-dativul articulat poate fi „mass-media” sau „mass-mediei” („influența mass-mediei”).
-- Sursă: ghid gov-md §7.2.3
+- Sursă: ghid gov-md §7.2.3 (cu trimitere la DOOM 3)
 
 ### RO-GRA-148 Genul neutru
 - Nivel: normă
@@ -511,8 +505,8 @@ Bun:
 ### RO-GRA-182 Substantivul după prepoziție
 - Nivel: recomandare
 - Greșit: „Cheile sunt pe masă din bucătărie.” → Corect: „Cheile sunt pe masa din bucătărie.”
-- De ce: Un substantiv după prepoziție rămâne nearticulat („pe masă”, „în gară”), dar primește articolul când are un determinant care îl identifică (un atribut, un complement cu „din” sau „de la”): „pe masa din bucătărie”, „în gara din Cluj”. Limbile care lasă aici substantivul nearticulat produc calcuri: „în gări din trei țări” → „în gările din trei țări”. Substantivul rămâne nearticulat când vrei sensul „unele, nu toate”, cu un cuantificator explicit („în mai multe gări din trei țări”). După „cu”, articolul apare când substantivul numește instrumentul („cu creionul”).
-- Sursă: Coteanu, Gramatica de bază (1982), §29.1, p. 264–265
+- De ce: Un substantiv după prepoziție rămâne de obicei nearticulat („pe masă”, „în gară”), dar când e identificat printr-un determinant, cum e un complement cu „din” sau „de la”, ia articolul: „pe masa din bucătărie”, „în gara din Cluj”. Coteanu dă exemple în care substantivul determinat își păstrează articolul după prepoziție („cu merele cele mai frumoase din grădină”). Limbile care lasă aici substantivul nearticulat produc calcuri. Atenție: nearticulatul rămâne corect când vrei sensul „unele, nu toate”; nu schimbi sensul textului.
+- Sursă: Coteanu, Gramatica de bază (1982), §29.4, p. 265
 
 ## 9. Verbul
 
@@ -556,8 +550,8 @@ Bun:
 
 ### RO-GRA-067 „Voiam”, nu „vroiam”
 - Nivel: recomandare
-- Greșit: „Vroiam să plec mai devreme.” → Corect: „Voiam să plec mai devreme.”
-- De ce: Imperfectul verbului „a voi” e „voiam”, „voiai”, „voia”; formele cu „r” sunt socotite contaminare între „a voi” și „a vrea”. DEX '98 dă însă „vroi” ca variantă a lui „a vrea”, iar formele „vroiam, vroia” apar în dicționarele consultate, de aceea propui „voiam” fără să corectezi „vroiam” ca greșeală de normă. În citat nu se corectează (vezi RO-NUG-039).
+- Corect: „Voiam să plec mai devreme.” Forma „vroiam” nu o corectezi ca greșeală.
+- De ce: Imperfectul verbului „a voi” e „voiam”, „voiai”, „voia”; formele cu „r” sunt socotite contaminare între „a voi” și „a vrea”. DEX '98 dă însă „vroi” ca variantă a lui „a vrea”, iar formele „vroiam, vroia” apar în dicționarele consultate, de aceea propui „voiam” fără să o corectezi pe „vroiam” ca greșeală de normă. În citat nu se corectează (vezi RO-NUG-039).
 - Sursă: B. Croitor et al., 2014, p. 41; DEX '98 s.v. vrea (Var. vroi)
 
 ### RO-GRA-068 „Precedă”
@@ -636,7 +630,7 @@ Bun:
 
 ### Metoda
 
-Pentru „î” și „â” aplici regula pozițională: „î” la începutul și la sfârșitul cuvântului, „â” în interior. Excepția: „î” rămâne în interior când e primul sunet al cuvântului de bază, după un prefix sau într-un compus. Proba: scoți primul element; dacă ce rămâne începe cu „î” (încredere, înnoi, întâmpina), „î” e corect: „neîncredere”, „reînnoi”, „bineînțeles”, „preîntâmpina”.
+Pentru „î” și „â” aplici regula pozițională: „î” la începutul și la sfârșitul cuvântului, „â” în interior. Numele de familie își păstrează grafia purtătorului și nu se corectează după regula aceasta (RO-NUG-054). Excepția: „î” rămâne în interior când e primul sunet al cuvântului de bază, după un prefix sau într-un compus. Proba: scoți primul element; dacă ce rămâne începe cu „î” (încredere, înnoi, întâmpina), „î” e corect: „neîncredere”, „reînnoi”, „bineînțeles”, „preîntâmpina”.
 
 Pentru perechile care se aud la fel (s-a / sa, v-a / va, l-a / la, ne-am / neam, s-au / sau) nu corectezi niciodată forma izolat. Spui rolul: pronume + auxiliar (cu cratimă) sau cuvânt de sine stătător (fără cratimă). Proba: schimbi persoana sau numărul; dacă trece la „s-au”, ai pronume + auxiliar.
 
@@ -658,12 +652,6 @@ Bun:
 - Nivel: normă
 - Greșit: „neântrecut” → Corect: „neîntrecut”
 - De ce: „Î” rămâne „î” după prefix, chiar în interiorul cuvântului, și în compusele al căror al doilea element începe cu „î”: „neîncredere”, „reînnoi”, „bineînțeles”, „nemaiîntâlnit”, „preîntâmpina”, „preaînalt”. Nu se scrie „reâncepe”, „neântrecut”.
-- Sursă: DOOM 3, §2.2.1
-
-### RO-GRA-076 „Î” în numele de familie
-- Nivel: normă
-- Greșit: „Constantin Brîncuși” → Corect: „Constantin Brâncuși”
-- De ce: Numele de familie își pot păstra grafia cu „î” în interior, dar grafia o hotărăște purtătorul („Topîrceanu”, „Gîrleanu”, dar „Brâncuși”, „Pârvan”). Un nume cu „î” în interior nu se „corectează” fără să verifici grafia purtătorului (vezi RO-NUG-054).
 - Sursă: DOOM 3, §2.2.1
 
 ### RO-GRA-078 „Sunt”, nu „sînt”
@@ -688,10 +676,10 @@ Bun:
 - Nivel: normă
 - Greșit: „prim ministrul” → Corect: „prim-ministrul”
 - De ce: Se scriu cu cratimă compusele de felul „prim-ministru”, „proces-verbal”, „redactor-șef”, „după-amiază”, „acord-cadru”, „est-european”, „sud-est”. „Primul ministru”, fără cratimă, înseamnă „cel dintâi ministru”. La forma articulată se admit „prim-ministrul” și „primul-ministru” (RO-NUG-023). Prefixele și elementele de compunere fără existență independentă se scriu legat („coautor”, „antiinflamator”).
-- Sursă: ghid gov-md §6.2.3, §6.3.2
+- Sursă: ghid gov-md §6.2.3 (cu trimitere la ÎOOP6), §6.3.2
 
 ### RO-GRA-083 „Director adjunct”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „director-adjunct” → Corect: „director adjunct”
 - De ce: Compușii formați dintr-o funcție și un adjectiv calificativ liber se scriu separat, fără cratimă: „director adjunct”, „secretar general”, „consilier juridic”, „inspector general”.
 - Sursă: ghid gov-md §6.4
@@ -700,19 +688,13 @@ Bun:
 - Nivel: normă
 - Greșit: „Nu are nici un motiv.” → Corect: „Nu are niciun motiv.”
 - De ce: „Niciun, nicio, niciunul, niciuna, niciunui” se scriu legat când sunt adjective sau pronume negative. „Nici un” se scrie separat doar când „nici” e adverb sau conjuncție și „un” e articol sau numeral („Nu e nici naiv, nici un om neștiutor”). Rolul decide.
-- Sursă: ghid gov-md §7.3.11 (exemplele cu „niciun”)
+- Sursă: DOOM 3 s.v. niciun (nereverificat local); ghid gov-md §7.3.11
 
 ### RO-GRA-085 „Odată” și „o dată”
 - Nivel: normă
 - Greșit: „Am fost acolo doar odată.” → Corect: „Am fost acolo doar o dată.”
 - De ce: „Odată” înseamnă „cândva” („Odată ca niciodată”), „imediat” sau „deodată”; „o dată” înseamnă „o singură dată”. „Odată terminată ancheta…” e corect.
 - Sursă: DEX '98 s.v. odată
-
-### RO-GRA-086 „Altădată” și „altă dată”, „demult” și „de mult”
-- Nivel: normă
-- Greșit: „Altădată vom discuta și asta, nu acum.” → Corect: „Altă dată vom discuta și asta, nu acum.”
-- De ce: „Altădată” înseamnă „odinioară”, „într-un moment nedeterminat”; „altă dată” înseamnă „în altă împrejurare”. La fel „demult” („odinioară”) și „de mult” („de multă vreme”).
-- Sursă: DEX '98 s.v. altădată, demult
 
 ### RO-GRA-087 „Numai” și „nu mai”
 - Nivel: normă
@@ -753,14 +735,14 @@ Bun:
 ### RO-GRA-091 Abrevierea care păstrează ultima literă
 - Nivel: normă
 - Greșit: „dl. ministru” → Corect: „dl ministru”
-- De ce: Abrevierea care păstrează ultima literă a bazei nu are punct: „dl”, „dna”, „dra”, „cca”, „d-ta”, „jr”, „vs”. Excepții tradiționale cu punct: „dr.”, „mr.”, „nr.”.
-- Sursă: ghid gov-md §5.3.3.1.1
+- De ce: Abrevierea care păstrează ultima literă a bazei nu are punct: „dl”, „dna”, „dra”, „cca”, „d-ta”, „jr”, „vs”. Excepții reale: „dr.” și „mr.”. „Nr.” este o excepție doar aparentă: abrevierea lui „numărul” nu păstrează ultima literă a formei nearticulate „număr”, deci are punct (RO-GRA-092).
+- Sursă: ghid gov-md §5.3.3.1.1; DOOM 3, §1.2.6 (nereverificat local)
 
 ### RO-GRA-092 Abrevierea care nu păstrează ultima literă
 - Nivel: normă
 - Greșit: „nr 15, etc” → Corect: „nr. 15, etc.”
 - De ce: Abrevierea care nu păstrează ultima literă are punct: „nr.”, „str.”, „bd.”, „etc.”, „prof.”, „ian.”. Îmbinările libere de cuvinte au punct după fiecare termen: „ș.a.m.d.”, „e.n.”.
-- Sursă: ghid gov-md §5.3.3.1.1, §5.3.3.1.2
+- Sursă: ghid gov-md §5.3.3.1.1, §5.3.3.1.2; DOOM 3, §1.2.6 (nereverificat local)
 
 ### RO-GRA-093 Abreviere cu punct la final de frază
 - Nivel: normă
@@ -769,7 +751,7 @@ Bun:
 - Sursă: DOOM 3, §1.2.6 (nereverificat local)
 
 ### RO-GRA-094 Articularea siglelor
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „TVAul” → Corect: „TVA-ul”
 - De ce: Articolul și pluralul se leagă de sigla scrisă cu majuscule prin cratimă: „TVA-ul”, „SRL-urile”, „CV-urilor”. Sigla poate rămâne și neflexionată, cu un cuvânt-reper („programele BBC”, „ONU a decis”); forma articulată nu e interzisă.
 - Sursă: ghid gov-md §5.2.2.3
@@ -784,7 +766,7 @@ Bun:
 
 ### Metoda
 
-La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte, celelalte trec în silaba următoare. Grupuri precum „lpt, mpt, mpț, nct, ncț, rct, rtf, stm” se despart după a doua consoană. Compusele și derivatele cu prefix admit și despărțirea după structura morfologică.
+La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte, celelalte trec în silaba următoare. Grupurile „lpt, mpt, mpț, ncș, nct, ncț, rct, rtf” se despart după a doua consoană, iar „rstn” după a treia. Compusele și derivatele cu prefix admit și despărțirea după structura morfologică.
 
 ### RO-GRA-156 Trei consoane între vocale
 - Nivel: normă
@@ -795,7 +777,7 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 ### RO-GRA-157 Grupuri care se despart după a doua consoană
 - Nivel: normă
 - Greșit: „scul-ptor” → Corect: „sculp-tor”
-- De ce: Grupurile lpt, mpt, mpț, ncș, nct, ncț, rct, rtf, stm se despart după a doua consoană: „sculp-tor”, „punc-taj”, „func-ți-e”, „arc-tic”, „jert-fă”, „ast-mă”.
+- De ce: Grupurile lpt, mpt, mpț, ncș, nct, ncț, rct, rtf se despart după a doua consoană: „sculp-tor”, „somp-tu-os”, „punc-taj”, „func-ți-e”, „arc-tic”, „jert-fă”. Grupul rstn se desparte după a treia („vârst-nic”).
 - Sursă: DSL, s.v. SILABAȚIE
 
 ### RO-GRA-158 Despărțirea morfologică e admisă
@@ -810,7 +792,7 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 - Nivel: normă
 - Greșit: „profesor de matematica” → Corect: „profesor de matematică”
 - De ce: După „de”, substantivul care numește domeniul rămâne nearticulat („profesor de matematică”, „lapte de vacă”). „Matematica” e forma articulată, corectă cu altă funcție: „Matematica e grea”.
-- Sursă: Coteanu, Gramatica de bază (1982), §29.1; DEX '98 s.v. matematică
+- Sursă: Coteanu, Gramatica de bază (1982), §29.4; DEX '98 s.v. matematică
 
 ### RO-GRA-161 „Ia” și „i-a”
 - Nivel: normă
@@ -831,16 +813,16 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 - Sursă: DEX '98 s.v. beneficia; ghid gov-md §7.1.9
 
 ### RO-GRA-147 „Destinat… exclusiv în scop”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Acest test este destinat exclusiv în scop informativ.” → Corect: „Acest test are scop exclusiv informativ.”
-- De ce: „A destina” înseamnă deja „a hotărî ceva dinainte în vederea unui scop” (DEX '98), deci „în scop” spune de două ori același lucru, iar construcția amestecă „destinat informării” cu „în scop informativ”. Corectezi spre una dintre ele: „este destinat exclusiv informării”.
+- De ce: „A destina” înseamnă „a hotărî dinainte în vederea unui scop” (DEX '98), deci „în scop” adaugă o redundanță ușoară, iar construcția amestecă „destinat informării” cu „în scop informativ”. Nicio normă nu o condamnă; propui una dintre cele două forme: „este destinat exclusiv informării”.
 - Sursă: DEX '98 s.v. destina
 
 ### RO-GRA-170 Comparativul cere „decât”
 - Nivel: normă
 - Greșit: „E mai bun decât ca fratele lui.” → Corect: „E mai bun decât fratele lui.”
 - De ce: La comparativul de superioritate sau de inferioritate termenul comparat se introduce prin „decât”: „mai bun decât fratele”. La egalitate se folosește „ca”: „la fel de bun ca fratele”. „Decât ca” amestecă cele două. Nu corectezi „decât ca” după negație sau în construcții restrictive („Nu-l văd decât ca prieten”).
-- Sursă: ghid gov-md §7.3.12; GALR (nereverificat local)
+- Sursă: DEX '98 s.v. decât; GALR (nereverificat local)
 
 ### RO-GRA-169 Interogativa indirectă cu „dacă”
 - Nivel: normă
@@ -854,16 +836,10 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 - De ce: Cu „niciun”, „nimeni”, „nimic” româna cere și „nu” pe lângă verb. Ordinea negației după engleză schimbă sensul: „Toate fișierele nu au fost salvate” (engl. „not all”) se spune „Nu toate fișierele au fost salvate” sau „Niciun fișier nu a fost salvat”, după sens.
 - Sursă: ghid gov-md §7.3.11; Coteanu, Gramatica de bază (1982), §28.8 (nereverificat local)
 
-### RO-GRA-140 „Bazat pe”
-- Nivel: normă
-- Greșit: „Bază pe ghidul oficial.” → Corect: „Bazat pe ghidul oficial.”
-- De ce: În dicționar „bază” e substantiv sau, rar, formă verbală de persoana a III-a („el bază”); în acest context cere participiul „bazat”.
-- Sursă: DEX '98 s.v. baza
-
 ### RO-GRA-141 „Mult” și „foarte”
 - Nivel: recomandare
-- Greșit: „Muncește foarte.” → Corect: „Muncește mult.”
-- De ce: În registrul standard, „mult” determină verbe și cantități („muncește mult”, „mult mai bun”), iar „foarte” determină adjective și adverbe („foarte bun”). DEX '98 atestă „foarte” lângă verb, dar marcat popular.
+- Greșit: „Îl apreciez foarte.” → Corect: „Îl apreciez mult.”
+- De ce: În registrul standard, „mult” determină verbe și cantități („apreciez mult”, „mult mai bun”), iar „foarte” determină adjective și adverbe („foarte bun”). DEX '98 atestă „foarte” lângă verb, dar marcat popular, deci propui, nu corectezi.
 - Sursă: DEX '98 s.v. foarte, mult
 
 ### RO-GRA-146 Genitivul după substantivul verbal
@@ -879,10 +855,10 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 - Sursă: ghidjurnalism.ro; ghidul API (nereverificat local)
 
 ### RO-GRA-097 Anacolut
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Tata, când am plecat, i s-a făcut rău.” → Corect: „Tatei, când am plecat, i s-a făcut rău.”
-- De ce: Fraza începe cu o construcție și continuă cu alta; elementul pus în față ia cazul cerut de verbul care îl reia. În literatură și în citatul oral anacolutul poate fi intenționat.
-- Sursă: DEX '09, s.v. anacolut
+- De ce: Fraza începe cu o construcție și continuă cu alta; elementul pus în față nu primește cazul cerut de verbul care îl reia („Tata… i s-a făcut rău”). DEX '98 definește anacolutul doar descriptiv, ca „ruptură logico-sintactică”, deci nu e o abatere de normă, ci un fapt de vorbire. În textul informativ propui forma cu cazul potrivit; în literatură și în citatul oral rămâne neschimbat.
+- Sursă: DEX '98 s.v. anacolut
 
 ### RO-GRA-098 Contaminarea a două construcții
 - Nivel: normă
