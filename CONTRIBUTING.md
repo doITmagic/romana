@@ -17,3 +17,12 @@ go run ./tools/paza/cmd .
 ```
 
 Înainte de un pull request rulează `go test ./...`.
+
+## Manifestele pluginului
+
+Fișiere: `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json` (Claude Code), `plugin.json` în rădăcină și `.agents/plugins/marketplace.json` (Codex). Toate au `name: romana`, aceeași versiune și aceeași descriere ca frontmatter-ul din `skills/romana/SKILL.md`. Verificarea: `go run ./tools/validare/cmd` (rulează și în hook și în CI).
+
+Formatele au fost citite din documentația oficială, consultată pe 2026-10-21:
+
+- https://code.claude.com/docs/en/plugin-marketplaces
+- https://developers.openai.com/codex/plugins/build/

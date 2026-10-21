@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "romana",
+  "version": "0.1.0",
+  "description": "Scrie, corectează și verifică texte în română: gramatică, semantică, stilistică și coerență, fără calcuri din engleză și fără cuvinte inventate. Writes, corrects or reviews Romanian text: grammar, semantics, style and coherence, without English calques or invented words. Use when writing or checking Romanian content.",
+  "author": { "name": "DO IT MAGIC SOFTWARE" },
+  "repository": "https://github.com/doITmagic/romana",
+  "license": "MIT",
+  "keywords": ["romanian", "română", "language", "writing", "skill"]
+}

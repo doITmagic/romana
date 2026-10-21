@@ -13,4 +13,4 @@ jobs:
       - run: go test ./...
       - run: go run ./tools/paza/cmd .
       - run: |
-          if [ -d skills/romana ]; then go run ./tools/validare/cmd skills/romana; fi
+          if [ -d skills/romana ]; then go run ./tools/validare/cmd; fi

@@ -1,0 +1,13 @@
+{
+  "name": "romana",
+  "description": "Skill pentru română coerentă și naturală / Skill for coherent, natural Romanian",
+  "owner": { "name": "DO IT MAGIC SOFTWARE" },
+  "plugins": [
+    {
+      "name": "romana",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Scrie, corectează și verifică texte în română: gramatică, semantică, stilistică și coerență, fără calcuri din engleză și fără cuvinte inventate. Writes, corrects or reviews Romanian text: grammar, semantics, style and coherence, without English calques or invented words. Use when writing or checking Romanian content."
+    }
+  ]
+}
