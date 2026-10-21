@@ -175,7 +175,7 @@ Bun:
 
 ### RO-TIP-086 Funcțiile străine au literă mică, ca cele românești
 - Nivel: normă
-- Greșit: „Președintele Macron a ajuns la Berlin.” → Corect: „președintele Macron a ajuns la Berlin.”
+- Greșit: „Ieri a ajuns la Berlin Președintele Macron.” → Corect: „Ieri a ajuns la Berlin președintele Macron.”
 - De ce: Numele funcției rămâne substantiv comun și se scrie cu literă mică, în orice țară ar fi exercitată. Numele persoanei se scrie cu majusculă. Prenumele la prima mențiune e o preferință de stil la redactare; în corectură nu se adaugă, pentru că ar fi un conținut nou (vezi fidelitate.md).
 - Sursă: DOOM 3 §1.3 și §2.5 (nereverificat local); ghid gov-md §4.2.1.1
 - Vezi și: RO-TIP-111

@@ -169,7 +169,7 @@ Bun:
 - Nivel: normă
 - Greșit: „12.5%” → Corect: „12,5%”
 - De ce: Zecimalele se despart prin virgulă: „12,5%”, „1,1 miliarde”, „3,5”. Punctul zecimal e englezesc. Excepție fac codul, datele tehnice și citatele în altă limbă.
-- Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local); DOOM 3, s.v. miliard (nereverificat local)
+- Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local); DOOM 3 §1.2.6 (nereverificat local)
 - Vezi și: RO-NUM-052
 
 ### RO-NUM-015 Punctul grupează miile
