@@ -4,7 +4,7 @@ Fișierul acesta privește forma cuvintelor împrumutate: cum le articulezi și 
 
 Un cuvânt nu e greșit doar pentru că e englezesc. DOOM 3 a înregistrat multe împrumuturi recente („browser”, „spam”, „a downloada”, „a focusa”), iar acestea sunt corecte (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). Problema apare în trei cazuri: forma e scrisă greșit, forma nu e atestată și e prezentată ca sigură, sau cuvântul străin ia locul unui cuvânt românesc la fel de clar.
 
-Abrevierile din câmpul „Sursă”: ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DN = *Dicționar de neologisme*; MDN ’00 și MDN ’08 = *Marele dicționar de neologisme*; DEX ’09 = *Dicționarul explicativ al limbii române*, ediția a II-a revăzută și adăugită; MDA2 = *Micul dicționar academic*, ediția a II-a; DCR2 = *Dicționar de cuvinte recente*, ediția a II-a.
+Abrevierile din câmpul „Sursă”: ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DN = *Dicționar de neologisme*; MDN ’00 și MDN ’08 = *Marele dicționar de neologisme*; DEX ’09 = *Dicționarul explicativ al limbii române*, ediția a II-a revăzută și adăugită; MDA2 = *Micul dicționar academic*, ediția a II-a; DCR2 = *Dicționar de cuvinte recente*, ediția a II-a.
 
 ## 1. Articolul și pluralul: cu cratimă sau fără
 
@@ -102,7 +102,7 @@ Regulile de mai jos sunt împărțite în două: întâi formele atestate, apoi 
 ### RO-IMP-024 Weekend, weekenduri
 - Nivel: normă
 - Greșit: „Livrăm și în week-end-uri.” → Corect: „Livrăm și în weekenduri.”
-- De ce: DOOM 3 scrie „weekend”, legat, cu pluralul „weekenduri” (la fel și DOOM 2). „Week-end”, cu pluralul „week-end-uri”, e forma din DEX ’98, ieșită din normă; după DOOM 3, cratima înaintea desinenței nu mai e corectă.
+- De ce: DOOM 3 scrie „weekend”, legat, cu pluralul „weekenduri”. „Week-end”, cu pluralul „week-end-uri”, e forma din DEX ’98, ieșită din normă; după DOOM 3, cratima înaintea desinenței nu mai e corectă.
 - Sursă: DOOM 3 s.v. weekend; DEX ’98 s.v. week-end
 
 ### RO-IMP-028 Feedback, pattern, sprint, business
@@ -181,7 +181,7 @@ Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
 ### RO-IMP-045 Online și offline, legat
 - Nivel: normă
 - Greșit: „Magazinul vinde on-line și off-line.” → Corect: „Magazinul vinde online și offline.”
-- De ce: DOOM 3 scrie legat „online” și „offline”. „On-line” și „off-line” sunt formele din DEX ’09 și MDN ’00; DOOM 2 le admitea ca variante alături de „online” și „offline”, iar DOOM 3 păstrează doar formele legate.
+- De ce: DOOM 3 scrie legat „online” și „offline”. „On-line” și „off-line” sunt formele din DEX ’09 și MDN ’00; DOOM 3 păstrează doar formele legate.
 - Sursă: DOOM 3 s.v. online, offline
 
 ### RO-IMP-050 „Mega-” se scrie legat

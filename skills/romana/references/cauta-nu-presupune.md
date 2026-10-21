@@ -74,7 +74,7 @@ Nu orice verb din engleză e suspect. DOOM 3 înregistrează „a printa”, „
 ### RO-SEM-403 „Calmitate”
 - Nivel: recomandare
 - Greșit: „A vorbit cu calmitate.” → Corect: „A vorbit calm.”
-- De ce: „Calmitate” lipsește din DOOM 3, DOOM 2, DEX ’98 și DEX ’09 și apare doar în MDN ’00 și în dicționarul ortografic, deci e un cuvânt marginal, neînregistrat în normă. „Calm” e adjectiv și adverb și spune același lucru. Nu o tratezi ca greșeală, ci ca o formă rară pe care o înlocuiești cu cea obișnuită.
+- De ce: „Calmitate” lipsește din DOOM 3, DEX ’98 și DEX ’09 și apare doar în MDN ’00 și în dicționarul ortografic, deci e un cuvânt marginal, neînregistrat în normă. „Calm” e adjectiv și adverb și spune același lucru. Nu o tratezi ca greșeală, ci ca o formă rară pe care o înlocuiești cu cea obișnuită.
 - Sursă: DOOM 3 (cuvântul lipsește); MDN ’00 s.v. calmitate
 
 ### RO-SEM-404 Verb format din engleză, fără intrare în dicționar
@@ -110,7 +110,7 @@ Nu orice verb din engleză e suspect. DOOM 3 înregistrează „a printa”, „
 ### RO-SEM-409 „A customiza”
 - Nivel: recomandare
 - Greșit: „Poți customiza aspectul paginii.” → Corect: „Poți personaliza aspectul paginii.”
-- De ce: Formă dedusă: „a customiza” nu apare în dicționare, nici ca derivat („customizare”, „customizat”). „A personaliza” e în DOOM 3, DOOM 2, DEX ’09 și MDN ’00. După context se potrivește și „a adapta” sau „a configura”.
+- De ce: Formă dedusă: „a customiza” nu apare în dicționare, nici ca derivat („customizare”, „customizat”). „A personaliza” e în DOOM 3, DEX ’09 și MDN ’00. După context se potrivește și „a adapta” sau „a configura”.
 - Sursă: DOOM 3 s.v. personaliza; MDN ’00 s.v. personaliza
 
 ### RO-SEM-410 „A scala” ca verb

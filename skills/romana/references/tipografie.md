@@ -605,7 +605,7 @@ Bun:
 - Nivel: normă
 - Greșit: „deschis între 10-18” → Corect: „deschis între 10 și 18”
 - De ce: Cratima sau linia de pauză înseamnă „între” sau „dintre”; scrisă după „între”, spune de două ori același lucru. Alegi: „între 10 și 18” sau „10-18”. La fel „distanța Ungheni-Chișinău” sau „distanța dintre Ungheni și Chișinău”, nu „distanța dintre Ungheni-Chișinău”.
-- Sursă: ghid gov-md §9.11.8 (N.B.); ÎOOP6 p. 41 (Cratima, greșeli i); DOOM 2 §6.4 (nereverificat local)
+- Sursă: ghid gov-md §9.11.8 (N.B.); ÎOOP6 p. 41 (Cratima, greșeli i)
 
 ### RO-TIP-121 Titlul cu subtitlu: linie de pauză cu spații
 - Nivel: recomandare

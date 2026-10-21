@@ -172,7 +172,7 @@ Bun:
 - Nivel: normă
 - Greșit: „unei prietene ale mele” → Corect: „unei prietene a mele”
 - De ce: La feminin singular, posesivul pus după substantiv ia articolul „a”, chiar dacă substantivul are la plural altă formă.
-- Sursă: DOOM 2, §6.3 (nereverificat local)
+- Sursă: DOOM 3, s.v. meu1 (g.-d. a mele)
 
 ### RO-GRA-021 Genitivele coordonate
 - Nivel: recomandare
@@ -190,7 +190,7 @@ Bun:
 - Nivel: normă
 - Greșit: „i-am spus lui mama” → Corect: „i-am spus mamei”
 - De ce: Substantivele comune feminine (mama, sora, fata) iau articolul enclitic de genitiv-dativ, nu „lui”. „Lui” stă doar înaintea numelor masculine („lui Alexandru”).
-- Sursă: DOOM 2, §6.3 (nereverificat local); curs, secțiunea „Erori gramaticale”
+- Sursă: DOOM 3, s.v. mamă (g.-d. art. mamei); curs, secțiunea „Erori gramaticale”
 
 ### RO-GRA-024 Numele proprii ca determinant se flexionează
 - Nivel: normă
@@ -798,7 +798,7 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 - Nivel: normă
 - Greșit: „Ia spus adevărul.” → Corect: „I-a spus adevărul.”
 - De ce: „Ia” fără cratimă e verb („el ia”) sau interjecție („Ia vino!”); pronume + auxiliar se scrie „i-a” („i-a spus”).
-- Sursă: DOOM 3, s.v. ia, i-a; DOOM 2 s.v. ia (nereverificat local)
+- Sursă: DOOM 3, s.v. ia, i-a
 
 ### RO-GRA-163 „Liniar”
 - Nivel: recomandare

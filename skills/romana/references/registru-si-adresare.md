@@ -2,7 +2,7 @@
 
 Fișierul acesta te ajută să alegi tonul unui text și felul în care te adresezi cititorului: „tu”, „dumneavoastră” sau formulă impersonală, un cuvânt neutru sau unul familiar, o formă literară sau una populară. Registrul nu schimbă normele (acordul rămâne acord, ortografia rămâne ortografie), dar schimbă ce cuvinte și ce construcții se potrivesc. Profilurile de text (presă, marketing, blog, e-mail, interfață, documentație) își au convențiile lor, în `tipuri/`; aici sunt regulile generale.
 
-Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DOOM 2 = aceeași lucrare, ediția a II-a; DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998. Mărcile de registru din DOOM 3 și DEX (*fam.* familiar, *pop.* popular, *reg.* regional, *arg.* argotic) sunt cele pe care se sprijină regulile de mai jos.
+Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998. Mărcile de registru din DOOM 3 și DEX (*fam.* familiar, *pop.* popular, *reg.* regional, *arg.* argotic) sunt cele pe care se sprijină regulile de mai jos.
 
 ## Cum folosești fișierul
 
@@ -125,8 +125,8 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-422 „Isus” și „Iisus”
 - Nivel: recomandare
 - Greșit: „Textul bisericesc a fost «corectat» din «Iisus» în «Isus».” → Corect: „Iisus”, într-un text bisericesc sau pentru public ortodox.
-- De ce: Forma literară din DOOM 3 este „Isus”, iar DOOM 2 dă dubletul „Isus/Iisus”. Într-un text neutru, de presă sau general, scrii „Isus”. „Iisus” circulă în textele bisericești ortodoxe și nu se corectează acolo, nici într-un citat. Alegerea ține de public, nu de normă.
-- Sursă: DOOM 3 s.v. Isus; DOOM 2 s.v. Isus, Iisus
+- De ce: Forma din DOOM 3 este „Isus”; „Iisus” nu figurează în DOOM 3. Într-un text neutru, de presă sau general, scrii „Isus”. „Iisus” circulă în textele bisericești ortodoxe și nu se corectează acolo, nici într-un citat. Alegerea ține de public, nu de normă.
+- Sursă: DOOM 3 s.v. Isus
 
 ### RO-STI-423 Textul oficial rămâne oficial
 - Nivel: recomandare
@@ -204,7 +204,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Manualul ăsta explică pașii.” → Corect: „Manualul acesta explică pașii.”
 - De ce: Într-un text neutru, formele marcate familiar în DOOM 3 („ăsta”, „asta”, „ăla”) nu intră în registrul neutru; acolo devin „acesta”, „acest manual”. Le folosești doar într-un registru familiar ales explicit și ținut în tot textul, sau într-un citat.
-- Sursă: DOOM 3 s.v. ăsta; DOOM 2; DEX ’98 s.v. ăsta
+- Sursă: DOOM 3 s.v. ăsta (fam.); DEX ’98 s.v. ăsta
 
 ### RO-STI-437 Idiomurile nu se cer în locul formulărilor neutre
 - Nivel: recomandare

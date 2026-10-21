@@ -13,7 +13,7 @@ Skill-ul fixează patru alegeri, ca textele să fie consecvente între ele:
 
 Exemplu: „Bugetul a ajuns la 2,5 milioane de euro, adică 12,5% din cele 20 de milioane de euro ale anului trecut. Au participat 1.500 de persoane.”
 
-Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; DOOM 2 = ediția a II-a, 2005; ÎOOP6 = *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; CLDR = regulile de plural pentru limba română din Unicode CLDR; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014. Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină n-a putut fi verificată pe text local.
+Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; ÎOOP6 = *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; CLDR = regulile de plural pentru limba română din Unicode CLDR; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014. Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină n-a putut fi verificată pe text local.
 
 ## 1. „De” după numeral
 
@@ -114,21 +114,21 @@ Bun:
 - Nivel: normă
 - Greșit: „doisprezece mii de lei” → Corect: „douăsprezece mii de lei”
 - De ce: Cifra 12 ia forma de feminin pe lângă substantive feminine: „douăsprezece mii”, „ora douăsprezece”, „a douăsprezecea parte”. La date sunt admise ambele forme: „doisprezece mai” și „douăsprezece mai”.
-- Sursă: DOOM 2 §6.4 (nereverificat local); DOOM 3, s.v. doisprezece, douăsprezece; ÎOOP6 p. 108
+- Sursă: DOOM 3, s.v. doisprezece, douăsprezece; ÎOOP6 p. 108
 - Vezi și: RO-NUM-040
 
 ### RO-NUM-009 „Ora unu”, „ora două”
 - Nivel: normă
 - Greșit: „ora una, ora doi” → Corect: „ora unu, ora două”
 - De ce: Numeralul care arată ora se spune „unu” (și „douăzeci și unu”), nu „una”, și „două”, nu „doi”: „ora unu”, „ora două”, „ora douăzeci și două”. La date „doisprezece mai” e corect; la oră, „ora douăsprezece”.
-- Sursă: DOOM 2 §6.4 (nereverificat local); DOOM 3, s.v. unu, doi; ÎOOP6 p. 108
+- Sursă: DOOM 3, s.v. unu, doi; ÎOOP6 p. 108
 - Vezi și: RO-NUM-040
 
 ### RO-NUM-010 „Unu” când numeri
 - Nivel: normă
 - Greșit: „Numără: unul, doi, trei.” → Corect: „Numără: unu, doi, trei.”
 - De ce: Cardinalul 1 este „unu” când numără sau când e folosit ca număr: „nu doi, ci numai unu”. „Unul” este pronume („Unul a reușit, celălalt nu”); a-l pune în locul numeralului e hipercorectitudine.
-- Sursă: DOOM 2 §6.4 (nereverificat local); DOOM 3, s.v. unu, unul
+- Sursă: DOOM 3, s.v. unu, unul
 - Vezi și: RO-NUM-041
 
 ### RO-NUM-011 Prima zi a lunii: „întâi”
