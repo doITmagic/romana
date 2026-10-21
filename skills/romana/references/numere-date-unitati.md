@@ -269,6 +269,18 @@ Bun:
 - De ce: Ora se scrie cu două-puncte (12:30), forma pe care o recomandă ÎOOP6 și ghidul gov-md; DOOM 3 admite și punctul (12.30). Nici una dintre forme nu e greșeală; ceri doar aceeași formă în tot textul.
 - Sursă: ghid gov-md §9.4.6; ÎOOP6 și DOOM 3 §1.2.6 (nereverificat local)
 
+### RO-NUM-056 „În jurul orei 19:02”
+- Nivel: recomandare
+- Greșit: „Spre seară, în jurul orei 19:02, animalul stătea din nou pe autostradă.” → Corect: „Spre seară, la 19:02, animalul stătea din nou pe autostradă.”
+- De ce: „În jurul orei” anunță o aproximare, iar minutul exact o contrazice. Calc după „gegen 19:02 Uhr”. Dacă sursa dă minutul, scrii „la 19:02” (sau „puțin după ora 19” când rotunjești). „În jurul orei 19” sau „pe la ora 16” sunt corecte. Același text avea „în jurul orei 15:50”.
+- Sursă: recomandare a skill-ului, fără normă; coerența textului (aproximare și minut exact); formatul orei: RO-NUM-025
+
+### RO-NUM-057 Nota germană „2–” nu se transpune ca atare
+- Nivel: de semnalat
+- Greșit: „Cronicarul dă episodului nota 2–.” → Corect: „Cronicarul dă episodului nota 2– (pe scara germană, unde 1 e cea mai bună și 6 cea mai slabă).”
+- De ce: În școala germană notele merg de la 1 („foarte bine”) la 6 („insuficient”); 2 înseamnă „bine”, iar semnul „–” coboară nota puțin. Cititorul român citește „2” pe scara lui, de la 1 la 10, adică aproape cel mai slab calificativ, deci pe dos de ce a vrut cronicarul (fidelitate, RO-FID, fidelitate.md). Nu convertești („nota 8”): conversia e a redacției și nu se face fără sursa factorului (RO-NUM-050 din acest fișier). Explici scara sau dai calificativul din original, cu „–” ca semn al notei.
+- Sursă: sistemul german de notare 1–6 (verificat pe internet, nereverificat local); fidelitate.md; RO-NUM-050
+
 ## 8. Sume de bani și monede
 
 ### Metoda: număr, spațiu, monedă

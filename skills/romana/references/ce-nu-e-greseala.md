@@ -245,6 +245,12 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 - De ce: Regula falsă: femininele de acest fel ar fi greșite, ori, invers, masculinul spus despre o femeie ar fi greșit. DOOM 3 înregistrează femininele; „ministră” are marca „fam.”, iar „filologă” marca „livr.”, dar sunt forme corecte. Ghidul gov-md recomandă femininul în comunicatele despre o persoană anume („Ministra justiției a prezentat proiectul”), iar masculinul rămâne corect când norma vizează funcția ca instituție. Alegerea e a autorului sau a publicației; o păstrezi consecventă în text.
 - Sursă: DOOM 3 s.v. ministră, dramaturgă, filologă, deputată, judecătoare; ghid gov-md §14.3–14.10
 
+### RO-NUG-130 „Mort”, nu doar „decedat”
+- Nivel: ce nu e greșeală
+- Corect: „Bărbatul mort în 2024 era fostul partener al victimei.” Nu înlocuiești „mort” cu „decedat” sau „răposat” într-o știre.
+- De ce: Regula falsă: „mort” ar fi prea colocvial pentru presă. DEX ’98 dă pentru „mort” „care nu mai trăiește, care a murit”, iar pentru „a deceda” „a înceta din viață; a muri”: aceeași semnificație, registru diferit. „Decedat” se potrivește în comunicate oficiale și în texte juridice, dar nu e o condiție a știrii; „mort” e neutru și nu se corectează.
+- Sursă: DEX ’98 s.v. mort, deceda
+
 ## Împrumuturi și cuvinte noi
 
 Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat sau un sens nou deja înregistrat în DEX ’98 sau în DOOM 3 nu se corectează (vezi [imprumuturi.md](imprumuturi.md)); un sens găsit doar într-un dicționar mai nou rămâne recomandare (vezi [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
@@ -326,6 +332,12 @@ Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat 
 - Corect: „Vom remedia problema în versiunea următoare.” Nu corectezi verbul.
 - De ce: Regula falsă: „a remedia” ar fi un calc după engl. „to remedy”. E un verb românesc vechi, din fr. „remédier”, cu sensul „a îndrepta, a îmbunătăți o situație” (DEX ’98).
 - Sursă: DEX ’98 s.v. remedia
+
+### RO-NUG-129 „Concern”
+- Nivel: ce nu e greșeală
+- Corect: „Conducerea concernului a cerut înghețarea salariilor.” (pentru „Konzernvorstand”). Nu înlocuiești „concern” cu „corporație” sau „grup” doar pentru că vine din engleză.
+- De ce: Regula falsă: orice cuvânt de origine engleză este un anglicism de evitat. „Concern” este în DEX ’98 cu sensul „organizație complexă care reunește întreprinderi legate între ele”, pluralul „concerne”; corespunde lui „Konzern”. „Grup” e sinonim posibil, nu obligatoriu. Într-un text care îl folosește consecvent nu amesteci termenii pentru aceeași entitate (RO-COE din [coerenta.md](coerenta.md)).
+- Sursă: DEX ’98 s.v. concern
 
 ## Îmbinări care doar par pleonasme
 

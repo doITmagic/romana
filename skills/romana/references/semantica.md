@@ -68,7 +68,7 @@ Un sens care lipsește din DEX ’98 poate fi înregistrat în dicționare mai n
 ### RO-SEM-003 „Locație” cu sensul „loc”
 - Nivel: recomandare
 - Greșit: „Ne mutăm într-o locație nouă, pe strada Mihai Eminescu.” → Corect: „Ne mutăm într-un sediu nou, pe strada Mihai Eminescu.”
-- De ce: DEX ’98 îi dă „locației” sensurile „închiriere” și „contract de închiriere”. Sensul „loc” vine din engleză („location”) și apare în unele dicționare mai noi, dar e folosit mult peste nevoie, adesea doar pentru că pare mai elegant. Propui cuvântul care spune ce fel de loc e: „loc”, „sediu”, „sală”, „spațiu”, „adresă”, „destinație”.
+- De ce: DEX ’98 îi dă „locației” sensurile „închiriere” și „contract de închiriere”. Sensul „loc” vine din engleză („location”) și apare în unele dicționare mai noi, dar e folosit mult peste nevoie, adesea doar pentru că pare mai elegant. Propui cuvântul care spune ce fel de loc e: „loc”, „sediu”, „sală”, „spațiu”, „adresă”, „destinație”. Același lucru la traducerea lui „Standort”: „locația Audi de la Neckarsulm” devine „uzina Audi de la Neckarsulm” (RO-CAL-627 din [limbi-sursa/de.md](limbi-sursa/de.md)).
 - Sursă: DEX ’98 s.v. locație; B. Croitor et al., 2014, p. 90–91
 
 ### RO-SEM-004 „A staționa” spus despre oameni
@@ -170,6 +170,12 @@ Două verbe cu regim diferit nu pot avea un complement comun („a beneficiat ș
 - Greșit: „Suntem interesați în a colabora cu firma dumneavoastră.” → Corect: „Suntem interesați să colaborăm cu firma dumneavoastră.”
 - De ce: Dorința sau curiozitatea se spun cu „interesat de” („interesat de ofertă”) sau cu „interesat să” („interesat să colaboreze”). „Interesat în” copiază englezescul „interested in”; în română se potrivește doar cu sensul „care are un interes, un câștig de tras” (DEX ’98), de exemplu despre un acționar interesat într-o afacere.
 - Sursă: DEX ’98 s.v. interesat; B. Croitor et al., 2014, p. 76–77
+
+### RO-SEM-414 „A sabota în mod intenționat”
+- Nivel: recomandare
+- Greșit: „Polițistul sabotează în mod intenționat anchetele.” → Corect: „Polițistul sabotează anchetele.”
+- De ce: Intenția e în sensul verbului: DEX ’98 definește „a sabota” prin „a frâna intenționat desfășurarea normală a unui proces”. Adverbul repetă ce spune verbul (în germană „gezielt sabotiert” leagă „gezielt”, „țintit”, de acțiune). Păstrezi adverbul doar dacă aduce altceva: „sistematic”, „pe ascuns”, „din interior”. Nu corectezi „sabotează deliberat” când contrastul cu o greșeală neintenționată e tema frazei.
+- Sursă: DEX ’98 s.v. sabota
 
 ## Vezi și
 

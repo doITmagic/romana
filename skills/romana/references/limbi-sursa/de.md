@@ -156,3 +156,63 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Greșit: „Kurzarbeit” → Corect: „reducerea temporară a programului de lucru (Kurzarbeit)”
 - De ce: Un concept fără echivalent consacrat se explică prin descrierea românească, iar originalul apare între paranteze la prima apariție, cu cursive dacă textul le permite; apoi folosești descrierea. Un concept cu echivalent consacrat se traduce direct: „Wehrpflicht” = „serviciul militar obligatoriu”, fără paranteză. Nu traduci compusul cuvânt cu cuvânt.
 - Sursă: R. O. Miclea, studiu despre compusele nominale germane în traducere; IER, Ghid stilistic de traducere (nereverificat local)
+
+### RO-CAL-621 Numele de drum fără substantiv: „a traversat A13”
+- Nivel: recomandare
+- Greșit: „Elanul a ieșit la marginea drumului, a traversat A13 și a dispărut într-o zonă împădurită.” → Corect: „Elanul a ieșit la marginea drumului, a traversat autostrada A13 și a dispărut într-o zonă împădurită.”
+- De ce: Presa germană scrie „auf der A13” sau „die A13”, cu codul ca nume întreg. În română codul însoțește substantivul: „autostrada A13”, „drumul național DN1”. Substantivul se pune cel puțin la prima apariție și ori de câte ori codul e complement direct („a traversat”, „a închis”) sau vine după „pe lângă”. În relatări de trafic, forma scurtă „pe A13” după ce autostrada a fost numită o dată nu se corectează.
+- Sursă: DEX ’98 s.v. autostradă (autostrada e un fel de șosea, deci codul numește drumul, nu tipul); recomandare a skill-ului, fără normă
+
+### RO-CAL-622 Autobahn, Bundesstraße, Ring: clasa drumului se păstrează
+- Nivel: recomandare
+- Greșit: „În vară a fost văzut unul pe porțiunea sudică a șoselei de centură a Berlinului.” → Corect: „În vară a fost văzut unul pe porțiunea sudică a autostrăzii de centură a Berlinului.”
+- De ce: „Berliner Ring” este numele autostrăzii A10 care înconjoară Berlinul. „Șosea” e termenul-umbrelă (DEX ’98 definește autostrada ca „șosea modernă de mare capacitate”), deci nu e greșit, dar pierde clasa din sursă, iar „șoseaua de centură” se citește ca drum obișnuit. Corespondențele: Autobahn = autostradă, Bundesstraße = drum național (federal). Același text trece de la „autostradă” la „șosea” pentru același drum (A13): după ce ai numit autostrada, rămâi la „autostradă” sau la „carosabil”. Dacă sursa nu spune clasa drumului, nu o inventezi.
+- Sursă: DEX ’98 s.v. autostradă, șosea
+
+### RO-CAL-623 „Hirsch” și „Hirschart”: nu „cerb”
+- Nivel: normă
+- Greșit: „Elanul face parte din cea mai mare specie de cerb din lume.” → Corect: „Elanul este cea mai mare specie de cervid din lume.”
+- De ce: Germana „Hirsch” numește și familia („die Hirsche”), iar „Hirschart” înseamnă „specie de cervid”. În română „cerb” este un animal anume, Cervus elaphus (DEX ’98), iar elanul e „animal rumegător nordic din familia cervidelor” (DEX ’98). În plus, elanul nu „face parte din” specie: el este specia. La fel „Reh” = căprioară, „Rentier” = ren, nu „cerb”.
+- Sursă: DEX ’98 s.v. cerb, cervid, elan
+
+### RO-CAL-624 „Es kam zu einem Unfall”: nu „s-a ajuns aproape de un accident”
+- Nivel: recomandare
+- Greșit: „Animalul stătea din nou pe autostradă și s-a ajuns aproape de un accident.” → Corect: „Animalul stătea din nou pe autostradă și a fost cât pe ce să se producă un accident.”
+- De ce: „Dabei kam es beinahe zu einem Unfall” este o construcție cu verb suport (RO-CAL-607) la care s-a adăugat „beinahe”. Tradusă piesă cu piesă, dă „s-a ajuns aproape de”, în care „a ajunge” nu mai are complementul lui obișnuit („a se ajunge la”). Româna are expresia „cât pe ce” („aproape, gata-gata”, DEX ’98): „a fost cât pe ce să se ciocnească”, „era să se producă un accident”. Aceeași construcție a apărut de două ori în același text („aproape de un accident”, „aproape de o coliziune”).
+- Sursă: DEX ’98 s.v. ce (expr. „cât pe ce”); recomandare a skill-ului, fără normă
+
+### RO-CAL-625 „Immer wieder” nu înseamnă „periodic”
+- Nivel: normă
+- Greșit: „Șoferii sunt avertizați periodic de pericolul unor elani rătăciți.” → Corect: „Din când în când, șoferii sunt avertizați de pericolul unor elani rătăciți.”
+- De ce: „Es kommt immer wieder vor” spune că se repetă, fără să promită intervale. „Periodic” înseamnă „care se repetă regulat, la intervale de timp egale” (DEX ’98), deci afirmă o regularitate pe care sursa nu o are. Variante după context: „din când în când”, „cu repetiție”, „tot mai des” (dacă sursa spune asta).
+- Sursă: DEX ’98 s.v. periodic
+
+### RO-CAL-626 „Gingen ein”: nu „au venit semnalări”
+- Nivel: recomandare
+- Greșit: „Cu puține zile în urmă au venit semnalări de lângă Marea Baltică.” → Corect: „Cu puține zile în urmă au fost raportate observări lângă Marea Baltică.”
+- De ce: „Sichtungen gingen ein” folosește „eingehen” în sensul de birou „a ajunge la destinatar” (Duden): mesajele ajung la poliție. „A veni” cu „semnalări” e calcul cuvânt cu cuvânt. Româna spune „poliția a primit semnalări” sau „au fost raportate observări”. Nu e greșeală de dicționar, deci nu o ridici la normă; atenție și la „Sichtung” = „observare”, nu „semnalare” (cel care semnalează e martorul, lucrul văzut e observarea). Nu corectezi o construcție românească de origine, fără urmă de original german.
+- Sursă: Duden s.v. eingehen (nereverificat local); DEX ’98 s.v. semnala
+
+### RO-CAL-627 „Standort”: nu „locație”
+- Nivel: normă
+- Greșit: „Pentru fabricile din Emden și pentru locația Audi de la Neckarsulm nu s-a găsit o soluție.” → Corect: „Pentru fabricile din Emden și pentru uzina Audi de la Neckarsulm nu s-a găsit o soluție.”
+- De ce: „Standort” este locul unde o firmă își desfășoară activitatea. „Locație” are în DEX ’98 sensurile „închiriere” și „contract de închiriere”; sensul „loc” vine din engleză (RO-SEM-003 din [semantica.md](../semantica.md)). Alegi termenul concret: uzină, fabrică, sediu, filială, amplasament. Pentru „Wirtschaftsstandort Deutschland”: „Germania ca loc pentru afaceri”, „economia germană”.
+- Sursă: DEX ’98 s.v. locație
+
+### RO-CAL-628 „Ortszeit”: ora locală a cui?
+- Nivel: recomandare
+- Greșit: „Decretul a fost publicat vineri, ora locală.” → Corect: „Decretul a fost publicat vineri, după ora locală din SUA.”
+- De ce: „Am Freitag (Ortszeit)” înseamnă „vineri după ora locului de care e vorba”. În română „vineri, ora locală” rămâne fără reper: pentru cititorul din România „locală” poate fi ora lui. Numești locul („ora Washingtonului”, „ora locală din SUA”) sau pui parantezele din original: „vineri (ora SUA)”. Dacă data nu depinde de fus, nu o complici.
+- Sursă: recomandare a skill-ului, fără normă; claritatea referinței (RO-COE din [coerenta.md](../coerenta.md))
+
+### RO-CAL-629 „Angeblich”, „vermeintlich”: nu dispar în traducere
+- Nivel: recomandare
+- Greșit: „Concubinul a spus că ea plecase cu un vechi prieten. Acel prieten nu a fost găsit niciodată.” → Corect: „Concubinul a spus că ea plecase cu un vechi prieten. Presupusul prieten nu a fost găsit niciodată.”
+- De ce: Sursa spune „dieser angebliche Freund”: existența prietenului e doar afirmația unui martor. Prin „acel prieten” hedge-ul dispare și prietenul pare real (RO-FID, fidelitate.md). „Angeblich” = „după cum se afirmă, presupus”; „vermeintlich” = „crezut a fi, aparent”. Alegi „presupus”, „așa-zis” sau «după cum se afirmă». „Pretins” spune mai mult: în DEX ’98 e „care vrea să treacă ceea ce nu este; fals”, deci socotește afirmația falsă. Îl folosești doar când sursa pune ea sub semnul întrebării.
+- Sursă: DEX ’98 s.v. pretins, presupus; fidelitate.md
+
+### RO-CAL-630 „Schweriner Forst”: genericul din nume nu se dublează
+- Nivel: recomandare
+- Greșit: „A fugit în pădurea Schweriner Forst.” → Corect: „A fugit în Schweriner Forst.” (sau „în zona împădurită Schweriner Forst”)
+- De ce: „Forst” este o pădure exploatată silvic (Duden). Numele german conține deja genericul, iar „pădurea Schweriner Forst” spune de două ori „pădure”. Același lucru la numele care se termină în „-berg”, „-see”, „-wald”, „-bach”: nu le pui înainte „muntele”, „lacul”, „pădurea”, „râul”, ca și cum numele n-ar conține genericul. Numele propriu nu se desface, dar nici nu i se pune dinainte genericul românesc dacă numele îl are deja; dacă cititorul n-ar înțelege, descrii o dată („zona împădurită Schweriner Forst”). Traducerile consacrate rămân (RO-TIP-072): „Pădurea Neagră”.
+- Sursă: Duden s.v. Forst (verificat pe internet, nereverificat local); RO-TIP-014 și RO-TIP-072 din [tipografie.md](../tipografie.md)
