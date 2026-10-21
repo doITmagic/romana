@@ -643,3 +643,111 @@ func TestEsantionPastreazaProza(t *testing.T) {
 		t.Errorf("proză %d (așteptam 2), reguli %d (așteptam 3): %v", proza, reguli, idUri(es))
 	}
 }
+
+const cazNeatins = `{"id":"curat-001","mod":"verificare","profil":"presă","set":"public","sursa":"Autor, Titlu, https://exemplu.ro","licenta":"CC BY 4.0","intrare":"Textul este corect.","asteptat":{"neatins":true}}`
+
+const cazObs = `[{"id":"corectura-001","mod":"corectura","profil":"blog","set":"public","sursa":"S","licenta":"MIT","intrare":"El a facut asta și a plecat.","asteptat":{"observatii":[{"fragment":"facut","nivel":"normă","pilon":"gramatică"}],"interzis":["plecat"],"cerut":["făcut"]}},
+{"id":"trigger-001","mod":"trigger","set":"public","sursa":"S","licenta":"MIT","intrare":"Scrie un text.","asteptat":{"cerut":["romana"]}}]`
+
+func dirCazuri(t *testing.T) (pub, priv string) {
+	t.Helper()
+	base := t.TempDir()
+	scrie(t, base, "pub/b.json", cazObs)
+	scrie(t, base, "pub/a.json", cazNeatins)
+	scrie(t, base, "priv/p.json", `{"id":"pastrare-p1","mod":"verificare","profil":"literatură","set":"privat","sursa":"S","licenta":"privat","intrare":"Text privat.","asteptat":{"neatins":true}}`)
+	return filepath.Join(base, "pub"), filepath.Join(base, "priv")
+}
+
+func TestExportaCazuriLotSiTip(t *testing.T) {
+	pub, priv := dirCazuri(t)
+	el, err := ExportaCazuri(pub, priv)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(el) != 4 {
+		t.Fatalf("%d elemente, așteptat 4", len(el))
+	}
+	for i, e := range el {
+		if e.Lot != "2-curate" || e.Tip != TipCaz || e.Stare != StareNeverificat || e.Comentariu != "" || e.Cod == "" || e.ID != idSigur(e.Cod) {
+			t.Errorf("element greșit: %+v", e)
+		}
+		if i > 0 && e.Ordine <= el[i-1].Ordine {
+			t.Errorf("ordine necrescătoare la %s", e.ID)
+		}
+	}
+	// ordinea grupelor: curat, corectura, pastrare, trigger
+	var ids []string
+	for _, e := range el {
+		ids = append(ids, e.ID)
+	}
+	if got := strings.Join(ids, ","); got != "curat-001,corectura-001,pastrare-p1,trigger-001" {
+		t.Errorf("ordine grupe: %s", got)
+	}
+}
+
+func TestExportaCazuriContinut(t *testing.T) {
+	pub, priv := dirCazuri(t)
+	el, _ := ExportaCazuri(pub, priv)
+	by := map[string]Element{}
+	for _, e := range el {
+		by[e.ID] = e
+	}
+	c := by["curat-001"]
+	if c.Titlu != "curat · verificare · presă" {
+		t.Errorf("titlu: %q", c.Titlu)
+	}
+	for _, s := range []string{"Textul este corect.", "Așteptat: textul rămâne neatins.", "Sursa: Autor, Titlu, https://exemplu.ro", "Licența: CC BY 4.0"} {
+		if !strings.Contains(c.Continut, s) {
+			t.Errorf("curat-001 fără %q:\n%s", s, c.Continut)
+		}
+	}
+	if !strings.HasPrefix(c.Continut, "Textul este corect.\n") {
+		t.Errorf("conținutul trebuie să înceapă cu intrarea:\n%s", c.Continut)
+	}
+	o := by["corectura-001"]
+	for _, s := range []string{"El a facut asta și a plecat.", "„facut” — normă, gramatică", "Nu are voie să semnaleze: „plecat”", "Trebuie să apară: „făcut”"} {
+		if !strings.Contains(o.Continut, s) {
+			t.Errorf("corectura-001 fără %q:\n%s", s, o.Continut)
+		}
+	}
+	if strings.Contains(o.Continut, "rămâne neatins") {
+		t.Errorf("caz cu observații nu e neatins:\n%s", o.Continut)
+	}
+	if !strings.HasSuffix(by["pastrare-p1"].Titlu, "(set privat)") {
+		t.Errorf("titlu privat: %q", by["pastrare-p1"].Titlu)
+	}
+	if by["trigger-001"].Titlu != "trigger · trigger" {
+		t.Errorf("titlu trigger: %q", by["trigger-001"].Titlu)
+	}
+}
+
+func TestExportaCazuriFisierRelativ(t *testing.T) {
+	pub, priv := dirCazuri(t)
+	el, _ := ExportaCazuri(pub, priv)
+	for _, e := range el {
+		if filepath.IsAbs(e.Fisier) || strings.HasPrefix(e.Fisier, "/") || strings.Contains(e.Fisier, pub) || strings.Contains(e.Fisier, priv) {
+			t.Errorf("%s: cale absolută %q", e.ID, e.Fisier)
+		}
+	}
+	for _, e := range el {
+		if e.ID == "pastrare-p1" && e.Fisier != "evals-privat/p.json" {
+			t.Errorf("fișier privat: %q", e.Fisier)
+		}
+		if e.ID == "curat-001" && e.Fisier != "evals/cazuri/a.json" {
+			t.Errorf("fișier public: %q", e.Fisier)
+		}
+	}
+}
+
+func TestExportaCazuriPrivatLipsa(t *testing.T) {
+	pub, _ := dirCazuri(t)
+	for _, priv := range []string{"", filepath.Join(t.TempDir(), "nu-exista")} {
+		el, err := ExportaCazuri(pub, priv)
+		if err != nil || len(el) != 3 {
+			t.Errorf("priv=%q: %d elemente, err=%v", priv, len(el), err)
+		}
+	}
+	if _, err := ExportaCazuri(filepath.Join(t.TempDir(), "nu-exista"), ""); err == nil {
+		t.Error("dirPublic inexistent trebuie să dea eroare")
+	}
+}

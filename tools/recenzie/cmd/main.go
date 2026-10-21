@@ -3,7 +3,7 @@
 //
 //	go run ./tools/recenzie/cmd -skill skills/romana \
 //	    -lot references/coerenta.md=3-cheie -lot references/x.md=4-esantion \
-//	    -esantion 5 -out recenzie.json
+//	    -esantion 5 -cazuri evals/cazuri -out recenzie.json
 //
 // Fișierele din references/ care nu primesc un -lot se sar. SKILL.md intră
 // mereu în lotul „1-skill”. Cu -esantion N rămân din fiecare fișier al lotului
@@ -18,6 +18,7 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/doITmagic/romana/tools/evals"
 	"github.com/doITmagic/romana/tools/recenzie"
 )
 
@@ -43,6 +44,8 @@ func main() {
 	skill := flag.String("skill", "skills/romana", "directorul skill-ului (cel cu SKILL.md)")
 	out := flag.String("out", "", "fișierul JSON de scris (implicit: ieșirea standard)")
 	esantion := flag.Int("esantion", 0, "câte reguli se păstrează din fiecare fișier al lotului "+recenzie.LotEsantion+" (0 = toate)")
+	cazuri := flag.String("cazuri", "", "directorul public cu cazurile de test (evals/cazuri); gol = fără cazuri")
+	cazuriPrivat := flag.String("cazuri-privat", evals.DirPrivat(), "directorul setului privat (lipsa lui nu e eroare)")
 	l := loturi{}
 	flag.Var(l, "lot", "cale=lot, față de directorul skill-ului; se poate repeta (references/coerenta.md=3-cheie)")
 	flag.Parse()
@@ -64,8 +67,17 @@ func main() {
 		fmt.Fprintf(os.Stderr, "avertisment: -esantion %d nu are efect, niciun fișier nu e dat cu -lot cale=%s\n", *esantion, recenzie.LotEsantion)
 	}
 	elemente = recenzie.Esantioneaza(elemente, *esantion)
-	// Task 10b: aici se adaugă cazurile de test (Tip = recenzie.TipCaz), cu
-	// Ordine care continuă după ultimul element, înainte de scriere.
+	if *cazuri != "" {
+		cz, err := recenzie.ExportaCazuri(*cazuri, *cazuriPrivat)
+		if err != nil {
+			esec(err)
+		}
+		baza := len(elemente)
+		for _, e := range cz {
+			e.Ordine += baza
+			elemente = append(elemente, e)
+		}
+	}
 
 	var b bytes.Buffer
 	if err := recenzie.ScrieJSON(&b, elemente); err != nil {

@@ -72,6 +72,9 @@ type Caz struct {
 	Confirmat bool     `json:"confirmat"`
 	Asteptat  Asteptat `json:"asteptat"`
 
+	// Fisier e calculat la încărcare: numele fișierului (fără director) din care vine cazul.
+	Fisier string `json:"-"`
+
 	// ExclusDinScor e calculat la încărcare: true pentru cazurile neconfirmate.
 	ExclusDinScor bool `json:"-"`
 }
@@ -168,6 +171,7 @@ func Incarca(dir string) ([]Caz, error) {
 			}
 			vazute[c.ID] = f
 			c.ExclusDinScor = !c.Confirmat
+			c.Fisier = filepath.Base(f)
 			out = append(out, c)
 		}
 	}

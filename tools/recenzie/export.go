@@ -70,7 +70,7 @@ const (
 	TipRegula = "regula"
 	// TipText este tipul elementelor cu proza (metoda) din fișierele references/.
 	TipText = "text"
-	// TipCaz este rezervat cazurilor de test (Task 10b); Exporta nu-l produce.
+	// TipCaz este tipul cazurilor de test; le produce ExportaCazuri, nu Exporta.
 	TipCaz = "caz"
 
 	// StareNeverificat este starea cu care ies toate elementele.
