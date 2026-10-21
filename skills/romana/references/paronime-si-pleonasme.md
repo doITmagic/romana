@@ -312,9 +312,9 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 
 ### RO-SEM-203 Pleonasmul care se vede doar din etimologie
 - Nivel: recomandare
-- Greșit: „Proiectul a cerut o muncă laborioasă de documentare.” → Corect: „Proiectul a cerut o documentare laborioasă.”
-- De ce: „Laborios” înseamnă „care cere multă muncă” (DEX '98) și vine din latinescul „labor”, „muncă”, deci „muncă laborioasă” spune de două ori „muncă”. Repetarea nu se vede pentru cine nu știe originea cuvântului, de aceea e o neglijență pentru un cititor cultivat, nu o greșeală gravă. „Glicemie în sânge” nu intră aici: definiția glicemiei conține chiar „sânge” (DEX '96), deci repetarea se vede din dicționar și e un pleonasm obișnuit, ca la RO-SEM-201 („o glicemie de 140 mg/dl”).
-- Sursă: DEX '98 s.v. laborios; DEX '96 s.v. glicemie; DSL, s.v. PLEONASM
+- Greșit: „Antrenorul a cronometrat timpul fiecărui alergător.” → Corect: „Antrenorul l-a cronometrat pe fiecare alergător.”
+- De ce: DEX '98 definește „a cronometra” ca „a măsura durata unei acțiuni cu ajutorul unui cronometru” și îl dă „din fr. chronométrer”; repetarea vine din elementul grecesc „crono-” („timp”), pe care DSL (s.v. PLEONASM) îl dă ca exemplu de pleonasm latent. Cuvântul „timp” nu apare în definiție, deci repetarea se vede doar din originea cuvântului: e o neglijență pentru un cititor cultivat, nu o greșeală gravă. Granița e definiția: dacă definiția din dicționar conține chiar cuvântul repetat („glicemie în sânge”, unde DEX '96 definește glicemia prin „glucoză aflată în sânge”; „muncă laborioasă”, unde DEX '98 dă „laborios” = „care cere multă muncă”), pleonasmul se vede din dicționar și intră la RO-SEM-201, ca normă.
+- Sursă: DEX '98 s.v. cronometra, laborios; DEX '96 s.v. glicemie; DSL, s.v. PLEONASM
 
 ### RO-SEM-212 A preciza foarte clar
 - Nivel: recomandare

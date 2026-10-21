@@ -55,7 +55,7 @@ Surse pentru metodă: DSL, s.v. TEMĂ și REMĂ; C. Tintiuc, *Levels of Text Ana
 
 ### RO-COE-001 Informația nouă nu se ascunde la mijlocul frazei
 - Nivel: recomandare
-- Greșit: „În ceea ce privește termenul de livrare, acesta a fost redus de noi, începând de luni, la două zile.” → Corect: „Am redus termenul de livrare la două zile, începând de luni.”
+- Greșit: „În ceea ce privește termenul de livrare, acesta a fost redus de noi, începând de luni, la două zile.” → Corect: „Am redus termenul de livrare: începând de luni, comenzile ajung în două zile.”
 - De ce: Cititorul reține mai ales finalul frazei. Formulele de deschidere („În ceea ce privește…”) și segmentele puse între verb și complement împing informația nouă la mijloc, unde se pierde. Pui la sfârșit ce vrei să rămână în minte.
 - Sursă: Mic ghid CE p. 7 (Rec. 5); ghid gov-md §1.8
 
