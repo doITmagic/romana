@@ -459,6 +459,24 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 - De ce: Regula falsă: condiționalul ar fi mereu o formă de nesiguranță de eliminat dintr-un text informativ. Forma „ar fi furat” prezintă fapta ca presupusă, nesigură (DSL), iar cu sursa numită spune exact ce afirmă sursa. Un text fără sursă care folosește această formă e o altă problemă, de atribuire (vezi [fidelitate.md](fidelitate.md)).
 - Sursă: DSL, s.v. PREZUMTIV
 
+### RO-NUG-131 „Ar fi” într-o frază a cărei sursă e numită în fraza dinainte
+- Nivel: ce nu e greșeală
+- Corect: „Procurorii au anunțat trei rețineri. Suspecții ar fi falsificat facturi de peste un milion de lei.” Nu adaugi „potrivit procurorilor” și în a doua frază și nu treci verbul la indicativ.
+- De ce: Regula falsă: un condițional prezumtiv fără sursă în aceeași frază ar fi o afirmație neatribuită. În relatare, sursa numită la începutul paragrafului acoperă frazele următoare care continuă același enunț, iar condiționalul arată că afirmația rămâne a sursei (DSL). Semnalezi doar când între sursă și condițional intervine altă sursă sau alt paragraf, sau când în text nu apare nicio sursă (RO-NUG-070, [fidelitate.md](fidelitate.md)).
+- Sursă: DSL, s.v. PREZUMTIV; uz curent în presa de informare, fără normă
+
+### RO-NUG-132 Titlul la perfect compus sau cu participiu
+- Nivel: ce nu e greșeală
+- Corect: „Un tren a deraiat lângă Brașov” și „Doi turiști, găsiți în viață după trei zile în munți”. Nu treci titlul la prezent.
+- De ce: Regula falsă: titlul de presă s-ar scrie întotdeauna la prezent. RO-STI-609 e o recomandare pentru titlul scris de la zero, nu o normă, iar presa curentă folosește perfectul compus când faptul s-a încheiat („a deraiat”) și participiul fără auxiliar („găsiți în viață”); prezentul rămâne pentru fapte în desfășurare și pentru declarații. Titlul scris de altcineva nu se rescrie pe acest motiv. Îl corectezi doar dacă timpul lui contrazice textul (RO-COE-022).
+- Sursă: RO-STI-609 (recomandare); uz curent în presa de informare, fără normă
+
+### RO-NUG-133 Titlul în două enunțuri
+- Nivel: ce nu e greșeală
+- Corect: „Incendiu într-un depozit din Ploiești. Pompierii au evacuat 40 de persoane”. Nu îl lipești într-o singură propoziție și nu îl tratezi ca pe un fragment tăiat.
+- De ce: Regula falsă: titlul trebuie să fie o singură propoziție, iar un fragment nominal urmat de punct ar fi un staccato (RO-STI-206). În presa curentă, titlul în două enunțuri, primul o etichetă nominală care încadrează fapta și al doilea o propoziție cu verb, este o construcție obișnuită; fragmentul nu e aici un efect retoric, ci un început de informație. Rămân valabile cerințele de la RO-STI-609: scurt și neutru. Semnalezi titlul cu mai mult de două enunțuri sau cu un fragment care nu spune nimic verificabil.
+- Sursă: RO-STI-206, RO-STI-609 (recomandări); uz curent în presa de informare, fără normă
+
 ### RO-NUG-039 Citatul direct
 - Nivel: ce nu e greșeală
 - Corect: „«Vroiam să plec mai devreme», a spus martorul.” În citat nu corectezi „vroiam”, „plus că” sau un „decât” afirmativ; corectezi doar tipografia (ghilimelele, diacriticele).

@@ -119,6 +119,76 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 - De ce: Regula este RO-TIP-088 din [tipografie.md](../tipografie.md): sigla puțin cunoscută se scrie desfășurat la prima apariție, cu sigla între paranteze, apoi se folosește forma scurtă. Jargonul se tratează la fel (RO-STI-613).
 - Sursă: Mic ghid CE p. 11–13 (Rec. 9)
 
+## Construcția știrii
+
+### Metoda
+
+Știrea românească curentă se construiește pe un tipar pe care îl poți aplica la redactare. Nu e normă, e felul în care scriu redacțiile de agenție și cele online.
+
+- **Lead-ul** e o singură frază care spune cine a făcut ce, când și unde. Dacă faptul vine dintr-o declarație sau din altă publicație, sursa stă la capătul aceleiași fraze („…, au transmis autoritățile, citate de Reuters”, „…, relatează AFP”). O frază de lead de treizeci–patruzeci de cuvinte e firească dacă are un singur fir: actor, verb la perfect compus, complement, circumstanță, sursă. Nu o spargi în două ca să pară scurtă, iar atribuirea nu o muți în fraza a doua dacă încape la coada primei.
+- **Paragrafele** au una sau două fraze, cu un fapt nou fiecare. Un paragraf de cinci fraze, cu faptul îngropat la mijloc, îl obligă pe cititor să-l caute.
+- **Ordinea** merge de la faptul de azi spre explicația lui: întâi ce s-a întâmplat și detaliile faptului, apoi contextul și istoricul. Contextul pus între lead și detalii îl amână pe cititor de la ce a venit să afle.
+- **Intertitlul**, când textul e destul de lung ca să-l ceară, spune ce e nou în secțiune, ca o frază sau ca un grup nominal cu informație. Eticheta de temă („Ce urmează”, „Contextul”, „Reacțiile”) nu spune nimic celui care citește doar intertitlurile.
+- **Încheierea** e ultimul fapt: o declarație, o cifră, pasul următor concret. Știrea nu are concluzie (vezi RO-STI-210 și RO-STI-211 din [tipare-text-generat.md](../tipare-text-generat.md)).
+
+Slab (lead fără sursă, cu data și sursa mutate în paragraful următor):
+
+> Președintele american Donald Trump a suspendat, printr-un decret, taxele vamale din pachetul de sancțiuni împotriva Rusiei, cu puțin timp înainte ca ele să intre în vigoare.
+>
+> Potrivit Handelsblatt, decretul a fost publicat vineri, ora locală, iar măsurile sunt suspendate până la o nouă decizie.
+
+Bun:
+
+> Președintele american Donald Trump a suspendat, printr-un decret publicat vineri, taxele vamale din pachetul de sancțiuni împotriva Rusiei, cu puțin timp înainte ca ele să intre în vigoare, scrie Handelsblatt.
+>
+> Măsurile sunt suspendate până la o nouă decizie.
+
+Prima variantă prezintă ca fapt al redacției o relatare preluată, iar sursa vine abia după ce cititorul a luat faptul de bun. A doua pune data și sursa în lead și lasă paragraful următor pentru ce e nou.
+
+Pentru intertitlu, același procedeu: în loc de eticheta „Ce urmează” (slab), scrii „Purdue continuă căutările fără epavă” (bun).
+
+## Atribuirea firească în relatare
+
+### Metoda
+
+În presa curentă atribuirea se face o dată pe grup de fapte, nu pe fiecare frază. Regula practică:
+
+- **Sursa stă la capătul frazei** („…, relatează AFP”, „…, notează Bloomberg”, „…, au transmis autoritățile, citate de Reuters”) sau la începutul paragrafului, cu „potrivit”, când se schimbă sursa. În fraza următoare din același paragraf, de la aceeași sursă, nu o repeți: cititorul o ține minte până apare alta.
+- **Statutul afirmației** îl păstrează modul verbului, nu atribuirea repetată. Ce spune sursa ca nesigur rămâne la condițional („ar fi falsificat”), iar ce a făcut sursa rămâne la perfect compus („a confirmat”, „a precizat”). Un condițional într-o frază fără sursă nu e neatribuit, dacă sursa e numită în fraza dinainte (RO-NUG-131).
+- **Formulele anaforice** („Tot Handelsblatt scrie”, „Același ziar notează”, „Potrivit aceleiași publicații”) nu rezolvă problema din RO-STI-620, o mută. Cititorul vede aceeași listă de atribuiri, doar cu alt început de frază. Soluția e gruparea: un paragraf, o sursă, o atribuire.
+- **Limita** o pune fidelitatea: dacă în același paragraf vorbesc surse diferite, le numești pe fiecare, iar atribuirea nu trece peste o sursă la alta (RO-STI-618, RO-STI-621).
+
+Slab:
+
+> Potrivit Tagesspiegel, la Lansing participanții au mărșăluit cu muzică în jurul clădirii parlamentului statului. Tot Tagesspiegel scrie că la Philadelphia un bărbat a depus buletinul de vot în primărie, chiar în timpul mitingului. Același ziar notează că la Dallas au venit și foști republicani. Potrivit aceleiași publicații, demonstranți s-au adunat și în fața reședinței lui Trump de la Mar-a-Lago.
+
+Bun:
+
+> La Lansing, participanții au mărșăluit cu muzică în jurul clădirii parlamentului statului, iar la Philadelphia un bărbat a depus buletinul de vot în primărie, chiar în timpul mitingului. La Dallas au venit și foști republicani, iar în fața reședinței lui Trump de la Mar-a-Lago s-au adunat demonstranți, relatează Tagesspiegel.
+
+Toate faptele au rămas la aceeași sursă, numită o dată, iar frazele pornesc de la locul în care s-a petrecut ceva, nu de la cine a scris despre el.
+
+## Cifrele în relatare
+
+### Metoda
+
+Cifra din știre are în jur tot ce o face verificabilă. Presa curentă le dă împreună:
+
+- **Cifra cu baza ei:** față de ce, din ce, când și unde („a crescut joi cu 3% la bursă”, „aproximativ 60% dintre cele 40 de proiecte”). Procentul fără bază („o scădere importantă”, „o creștere semnificativă”) nu spune nimic de verificat.
+- **Procentul cu cifre și simbol** („12%”), nu cu litere. „Trei la sută” nu e greșit (vezi RO-NUM-054 din [numere-date-unitati.md](../numere-date-unitati.md)), dar în relatare e rar; alegi o formă și o ții în tot textul.
+- **Numărul de persoane sau de obiecte** sub zece se scrie cu litere („șase persoane”, „doi tineri”), iar de la zece în sus cu cifre („12 ori”, „30 de magazine”), cu „de” după ultimele două cifre (RO-NUG-031).
+- **O singură aproximare** pe cifră: „circa 660.000 de angajați”, nu „circa aproximativ”.
+
+Slab:
+
+> Vânzările lanțului au scăzut cu paisprezece la sută, iar pierderea ar putea ajunge între patruzeci și șaizeci de milioane de lei.
+
+Bun:
+
+> Vânzările lanțului au scăzut în trimestrul al doilea cu 14% față de aceeași perioadă a anului trecut, iar pierderea ar putea ajunge între 40 și 60 de milioane de lei, a estimat directorul financiar.
+
+A doua variantă spune față de ce a scăzut, când și cine a făcut estimarea.
+
 ## Lista de verificare pentru presa online
 
 Greșelile cele mai frecvente în presa online (după monitorizarea Institutului de Lingvistică) se verifică la sfârșit, fiecare în fișierul ei:
