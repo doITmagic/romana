@@ -380,7 +380,7 @@ Trei procedee fac fraza de presă să curgă:
 
 - **Începi cu actorul și cu faptul lui.** Circumstanța (când, unde, în urma a ce) și sursa urmează, la coada frazei. O frază deschisă cu un lanț de circumstanțiale sau cu „potrivit…” îl face pe cititor să aștepte subiectul (RO-STI-008, RO-COE-003).
 - **Reiei subiectul printr-un demonstrativ sau printr-o nominalizare** („Cei trei suspecți…”, „Această decizie…”, „Ancheta…”), în loc să repeți la fiecare frază numele sursei sau al instituției. Repetarea unui termen e legitimă (RO-COE-007), dar sursa nu e subiectul faptului.
-- **Legi faptele alăturate cu „iar” și „însă”**, nu cu o atribuire nouă. Atribuirea se face o dată pe grup (vezi „Atribuirea firească în relatare” din [tipuri/presa.md](tipuri/presa.md)).
+- **Legi faptele cu „iar” sau „însă”**, în frază sau la început de frază, nu cu o atribuire nouă. Atribuirea se face o dată pe grup (vezi „Atribuirea firească în relatare” din [tipuri/presa.md](tipuri/presa.md)).
 
 Un text în care toate frazele au aceeași lungime și fiecare începe cu sursa are un ritm mecanic, chiar dacă fiecare frază luată separat e corectă.
 
