@@ -1,0 +1,3 @@
+#!/bin/sh
+# Refuză comiterea de cărți, texte mari sau fișiere de cercetare.
+exec go run ./tools/paza/cmd .

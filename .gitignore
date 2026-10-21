@@ -1,1 +1,6 @@
 .superpowers/
+*.pdf
+*.epub
+*.djvu
+*.djv
+docs/cercetare/
