@@ -36,7 +36,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-021 „Nici el, nici ea nu a venit” și „nu au venit”
 - Nivel: disputat
 - Corect: „Nici directorul, nici adjunctul lui nu au semnat.” Acordul la singular („nu a semnat”) nu îl corectezi.
-- De ce: Cu subiectele legate prin „nici… nici”, pluralul e acordul sigur, fiindcă subiectul multiplu cere predicatul la plural (Coteanu). Singularul poate fi socotit acord prin atracție (DSL îl numește „abatere”), dar se întâlnește în uz. Sursele consultate nu tranșează cazul, deci nu corectezi niciuna dintre forme; dacă îl pomenești, spui că există două uzuri. Când ultimul subiect e la plural, verbul stă la plural („Nici mama, nici copiii nu au ajuns”).
+- De ce: Cu subiectele legate prin „nici… nici”, pluralul e acordul sigur, fiindcă subiectul multiplu cere predicatul la plural (Coteanu). Singularul poate fi socotit acord prin atracție (DSL îl numește „abatere”), dar se întâlnește în uz. Sursele consultate nu tranșează cazul, deci nu corectezi niciuna dintre forme; dacă îl pomenești, spui că există două uzuri. Când ultimul subiect e la plural, verbul stă la plural („Nici directorul, nici angajații nu au semnat”).
 - Sursă: Coteanu, §33.1.2; DSL, s.v. ACORD
 
 ### RO-NUG-022 „Conform legii” și „conform cu legea”

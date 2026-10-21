@@ -7,6 +7,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Trimiterea** e la un paragraf (§), la o intrare din dicționar (s.v., adică „sub cuvântul”) sau la o pagină (p.). Textul nu e reprodus aici.
 - **Statutul** unei surse are trei valori:
   - **normă:** sursa fixează forma corectă (ortografie, ortoepie, morfologie, punctuație). O formă care o contrazice e greșeală, nivel „normă”;
+  - **sintaxa** (acordul, regimul cazual, topica pronumelor neaccentuate) nu are o lucrare normativă separată; reperul e gramatica academică, adică Coteanu și manualele aprobate care o aplică. Sursa e descriptivă, dar o regulă de sintaxă urcă la „normă” când gramatica sau un manual aprobat o dă ca regulă și numește greșită forma contrară; altfel rămâne „recomandare”;
   - **descriptiv:** sursa descrie cum e limba (sensuri, structuri, uz, terminologie). Susține o regulă, dar nu o impune;
   - **recomandare:** sursa propune o practică (ghid de redactare, convenție). Nu face dintr-o formă o greșeală.
 - **„(nereverificat local)”** la sfârșitul câmpului înseamnă că trimiterea (capitol, paragraf sau pagină) n-a putut fi deschisă pe text în momentul redactării. Regula rămâne, dar trimiterea e mai puțin sigură.
@@ -83,14 +84,19 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 ### Coteanu, *Gramatica de bază a limbii române*
 - **Titlu:** I. Coteanu, *Gramatica de bază a limbii române*, Editura Albatros, București.
 - **Ediție:** 1982. Nu este *Gramatica de bază a limbii române* a Academiei, apărută în 2010 (altă carte).
-- **Statut:** descriptiv, didactic. Descrie construcțiile și valorile modurilor și timpurilor verbale (condiționalul, conjunctivul, imperativul), articolul, acordul.
-- **Ce nu spune:** e anterioară DOOM 2 și DOOM 3: formele ortografice și morfologice se verifică în DOOM 3, nu aici. Nu dă reguli de stil.
+- **Statut:** descriptiv, didactic. Descrie construcțiile și valorile modurilor și timpurilor verbale (condiționalul, conjunctivul, imperativul), articolul, acordul, locul formelor scurte ale pronumelui, vorbirea indirectă. Pentru sintaxă e reperul gramaticii academice (vezi „Cum citești un câmp «Sursă»”).
+- **Ce nu spune:** e anterioară DOOM 2 și DOOM 3: formele ortografice și morfologice se verifică în DOOM 3, nu aici. Nu dă reguli de stil. Nu spune dacă pronumele subiect exprimat în plus, gerunziul cu alt subiect sau locul lui „mai” față de pronumele scurt sunt greșeli. Cărți scanate: trimiterile se fac la capitol și paragraf (de exemplu „§33.1.2”), nu la pagină.
 
 ### Coteanu, *Stilistica funcțională a limbii române*
 - **Titlu:** Ion Coteanu, *Stilistica funcțională a limbii române. Stil, stilistică, limbaj*, vol. I.
 - **Ediție:** Editura Academiei, București, 1973 (volumul al II-lea e din 1985).
 - **Statut:** descriptiv. Trece în revistă stilurile funcționale (administrativ, publicistic etc.).
 - **Ce nu spune:** nu stabilește corect și greșit; nu e un ghid de redactare.
+
+### Manuale aprobate de Ministerul Educației
+- **Titluri:** *Gramatica aplicată a limbii române*, clasa a IX-a (M.-C. Anisie, A. Ciobotaru, M. Lascăr, M.-R. Nedea, A.-D. Petrache, C. Pleșa), Editura Didactică și Pedagogică, 2026; manualele de *Limba și literatura română* pentru clasele a V-a (2022), a VI-a (2023) și a VII-a (2024), Editura Art Klett (F. Sâmihăian, S. Dobra, M. Halaszi, A. Davidoiu-Roman, H. Corcheș), și pentru clasa a VI-a, Editura Didactică și Pedagogică, 2023 (M. Norel, P. Bucurenciu, M. Dragu).
+- **Statut:** descriptiv-didactic, aplică norma academică; aprobate de Ministerul Educației. Se citează la pagină (*Gramatica aplicată*) sau la lecție (manualele Art Klett și EDP de gimnaziu).
+- **Ce nu spun:** nu sunt norme ale limbii; unde diferă de DOOM 3 sau de ÎOOP6, contează acestea. Exercițiile de corectare nu au cheie de răspuns în textul consultat, așa că un exercițiu arată ce socotește manualul greșeală, dar nu e dovadă. Manualele diferă între ele (de exemplu la pronumele subiect exprimat în plus), iar un singur manual nu face dintr-o preferință o normă. Nu tratează stilul, claritatea sau calcurile din engleză.
 
 ### GALR
 - **Titlu:** *Gramatica limbii române*, 2 vol. (*Cuvântul*, *Enunțul*), Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, Editura Academiei Române.
