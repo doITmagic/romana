@@ -1,0 +1,9 @@
+# Contextul de build e rădăcina repo-ului; ce nu intră în imagine:
+.git
+.superpowers
+evals-privat
+**/evals-privat
+.env
+*.pdf
+*.epub
+*.djvu
