@@ -370,6 +370,30 @@ Formula de deschidere „Sper că acest e-mail vă găsește bine” e tratată 
 - De ce: Un test de screening nu pune diagnostic; diagnosticul înseamnă „determinarea precisă a bolii pe baza datelor clinice și a examenelor de laborator” (DEX ’98). Rezultatul se formulează ca probabilitate sau ca trăsături compatibile, nu ca „ai ADHD” și nici „test de diagnostic”.
 - Sursă: DEX ’98 s.v. diagnostic
 
-## 9. Ce nu există
+## 9. Fraza de presă și ritmul relatării
+
+### Metoda
+
+Știrile românești curente nu se țin de o frază scurtă și egală. Au frazele neegale: un lead lung, de treizeci–patruzeci de cuvinte, care poartă un singur fir, apoi fapte în fraze mai scurte și, din loc în loc, o frază lungă cu o atribuire sau o circumstanță. Ritmul vine din ce are de spus fiecare frază, nu dintr-o lungime țintă (RO-STI-007, RO-STI-051).
+
+Trei procedee fac fraza de presă să curgă:
+
+- **Începi cu actorul și cu faptul lui.** Circumstanța (când, unde, în urma a ce) și sursa urmează, la coada frazei. O frază deschisă cu un lanț de circumstanțiale sau cu „potrivit…” îl face pe cititor să aștepte subiectul (RO-STI-008, RO-COE-003).
+- **Reiei subiectul printr-un demonstrativ sau printr-o nominalizare** („Cei trei suspecți…”, „Această decizie…”, „Ancheta…”), în loc să repeți la fiecare frază numele sursei sau al instituției. Repetarea unui termen e legitimă (RO-COE-007), dar sursa nu e subiectul faptului.
+- **Legi faptele cu „iar” sau „însă”**, în frază sau la început de frază, nu cu o atribuire nouă. Atribuirea se face o dată pe grup (vezi „Atribuirea firească în relatare” din [tipuri/presa.md](tipuri/presa.md)).
+
+Un text în care toate frazele au aceeași lungime și fiecare începe cu sursa are un ritm mecanic, chiar dacă fiecare frază luată separat e corectă.
+
+Slab:
+
+> Potrivit autorităților germane, în urma unei anchete care a durat câteva luni și la care au participat mai multe servicii, trei persoane au fost reținute luni la Berlin. Potrivit aceleiași surse, persoanele reținute sunt suspectate de spionaj. Potrivit aceleiași surse, ancheta continuă.
+
+Bun:
+
+> Trei persoane au fost reținute luni la Berlin, în urma unei anchete de câteva luni la care au participat mai multe servicii, au anunțat autoritățile germane. Cei trei sunt suspectați de spionaj, iar ancheta continuă.
+
+Prima variantă ține subiectul la sfârșit, în spatele a două circumstanțe, și repetă sursa în fiecare frază. A doua începe cu cei reținuți, pune sursa la coadă, o spune o dată și leagă ultimele două fapte.
+
+## 10. Ce nu există
 
 Pentru română nu există o formulă de lizibilitate validată: LEMI, cea mai cunoscută, a fost făcută pentru literatura de copii. De aceea nu calculezi scoruri de lizibilitate și nu raportezi „nivel de lectură”. Judeci citind: fraza se înțelege la prima lectură? se vede cine face ce?

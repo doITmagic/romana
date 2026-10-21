@@ -90,13 +90,13 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 ### RO-STI-610 Relatarea la perfect compus
 - Nivel: recomandare
 - Greșit: „Ieri, pompierii sting incendiul din cartier.” → Corect: „Luni, pompierii au stins incendiul din cartier.”
-- De ce: În presa de agenție relatarea se face la perfect compus. Prezentul rămâne pentru relatarea pe viu, pentru pozițiile permanente și pentru titlu. Cuvintele „ieri”, „azi” și „mâine” se evită, pentru că textul poate fi citit mult după publicare: scrii ziua sau data. Timpul de bază al relatării rămâne același pe tot firul (RO-COE-022 din [coerenta.md](../coerenta.md)).
+- De ce: În presa de agenție relatarea se face la perfect compus. Prezentul rămâne pentru relatarea pe viu și pentru pozițiile permanente; titlul are regula lui (RO-STI-609). Cuvintele „ieri”, „azi” și „mâine” se evită, pentru că textul poate fi citit mult după publicare: scrii ziua sau data. Timpul de bază al relatării rămâne același pe tot firul (RO-COE-022 din [coerenta.md](../coerenta.md)).
 - Sursă: monitorizarea presei IL; Irimieș; Ghidul de jurnalism (ghidjurnalism); Ghid de stil API (nereverificat local)
 
-### RO-STI-609 Titlul: scurt, neutru, cu verb la activ și la prezent
+### RO-STI-609 Titlul: scurt, neutru, cu verb la activ
 - Nivel: recomandare
-- Greșit: „Mingea nu a ieșit din teren” → Corect: „Mingea rămâne în teren”
-- De ce: Titlul scurt, neutru, cu verb la activ și la prezent, fără negație, se citește repede și nu poate fi înțeles pe dos de cine citește doar titlul. Negația adaugă un pas de interpretare. Dacă negația e esențială pentru sens, o păstrezi.
+- Greșit: „Mingea nu a ieșit din teren” → Corect: „Mingea a rămas în teren”
+- De ce: Titlul scurt, neutru, cu verb la activ și fără negație se citește repede și nu poate fi înțeles pe dos de cine citește doar titlul. Negația adaugă un pas de interpretare. Dacă negația e esențială pentru sens, o păstrezi. Prezentul („Mingea rămâne în teren”) și perfectul compus („Mingea a rămas în teren”) sunt la fel de uzuale în titlu; nu corectezi unul în celălalt (RO-NUG-132). Recomandarea rămâne consecvența în aceeași publicație.
 - Sursă: monitorizarea presei IL; Irimieș; Ghidul de jurnalism (ghidjurnalism); Ghid de stil API (nereverificat local)
 
 ## Registru și vocabular
@@ -119,6 +119,70 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 - De ce: Regula este RO-TIP-088 din [tipografie.md](../tipografie.md): sigla puțin cunoscută se scrie desfășurat la prima apariție, cu sigla între paranteze, apoi se folosește forma scurtă. Jargonul se tratează la fel (RO-STI-613).
 - Sursă: Mic ghid CE p. 11–13 (Rec. 9)
 
+## Construcția știrii
+
+### Metoda
+
+Știrea românească curentă se construiește pe un tipar pe care îl poți aplica la redactare. Nu e normă, e felul în care scriu redacțiile de agenție și cele online.
+
+- **Lead-ul** e o singură frază care spune cine a făcut ce, când și unde. Dacă faptul vine dintr-o declarație sau din altă publicație, sursa stă la capătul aceleiași fraze („…, au transmis autoritățile, citate de Reuters”, „…, relatează AFP”). O frază de lead de treizeci–patruzeci de cuvinte e firească dacă are un singur fir: actor, verb la perfect compus, complement, circumstanță, sursă. Nu o spargi în două ca să pară scurtă, iar atribuirea o pui de preferat la coada primei fraze; cel mult în fraza imediat următoare, ca în regula de la începutul fișierului.
+- **Paragrafele** au una sau două fraze, cu un fapt nou fiecare. Un paragraf de cinci fraze, cu faptul îngropat la mijloc, îl obligă pe cititor să-l caute.
+- **Ordinea:** în cele mai multe știri examinate, după lead vin detaliile faptului, iar contextul și istoricul vin mai târziu, nu între lead și detalii.
+- **Intertitlul**, când textul e destul de lung ca să-l ceară, spune ce e nou în secțiune, ca o frază sau ca un grup nominal cu informație. Eticheta generică de tipul „Ce urmează” sau „Contextul”, frecventă în textele generate, nu apare în presa examinată; o poți înlocui cu informația secțiunii.
+- **Încheierea** e ultimul fapt: o declarație, o cifră, pasul următor concret. Știrea nu are concluzie (vezi RO-STI-210 și RO-STI-211 din [tipare-text-generat.md](../tipare-text-generat.md)).
+
+Slab (lead fără sursă, cu data și sursa mutate în paragraful următor):
+
+> Președintele american Donald Trump a suspendat, printr-un decret, taxele vamale din pachetul de sancțiuni împotriva Rusiei, cu puțin timp înainte ca ele să intre în vigoare.
+>
+> Potrivit Handelsblatt, decretul a fost publicat vineri, ora locală, iar măsurile sunt suspendate până la o nouă decizie.
+
+Bun:
+
+> Președintele american Donald Trump a suspendat, printr-un decret publicat vineri, taxele vamale din pachetul de sancțiuni împotriva Rusiei, cu puțin timp înainte ca ele să intre în vigoare, scrie Handelsblatt.
+>
+> Măsurile sunt suspendate până la o nouă decizie.
+
+Prima variantă prezintă ca fapt al redacției o relatare preluată, iar sursa vine abia după ce cititorul a luat faptul de bun. A doua pune data și sursa în lead și lasă paragraful următor pentru ce e nou.
+
+Pentru intertitlu, același procedeu: în loc de eticheta „Ce urmează” (slab), scrii „Purdue continuă căutările fără epavă” (bun).
+
+## Atribuirea firească în relatare
+
+### Metoda
+
+În presa curentă atribuirea se face o dată pe grup de fapte, nu pe fiecare frază. Regula practică:
+
+- **Sursa stă la capătul frazei** („…, relatează AFP”, „…, notează Bloomberg”, „…, au transmis autoritățile, citate de Reuters”) sau la începutul paragrafului, cu „potrivit”, când se schimbă sursa. Regula: numești sursa o dată, în prima frază care îi aparține sau cel târziu în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă.
+- **Formulele anaforice** („Tot Handelsblatt scrie”, „Același ziar notează”, „Potrivit aceleiași publicații”) repetă lista de atribuiri cu alt început de frază. Soluția e cea din RO-STI-620: numești sursa o dată, în prima frază care îi aparține sau cel târziu în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă.
+- **Limita** o pune fidelitatea: dacă în același paragraf vorbesc surse diferite, le numești pe fiecare, iar atribuirea nu trece peste o sursă la alta (RO-STI-618, RO-STI-621).
+
+Slab:
+
+> Potrivit Tagesspiegel, la Lansing participanții au mărșăluit cu muzică în jurul clădirii parlamentului statului. Tot Tagesspiegel scrie că la Philadelphia un bărbat a depus buletinul de vot în primărie, chiar în timpul mitingului. Potrivit aceleiași publicații, demonstranți s-au adunat și în fața reședinței lui Trump de la Mar-a-Lago.
+
+Bun:
+
+> La Lansing, participanții au mărșăluit cu muzică în jurul clădirii parlamentului statului, iar la Philadelphia un bărbat a depus buletinul de vot în primărie, chiar în timpul mitingului. În fața reședinței lui Trump de la Mar-a-Lago s-au adunat demonstranți, relatează Tagesspiegel.
+
+Toate faptele au rămas la aceeași sursă, numită o dată, iar frazele pornesc de la locul în care s-a petrecut ceva, nu de la cine a scris despre el.
+
+## Cifrele în relatare
+
+### Metoda
+
+Cifra din știre are în jur ce o face verificabilă: față de ce, din ce și când. Presa curentă dă cifra împreună cu baza ei („a crescut în septembrie cu 18% față de august”); procentul sau suma fără bază nu spune cititorului ce să verifice. Cum se scriu procentele și numerele mici e în RO-NUM-021 și RO-SEM-243 din [numere-date-unitati.md](../numere-date-unitati.md) și din [paronime-si-pleonasme.md](../paronime-si-pleonasme.md); aici contează doar că cifra nu pleacă singură.
+
+Slab:
+
+> În septembrie s-au înregistrat 1.416 reclamații, față de 1.200 în august. Numărul reclamațiilor către primărie a crescut cu 18%.
+
+Bun:
+
+> Numărul reclamațiilor către primărie a crescut în septembrie cu 18% față de august, de la 1.200 la 1.416.
+
+Ambele variante au aceleași date. În prima, procentul rămâne în altă frază decât perioada și valorile, deci cititorul trebuie să lege singur cifra de baza ei; a doua le leagă într-o singură frază.
+
 ## Lista de verificare pentru presa online
 
 Greșelile cele mai frecvente în presa online (după monitorizarea Institutului de Lingvistică) se verifică la sfârșit, fiecare în fișierul ei:
@@ -135,8 +199,8 @@ Sursă pentru listă: monitorizarea presei IL (nereverificat local).
 
 ### RO-STI-620 Atribuirea nu deschide fiecare frază
 - Nivel: recomandare
-- Greșit: „Potrivit Handelsblatt, decretul a fost publicat vineri. Potrivit Handelsblatt, legea fusese semnată în septembrie. Potrivit Handelsblatt, taxele urmau să intre în vigoare automat.” → Corect: „Potrivit Handelsblatt, decretul a fost publicat vineri. Legea fusese semnată în septembrie, iar taxele urmau să intre în vigoare automat, notează ziarul.”
-- De ce: Când aproape fiecare frază începe cu „potrivit”, cititorul vede o listă de atribuiri, nu faptul; în articolele de test aceeași sursă era atribuită de trei ori la rând. Markerul „potrivit” nu e greșit și nu se înlocuiește (vezi începutul secțiunii); se rărește: atribui o dată un grup de afirmații din aceeași sursă și continui cu „ziarul”, „aceeași publicație”, „tot ea”, sau pui atribuirea la coadă („…, scrie Der Spiegel”). Fiecare afirmație își păstrează sursa: nu comasezi afirmații din surse diferite sub o singură atribuire (RO-STI-618).
+- Greșit: „Potrivit Handelsblatt, decretul a fost publicat vineri. Potrivit Handelsblatt, legea fusese semnată în septembrie. Potrivit Handelsblatt, taxele urmau să intre în vigoare automat.” → Corect: „Potrivit Handelsblatt, decretul a fost publicat vineri. Legea fusese semnată în septembrie, iar taxele urmau să intre în vigoare automat.”
+- De ce: Când aproape fiecare frază începe cu „potrivit”, cititorul vede o listă de atribuiri, nu faptul; în articolele de test aceeași sursă era atribuită de trei ori la rând. Markerul „potrivit” nu e greșit și nu se înlocuiește (vezi începutul secțiunii); se rărește: numești sursa o dată, în prima frază care îi aparține sau cel târziu în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă. Sursa poate sta la începutul frazei („Potrivit Der Spiegel, …”) sau la coada ei („…, scrie Der Spiegel”). Formulele care reiau sursa („ziarul”, „aceeași publicație”, „tot ea”) repetă lista de atribuiri cu alt început de frază. Fiecare afirmație își păstrează sursa: nu comasezi afirmații din surse diferite sub o singură atribuire (RO-STI-618).
 - Sursă: recomandare a skill-ului, fără normă
 
 ### RO-STI-621 Lanțul de atribuire: cel mult două trepte

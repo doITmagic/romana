@@ -459,6 +459,18 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 - De ce: Regula falsă: condiționalul ar fi mereu o formă de nesiguranță de eliminat dintr-un text informativ. Forma „ar fi furat” prezintă fapta ca presupusă, nesigură (DSL), iar cu sursa numită spune exact ce afirmă sursa. Un text fără sursă care folosește această formă e o altă problemă, de atribuire (vezi [fidelitate.md](fidelitate.md)).
 - Sursă: DSL, s.v. PREZUMTIV
 
+### RO-NUG-132 Titlul la perfect compus sau cu participiu
+- Nivel: ce nu e greșeală
+- Corect: „Un tren a deraiat lângă Brașov” și „Doi turiști, găsiți în viață după trei zile în munți”. Nu treci titlul la prezent.
+- De ce: Regula falsă: titlul de presă s-ar scrie întotdeauna la prezent. Presa curentă folosește și prezentul, și perfectul compus (când faptul s-a încheiat), și participiul fără auxiliar; RO-STI-609 le admite pe toate. Titlul scris de altcineva nu se rescrie pe acest motiv. Ceri doar consecvență în aceeași publicație și îl corectezi dacă timpul lui contrazice textul (RO-COE-022).
+- Sursă: RO-STI-609; uz curent în presa de informare, fără normă
+
+### RO-NUG-133 Titlul în două enunțuri
+- Nivel: ce nu e greșeală
+- Corect: „Incendiu într-un depozit din Ploiești. Pompierii au evacuat 40 de persoane”. Nu îl lipești într-o singură propoziție și nu îl tratezi ca pe un fragment tăiat.
+- De ce: Regula falsă: titlul trebuie să fie o singură propoziție, iar un enunț fără verb urmat de punct ar fi un staccato (RO-STI-206). Titlul în două enunțuri, fiecare propoziție sau fragment nominal, este uz curent în presa de informare; aici nu e un efect retoric, ci informația împărțită în două. Rămân valabile cerințele de la RO-STI-609: scurt și neutru.
+- Sursă: RO-STI-206, RO-STI-609 (recomandări); uz curent în presa de informare, fără normă
+
 ### RO-NUG-039 Citatul direct
 - Nivel: ce nu e greșeală
 - Corect: „«Vroiam să plec mai devreme», a spus martorul.” În citat nu corectezi „vroiam”, „plus că” sau un „decât” afirmativ; corectezi doar tipografia (ghilimelele, diacriticele).
