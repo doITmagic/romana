@@ -35,28 +35,28 @@ Bun: aceeași frază, cu ș, ț și Ș cu virgulă (U+0219, U+021B, U+0218).
 - Nivel: normă
 - Greșit: „ştiinţă, BUCUREŞTI” → Corect: „știință, BUCUREȘTI”
 - De ce: Semnele diacritice sunt obligatorii în română, inclusiv pe majuscule, iar ș și ț se scriu cu virgulă, nu cu sedilă. Caracterele cu sedilă par la fel pe ecran, dar au alt cod și strică căutarea, sortarea și potrivirea cuvintelor. Sedila se corectează în toate cuvintele românești, mici sau mari, și în titluri.
-- Sursă: ghid gov-md §2.1.3 și §2.1.5; DOOM 3 §1.1 (nereverificat local)
+- Sursă: ghid gov-md §2.1.3 și §2.1.5; DOOM 3 §1.1.3.2
 - Vezi și: RO-TIP-117
 
 ### RO-TIP-029 Textul în altă limbă și adresele web nu se „diacritizează”
 - Nivel: normă
 - Corect: „The report covers Romania in 2025.” Aici „Romania” nu primește diacritice, la fel ca în adresa unei pagini.
 - De ce: Diacriticele românești se scriu în cuvinte românești. Un titlu englezesc, un citat într-o altă limbă, o adresă de e-mail, un URL sau un nume de fișier rămân cum sunt. Un verificator care marchează „Romania” dintr-un text englezesc ca „lipsă de diacritice” greșește.
-- Sursă: ghid gov-md §2.3.1–§2.3.3; DOOM 3 §1.2 și §2.2 (nereverificat local)
+- Sursă: ghid gov-md §2.3.1–§2.3.3; DOOM 3 §1.1.3.2 (cuvintele și numele străine își păstrează grafia)
 - Vezi și: RO-TIP-089
 
 ### RO-TIP-030 Lipsa diacriticelor nu se repară după listă
 - Nivel: normă
 - Corect: „Casa sa e lângă râu.” Aici „sa” e corect, fiindcă e adjectivul posesiv.
 - De ce: Multe cuvinte fără diacritice sunt ele însele corecte: „sa” (posesiv), „tine” (pronume), „si”, „para” (verbul „a para”). Nu înlocuiești mecanic după o listă; citești fraza și hotărăști după sens, cu proba de înlocuire (pui forma la alt caz sau la alt număr).
-- Sursă: DOOM 3 §1.2 și §2.2 (nereverificat local); B. Croitor et al., 2014
+- Sursă: DOOM 3 §1.1.3.2; B. Croitor et al., 2014
 - Vezi și: RO-TIP-090
 
 ### RO-TIP-116 Diacriticele sunt obligatorii și în titluri, meta și profiluri
 - Nivel: normă
 - Greșit: „Cum alegi o saltea potrivita pentru copii” → Corect: „Cum alegi o saltea potrivită pentru copii”
 - De ce: Diacriticele se scriu în orice text românesc, inclusiv în titluri, în descrierile de pagină, în titlul H1 și în profilurile publice; lipsa semnelor poate schimba sensul („pături” și „paturi” sunt cuvinte diferite), așa că și un titlu fără diacritice are nevoie de ele. Fraza „Cele mai bune paturi pentru copii” e însă corectă fără nicio diacritică lipsă; nu o „repari” fără un context care cere „pături” (vezi RO-TIP-030). Rămân fără diacritice doar identificatorii tehnici: slug-ul din adresa paginii (de exemplu „cele-mai-bune-paturi-copii”), adresele de e-mail și numele de fișiere. Nu corectezi nici siglele consacrate care se scriu fără semne (ANIF, SNSPA) și nici numele proprii pe care purtătorii le scriu deliberat fără ele (de exemplu Hasdeu, nu Hașdeu, dacă așa își scrie familia numele).
-- Sursă: ghid gov-md §2.1.4, §2.1.5 și §2.3; INJ p. 93–94; DOOM 3 §1.1 (nereverificat local)
+- Sursă: ghid gov-md §2.1.4, §2.1.5 și §2.3; INJ p. 93–94; DOOM 3 §1.1.3.2
 
 ### RO-TIP-119 Lipsa totală a diacriticelor se semnalează
 - Nivel: de semnalat
@@ -74,7 +74,7 @@ Bun: aceeași frază, cu ș, ț și Ș cu virgulă (U+0219, U+021B, U+0218).
 - Nivel: de semnalat
 - Greșit: „Sînt cîrcotașă și, cînd am îmbătrînit, am rămas la fel.” → Corect: „Sunt cârcotașă și, când am îmbătrânit, am rămas la fel.” (doar cu acordul autorului; grafia cu „î” folosită consecvent în tot textul nu se corectează)
 - De ce: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost norma între 1953 și 1993, iar unii autori și unele publicații o păstrează ca opțiune editorială. Aplicată consecvent, de la un capăt la altul, e o convenție a autorului sau a redacției, nu o greșeală izolată: o semnalezi o singură dată, la început, și nu corectezi ocurențele fără acordul autorului. Dacă grafia e amestecată („sînt” și „sunt”, „cînd” și „când” în același text), nu mai e convenție, ci inconsecvență: atunci e normă și se unifică după DOOM 3 („â” în interior, „sunt, suntem”). În citat și în titlul unei opere se păstrează grafia originală (RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). RO-GRA-078 din [gramatica.md](gramatica.md) se aplică textelor care nu au această convenție.
-- Sursă: DOOM 3 §2.2.2 (norma actuală, nereverificat local); ÎOOP (nereverificat local)
+- Sursă: DOOM 3 §2.2.1–2.2.2 (norma actuală); ÎOOP (nereverificat local)
 
 ## 2. Majusculele
 
@@ -101,40 +101,40 @@ Bun:
 - Nivel: normă
 - Greșit: „a declarat Ministrul de Externe” → Corect: „a declarat ministrul de externe”
 - De ce: Numele funcțiilor (președintele, premierul, prim-ministrul, ministrul, primarul, senatorul) se scriu cu literă mică în registrul neoficial, deci și în presă, oricât de înaltă ar fi funcția și chiar când stau înaintea numelui: „președintele Ion Popescu”. Majuscula la început de propoziție rămâne, desigur, obligatorie.
-- Sursă: DOOM 3 §3.2 II.2.2–2.3 (nereverificat local); ghid gov-md §4.2.1.1
+- Sursă: DOOM 3 §3.2 II.2.2–2.3; ghid gov-md §4.2.1.1
 - Vezi și: RO-TIP-091
 
 ### RO-TIP-002 Domeniul funcției rămâne cu literă mică
 - Nivel: normă
 - Greșit: „Ministrul Finanțelor a declarat” → Corect: „ministrul finanțelor a declarat”
 - De ce: Domeniul care întregește numele funcției (ministrul finanțelor, ministrul de externe) nu face parte dintr-un nume propriu și nu primește majusculă. Instituția, în schimb, o primește: „Ministerul Finanțelor”.
-- Sursă: DOOM 3 §3.2 II.2.2–2.3 (nereverificat local); ghid gov-md §4.2.1.1
+- Sursă: DOOM 3 §3.2 II.2.2–2.3; ghid gov-md §4.2.1.1
 - Vezi și: RO-TIP-091
 
 ### RO-TIP-003 Majuscula la funcții: doar în stilul oficial sau când funcția denumește instituția
 - Nivel: normă
 - Corect: „Președintele Republicii semnează decretul.” (stil oficial, funcția celui mai înalt demnitar)
 - De ce: Majuscula la o funcție apare în stilul oficial reverențios (acte, protocol), în unele funcții înalte din acte și când funcția denumește chiar o instituție. Într-un articol de presă, o pagină de site sau un e-mail se scrie cu literă mică. Dacă textul e un act sau o scrisoare protocolară, urmezi convenția lui și ții aceeași alegere în tot textul.
-- Sursă: DOOM 3 cap. 3 (nereverificat local); ghid gov-md §4.1.5.3
+- Sursă: DOOM 3 §3.2 II.2.2; ghid gov-md §4.1.5.3
 - Vezi și: RO-TIP-091
 
 ### RO-TIP-004 Titlurile științifice și onorifice au literă mică
 - Nivel: normă
 - Greșit: „Profesorul Dumitrescu și Academicianul Ionescu” → Corect: „profesorul Dumitrescu și academicianul Ionescu”
 - De ce: Titlurile științifice și onorifice (profesorul, doctorul, academicianul, doctor honoris causa) sunt substantive comune. Numele purtătorului primește majusculă, titlul nu.
-- Sursă: ghid gov-md §4.2.1.11; DOOM 3 §3.2 II.2.12 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.11; DOOM 3 §3.2 II.2.12
 
 ### RO-TIP-022 „Domnia-sa” și „dumnealui” au literă mică
 - Nivel: normă
 - Greșit: „Am vorbit cu Dumnealui ieri.” → Corect: „Am vorbit cu dumnealui ieri.”
 - De ce: Pronumele de politețe formate recent, din seria „domnia-sa”, „domnia-voastră”, „domniile-lor”, „dumnealui”, se scriu cu literă mică. Scrierea cu cratimă („domnia-sa”) e recomandată de DOOM 3, iar „domnia sa”, fără cratimă, nu se corectează. Locuțiunea protocolară „Domnia Sa”, cu majusculă și fără cratimă, e corectă în stilul oficial și nu se atinge (vezi RO-TIP-023). Cuvântul „domnia-sa” e în dicționar.
-- Sursă: DOOM 3 cap. 3 și §6.7.2 (nereverificat local); ghid gov-md §4.1.5.11
+- Sursă: DOOM 3 §3.1 I.2.22, §3.2 II.4 și §6.7.2; ghid gov-md §4.1.5.11
 
 ### RO-TIP-023 Formulele protocolare vechi au majusculă
 - Nivel: normă
 - Corect: „Excelența Sa, Majestatea Sa, Sanctitatea Sa”
 - De ce: Locuțiunile vechi de adresare, pentru domnitori, boieri, demnitari și capete încoronate, se scriu cu majusculă la toate componentele și fără cratimă. Nu le amesteci cu „domnia-sa”, care e un pronume modern (RO-TIP-022).
-- Sursă: ghid gov-md §4.1.5.11; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.5.11; DOOM 3 §3.1 I.2.22
 
 ### 2.2 Instituții
 
@@ -142,48 +142,48 @@ Bun:
 - Nivel: normă
 - Greșit: „ministerul afacerilor externe” → Corect: „Ministerul Afacerilor Externe”
 - De ce: Denumirea oficială a unei instituții se scrie cu majusculă la fiecare cuvânt plin și cu literă mică la cuvintele ajutătoare: Camera Deputaților, Curtea Constituțională, Parlamentul European, Organizația Națiunilor Unite.
-- Sursă: ghid gov-md §4.1.5.1; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.5.1; DOOM 3 §3.1 I.2.5
 - Vezi și: RO-TIP-092
 
 ### RO-TIP-006 Forma eliptică a unei instituții anume păstrează majuscula
 - Nivel: normă
 - Corect: „Guvernul a decis să amâne măsura.”
 - De ce: Când cuvântul scurt desemnează instituția anume („Guvernul”, „Parlamentul”, „Camera”, „secretar de stat la Externe”), se scrie cu majusculă, ca și numele complet.
-- Sursă: ghid gov-md §4.1.5.1; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.5.1; DOOM 3 §3.1 I.2.5
 - Vezi și: RO-TIP-092
 
 ### RO-TIP-007 Termenul generic sau neoficial are literă mică
 - Nivel: normă
 - Greșit: „Guvernul Român a anunțat” → Corect: „guvernul român a anunțat”
 - De ce: „Guvernul României” e denumirea instituției, iar „guvernul român” e un termen generic, care se scrie cu literă mică. La fel „guvernele statelor membre”, „am fost la primărie”, „un guvern interimar”.
-- Sursă: ghid gov-md §4.2.1.6; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.6; DOOM 3 §3.2 II.2.3 și §3.1 I.2.5
 - Vezi și: RO-TIP-092
 
 ### RO-TIP-008 Elipsa sau termenul generic: hotărăște sensul
 - Nivel: normă
 - Corect: „Guvernul a adoptat ordonanța.” (instituția anume) și „Guvernele statelor membre au reacționat.” (termenul generic)
 - De ce: Alegerea între majusculă și literă mică nu se face după formă, ci după sens: dacă cuvântul trimite la o instituție anume, e nume propriu; dacă numește orice guvern, e substantiv comun. În caz de îndoială, citești fraza și întrebi autorul.
-- Sursă: ghid gov-md §4.2.1.6; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.6; DOOM 3 §3.2 II.2.3 și §3.1 I.2.5
 
 ### RO-TIP-009 Compartimentele unei instituții: doar primul cuvânt cu majusculă
 - Nivel: normă
 - Greșit: „Consiliul de Administrație al BNR” → Corect: „Consiliul de administrație al BNR”
 - De ce: Organele de conducere și subdiviziunile din interiorul unei instituții (direcție, secție, serviciu, comisie permanentă) se scriu cu majusculă doar la primul cuvânt: „Direcția de studii economice”. Instituția de sine stătătoare, cu personalitate juridică, rămâne la RO-TIP-005.
-- Sursă: ghid gov-md §4.1.7.3; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.7.3; DOOM 3 §3.1 I.3.1
 - Vezi și: RO-TIP-093
 
 ### RO-TIP-085 Instituțiile străine traduse iau majusculă la cuvintele pline
 - Nivel: normă
 - Greșit: „departamentul de stat american” → Corect: „Departamentul de Stat american”
 - De ce: Când o instituție străină are un nume tradus în română, numele tradus se scrie ca orice nume oficial: majusculă la cuvintele pline („Departamentul de Stat”, „Congresul”). Adjectivul care arată țara rămâne cu literă mică.
-- Sursă: DOOM 3 §1.3 și §2.5 (nereverificat local); ghid gov-md §15.2.4
+- Sursă: DOOM 3 §3.1 I.2.5; ghid gov-md §15.2.4
 - Vezi și: RO-TIP-111
 
 ### RO-TIP-086 Funcțiile străine au literă mică, ca cele românești
 - Nivel: normă
 - Greșit: „Ieri a ajuns la Berlin Președintele Macron.” → Corect: „Ieri a ajuns la Berlin președintele Macron.”
 - De ce: Numele funcției rămâne substantiv comun și se scrie cu literă mică, în orice țară ar fi exercitată. Numele persoanei se scrie cu majusculă. Prenumele la prima mențiune e o preferință de stil la redactare; în corectură nu se adaugă, pentru că ar fi un conținut nou (vezi fidelitate.md).
-- Sursă: DOOM 3 §1.3 și §2.5 (nereverificat local); ghid gov-md §4.2.1.1
+- Sursă: DOOM 3 §3.2 II.2.2; ghid gov-md §4.2.1.1
 - Vezi și: RO-TIP-111
 
 ### 2.3 Titluri de opere, de documente și de pagini
@@ -192,20 +192,20 @@ Bun:
 - Nivel: normă
 - Greșit: „Guvernul Aprobă Noul Buget De Stat” → Corect: „Guvernul aprobă noul buget de stat”
 - De ce: Titlurile de opere, legi, documente, publicații, emisiuni, programe și articole se scriu cu majusculă la primul cuvânt și la numele proprii din interior. Majuscula la fiecare cuvânt (Title Case) imită engleza și e greșită. Excepțiile sunt la RO-TIP-127. La fel se scriu titlurile paginilor și ale secțiunilor, butoanele și meniurile. Un titlu tradus nu păstrează majusculele engleze („Cele mai recente articole”, nu „Cele mai Recente Articole”). Numele unei tehnici sau al unui concept nu e nume propriu: „chain of thought” se scrie cu litere mici. Numele de produs se scrie cum îl înregistrează titularul (iPhone, eBay).
-- Sursă: ghid gov-md §4.1.5.10 și §4.1.7.1; DOOM 3 §3.1 (nereverificat local)
+- Sursă: ghid gov-md §4.1.5.10 și §4.1.7.1; DOOM 3 §3.1 I.3.3
 - Vezi și: RO-TIP-120
 
 ### RO-TIP-011 Sărbătorile naționale și unele documente de importanță națională fac excepție
 - Nivel: normă
 - Corect: „Ziua Națională a României”
 - De ce: Sărbătorile naționale oficiale și denumirile unor documente sau evenimente de importanță națională se scriu cu majusculă la toate cuvintele pline. Lista exactă a excepțiilor e la RO-TIP-127. Nu transformi o excepție în regulă: un titlu obișnuit rămâne cu literă mică.
-- Sursă: ghid gov-md §4.1.5.7 și §4.1.7.1; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.5.7 și §4.1.7.1; DOOM 3 §3.1 I.2.19 și I.3.3
 
 ### RO-TIP-127 Excepțiile de la regula cu un singur cuvânt cu majusculă
 - Nivel: normă
 - Corect: „Festivalul Internațional de Teatru de la Sibiu; Planul Național de Redresare și Reziliență; Casa Poporului; Ziua Europei”
-- De ce: Majuscula la fiecare cuvânt plin se păstrează, după DOOM 3 §3.1, pentru patru categorii: denumirile de manifestări (festivaluri, conferințe, saloane), denumirile planurilor și strategiilor naționale, denumirile sărbătorilor oficiale și denumirile de clădiri publice. Fără aceste excepții ai corecta forme corecte. Verifici categoria înainte să schimbi un titlu: „Planul național de dezvoltare pentru anii 2025–2027” (titlu obișnuit de plan) nu se confundă cu „Planul Național de Redresare și Reziliență” (plan național cu denumire consacrată).
-- Sursă: DOOM 3 §3.1 (nereverificat local); ghid gov-md §4.1.5.5, §4.1.5.7, §4.1.5.8 și §4.1.7.1
+- De ce: Majuscula la fiecare cuvânt plin se păstrează, după DOOM 3 §3.1, pentru patru categorii: denumirile de manifestări (festivaluri, conferințe, saloane), denumirile planurilor de importanță națională, denumirile sărbătorilor oficiale și denumirile de clădiri publice. Fără aceste excepții ai corecta forme corecte. Verifici categoria înainte să schimbi un titlu: „Planul național de dezvoltare pentru anii 2025–2027” (titlu obișnuit de plan) nu se confundă cu „Planul Național de Redresare și Reziliență” (plan național cu denumire consacrată).
+- Sursă: DOOM 3 §3.1 I.2.5, I.2.6, I.2.11 și I.2.19; ghid gov-md §4.1.5.5, §4.1.5.7, §4.1.5.8 și §4.1.7.1
 
 ### 2.4 Calendar, popoare, limbi, discipline
 
@@ -213,39 +213,39 @@ Bun:
 - Nivel: normă
 - Greșit: „pe 5 Martie, Luni, un Francez, limba Română” → Corect: „pe 5 martie, luni, un francez, limba română”
 - De ce: Lunile, zilele săptămânii, numele popoarelor, ale limbilor și ale disciplinelor de studiu sunt substantive comune; engleza le scrie cu majusculă, româna nu. Numele de oameni derivate din ele rămân cu majusculă acolo unde sunt nume proprii (Marțian).
-- Sursă: ghid gov-md §4.2.1.10; DOOM 3 §3.2 II.2.11 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.10; DOOM 3 §3.2 II.2.11
 
 ### RO-TIP-013 Sărbătorile au majusculă, datele obișnuite nu
 - Nivel: normă
 - Greșit: „de 1 decembrie, la mulți ani” → Corect: „de 1 Decembrie, la mulți ani”
 - De ce: Când data denumește o sărbătoare (1 Decembrie, 9 Mai, Întâi Mai), luna se scrie cu majusculă. Când data e doar un moment din calendar („ședința din 1 decembrie”), luna rămâne cu literă mică.
-- Sursă: ghid gov-md §4.1.5.7; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.5.7; DOOM 3 §3.1 I.2.19 și §3.2 II.2.11
 
 ### 2.5 Geografie
 
 ### RO-TIP-014 Termenul generic dinaintea unui nume geografic: literă mică
 - Nivel: normă
 - Greșit: „Fluviul Dunărea, pe Strada Lipscani” → Corect: „fluviul Dunărea, pe strada Lipscani”
-- De ce: Cuvântul generic (fluviul, județul, strada, munții) rămâne cu literă mică atunci când nu face parte din nume: „județul Cluj”, „munții Carpați”, „bulevardul Grigore Vieru”.
-- Sursă: ghid gov-md §4.2.1.7; DOOM 3 §3.2 II.2.5 și 2.7 (nereverificat local)
+- De ce: Cuvântul generic (fluviul, județul, strada, munții) rămâne cu literă mică atunci când nu face parte din nume: „județul Cluj”, „munții Carpați”, „bulevardul Grigore Vieru”. În indicarea adresei, pe hărți și pe plăcuțe indicatoare termenul generic se scrie însă cu majusculă (RO-TIP-015).
+- Sursă: ghid gov-md §4.2.1.7; DOOM 3 §3.2 II.2.7
 
 ### RO-TIP-015 Termenul generic care face parte din nume are majusculă
 - Nivel: normă
 - Corect: „Marea Neagră, Țara Românească, Baia Mare, Drumul Taberei”
 - De ce: Dacă termenul generic e urmat de un determinant care îl individualizează sau și-a pierdut sensul propriu, face parte din numele propriu și se scrie cu majusculă. Pe hărți, pe plăcuțe indicatoare și în adrese, aceste substantive se scriu cu majusculă.
-- Sursă: ghid gov-md §4.2.1.7; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.7; DOOM 3 §3.1 I.2.1 și §3.2 II.2.7
 
 ### RO-TIP-016 Punctele cardinale: literă mică ca direcție, majusculă ca regiune
 - Nivel: normă
 - Greșit: „Europa de est” → Corect: „Europa de Est”
 - De ce: Punctul cardinal care arată o direcție se scrie cu literă mică („spre est”, „în sudul țării”). Cel care denumește o regiune sau face parte dintr-un nume se scrie cu majusculă: Orientul Mijlociu, Europa de Est, America de Nord, Polul Sud.
-- Sursă: ghid gov-md §4.1.6; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.6; DOOM 3 §3.1 I.2.18 și §3.2 II.2.5
 
 ### RO-TIP-017 Cuvintele ajutătoare din nume rămân mici
 - Nivel: normă
 - Greșit: „Statele Unite Ale Americii” → Corect: „Statele Unite ale Americii”
 - De ce: Prepozițiile, articolele și conjuncțiile din interiorul unui nume propriu compus rămân cu literă mică: „Regatul Unit al Marii Britanii și Irlandei de Nord”, „Ștefan cel Mare”, „Ursula von der Leyen”.
-- Sursă: ghid gov-md §4.2.1.13; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.13; DOOM 3 §3.2 II.3.2
 
 ### 2.6 Războaie, epoci, evenimente
 
@@ -253,27 +253,27 @@ Bun:
 - Nivel: normă
 - Greșit: „al doilea război mondial, Primul război mondial” → Corect: „Al Doilea Război Mondial, Primul Război Mondial”
 - De ce: Războaiele cu denumire proprie consacrată se scriu cu majusculă la toate componentele, inclusiv la cuvântul ajutător de la început: Al Doilea Război Mondial, Războiul de Independență, Războiul Rece. Scrierea războaielor mondiale așa e o noutate a DOOM 3.
-- Sursă: ghid gov-md §4.1.5.6; DOOM 3 §2.2.5 (nereverificat local)
+- Sursă: ghid gov-md §4.1.5.6; DOOM 3 §3.1 I.2.10 și „Ce e nou în DOOM 3” §2.2.5
 - Vezi și: RO-TIP-094
 
 ### RO-TIP-019 Marile epoci și evenimente au majusculă
 - Nivel: normă
 - Greșit: „evul mediu” → Corect: „Evul Mediu”
 - De ce: Marile epoci istorice și evenimentele unice se scriu cu majusculă la toate cuvintele pline: Antichitatea, Evul Mediu, Renașterea, Marea Unire, Revoluția Franceză.
-- Sursă: ghid gov-md §4.1.5.6; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.5.6; DOOM 3 §3.1 I.2.9
 - Vezi și: RO-TIP-094
 
 ### RO-TIP-020 Adjectivul adăugat rămâne cu literă mică
 - Nivel: normă
 - Greșit: „Evul Mediu Românesc” → Corect: „Evul Mediu românesc”
 - De ce: Adjectivul care precizează o epocă sau un eveniment nu face parte din denumire și nu primește majusculă.
-- Sursă: ghid gov-md §4.1.7.1; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.7.1; DOOM 3 §3.1 I.3.3
 
 ### RO-TIP-021 Perioadele vagi și războaiele multiple: literă mică
 - Nivel: normă
 - Greșit: „Epoca Modernă, Războaiele Balcanice” → Corect: „epoca modernă, războaiele balcanice”
 - De ce: Perioadele delimitate vag (epoca modernă, perioada postbelică) și războaiele fără nume propriu unic (războaiele balcanice, războiul din Afganistan) sunt denumiri descriptive și se scriu cu literă mică.
-- Sursă: ghid gov-md §4.2.1.4 și §4.2.1.5; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.4 și §4.2.1.5; DOOM 3 §3.2 II.2.6.3–2.6.4
 
 ### 2.7 După două-puncte, în citat, în liste
 
@@ -281,21 +281,21 @@ Bun:
 - Nivel: normă
 - Greșit: „Motivul e simplu: Nu am timp.” → Corect: „Motivul e simplu: nu am timp.”
 - De ce: Când după două-puncte urmează o enumerare, o explicație, o concluzie sau o consecință, textul continuă cu literă mică, pentru că fraza nu s-a încheiat. Excepțiile sunt vorbirea directă și citatul din RO-TIP-025.
-- Sursă: ghid gov-md §4.1.3 și §9.4.5; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.3 și §9.4.5; DOOM 3 §3.2 II.1.4
 - Vezi și: RO-TIP-095, RO-TIP-126
 
 ### RO-TIP-025 Vorbirea directă și citatul-frază încep cu majusculă
 - Nivel: normă
 - Corect: „A spus: «Bugetul nu ajunge.»” În ghilimelele românești: A spus: „Bugetul nu ajunge.”
 - De ce: Vorbirea directă, fie între ghilimele, fie introdusă cu linie de dialog, și citatul redat ca enunț de sine stătător încep cu majusculă, chiar după două-puncte. Citatul care e doar un fragment integrat în frază intră la RO-TIP-026.
-- Sursă: ghid gov-md §4.1.3 și §9.8.6; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.3 și §9.8.6; DOOM 3 §3.1 I.1.2.3–1.2.4
 - Vezi și: RO-TIP-034, RO-TIP-126
 
 ### RO-TIP-026 Citatul integrat în frază începe cu literă mică
 - Nivel: normă
 - Corect: „A vorbit despre «un buget care nu ajunge», de fapt.” Fără două-puncte înainte, fragmentul citat începe cu literă mică.
 - De ce: Când citatul continuă propoziția autorului, fără două-puncte, începe cu literă mică și punctul final stă după ghilimelele de închidere (RO-TIP-104). Majuscula ar înlocui o relație sintactică cu un început de frază.
-- Sursă: ghid gov-md §4.2.1.12 și §9.8.5; DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.2.1.12 și §9.8.5; DOOM 3 §3.2 II.1.5
 - Vezi și: RO-TIP-034, RO-TIP-126
 
 ### RO-TIP-125 Elementele unei liste nu cer majusculă
@@ -580,7 +580,7 @@ Bun:
 - Nivel: normă
 - Greșit: „Ministrul - aflat la Bruxelles - a declarat” → Corect: „Ministrul – aflat la Bruxelles – a declarat”
 - De ce: Cratima cu spații în jur, în mijlocul frazei, e o linie de pauză scrisă greșit: nu „-” cu spații. Linia de pauză se scrie „–”, cu spații; cratima, fără spații, leagă cuvinte sau numere. Excepție: liniuța de la începutul rândului, ca marcaj de listă.
-- Sursă: ghid gov-md §9.9.1 și §9.11.9; DOOM 3 §1.2.5 (nereverificat local)
+- Sursă: ghid gov-md §9.9.1 și §9.11.9; DOOM 3 §1.2.5
 - Vezi și: RO-TIP-106, RO-TIP-107
 
 ### RO-TIP-064 Virgula necesară se pune după a doua linie
@@ -593,13 +593,13 @@ Bun:
 - Nivel: recomandare
 - Corect: „anii 2020-2021, orele 8-16, articolele 12-14, perioada 1-23 august, două-trei zile”
 - De ce: Pentru limite de timp, de spațiu și pentru aproximări DOOM 3 și ghidul gov-md preferă cratima fără spații; linia de pauză cu spații e admisă de DOOM 3, dar socotită mai lungă fără rost. Ghidul gov-md recomandă linia de pauză doar între două părți (RO-TIP-066) sau când cratima poate fi confundată cu un nume compus. Propui cratima, fără spații, și ceri consecvență; linia de pauză nu se corectează ca greșeală.
-- Sursă: ghid gov-md §9.9.7 și §9.11.8; DOOM 3 §1.2.5 II (nereverificat local)
+- Sursă: ghid gov-md §9.9.7 și §9.11.8; DOOM 3 §1.2.5 II.2–II.6
 
 ### RO-TIP-066 Relația dintre două părți: linia de pauză sau cratima
 - Nivel: disputat
 - Corect: „Acordul România – Franța” și „Paris-Londra”.
 - De ce: Pentru relația dintre două părți (întâlnirea NATO – Rusia, acordul România – Franța) DOOM 3 și ghidul gov-md preferă linia de pauză, mai ales dacă un element are cratimă internă (distanța Iași – Cluj-Napoca). ÎOOP6 folosește și cratima. Nu corectezi; ceri aceeași alegere în tot textul.
-- Sursă: ghid gov-md §9.9.7 și §9.11.8; ÎOOP6 p. 41 și 46 (nereverificat local)
+- Sursă: ghid gov-md §9.9.7 și §9.11.8; DOOM 3 §1.2.5 II.7; ÎOOP6 p. 41 și 46 (nereverificat local)
 
 ### RO-TIP-067 Intervalul: cu prepoziții sau cu semn, nu amândouă
 - Nivel: normă
@@ -633,21 +633,21 @@ Verificări rapide (mecanice, dar cu ochii pe excepții):
 ### RO-TIP-032 Apostroful ’ în cuvintele românești
 - Nivel: normă
 - Greșit: „D'ale carnavalului, dup' o oră” → Corect: „D-ale carnavalului, dup-o oră”
-- De ce: Apostroful nu apare în cuvintele românești literare. Se folosește la anii prescurtați (’89, anii ’90, ante-’89), la rostirea familiară reprodusă (dom’le, dom’ profesor) și în nume străine (O’Neill, McDonald’s, D’Annunzio). Când cade un sunet și se formează o silabă nouă, se pune cratimă. Forma tipografică corectă a apostrofului este ’ (U+2019), care arată ca o virgulă ridicată; nu o confunda cu semnul prim (′) din matematică și nici cu apostroful drept de la tastatură, pe care un text îngrijit îl înlocuiește cu ’. În documentele oficiale anii se scriu întregi. Apostroful nu se scoate din formele de mai sus (vezi RO-NUG-096).
-- Sursă: ghid gov-md §9.13.1–9.13.5; DOOM 3 §1.2.1 (nereverificat local)
+- De ce: În formele literare pronunțate în tempo normal apostroful nu apare; în cuvintele românești are doar rol marginal și facultativ (DOOM 3 §1.2.1). Se folosește la anii prescurtați (’89, anii ’90, ante-’89), la rostirea familiară reprodusă (dom’le, dom’ profesor) și în nume străine (O’Neill, McDonald’s, D’Annunzio). Când cade un sunet și se formează o silabă nouă, se pune cratimă. Forma tipografică corectă a apostrofului este ’ (U+2019), care arată ca o virgulă ridicată; nu o confunda cu semnul prim (′) din matematică și nici cu apostroful drept de la tastatură, pe care un text îngrijit îl înlocuiește cu ’. În documentele oficiale anii se scriu întregi. Apostroful nu se scoate din formele de mai sus (vezi RO-NUG-096).
+- Sursă: ghid gov-md §9.13.1–9.13.5; DOOM 3 §1.2.1
 
 ### RO-TIP-068 Spațiul în jurul semnelor de punctuație
 - Nivel: normă
 - Greșit: „Ministrul a spus , apoi a plecat .” → Corect: „Ministrul a spus, apoi a plecat.”
 - De ce: Virgula, punctul, punctul-și-virgula, două-puncte, semnul întrebării, semnul exclamării și punctele de suspensie se lipesc de cuvântul dinainte și sunt urmate de spațiu (sau de alt semn de punctuație): „Gata. Continuă”, nu „Gata.Continuă”. Excepțiile sunt cele din metoda de mai sus: punctul din abrevieri, virgula zecimală, ora, numerele, adresele web și de e-mail, și cazul în care urmează alt semn. Un verificator mecanic care ignoră aceste excepții strică textul.
-- Sursă: ghid gov-md §9.1.11, §9.2.1.1, §9.3.3, §9.4.7, §9.10.2 și §9.14; DOOM 3 §1.2.3 și §1.2.7 (nereverificat local)
+- Sursă: ghid gov-md §9.1.11, §9.2.1.1, §9.3.3, §9.4.7, §9.10.2 și §9.14; DOOM 3 §1.2.3 pct. 4 și §1.2.6 I
 - Vezi și: RO-TIP-123
 
 ### RO-TIP-069 Fără spații în jurul cratimei, al barei oblice și în interiorul abrevierilor
 - Nivel: normă
 - Greșit: „km / h, a . c., prim - ministru” → Corect: „km/h, a.c., prim-ministru”
 - De ce: Cratima, bara oblică și punctele din interiorul abrevierilor se scriu fără spații. Excepția e cratima-marcaj de listă, la început de rând. Ce compuse se scriu cu cratimă spune RO-GRA-082 din [gramatica.md](gramatica.md); scrierea siglelor (fără puncte între litere), RO-GRA-090 din același fișier.
-- Sursă: ghid gov-md §9.1.11, §9.11.9 și §9.12.4; ÎOOP6 §214–283 (nereverificat local)
+- Sursă: ghid gov-md §9.1.11, §9.11.9 și §9.12.4; DOOM 3 §1.2.3 pct. 4; ÎOOP6 §214–283 (nereverificat local)
 
 ### RO-TIP-035 Titlurile, subtitlurile și legendele nu se încheie cu punct
 - Nivel: normă
@@ -694,20 +694,20 @@ Bun:
 - Nivel: normă
 - Greșit: „Prime Minister Ion Popescu” → Corect: „prim-ministrul Ion Popescu”
 - De ce: Într-un text românesc, funcțiile și substantivele comune se scriu cu literă mică, iar numele oficiale complete cu majusculă la cuvintele pline, după regulile din secțiunea 2, nu după regulile limbii din care vine informația.
-- Sursă: ghid gov-md §4.1.7.1 (N.B.); DOOM 3 cap. 3 (nereverificat local)
+- Sursă: ghid gov-md §4.1.7.1 (N.B.); DOOM 3 §3.1 și §3.2 II.2.2
 
 ### RO-TIP-071 Numele din alfabet latin: forma originală, cu diacriticele ei
 - Nivel: normă
 - Greșit: „Munich, Skoda” → Corect: „München, Škoda”
 - De ce: Numele proprii din limbi cu alfabet latin se scriu ca în original, cu diacriticele lor: München, Mickiewicz, Petőfi, Márquez, São Tomé. Nu le anglicizezi și nu le simplifici (Skoda, Munchen). Regula se aplică și sedilei: într-un nume turcesc, litera s cu sedilă (U+015F) e corectă, iar sedila se corectează doar în cuvintele românești. Pentru orașele care au o formă românească tradițională (Cracovia, Londra) se folosește aceasta, iar exonimul rămâne corect; vezi RO-TIP-072.
-- Sursă: ghid gov-md §3.5.1 și §2.2.1; DOOM 3 §1.3 și §2.5 (nereverificat local)
+- Sursă: ghid gov-md §3.5.1 și §2.2.1; DOOM 3 §2.5 pct. 1
 - Vezi și: RO-TIP-028, RO-TIP-096, RO-TIP-108
 
 ### RO-TIP-072 Exonimele consacrate se folosesc în textul curent
 - Nivel: recomandare
 - Greșit: „London, Warszawa, Wien” → Corect: „Londra, Varșovia, Viena”
 - De ce: Locurile cunoscute de mult au forme românești curente: Londra, Moscova, Varșovia, Viena, Praga, Florența, Nisa, Salonic, Neapole. Forma originală (London, Wien) e folosită în lucrări de specialitate, pe hărți și în bibliografii; într-un text românesc obișnuit, exonimul e forma firească.
-- Sursă: ghid gov-md §3.5.3; DOOM 3 §1.3 și §2.5 (nereverificat local)
+- Sursă: ghid gov-md §3.5.3; DOOM 3 §2.5 pct. 3
 - Vezi și: RO-TIP-096, RO-TIP-108
 
 ### RO-TIP-073 Derivatele păstrează grafia numelui
@@ -727,35 +727,35 @@ Bun:
 - Nivel: normă
 - Corect: „Cehov, nu Chekhov”. Transliterarea ISO („Čehov”) se folosește în acte, în bibliografie și în cartografie, nu în presă.
 - De ce: Numele din alfabete nelatine se transcriu după regulile românești, nu se preiau din forma englezească. Transliterarea standardizată (ISO 9 pentru chirilică) servește unor scopuri tehnice.
-- Sursă: ghid gov-md §3.2 și §3.4.8; DOOM 3 §1.3 (nereverificat local)
+- Sursă: ghid gov-md §3.2 și §3.4.8; DOOM 3 §1.3.1–1.3.2
 - Vezi și: RO-TIP-109
 
 ### RO-TIP-077 Rusa
 - Nivel: normă
 - Greșit: „Chekhov, Tchaikovsky, Yeltsin, Navalny, Kyrgyzstan” → Corect: „Cehov, Ceaikovski, Elțân, Navalnâi, Kârgâzstan”
 - De ce: Numele rusești se transcriu după tabelul românesc, nu după forma englezească: ч devine c(e/i), ш devine ș, щ devine șc(i), ж devine j, х devine h, ц devine ț, ы devine â în interior (î la sfârșit de cuvânt), -ий devine i, я devine ia la început de cuvânt și după vocală și ea după consoană, к devine k, е rămâne e (nu ie), г rămâne g (gh înaintea lui e și i). Excepții tradiționale: Dostoievski, Turgheniev.
-- Sursă: ghid gov-md §3.3 și §3.4; DOOM 3 §1.3.3.1 (nereverificat local)
+- Sursă: ghid gov-md §3.3 și §3.4; DOOM 3 §1.3.3.1
 - Vezi și: RO-TIP-109
 
 ### RO-TIP-078 Bulgara
 - Nivel: normă
 - Corect: „ъ → ă, щ → șt”
 - De ce: Numele bulgărești transcrise din chirilică redau ъ prin ă și щ prin șt; г și к urmate de ъ se redau gh, ch.
-- Sursă: DOOM 3 §1.3.3.2–1.3.3.3 (nereverificat local)
+- Sursă: DOOM 3 §1.3.3.2
 - Vezi și: RO-TIP-109
 
 ### RO-TIP-079 Sârba
 - Nivel: normă
 - Greșit: „Vucic, Vuciciu” → Corect: „Vučić”
 - De ce: Numele sârbești scrise în chirilică se redau în forma alfabetului latin sârbesc (Đ, Ž, Lj, Nj, Ć, Č, Dž, Š), nu după regulile pentru rusă și nu în forma anglicizată.
-- Sursă: DOOM 3 §1.3.3 (nereverificat local)
+- Sursă: DOOM 3 §1.3.3.3
 - Vezi și: RO-TIP-109
 
 ### RO-TIP-080 Chineza, araba, ebraica, greaca
 - Nivel: recomandare
 - Greșit: „Peking” → Corect: „Beijing”
 - De ce: Chineza se redă în Pinyin, cu forma „Beijing” pentru capitală. DOOM 3 trimite de la „Pekin” la „Beijing”, iar „Peking” nu e o formă românească. Pentru arabă, ebraică și greacă se folosesc standardele de transliterare (ISO 233, ISO 259-2, ISO 843) în acte și bibliografie.
-- Sursă: DOOM 3, s.v. Pekin, Beijing; DOOM 3 §1.3 (nereverificat local)
+- Sursă: DOOM 3, s.v. Beijing, Pekin; DOOM 3 §1.3.4–1.3.7
 - Vezi și: RO-TIP-109
 
 ### RO-TIP-081 Statele se numesc în forma oficială actuală

@@ -114,7 +114,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Plus că prețurile au crescut.” → Corect: „În plus, prețurile au crescut.”
 - De ce: „Plus că” și „plus de asta” sunt familiare; în registrul standard folosești „în plus”. „În plus de aceasta” e pedant, iar „un plus de” e clișeu publicitar („un plus de siguranță”, mai bine „mai multă siguranță”). În citat, „plus că” rămâne (vezi RO-NUG-039).
-- Sursă: R. Zafiu, „Plus că…” (nereverificat local); DOOM 3 §6.9.9 (nereverificat local)
+- Sursă: R. Zafiu, „Plus că…” (nereverificat local)
 
 ### RO-STI-418 Exprimări populare sau administrative în știre
 - Nivel: recomandare

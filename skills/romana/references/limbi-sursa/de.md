@@ -71,7 +71,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: normă
 - Greșit: „Cancelarul a prezentat Planul, iar Opoziția a cerut Garanții.” → Corect: „Cancelarul a prezentat planul, iar opoziția a cerut garanții.”
 - De ce: Germana scrie toate substantivele cu majusculă; româna scrie cu majusculă numele proprii și începutul propoziției. Un substantiv comun tradus („Bundesregierung” = „guvernul federal”, „Bundeskanzler” = „cancelarul”) se scrie cu literă mică, în afara denumirilor oficiale, supuse regulilor din [tipografie.md](../tipografie.md) (RO-TIP-085, RO-TIP-086). Un termen german păstrat ca atare își păstrează grafia originală, cu majusculă, și se scrie cu cursive dacă textul le permite (RO-TIP-060).
-- Sursă: DOOM 3 §1.3 și §2.5 (nereverificat local); ghid gov-md cap. 4, introducere
+- Sursă: DOOM 3 §3.1 I.2.8; DOOM 3 §3.2 I.1 și II.2.2; ghid gov-md cap. 4, introducere
 
 ### RO-CAL-607 Construcțiile cu verb suport (Funktionsverbgefüge)
 - Nivel: recomandare

@@ -96,7 +96,7 @@ Doi termeni se leagă de decizie: nomenclatura (SQL, React, nume de produse) se 
 - Nivel: recomandare
 - Greșit: „Etichetele se scriu între angle brackets.” → Corect: „Etichetele se scriu între paranteze unghiulare.”
 - De ce: „Paranteze unghiulare” este denumirea românească a semnelor < și >. „Unghiular” este în DOOM 3 și în DEX ’98 („care formează un unghi”); se mai spune și „paranteze ascuțite”. Alegi o denumire și o ții.
-- Sursă: DOOM 3 s.v. unghiular; DEX ’98 s.v. unghiular (sinonimul: nereverificat local)
+- Sursă: DOOM 3 s.v. unghiular; DEX ’98 s.v. unghiular (sinonimul „paranteze ascuțite”: nereverificat local)
 
 ## Securitate și termeni definiți
 
