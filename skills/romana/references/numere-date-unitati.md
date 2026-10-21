@@ -42,7 +42,7 @@ Bun:
 - Nivel: normă
 - Greșit: „1.500 cazuri noi” → Corect: „1.500 de cazuri noi”
 - De ce: Decid ultimele două cifre. Când ele fac 20 sau mai mult, inclusiv 00, substantivul primește „de”: „20 de elevi”, „25 de persoane”, „1.500 de cazuri”, „100 de euro”, „300 de persoane”. Când fac de la 01 la 19, „de” nu se pune: „19 persoane”, „101 ani”, „201 ani”. Lista lungă de exemple din ghiduri nu înlocuiește regula: o aplici la orice număr.
-- Sursă: INJ p. 84–86; DOOM 3 §6.5.3; CLDR, reguli de plural ro (categoria few)
+- Sursă: INJ p. 84–86; DOOM 3 §6.5.3; ÎOOP6 p. 108; CLDR, reguli de plural ro (categoria few)
 - Vezi și: RO-NUM-037, RO-NUM-038, RO-NUM-049
 
 ### RO-NUM-002 Fără „de” înaintea unui simbol sau a unei abrevieri
@@ -114,14 +114,14 @@ Bun:
 - Nivel: normă
 - Greșit: „doisprezece mii de lei” → Corect: „douăsprezece mii de lei”
 - De ce: Cifra 12 ia forma de feminin pe lângă substantive feminine: „douăsprezece mii”, „ora douăsprezece”, „a douăsprezecea parte”. La date sunt admise ambele forme: „doisprezece mai” și „douăsprezece mai”.
-- Sursă: DOOM 2 §6.4 (nereverificat local); DOOM 3, s.v. doisprezece, douăsprezece
+- Sursă: DOOM 2 §6.4 (nereverificat local); DOOM 3, s.v. doisprezece, douăsprezece; ÎOOP6 p. 108
 - Vezi și: RO-NUM-040
 
 ### RO-NUM-009 „Ora unu”, „ora două”
 - Nivel: normă
 - Greșit: „ora una, ora doi” → Corect: „ora unu, ora două”
 - De ce: Numeralul care arată ora se spune „unu” (și „douăzeci și unu”), nu „una”, și „două”, nu „doi”: „ora unu”, „ora două”, „ora douăzeci și două”. La date „doisprezece mai” e corect; la oră, „ora douăsprezece”.
-- Sursă: DOOM 2 §6.4 (nereverificat local); DOOM 3, s.v. unu, doi
+- Sursă: DOOM 2 §6.4 (nereverificat local); DOOM 3, s.v. unu, doi; ÎOOP6 p. 108
 - Vezi și: RO-NUM-040
 
 ### RO-NUM-010 „Unu” când numeri
@@ -135,7 +135,7 @@ Bun:
 - Nivel: normă
 - Greșit: „Unu Decembrie” → Corect: „Întâi Decembrie”
 - De ce: Prima zi a lunii se numește cu ordinalul: „întâi mai”, „Întâi Decembrie”. Scrisă cu cifre („1 Decembrie”), se citește tot „întâi”. Majuscula la lună apare când data e o sărbătoare (vezi RO-TIP-013).
-- Sursă: DOOM 3, s.v. decembrie, ianuarie, întâi
+- Sursă: DOOM 3, s.v. decembrie, ianuarie, întâi; ÎOOP6 p. 108 (Numeralul ordinal)
 
 ### RO-NUM-035 Ordinalele cu cifre: cratimă
 - Nivel: normă
@@ -267,7 +267,7 @@ Bun:
 - Nivel: recomandare
 - Corect: „Ședința începe la ora 12:30.”
 - De ce: Ora se scrie cu două-puncte (12:30), forma pe care o recomandă ÎOOP6 și ghidul gov-md; DOOM 3 admite și punctul (12.30). Nici una dintre forme nu e greșeală; ceri doar aceeași formă în tot textul.
-- Sursă: ghid gov-md §9.4.6; DOOM 3 §1.2.6 I; ÎOOP6 (nereverificat local)
+- Sursă: ghid gov-md §9.4.6; DOOM 3 §1.2.6 I; ÎOOP6 p. 108 (Numeralul cardinal)
 
 ### RO-NUM-056 „În jurul orei 19:02”
 - Nivel: recomandare

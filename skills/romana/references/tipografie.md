@@ -74,7 +74,7 @@ Bun: aceeași frază, cu ș, ț și Ș cu virgulă (U+0219, U+021B, U+0218).
 - Nivel: de semnalat
 - Greșit: „Sînt cîrcotașă și, cînd am îmbătrînit, am rămas la fel.” → Corect: „Sunt cârcotașă și, când am îmbătrânit, am rămas la fel.” (doar cu acordul autorului; grafia cu „î” folosită consecvent în tot textul nu se corectează)
 - De ce: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost norma între 1953 și 1993, iar unii autori și unele publicații o păstrează ca opțiune editorială. Aplicată consecvent, de la un capăt la altul, e o convenție a autorului sau a redacției, nu o greșeală izolată: o semnalezi o singură dată, la început, și nu corectezi ocurențele fără acordul autorului. Dacă grafia e amestecată („sînt” și „sunt”, „cînd” și „când” în același text), nu mai e convenție, ci inconsecvență: atunci e normă și se unifică după DOOM 3 („â” în interior, „sunt, suntem”). În citat și în titlul unei opere se păstrează grafia originală (RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). RO-GRA-078 din [gramatica.md](gramatica.md) se aplică textelor care nu au această convenție.
-- Sursă: DOOM 3 §2.2.1–2.2.2 (norma actuală); ÎOOP (nereverificat local)
+- Sursă: DOOM 3 §2.2.1–2.2.2 (norma actuală); ÎOOP6 p. 25 (principiul distribuțional)
 
 ## 2. Majusculele
 
@@ -338,39 +338,39 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 - Nivel: normă
 - Greșit: „Echipa de proiect, a livrat raportul la timp.” → Corect: „Echipa de proiect a livrat raportul la timp.”
 - De ce: Subiectul și predicatul nu se despart prin virgulă, oricât de lung ar fi subiectul și chiar dacă e o propoziție: „Cine dorește să facă renegocierea să meargă la Bruxelles”. Excepția e o apoziție sau o incidentă închisă între două virgule.
-- Sursă: ghid gov-md §9.2.1.2; ÎOOP6 §218 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.2; ÎOOP6 p. 59 (Virgula, ix) și p. 61–62 (Greșeli de utilizare, i)
 
 ### RO-TIP-037 Fără virgulă înaintea complementului sau a circumstanțialului obligatoriu
 - Nivel: normă
 - Greșit: „Primarul a semnat, contractul cu firma.” → Corect: „Primarul a semnat contractul cu firma.”
 - De ce: Complementul direct sau indirect așezat după verb, numele predicativ și, de regulă, circumstanțialul cerut de verb nu se despart prin virgulă. Nici complementul de agent nu se desparte de verb. O virgulă pusă aici are doar rol emfatic.
-- Sursă: ghid gov-md §9.2.1.3; ÎOOP6 §214–283 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.3; ÎOOP6 p. 60 (Virgula, ix)
 - Vezi și: RO-TIP-097
 
 ### RO-TIP-038 Fără virgulă înaintea completivei, a subiectivei și a predicativei
 - Nivel: normă
 - Greșit: „Directorul a anunțat, că termenul se prelungește.” → Corect: „Directorul a anunțat că termenul se prelungește.”
 - De ce: Completiva directă sau indirectă pusă după regentă, subiectiva și predicativa nu se despart prin virgulă: „Am observat că funcționează”, „Problema este cine răspunde”. Detaliile pentru „că”, „dacă”, „când” sunt la RO-TIP-113.
-- Sursă: ghid gov-md §9.2.2.3 și §9.2.2.6; ÎOOP6 §221–222 și §235–237 (nereverificat local)
+- Sursă: ghid gov-md §9.2.2.3 și §9.2.2.6; ÎOOP6 p. 59–60 (Virgula, ix)
 - Vezi și: RO-TIP-097
 
 ### RO-TIP-039 Fără virgulă înaintea atributivei determinative
 - Nivel: normă
 - Greșit: „Cel, care a greșit, plătește amenda.” → Corect: „Cel care a greșit plătește amenda.”
 - De ce: Atributiva determinativă spune care anume e persoana sau lucrul și nu se izolează prin virgulă. Sensul se schimbă dacă o izolezi (vezi RO-TIP-051).
-- Sursă: ghid gov-md §9.2.2.5; ÎOOP6 §237 (nereverificat local)
+- Sursă: ghid gov-md §9.2.2.5; ÎOOP6 p. 59–60 (Virgula, ix)
 
 ### RO-TIP-040 Fără virgulă înaintea lui „și” și „sau” simple
 - Nivel: normă
 - Greșit: „A citit raportul, și a plecat.” → Corect: „A citit raportul și a plecat.”
 - De ce: Părțile de propoziție și propozițiile legate prin „și” sau „sau” nu se despart prin virgulă. Excepțiile: perechile repetate („Au răspuns și clienții, și furnizorii”, „fie… fie”, „nici… nici”), unde virgula e obligatorie, și „și” cu sensul „iar”, urmat de negație („ghidurile publicate, și nu cele vechi”). Pentru „sau” disjunctiv, cazurile sunt la RO-TIP-114.
-- Sursă: ghid gov-md §9.2.1.9, §9.2.1.11 (N.B.), §9.2.1.15 și §9.2.2.1; Ghid UE §10.1.2.4–5 și §10.1.2.13 (nereverificat local); ÎOOP6 §214–283 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.9, §9.2.1.11 (N.B.), §9.2.1.15 și §9.2.2.1; Ghid UE §10.1.2.4–5 și §10.1.2.13 (nereverificat local); ÎOOP6 p. 57–58 (Virgula, ii–iii)
 
 ### RO-TIP-041 „Desigur că”, „bineînțeles că”, „sigur că”: fără virgulă
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Desigur, că măsura va fi contestată.” → Corect: „Desigur că măsura va fi contestată.”
-- De ce: Când „desigur”, „bineînțeles” sau „sigur” introduc o subiectivă cu „că”, virgula dintre ele nu se pune, pentru că subiectiva nu se desparte de regentă. Virgula apare doar când adverbul ține loc de propoziție: „Desigur, măsura va fi contestată.”
-- Sursă: ÎOOP6 §227 (nereverificat local)
+- De ce: Când „desigur”, „bineînțeles” sau „sigur” introduc o subiectivă cu „că”, virgula dintre ele nu se pune, pentru că subiectiva nu se desparte de regentă. ÎOOP6 nu tratează expres „desigur că”; regula decurge din principiul că subiectiva nu se desparte de regentă. Virgula apare doar când adverbul ține loc de propoziție: „Desigur, măsura va fi contestată.”
+- Sursă: ÎOOP6 p. 59–60 (Virgula, ix: subiectiva nu se desparte de regentă); „desigur că” nu e tratat expres
 - Vezi și: RO-TIP-098
 
 ### RO-TIP-042 Fără virgulă înainte de „etc.” și „ș.a.m.d.”
@@ -383,19 +383,19 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 - Nivel: recomandare
 - Greșit: „Guvernul, însă, a amânat votul.” → Corect: „Guvernul însă a amânat votul.”
 - De ce: Ghidul gov-md și Ghidul UE preferă „însă” și „deci” din interiorul propoziției fără virgule: „Măsura constituie deci un avantaj”. ÎOOP6 lasă virgula la alegere la „totuși” și o admite facultativ în cazuri apropiate (vezi RO-NUG-119), așa că forma cu virgule nu se corectează ca greșeală. Cere doar consecvență în tot textul.
-- Sursă: ghid gov-md §9.2.1.16; ÎOOP6 p. 60–61 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.16; ÎOOP6 p. 60–61 (Virgula, xi)
 
 ### RO-TIP-044 „Așadar” și „prin urmare” din interior stau între virgule
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Guvernul așadar a amânat votul.” → Corect: „Guvernul, așadar, a amânat votul.”
-- De ce: Conjuncția „așadar” și locuțiunea „prin urmare”, așezate în interiorul propoziției, se încadrează între virgule. La începutul propoziției nu e nevoie de a doua virgulă: „Așadar, votul a fost amânat.”
-- Sursă: ghid gov-md §9.2.1.13; ÎOOP6 §231 (nereverificat local)
+- De ce: Conjuncția „așadar” și locuțiunea „prin urmare”, așezate în interiorul propoziției, se încadrează între virgule. La începutul propoziției nu e nevoie de a doua virgulă: „Așadar, votul a fost amânat.” ÎOOP6 lasă facultativă virgula la cuvinte de acest fel („totuși”, p. 60–61), deci forma fără virgule nu e greșeală.
+- Sursă: ghid gov-md §9.2.1.13; ÎOOP6 p. 59 (Virgula, vi) și p. 60–61 (Virgula, xi)
 
 ### RO-TIP-045 Virgulă înaintea lui „dar”, „iar”, „ci”, „însă”
 - Nivel: normă
 - Greșit: „Ministerul a promis fonduri dar nu le-a alocat.” → Corect: „Ministerul a promis fonduri, dar nu le-a alocat.”
 - De ce: Conjuncțiile adversative „dar”, „iar”, „ci”, „însă” aflate la începutul unei propoziții sau al unei părți coordonate sunt precedate de virgulă. „Însă” din interiorul propoziției urmează RO-TIP-043.
-- Sursă: ghid gov-md §9.2.1.11 și §9.2.2.2; Ghid UE §10.1.2.7 (nereverificat local); ÎOOP6 §214–283 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.11 și §9.2.2.2; Ghid UE §10.1.2.7 (nereverificat local); ÎOOP6 p. 57–58 (Virgula, ii)
 
 ### RO-TIP-046 Virgulă înaintea lui „precum și”, „cât și”, „dar și”
 - Nivel: recomandare
@@ -407,13 +407,13 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 - Nivel: normă
 - Greșit: „Ion Popescu fostul ministru a declarat” → Corect: „Ion Popescu, fostul ministru, a declarat”
 - De ce: Apoziția explicativă se închide între virgule când fraza continuă după ea (sau între linii de pauză, dacă are virgule în interior; vezi RO-TIP-062). Dacă apoziția stă la sfârșitul propoziției, ajunge o singură virgulă înainte.
-- Sursă: ghid gov-md §9.2.1.4.5; ÎOOP6 §220 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.4.5; ÎOOP6 p. 59–60 (Virgula, viii și x)
 
 ### RO-TIP-048 Virgulă după construcția gerunzială sau participială de la început
 - Nivel: normă
 - Greșit: „Luând în considerare datele Guvernul a decis.” → Corect: „Luând în considerare datele, Guvernul a decis.”
 - De ce: Construcția cu gerunziu sau cu participiu așezată la începutul frazei se desparte de restul prin virgulă. Dacă stă după regentă, regula se aplică după legătura cu verbul (vezi RO-TIP-049).
-- Sursă: ghid gov-md §9.2.1.4.2; ÎOOP6 §223 și Ghid UE §10.1.2.2 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.4.2; ÎOOP6 p. 58 (Virgula, v) și Ghid UE §10.1.2.2 (nereverificat local)
 - Vezi și: RO-TIP-099
 
 ### RO-TIP-049 Circumstanțialul intercalat sau mutat în față
@@ -426,14 +426,14 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 ### RO-TIP-050 Concesiva, incidentele și vocativul se izolează
 - Nivel: normă
 - Greșit: „Deși plouă echipa a plecat.” → Corect: „Deși plouă, echipa a plecat.”
-- De ce: Subordonata concesivă se desparte prin virgulă oriunde ar sta. La fel se izolează vocativul („Maria, vino încoace”), interjecția și propozițiile intercalate între părțile regentei.
-- Sursă: ghid gov-md §9.2.1.5, §9.2.2.7 și §9.2.2.13; ÎOOP6 §228–249 (nereverificat local)
+- De ce: Subordonata concesivă se desparte prin virgulă, mai ales când stă înaintea regentei (ÎOOP6 p. 59); la circumstanțialele așezate după regentă virgula e adesea facultativă. La fel se izolează vocativul („Maria, vino încoace”), interjecția și propozițiile intercalate între părțile regentei.
+- Sursă: ghid gov-md §9.2.1.5, §9.2.2.7 și §9.2.2.13; ÎOOP6 p. 58–59 (Virgula, iv, vi, viii)
 
 ### RO-TIP-051 Atributiva explicativă are virgulă, cea determinativă nu
 - Nivel: normă
 - Corect: „Deputații, care au votat, au plecat” (toți au votat și toți au plecat) este altceva decât „Deputații care au votat au plecat” (au plecat doar cei care au votat).
 - De ce: Virgula schimbă sensul. Când contextul arată limpede una dintre lecturi și virgula o contrazice, e greșeală de punctuație; când textul rămâne ambiguu, semnalezi cazul și întrebi autorul (vezi RO-TIP-112).
-- Sursă: ghid gov-md §9.2.2.5; Ghid UE §10.1.2.17 (nereverificat local); ÎOOP6 §214–283 (nereverificat local)
+- Sursă: ghid gov-md §9.2.2.5; Ghid UE §10.1.2.17 (nereverificat local); ÎOOP6 p. 59–60 (Virgula, viii–ix)
 - Vezi și: RO-TIP-100
 
 ### RO-TIP-052 Cauzala se desparte, în afară de cauza unică
@@ -460,13 +460,13 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 - Nivel: normă
 - Greșit: „Notificați, când este gata.” → Corect: „Notificați când este gata.”
 - De ce: Subordonata pusă după regentă nu primește automat virgulă. Nu se despart: completiva („Am observat că funcționează”), relativa determinativă („Fișierul pe care l-ați selectat”) și temporala pusă după regentă („Notificați când este gata”). Virgula se pune la cauzală (de regulă), la condițională (de regulă), la consecutivă și la orice subordonată intercalată. A cere virgulă înaintea oricărei subordonate e hipercorectitudine.
-- Sursă: ghid gov-md §9.2.2.3, §9.2.2.5, §9.2.2.6 și §9.2.2.8; ÎOOP6 §214–283 (nereverificat local)
+- Sursă: ghid gov-md §9.2.2.3, §9.2.2.5, §9.2.2.6 și §9.2.2.8; ÎOOP6 p. 59–61 (Virgula, viii, ix, xi)
 
 ### RO-TIP-114 Fără virgulă înaintea lui „sau” disjunctiv simplu
 - Nivel: normă
 - Greșit: „apasă pe legătură, sau lipește-o” → Corect: „apasă pe legătură sau lipește-o”
 - De ce: „Sau” simplu, între părți de propoziție sau între propoziții coordonate, nu cere virgulă. Virgula e corectă în trei cazuri: la perechea „sau… sau”, la „sau” cu sens explicativ („adică”), pus între virgule, și când înaintea lui se închide o incidentă sau o apoziție.
-- Sursă: ghid gov-md §9.2.1.9 și §9.2.2.1; INJ p. 67–70; ÎOOP6 §214–283 (nereverificat local)
+- Sursă: ghid gov-md §9.2.1.9 și §9.2.2.1; INJ p. 67–70; ÎOOP6 p. 58 (Virgula, ii–iii)
 
 ### RO-TIP-115 Virgulă înaintea lui „nu” de opoziție
 - Nivel: recomandare
@@ -499,31 +499,31 @@ Bun:
 Atenție: ghilimelele curbe nu sunt un semn de text generat. „…” sunt chiar ghilimelele românești; cele drepte sunt cele greșite într-un text îngrijit (vezi RO-NUG-095).
 
 ### RO-TIP-054 Ghilimelele românești: „…” și «…»
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „"Nu plec", a spus el.” → Corect: „„Nu plec”, a spus el.”
-- De ce: Citatul stă între „…”, iar citatul din citat între «…». Exemplu cu trei niveluri: „El a spus: «Colega mea a întrebat: „Cine vine?”»”. Ghilimelele drepte se înlocuiesc cu cele românești.
-- Sursă: ghid gov-md §9.8.1–9.8.3; ÎOOP6 §268–274 (nereverificat local)
+- De ce: Citatul stă între „…”, iar citatul din citat între «…». Exemplu cu trei niveluri: „El a spus: «Colega mea a întrebat: „Cine vine?”»”. Ghilimelele drepte se înlocuiesc cu cele românești; ÎOOP6 formulează asta ca recomandare (p. 43).
+- Sursă: ghid gov-md §9.8.1–9.8.3; ÎOOP6 p. 43 (Ghilimelele)
 - Vezi și: RO-TIP-102, RO-TIP-118
 
 ### RO-TIP-055 Ghilimelele englezești și combinațiile mixte sunt greșite
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „„Nu plec“, a spus el.” → Corect: „„Nu plec”, a spus el.”
-- De ce: În textul românesc sunt greșite ghilimelele drepte, cele englezești cu deschidere U+201C și combinația „…“ (cu închidere U+201C, specifică germanei). Închiderea corectă e ” (U+201D). Înainte să corectezi, verifici fiecare cap al citatului: problema nu e că ghilimelele ar fi „curbe”, ci că perechea nu e jos–sus.
-- Sursă: ghid gov-md §9.8.1; ÎOOP6 §268–274 (nereverificat local)
+- De ce: În textul românesc sunt greșite ghilimelele drepte, cele englezești cu deschidere U+201C și combinația „…“ (cu închidere U+201C, specifică germanei). Închiderea corectă e ” (U+201D). ÎOOP6 descrie doar ghilimelele românești „ ” și le recomandă (p. 43); nu menționează cele englezești sau germane. Înainte să corectezi, verifici fiecare cap al citatului: problema nu e că ghilimelele ar fi „curbe”, ci că perechea nu e jos–sus.
+- Sursă: ghid gov-md §9.8.1; ÎOOP6 p. 43 (Ghilimelele)
 - Vezi și: RO-TIP-102, RO-TIP-118
 
 ### RO-TIP-056 Pentru citatul din citat, nu apostrofurile ‘…’
 - Nivel: normă
 - Greșit: „Antrenorul mi-a spus: ‘Lovește puternic’” → Corect: „Antrenorul mi-a spus: «Lovește puternic»”
 - De ce: Citatul din citat se pune între «…». Apostrofurile ‘…’, propuse de unele ghiduri de presă, nu sunt forma normată pentru citat. Regula privește doar citatele: ghilimelele simple la explicarea unui cuvânt (deadline ‘termen-limită’) sunt admise (vezi RO-NUG-120).
-- Sursă: ghid gov-md §9.8.2; ÎOOP6 p. 43 (nereverificat local)
+- Sursă: ghid gov-md §9.8.2; ÎOOP6 p. 43 (Ghilimelele: « » pentru citat în citat; ‘ ’ doar pentru glosare)
 - Vezi și: RO-TIP-102
 
 ### RO-TIP-057 Semnul întrebării sau al exclamării care aparține citatului stă înăuntru
 - Nivel: normă
 - Greșit: „El a întrebat: "Ce să fie"?” → Corect: „El a întrebat: „Ce să fie?””
 - De ce: Semnul întrebării sau al exclamării care ține de citat se pune înaintea ghilimelelor de închidere și după el nu se mai pune punct. Dacă semnul aparține propoziției autorului („Ai citit „Moromeții”?”), stă după ghilimele.
-- Sursă: ghid gov-md §9.1.2 și §9.4.4; ÎOOP6 §269 (nereverificat local)
+- Sursă: ghid gov-md §9.1.2 și §9.4.4; ÎOOP6 p. 44 (Ghilimelele, i) și p. 56 (Semnul întrebării)
 - Vezi și: RO-TIP-103
 
 ### RO-TIP-058 Punctul după citatul-frază introdus prin două-puncte
@@ -537,13 +537,13 @@ Atenție: ghilimelele curbe nu sunt un semn de text generat. „…” sunt chia
 - Nivel: normă
 - Greșit: „– "Bună ziua!"” → Corect: „– Bună ziua!”
 - De ce: Replica introdusă cu linie de dialog nu mai primește ghilimele. Una dintre cele două convenții de redare a vorbirii directe se alege pentru tot textul.
-- Sursă: ÎOOP6 §276 (nereverificat local)
+- Sursă: ÎOOP6 p. 44 (Ghilimelele, greșeli i) și p. 45 (Linia de dialog, greșeli i)
 
 ### RO-TIP-104 Citatul integrat în frază: punctul după ghilimele
 - Nivel: normă
 - Greșit: „A vorbit despre "un buget care nu ajunge."” → Corect: „A vorbit despre „un buget care nu ajunge”.”
 - De ce: Când citatul continuă fraza autorului, fără două-puncte, punctul stă după ghilimelele de închidere. Citatul-frază completă introdus prin două-puncte e cazul disputat de la RO-TIP-058.
-- Sursă: ghid gov-md §9.1.2 și §9.8.5; ÎOOP6 §269 (nereverificat local)
+- Sursă: ghid gov-md §9.1.2 și §9.8.5; ÎOOP6 p. 51 (Punctul, ii)
 
 ## 5. Linia de pauză, cratima și intervalele
 
@@ -573,7 +573,7 @@ Bun:
 - Nivel: normă
 - Corect: „Toate partidele – inclusiv cele din opoziție, care au boicotat ședința – au semnat.”
 - De ce: Linia de pauză („–”) delimitează incize și apoziții explicative, mai ales pe cele care conțin ele însele virgule, sau marchează un predicat omis. Regula după care „nu se folosește în română” e falsă. Se scrie cu spațiu de ambele părți.
-- Sursă: ghid gov-md §9.9.3–9.9.5; ÎOOP6 §277–283 (nereverificat local)
+- Sursă: ghid gov-md §9.9.3–9.9.5; ÎOOP6 p. 45–46 (Linia de pauză, funcții i–iii)
 - Vezi și: RO-TIP-106
 
 ### RO-TIP-063 Cratima nu ține loc de linie de pauză
@@ -587,25 +587,25 @@ Bun:
 - Nivel: normă
 - Greșit: „Dacă ajungeți la timp, – și sperăm că veți ajunge – vă așteptăm la intrare.” → Corect: „Dacă ajungeți la timp – și sperăm că veți ajunge –, vă așteptăm la intrare.”
 - De ce: Când incidenta dintre linii urmează unei construcții după care fraza cere oricum virgulă, virgula se pune după a doua linie, nu înaintea primei. Dacă fraza n-ar fi cerut virgulă, nu se pune nici după a doua linie.
-- Sursă: ghid gov-md §9.9.4; ÎOOP6 p. 47 (nereverificat local)
+- Sursă: ghid gov-md §9.9.4; ÎOOP6 p. 47 (Linia de pauză, greșeli ii–iii)
 
 ### RO-TIP-065 Intervalele: cratimă fără spații
 - Nivel: recomandare
 - Corect: „anii 2020-2021, orele 8-16, articolele 12-14, perioada 1-23 august, două-trei zile”
 - De ce: Pentru limite de timp, de spațiu și pentru aproximări DOOM 3 și ghidul gov-md preferă cratima fără spații; linia de pauză cu spații e admisă de DOOM 3, dar socotită mai lungă fără rost. Ghidul gov-md recomandă linia de pauză doar între două părți (RO-TIP-066) sau când cratima poate fi confundată cu un nume compus. Propui cratima, fără spații, și ceri consecvență; linia de pauză nu se corectează ca greșeală.
-- Sursă: ghid gov-md §9.9.7 și §9.11.8; DOOM 3 §1.2.5 II.2–II.6
+- Sursă: ghid gov-md §9.9.7 și §9.11.8; DOOM 3 §1.2.5 II.2–II.6; ÎOOP6 p. 41 (Cratima, funcții ii–iii) și p. 46 (Linia de pauză, iv)
 
 ### RO-TIP-066 Relația dintre două părți: linia de pauză sau cratima
 - Nivel: disputat
 - Corect: „Acordul România – Franța” și „Paris-Londra”.
-- De ce: Pentru relația dintre două părți (întâlnirea NATO – Rusia, acordul România – Franța) DOOM 3 și ghidul gov-md preferă linia de pauză, mai ales dacă un element are cratimă internă (distanța Iași – Cluj-Napoca). ÎOOP6 folosește și cratima. Nu corectezi; ceri aceeași alegere în tot textul.
-- Sursă: ghid gov-md §9.9.7 și §9.11.8; DOOM 3 §1.2.5 II.7; ÎOOP6 p. 41 și 46 (nereverificat local)
+- De ce: Pentru relația dintre două părți (întâlnirea NATO – Rusia, acordul România – Franța) DOOM 3 și ghidul gov-md preferă linia de pauză, mai ales dacă un element are cratimă internă (distanța Iași – Cluj-Napoca). ÎOOP6 folosește cratima pentru cuvinte comune („raportul semnificant-semnificat”), dar cere linia de pauză când elementele sunt nume proprii sau conțin cratimă (p. 41, p. 46). Nu corectezi; ceri aceeași alegere în tot textul.
+- Sursă: ghid gov-md §9.9.7 și §9.11.8; DOOM 3 §1.2.5 II.7; ÎOOP6 p. 41 (Cratima, funcții i, greșeli ii) și p. 46 (Linia de pauză, iv)
 
 ### RO-TIP-067 Intervalul: cu prepoziții sau cu semn, nu amândouă
 - Nivel: normă
 - Greșit: „deschis între 10-18” → Corect: „deschis între 10 și 18”
 - De ce: Cratima sau linia de pauză înseamnă „între” sau „dintre”; scrisă după „între”, spune de două ori același lucru. Alegi: „între 10 și 18” sau „10-18”. La fel „distanța Ungheni-Chișinău” sau „distanța dintre Ungheni și Chișinău”, nu „distanța dintre Ungheni-Chișinău”.
-- Sursă: ghid gov-md §9.11.8 (N.B.); DOOM 2 §6.4 (nereverificat local)
+- Sursă: ghid gov-md §9.11.8 (N.B.); ÎOOP6 p. 41 (Cratima, greșeli i); DOOM 2 §6.4 (nereverificat local)
 
 ### RO-TIP-121 Titlul cu subtitlu: linie de pauză cu spații
 - Nivel: recomandare
@@ -647,13 +647,13 @@ Verificări rapide (mecanice, dar cu ochii pe excepții):
 - Nivel: normă
 - Greșit: „km / h, a . c., prim - ministru” → Corect: „km/h, a.c., prim-ministru”
 - De ce: Cratima, bara oblică și punctele din interiorul abrevierilor se scriu fără spații. Excepția e cratima-marcaj de listă, la început de rând. Ce compuse se scriu cu cratimă spune RO-GRA-082 din [gramatica.md](gramatica.md); scrierea siglelor (fără puncte între litere), RO-GRA-090 din același fișier.
-- Sursă: ghid gov-md §9.1.11, §9.11.9 și §9.12.4; DOOM 3 §1.2.3 pct. 4; ÎOOP6 §214–283 (nereverificat local)
+- Sursă: ghid gov-md §9.1.11, §9.11.9 și §9.12.4; DOOM 3 §1.2.3 pct. 4; ÎOOP6 p. 34 (Bara oblică) și p. 38–39 (Punctul)
 
 ### RO-TIP-035 Titlurile, subtitlurile și legendele nu se încheie cu punct
 - Nivel: normă
 - Greșit: „Guvernul aprobă bugetul.” → Corect: „Guvernul aprobă bugetul”
 - De ce: Titlurile (inclusiv de acte și de capitole), subtitlurile și legendele foto nu se încheie cu punct. Semnul întrebării, semnul exclamării și punctele de suspensie, dacă sunt necesare, rămân. Titlul format din mai multe unități independente poate avea punct în interior („Capitolul I. Dispoziții generale. Definiții”).
-- Sursă: ghid gov-md §9.1.5; ÎOOP6 p. 52 (nereverificat local)
+- Sursă: ghid gov-md §9.1.5; ÎOOP6 p. 52 (Punctul, greșeli i)
 
 ## 7. Cursivele pentru cuvinte străine
 
