@@ -139,7 +139,7 @@ Surse pentru metodă: DSL, s.v. PARONIM(E) și PARONOMAZĂ; A. Grădinaru, „Va
 
 ### Cum dovedești un pleonasm
 
-Pleonasmul pune alături cuvinte cu același sens, fără să adauge informație. Îl dovedești cu dicționarul: cauți definiția unuia dintre cuvinte și verifici dacă ea conține deja sensul celuilalt. Dacă îl conține și al doilea cuvânt nu aduce nimic în context, e pleonasm: scoți cuvântul de prisos sau reformulezi.
+Pleonasmul pune alături cuvinte cu același sens, fără să adauge informație. Îl dovedești cu dicționarul: cauți definiția unuia dintre cuvinte și verifici dacă ea conține deja sensul celuilalt. Dacă îl conține și al doilea cuvânt nu aduce nimic în context, e pleonasm: scoți cuvântul de prisos sau reformulezi. Proba din dicționar arată că repetarea există; nivelul depinde de cât de vizibilă e ea pentru vorbitorul obișnuit (vezi mai jos).
 
 Slab:
 
@@ -158,7 +158,7 @@ Pleonasmele obișnuite au câteva tipare:
 - doi conectori cu același sens, puși alături („dar însă”);
 - un determinant pe care definiția substantivului îl conține deja („o inovație nouă”).
 
-Nivelul îl dai după probă și după surse. E **normă** când definiția din dicționar conține sensul repetat și sursele nu tolerează alăturarea. E **recomandare** când repetarea se vede doar din etimologie, când unele surse o socotesc tolerată de uz sau când al doilea cuvânt poate aduce o nuanță. Pleonasmul pus voit, pentru accent sau pentru efect, în poezie, în citat ori în vorbirea redată a cuiva, nu se corectează.
+Nivelul îl dai după cât de vizibilă e repetarea și după surse. E **normă** când vorbitorul obișnuit vede repetarea (prefixul, cuvântul sau sensul repetat îi sunt cunoscute) și sursele nu tolerează alăturarea. E **recomandare** când repetarea e ascunsă într-un element împrumutat sau savant pe care vorbitorul obișnuit nu-l recunoaște, chiar dacă definiția din dicționar o arată (DSL numește aceste pleonasme latente: „muncă laborioasă”, „a cronometra timpul”, „a aduce aportul”), când unele surse o socotesc tolerată de uz sau când al doilea cuvânt poate aduce o nuanță. Pleonasmul pus voit, pentru accent sau pentru efect, în poezie, în citat ori în vorbirea redată a cuiva, nu se corectează.
 
 Surse pentru metodă: DSL, s.v. PLEONASM; ghid gov-md §8.2; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202–204.
 
@@ -175,7 +175,7 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 ### RO-SEM-201 Determinantul pe care definiția îl conține deja
 - Nivel: normă
 - Greșit: „Lansăm o inovație nouă pentru clienții noștri.” → Corect: „Lansăm o inovație pentru clienții noștri.”
-- De ce: „Inovația” e chiar o noutate (DEX '98), deci „nouă” nu adaugă nimic. Proba pentru orice pleonasm de acest fel e aceeași: cauți definiția substantivului și verifici dacă ea conține deja sensul determinantului. Dacă autorul vrea să spună altceva (că inovația e mai recentă decât alta), o spune explicit.
+- De ce: „Inovația” e chiar o noutate (DEX '98), iar sensul „ceva nou” al cuvântului îl cunoaște orice vorbitor, deci repetarea se vede și „nouă” nu adaugă nimic. Proba pentru orice pleonasm de acest fel e aceeași: cauți definiția substantivului și verifici dacă ea conține deja sensul determinantului; dacă repetarea se vede doar din originea cuvântului, e un pleonasm latent (RO-SEM-203). Dacă autorul vrea să spună altceva (că inovația e mai recentă decât alta), o spune explicit.
 - Sursă: DEX '98 s.v. inovație; DSL, s.v. PLEONASM
 
 ### RO-SEM-202 Prefixul „re-” repetat de „din nou” sau „încă o dată”
@@ -313,8 +313,8 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 ### RO-SEM-203 Pleonasmul care se vede doar din etimologie
 - Nivel: recomandare
 - Greșit: „Antrenorul a cronometrat timpul fiecărui alergător.” → Corect: „Antrenorul l-a cronometrat pe fiecare alergător.”
-- De ce: DEX '98 definește „a cronometra” ca „a măsura durata unei acțiuni cu ajutorul unui cronometru” și îl dă „din fr. chronométrer”; repetarea vine din elementul grecesc „crono-” („timp”), pe care DSL (s.v. PLEONASM) îl dă ca exemplu de pleonasm latent. Cuvântul „timp” nu apare în definiție, deci repetarea se vede doar din originea cuvântului: e o neglijență pentru un cititor cultivat, nu o greșeală gravă. Granița e definiția: dacă definiția din dicționar conține chiar cuvântul repetat („glicemie în sânge”, unde DEX '96 definește glicemia prin „glucoză aflată în sânge”; „muncă laborioasă”, unde DEX '98 dă „laborios” = „care cere multă muncă”), pleonasmul se vede din dicționar și intră la RO-SEM-201, ca normă.
-- Sursă: DEX '98 s.v. cronometra, laborios; DEX '96 s.v. glicemie; DSL, s.v. PLEONASM
+- De ce: „A cronometra” înseamnă „a măsura durata unei acțiuni cu ajutorul unui cronometru” (DEX '98, din fr. „chronométrer”), iar elementul „crono-” vine din grecescul pentru „timp”. DSL dă chiar îmbinarea „a cronometra timpul” ca exemplu de pleonasm latent: repetarea e ascunsă într-un element savant pe care vorbitorul obișnuit nu-l recunoaște, iar asemenea pleonasme s-au impus în limbă. De aceea e o neglijență pentru un cititor cultivat, nu o greșeală, și doar o propui. Tot aici intră „muncă laborioasă” („laborios” = „care cere multă muncă”, DEX '98) și „glicemie în sânge” (glicemia e cantitatea de glucoză din sânge, DEX '96): dicționarul arată repetarea, dar vorbitorul obișnuit nu o vede.
+- Sursă: DSL, s.v. PLEONASM; DEX '98 s.v. cronometra, laborios; DEX '96 s.v. glicemie
 
 ### RO-SEM-212 A preciza foarte clar
 - Nivel: recomandare
