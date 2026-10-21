@@ -55,7 +55,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 - Nivel: ce nu e greșeală
 - Corect: „Votul a doi senatori a decis rezultatul.” La fel, „opiniile a numeroși experți”. Nu corectezi construcția cu „a” înaintea numeralului.
 - De ce: Regula falsă: „a” ar fi aici articolul genitival, care trebuie acordat („al doi senatori”), sau construcția ar fi greșită. Un grup nearticulat care începe cu un numeral („doi senatori”) sau cu un cuvânt ca „numeroși” nu are formă de genitiv, de aceea genitivul se face cu prepoziția „a”, care nu se acordă.
-- Sursă: DOOM 3 §6.1.1 (adjectivele anumit … numeros: g.-d. cu „a”)
+- Sursă: ÎOOP6 p. 103 (Substantivul, genitiv-dativ); DOOM 3 §6.1.1 (adjectivele din listă: anumit … numeros)
 
 ### RO-NUG-025 „Vreo zece oameni”
 - Nivel: ce nu e greșeală
@@ -500,7 +500,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-095 Ghilimelele „…”
 - Nivel: ce nu e greșeală
 - Corect: „Orașul după ploaie” (un titlu pus între ghilimelele românești). Nu înlocuiești „…” cu ghilimele drepte.
-- De ce: Regula falsă, preluată din ghidurile pentru engleză: ghilimelele curbe ar fi un semn de text generat și trebuie înlocuite cu cele drepte. În română, ghilimelele normate sunt „…” (jos, apoi sus) și «…»; ghilimelele drepte sunt greșite în textul îngrijit.
+- De ce: Regula falsă, preluată din ghidurile pentru engleză: ghilimelele curbe ar fi un semn de text generat și trebuie înlocuite cu cele drepte. În română, ghilimelele normate sunt „…” (jos, apoi sus) și «…»; ghilimelele drepte nu sunt forma recomandată în textul îngrijit (ÎOOP6 p. 43).
 - Sursă: ghid gov-md §9.8
 
 ### RO-NUG-096 Apostroful

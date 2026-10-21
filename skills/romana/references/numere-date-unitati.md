@@ -63,7 +63,7 @@ Bun:
 - Nivel: recomandare
 - Greșit: „20 de mai” → Corect: „20 mai”
 - De ce: Data („20 mai”, „31 august”) și anul („anul 2020”, „în 2025”) nu intră sub regula cu „de”: ele nu numără obiecte.
-- Sursă: INJ p. 84–86
+- Sursă: INJ p. 84–86; sprijin indirect: DOOM 3, s.v. doi2 („data de doi ianuarie”) și ÎOOP6 p. 108 (datele fără „de”), care nu condamnă însă expres „20 de mai”
 - Vezi și: RO-NUM-038
 
 ### RO-NUM-050 Fără „de” după numeralele zecimale
@@ -82,7 +82,7 @@ Bun:
 - **Ora** se spune „ora unu”, „ora două”, „ora douăzeci și unu” („ora una”, „ora doi” sunt considerate greșite).
 - **Numeralul „unu”** când numeri nu devine „unul”: „unu, doi, trei”.
 - **„Procent” și „la sută”** nu se pun împreună („un procent de 25 la sută”): vezi RO-SEM-243 în [paronime-si-pleonasme.md](paronime-si-pleonasme.md). Alegi una dintre forme: „2%”, „doi la sută” sau „două procente”.
-- **Genitivul și dativul cu numeral** se pot face cu „a” și „la” („votul a doi senatori”, „a dat note la doi elevi”). Sunt forme corecte; vezi RO-NUG-024 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md).
+- **Genitivul și dativul cu numeral** se pot face cu „a” („votul a doi senatori”, „dorința a mulți copii”; ÎOOP6 p. 103). Construcțiile cu „la” cu valoare de genitiv sunt neliterare („din cauza la doctor”); „la” cu dativul se admite doar la adjectivele din lista DOOM 3 §6.1.1 (anumit, numeros …). Vezi RO-NUG-024 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md).
 
 Slab:
 
@@ -169,7 +169,7 @@ Bun:
 - Nivel: normă
 - Greșit: „12.5%” → Corect: „12,5%”
 - De ce: Zecimalele se despart prin virgulă: „12,5%”, „1,1 miliarde”, „3,5”. Punctul zecimal e englezesc. Excepție fac codul, datele tehnice și citatele în altă limbă.
-- Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local); DOOM 3 §1.2.6 II (indirect) și s.v. miliard (1,1 miliarde)
+- Sursă: ghid gov-md §7.4.1.4; Ghid UE §10.4.3 (nereverificat local); ÎOOP6 p. 54 (Punctul-și-virgula, vii: zecimale scrise cu virgulă); DOOM 3 §1.2.6 II (indirect) și s.v. miliard (1,1 miliarde)
 - Vezi și: RO-NUM-052
 
 ### RO-NUM-015 Punctul grupează miile
@@ -384,5 +384,5 @@ Cifrele, datele, monedele și unitățile se compară cu originalul înainte de 
 - Nivel: normă
 - Greșit: „3.5 million de dolari” → Corect: „3,5 milioane de dolari”
 - De ce: La traducere sau la rescriere compari fiecare cifră, dată, monedă și unitate cu originalul: „3.5 million” devine „3,5 milioane”, „1,500” (englezesc) devine „1.500”. Conversiile (mile în kilometri, monede) se fac doar cu sursa cursului sau a factorului; altfel păstrezi unitatea originală. O cifră schimbată e o abatere de la regula de fidelitate din SKILL.md, deci normă cu gravitatea P0 (vezi [fidelitate.md](fidelitate.md)).
-- Sursă: regula de fidelitate din SKILL.md; ghid gov-md §7.4.1.4
+- Sursă: DOOM 3, s.v. milion, miliard (pl. milioane; „1,1 miliarde”); ÎOOP6 p. 54 (vii); regula de fidelitate din SKILL.md; ghid gov-md §7.4.1.4
 

@@ -167,8 +167,8 @@ Bun:
 
 ### RO-TIP-009 Compartimentele unei instituții: doar primul cuvânt cu majusculă
 - Nivel: normă
-- Greșit: „Consiliul de Administrație al BNR” → Corect: „Consiliul de administrație al BNR”
-- De ce: Organele de conducere și subdiviziunile din interiorul unei instituții (direcție, secție, serviciu, comisie permanentă) se scriu cu majusculă doar la primul cuvânt: „Direcția de studii economice”. Instituția de sine stătătoare, cu personalitate juridică, rămâne la RO-TIP-005.
+- Greșit: „Direcția de Studii Economice” → Corect: „Direcția de studii economice”
+- De ce: Organele de conducere și subdiviziunile din interiorul unei instituții (direcție, secție, serviciu, comisie permanentă) se scriu cu majusculă doar la primul cuvânt: „Direcția de studii economice”. DOOM 3 §3.1 I.3.1 admite și varianta „Direcția Studii economice” (cu două majuscule): nu o corectezi. Forma cu o singură majusculă este cea de bază; „Consiliul de administrație” e dat tot acolo. Instituția de sine stătătoare, cu personalitate juridică, rămâne la RO-TIP-005.
 - Sursă: ghid gov-md §4.1.7.3; DOOM 3 §3.1 I.3.1
 - Vezi și: RO-TIP-093
 
@@ -381,14 +381,14 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 
 ### RO-TIP-043 „Însă” și „deci” din interiorul propoziției, fără virgule
 - Nivel: recomandare
-- Greșit: „Guvernul, însă, a amânat votul.” → Corect: „Guvernul însă a amânat votul.”
+- Corect: „Guvernul însă a amânat votul.” (preferat de ghiduri); „Guvernul, însă, a amânat votul.” nu se corectează.
 - De ce: Ghidul gov-md și Ghidul UE preferă „însă” și „deci” din interiorul propoziției fără virgule: „Măsura constituie deci un avantaj”. ÎOOP6 lasă virgula la alegere la „totuși” și o admite facultativ în cazuri apropiate (vezi RO-NUG-119), așa că forma cu virgule nu se corectează ca greșeală. Cere doar consecvență în tot textul.
 - Sursă: ghid gov-md §9.2.1.16; ÎOOP6 p. 60–61 (Virgula, xi)
 
 ### RO-TIP-044 „Așadar” și „prin urmare” din interior stau între virgule
 - Nivel: recomandare
-- Greșit: „Guvernul așadar a amânat votul.” → Corect: „Guvernul, așadar, a amânat votul.”
-- De ce: Conjuncția „așadar” și locuțiunea „prin urmare”, așezate în interiorul propoziției, se încadrează între virgule. La începutul propoziției nu e nevoie de a doua virgulă: „Așadar, votul a fost amânat.” ÎOOP6 lasă facultativă virgula la cuvinte de acest fel („totuși”, p. 60–61), deci forma fără virgule nu e greșeală.
+- Corect: „Guvernul, așadar, a amânat votul.” (preferat de ghidul gov-md); „Guvernul așadar a amânat votul.” nu se corectează.
+- De ce: Ghidul gov-md încadrează între virgule „așadar” și „prin urmare” așezate în interiorul propoziției; alte ghiduri (vezi RO-TIP-043) le scriu fără virgule. Preferințele nu sunt norme, deci ceri doar consecvență. La începutul propoziției nu e nevoie de a doua virgulă: „Așadar, votul a fost amânat.” ÎOOP6 lasă facultativă virgula la cuvinte de acest fel („totuși”, p. 60–61), deci forma fără virgule nu e greșeală.
 - Sursă: ghid gov-md §9.2.1.13; ÎOOP6 p. 59 (Virgula, vi) și p. 60–61 (Virgula, xi)
 
 ### RO-TIP-045 Virgulă înaintea lui „dar”, „iar”, „ci”, „însă”
@@ -496,28 +496,25 @@ Bun:
 
 > Directorul a spus: „Nu plec.” Apoi a adăugat: „Nu mai e nimic de discutat.”
 
-Atenție: ghilimelele curbe nu sunt un semn de text generat. „…” sunt chiar ghilimelele românești; cele drepte sunt cele greșite într-un text îngrijit (vezi RO-NUG-095).
+Atenție: ghilimelele curbe nu sunt un semn de text generat. „…” sunt chiar ghilimelele românești; cele drepte nu sunt forma recomandată într-un text îngrijit (vezi RO-NUG-095).
 
 ### RO-TIP-054 Ghilimelele românești: „…” și «…»
 - Nivel: recomandare
 - Greșit: „"Nu plec", a spus el.” → Corect: „„Nu plec”, a spus el.”
 - De ce: Citatul stă între „…”, iar citatul din citat între «…». Exemplu cu trei niveluri: „El a spus: «Colega mea a întrebat: „Cine vine?”»”. Ghilimelele drepte se înlocuiesc cu cele românești; ÎOOP6 formulează asta ca recomandare (p. 43).
 - Sursă: ghid gov-md §9.8.1–9.8.3; ÎOOP6 p. 43 (Ghilimelele)
-- Vezi și: RO-TIP-102, RO-TIP-118
 
-### RO-TIP-055 Ghilimelele englezești și combinațiile mixte sunt greșite
+### RO-TIP-055 Ghilimelele englezești și combinațiile mixte nu sunt forma recomandată
 - Nivel: recomandare
 - Greșit: „„Nu plec“, a spus el.” → Corect: „„Nu plec”, a spus el.”
-- De ce: În textul românesc sunt greșite ghilimelele drepte, cele englezești cu deschidere U+201C și combinația „…“ (cu închidere U+201C, specifică germanei). Închiderea corectă e ” (U+201D). ÎOOP6 descrie doar ghilimelele românești „ ” și le recomandă (p. 43); nu menționează cele englezești sau germane. Înainte să corectezi, verifici fiecare cap al citatului: problema nu e că ghilimelele ar fi „curbe”, ci că perechea nu e jos–sus.
+- De ce: În textul românesc nu sunt forma recomandată ghilimelele drepte, cele englezești cu deschidere U+201C și combinația „…“ (cu închidere U+201C, specifică germanei). Închiderea corectă e ” (U+201D). ÎOOP6 descrie doar ghilimelele românești „ ” și le recomandă (p. 43); nu menționează cele englezești sau germane. Înainte să corectezi, verifici fiecare cap al citatului: problema nu e că ghilimelele ar fi „curbe”, ci că perechea nu e jos–sus.
 - Sursă: ghid gov-md §9.8.1; ÎOOP6 p. 43 (Ghilimelele)
-- Vezi și: RO-TIP-102, RO-TIP-118
 
 ### RO-TIP-056 Pentru citatul din citat, nu apostrofurile ‘…’
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Antrenorul mi-a spus: ‘Lovește puternic’” → Corect: „Antrenorul mi-a spus: «Lovește puternic»”
-- De ce: Citatul din citat se pune între «…». Apostrofurile ‘…’, propuse de unele ghiduri de presă, nu sunt forma normată pentru citat. Regula privește doar citatele: ghilimelele simple la explicarea unui cuvânt (deadline ‘termen-limită’) sunt admise (vezi RO-NUG-120).
+- De ce: Citatul din citat se pune între «…». Apostrofurile ‘…’, propuse de unele ghiduri de presă, nu sunt forma recomandată pentru citat (ÎOOP6 p. 43 descrie « » pentru citatul din citat). Regula privește doar citatele: ghilimelele simple la explicarea unui cuvânt (deadline ‘termen-limită’) sunt admise (vezi RO-NUG-120).
 - Sursă: ghid gov-md §9.8.2; ÎOOP6 p. 43 (Ghilimelele: « » pentru citat în citat; ‘ ’ doar pentru glosare)
-- Vezi și: RO-TIP-102
 
 ### RO-TIP-057 Semnul întrebării sau al exclamării care aparține citatului stă înăuntru
 - Nivel: normă
@@ -633,8 +630,8 @@ Verificări rapide (mecanice, dar cu ochii pe excepții):
 ### RO-TIP-032 Apostroful ’ în cuvintele românești
 - Nivel: normă
 - Greșit: „D'ale carnavalului, dup' o oră” → Corect: „D-ale carnavalului, dup-o oră”
-- De ce: În formele literare pronunțate în tempo normal apostroful nu apare; în cuvintele românești are doar rol marginal și facultativ (DOOM 3 §1.2.1). Se folosește la anii prescurtați (’89, anii ’90, ante-’89), la rostirea familiară reprodusă (dom’le, dom’ profesor) și în nume străine (O’Neill, McDonald’s, D’Annunzio). Când cade un sunet și se formează o silabă nouă, se pune cratimă. Forma tipografică corectă a apostrofului este ’ (U+2019), care arată ca o virgulă ridicată; nu o confunda cu semnul prim (′) din matematică și nici cu apostroful drept de la tastatură, pe care un text îngrijit îl înlocuiește cu ’. În documentele oficiale anii se scriu întregi. Apostroful nu se scoate din formele de mai sus (vezi RO-NUG-096).
-- Sursă: ghid gov-md §9.13.1–9.13.5; DOOM 3 §1.2.1
+- De ce: DOOM 3 §1.2.1 și ÎOOP6 p. 33 cer cratima, nu apostroful singur sau apostroful plus cratimă, când rezultă o silabă nouă: corect „d-ale carnavalului”, nu „*d’ale” și nici „*d’-ale”. Apostroful rămâne pentru anii prescurtați și pentru rostirea familiară reprodusă; în citate și în titluri vechi se păstrează grafia originală. Se folosește la anii prescurtați (’89, anii ’90, ante-’89), la rostirea familiară reprodusă (dom’le, dom’ profesor) și în nume străine (O’Neill, McDonald’s, D’Annunzio). Când cade un sunet și se formează o silabă nouă, se pune cratimă. Forma tipografică corectă a apostrofului este ’ (U+2019), care arată ca o virgulă ridicată; nu o confunda cu semnul prim (′) din matematică și nici cu apostroful drept de la tastatură, pe care un text îngrijit îl înlocuiește cu ’. În documentele oficiale anii se scriu întregi. Apostroful nu se scoate din formele de mai sus (vezi RO-NUG-096).
+- Sursă: ghid gov-md §9.13.1–9.13.5; DOOM 3 §1.2.1; ÎOOP6 p. 33 (Cratima și apostroful)
 
 ### RO-TIP-068 Spațiul în jurul semnelor de punctuație
 - Nivel: normă
@@ -761,8 +758,8 @@ Bun:
 ### RO-TIP-081 Statele se numesc în forma oficială actuală
 - Nivel: recomandare
 - Greșit: „Bielorusia, Swaziland” → Corect: „Belarus, Eswatini”
-- De ce: Numele statelor se folosesc în forma lor oficială actuală: Belarus (adjectivul „belarus”; „Bielorusia” e învechit), Myanmar (fostă Birmania), Eswatini (fost Swaziland), Cehia (nume scurt). Pentru Coasta de Fildeș și Côte d’Ivoire, ca și pentru Capul Verde și Cabo Verde, DOOM 3 și ghidurile instituționale diferă, așa că nu corectezi niciuna dintre forme: alegi una și o păstrezi.
-- Sursă: DOOM 3, s.v. Belarus, Myanmar, Eswatini, Swaziland, fildeș, Capul Verde; ghid gov-md §3.5.2
+- De ce: Numele statelor se folosesc în forma lor oficială actuală: Belarus (adjectivul „belarus”; „Bielorusia” e învechit), Myanmar (fostă Birmania), Eswatini (fost Swaziland), Cehia (nume scurt). „Côte d’Ivoire” este forma oficială recomandată de DOOM 3 §2.5 pct. 2 și de ÎOOP6, iar „Coasta de Fildeș” e marcată învechit în DOOM 3. La „Capul Verde” DOOM 3 dă numai această formă (intrare nouă, și §1.2.2); „Cabo Verde” nu figurează în DOOM 3. Dacă un ghid instituțional cere altă formă, în textul redactat urmezi DOOM 3 și semnalezi diferența.
+- Sursă: DOOM 3, s.v. Belarus, Myanmar, Eswatini, Swaziland, Côte d’Ivoire, Coasta de Fildeș, Capul Verde; DOOM 3 §2.5 pct. 2; ÎOOP6 (s.v. Côte d’Ivoire); ghid gov-md §3.5.2
 
 ### RO-TIP-082 Forma completă a statului sau forma scurtă
 - Nivel: recomandare

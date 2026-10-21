@@ -50,7 +50,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Sursă: Al. Nicolae, *Ordinea constituenților*, 2015; M. Avram, în G. Biriș (nereverificat local)
 
 ### RO-CAL-603 Paranteza verbală (Satzklammer)
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Guvernul a joi, la Berlin, o lege adoptat.” → Corect: „Guvernul a adoptat joi, la Berlin, o lege.”
 - De ce: Germana desparte auxiliarul de participiu printr-o paranteză în care intră circumstanțiale și complemente („Die Regierung hat am Donnerstag in Berlin ein Gesetz beschlossen”). În română auxiliarul rămâne lipit de participiu: aceeași greșeală ca în RO-GRA-180 din [gramatica.md](../gramatica.md), de unde ia și nivelul.
 - Sursă: Coteanu, Gramatica de bază (1982), secțiunea nespecificată (nereverificat local); B. Croitor et al., 2014 (nereverificat local pentru pagină)

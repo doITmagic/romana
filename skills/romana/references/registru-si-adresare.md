@@ -231,7 +231,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Sursă: Curtea Constituțională a Republicii Moldova, Hotărârea nr. 36 din 5 decembrie 2013; Legea nr. 52 din 16 martie 2023
 
 ### RO-STI-441 Adresarea se alege explicit, o dată pentru tot textul
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Vă rugăm să-ți completezi datele.” → Corect: „Vă rugăm să vă completați datele.”
 - De ce: Amestecul de adresări în același text e normă încălcată: vezi RO-COE-019 în [coerenta.md](coerenta.md). Aici rămâne partea de alegere: adresarea („tu”, „voi”, „dumneavoastră” sau formula impersonală) se decide o dată pentru fiecare text sau produs, după gen și public, și se ține în verbe, în posesive și în imperative.
 - Sursă: DSL, s.v. POLITEȚE, ADRESARE; ghid gov-md §1.5
