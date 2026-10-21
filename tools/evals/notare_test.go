@@ -1,0 +1,136 @@
+package evals
+
+import "testing"
+
+func TestNotareNeatins(t *testing.T) {
+	c := Caz{ID: "curat-x-01", Mod: "corectura", Intrare: "Ședința a durat două ore.", Asteptat: Asteptat{Neatins: true}}
+	n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]\nȘedința a durat două ore.\n[[/TEXT]]\nFără schimbări."})
+	if n.FalsPozitive != 0 || n.Probleme != 0 {
+		t.Errorf("ieșire identică: %+v", n)
+	}
+	n = Noteaza(c, Rezultat{Iesire: "[[TEXT]]\nȘedința a durat trei ore.\n[[/TEXT]]"})
+	if n.FalsPozitive != 1 {
+		t.Errorf("un cuvânt schimbat: %+v", n)
+	}
+	// Doar spațiile diferă: nu e o schimbare.
+	n = Noteaza(c, Rezultat{Iesire: "[[TEXT]]\nȘedința   a durat două ore.\n[[/TEXT]]"})
+	if n.FalsPozitive != 0 {
+		t.Errorf("spații: %+v", n)
+	}
+}
+
+func TestNotareNeatinsVerificare(t *testing.T) {
+	c := Caz{ID: "curat-x-02", Mod: "verificare", Intrare: "Casa sa se află la margine.", Asteptat: Asteptat{Neatins: true}}
+	n := Noteaza(c, Rezultat{Iesire: "Textul nu are probleme. Nu semnalez nimic."})
+	if n.FalsPozitive != 0 {
+		t.Errorf("fără observații: %+v", n)
+	}
+	n = Noteaza(c, Rezultat{Iesire: "1. OBS: „Casa sa” · gramatică · normă · P1 · altceva"})
+	if n.FalsPozitive != 1 {
+		t.Errorf("o observație pe text curat: %+v", n)
+	}
+}
+
+func TestNotareInterzis(t *testing.T) {
+	c := Caz{ID: "context-01", Mod: "verificare", Intrare: "Casa sa se află acolo. Guvernul sa întrunit.",
+		Asteptat: Asteptat{
+			Observatii: []ObsAsteptata{{Fragment: "Guvernul sa întrunit", Nivel: "normă", Pilon: "gramatică"}},
+			Interzis:   []string{"Casa sa"},
+		}}
+	bun := "- OBS: „Guvernul sa întrunit” · gramatică · normă · P1 · „s-a întrunit”"
+	if n := Noteaza(c, Rezultat{Iesire: bun}); n.Probleme != 0 || n.Lipsa != 0 || n.FalsPozitive != 0 {
+		t.Errorf("răspuns bun: %+v", n)
+	}
+	rau := bun + "\n- OBS: „Casa sa” · gramatică · normă · P1 · „Casa s-a”"
+	if n := Noteaza(c, Rezultat{Iesire: rau}); n.Probleme != 1 {
+		t.Errorf("interzis semnalat: %+v", n)
+	}
+	// Corectură: schimbarea unui fragment interzis.
+	cc := c
+	cc.Mod = "corectura"
+	n := Noteaza(cc, Rezultat{Iesire: "[[TEXT]]\nCasa s-a află acolo. Guvernul s-a întrunit.\n[[/TEXT]]"})
+	if n.Probleme != 1 || n.Lipsa != 0 {
+		t.Errorf("corectură, interzis schimbat: %+v", n)
+	}
+	// Redactare: forma interzisă apare în ieșire.
+	cr := Caz{ID: "fidelitate-15", Mod: "redactare", Intrare: "Rescrie: ar putea scurta durata.",
+		Asteptat: Asteptat{Interzis: []string{"va scurta"}}}
+	if n := Noteaza(cr, Rezultat{Iesire: "Metoda VA SCURTA durata."}); n.Probleme != 1 || n.Fidelitate {
+		t.Errorf("redactare interzis: %+v", n)
+	}
+}
+
+func TestNotareFidelitate(t *testing.T) {
+	c := Caz{ID: "pastrare-01", Mod: "corectura", Intrare: "Avem 25 ani de activitate.",
+		Asteptat: Asteptat{Observatii: []ObsAsteptata{{Fragment: "25 ani", Nivel: "normă", Pilon: "tipografie"}}}}
+	if n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]Avem 25 de ani de activitate.[[/TEXT]]"}); !n.Fidelitate {
+		t.Errorf("fără număr nou: %+v", n)
+	}
+	if n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]Avem 30 de ani de activitate.[[/TEXT]]"}); n.Fidelitate {
+		t.Errorf("număr nou: %+v", n)
+	}
+	cr := Caz{ID: "fidelitate-16", Mod: "redactare", Intrare: "Scrie despre 3 produse.", Asteptat: Asteptat{Cerut: []string{"[de completat"}}}
+	n := Noteaza(cr, Rezultat{Iesire: "Oferim 3 produse și 12 servicii."})
+	if n.Fidelitate || n.Lipsa != 1 {
+		t.Errorf("redactare: %+v", n)
+	}
+}
+
+func TestNotareObservatii(t *testing.T) {
+	c := Caz{ID: "corectura-02", Mod: "verificare",
+		Intrare: "Firma are 25 ani de activitate. Colaborăm ca și subcontractor.",
+		Asteptat: Asteptat{Observatii: []ObsAsteptata{
+			{Fragment: "25 ani", Nivel: "normă", Pilon: "tipografie"},
+			{Fragment: "ca și subcontractor", Nivel: "normă", Pilon: "gramatică"},
+		}}}
+	out := "Rezumat: 1 normă.\nOBS: „25 ani” · tipografie · normă · P1 · „25 de ani” · Numeralul cere „de”.\nFormă corectă: „ca și subcontractor” nu e citat aici.\nneverificat:\n- „Firma” · nu știu"
+	n := Noteaza(c, Rezultat{Iesire: out})
+	if n.Lipsa != 1 || n.FalsPozitive != 0 {
+		t.Errorf("o observație lipsă: %+v", n)
+	}
+	// Citat parțial din fragmentul așteptat: contează.
+	n = Noteaza(c, Rezultat{Iesire: out + "\nOBS: „ca și” · gramatică · normă · P1"})
+	_ = n
+	out2 := "1. OBS: „25 ani” · normă\n2. OBS: „ca și” · normă\n3. OBS: „Firma” · normă\n4. Rezumat: „Casa” corectă"
+	n = Noteaza(c, Rezultat{Iesire: out2})
+	if n.Lipsa != 0 || n.FalsPozitive != 1 {
+		t.Errorf("potrivire parțială + observație în plus: %+v", n)
+	}
+}
+
+func TestNotareCerut(t *testing.T) {
+	c := Caz{ID: "corectura-02", Mod: "corectura", Intrare: "Are 25 ani.",
+		Asteptat: Asteptat{Observatii: []ObsAsteptata{{Fragment: "25 ani", Nivel: "normă", Pilon: "tipografie"}}, Cerut: []string{"25 de ani"}}}
+	if n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]Are 25 de ani.[[/TEXT]]"}); n.Lipsa != 0 || n.FalsPozitive != 0 {
+		t.Errorf("corectat: %+v", n)
+	}
+	if n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]Are 25 ani.[[/TEXT]]"}); n.Lipsa != 2 {
+		t.Errorf("necorectat (observație + cerut): %+v", n)
+	}
+}
+
+func TestNotareTrigger(t *testing.T) {
+	poz := Caz{ID: "trigger-pozitiv-01", Mod: "trigger", Intrare: "x", Asteptat: Asteptat{Cerut: []string{"romana"}}}
+	neg := Caz{ID: "trigger-negativ-01", Mod: "trigger", Intrare: "x", Asteptat: Asteptat{Interzis: []string{"romana"}}}
+	if n := Noteaza(poz, Rezultat{PornitCunoscut: true, Pornit: false}); n.Lipsa != 1 {
+		t.Errorf("%+v", n)
+	}
+	if n := Noteaza(poz, Rezultat{PornitCunoscut: true, Pornit: true}); n.Lipsa != 0 {
+		t.Errorf("%+v", n)
+	}
+	if n := Noteaza(neg, Rezultat{PornitCunoscut: true, Pornit: true}); n.Probleme != 1 || n.FalsPozitive != 1 {
+		t.Errorf("%+v", n)
+	}
+	if n := Noteaza(neg, Rezultat{PornitCunoscut: false}); n != (Nota{Fidelitate: true}) {
+		t.Errorf("necunoscut: %+v", n)
+	}
+}
+
+func TestExtrageText(t *testing.T) {
+	if got, ok := ExtrageText("a\n[[TEXT]]\nb c\n[[/TEXT]]\nz"); !ok || got != "b c" {
+		t.Errorf("%q %v", got, ok)
+	}
+	if got, ok := ExtrageText("fără marcaje"); ok || got != "fără marcaje" {
+		t.Errorf("%q %v", got, ok)
+	}
+}
