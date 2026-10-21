@@ -4,6 +4,10 @@ Profilul acesta se aplică butoanelor, meniurilor, titlurilor, mesajelor, notifi
 
 Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a treia; DEX '98 = *Dicționar explicativ al limbii române*, 1998; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mozilla RO = ghidul de localizare în limba română al Mozilla, care fixează convenții de uz, nu norme ale limbii (nereverificat local); CLDR = regulile de plural pentru română din datele de localizare Unicode CLDR; ICU = formatul de mesaje ICU MessageFormat; gettext = formula de plural GNU gettext.
 
+## Cum citești perechile
+
+La o recomandare, forma din „Greșit” e forma de evitat, nu neapărat o greșeală de limbă. Dacă forma e corectă (RO-INT-013, 022, 025, 058), regula o spune în „De ce” și nu o corectezi, ci o propui. Doar nivelul „normă” cere corectare.
+
 ## Ce se schimbă față de limba literară standard
 
 - **Registrul și adresarea.** O decizie pentru tot produsul (secțiunea următoare).
@@ -33,7 +37,7 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 - Nivel: recomandare
 - Greșit: „Contul dvs. nu-i activ.” → Corect: „Contul dumneavoastră nu este activ.”
 - De ce: În interfață se evită abrevierile („dvs.”) și formele contrase („nu-i” pentru „nu este”), pentru că produsul vorbește în nume propriu, într-un registru neutru. „Dvs.” și „nu-i” sunt forme literare corecte (ghidul gov-md înregistrează abrevierea „dvs.”), deci e o convenție de stil, nu o normă; cu adresare prin „tu”, „dumneavoastră” dispare. Contragerea „nu-i” se evită doar când „-i” e verbul „a fi”.
-- Sursă: Mozilla RO (uz, nu normă); Mic ghid CE p. 4 (Rec. 2); ghid gov-md §5.3.1.6
+- Sursă: Mozilla RO (uz, nu normă); ghid gov-md §5.3.1.6
 
 ### RO-INT-040 Fără acord cu genul necunoscut al utilizatorului
 - Nivel: recomandare
@@ -107,13 +111,13 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 ### RO-INT-058 „Operațiune completă”
 - Nivel: recomandare
 - Greșit: „Operațiune completă” → Corect: „Operațiune finalizată”
-- De ce: Pentru engl. „operation complete”, „completă” spune că nu lipsește nicio parte (DEX '98), nu că operația s-a terminat. Spui „finalizată”, „încheiată” sau „Gata”. Pentru verbul „a completa” vezi RO-CAL-058 din [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md).
+- De ce: „Operațiune completă” nu e greșeală: DEX '98 dă pentru „complet” sinonimele „întreg, desăvârșit, deplin, împlinit”, deci se poate înțelege și „împlinită”. Pentru engl. „operation complete” sensul „terminată” e mai clar cu „finalizată”, „încheiată” sau „Gata”. Pentru verbul „a completa” vezi RO-CAL-058 din [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md).
 - Sursă: DEX '98 s.v. complet
 
 ### RO-INT-025 Starea goală
 - Nivel: recomandare
 - Greșit: „0 rezultate găsite” → Corect: „Niciun rezultat”
-- De ce: Pentru lista goală se preferă „Niciun rezultat” sau „Nu există rezultate”. „Nu au fost găsite rezultate” e corect și nu se marchează ca greșeală (RO-NUG-089 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)); varianta scurtă e o preferință. Exemplul „Greșit” de mai sus nu folosește forma cu pasiv, ci cifra „0” scrisă ca mesaj.
+- De ce: Pentru lista goală se preferă „Niciun rezultat” sau „Nu există rezultate”. „Nu au fost găsite rezultate” e corect și nu se marchează ca greșeală (RO-NUG-089 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)); varianta scurtă e o preferință. Exemplul „Greșit” nu e o greșeală de limbă, ci un mesaj mai puțin natural.
 - Sursă: Mic ghid CE p. 4–6 (Rec. 2, 4)
 
 ### RO-INT-022 Zero, cu mesaj propriu
@@ -136,7 +140,7 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 
 ### RO-INT-043 Mesajul de validare arată pasul următor
 - Nivel: recomandare
-- Greșit: „Formular incomplet” → Corect: „Mai ai câteva întrebări fără răspuns. Completează-le pe toate cele 18.”
+- Greșit: „Formular incomplet” → Corect: „Mai ai 18 întrebări fără răspuns. Completează-le pe toate.”
 - De ce: „Formular incomplet” e corect ca limbă, dar nu ajută. Mesajul de validare e specific și arată cum se rezolvă problema. Numărul și detaliile le iei din formular, nu le inventezi.
 - Sursă: Mic ghid CE p. 4 (Rec. 2)
 
@@ -209,13 +213,13 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 - Sursă: DOOM 3 și DEX '98 s.v. temporizator, cronometru; Mozilla RO (uz, nu normă)
 
 ### RO-INT-007 „Sign in”: „Autentificare”, nu „Înregistrare”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Înregistrare” → Corect: „Autentificare”
-- De ce: „A înregistra” înseamnă „a înscrie într-un registru” (DEX '98), adică a crea un cont, nu a intra într-unul existent. Pentru „sign in” spui „Autentificare” sau „Autentifică-te”. Greșeala apare când butonul „Înregistrare” deschide un cont existent. Judeci după ce face butonul, nu după etichetă.
+- De ce: „A înregistra” înseamnă „a înscrie într-un registru” (DEX '98), adică a crea un cont, nu a intra într-unul existent. Pentru „sign in” spui „Autentificare” sau „Autentifică-te”. Greșeala apare când butonul „Înregistrare” deschide un cont existent. Sensul „a intra în cont” nu e în DEX '98 pentru „autentificare”, deci regula e o convenție de terminologie. Judeci după ce face butonul, nu după etichetă; dacă nu știi ce face, întrebi.
 - Sursă: DEX '98 s.v. înregistra; Mozilla RO (uz, nu normă)
 
 ### RO-INT-008 „Sign up”: „Înregistrare” sau „Creează un cont”, nu „Autentificare”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Autentificare” → Corect: „Creează un cont”
 - De ce: „A autentifica” înseamnă „a legaliza, a face autentic” (DEX '98), adică a confirma o identitate. Greșeala apare pe butonul care creează un cont nou: „autentificarea” nu denumește crearea unui cont, pentru care se spune „Înregistrare” sau „Creează un cont”.
 - Sursă: DEX '98 s.v. autentifica, înregistra; Mozilla RO (uz, nu normă)
@@ -269,7 +273,7 @@ Un șir cu valoare inserată (`%{nume}`, `{count}`, `%(autor)s`) se scrie astfel
 ### RO-INT-045 Fără articol sau desinență pe valoare
 - Nivel: normă
 - Greșit: „Ai terminat %{track_title}-ul.” → Corect: „Ai terminat piesa %{track_title}.”
-- De ce: Valoarea nu se vede, deci o desinență sau un articol lipit de ea e greșit pentru o parte din valori. Un substantiv de context care are genul și numărul cunoscut rezolvă acordul. Unde nu e nevoie de flexiune, valoarea stă singură: „%{name} s-a actualizat” e corect, pentru că participiul din perfectul compus e invariabil.
+- De ce: Valoarea nu se vede, deci o desinență sau un articol lipit de ea e greșit pentru o parte din valori. Un substantiv de context care are genul și numărul cunoscut rezolvă acordul. Unde nu e nevoie de flexiune, valoarea stă singură: „%{name} s-a actualizat” e corect când valoarea e la singular (numele unui fișier), pentru că participiul e invariabil, dar auxiliarul nu („s-a”, „s-au”). Pentru valori care pot fi și la plural formulezi fără acord, ca la RO-INT-048.
 - Sursă: ICU; DOOM 3 (articolul și desinențele)
 
 ### RO-INT-046 Adjectivul nu se acordă cu valoarea
@@ -285,9 +289,9 @@ Un șir cu valoare inserată (`%{nume}`, `{count}`, `%(autor)s`) se scrie astfel
 - Sursă: ICU
 
 ### RO-INT-048 Marcatorul de persoană, la singular
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „%(author)s au răspuns” → Corect: „%(author)s a răspuns”
-- De ce: Un marcator de forma `%(nume)s` e un identificator, nu un plural. Sursa engleză are verbul la singular („has replied”), deci verbul românesc rămâne la singular. Dacă sursa admite mai multe persoane, folosești o formulare care nu depinde de număr.
+- De ce: Un marcator de forma `%(nume)s` e un identificator, nu un plural. Sursa engleză are verbul la singular („has replied”), deci verbul românesc rămâne la singular. Dacă sursa admite mai multe persoane, folosești o formulare care nu depinde de număr (de exemplu „Răspuns de la %(author)s”).
 - Sursă: Mozilla RO (uz, nu normă); ICU
 
 ### RO-INT-049 Marcatorul se reproduce întreg
@@ -338,8 +342,8 @@ Regula lui „de” e în RO-NUG-031 din [ce-nu-e-greseala.md](../ce-nu-e-gresea
 
 ### RO-INT-054 Numeralul cu „+”
 - Nivel: recomandare
-- Greșit: „25+ limbi” → Corect: „peste 25 de limbi”
-- De ce: „25+” ascunde locul lui „de”, pe care numeralul îl cere când ultimele două cifre fac 00 sau un număr de la 20 la 99 („25 de limbi”, dar „101 limbi”). Reformulezi cu „peste”, „mai bine de” sau „cel puțin”.
+- Greșit: „25+ limbi” → Corect: „cel puțin 25 de limbi”
+- De ce: „25+” ascunde locul lui „de”, pe care numeralul îl cere când ultimele două cifre fac 00 sau un număr de la 20 la 99 („25 de limbi”, dar „101 limbi”). „25+” înseamnă „25 sau mai multe”, deci reformularea păstrează limita: „cel puțin 25”. „Peste 25” exclude 25 și schimbă cifra (vezi RO-NUM-048 din [numere-date-unitati.md](../numere-date-unitati.md)).
 - Sursă: INJ p. 84–85; DSL, s.v. NUMERAL
 
 ## Acordul etichetelor
@@ -370,16 +374,12 @@ Regula lui „de” e în RO-NUG-031 din [ce-nu-e-greseala.md](../ce-nu-e-gresea
 - De ce: Pentru sursa „Saving…”, traducerea cere elipsa. Punctuația finală a traducerii (punct, două puncte, elipsă) e identică cu a sursei. Nepotrivirile se semnalează pentru verificare, nu se corectează automat. Excepție: ordinea punctului față de ghilimelele de închidere urmează norma românească (punctul după ghilimele când citatul face parte din propoziție).
 - Sursă: convenție de localizare, fără normă; ghid gov-md §9.8
 
-### RO-INT-059 Majuscula calchiată
-- Nivel: recomandare
-- Greșit: „Limba: Română, Luni, 5 Martie” → Corect: „Limba: română, luni, 5 martie”
-- De ce: Lunile, zilele, limbile și naționalitățile se scriu cu literă mică (ghid gov-md); în interfață greșeala e frecventă, pentru că engleza le scrie cu majusculă. La început de etichetă rămâne majuscula de început. Titlurile și etichetele au majusculă doar la primul cuvânt și la numele proprii (vezi [tipografie.md](../tipografie.md)).
-- Sursă: ghid gov-md §4.2.1.10; DOOM 3
+Majusculele calchiate din engleză apar des în etichete și în titluri („Limba: Română”, „Luni, 5 Martie”, titluri cu fiecare cuvânt cu majusculă): lunile, zilele și limbile se scriu cu literă mică, iar titlurile și etichetele au majusculă doar la primul cuvânt și la numele proprii. Regulile sunt în [tipografie.md](../tipografie.md).
 
 ### RO-INT-057 Unitățile se convertesc doar când numărul e scris în text
 - Nivel: recomandare
-- Greșit: „Curse de până la 320 mile” → Corect: „Curse de până la 320 de mile (circa 515 km)”
-- De ce: Unitățile imperiale din textul fix se convertesc în sistemul metric, cu valoarea originală păstrată între paranteze. Când numărul e o variabilă, unitatea nu se convertește în șir, pentru că valoarea nu se cunoaște. Valoarea originală nu se șterge (vezi [fidelitate.md](../fidelitate.md)).
+- Greșit: „Curse de până la 320 de mile” → Corect: „Curse de până la 515 km (320 de mile)”
+- De ce: Unitățile imperiale din textul fix pot fi date în sistemul metric, dar numai cu un factor de conversie cunoscut (o milă terestră are circa 1,609 km) și cu valoarea originală păstrată între paranteze. Când numărul e o variabilă, unitatea nu se convertește în șir, pentru că valoarea nu se cunoaște. Vezi RO-NUM-033 și RO-NUM-048 din [numere-date-unitati.md](../numere-date-unitati.md) și [fidelitate.md](../fidelitate.md).
 - Sursă: Mozilla RO (uz, nu normă)
 
 ## Coerența cu produsul
@@ -387,7 +387,7 @@ Regula lui „de” e în RO-NUG-031 din [ce-nu-e-greseala.md](../ce-nu-e-gresea
 ### RO-INT-014 Elementele de interfață se numesc cum apar pe ecran
 - Nivel: de semnalat
 - Greșit: „Apăsați «Trimite»” → Corect: „Apăsați «Expediază»”
-- De ce: Exemplul presupune că pe ecran butonul se numește «Expediază». Dacă textul numește un buton, o filă sau un meniu altfel decât apare pe ecran, cititorul caută ceva ce nu există. Semnalezi nepotrivirea; denumirea corectă o poți afla doar de la produs.
+- De ce: Exemplul presupune că pe ecran butonul se numește „Expediază”. Dacă textul numește un buton, o filă sau un meniu altfel decât apare pe ecran, cititorul caută ceva ce nu există. Semnalezi nepotrivirea; denumirea corectă o poți afla doar de la produs.
 - Sursă: convenție de localizare, fără normă
 
 ### RO-INT-015 Același termen, aceeași traducere
@@ -414,7 +414,7 @@ La sfârșit, parcurgi șirurile de interfață cu aceste puncte, fiecare în fi
 
 - sedilă în loc de virgulă la ș și ț: [tipografie.md](../tipografie.md);
 - punctuația finală identică cu a sursei: RO-INT-056;
-- spațiu după punctuație, fără majuscule englezești (title case): [tipografie.md](../tipografie.md) și RO-INT-059;
+- spațiu după punctuație, fără majuscule englezești (title case, luni și zile cu majusculă): [tipografie.md](../tipografie.md);
 - marcatori și etichete intacte: RO-INT-047 – RO-INT-050;
 - taste de acces fără p, g, q, y, i, l, s, t: RO-INT-055;
 - ghilimele „…”: [tipografie.md](../tipografie.md);

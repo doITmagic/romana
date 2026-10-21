@@ -1,13 +1,13 @@
 # Presă
 
-Profilul acesta se aplică știrilor, relatărilor și altor texte de presă scrise informativ. Aici intră doar ce ține de limbă și de registru: cum atribui spusele, ce timp verbal alegi, ce vocabular folosești. Ce ține de judecata editorială nu intră și nu se corectează cu acest skill: ce merită să fie știre, cât de bună e o sursă, cum se numește o faptă imputată, ce nume și ce funcție primește o persoană la prima mențiune, cum se scriu denumirile științifice și titlurile de opere.
+Profilul acesta se aplică știrilor, relatărilor și altor texte de presă scrise informativ. Aici intră doar ce ține de limbă și de registru: cum atribui spusele, ce timp verbal alegi, ce vocabular folosești. Ce ține de judecata editorială nu intră și nu se corectează cu acest skill: ce merită să fie știre, cât de bună e o sursă, cum se numește o faptă imputată, dacă un eufemism al unei instituții se numește pe față, ce aprecieri are voie să facă redacția, ce nume și ce funcție primește o persoană la prima mențiune și în ce formă se repetă numele, cum se scriu denumirile științifice și titlurile de opere.
 
-Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; Irimieș = L. Irimieș, *Presa de agenție*; monitorizarea presei IL = monitorizarea limbii din presa online făcută de Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2021–2022; Ghidul de jurnalism (ghidjurnalism) și Ghid de stil API sunt ghiduri de redactare pentru presă, pe care nu le-am putut identifica mai exact (autor, ediție). Sursele de presă (Irimieș, monitorizarea presei IL, Ghidul de jurnalism, Ghid de stil API) sunt marcate „(nereverificat local)”.
+Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; Irimieș = L. Irimieș, *Presa de agenție*; monitorizarea presei IL = monitorizarea limbii din presa online făcută de Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2021–2022; Ghidul de jurnalism (ghidjurnalism) și Ghid de stil API sunt ghiduri de redactare pentru presă, fără autor sau ediție precizate. Sursele de presă (Irimieș, monitorizarea presei IL, Ghidul de jurnalism, Ghid de stil API) sunt marcate „(nereverificat local)”.
 
 ## Ce se schimbă față de limba literară standard
 
 - **Registrul.** Limba literară standard, pentru un cititor cu cultură medie: clar, concis, precis, accesibil. Nu e stil administrativ („se aduce la cunoștință”), nu e argou și nu e familiar.
-- **Tonul.** Neutru. Redacția nu își dă părerea: aprecierile vin din fapte și din spusele surselor, atribuite limpede.
+- **Tonul.** Neutru. Ce se apreciază apare ca spusă a unei surse, atribuită limpede (vezi mai jos).
 - **Structura.** Fiecare afirmație care nu aparține redacției arată cine o face: o sursă numită, un document, o instituție. Atribuirea stă în aceeași frază sau în cea imediat următoare.
 - **Vocabularul.** Cuvintele obișnuite ale limbii literare. Termenul tehnic, jargonul și sigla puțin cunoscută se explică la prima folosire. Cuvintele populare sau argotice rămân doar în citat.
 - **Oralitatea și figurile de stil.** Toleranță mică. Metafora, hiperbola și întrebarea retorică nu au loc în relatare; apar în reportaj și în comentariu doar când autorul le-a ales.
@@ -17,7 +17,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 
 ### Metoda
 
-Verbul de declarație spune două lucruri: ce a făcut sursa (a spus, a cerut, a admis) și cum o privește redacția. Verbele neutre (a spune, a declara, a indica, a transmite, a preciza) doar redau. Verbele de distanțare (a susține, a pretinde, a afirma, a acuza) arată rezervă față de ce spune sursa. Verbele de aprobare (a sublinia, a reaminti) îi dau dreptate. Alegi verbul după ce a făcut sursa, nu după ce simți tu față de ea, iar când nu ai alt temei, rămâi la un verb neutru. Un verb care atribuie sursei mai mult decât a făcut ea (o concesie, o dovadă) schimbă sensul și se corectează (RO-STI-618).
+Verbul de declarație spune două lucruri: ce a făcut sursa (a spus, a cerut, a admis) și cum o privește redacția. Verbele neutre (a spune, a declara, a indica, a transmite, a preciza) doar redau. Verbele de distanțare (a susține, a pretinde, a afirma, a acuza) arată rezervă față de ce spune sursa. Verbele de aprobare (a sublinia, a reaminti) îi dau dreptate. Alegi verbul după ce a făcut sursa, nu după ce simți tu față de ea, iar când nu ai alt temei, rămâi la un verb neutru. Un verb care atribuie sursei mai mult decât a făcut ea (o concesie, o dovadă) schimbă sensul; îl semnalezi și întrebi ce a făcut sursa (RO-STI-618).
 
 Markerii de atribuire românești („potrivit”, „conform”, „în opinia”, „după cum a anunțat”) sunt formele obișnuite ale genului și nu se înlocuiesc. Pentru condițional în atribuire („ar fi”), vezi RO-NUG-070 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md).
 
@@ -44,9 +44,9 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 - Sursă: DEX '98 s.v. preciza, puncta
 
 ### RO-STI-618 Verbul nu spune mai mult decât sursa
-- Nivel: normă
+- Nivel: de semnalat
 - Greșit: „Directorul a recunoscut că livrarea ajunge în două zile.” → Corect: „Directorul a declarat că livrarea ajunge în două zile.”
-- De ce: „A recunoaște” înseamnă „a admite ca existent, ca valabil”, deci cere ca sursa să fi făcut o concesie (DEX '98). „A admite” cere la fel, iar „a demonstra” înseamnă „a arăta în mod convingător, prin argumente” și cere dovezi (DEX '98). Dacă sursa doar a afirmat un lucru, verbul care promite concesie sau dovadă schimbă ce a spus ea și se corectează. Dacă nu știi ce a făcut sursa, întrebi sau treci la un verb neutru (vezi [fidelitate.md](../fidelitate.md)).
+- De ce: „A recunoaște” înseamnă „a admite ca existent, ca valabil”, deci cere ca sursa să fi făcut o concesie (DEX '98). „A admite” cere la fel, iar „a demonstra” înseamnă „a arăta în mod convingător, prin argumente” și cere dovezi (DEX '98). Textul singur nu arată dacă sursa a făcut o concesie, deci nu schimbi verbul pe baza lui. Dacă sursa doar a afirmat un lucru, verbul care promite concesie sau dovadă schimbă ce a spus ea. Semnalezi și întrebi ce a făcut sursa; până primești răspunsul, treci la un verb neutru (vezi [fidelitate.md](../fidelitate.md)).
 - Sursă: DEX '98 s.v. recunoaște, admite, demonstra; Irimieș; Ghidul de jurnalism (ghidjurnalism) (nereverificat local)
 
 ### RO-STI-604 Vorbirea directă nu se amestecă cu cea indirectă
@@ -64,7 +64,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 ### RO-STI-606 Citatul direct nu se atribuie unui grup
 - Nivel: recomandare
 - Greșit: „«Dacă ne micșorați salariile, nu mai ținem orele», declară profesorii.” → Corect: „Profesorii au declarat că nu vor mai ține orele dacă li se micșorează salariile.”
-- De ce: Un citat direct redă cuvintele rostite. Un grup nu rostește o frază cu o singură voce decât dacă a scandat-o sau a semnat-o împreună: «Jos corupția!», au strigat manifestanții. În rest, ghilimelele atribuie grupului o frază pe care a spus-o un singur om sau pe care a rezumat-o redacția. Treci la vorbire indirectă sau numești vorbitorul. Dacă sursa dă cuvintele exacte, se aplică RO-STI-616.
+- De ce: Un citat direct redă cuvintele rostite. Un grup nu rostește o frază cu o singură voce decât dacă a scandat-o sau a semnat-o împreună: „Jos corupția!”, au strigat manifestanții. În rest, ghilimelele atribuie grupului o frază pe care a spus-o un singur om sau pe care a rezumat-o redacția. Treci la vorbire indirectă sau numești vorbitorul. Dacă sursa dă cuvintele exacte, se aplică RO-STI-616.
 - Sursă: Ghidul de jurnalism (ghidjurnalism) (nereverificat local)
 
 ### RO-STI-616 Citatul reproduce exact cuvintele
@@ -95,7 +95,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 
 ### RO-STI-609 Titlul: scurt, neutru, cu verb la activ și la prezent
 - Nivel: recomandare
-- Greșit: „Mingea nu a ieșit din teren” → Corect: „Mingea a rămas în teren”
+- Greșit: „Mingea nu a ieșit din teren” → Corect: „Mingea rămâne în teren”
 - De ce: Titlul scurt, neutru, cu verb la activ și la prezent, fără negație, se citește repede și nu poate fi înțeles pe dos de cine citește doar titlul. Negația adaugă un pas de interpretare. Dacă negația e esențială pentru sens, o păstrezi.
 - Sursă: monitorizarea presei IL; Irimieș; Ghidul de jurnalism (ghidjurnalism); Ghid de stil API (nereverificat local)
 
@@ -107,35 +107,17 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 - De ce: Într-o știre nu amesteci registrul popular sau argotic cu cel livresc. „A sălta” cu sensul „a aresta” nu apare în DEX '98, care dă doar sensuri legate de salt, deci e argou. Același lucru e valabil pentru exprimările administrative: „în 1 săptămână” se scrie „într-o săptămână”. Cuvintele argotice rămân în citat sau ca efect asumat al autorului într-un reportaj. În plus, „a aresta” are un sens juridic precis, pe care textul nu-l poate lua de la sine; alegi verbul după fapta din sursă.
 - Sursă: monitorizarea presei IL; Irimieș; Ghidul de jurnalism (ghidjurnalism); Ghid de stil API (nereverificat local); DEX '98 s.v. sălta
 
-### RO-STI-612 Eufemismul instituției se traduce în fapt
-- Nivel: recomandare
-- Greșit: „Compania anunță reorganizarea personalului.” → Corect: „Compania anunță concedieri.”
-- De ce: Eufemismele instituțiilor („reorganizarea personalului”, „liberalizarea prețurilor”) ascund faptul. Dacă sursa spune clar faptul (concedieri, scumpiri), îl scrii direct. Dacă sursa spune doar eufemismul, nu poți afirma tu faptul: citezi termenul sursei sau întrebi (vezi [fidelitate.md](../fidelitate.md)).
-- Sursă: Ghid de stil API (nereverificat local)
-
 ### RO-STI-613 Jargonul și termenul tehnic se explică la prima folosire
 - Nivel: recomandare
-- Greșit: „Agenția a retrogradat Spania din cauza datoriei suverane.” → Corect: „Agenția a retrogradat Spania din cauza datoriei statului.”
-- De ce: Jargonul și termenul tehnic se explică la prima folosire, inclusiv când apar într-un citat. Un termen tradus cuvânt cu cuvânt, care induce în eroare, se parafrazează: „datorie suverană” sună a datorie a unui suveran, deși privește datoria unui stat. Termenul consacrat, pe care cititorul îl folosește, rămâne.
-- Sursă: Mic ghid CE p. 11–13 (Rec. 9); Zafiu, „Datorie suverană” (nereverificat local)
+- Greșit: „Fondul și-a majorat expunerea pe piața derivatelor.” → Corect: „Fondul și-a majorat investițiile în derivate, adică în contracte a căror valoare depinde de prețul altui bun.”
+- De ce: Jargonul și termenul tehnic se explică la prima folosire, inclusiv când apar într-un citat; explicația se pune lângă citat, nu în el. Termenul consacrat, pe care cititorul îl folosește (de pildă „datoria suverană” în presa economică), rămâne ca atare și nu se parafrazează fără motiv. Se parafrazează un termen tradus cuvânt cu cuvânt care induce în eroare.
+- Sursă: Mic ghid CE p. 11–13 (Rec. 9)
 
 ### RO-STI-619 Sigla puțin cunoscută se scrie desfășurat la prima apariție
 - Nivel: recomandare
 - Greșit: „ANRE a anunțat noile tarife. ANRE a mai spus că…” → Corect: „Autoritatea Națională de Reglementare în Domeniul Energiei (ANRE) a anunțat noile tarife. ANRE a mai spus că…”
 - De ce: Sigla puțin cunoscută se scrie desfășurat la prima apariție, cu sigla între paranteze, apoi se folosește forma scurtă. Siglele pe care le știe orice cititor (NATO, UE, ONU) nu se explică. Jargonul se tratează la fel (RO-STI-613).
 - Sursă: Mic ghid CE p. 11–13 (Rec. 9)
-
-### RO-STI-615 Adjectivul evaluativ nu aparține vocii redacției
-- Nivel: recomandare
-- Greșit: „Un adept înflăcărat al proiectului a anunțat o odihnă bine meritată pentru echipă.” → Corect: „Un susținător al proiectului a anunțat o pauză pentru echipă.”
-- De ce: Adjectivele și adverbele evaluative puse pe vocea redacției („adept înflăcărat”, „odihnă bine meritată”) transmit o părere a autorului. Se scot. Rămâne adjectivul care informează („autoturism furat”). Aprecierea apare doar ca spusă a unei surse, atribuită.
-- Sursă: Ghid de stil API; Irimieș (nereverificat local)
-
-### RO-STI-608 Numele de familie al unei femei nu stă singur
-- Nivel: recomandare
-- Greșit: „Popescu a declarat că termenul se prelungește.” → Corect: „Ana Popescu a declarat că termenul se prelungește.”
-- De ce: Numele de familie fără prenume sau fără „doamna” nu arată genul persoanei, iar cititorul nu poate ști dacă e vorba de un bărbat sau de o femeie. DOOM 3 formulează aceasta ca recomandare. Ce nume și ce funcție se dau la prima mențiune e o decizie editorială, în afara acestui profil.
-- Sursă: DOOM 3 §6.8.12 (nereverificat local)
 
 ## Lista de verificare pentru presa online
 

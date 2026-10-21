@@ -38,7 +38,7 @@ Fiecare detaliu din varianta bună vine din ce a povestit autorul. Fără ele, v
 ### RO-STI-703 „Foarte” plus adjectiv
 - Nivel: recomandare
 - Greșit: „Cabana era foarte frumoasă.” → Corect: „Cabana avea o terasă cu vedere spre vale.”
-- De ce: „Foarte frumos”, „foarte mare”, „foarte trist” spun că ceva e cum e, fără să arate de ce. Când ai detaliul, îl pui în loc. „Foarte” plus adjectiv rămâne corect gramatical (superlativ absolut, DEX '98) și nu se înlocuiește mecanic, mai ales în textul informativ, unde poate însoți un fapt măsurabil („foarte puțin, doar 3%”).
+- De ce: „Foarte frumos”, „foarte mare”, „foarte trist” spun că ceva e cum e, fără să arate de ce. Când ai detaliul din sursă (terasa din exemplu e ilustrativă), îl pui în loc. „Foarte” plus adjectiv rămâne corect gramatical (superlativ absolut, DEX '98) și nu se înlocuiește mecanic, mai ales în textul informativ, unde poate însoți un fapt măsurabil („foarte puțin, doar 3%”).
 - Sursă: Mic ghid CE p. 9 (Rec. 7); DEX '98 s.v. foarte
 
 ### RO-STI-704 „Deodată”
@@ -62,7 +62,7 @@ Fiecare detaliu din varianta bună vine din ce a povestit autorul. Fără ele, v
 ### RO-STI-701 Fără rețetele de platformă
 - Nivel: recomandare
 - Greșit: „Am lansat produsul. Merită. Cu adevărat. 3 lecții, 5 greșeli, 1 concluzie. Și da, mi-a fost frică.” → Corect: „Am lansat produsul în martie, după opt luni de lucru, și l-am folosit câteva săptămâni înainte să-l arătăm altora.”
-- De ce: Sfaturile de platformă (fragmente de propoziție obligatorii, o cifră la fiecare 100 de cuvinte, „un moment de vulnerabilitate”) sunt rețete de postat, nu de scris firesc. Ghidurile de redactare consultate nu cer cote fixe. Nu le aplici, iar cifrele și mărturisirile personale vin de la autor, nu din tipar.
+- De ce: Sfaturile de platformă (fragmente de propoziție obligatorii, o cifră la fiecare 100 de cuvinte, „un moment de vulnerabilitate”) sunt rețete de postat, nu de scris firesc. Ghidurile de redactare consultate nu cer cote fixe. Nu le aplici, iar cifrele și mărturisirile personale vin de la autor, nu din tipar. Detaliile din „Corect” (martie, opt luni) sunt ilustrative: le iei din sursă sau lași „[de completat: …]”.
 - Sursă: Mic ghid CE p. 9 (Rec. 7)
 
 ## Vocea autorului

@@ -4,6 +4,10 @@ Profilul acesta se aplică documentației tehnice, ghidurilor, tutorialelor și 
 
 Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a treia; DEX '98 = *Dicționar explicativ al limbii române*, 1998; DEX '96 = *Dicționar explicativ al limbii române*, 1996; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013.
 
+## Cum citești perechile
+
+La o recomandare, forma din „Greșit” e forma de evitat, nu neapărat o greșeală de limbă. Dacă forma e corectă (de pildă „matrice”, „implementare”, „sare”), regula o spune în „De ce” și nu o corectezi, ci o propui. Doar nivelul „normă” cere corectare.
+
 ## Ce se schimbă față de limba literară standard
 
 - **Registrul și adresarea.** Neutru, fără oralitate. Adresarea („tu” sau „dumneavoastră”) se alege o dată pentru întreaga documentație (RO-COE-019 din [coerenta.md](../coerenta.md); alegerea, în [registru-si-adresare.md](../registru-si-adresare.md)). Documentația poate evita adresarea cu totul și descrie ce face produsul.
@@ -37,7 +41,7 @@ Doi termeni se leagă de decizie: nomenclatura (SQL, React, nume de produse) se 
 ### RO-STI-805 „Limbaj de programare”
 - Nivel: recomandare
 - Greșit: „Python este o limbă de programare ușor de învățat.” → Corect: „Python este un limbaj de programare ușor de învățat.”
-- De ce: Termenul consacrat este „limbaj de programare”. DEX '98 dă pentru „limbaj” atât sensul de sistem de comunicare, cât și „limbă”, deci „limbă de programare” nu contrazice dicționarul, dar nu e îmbinarea folosită în domeniu. Pentru limbile naturale rămâne „limbă”.
+- De ce: Termenul consacrat este „limbaj de programare”: DEX '98 dă pentru „limbaj” sensul informatic „sistem de caractere și simboluri folosit în programare”. „Limbă” înseamnă în dicționar limba unei comunități, deci „limbă de programare” nu contrazice dicționarul, dar nu e îmbinarea folosită în domeniu. Pentru limbile naturale rămâne „limbă”.
 - Sursă: DEX '98 s.v. limbaj
 
 ### RO-STI-806 „Interpretor”, nu „interpret”
@@ -49,7 +53,7 @@ Doi termeni se leagă de decizie: nomenclatura (SQL, React, nume de produse) se 
 ### RO-STI-807 „Indice” pentru poziția unui element
 - Nivel: recomandare
 - Greșit: „Elementul de la index 3 este ultimul.” → Corect: „Elementul de la indicele 3 este ultimul.”
-- De ce: DEX '98 dă pentru „indice” sensul de număr sau simbol care precizează valoarea sau poziția unui element, exact ce înseamnă poziția într-un tablou. „Index” este tot în DOOM 3, cu alt sens („listă”, deci „indexul unei cărți” sau „indexul unei baze de date”), și rămâne corect acolo. Nu corectezi „index” în aceste sensuri.
+- De ce: DEX '98 dă pentru „indice” sensul de număr, literă sau simbol care precizează valoarea sau înțelesul unui element, iar numărul de ordine al unui element dintr-un tablou se încadrează aici. În același dicționar „indice” (sensul 5) trimite și la „index”, deci cele două sunt înrudite. „Index” este tot în DOOM 3, cu alt sens („listă”, deci „indexul unei cărți” sau „indexul unei baze de date”), și rămâne corect acolo. Nu corectezi „index” în aceste sensuri.
 - Sursă: DEX '98 s.v. indice, index; DOOM 3 s.v. index
 
 ### RO-STI-808 „Programare”, nu „codare”
@@ -66,8 +70,8 @@ Doi termeni se leagă de decizie: nomenclatura (SQL, React, nume de produse) se 
 
 ### RO-STI-811 „Deploy”
 - Nivel: recomandare
-- Greșit: „Facem deploy pe server vineri.” → Corect: „Punem aplicația în producție vineri.”
-- De ce: „Deploy” (formă dedusă: lipsește din dicționare, la fel „a deploya”) are în română mai multe echivalente, după sens: „a pune în producție”, „a instala pe server”, „a lansa” sau „a publica”. „A publica” se potrivește doar pentru lansarea publică: DEX '98 îl definește prin „a face cunoscut tuturor”, deci nu merge pentru un mediu intern sau de test. „A implementa” este corect (RO-NUG-075 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)) și nu se corectează, dar poate fi confundat cu „to implement” (a scrie funcționalitatea), de aceea nu e prima alegere.
+- Greșit: „Facem deploy pe server vineri.” → Corect: „Instalăm aplicația pe server vineri.”
+- De ce: „Deploy” (formă dedusă: lipsește din dicționare, la fel „a deploya”) are în română mai multe echivalente, după sens: „a instala pe server”, „a pune în producție” (doar dacă e vorba de mediul de producție), „a lansa” sau „a publica”. „A publica” se potrivește doar pentru lansarea publică: DEX '98 îl definește prin „a face cunoscut tuturor”, deci nu merge pentru un mediu intern sau de test. „A implementa” este corect (RO-NUG-075 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)) și nu se corectează, dar poate fi confundat cu „to implement” (a scrie funcționalitatea), de aceea nu e prima alegere.
 - Sursă: DEX '98 s.v. publica; DEX '96 s.v. implementa
 
 ### RO-STI-812 „Tablou” sau „vector” pentru „array”
@@ -91,7 +95,7 @@ Doi termeni se leagă de decizie: nomenclatura (SQL, React, nume de produse) se 
 ### RO-STI-815 „Paranteze unghiulare”
 - Nivel: recomandare
 - Greșit: „Etichetele se scriu între angle brackets.” → Corect: „Etichetele se scriu între paranteze unghiulare.”
-- De ce: „Paranteze unghiulare” este denumirea românească a semnelor < și >. „Unghiular” este în DOOM 3 și în DEX '98 („care formează un unghi”); se mai spune și „paranteze ascuțite”. Alegi o denumire și o ții. Sinonimul „ascuțite” nu l-am putut verifica local.
+- De ce: „Paranteze unghiulare” este denumirea românească a semnelor < și >. „Unghiular” este în DOOM 3 și în DEX '98 („care formează un unghi”); se mai spune și „paranteze ascuțite”. Alegi o denumire și o ții.
 - Sursă: DOOM 3 s.v. unghiular; DEX '98 s.v. unghiular (sinonimul: nereverificat local)
 
 ## Securitate și termeni definiți
@@ -111,21 +115,21 @@ Doi termeni se leagă de decizie: nomenclatura (SQL, React, nume de produse) se 
 ### RO-STI-803 „Salt” în criptografie
 - Nivel: recomandare
 - Greșit: „Parola se amestecă cu o sare aleatorie înainte de hash.” → Corect: „Parola se amestecă cu un salt aleatoriu înainte de hash.”
-- De ce: Dicționarele nu înregistrează sensul criptografic nici pentru „salt”, nici pentru „sare”; „salt” apare în DOOM 3 și în DEX doar cu sensul de săritură. „Sare” ar fi o traducere literală care nu are acoperire, de aceea termenul rămâne „salt” (formă dedusă, ca împrumut din engleză) și se explică la prima apariție: „o valoare aleatorie adăugată parolei înainte de hash”.
+- De ce: Dicționarele nu înregistrează sensul criptografic nici pentru „salt”, nici pentru „sare”; „salt” apare în DOOM 3 și în DEX doar cu sensul de săritură. „Sare” nu e greșeală de limbă, ci o traducere literală fără acoperire în dicționar, de aceea propui ca termenul să rămână „salt” (formă dedusă, ca împrumut din engleză) și se explică la prima apariție: „o valoare aleatorie adăugată parolei înainte de hash”.
 - Sursă: DOOM 3 s.v. salt; DEX '98 s.v. salt, sare
 
 ## Termeni din limbajul „agentic”
 
 ### RO-STI-801 „Livrare agentică”
 - Nivel: recomandare
-- Greșit: „Echipa folosește livrare agentică.” → Corect: „Echipa folosește livrarea de software cu agenți.”
-- De ce: „Agentic” nu e în dicționarele consultate, nici în formă flexionată. „Livrare” cere un complement: DEX '98 o leagă de mărfuri și servicii, deci „livrare agentică”, singură, e obscură și calchiată după engl. „agentic delivery”. Formularea cu „agenți” este descriptivă (formă dedusă), nu un termen consacrat.
+- Greșit: „Echipa folosește livrare agentică.” → Corect: „Echipa livrează software cu ajutorul agenților.”
+- De ce: „Agentic” nu e în dicționarele consultate, nici în formă flexionată. „Livrare” cere un complement: DEX '98 o leagă de mărfuri și servicii, deci „livrare agentică”, singură, e obscură și calchiată după engl. „agentic delivery”. Formularea cu „agenți” este descriptivă (formă dedusă), nu un termen consacrat; la prima apariție explici ce înseamnă.
 - Sursă: DEX '98 s.v. livrare
 
 ### RO-STI-802 „Coding agentic”
 - Nivel: recomandare
-- Greșit: „Lucrăm în coding agentic.” → Corect: „Lucrăm cu programare cu agenți.”
-- De ce: „Coding” și „agentic” lipsesc amândouă din dicționare, deci „coding agentic” e o construcție hibridă cu două cuvinte englezești. „Programarea cu agenți” este o formulare descriptivă (formă dedusă); la prima apariție explici ce înseamnă.
+- Greșit: „Lucrăm în coding agentic.” → Corect: „Programăm cu ajutorul agenților.”
+- De ce: „Coding” și „agentic” lipsesc amândouă din dicționare, deci „coding agentic” e o construcție hibridă cu două cuvinte englezești. „Programare cu ajutorul agenților” este o formulare descriptivă (formă dedusă); la prima apariție explici ce înseamnă.
 - Sursă: DEX '98 s.v. programare
 
 ## Titluri și etichete de prezentare
