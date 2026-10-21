@@ -60,7 +60,7 @@ Pentru ordinea cuvintelor, regula practică e simplă: ce e nou stă spre sfâr�
 
 ### RO-STI-007 Lungimea frazei nu are normă
 - Nivel: recomandare
-- Greșit: „Echipa, care analizase datele și care le trimisese conducerii, care ceruse o decizie, aștepta un răspuns, având în vedere că termenul trecuse.” → Corect: „Echipa analizase datele și le trimisese conducerii, care trebuia să decidă. Termenul trecuse, iar echipa aștepta un răspuns.”
+- Greșit: „Echipa, care analizase datele și care le trimisese conducerii, care ceruse o decizie, aștepta un răspuns, având în vedere că termenul trecuse.” → Corect: „Echipa analizase datele, le trimisese conducerii și ceruse o decizie. Termenul trecuse, iar echipa aștepta răspunsul.”
 - De ce: Ghidul Comisiei Europene vorbește despre o medie, nu despre un plafon, și cere conectori când spargi fraza, ca să nu se piardă relațiile logice. Frazele cu relative și gerunzii în lanț se sparg cel mai des, iar o frază lungă cu un singur fir e bună.
 - Sursă: Mic ghid CE p. 6 (Rec. 4)
 

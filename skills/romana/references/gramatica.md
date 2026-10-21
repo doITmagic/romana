@@ -48,7 +48,7 @@ Cazul pe care îl lași neatins: acordul după înțeles sau prin atracție, und
 - Nivel: normă
 - Greșit: „Nici mama, nici copiii nu a ajuns.” → Corect: „Nici mama, nici copiii nu au ajuns.”
 - De ce: Cu termeni la singular, sursele nu tranșează între singular și plural, deci nu corectezi niciuna dintre forme (RO-NUG-021). Când ultimul termen e la plural, verbul trece obligatoriu la plural.
-- Sursă: ghid gov-md §7.3.3; DOOM 3, cap. 6 (nereverificat local)
+- Sursă: Coteanu, §33.1.2; ghid gov-md §7.3.3
 
 ### RO-GRA-004 Subiectul multiplu pus după verb
 - Nivel: recomandare
@@ -69,10 +69,10 @@ Cazul pe care îl lași neatins: acordul după înțeles sau prin atracție, und
 - Sursă: B. Croitor et al., 2014, p. 56
 
 ### RO-GRA-008 Colectiv la singular fără determinant plural
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Consiliul de administrație au decis amânarea.” → Corect: „Consiliul de administrație a decis amânarea.”
-- De ce: Substantivele colective care numesc instituții (guvernul, consiliul, comisia, echipa) sunt la singular și impun predicatul la singular. Genitivul plural care le însoțește nu schimbă regula: „Comitetul de miniștri a decis”.
-- Sursă: ghid gov-md §7.3.19; DOOM 3, cap. 6 (nereverificat local)
+- De ce: Substantivele colective care numesc instituții (guvernul, consiliul, comisia, echipa) sunt la singular, iar ghidul gov-md cere predicatul la singular în textele oficiale; genitivul plural care le însoțește nu schimbă regula: „Comitetul de miniștri a decis”. Pluralul după înțeles se întâlnește în uz (broșura IL îl tolerează la „grup, mulțime, serie”), de aceea în alte texte doar propui singularul.
+- Sursă: ghid gov-md §7.3.19; B. Croitor et al., 2014, p. 56
 
 ### RO-GRA-009 „Fiecare” și „orice” cer singularul
 - Nivel: recomandare
@@ -160,7 +160,7 @@ Bun:
 - Nivel: normă
 - Greșit: „un caiet a meu” → Corect: „un caiet al meu”
 - De ce: Articolul se acordă în gen și număr cu substantivul determinat: „un caiet al meu”, „doi frați ai mamei”, „două rapoarte ale echipei”. Cazul „indicele de răspândire al virusului” e tratat la RO-GRA-019. Genitivul cu „a” înaintea unui numeral sau a unui cuantificator invariabil („votul a doi senatori”) e corect și nu se corectează (RO-NUG-024); greșit e „a” înaintea unui cuantificator care are formă proprie de genitiv (RO-GRA-183).
-- Sursă: ghid gov-md §7.3.15; DOOM 3, cap. 6 (nereverificat local)
+- Sursă: ghid gov-md §7.3.15; DSL, s.v. ACORD
 
 ### RO-GRA-019 Substantiv + de + substantiv + genitiv
 - Nivel: normă
@@ -262,11 +262,11 @@ Bun:
 
 > Din cauza vremii urâte, conform datelor poliției, rezultatele au fost înregistrate de aparate.
 
-### RO-GRA-030 „Datorită”, „grație”, „mulțumită” cer dativul
+### RO-GRA-030 „Grație a mulți”, nu „grație la mulți”
 - Nivel: normă
-- Greșit: „datorită publicului și a încurajărilor” → Corect: „datorită publicului și încurajărilor”
-- De ce: Cele trei prepoziții cer dativul. Cu numeral sau cuantificator invariabil se leagă prin „a”: „grație a mulți parlamentari”, nu „grație la mulți parlamentari”. La coordonare, marca „a” nu se reia înaintea celui de-al doilea termen.
-- Sursă: ghid gov-md §7.1.7, §7.1.10; DOOM 3, §6.6.4 (nereverificat local)
+- Greșit: „grație la mulți parlamentari” → Corect: „grație a mulți parlamentari”
+- De ce: „Grație”, „datorită” și „mulțumită” cer dativul; înaintea unui numeral sau cuantificator invariabil dativul se face cu „a”, nu cu „la”. Ghidul gov-md adaugă că, la coordonare, marca „a” nu se reia înaintea celui de-al doilea termen („datorită publicului și încurajărilor”, nu „…și a încurajărilor”); aici ghidul e singura sursă, deci nu corectezi reluarea ca greșeală de normă.
+- Sursă: DOOM 3, §6.6.4; ghid gov-md §7.1.7, §7.1.10
 
 ### RO-GRA-031 Sensul lui „datorită”
 - Nivel: recomandare
@@ -287,10 +287,10 @@ Bun:
 - Sursă: DOOM 3 s.v. conform, potrivit; DEX '98 s.v. conform
 
 ### RO-GRA-034 „De” și „de către” la pasiv
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Rezultatele au fost înregistrate de către aparate.” → Corect: „Rezultatele au fost înregistrate de aparate.”
-- De ce: „De către” se folosește de obicei pentru agentul uman sau pentru colectivități de persoane (instituții, țări): „de către istorici”, „de către Ministerul Educației”. Cu lucruri se folosește „de”. Ghidul gov-md formulează restricția, dar DOOM 3 nu tratează cazul, de aceea e recomandare.
-- Sursă: ghid gov-md §7.1.3
+- De ce: DOOM 3 spune că „de către” nu se folosește în locul lui „de” când agentul pasivului nu e uman: „înregistrate de documente”, nu „de către documente”. Cu agent uman sau cu o colectivitate de persoane „de către” rămâne corect: „de către istorici”, „de către Ministerul Educației”.
+- Sursă: DOOM 3, §6.6.1; ghid gov-md §7.1.3
 
 ### RO-GRA-035 „Dinainte” conține deja „de”
 - Nivel: normă
@@ -377,9 +377,9 @@ Corelativele au două părți și se folosesc întregi: „fie… fie”, „nic
 - Sursă: DEX '98 s.v. decât; ghid gov-md §7.3.12
 
 ### RO-GRA-048 „Maximum” și „maxim”
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „formată din maxim trei experți” → Corect: „formată din maximum trei experți”
-- De ce: „Maximum” și „minimum” sunt adverbe sau stau pe lângă numerale („la maximum”, „maximum cinci secții”); „maxim” și „minim” sunt adjective („termen maxim”). Ca substantive se folosesc „un maxim”, „maximul”.
+- De ce: DEX '98 înregistrează „maximum” și „minimum” ca adverbe („maximum cinci secții”, „la maximum”), iar „maxim” și „minim” ca adjective („termen maxim”). Dicționarul nu discută un „maxim” adverbial, iar „maxim 5 persoane” e foarte răspândit, de aceea propui „maximum”, fără să corectezi „maxim” ca greșeală. Ca substantive se folosesc „un maxim”, „maximul”.
 - Sursă: DEX '98 s.v. maximum, minimum; ghid gov-md §7.3.13
 
 ## 7. Pronume și determinanți
