@@ -270,7 +270,7 @@ Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat 
 ### RO-NUG-082 „A downloada”
 - Nivel: ce nu e greșeală
 - Corect: „Puteți downloada raportul din pagina contului.” Nu corectezi în „descărca”.
-- De ce: Regula falsă: verbul n-ar exista în română. DOOM 3 îl înregistrează ca intrare nouă. Ghidul gov-md (§1.1) cere „a descărca” în textele oficiale, nu „a downloada”; la redactare poți urma această preferință, dar în corectură și în verificare nu îl semnalezi, pentru că e o acțiune de informatică (criteriul din secțiunea 4 a fișierului [imprumuturi.md](imprumuturi.md)).
+- De ce: Regula falsă: verbul n-ar exista în română. DOOM 3 îl înregistrează ca intrare nouă. Ghidul gov-md (§1.1) cere „a descărca” în textele oficiale, nu „a downloada”; la redactare poți urma această preferință, dar în corectură și în verificare nu îl semnalezi, pentru că e un verb adaptat și intrat în DOOM 3 (criteriul din secțiunea 4 a fișierului [imprumuturi.md](imprumuturi.md)).
 - Sursă: DOOM 3 s.v. downloada; ghid gov-md §1.1
 
 ### RO-NUG-125 „Per”
@@ -364,7 +364,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-045 „Rafale puternice”
 - Nivel: ce nu e greșeală
 - Corect: „Mâine sunt așteptate rafale puternice de vânt.” Nu scoți „puternice”.
-- De ce: Regula falsă: rafala ar fi prin definiție violentă. DEX '98 definește rafala ca „dezlănțuire bruscă, violentă”, deci violența ține de definiție. Ea e însă relativă: rafalele se gradează între ele în prognoze („rafale de până la 70 km/h”), iar „puternice” precizează gradul. Nicio sursă consultată nu discută îmbinarea, de aceea nu o corectezi; la redactare poți da direct intensitatea.
+- De ce: Regula falsă: „puternice” ar repeta sensul din definiție, fiindcă DEX '98 definește rafala ca „dezlănțuire bruscă, violentă”. Violența din definiție e relativă: rafalele se gradează între ele în prognoze („rafale de până la 70 km/h”), iar „puternice” precizează gradul. Nicio sursă consultată nu discută îmbinarea, de aceea nu o corectezi; la redactare poți da direct intensitatea.
 - Sursă: DEX '98 s.v. rafală
 
 ### RO-NUG-069 „Sumă de bani”
@@ -414,7 +414,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-098 Un conector izolat
 - Nivel: ce nu e greșeală
 - Corect: „Livrarea e gratuită. De asemenea, puteți returna produsele în 30 de zile.” Nu îl corectezi și nu îl semnalezi ca tipar de text generat.
-- De ce: Regula falsă: orice „de asemenea”, „totodată” sau „în plus” ar fi un semn de text generat. Un conector care exprimă o relație reală e un mijloc normal de legătură între fraze. Semnal e doar aglomerarea lor la începutul aproape fiecărei fraze (RO-COE-016 din [coerenta.md](coerenta.md)). Regula privește semnalarea ca tipar de text generat; recomandările de registru din [stilistica.md](stilistica.md) (de pildă „totodată” în loc de „de asemenea” pentru publicul larg) rămân propuneri valabile, nu corecturi.
+- De ce: Regula falsă: orice „de asemenea”, „totodată” sau „în plus” ar fi un semn de text generat. Un conector care exprimă o relație reală e un mijloc normal de legătură între fraze. Semnal e doar aglomerarea lor la începutul aproape fiecărei fraze (RO-COE-016 din [coerenta.md](coerenta.md)). Regula privește semnalarea ca tipar de text generat; recomandările de registru din [stilistica.md](stilistica.md) (de pildă „de asemenea” sau „și” în loc de „totodată”, când acesta înseamnă doar „și” sau „în plus”, în textele pentru public larg) rămân propuneri valabile, nu corecturi.
 - Sursă: ghid gov-md §10.1
 
 ### RO-NUG-061 Ordinea subiect, verb, complement

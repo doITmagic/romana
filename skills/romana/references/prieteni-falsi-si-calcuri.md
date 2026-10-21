@@ -7,7 +7,7 @@ Fișierul acesta te ajută să recunoști româna care sună tradusă din englez
 
 Pentru cuvintele românești apropiate ca formă (paronimele) vezi [paronime-si-pleonasme.md](paronime-si-pleonasme.md), pentru sensul cuvintelor în general [semantica.md](semantica.md), pentru forma împrumuturilor (cratima, pluralul, cuvântul englezesc lăsat în text) [imprumuturi.md](imprumuturi.md), iar pentru construcțiile gramaticale calchiate (subiectul nearticulat, topica limbii sursă, „ca și” cu sensul „în calitate de”) [gramatica.md](gramatica.md).
 
-Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; DEX '96 = *Dicționarul explicativ al limbii române*, ediția a II-a; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026.
+Abrevierile din câmpul „Sursă”: Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; MDN '00 = *Marele dicționar de neologisme*; DEX '96 = *Dicționarul explicativ al limbii române*, ediția a II-a; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026.
 
 ## Cum judeci un prieten fals sau un calc
 
@@ -145,8 +145,8 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 
 ### RO-CAL-053 „Bilion” e ambiguu: miliard sau o mie de miliarde
 - Nivel: de semnalat
-- Greșit: „Compania valorează 3 bilioane de dolari, potrivit raportului anual.” → Corect: „Compania valorează 3 miliarde de dolari, potrivit raportului anual.”
-- De ce: Engl. „billion” înseamnă o mie de milioane, adică un miliard. DEX '98 dă pentru „bilion” două valori, „o mie de miliarde” și, „în unele țări”, „un miliard”, iar la „miliard” îl trece pe „bilion” ca sinonim. Cuvântul poate fi deci citit 10⁹ sau 10¹², iar lectura greșită schimbă cifra de o mie de ori (P1). Semnalezi și propui „miliard”, care nu e ambiguu. Într-o traducere în care originalul spune „billion”, „bilion” e o abatere de fidelitate (normă, P0, vezi [fidelitate.md](fidelitate.md)), dar numai când poți verifica originalul. Engl. „trillion” e „bilion” (10¹², primul sens din DEX '98); când traduci, verifici fiecare cifră. Scrierea cifrelor și a unităților e în [numere-date-unitati.md](numere-date-unitati.md).
+- Greșit: „Compania valorează 3 bilioane de dolari, potrivit raportului anual.” → Corect: „Compania valorează 3 miliarde de dolari, potrivit raportului anual.” (numai dacă autorul are în minte 10⁹)
+- De ce: Engl. „billion” înseamnă o mie de milioane, adică un miliard. DEX '98 dă pentru „bilion” două valori, „o mie de miliarde” și, „în unele țări”, „un miliard”, iar la „miliard” îl trece pe „bilion” ca sinonim. Cuvântul poate fi deci citit 10⁹ sau 10¹², iar lectura greșită schimbă cifra de o mie de ori (P1). Semnalezi și întrebi dacă autorul are în minte 10⁹ sau 10¹²; abia după răspuns scrii „miliard” sau „o mie de miliarde”, nu schimbi cifra pe ghicite. Într-o traducere în care originalul spune „billion”, „bilion” e o abatere de fidelitate (normă, P0, vezi [fidelitate.md](fidelitate.md)), dar numai când poți verifica originalul. Engl. „trillion” e „bilion” (10¹², primul sens din DEX '98); când traduci, verifici fiecare cifră. Scrierea cifrelor și a unităților e în [numere-date-unitati.md](numere-date-unitati.md).
 - Sursă: DEX '98 s.v. bilion, miliard
 
 ### RO-CAL-030 „Specific” cu sensul „precis”

@@ -4,7 +4,7 @@ Fișierul acesta privește forma cuvintelor împrumutate: cum le articulezi și 
 
 Un cuvânt nu e greșit doar pentru că e englezesc. DOOM 3 a înregistrat multe împrumuturi recente („browser”, „spam”, „a downloada”, „a focusa”), iar acestea sunt corecte (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). Problema apare în trei cazuri: forma e scrisă greșit, forma nu e atestată și e prezentată ca sigură, sau cuvântul străin ia locul unui cuvânt românesc la fel de clar.
 
-Abrevierile din câmpul „Sursă”: ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DN = *Dicționar de neologisme*; MDN '00 și MDN '08 = *Marele dicționar de neologisme*; MDA2 = *Micul dicționar academic*, ediția a II-a; DCR2 = *Dicționar de cuvinte recente*, ediția a II-a.
+Abrevierile din câmpul „Sursă”: ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; DOOM 2 = *Dicționar ortografic, ortoepic și morfologic al limbii române*, ediția a II-a revăzută și adăugită; DN = *Dicționar de neologisme*; MDN '00 și MDN '08 = *Marele dicționar de neologisme*; DEX '09 = *Dicționarul explicativ al limbii române*, ediția a II-a revăzută și adăugită; MDA2 = *Micul dicționar academic*, ediția a II-a; DCR2 = *Dicționar de cuvinte recente*, ediția a II-a.
 
 ## 1. Articolul și pluralul: cu cratimă sau fără
 
@@ -53,7 +53,7 @@ Surse pentru metodă: ghid gov-md §9.11.4, §9.11.5 și §7.2.3; INJ p. 102.
 
 ## 2. Forme atestate și forme deduse
 
-O formă e **atestată** când apare într-un dicționar; reperul normativ e DOOM 3. O formă e **dedusă** când DOOM 3 nu are cuvântul, iar articolul și pluralul nu apar în niciun dicționar consultat și se construiesc după regula din secțiunea 1; cuvântul poate fi totuși înregistrat într-un dicționar de neologisme (cazul lui „update”, din MDN '00). O formă dedusă nu se impune ca normă:
+O formă e **atestată** când apare într-un dicționar; reperul normativ e DOOM 3. O formă e **dedusă** când DOOM 3 nu are cuvântul, iar articolul și pluralul nu apar într-un dicționar normativ și se construiesc după regula din secțiunea 1; cuvântul poate fi totuși înregistrat într-un dicționar de neologisme (cazul lui „update”, din MDN '00). O formă dedusă nu se impune ca normă:
 
 - la redactare o folosești doar dacă termenul e necesar; altfel alegi un cuvânt românesc;
 - în corectură și în verificare propui forma dedusă, nu o corectezi ca greșeală de normă, și spui că e dedusă;
@@ -119,7 +119,7 @@ Regulile de mai jos sunt împărțite în două: întâi formele atestate, apoi 
 
 ### Forme deduse
 
-Cuvintele din regulile următoare nu sunt în DOOM 3, iar formele lor articulate și pluralele nu apar în dicționarele consultate. Ele sunt **forme deduse** după regula din secțiunea 1, de aceea regulile au nivelul recomandare.
+Cuvintele din regulile următoare nu sunt în DOOM 3, iar formele lor articulate și pluralele nu apar într-un dicționar normativ. Ele sunt **forme deduse** după regula din secțiunea 1, de aceea regulile au nivelul recomandare.
 
 ### RO-IMP-033 Plugin, pluginul (formă dedusă)
 - Nivel: recomandare
@@ -142,7 +142,7 @@ Cuvintele din regulile următoare nu sunt în DOOM 3, iar formele lor articulate
 ### RO-IMP-017 Codebase, queue, update: cu cratimă (forme deduse)
 - Nivel: recomandare
 - Greșit: „Am curățat codebaseul și am golit queueul.” → Corect: „Am curățat codebase-ul și am golit queue-ul.”
-- De ce: Forme deduse. Finala scrisă nu se pronunță („e” și „ue” sunt mute), deci articolul se leagă prin cratimă, ca la modelele atestate „site-ul” și „barbecue-ul”. „Update” e înregistrat în MDN '00, dar nu în DOOM 3 (acolo e doar verbul „a updata”), așa că „update-ul”, scris cu cratimă după regula din secțiunea 1, e o formă dedusă. Pentru publicul larg propui „baza de cod”, „coada de așteptare”, „actualizarea”.
+- De ce: Forme deduse. Finala scrisă nu se pronunță („e” și „ue” sunt mute), deci articolul se leagă prin cratimă, ca la modelele atestate „site-ul” și „barbecue-ul”. „Update” e înregistrat în MDN '00, iar paradigma lexemului din dicționarele consultate dă „update-ul” și „update-uri”, cu cratimă, dar niciun dicționar normativ nu le atestă: DOOM 3 nu are cuvântul (are doar verbul „a updata”). De aceea „update-ul” se tratează ca formă dedusă, după regula din secțiunea 1, care dă același rezultat. Pentru publicul larg propui „baza de cod”, „coada de așteptare”, „actualizarea”.
 - Sursă: DOOM 3 s.v. site, barbecue (modelele)
 
 ## 3. Prefixele și compusele
@@ -206,9 +206,9 @@ Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
 
 Un împrumut e de prisos când româna are un cuvânt la fel de clar și la fel de precis, iar cititorul nu câștigă nimic din forma străină. Nivelul depinde de dicționar:
 
-- **anglicism evitabil:** forma e în DOOM 3, dar există un echivalent românesc firesc, iar sursele o socotesc împrumut de lux; aici intră cuvintele generale de birou și de conducere pe care ghidul gov-md le dă cu echivalentul lor românesc („password”, „deadline”, „team”, „board”); propui echivalentul, iar la redactare îl folosești de la început;
+- **anglicism evitabil:** substantivul e în DOOM 3, dar o sursă (aici ghidul gov-md §1.1) îi dă un echivalent românesc consacrat, cu același sens („password” → „parolă”, „deadline” → „termen-limită”, „team” → „echipă”, „board” → „consiliu”); propui echivalentul, iar la redactare îl folosești de la început;
 - **recomandare:** forma englezească nu e în dicționare (e lăsată ca atare în text); propui cuvântul românesc;
-- **ce nu e greșeală:** împrumutul e în DOOM 3 și numește o acțiune sau un obiect din informatică, folosit firesc de cititorul domeniului („a downloada”, „a rula”, „refresh”, „computer”); nu îl semnalezi, chiar dacă ghidul gov-md îi dă în textele oficiale un echivalent („a descărca”). Limita dintre cele două niveluri o fixează acest criteriu, nu forma cuvântului (vezi RO-NUG-082 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
+- **ce nu e greșeală:** (1) verbul adaptat morfologic, care primește terminații românești, și intrat în DOOM 3 („a downloada”, „a rula”, „a focusa”), chiar dacă un ghid cere în textele oficiale echivalentul („a descărca”); (2) substantivul din DOOM 3 despre care nicio sursă consultată nu cere înlocuirea („computer”, „click”, „refresh”), căruia echivalentul românesc i se poate propune doar ca preferință. Criteriul se aplică o singură dată, aici: ce desparte cele două niveluri e partea de vorbire și sursa care cere înlocuirea, nu domeniul cuvântului, fiindcă și „password” aparține informaticii (vezi RO-NUG-082 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
 
 Termenul tehnic consacrat într-un domeniu rămâne dacă cititorul îl folosește așa; la prima apariție îl poți explica. Termenii de interfață („dashboard”, „setări”, butoanele) sunt tratați ca recomandări în [tipuri/interfata.md](tipuri/interfata.md).
 
@@ -217,7 +217,7 @@ Surse pentru metodă: ghid gov-md §1.1; INJ p. 60; DSL, s.v. BARBARISM; B. Croi
 ### RO-IMP-042 Password, deadline, team, board
 - Nivel: anglicism evitabil
 - Greșit: „Schimbați-vă passwordul până la deadline-ul de vineri.” → Corect: „Schimbați-vă parola până la termenul-limită de vineri.”
-- De ce: „Password”, „deadline”, „team”, „board” sunt în DOOM 3, dar româna are cuvinte curente cu același sens: „parolă”, „termen-limită”, „echipă”, „consiliu de administrație” sau „conducere”. Ghidul gov-md cere forma românească atunci când există una consacrată. Propui echivalentul; la redactare îl folosești de la început. „A downloada” nu intră aici, deși ghidul îl dă în aceeași listă: e o acțiune de informatică și se tratează la RO-NUG-082.
+- De ce: „Password”, „deadline”, „team”, „board” sunt în DOOM 3, dar româna are cuvinte curente cu același sens: „parolă”, „termen-limită”, „echipă”, „consiliu de administrație” sau „conducere”. Ghidul gov-md cere forma românească atunci când există una consacrată. Propui echivalentul; la redactare îl folosești de la început. „A downloada” nu intră aici, deși ghidul îl dă în aceeași listă: e un verb adaptat și intrat în DOOM 3 (criteriul din introducerea acestei secțiuni; vezi RO-NUG-082).
 - Sursă: DOOM 3 s.v. password, deadline, team, board; ghid gov-md §1.1
 
 ### RO-IMP-048 Cuvinte englezești lăsate în textul românesc
