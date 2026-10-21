@@ -4,6 +4,7 @@ import (
 	"regexp"
 	"strings"
 	"unicode"
+	"unicode/utf8"
 )
 
 // Rezultat este ce a produs un motor pentru un caz.
@@ -179,6 +180,57 @@ func potrivire(a, b string) bool {
 	return strings.Contains(a, b) || strings.Contains(b, a)
 }
 
+func esteLitera(r rune) bool { return unicode.IsLetter(r) || unicode.IsDigit(r) || r == '-' }
+
+// apareCuvant întoarce pozițiile (în octeți) la care frag apare în text pe
+// limită de cuvânt: caracterul dinainte și cel de după nu fac parte dintr-un
+// cuvânt (literă cu sau fără diacritice, cifră, cratimă). Limita se cere doar la
+// capetele fragmentului care sunt ele însele litere. Comparația e exactă; cine
+// vrea fără diferența de majuscule aduce ambele șiruri la litere mici.
+func apareCuvant(text, frag string) []int {
+	var out []int
+	if frag == "" {
+		return nil
+	}
+	fr := []rune(frag)
+	for off := 0; off <= len(text); {
+		k := strings.Index(text[off:], frag)
+		if k < 0 {
+			break
+		}
+		i := off + k
+		ok := true
+		if esteLitera(fr[0]) && i > 0 {
+			if r, _ := utf8.DecodeLastRuneInString(text[:i]); esteLitera(r) {
+				ok = false
+			}
+		}
+		if e := i + len(frag); ok && esteLitera(fr[len(fr)-1]) && e < len(text) {
+			if r, _ := utf8.DecodeRuneInString(text[e:]); esteLitera(r) {
+				ok = false
+			}
+		}
+		if ok {
+			out = append(out, i)
+		}
+		off = i + 1
+	}
+	return out
+}
+
+// contineCuvant: text conține frag pe limită de cuvânt, fără diferența de majuscule.
+func contineCuvant(text, frag string) bool {
+	return len(apareCuvant(strings.ToLower(text), strings.ToLower(frag))) > 0
+}
+
+// potrivireCuvant: ca potrivire, dar „conține” înseamnă pe limită de cuvânt.
+func potrivireCuvant(a, b string) bool {
+	if len([]rune(a)) < 3 || len([]rune(b)) < 3 {
+		return a == b && a != ""
+	}
+	return contineCuvant(a, b) || contineCuvant(b, a)
+}
+
 // MarcaObs începe fiecare observație din raportul de verificare. Cererea
 // (Prompt) o cere identic cu și fără skill; SKILL.md dă prioritate formatului
 // cerut de aplicație.
@@ -264,7 +316,7 @@ func noteazaVerificare(c Caz, r Rezultat, n *Nota) {
 		}
 		// Interzis se verifică independent de potrivirea cu observațiile.
 		for i, z := range a.Interzis {
-			if potrivire(q, norm(z)) {
+			if potrivireCuvant(q, norm(z)) {
 				violat[i] = true
 			}
 		}
@@ -355,18 +407,26 @@ func diferente(x, y []token) []hunk {
 
 // intervaleToken întoarce, pentru fiecare apariție a lui frag în intrare,
 // intervalul de tokeni [ta,tb) pe care îl acoperă.
-func intervaleToken(intrare string, toks []token, frag string) [][2]int {
+func intervaleToken(intrare string, toks []token, frag string, cuvant bool) [][2]int {
 	var out [][2]int
 	if frag == "" {
 		return nil
 	}
-	off := 0
-	for {
-		k := strings.Index(intrare[off:], frag)
-		if k < 0 {
-			break
+	var poz []int
+	if cuvant {
+		poz = apareCuvant(intrare, frag)
+	} else {
+		for off := 0; off <= len(intrare); {
+			k := strings.Index(intrare[off:], frag)
+			if k < 0 {
+				break
+			}
+			poz = append(poz, off+k)
+			off += k + 1
 		}
-		fs, fe := off+k, off+k+len(frag)
+	}
+	for _, p := range poz {
+		fs, fe := p, p+len(frag)
 		ta, tb := -1, -1
 		for i, t := range toks {
 			if t.end > fs && t.start < fe {
@@ -379,7 +439,6 @@ func intervaleToken(intrare string, toks []token, frag string) [][2]int {
 		if ta >= 0 {
 			out = append(out, [2]int{ta, tb})
 		}
-		off = fs + 1
 	}
 	return out
 }
@@ -456,11 +515,11 @@ func noteazaCorectura(c Caz, r Rezultat, n *Nota) {
 	violat := make([]bool, len(a.Interzis))
 	var ivInt [][][2]int
 	for _, z := range a.Interzis {
-		ivInt = append(ivInt, intervaleToken(c.Intrare, x, z))
+		ivInt = append(ivInt, intervaleToken(c.Intrare, x, z, true))
 	}
 	var ivObs [][][2]int
 	for _, o := range a.Observatii {
-		ivObs = append(ivObs, intervaleToken(c.Intrare, x, o.Fragment))
+		ivObs = append(ivObs, intervaleToken(c.Intrare, x, o.Fragment, false))
 	}
 	gasit := make([]bool, len(a.Observatii))
 	for _, h := range hunks {
@@ -522,9 +581,8 @@ func noteazaCorectura(c Caz, r Rezultat, n *Nota) {
 func noteazaRedactare(c Caz, r Rezultat, n *Nota) {
 	text, ok := ExtrageText(r.Iesire)
 	n.FaraMarcaj = !ok
-	low := strings.ToLower(text)
 	for _, z := range c.Asteptat.Interzis {
-		if z != "" && strings.Contains(low, strings.ToLower(z)) {
+		if z != "" && contineCuvant(text, z) {
 			n.Probleme++
 			n.Fidelitate = false
 		}

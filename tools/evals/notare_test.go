@@ -256,3 +256,54 @@ func TestCitatScurt(t *testing.T) {
 		t.Errorf("un citat de o literă nu prinde nimic: %+v", n)
 	}
 }
+
+func TestInterzisPeLimitaDeCuvant(t *testing.T) {
+	cr := func(interzis string) Caz {
+		return Caz{ID: "redactare-interfata-02", Mod: "redactare", Intrare: "Scrie.", Asteptat: Asteptat{Interzis: []string{interzis}}}
+	}
+	j := &Judecata{}
+	if n := Noteaza(cr("Introdu"), Rezultat{Iesire: "[[TEXT]]Introduceți o adresă validă.[[/TEXT]]", Judecata: j}); n.Probleme != 0 || !n.Fidelitate {
+		t.Errorf("Introdu nu se potrivește cu Introduceți: %+v", n)
+	}
+	if n := Noteaza(cr("Introdu"), Rezultat{Iesire: "[[TEXT]]Introdu o adresă validă.[[/TEXT]]", Judecata: j}); n.Probleme != 1 {
+		t.Errorf("forma interzisă: %+v", n)
+	}
+	if n := Noteaza(cr("a aplica"), Rezultat{Iesire: "[[TEXT]]Primăria va aplica măsura.[[/TEXT]]", Judecata: j}); n.Probleme != 0 {
+		t.Errorf("a aplica nu se potrivește cu va aplica: %+v", n)
+	}
+	if n := Noteaza(cr("a aplica"), Rezultat{Iesire: "[[TEXT]]Poți a aplica acum.[[/TEXT]]", Judecata: j}); n.Probleme != 1 {
+		t.Errorf("%+v", n)
+	}
+	// diacritice și cratimă fac parte din cuvânt
+	if n := Noteaza(cr("sigur"), Rezultat{Iesire: "[[TEXT]]Ești asigurat; e un sigur-sigur.[[/TEXT]]", Judecata: j}); n.Probleme != 0 {
+		t.Errorf("%+v", n)
+	}
+	if n := Noteaza(cr("ședință"), Rezultat{Iesire: "[[TEXT]]Reședință nouă.[[/TEXT]]", Judecata: j}); n.Probleme != 0 {
+		t.Errorf("diacritice: %+v", n)
+	}
+	if n := Noteaza(cr("Introdu"), Rezultat{Iesire: "[[TEXT]]Introdu-ți parola.[[/TEXT]]", Judecata: j}); n.Probleme != 0 {
+		t.Errorf("cratima leagă cuvântul: %+v", n)
+	}
+	if n := Noteaza(cr("Introdu-ți"), Rezultat{Iesire: "[[TEXT]]Introdu-ți parola.[[/TEXT]]", Judecata: j}); n.Probleme != 1 {
+		t.Errorf("%+v", n)
+	}
+}
+
+func TestInterzisPeLimitaDeCuvantCorectura(t *testing.T) {
+	c := Caz{ID: "x-06", Mod: "corectura", Intrare: "Introduceți datele. Ea va aplica regula.",
+		Asteptat: Asteptat{Interzis: []string{"Introdu", "a aplica"}}}
+	// Schimbarea lui „Introduceți” nu atinge „Introdu”, nici „va aplica” pe „a aplica”.
+	n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]Completați datele. Ea va folosi regula.[[/TEXT]]"})
+	if n.Probleme != 0 {
+		t.Errorf("%+v", n)
+	}
+}
+
+func TestInterzisPeLimitaDeCuvantVerificare(t *testing.T) {
+	c := Caz{ID: "x-07", Mod: "verificare", Intrare: "Introduceți datele. Ea va aplica regula.",
+		Asteptat: Asteptat{Interzis: []string{"Introdu", "a aplica"}}}
+	n := Noteaza(c, Rezultat{Iesire: "OBS: „Introduceți datele” · normă\nOBS: „va aplica regula” · normă"})
+	if n.Probleme != 0 {
+		t.Errorf("%+v", n)
+	}
+}
