@@ -33,7 +33,7 @@ type Lema struct {
 	Forma          string      `json:"forma"`
 	Descriere      string      `json:"descriere,omitempty"` // deosebește omonimele
 	ParteDeVorbire string      `json:"parte_de_vorbire,omitempty"`
-	Doom3          bool        `json:"doom3"`           // DOOM 3 atestă lema: e legată de sursa DOOM 3 (lexeme_source) sau o intrare a ei are o definiție DOOM 3 al cărei cuvânt-titlu (lexicon, normalizat) e chiar forma lemei. Simpla intrare comună cu definiția DOOM 3 a altui cuvânt nu ajunge: „vroi” (intrarea lui „vrea”) iese false. NU dovedește că orice formă flexionată e corectă
+	Doom3          bool        `json:"doom3"`           // DOOM 3 atestă lema: e legată de sursa DOOM 3 (lexeme_source) sau o intrare a ei are o definiție DOOM 3 al cărei cuvânt-titlu (lexicon, normalizat sau redus la cheie) e chiar forma lemei. Simpla intrare comună cu definiția DOOM 3 a altui cuvânt nu ajunge: „vroi” (intrarea lui „vrea”) iese false. NU dovedește că orice formă flexionată e corectă
 	Surse          []string    `json:"surse"`           // toate dicționarele care atestă lema, cu sau fără text afișabil
 	Definitii      []Definitie `json:"definitii"`       // doar din surse cu can_distribute = 1
 	Forme          []Forma     `json:"forme,omitempty"` // formele flexionare, cu etichetă
@@ -253,7 +253,8 @@ SELECT id, short_name FROM source WHERE id IN (
 
 // atestataDoom3: lema e legată de sursa „DOOM 3” în lexeme_source SAU o
 // definiție DOOM 3 dintr-o intrare a ei are cuvântul-titlu (lexicon) egal cu
-// forma lemei, ambele normalizate. Intrarea comună nu ajunge.
+// forma lemei, ambele normalizate sau reduse la cheie (fără diacritice și
+// cratimă). Intrarea comună nu ajunge.
 func (d *Dictionar) atestataDoom3(ctx context.Context, id int64, forma string) (bool, error) {
 	var n int
 	err := d.db.QueryRowContext(ctx, `SELECT count(*) FROM lexeme_source ls
@@ -270,13 +271,15 @@ func (d *Dictionar) atestataDoom3(ctx context.Context, id int64, forma string) (
 		return false, err
 	}
 	defer rows.Close()
-	tinta := Normalizeaza(forma)
+	tinta, cheieTinta := Normalizeaza(forma), Cheie(forma)
 	for rows.Next() {
 		var lexicon sql.NullString
 		if err := rows.Scan(&lexicon); err != nil {
 			return false, err
 		}
-		if Normalizeaza(lexicon.String) == tinta {
+		// și după cheie: exportul are cuvinte-titlu DOOM 3 fără diacritice
+		// sau cratimă („alba-neagra” pentru „albă-neagră”)
+		if Normalizeaza(lexicon.String) == tinta || Cheie(lexicon.String) == cheieTinta {
 			return true, nil
 		}
 	}
