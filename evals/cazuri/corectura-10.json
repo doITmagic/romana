@@ -11,7 +11,7 @@
     "observatii": [
       {
         "fragment": "aplica pentru postul",
-        "nivel": "normă",
+        "nivel": "recomandare",
         "pilon": "semantică"
       },
       {
@@ -19,9 +19,6 @@
         "nivel": "recomandare",
         "pilon": "semantică"
       }
-    ],
-    "cerut": [
-      "nicio dovadă"
     ]
   }
 }

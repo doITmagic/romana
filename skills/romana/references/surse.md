@@ -41,7 +41,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** *Dicționarul explicativ al limbii române*, Academia Română, Institutul de Lingvistică „Iorgu Iordan”.
 - **Ediție:** a II-a, Univers Enciclopedic, București, 1998.
 - **Statut:** descriptiv. Dă sensurile, mărcile de registru (fam., pop., reg., arg., înv.) și variantele. Sensul din DEX ’98 decide dacă un cuvânt „înseamnă” ceva, dar pentru formă are prioritate DOOM 3.
-- **Ce nu spune:** nu cuprinde cuvintele sau sensurile apărute după 1998 (multe din informatică sau din uzul recent). Absența unui sens de acolo nu dovedește că sensul e greșit; la regulile de sens, o definiție mai nouă care îl dă coboară nivelul. Nu e normă ortografică.
+- **Ce nu spune:** nu cuprinde cuvintele sau sensurile apărute după 1998 (multe din informatică sau din uzul recent). Absența unui sens de acolo nu dovedește că sensul e greșit; la regulile de sens, un sens neatestat aici sau în DOOM 3 e recomandare (prieten fals), nu normă; un sens atestat în DEX ’98 sau în DOOM 3 nu e greșeală. Nu e normă ortografică.
 
 ### DEX ’96
 - **Titlu:** *Dicționarul explicativ al limbii române*.

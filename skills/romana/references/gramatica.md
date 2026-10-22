@@ -657,14 +657,14 @@ Bun:
 ### RO-GRA-078 „Sunt”, nu „sînt”
 - Nivel: normă
 - Greșit: „Noi sîntem acasă.” → Corect: „Noi suntem acasă.”
-- De ce: Verbul „a fi” se scrie „sunt, suntem, sunteți”; seria „sînt” e greșită în textul de azi, fără excepție (RO-TIP-128 de mai jos). La reproducerea unui text vechi, grafia originală se păstrează în citat.
-- Sursă: DOOM 3, §2.2.2
+- De ce: Verbul „a fi” se scrie „sunt, suntem, sunteți”; seria „sînt” e greșită în textul de azi, fără excepție (RO-TIP-128 de mai jos). Într-un citat direct, grafia originală rămâne neschimbată, conform regulii de fidelitate a skill-ului (RO-FID-026, RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). Atenție: DOOM 3 §2.2.2 cere ca formele „sînt” din texte vechi să fie redate acum „sunt”; skill-ul păstrează totuși citatul, pe baza regulii de fidelitate.
+- Sursă: DOOM 3, §2.2.2 (norma); regulă de fidelitate a skill-ului și decizia proprietarului (22.10) (păstrarea în citat)
 
 ### RO-TIP-128 Grafia cu „î” interior și „sînt” se corectează mereu
 - Nivel: normă
 - Greșit: „Sînt cîrcotașă și, cînd am îmbătrînit, am rămas la fel.” → Corect: „Sunt cârcotașă și, când am îmbătrânit, am rămas la fel.” (și când grafia e aplicată consecvent, în tot textul)
-- De ce: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost norma până la hotărârea Academiei Române din 1993, care a revenit la „â” și „sunt” (DOOM 3 §2.2.1–2.2.2). Azi e greșeală, chiar dacă autorul o aplică consecvent de la un capăt la altul: nu există excepție pentru o convenție asumată a autorului sau a redacției. Corectezi toate ocurențele („â” în interior, „sunt, suntem, sunteți”, RO-GRA-074 și RO-GRA-078), iar dacă grafia e consecventă, spui o singură dată că ai unificat-o după DOOM 3. În citat și în titlul unei opere se păstrează grafia originală (RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
-- Sursă: DOOM 3 §2.2.1–2.2.2 și Hotărârea Academiei Române din 17 februarie 1993 (anexa); ÎOOP6 p. 25 (principiul distribuțional); decizia proprietarului skill-ului (22.10)
+- De ce: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost norma până la hotărârea Academiei Române din 1993, care a revenit la „â” și „sunt” (DOOM 3 §2.2.1–2.2.2). Azi e greșeală, chiar dacă autorul o aplică consecvent de la un capăt la altul: nu există excepție pentru o convenție asumată a autorului sau a redacției. În corectură corectezi toate ocurențele („â” în interior, „sunt, suntem, sunteți”, RO-GRA-074 și RO-GRA-078) și spui o singură dată că ai unificat grafia după DOOM 3. În verificare raportezi grafia o singură dată, la prima apariție, cu mențiunea că se repetă în tot textul, nu fiecare formă în parte. Într-un citat direct grafia originală rămâne neschimbată, conform regulii de fidelitate a skill-ului (RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)); DOOM 3 §2.2.1 pct. 5 cere redarea tacită după normele actuale la editarea unor texte vechi, dar skill-ul nu rescrie citatele.
+- Sursă: DOOM 3 §2.2.1–2.2.2 și Hotărârea Academiei Române din 17 februarie 1993 (anexa); ÎOOP6 p. 25 (principiul distribuțional); decizia proprietarului skill-ului (22.10); păstrarea în citat: regulă de fidelitate a skill-ului
 
 ### RO-GRA-080 Eliziunea prepoziției cu articolul
 - Nivel: normă
