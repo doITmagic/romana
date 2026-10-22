@@ -731,9 +731,9 @@ Bun:
 - Vezi și: RO-TIP-077
 
 ### RO-TIP-081 Statele se numesc în forma oficială actuală
-- Nivel: recomandare
-- Greșit: „Bielorusia, Swaziland” → Corect: „Belarus, Eswatini”
-- De ce: Numele statelor se folosesc în forma lor oficială actuală: Belarus (adjectivul „belarus”; „Bielorusia” e învechit), Myanmar (fostă Birmania), Eswatini (fost Swaziland), Cehia (nume scurt). „Côte d’Ivoire” este forma oficială recomandată de DOOM 3 §2.5 pct. 2 și de ÎOOP6, iar „Coasta de Fildeș” e marcată învechit în DOOM 3. La „Capul Verde” DOOM 3 dă numai această formă (intrare nouă, și §1.2.2); „Cabo Verde” nu figurează în DOOM 3. Dacă un ghid instituțional cere altă formă, în textul redactat urmezi DOOM 3 și semnalezi diferența.
+- Nivel: normă
+- Greșit: „Bielorusia, Swaziland, Coasta de Fildeș” → Corect: „Belarus, Eswatini, Côte d’Ivoire”
+- De ce: Numele statelor se folosesc în forma lor oficială actuală: Belarus (adjectivul „belarus”; „Bielorusia” e învechit), Myanmar (fostă Birmania), Eswatini (fost Swaziland), Cehia (nume scurt). „Côte d’Ivoire” este forma oficială actuală cerută de DOOM 3 §2.5 pct. 2 și de ÎOOP6, iar „Coasta de Fildeș” se corectează (DOOM 3 o marchează învechit). La „Capul Verde” DOOM 3 dă numai această formă (intrare nouă, și §1.2.2); „Cabo Verde” nu figurează în DOOM 3. Dacă un ghid instituțional cere altă formă, în textul redactat urmezi DOOM 3 și semnalezi diferența.
 - Sursă: DOOM 3, s.v. Belarus, Myanmar, Eswatini, Swaziland, Côte d’Ivoire, Coasta de Fildeș, Capul Verde; DOOM 3 §2.5 pct. 2; ÎOOP6 (s.v. Côte d’Ivoire); ghid gov-md §3.5.2
 
 ### RO-TIP-082 Forma completă a statului sau forma scurtă

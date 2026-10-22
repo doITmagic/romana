@@ -160,7 +160,7 @@ Pe lângă nivel, fiecare observație are:
 - **un pilon:** gramatică, semantică, stilistică, coerență sau tipografie;
 - **o gravitate:**
   - **P0:** textul spune altceva decât sursa sau decât a vrut autorul, ori nu poate fi publicat așa: un fapt schimbat, o negație inversată, un conector care schimbă relația logică, un cuvânt inventat, o greșeală de normă într-un titlu sau pe un buton;
-  - **P1:** o greșeală obiectivă care nu schimbă sensul, dar se vede: un acord greșit, un calc care contrazice dicționarul sau gramatica, diacritice lipsă, doi termeni pentru același concept tehnic;
+  - **P1:** o greșeală obiectivă care nu schimbă sensul, dar se vede: un acord greșit, un calc de construcție care contrazice dicționarul sau gramatica, diacritice lipsă, doi termeni pentru același concept tehnic;
   - **P2:** un finisaj: o recomandare de stil, ritmul frazei, o variantă mai firească.
 
 La „de semnalat”, gravitatea arată cât de mare e riscul de neînțelegere: un pronume care poate trimite la două substantive e P1 dacă lectura greșită l-ar induce în eroare pe cititor; altfel e P2.
@@ -172,7 +172,7 @@ Regula de bază: ce e obiectiv se corectează, ce ține de gust doar se propune.
 - Când nu ești sigur de nivel, alegi nivelul mai slab: recomandare în loc de normă. Spui că e recomandare.
 - O regulă pe care nu o poți lega de o sursă nu o aplici ca normă. Excepție fac ruperile de coerență, unde dovada e chiar textul.
 - Hipercorectitudinea e la fel de gravă ca greșeala: o formă corectă „reparată” strică un text bun.
-- Un calc e normă când sensul sau construcția contrazice dicționarul ori gramatica („a face sens” în loc de „a avea sens”). Altfel e recomandare.
+- Un calc e normă când construcția contrazice dicționarul ori gramatica („a face sens” în loc de „a avea sens”). Un sens englezesc pe care dicționarul nu îl atestă (un prieten fals) e recomandare; excepție face „bilion”, care se corectează în „miliard”. Altfel e recomandare.
 - Nu „îmbunătățești” după gust un text corect.
 
 ### Înainte să judeci o formă

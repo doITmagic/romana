@@ -196,10 +196,10 @@ Bun:
 
 Engl. „billion” înseamnă miliard, nu „bilion”: „3 billion dollars” se traduce „3 miliarde de dolari”. Explicația și exemplul sunt la RO-CAL-053 în [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md).
 
-### RO-NUM-019 „Bilion” în română e ambiguu
-- Nivel: recomandare
-- Corect: „o mie de miliarde” (în loc de „un bilion” sau „un trilion”)
-- De ce: Dicționarele dau „bilion” ca „o mie de miliarde” și, în unele țări, ca „miliard”; „trilion” e un miliard de miliarde. Româna nu are o scară numerică fixată de normă. Dincolo de milion și miliard scrii valoarea explicit („o mie de miliarde”) sau eviți cuvintele „bilion” și „trilion”.
+### RO-NUM-019 „Bilion” se corectează în „miliard”
+- Nivel: normă
+- Greșit: „un bilion de dolari” → Corect: „un miliard de dolari” (dacă autorul vrea 10¹², „o mie de miliarde”)
+- De ce: Dicționarele dau „bilion” ca „o mie de miliarde” și, în unele țări, ca „miliard”; „trilion” e un miliard de miliarde. Cuvântul poate fi citit în două feluri, iar cifra se schimbă de o mie de ori, de aceea „bilion” se corectează în „miliard”, iar pentru 10¹² scrii „o mie de miliarde”. Regula completă e RO-CAL-053 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md).
 - Sursă: DEX ’98, s.v. bilion, trilion; DOOM 3, s.v. bilion
 
 ### RO-NUM-020 În text: cuvinte, nu prescurtări
