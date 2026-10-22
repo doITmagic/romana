@@ -22,7 +22,7 @@ Ce scrie aici îți ajunge ca să lucrezi. Fișierele din `references/` dau deta
 
 **Redactare.** Scrii sau rescrii direct în română: un text nou, o variantă mai bună a unui text existent, o traducere. Urmezi modelul unui autor român care scrie firesc în genul cerut (secțiunea următoare). Faptele, cifrele, citatele, codul și vocea autorului rămân cum sunt. Un text deja corect iese identic, dacă nu ți se cere explicit o schimbare (alt ton, altă lungime, alt public).
 
-**Corectură.** Corectezi direct în text ce e obiectiv greșit: o normă încălcată, un calc care contrazice dicționarul sau gramatica, o formă inventată, o legătură logică ruptă. Ce ține de gust doar propui, separat de text. La fiecare corectură aplici regula de fidelitate.
+**Corectură.** Corectezi direct în text ce e obiectiv greșit: o normă încălcată, un calc de construcție care contrazice dicționarul sau gramatica, o formă inventată, o legătură logică ruptă. Ce ține de gust doar propui, separat de text. La fiecare corectură aplici regula de fidelitate.
 
 **Verificare.** Citești textul și raportezi problemele de pe cei patru piloni și de tipografie, fiecare cu nivelul și justificarea ei. Nu rescrii textul. Nu semnalezi ce e corect.
 
@@ -100,7 +100,7 @@ La traducere, afli întâi ce afirmă fiecare frază a originalului, apoi scrii 
 ### Pe profiluri
 
 - **Presă.** Limba literară standard, pentru un cititor cu cultură medie. Frază clară, verb la activ când se știe cine face acțiunea, relatarea la perfect compus. Atribuirea e limpede: se vede cine spune fiecare lucru.
-- **Marketing.** Îi vorbești cititorului despre ce câștigă, în cuvintele lui, cu verbe și cu faptele pe care le ai. Tonul poate fi mai cald și mai direct decât în presă. Calcurile care contrazic dicționarul sau gramatica și cuvintele inventate rămân greșeli și aici.
+- **Marketing.** Îi vorbești cititorului despre ce câștigă, în cuvintele lui, cu verbe și cu faptele pe care le ai. Tonul poate fi mai cald și mai direct decât în presă. Calcurile de construcție care contrazic dicționarul sau gramatica și cuvintele inventate rămân greșeli și aici.
 - **Blog.** Vocea autorului are loc: persoana I, părerile și exemplele lui, dacă le ai de la el. Nu le inventezi.
 - **E-mail.** Salutul și încheierea se potrivesc destinatarului. Unei instituții sau unui necunoscut îi scrii cu „dumneavoastră”: începi cu „Bună ziua,” și închei cu o formulă ca „Cu stimă,”. Scopul mesajului apare în primele rânduri.
 - **Interfață.** Pe butoane scrii verbe la imperativ („Salvează” sau „Salvați”, după adresarea produsului), în meniuri și în titluri, substantive („Setări”, „Istoric”). O acțiune în curs se scrie „Se salvează…”, rezultatul „Modificări salvate”, lista goală „Niciun rezultat”. Mesajul de eroare spune ce s-a întâmplat și ce poate face utilizatorul. Valorile inserate automat în text (de exemplu un nume de fișier) nu primesc articol sau desinență, iar pluralul are trei forme („1 fișier”, „3 fișiere”, „20 de fișiere”). O etichetă de stare se acordă cu ce descrie („Cont activ”, „Notificări activate”). Adresarea e o decizie pentru tot produsul.
@@ -148,7 +148,7 @@ Fiecare observație are un nivel. Nivelul spune cât de sigur e temeiul și ce a
 
 | Nivel | Ce intră | Ce faci |
 |---|---|---|
-| **normă** | Ce contrazice DOOM 3, ÎOOP (Îndreptarul ortografic, ortoepic și de punctuație) sau sensul din dicționar. Pentru sintaxă (acordul, regimul, topica pronumelor neaccentuate), pe care aceste lucrări nu o tratează, reperul e gramatica academică a limbii române. Forma marcată cu asterisc în DOOM 3 e greșeală, chiar dacă sursa o introduce cu „de evitat”. Tot aici intră ruperile de coerență pe care le dovedește textul însuși: un conector care afirmă o relație inexistentă; doi termeni diferiți pentru același concept tehnic, pentru aceeași noțiune definită sau pentru același produs, încât cititorul poate crede că sunt două lucruri; adresarea schimbată la jumătatea textului. La acestea, dovada e chiar textul. | În corectură o corectezi. În verificare o raportezi ca greșeală. |
+| **normă** | Ce contrazice DOOM 3, ÎOOP (Îndreptarul ortografic, ortoepic și de punctuație) sau sensul din dicționar; excepție fac prietenii falși de sens, un sens străin neatestat în DEX ’98 sau în DOOM 3, care sunt recomandare (vezi mai jos, „Un calc e normă când…”), afară de „bilion”. Pentru sintaxă (acordul, regimul, topica pronumelor neaccentuate), pe care aceste lucrări nu o tratează, reperul e gramatica academică a limbii române. Forma marcată cu asterisc în DOOM 3 e greșeală, chiar dacă sursa o introduce cu „de evitat”. Tot aici intră ruperile de coerență pe care le dovedește textul însuși: un conector care afirmă o relație inexistentă; doi termeni diferiți pentru același concept tehnic, pentru aceeași noțiune definită sau pentru același produs, încât cititorul poate crede că sunt două lucruri; adresarea schimbată la jumătatea textului. La acestea, dovada e chiar textul. | În corectură o corectezi. În verificare o raportezi ca greșeală. |
 | **recomandare** | Ce sursa formulează ca preferință, plus claritatea și registrul. | Propui, nu impui. |
 | **anglicism evitabil** | O formă care există în dicționar, dar are un echivalent românesc firesc, iar sursele o consideră împrumut de lux. | Propui echivalentul. La redactare folosești echivalentul de la început. |
 | **disputat** | Sursele se contrazic. | Nu corectezi. Dacă pomenești cazul, spui că există două uzuri. |
@@ -160,7 +160,7 @@ Pe lângă nivel, fiecare observație are:
 - **un pilon:** gramatică, semantică, stilistică, coerență sau tipografie;
 - **o gravitate:**
   - **P0:** textul spune altceva decât sursa sau decât a vrut autorul, ori nu poate fi publicat așa: un fapt schimbat, o negație inversată, un conector care schimbă relația logică, un cuvânt inventat, o greșeală de normă într-un titlu sau pe un buton;
-  - **P1:** o greșeală obiectivă care nu schimbă sensul, dar se vede: un acord greșit, un calc care contrazice dicționarul sau gramatica, diacritice lipsă, doi termeni pentru același concept tehnic;
+  - **P1:** o greșeală obiectivă care nu schimbă sensul, dar se vede: un acord greșit, un calc de construcție care contrazice dicționarul sau gramatica, diacritice lipsă, doi termeni pentru același concept tehnic;
   - **P2:** un finisaj: o recomandare de stil, ritmul frazei, o variantă mai firească.
 
 La „de semnalat”, gravitatea arată cât de mare e riscul de neînțelegere: un pronume care poate trimite la două substantive e P1 dacă lectura greșită l-ar induce în eroare pe cititor; altfel e P2.
@@ -172,7 +172,7 @@ Regula de bază: ce e obiectiv se corectează, ce ține de gust doar se propune.
 - Când nu ești sigur de nivel, alegi nivelul mai slab: recomandare în loc de normă. Spui că e recomandare.
 - O regulă pe care nu o poți lega de o sursă nu o aplici ca normă. Excepție fac ruperile de coerență, unde dovada e chiar textul.
 - Hipercorectitudinea e la fel de gravă ca greșeala: o formă corectă „reparată” strică un text bun.
-- Un calc e normă când sensul sau construcția contrazice dicționarul ori gramatica („a face sens” în loc de „a avea sens”). Altfel e recomandare.
+- Un calc e normă când construcția contrazice dicționarul ori gramatica („a face sens” în loc de „a avea sens”). Un sens englezesc pe care dicționarul nu îl atestă (un prieten fals) e recomandare; excepție face „bilion”, care se corectează în „miliard”. Altfel e recomandare.
 - Nu „îmbunătățești” după gust un text corect.
 
 ### Înainte să judeci o formă
@@ -181,7 +181,7 @@ Regula de bază: ce e obiectiv se corectează, ce ține de gust doar se propune.
 - **Rolul cuvântului decide.** Un cuvânt nu e greșit în sine: „sa”, „va”, „care”, „decât”, „ca și” sunt corecte într-un context și greșite în altul. „Casa sa” e corect, „Guvernul sa întrunit” nu. „Nu are decât o zi” e corect, „are decât o zi” nu. Când semnalezi, explici rolul.
 - **Faci proba de înlocuire.** Pui forma la altă persoană, la plural sau la alt timp („s-a dus” → „s-au dus”, „va” → „voi”), ca să vezi forma corectă.
 - **Sensul îl dă dicționarul.** Paronimele, prietenii falși și sensurile noi se judecă după dicționar, nu după impresia că un cuvânt „sună englezește”.
-- **Citatul direct păstrează cuvintele sursei.** Corectezi doar tipografia (ghilimelele, diacriticele). Formele populare din gura vorbitorului rămân.
+- **Citatul direct păstrează cuvintele sursei.** Corectezi doar tipografia (ghilimelele, diacriticele lipsă sau cu sedilă). Formele populare din gura vorbitorului și grafia veche cu „î” („sînt”, „cînd”) rămân.
 - **Numele proprii** se scriu cum le scrie purtătorul, cu diacriticele lor.
 - **Un cuvânt pomenit ca exemplu** („forma «sînt» a ieșit din normă”) nu e greșeală.
 

@@ -21,13 +21,12 @@
       },
       {
         "fragment": "politică de prețuri consistentă",
-        "nivel": "normă",
+        "nivel": "recomandare",
         "pilon": "semantică"
       }
     ],
     "cerut": [
-      "25 de ani",
-      "consecventă"
+      "25 de ani"
     ]
   }
 }

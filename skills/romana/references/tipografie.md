@@ -731,15 +731,15 @@ Bun:
 - Vezi și: RO-TIP-077
 
 ### RO-TIP-081 Statele se numesc în forma oficială actuală
-- Nivel: recomandare
-- Greșit: „Bielorusia, Swaziland” → Corect: „Belarus, Eswatini”
-- De ce: Numele statelor se folosesc în forma lor oficială actuală: Belarus (adjectivul „belarus”; „Bielorusia” e învechit), Myanmar (fostă Birmania), Eswatini (fost Swaziland), Cehia (nume scurt). „Côte d’Ivoire” este forma oficială recomandată de DOOM 3 §2.5 pct. 2 și de ÎOOP6, iar „Coasta de Fildeș” e marcată învechit în DOOM 3. La „Capul Verde” DOOM 3 dă numai această formă (intrare nouă, și §1.2.2); „Cabo Verde” nu figurează în DOOM 3. Dacă un ghid instituțional cere altă formă, în textul redactat urmezi DOOM 3 și semnalezi diferența.
-- Sursă: DOOM 3, s.v. Belarus, Myanmar, Eswatini, Swaziland, Côte d’Ivoire, Coasta de Fildeș, Capul Verde; DOOM 3 §2.5 pct. 2; ÎOOP6 (s.v. Côte d’Ivoire); ghid gov-md §3.5.2
+- Nivel: normă
+- Greșit: „Bielorusia, Swaziland, Coasta de Fildeș” → Corect: „Belarus, Eswatini, Côte d’Ivoire”
+- De ce: DOOM 3 §2.5 pct. 2 cere forma oficială actuală pentru numele statelor: Belarus (adjectivul „belarus”; „Bielorusia” e învechit), Côte d’Ivoire („Coasta de Fildeș” se corectează; DOOM 3 o marchează învechit, iar ÎOOP6 dă și el forma oficială), Myanmar (DOOM 3: „fosta Birmanie”) și Eswatini (DOOM 3: „numele actual al fostului stat Swaziland”). Când textul vorbește despre statul dinainte de schimbarea numelui (Swaziland înainte de 2018, Birmania înainte de 1989), numele de atunci nu e greșeală; poți propune paranteza „(azi Eswatini)”. Excepția nu se aplică la Bielorusia și Coasta de Fildeș, pe care DOOM 3 le marchează învechit. Dacă un ghid instituțional cere altă formă, în textul redactat urmezi DOOM 3 și semnalezi diferența. Cehia (nume scurt) și Capul Verde sunt la RO-TIP-082, ca recomandare.
+- Sursă: DOOM 3, s.v. Belarus, Myanmar, Eswatini, Swaziland, Côte d’Ivoire, Coasta de Fildeș; DOOM 3 §2.5 pct. 2; ÎOOP6 (s.v. Côte d’Ivoire); ghid gov-md §3.5.2
 
 ### RO-TIP-082 Forma completă a statului sau forma scurtă
 - Nivel: recomandare
 - Corect: „Acordul se încheie cu Republica Italiană.” (statul ca parte la un act) și „Exporturile din Italia au crescut.” (statul ca spațiu geografic sau economic)
-- De ce: Forma oficială, completă, se folosește când statul e subiect de drept (parte la un tratat, titular al unui drept); forma scurtă când e vorba de spațiul geografic, economic sau cultural. Într-un text de presă sau de marketing forma scurtă e curentă.
+- De ce: Forma oficială, completă, se folosește când statul e subiect de drept (parte la un tratat, titular al unui drept); forma scurtă când e vorba de spațiul geografic, economic sau cultural. Într-un text de presă sau de marketing forma scurtă e curentă. Forma scurtă „Cehia” e curentă. La „Capul Verde” DOOM 3 dă numai această formă (§1.2.2, intrare cu norma modificată); „Cabo Verde” nu figurează în DOOM 3, deci o semnalezi și propui „Capul Verde”, fără s-o corectezi ca greșeală.
 - Sursă: ghid gov-md §15.2.1 și §15.2.2
 
 ### RO-TIP-083 Statul și regiunea nu se confundă

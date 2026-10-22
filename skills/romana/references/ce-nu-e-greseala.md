@@ -473,7 +473,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-039 Citatul direct
 - Nivel: ce nu e greșeală
-- Corect: „«Vroiam să plec mai devreme», a spus martorul.” În citat nu corectezi „vroiam”, „plus că” sau un „decât” afirmativ; corectezi doar tipografia (ghilimelele, diacriticele).
+- Corect: „«Vroiam să plec mai devreme», a spus martorul.” În citat nu corectezi „vroiam”, „plus că” sau un „decât” afirmativ; corectezi doar tipografia (ghilimelele, diacriticele lipsă sau cu sedilă); grafia veche cu „î” („sînt”, „cînd”) rămâne neschimbată.
 - De ce: Regula falsă: orice formă care nu e standard ar trebui corectată, oriunde ar apărea. Citatul direct păstrează cuvintele vorbitorului, inclusiv topica lui și formele populare; dacă le schimbi, citatul nu mai e exact. Același lucru e valabil pentru un cuvânt pomenit ca exemplu („forma «sînt» a ieșit din normă”).
 - Sursă: ghid gov-md §9.8.1
 
