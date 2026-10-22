@@ -18,15 +18,17 @@ import (
 type Observatie struct {
 	// Regula e ID-ul regulii din skill (de exemplu RO-TIP-027); gol dacă
 	// skillul nu are o regulă potrivită.
-	Regula string
+	Regula string `json:"regula,omitempty"`
 	// Inceput și Sfarsit sunt poziții în octeți; Sfarsit e exclusiv.
-	Inceput, Sfarsit int
+	Inceput int `json:"inceput"`
+	Sfarsit int `json:"sfarsit"`
 	// Fragment e textul găsit, Propunere cel care îl înlocuiește.
-	Fragment, Propunere string
+	Fragment  string `json:"fragment"`
+	Propunere string `json:"propunere"`
 	// Mesaj explică singur greșeala, cu sursa.
-	Mesaj string
+	Mesaj string `json:"mesaj"`
 	// Nota (opțională) numește excepția: de exemplu citatul direct.
-	Nota string
+	Nota string `json:"nota,omitempty"`
 }
 
 const (

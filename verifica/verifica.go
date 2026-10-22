@@ -42,20 +42,21 @@ type Cautator interface {
 
 // Necunoscut e un cuvânt care nu e în dicționar.
 type Necunoscut struct {
-	Cuvant string
+	Cuvant string `json:"cuvant"`
 	// Inceput și Sfarsit sunt poziții în octeți; Sfarsit e exclusiv.
-	Inceput, Sfarsit int
-	Sugestii         []string
+	Inceput  int      `json:"inceput"`
+	Sfarsit  int      `json:"sfarsit"`
+	Sugestii []string `json:"sugestii,omitempty"`
 	// Neverificat e true când cuvântul nu poate fi judecat de dicționar
 	// (nume propriu, siglă, cod, alt alfabet); Motiv spune de ce.
-	Neverificat bool
-	Motiv       string
+	Neverificat bool   `json:"neverificat"`
+	Motiv       string `json:"motiv,omitempty"`
 }
 
 // Raport adună rezultatul verificării unui text.
 type Raport struct {
-	Necunoscute []Necunoscut
-	Lint        []lint.Observatie
+	Necunoscute []Necunoscut      `json:"necunoscute"`
+	Lint        []lint.Observatie `json:"lint"`
 }
 
 // fragmenteElidate sunt bucăți scurte care apar lângă cratimă sau apostrof
