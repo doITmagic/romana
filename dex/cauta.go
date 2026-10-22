@@ -33,7 +33,7 @@ type Lema struct {
 	Forma          string      `json:"forma"`
 	Descriere      string      `json:"descriere,omitempty"` // deosebește omonimele
 	ParteDeVorbire string      `json:"parte_de_vorbire,omitempty"`
-	Doom3          bool        `json:"doom3"`           // DOOM 3 atestă lema (sau o intrare comună cu ea); NU dovedește că forma e corectă: „vroi” iese true prin intrarea lui „vrea”, deși „vroiam” e greșit
+	Doom3          bool        `json:"doom3"`           // DOOM 3 atestă lema: e legată de sursa DOOM 3 (lexeme_source) sau o intrare a ei are o definiție DOOM 3 al cărei cuvânt-titlu (lexicon, normalizat sau redus la cheie) e chiar forma lemei. Simpla intrare comună cu definiția DOOM 3 a altui cuvânt nu ajunge: „vroi” (intrarea lui „vrea”) iese false. NU dovedește că orice formă flexionată e corectă
 	Surse          []string    `json:"surse"`           // toate dicționarele care atestă lema, cu sau fără text afișabil
 	Definitii      []Definitie `json:"definitii"`       // doar din surse cu can_distribute = 1
 	Forme          []Forma     `json:"forme,omitempty"` // formele flexionare, cu etichetă
@@ -222,9 +222,11 @@ SELECT id, short_name FROM source WHERE id IN (
 			return l, err
 		}
 		l.Surse = append(l.Surse, nume)
-		l.Doom3 = l.Doom3 || nume == "DOOM 3"
 	}
 	if err := rows.Close(); err != nil {
+		return l, err
+	}
+	if l.Doom3, err = d.atestataDoom3(ctx, id, l.Forma); err != nil {
 		return l, err
 	}
 	if l.Definitii, err = d.definitiiAfisabile(ctx, id); err != nil {
@@ -247,6 +249,41 @@ SELECT id, short_name FROM source WHERE id IN (
 		l.Forme = append(l.Forme, f)
 	}
 	return l, rows.Err()
+}
+
+// atestataDoom3: lema e legată de sursa „DOOM 3” în lexeme_source SAU o
+// definiție DOOM 3 dintr-o intrare a ei are cuvântul-titlu (lexicon) egal cu
+// forma lemei, ambele normalizate sau reduse la cheie (fără diacritice și
+// cratimă). Intrarea comună nu ajunge.
+func (d *Dictionar) atestataDoom3(ctx context.Context, id int64, forma string) (bool, error) {
+	var n int
+	err := d.db.QueryRowContext(ctx, `SELECT count(*) FROM lexeme_source ls
+		JOIN source s ON s.id = ls.source_id WHERE ls.lexeme_id = ? AND s.short_name = 'DOOM 3'`, id).Scan(&n)
+	if err != nil || n > 0 {
+		return n > 0, err
+	}
+	rows, err := d.db.QueryContext(ctx, `SELECT DISTINCT d.lexicon FROM entry_lexeme el
+		JOIN entry_definition ed ON ed.entry_id = el.entry_id
+		JOIN definition d ON d.id = ed.definition_id
+		JOIN source s ON s.id = d.source_id
+		WHERE el.lexeme_id = ? AND s.short_name = 'DOOM 3'`, id)
+	if err != nil {
+		return false, err
+	}
+	defer rows.Close()
+	tinta, cheieTinta := Normalizeaza(forma), Cheie(forma)
+	for rows.Next() {
+		var lexicon sql.NullString
+		if err := rows.Scan(&lexicon); err != nil {
+			return false, err
+		}
+		// și după cheie: exportul are cuvinte-titlu DOOM 3 fără diacritice
+		// sau cratimă („alba-neagra” pentru „albă-neagră”)
+		if Normalizeaza(lexicon.String) == tinta || Cheie(lexicon.String) == cheieTinta {
+			return true, nil
+		}
+	}
+	return false, rows.Err()
 }
 
 // filtruLicenta: singurul loc din pachet în care se hotărăște ce text de

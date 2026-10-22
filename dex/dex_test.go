@@ -91,10 +91,10 @@ func importaTest(t *testing.T, gz bool) (*Dictionar, string) {
 		t.Fatal(err)
 	}
 	// sursa ascunsă și definițiile ei, definiția ștearsă și formele dublate nu se numără
-	if st.Surse != 5 || st.Definitii != 8 || st.Leme != 4 || st.Forme != 7 {
+	if st.Surse != 5 || st.Definitii != 10 || st.Leme != 7 || st.Forme != 10 {
 		t.Fatalf("statistici: %+v", st)
 	}
-	if st.PeSurse[0] != (Sursa{"DEX '98", 2}) {
+	if st.PeSurse[0] != (Sursa{"DOOM 3", 4}) {
 		t.Fatalf("pe surse: %+v", st.PeSurse)
 	}
 	d, err := Deschide(cale)
@@ -234,6 +234,39 @@ func TestCautaDoom3SiForme(t *testing.T) {
 	r, _ = d.Cauta(ctx, "casa")
 	if len(r.Leme) != 1 || !r.Leme[0].Doom3 {
 		t.Errorf("casă: %+v", r)
+	}
+}
+
+func TestDoom3SimplaIntrareComunaNuAjunge(t *testing.T) {
+	d, _ := importaTest(t, true)
+	ctx := context.Background()
+	for cautat, lema := range map[string]string{
+		"sumariza": "sumariza", "suma": "sumă", "alba-neagra": "albă-neagră", "dejivra": "dejivra", "casa": "casă", "vroi": "vroi",
+	} {
+		want := map[string]bool{
+			"sumariza":    false, // doar intrarea comună cu definiția DOOM 3 a lui „sumă”
+			"sumă":        true,  // cuvântul-titlu al definiției DOOM 3 e chiar lema
+			"dejivra":     true,  // lexeme_source DOOM 3
+			"casă":        true,  // definiție DOOM 3 cu cuvântul-titlu „casă”
+			"vroi":        false,
+			"albă-neagră": true, // cuvântul-titlu DOOM 3 vine fără diacritice: se potrivește după Cheie
+		}[lema]
+		r, err := d.Cauta(ctx, cautat)
+		if err != nil {
+			t.Fatal(err)
+		}
+		gasit := false
+		for _, l := range r.Leme {
+			if l.Forma == lema {
+				gasit = true
+				if l.Doom3 != want {
+					t.Errorf("Doom3(%s) = %v; aștept %v", lema, l.Doom3, want)
+				}
+			}
+		}
+		if !gasit {
+			t.Errorf("%s: lema lipsește din %+v", cautat, r.Leme)
+		}
 	}
 }
 
