@@ -158,6 +158,11 @@ func TestListaUnelte(t *testing.T) {
 		if sch["type"] != "object" || len(sch["required"].([]any)) != 1 {
 			t.Errorf("%v: inputSchema = %v", u["name"], sch)
 		}
+		// doar citire: fără ele, Codex cere aprobare la fiecare apel
+		a, _ := u["annotations"].(map[string]any)
+		if a["readOnlyHint"] != true || a["destructiveHint"] != false || a["openWorldHint"] != false {
+			t.Errorf("%v: annotations = %v", u["name"], a)
+		}
 	}
 	if strings.Join(nume, ",") != "cauta_cuvant,verifica_text" {
 		t.Errorf("unelte = %v", nume)

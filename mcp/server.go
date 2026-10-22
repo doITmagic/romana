@@ -56,6 +56,8 @@ const descriereCauta = `Caută un cuvânt românesc în dicționarul local const
 	`„exista” = false înseamnă că forma nu e în dicționar; „sugestii” dă atunci formele care diferă doar prin diacritice sau cratimă. ` +
 	`Atenție la „doom3”: „true” spune că DOOM 3 (dicționarul ortografic al Academiei) atestă lema. E un indiciu, nu o dovadă: ` +
 	`nu arată că orice formă flexionată a lemei e corectă (tabela de forme conține și variante învechite sau nerecomandate, de exemplu „vroiam” la „vroi”). ` +
+	`„trimite_la” dă lemele la care trimite o definiție de felul „DEGIVRA vb. I v. dejivra.”, fiecare cu „doom3” al ei. ` +
+	`Când lema are „doom3” = false și o trimitere are „doom3” = true, câmpul „nota” spune asta în cuvinte: de regulă se recomandă forma la care se trimite (aici „dejivra”, deci „dejivrat”, nu „degivrat”). ` +
 	`Un cuvânt care lipsește din dicționar nu e neapărat greșit (neologisme, nume proprii, termeni noi): decizia rămâne la cel care citește rezultatul.`
 
 const descriereVerifica = `Verifică un text în română: caută fiecare cuvânt în dicționarul local și rulează un verificator de greșeli sigure. ` +
@@ -75,7 +77,21 @@ type unealta struct {
 	Title       string         `json:"title,omitempty"`
 	Description string         `json:"description"`
 	InputSchema map[string]any `json:"inputSchema"`
+	Annotations adnotari       `json:"annotations"`
 }
+
+// adnotari: indiciile MCP despre efectele uneltei. Clienții (Codex, de
+// exemplu) cer aprobare la uneltele care nu se declară doar de citire.
+type adnotari struct {
+	ReadOnly    bool `json:"readOnlyHint"`
+	Destructive bool `json:"destructiveHint"`
+	Idempotent  bool `json:"idempotentHint"`
+	OpenWorld   bool `json:"openWorldHint"`
+}
+
+// doarCitire: ambele unelte doar citesc baza locală, fără rețea și fără să
+// schimbe ceva.
+var doarCitire = adnotari{ReadOnly: true, Idempotent: true}
 
 func schema(camp, descriere string) map[string]any {
 	return map[string]any{
@@ -93,12 +109,14 @@ var lista = []unealta{
 		Title:       "Caută un cuvânt în dicționar",
 		Description: descriereCauta,
 		InputSchema: schema("cuvant", "Cuvântul sau forma de căutat, în orice formă flexionată, de preferat cu diacritice (ă, â, î, ș, ț)."),
+		Annotations: doarCitire,
 	},
 	{
 		Name:        "verifica_text",
 		Title:       "Verifică un text în română",
 		Description: descriereVerifica,
 		InputSchema: schema("text", "Textul de verificat, în română. Markdown, cod inline și blocuri de cod sunt acceptate; codul nu se verifică."),
+		Annotations: doarCitire,
 	},
 }
 
