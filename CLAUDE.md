@@ -28,7 +28,9 @@ Hook-ul de pre-commit din `.githooks/` rulează paza și validatorul. Nu-l ocoli
 
 ## Reguli ferme
 
-- **Nicio cerere automată către dexonline.ro**, nici din skill, nici de la agenți. Licența site-ului o interzice. Se folosește doar exportul oficial descărcat local.
+- **Nicio cerere automată către dexonline.ro**, nici din skill, nici de la agenți. Condițiile site-ului o interzic.
+  - Singura excepție, decisă de Răzvan pe 23.10.2026: binarul `romana` descarcă exportul oficial (`https://dexonline.ro/static/download/dex-database.sql.gz`, licență GPL v2+) când baza lipsește și verifică actualizări cel mult o dată pe săptămână, cu User-Agent `romana/<versiune>`. Nimic altceva de pe site.
+  - Testele și CI-ul nu fac cereri reale; descărcarea se testează cu un server local.
 - **Licențe.**
   - Repo-ul e MIT.
   - Nu intră text copiat din cărți, din DOOM 3, din ÎOOP sau din export, nici liste extrase din export.
