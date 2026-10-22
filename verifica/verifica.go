@@ -56,7 +56,14 @@ type Necunoscut struct {
 type Raport struct {
 	Necunoscute []Necunoscut      `json:"necunoscute"`
 	Lint        []lint.Observatie `json:"lint"`
+	Limite      string            `json:"limite"` // mereu Limite: ce nu verifică unealta
 }
+
+// Limite: ce nu acoperă verificarea. Stă în fiecare raport, pentru că un
+// raport gol citit ca „textul e corect” face agentul să sară peste acord și
+// coerență (proba cu MCP din 23.10).
+const Limite = "Verificarea acoperă doar existența fiecărui cuvânt în dicționar și greșelile sigure, independente de context. " +
+	"Acordul, sensul, coerența, punctuația și stilul nu sunt verificate: un raport fără observații nu înseamnă un text corect."
 
 // fragmenteElidate sunt bucăți scurte care apar lângă cratimă sau apostrof
 // (s-a, m-am, într-o, dă-l, n-ai) și nu sunt cuvinte de sine stătătoare.
@@ -205,7 +212,7 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 	if n := utf8.RuneCountInString(text); n > MaxCaractere {
 		return Raport{}, fmt.Errorf("%w: %d de caractere, maximum %d", ErrPreaMare, n, MaxCaractere)
 	}
-	rap := Raport{Necunoscute: []Necunoscut{}, Lint: lint.Verifica(text)}
+	rap := Raport{Necunoscute: []Necunoscut{}, Lint: lint.Verifica(text), Limite: Limite}
 	ignorat := lint.Ignorat(text)
 	memo := map[string]bool{}
 	memoSug := map[string][]string{}

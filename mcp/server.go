@@ -67,6 +67,7 @@ const descriereVerifica = `Verifică un text în română: caută fiecare cuvân
 	`„neverificat” = true marchează ce dicționarul nu poate judeca (nume proprii, numere, adrese, cod, cuvinte în alt alfabet); „motiv” spune de ce. ` +
 	`„lint” are greșelile sigure, independente de context (de exemplu ș și ț scrise cu sedilă): fiecare cu fragmentul, propunerea, un mesaj care explică greșeala și, uneori, o notă despre excepții (de exemplu citatul exact). ` +
 	`Unealta nu corectează textul și nu decide: dă materialul, iar cuvintele necunoscute trebuie judecate din context. ` +
+	`Nu verifică acordul, sensul, coerența, punctuația sau stilul: un raport fără observații nu înseamnă un text corect („limite” o spune în fiecare răspuns). ` +
 	`Textul poate avea cel mult ` + maxCaractereTxt + ` de caractere.`
 
 // maxCaractereTxt: limita din verifica, scrisă cu puncte pentru lizibilitate.

@@ -287,6 +287,7 @@ func cmdVerifica(ctx context.Context, o optiuni, in io.Reader, out, errOut io.Wr
 	if len(r.Lint) == 0 && len(r.Necunoscute) == 0 {
 		fmt.Fprintln(out, "Nicio observație.")
 	}
+	fmt.Fprintln(out, r.Limite)
 	return 0
 }
 
@@ -306,6 +307,7 @@ func formateazaObservatie(ob lint.Observatie) string {
 // bază și fără rețea). Tace (ieșire 0, fără text) în orice alt caz.
 func cmdHook(in io.Reader, out io.Writer) int {
 	var h struct {
+		Cwd       string `json:"cwd"`
 		ToolInput struct {
 			FilePath string `json:"file_path"`
 		} `json:"tool_input"`
@@ -314,12 +316,20 @@ func cmdHook(in io.Reader, out io.Writer) int {
 	if err != nil || json.Unmarshal(b, &h) != nil || h.ToolInput.FilePath == "" {
 		return 0
 	}
-	switch strings.ToLower(filepath.Ext(h.ToolInput.FilePath)) {
+	cale := h.ToolInput.FilePath
+	if !filepath.IsAbs(cale) && h.Cwd != "" {
+		cale = filepath.Join(h.Cwd, cale) // calea relativă e față de sesiune, nu față de proces
+	}
+	switch strings.ToLower(filepath.Ext(cale)) {
 	case ".md", ".txt", ".html":
 	default:
 		return 0
 	}
-	f, err := os.Open(h.ToolInput.FilePath)
+	// doar fișiere obișnuite: un FIFO sau un dispozitiv ar bloca citirea
+	if i, err := os.Stat(cale); err != nil || !i.Mode().IsRegular() {
+		return 0
+	}
+	f, err := os.Open(cale)
 	if err != nil {
 		return 0
 	}

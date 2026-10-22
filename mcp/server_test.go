@@ -178,7 +178,7 @@ func TestDescrieriSeExplica(t *testing.T) {
 		toate += x.(map[string]any)["description"].(string) + "\n"
 	}
 	jos := strings.ToLower(toate)
-	for _, cerut := range []string{"necunoscut", "neverificat", "doom 3", "indiciu", "nu o dovadă"} {
+	for _, cerut := range []string{"necunoscut", "neverificat", "doom 3", "indiciu", "nu o dovadă", "nu înseamnă un text corect"} {
 		if !strings.Contains(jos, cerut) {
 			t.Errorf("descrierile nu spun %q", cerut)
 		}

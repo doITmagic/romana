@@ -9,6 +9,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"runtime"
 	"strings"
 	"testing"
 	"time"
@@ -304,5 +305,43 @@ func TestEroriInRomana(t *testing.T) {
 		if strings.Contains(errOut, "no such file") || !strings.Contains(errOut, "nu există") {
 			t.Fatalf("%v: eroare netradusă: %q", args, errOut)
 		}
+	}
+}
+
+// Calea relativă din tool_input se ia față de cwd-ul sesiunii din JSON.
+func TestHookCaleRelativaFataDeCwd(t *testing.T) {
+	dir := t.TempDir()
+	text := "Aşa e casa noastră, iar drumul e lung şi frumos, dar nu e greu de făcut pentru că sunt aici."
+	if err := os.WriteFile(filepath.Join(dir, "a.md"), []byte(text), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	b, _ := json.Marshal(map[string]any{"cwd": dir, "tool_input": map[string]string{"file_path": "a.md"}})
+	out, _, cod := rul(t, string(b), "verifica", "--hook")
+	if cod != 0 || !strings.Contains(out, "RO-TIP-027") {
+		t.Fatalf("cod %d, ieșire %q", cod, out)
+	}
+}
+
+// Un FIFO cu extensie de text nu blochează hook-ul.
+func TestHookFifoNuBlocheaza(t *testing.T) {
+	if runtime.GOOS == "windows" {
+		t.Skip("fără mkfifo")
+	}
+	cale := filepath.Join(t.TempDir(), "f.md")
+	if err := exec.Command("mkfifo", cale).Run(); err != nil {
+		t.Skipf("mkfifo: %v", err)
+	}
+	gata := make(chan int, 1)
+	go func() {
+		_, _, cod := rul(t, hookJSON(cale), "verifica", "--hook")
+		gata <- cod
+	}()
+	select {
+	case cod := <-gata:
+		if cod != 0 {
+			t.Fatalf("cod %d", cod)
+		}
+	case <-time.After(5 * time.Second):
+		t.Fatal("hook-ul s-a blocat pe FIFO")
 	}
 }

@@ -77,3 +77,17 @@ func TestHtmlScriptStyleInVerifica(t *testing.T) {
 		t.Errorf("front matter se ignoră: %v", cuvinte(r))
 	}
 }
+
+// Un raport fără observații nu are voie să pară „textul e corect”: proba cu
+// MCP a arătat că agentul sărea atunci peste acord și coerență.
+func TestRaportulSpuneCeNuVerifica(t *testing.T) {
+	r, err := Text(context.Background(), fals{"casa": true, "e": true, "mare": true}, "Casa e mare.")
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, cerut := range []string{"acordul", "coerența", "nu înseamnă"} {
+		if !strings.Contains(strings.ToLower(r.Limite), cerut) {
+			t.Errorf("limite nu spune %q: %q", cerut, r.Limite)
+		}
+	}
+}
