@@ -97,11 +97,11 @@ curl -fsSL https://raw.githubusercontent.com/doITmagic/romana/main/install.sh | 
 
 The script picks the right archive from GitHub Releases, checks it against `SHA256SUMS` and installs `romana` into `~/.local/bin` (`ROMANA_DIR` changes the directory, `ROMANA_VERSIUNE` picks a version). It tells you if the directory is not in `PATH`. On Windows, download the `.zip` for your architecture from the Releases page and put `romana.exe` in a directory on `PATH`; the plugin hook does not run on Windows. With Go installed, `go install github.com/doITmagic/romana/cmd/romana@latest` works too.
 
-On first use, `romana cauta`, `romana verifica` and `romana mcp` download the dictionary data by themselves from the official dexonline export (GPL v2+), about 380 MB, and import it into a local SQLite database in roughly one minute. The export and the database are never shipped with romana.
+On first use, `romana cauta`, `romana verifica` and `romana mcp` download the dictionary data by themselves from the official dexonline export (GPL v2+), about 360 MB, and import it into a local SQLite database in roughly one minute. The export and the database are never shipped with romana.
 
 - No network: `--offline` or `ROMANA_FARA_RETEA=1` stops every request.
 - From a file you downloaded yourself: `romana import <dex-database.sql.gz>`.
-- Updates are checked at most once a week; `romana update` checks now.
+- Updates are checked at most once a week, with a conditional request, so an unchanged export is not downloaded again. The check runs as a separate background process, so a lookup never waits for it; its log is `~/.cache/romana/actualizare.log`. A running MCP server switches to the new database by itself. `romana update` checks now.
 - Database path: `--db`, then `$ROMANA_DEX`, then `~/.local/share/romana/dex.sqlite`.
 
 The plugin declares the MCP server (`.mcp.json`) and the hook (`hooks/hooks.json`), so they start once the binary is on `PATH`. Both are only for Claude Code; Codex reads neither, so register the server there by hand (below). The hook does not run on Windows, which has no `sh`. Without the plugin, register the server by hand:
@@ -117,6 +117,12 @@ and for Codex, in `~/.codex/config.toml`:
 command = "romana"
 args = ["mcp"]
 ```
+
+The server has two tools, both declared read-only, so Codex calls them without asking for approval, even in a read-only sandbox:
+- `cauta_cuvant` (`romana cauta`): from any inflected form to its lemmas, with the part of speech, the inflected forms, the dictionaries that record the word, the definitions whose license allows display, and whether DOOM 3, the Academy's spelling dictionary, records it. When DOOM 3 does not record a lemma but its definition points to one it does ("DEGIVRA vb. I v. dejivra."), a `nota` says which form is recommended.
+- `verifica_text` (`romana verifica`): the words of a text that are not in the dictionary, with their byte positions and the dictionary forms that differ from them only in diacritics or a hyphen, plus the errors that are wrong in any context (s and t with cedilla, the old spelling with "î" inside words, "vroiam").
+
+A word the dictionary does not know is not necessarily wrong; the tools give material, and the agent or the reader decides.
 
 ## How it is tested
 
@@ -186,7 +192,7 @@ The tools are in Go, under `tools/`:
 ```
 go run ./tools/validare/cmd skills/romana   # strict format check of the skill
 go run ./tools/paza/cmd .                   # blocks files that must not enter the repository
-go test ./tools/...
+go test ./...                               # with the real database, if present, the dex tests also run on it
 bash tools/independenta/ruleaza.sh static   # the skill works on its own, offline
 ```
 
@@ -194,7 +200,12 @@ The pre-commit hook in `.githooks/` runs the guard and the validator. See [CONTR
 
 ## Roadmap
 
-Phase 2 adds a dictionary tool (a CLI and an MCP server) built on the official dexonline database export, so the agent can look a word up instead of guessing. Each user builds the database locally from the export; neither the export nor the database is distributed, and the tool makes no requests to dexonline.ro. The skill keeps working without it.
+The dictionary tool (the `romana` CLI and MCP server, above) is the second phase and ships with 0.2.0. Its only request to dexonline.ro is the download of the official export, when the database is missing and at most once a week to check for a newer one. The skill keeps working without it.
+
+Next:
+- a measurement on RONACC, the academic corpus for Romanian grammatical error correction, with the reference pairs checked against DOOM 3 first;
+- a compact index of the "not an error" forms, so the agent reads less before every correction;
+- more rules for the gaps the tests found ("dejivra", "dintr-odată").
 
 ## License
 
