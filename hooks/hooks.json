@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'B=$(command -v romana || ls ~/.local/bin/romana ~/go/bin/romana 2>/dev/null | head -1); [ -n \"$B\" ] && \"$B\" verifica --hook || true'"
+          }
+        ]
+      }
+    ]
+  }
+}

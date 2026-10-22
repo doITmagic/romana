@@ -2,7 +2,7 @@
 
 Verifică spec §4.1: skill-ul `skills/romana` funcționează singur, pe o mașină fără cărți și fără dinlume.
 
-Imaginea (`Dockerfile`) pornește de la `golang:1.25.1-bookworm` (versiunea din `go.mod`) și conține doar repo-ul, fără `.git`, `.superpowers` sau `evals-privat` (vezi `Dockerfile.dockerignore`). Nu conține credențiale.
+Imaginea (`Dockerfile`) pornește de la `golang:1.26.0-bookworm` (versiunea din `go.mod`) și conține doar repo-ul, fără `.git`, `.superpowers` sau `evals-privat` (vezi `Dockerfile.dockerignore`). Nu conține credențiale.
 
 ## Modul `static` (implicit)
 
