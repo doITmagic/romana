@@ -59,9 +59,9 @@ Rămân neatinse:
 
 ## Scara modalelor
 
-Verbele și adverbele care exprimă cât de sigură e o afirmație se pun pe o scară, și rescrierea rămâne pe aceeași treaptă. Aproximativ, de la mai sigur la mai puțin sigur: „e”, „trebuie” (obligație) sau „sigur” → „ar trebui” sau „se recomandă” → „probabil” → „poate” sau „ar putea” → „se spune că”. „Trebuie” are două lecturi: obligație („Trebuie să semnezi”) și presupunere („Trebuie să fie acasă”). Dacă textul nu lămurește despre care e vorba, nu hotărăști tu: semnalezi sau întrebi.
+Verbele și adverbele care exprimă cât de sigură e o afirmație se pun pe o scară, și rescrierea rămâne pe aceeași treaptă. Aproximativ, de la mai sigur la mai puțin sigur: „e” sau „sigur” → „probabil” → „poate” sau „ar putea”. Obligația are scara ei, de la mai tare la mai slab: „trebuie” → „ar trebui” sau „se recomandă” → „poți”; nici pe ea nu schimbi treapta. „Trebuie” are două lecturi: obligație („Trebuie să semnezi”) și presupunere („Trebuie să fie acasă”). Dacă textul nu lămurește despre care e vorba, nu hotărăști tu: semnalezi sau întrebi. „Se spune că” sau „potrivit raportului” nu sunt trepte: arată de la cine vine afirmația și rămân în rescriere.
 
-Când mai multe mărci de nesiguranță se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), le reduci la una singură care păstrează gradul și condiția („probabil, măsura ar putea ajuta în unele cazuri”). Scoți ambalajul, nu gradul.
+Când mai multe mărci de nesiguranță se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), poți scoate repetițiile, dar păstrezi mărcile care dau gradul și condiția („probabil, măsura ar putea ajuta în unele cazuri”). Scoți ambalajul, nu gradul. O marcă ce arată de la cine vine afirmația nu e ambalaj.
 
 ## Citate și atribuiri
 
@@ -186,7 +186,7 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 ### RO-FID-021 Certitudinea rămâne cea din sursă
 - Nivel: normă
 - Greșit: „Sursa: «Metoda poate reduce erorile.» → «Metoda reduce erorile.»” → Corect: „Metoda poate reduce erorile.”
-- De ce: „Poate reduce” spune că reducerea e posibilă, „reduce” spune că se întâmplă. A trece de la prima la a doua înseamnă a-i promite cititorului mai mult decât sursa. Când modalizatorii se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), îi reduci la unul care păstrează gradul și condiția („probabil, măsura ar putea ajuta în unele cazuri”), dar nu îl ridici.
+- De ce: „Poate reduce” spune că reducerea e posibilă, „reduce” spune că se întâmplă. A trece de la prima la a doua înseamnă a-i promite cititorului mai mult decât sursa. Când modalizatorii se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), poți scoate repetițiile, dar păstrezi mărcile care dau gradul și condiția („probabil, măsura ar putea ajuta în unele cazuri”). Gradul nu îl ridici și nu îl cobori.
 - Sursă: regulă de fidelitate a skillului; DSL, s.v. MODALITATE
 
 ### RO-FID-022 Condițiile și mărcile de opinie se păstrează

@@ -90,7 +90,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 ### Coteanu, *Stilistica funcțională a limbii române*
 - **Titlu:** Ion Coteanu, *Stilistica funcțională a limbii române. Stil, stilistică, limbaj*, vol. I.
 - **Ediție:** Editura Academiei, București, 1973 (volumul al II-lea e din 1985).
-- **Statut:** descriptiv. Trece în revistă stilurile funcționale (administrativ, publicistic etc.).
+- **Statut:** descriptiv. Volumul I propune principiile unei teorii a stilului, delimitează limbajele și stilurile și descrie limbajul popular. Nu are capitole despre stilul administrativ sau publicistic.
 - **Ce nu spune:** nu stabilește corect și greșit; nu e un ghid de redactare.
 
 ### Manuale aprobate de Ministerul Educației
