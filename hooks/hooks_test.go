@@ -135,3 +135,33 @@ func TestHookBinarCareEsueaza(t *testing.T) {
 		t.Fatalf("hook-ul nu trebuie să blocheze la eroarea binarului: cod=%d iesire=%q", cod, iesire)
 	}
 }
+
+// TestDocumentatiePlugin: README-ul spune că hook-ul și .mcp.json sunt doar pentru
+// Claude Code, că Codex are intrarea manuală și că pe Windows hook-ul nu merge.
+func TestDocumentatiePlugin(t *testing.T) {
+	brut, err := os.ReadFile("../README.md")
+	if err != nil {
+		t.Fatal(err)
+	}
+	r := string(brut)
+	for _, cerut := range []string{
+		"[mcp_servers.romana]",
+		"only for Claude Code",
+		"does not run on Windows",
+	} {
+		if !strings.Contains(r, cerut) {
+			t.Errorf("README.md nu conține „%s”", cerut)
+		}
+	}
+}
+
+// TestSkillFaraJargon: paragraful s6 nu folosește „linterul”, nedefinit în skill.
+func TestSkillFaraJargon(t *testing.T) {
+	brut, err := os.ReadFile("../skills/romana/SKILL.md")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if strings.Contains(strings.ToLower(string(brut)), "linter") {
+		t.Error("SKILL.md folosește „linter”, termen neexplicat")
+	}
+}
