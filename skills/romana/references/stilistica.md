@@ -361,8 +361,8 @@ Formula de deschidere „Sper că acest e-mail vă găsește bine” e tratată 
 ### RO-STI-026 „Persoană cu ADHD”
 - Nivel: recomandare
 - Greșit: „Copilul este bolnav de ADHD.” → Corect: „Copilul are ADHD.”
-- De ce: Regulă de stil pentru domeniul sănătății, nu normă gramaticală. „Bolnav” înseamnă „care suferă de o boală” (DEX ’98); formulările de tipul „persoană cu…” sau „are…” evită etichetarea persoanei prin starea ei. Skill-ul nu se pronunță medical asupra naturii tulburării.
-- Sursă: DEX ’98 s.v. bolnav (sensul cuvântului); recomandare de stil a skill-ului
+- De ce: Regulă de stil pentru domeniul sănătății, nu normă gramaticală. „Bolnav” înseamnă „care suferă de o boală” (DEX ’98); formulările de tipul „persoană cu…” sau „are…” evită etichetarea persoanei prin starea ei. Skillul nu se pronunță medical asupra naturii tulburării.
+- Sursă: DEX ’98 s.v. bolnav (sensul cuvântului); recomandare de stil a skillului
 
 ### RO-STI-027 Rezultatul unui test de screening
 - Nivel: recomandare

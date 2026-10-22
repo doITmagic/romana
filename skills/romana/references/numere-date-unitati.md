@@ -2,9 +2,9 @@
 
 Fișierul privește felul în care se scriu numerele și tot ce se leagă de ele: „de” după numeral, acordul și formele numeralelor, separatorul pentru mii și cel zecimal, cifre sau litere, procentele, datele, orele, sumele de bani și monedele, unitățile de măsură. Semnele de punctuație și majusculele sunt în [tipografie.md](tipografie.md). Traducerea cifrelor din engleză („billion”, „3.5 million”) are și o notă în [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md).
 
-## Convenția skill-ului
+## Convenția skillului
 
-Skill-ul fixează patru alegeri, ca textele să fie consecvente între ele:
+Skillul fixează patru alegeri, ca textele să fie consecvente între ele:
 
 - **Punctul** este separatorul pentru mii: 1.000; 1.205.200. Anii și numerele de pagină nu au separator (anul 2024, pagina 1000).
 - **Virgula** este separatorul zecimal: 12,5; 3,5%.
@@ -65,7 +65,7 @@ Bun:
 ### RO-NUM-050 Fără „de” după numeralele zecimale
 - Nivel: recomandare
 - Greșit: „1,5 de fișiere” → Corect: „1,5 fișiere”
-- De ce: După un număr zecimal substantivul numărat nu primește „de”: „1,5 fișiere”, „4,775 milioane de euro” (în al doilea exemplu „de” rămâne doar înaintea lui „euro”, fiindcă îl cere cuvântul „milioane”). Aceasta este convenția skill-ului, de acord cu ghidul gov-md și cu categoria „few” din CLDR. Ghidul INJ cere „de” după zecimale citite ca 20 sau mai mult („4,25 de procente”); fiindcă sursele se contrazic, propui forma fără „de”, nu o impui, și ceri consecvență în tot textul.
+- De ce: După un număr zecimal substantivul numărat nu primește „de”: „1,5 fișiere”, „4,775 milioane de euro” (în al doilea exemplu „de” rămâne doar înaintea lui „euro”, fiindcă îl cere cuvântul „milioane”). Aceasta este convenția skillului, de acord cu ghidul gov-md și cu categoria „few” din CLDR. Ghidul INJ cere „de” după zecimale citite ca 20 sau mai mult („4,25 de procente”); fiindcă sursele se contrazic, propui forma fără „de”, nu o impui, și ceri consecvență în tot textul.
 - Sursă: ghid gov-md §7.4.1.6 (N.B.) și §16.2.3; INJ p. 85–86; CLDR, reguli de plural ro (v ≠ 0)
 - Vezi și: RO-NUM-003
 
@@ -199,8 +199,8 @@ Engl. „billion” înseamnă miliard, nu „bilion”: „3 billion dollars”
 ### RO-NUM-019 „Bilion” se corectează în „miliard”
 - Nivel: normă
 - Greșit: „un bilion de dolari” → Corect: „un miliard de dolari” (dacă contextul indică 10¹², „o mie de miliarde”)
-- De ce: Dicționarele dau „bilion” ca „o mie de miliarde” și, în unele țări, ca „miliard”; „trilion” e un miliard de miliarde. Cititorul nu poate ști care e voită, iar cifra se schimbă de o mie de ori; prin decizia proprietarului skill-ului, cuvântul se corectează. Scrii „miliard” când contextul indică 10⁹ (traducere din engleză, sume de bani, economie) și „o mie de miliarde” când indică 10¹². Dacă nu poți decide, scrii „miliard” și semnalezi alegerea. Regula completă e RO-CAL-053 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md).
-- Sursă: DEX ’98, s.v. bilion, trilion; DOOM 3, s.v. bilion; decizia proprietarului skill-ului (22.10)
+- De ce: Dicționarele dau „bilion” ca „o mie de miliarde” și, în unele țări, ca „miliard”; „trilion” e un miliard de miliarde. Cititorul nu poate ști care e voită, iar cifra se schimbă de o mie de ori; prin decizia proprietarului skillului, cuvântul se corectează. Scrii „miliard” când contextul indică 10⁹ (traducere din engleză, sume de bani, economie) și „o mie de miliarde” când indică 10¹². Dacă nu poți decide, scrii „miliard” și semnalezi alegerea. Regula completă e RO-CAL-053 din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md).
+- Sursă: DEX ’98, s.v. bilion, trilion; DOOM 3, s.v. bilion; decizia proprietarului skillului (22.10)
 
 ### RO-NUM-020 În text: cuvinte, nu prescurtări
 - Nivel: recomandare
@@ -264,7 +264,7 @@ Bun:
 - Nivel: recomandare
 - Greșit: „Spre seară, în jurul orei 19:02, animalul stătea din nou pe autostradă.” → Corect: „Spre seară, pe la ora 19:02, animalul stătea din nou pe autostradă.”
 - De ce: Sursa spune „gegen 19:02 Uhr”, deci aproximarea e în original și „în jurul orei 19:02” este traducerea fidelă; nu o transformi în oră exactă („la 19:02”), căci ai schimba certitudinea sursei (RO-FID). Doar că „în jurul” cu minut exact sună contradictoriu în română. Poți propune un adverb mai firesc („pe la ora 19:02”), dar nu rotunjești ora: ai schimba o cifră a sursei (RO-NUM-048). „La 19:02” rămâne pentru cazul în care sursa dă ora exact. „În jurul orei 19:02” nu se raportează ca greșeală de normă.
-- Sursă: recomandare a skill-ului, fără normă; RO-FID din [fidelitate.md](fidelitate.md); formatul orei: RO-NUM-025
+- Sursă: recomandare a skillului, fără normă; RO-FID din [fidelitate.md](fidelitate.md); formatul orei: RO-NUM-025
 
 ### RO-NUM-057 Nota germană „2–” nu se transpune ca atare
 - Nivel: de semnalat

@@ -201,25 +201,25 @@ Sursă pentru listă: monitorizarea presei IL (nereverificat local).
 - Nivel: recomandare
 - Greșit: „Potrivit Handelsblatt, decretul a fost publicat vineri. Potrivit Handelsblatt, legea fusese semnată în septembrie. Potrivit Handelsblatt, taxele urmau să intre în vigoare automat.” → Corect: „Potrivit Handelsblatt, decretul a fost publicat vineri. Legea fusese semnată în septembrie, iar taxele urmau să intre în vigoare automat.”
 - De ce: Când aproape fiecare frază începe cu „potrivit”, cititorul vede o listă de atribuiri, nu faptul; în articolele de test aceeași sursă era atribuită de trei ori la rând. Markerul „potrivit” nu e greșit și nu se înlocuiește (vezi începutul secțiunii); se rărește: numești sursa o dată, în prima frază care îi aparține sau cel târziu în cea imediat următoare, și nu o repeți cât timp sursa nu se schimbă. Sursa poate sta la începutul frazei („Potrivit Der Spiegel, …”) sau la coada ei („…, scrie Der Spiegel”). Formulele care reiau sursa („ziarul”, „aceeași publicație”, „tot ea”) repetă lista de atribuiri cu alt început de frază. Fiecare afirmație își păstrează sursa: nu comasezi afirmații din surse diferite sub o singură atribuire (RO-STI-618).
-- Sursă: recomandare a skill-ului, fără normă
+- Sursă: recomandare a skillului, fără normă
 
 ### RO-STI-621 Lanțul de atribuire: cel mult două trepte
 - Nivel: recomandare
 - Greșit: „Tabloidul Bild a scris, potrivit agenției dpa, citată de Der Tagesspiegel, că s-a ajuns aproape de o coliziune.” → Corect: „Potrivit Bild, citat de Der Tagesspiegel, a fost cât pe ce să se producă o coliziune.”
 - De ce: Cu trei trepte (Bild, dpa, Tagesspiegel) nu se mai înțelege cine afirmă ce. Două trepte, „X, citat de Y”, sunt în limită. Păstrezi sursa care afirmă și sursa de la care ai luat-o. Agenția intermediară trece în lista de surse; o păstrezi în text când e chiar autoarea textului citat sau când schimbă încrederea (o agenție face fapt dintr-un zvon), caz în care rescrii fraza în două.
-- Sursă: recomandare a skill-ului, fără normă; RO-STI-617 și RO-FID din [fidelitate.md](../fidelitate.md)
+- Sursă: recomandare a skillului, fără normă; RO-STI-617 și RO-FID din [fidelitate.md](../fidelitate.md)
 
 ### RO-STI-622 Epitetul de orientare politică al unei publicații
 - Nivel: de semnalat
 - Greșit: „Potrivit tabloidului conservator Bild, ea spune: «M-am născut ca să te iubesc».” → Corect: „Potrivit tabloidului Bild, ea spune: «M-am născut ca să te iubesc».”
 - De ce: În trei texte (două din corpus și cel despre elan) Bild apare cu epitetul „conservator”, dar în nicio sursă germană din cele pe care se sprijină articolele nu se spune așa. E o apreciere a redacției adăugată sursei (RO-STI-611, RO-STI-618), iar orientarea unei publicații e discutabilă. Tipul publicației (cotidian, săptămânal, post public) e informație de context și se poate păstra dacă e verificabilă; orientarea politică o dai doar cu sursă. Semnalezi și întrebi autorul de unde o ia.
-- Sursă: recomandare a skill-ului, fără normă; regula de fidelitate din SKILL.md
+- Sursă: recomandare a skillului, fără normă; regula de fidelitate din SKILL.md
 
 ### RO-STI-623 „Locul e lângă…”: referința fără antecedent
 - Nivel: recomandare
 - Greșit: „Potrivit Der Spiegel, locul e lângă Groß Köris, la aproximativ 50 de kilometri sud de Berlin.” → Corect: „Incidentul a avut loc lângă Groß Köris, la aproximativ 50 de kilometri sud de Berlin, scrie Der Spiegel.”
 - De ce: „Locul” nu are antecedent: nimic nu a fost numit „loc” mai sus, iar leadul spune doar „sudul landului Brandenburg”. Când localitatea nu a fost numită încă, o numești acum și spui ce s-a întâmplat acolo. Prezentul „e” pentru o poziție geografică nu e greșeală (RO-STI-610 păstrează prezentul pentru pozițiile permanente); problema e doar „locul” fără sprijin.
-- Sursă: recomandare a skill-ului, fără normă; coerența referințelor
+- Sursă: recomandare a skillului, fără normă; coerența referințelor
 
 ## Vezi și
 

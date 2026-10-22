@@ -30,7 +30,7 @@ O pagină care trebuie să fie găsită într-un motor de căutare primește ră
 - Nivel: recomandare
 - Greșit: „Ultimele 2 bucăți! Nu rata, altfel vei regreta! Ajută-ne să rămânem în picioare!” → Corect: „Mai sunt 2 bucăți în stoc.”
 - De ce: În marketing, și mai ales în texte despre sănătate, tonul evită entuziasmul exagerat („hype”), alarma, vina și mila. Aceste mijloace presează cititorul și îi atribuie sentimente pe care nu le-a spus. Mai grav, o „urgență” sau un stoc „limitat” care nu există în sursă sunt fapte inventate: dacă ți le cere cererea, le iei din date, nu le creezi. Cuvântul „hype” nu e în dicționare; în textul pentru public se poate spune „agitația din jurul produsului”. E o recomandare, fără sursă normativă.
-- Sursă: Mic ghid CE p. 4 (Rec. 2); recomandare a skill-ului, fără normă
+- Sursă: Mic ghid CE p. 4 (Rec. 2); recomandare a skillului, fără normă
 
 ## Limbajul cumpărătorului
 

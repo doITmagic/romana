@@ -113,9 +113,11 @@ func FluxVerificator(flux string) (ConfigFlux, error) {
 
 // Prompt construiește cererea trimisă motorului. Aceeași cerere se trimite cu
 // și fără skill; nu pomenește skill-ul. Cererea fixează doar ce cere o
-// aplicație (citarea formei cu „OBS:”, marcajele textului produs), ca ieșirea
-// să poată fi notată mecanic și ca nota să vadă doar textul produs, nu
-// comentariile din jurul lui; SKILL.md dă prioritate formatului aplicației.
+// aplicație (citarea formei cu „OBS:”, marcajele textului produs, iar la
+// corectură propunerile neaplicate pe rânduri „OBS:” după [[/TEXT]], unde le
+// caută Propuneri), ca ieșirea să poată fi notată mecanic și ca nota să vadă
+// doar textul produs, nu comentariile din jurul lui; SKILL.md dă prioritate
+// formatului aplicației.
 func Prompt(c Caz) string {
 	switch c.Mod {
 	case "verificare":
@@ -127,7 +129,8 @@ func Prompt(c Caz) string {
 			" Scrie fiecare observație pe un rând separat care începe cu „" + MarcaObs + "”, urmat de forma problematică citată exact din text, între ghilimele „…”, apoi de explicație. Nu scrie un rând „" + MarcaObs + "” pentru forme corecte. Dacă nu sunt probleme, spune asta și nu scrie niciun rând „" + MarcaObs + "”.\n\nText:\n<<<\n" + c.Intrare + "\n>>>"
 	case "corectura":
 		return "Corectează textul de mai jos, scris în română. Pune textul corectat, întreg, între liniile " + marcaIn + " și " + marcaOut +
-			" (fiecare pe rândul ei). După ele poți lista corecturile.\n\nText:\n<<<\n" + c.Intrare + "\n>>>"
+			" (fiecare pe rândul ei). După ele poți lista corecturile. Schimbările pe care le propui, dar nu le aplici în text, le scrii după " + marcaOut +
+			", fiecare pe un rând separat care începe cu „" + MarcaObs + "”, urmat de forma citată exact din text, între ghilimele „…”, apoi de propunere.\n\nText:\n<<<\n" + c.Intrare + "\n>>>"
 	case "redactare":
 		return c.Intrare + "\n\nPune textul final, și numai textul, între liniile " + marcaIn + " și " + marcaOut +
 			" (fiecare pe rândul ei). În afara lor poți scrie întrebări sau observații pentru mine."

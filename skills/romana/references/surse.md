@@ -11,7 +11,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
   - **descriptiv:** sursa descrie cum e limba (sensuri, structuri, uz, terminologie). Susține o regulă, dar nu o impune;
   - **recomandare:** sursa propune o practică (ghid de redactare, convenție). Nu face dintr-o formă o greșeală.
 - **„(nereverificat local)”** la sfârșitul câmpului înseamnă că trimiterea (capitol, paragraf sau pagină) n-a putut fi deschisă pe text în momentul redactării. Regula rămâne, dar trimiterea e mai puțin sigură.
-- **Sursele de tipul „tipar de stil”, „regulă de fidelitate a skill-ului”, „convenție de registru a skill-ului”, „recomandare a skill-ului”, „observație de stil”, „convenție de redactare”, „convenție de localizare”** nu sunt cărți: spun că regula e o decizie a skill-ului sau un uz, fără normă în spate. Sunt tratate la sfârșit.
+- **Sursele de tipul „tipar de stil”, „regulă de fidelitate a skillului”, „convenție de registru a skillului”, „recomandare a skillului”, „observație de stil”, „convenție de redactare”, „convenție de localizare”** nu sunt cărți: spun că regula e o decizie a skillului sau un uz, fără normă în spate. Sunt tratate la sfârșit.
 - **Lipsa unei forme dintr-un dicționar** nu dovedește că forma e greșită, iar existența ei nu o recomandă. Formele care lipsesc din toate dicționarele consultate sunt marcate „formă dedusă” în regulile lor și nu pot fi normă.
 
 ## Norme ale limbii
@@ -41,7 +41,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** *Dicționarul explicativ al limbii române*, Academia Română, Institutul de Lingvistică „Iorgu Iordan”.
 - **Ediție:** a II-a, Univers Enciclopedic, București, 1998.
 - **Statut:** descriptiv. Dă sensurile, mărcile de registru (fam., pop., reg., arg., înv.) și variantele. Sensul din DEX ’98 decide dacă un cuvânt „înseamnă” ceva, dar pentru formă are prioritate DOOM 3.
-- **Ce nu spune:** nu cuprinde cuvintele sau sensurile apărute după 1998 (multe din informatică sau din uzul recent). Absența unui sens de acolo nu dovedește că sensul e greșit; la regulile de sens, un sens neatestat aici sau în DOOM 3 e recomandare (prieten fals), nu normă; un sens atestat în DEX ’98 sau în DOOM 3 nu e greșeală, cu excepția lui „bilion”, care se corectează în „miliard” prin decizia proprietarului skill-ului (RO-CAL-053). Nu e normă ortografică.
+- **Ce nu spune:** nu cuprinde cuvintele sau sensurile apărute după 1998 (multe din informatică sau din uzul recent). Absența unui sens de acolo nu dovedește că sensul e greșit; la regulile de sens, un sens neatestat aici sau în DOOM 3 e recomandare (prieten fals), nu normă; un sens atestat în DEX ’98 sau în DOOM 3 nu e greșeală, cu excepția lui „bilion”, care se corectează în „miliard” prin decizia proprietarului skillului (RO-CAL-053). Nu e normă ortografică.
 
 ### DEX ’96
 - **Titlu:** *Dicționarul explicativ al limbii române*.
@@ -146,7 +146,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** Blanca Croitor, Andreea Dinică, Adina Dragomirescu, Carmen Mîrzea Vasile, Isabela Nedelcu, Alexandru Nicolae, Irina Nicula, Marina Rădulescu Sala, Rodica Zafiu, *Ești cool și dacă vorbești corect*, Academia Română, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, cu Ministerul Educației și Consiliul Național al Audiovizualului.
 - **Ediție:** Univers Enciclopedic Gold, București, 2014 (ediția consultată). Ediții anterioare: 2008 și 2010.
 - **Statut:** recomandare, îndrumar educațional adresat elevilor. Se sprijină pe norma epocii (inclusiv DOOM 2) și pe monitorizarea limbii din audiovizual.
-- **Ce nu spune:** e anterioară DOOM 3, deci unele judecăți (de exemplu despre „vroiam”) sunt depășite sau disputate. Despre sensul cuvintelor spune puțin; sensul se verifică în dicționar. Se citează la pagină.
+- **Ce nu spune:** e anterioară DOOM 3, deci unele judecăți sunt depășite sau disputate; le verifici în DOOM 3. Despre sensul cuvintelor spune puțin; sensul se verifică în dicționar. Se citează la pagină.
 
 ## Studii și articole
 
@@ -186,14 +186,14 @@ Patru surse de presă din `tipuri/presa.md` n-au putut fi verificate. Se știe d
 - **ICU MessageFormat** și **gettext:** formatul de mesaje cu plural și formula de plural pentru română. **Statut:** standarde tehnice. **Nu spun** nimic despre limbă.
 - **Standardele ISO** menționate în text (transliterarea alfabetelor nelatine, formatul datei aaaa-ll-zz): servesc acte, bibliografii și sisteme; nu înlocuiesc regulile românești pentru presă.
 
-## Surse interne ale skill-ului
+## Surse interne ale skillului
 
 Câmpul „Sursă” poate spune și că regula nu are o sursă externă. Înțelesul:
 
 - **tipar de stil:** un semn de text neîngrijit sau generat, care nu contrazice nicio normă. Se semnalează doar în grup.
-- **regulă de fidelitate a skill-ului:** fidelitatea față de original nu e normă de limbă; e regula de bază a skill-ului (vezi [fidelitate.md](fidelitate.md)).
-- **convenție de registru a skill-ului:** potrivirea cuvintelor cu registrul textului, fără normă.
-- **recomandare a skill-ului, fără normă; observație de stil, fără normă; convenție de redactare, fără normă; convenție de localizare, fără normă:** gust sau uz, propus, niciodată impus. Sub regula de bază („ce e obiectiv se corectează, ce ține de gust doar se propune”), nu primesc nivelul „normă”.
+- **regulă de fidelitate a skillului:** fidelitatea față de original nu e normă de limbă; e regula de bază a skillului (vezi [fidelitate.md](fidelitate.md)).
+- **convenție de registru a skillului:** potrivirea cuvintelor cu registrul textului, fără normă.
+- **recomandare a skillului, fără normă; observație de stil, fără normă; convenție de redactare, fără normă; convenție de localizare, fără normă:** gust sau uz, propus, niciodată impus. Sub regula de bază („ce e obiectiv se corectează, ce ține de gust doar se propune”), nu primesc nivelul „normă”.
 - **practica UE:** uzul din textele instituțiilor UE, fără pretenție de normă generală.
 
 ## Ce nu este acoperit

@@ -274,7 +274,7 @@ Un șir cu valoare inserată (`%{nume}`, `{count}`, `%(autor)s`) se scrie astfel
 - Nivel: normă
 - Greșit: „Ai terminat %{track_title}-ul.” → Corect: „Ai terminat piesa %{track_title}.”
 - De ce: Valoarea nu se vede, deci o desinență sau un articol lipit de ea e greșit pentru o parte din valori. Un substantiv de context care are genul și numărul cunoscut rezolvă acordul. Unde nu e nevoie de flexiune, valoarea stă singură: „%{name} s-a actualizat” e corect când valoarea e la singular (numele unui fișier), pentru că participiul e invariabil, dar auxiliarul nu („s-a”, „s-au”). Pentru valori care pot fi și la plural formulezi fără acord, ca la RO-INT-048.
-- Sursă: ICU; DOOM 3 (articolul și desinențele)
+- Sursă: DOOM 3 (articolul și desinențele); sintaxa din exemplu (`%{…}`) e a Ruby i18n, convenție de localizare, fără normă
 
 ### RO-INT-046 Adjectivul nu se acordă cu valoarea
 - Nivel: normă
@@ -292,13 +292,13 @@ Un șir cu valoare inserată (`%{nume}`, `{count}`, `%(autor)s`) se scrie astfel
 - Nivel: recomandare
 - Greșit: „%(author)s au răspuns” → Corect: „%(author)s a răspuns”
 - De ce: Un marcator de forma `%(nume)s` e un identificator, nu un plural. Sursa engleză are verbul la singular („has replied”), deci verbul românesc rămâne la singular. Dacă sursa admite mai multe persoane, folosești o formulare care nu depinde de număr (de exemplu „Răspuns de la %(author)s”).
-- Sursă: Mozilla RO (uz, nu normă); ICU
+- Sursă: Mozilla RO (uz, nu normă); sintaxa din exemplu (`%(…)s`) e formatarea cu „%” din Python, convenție de localizare, fără normă
 
 ### RO-INT-049 Marcatorul se reproduce întreg
 - Nivel: normă
 - Greșit: „%(document_title)” → Corect: „%(document_title)s”
 - De ce: Fără „s” la sfârșit, formatul `%(nume)s` nu mai e complet, iar formatarea dă eroare sau afișează greșit. Marcatorul se copiază întreg, nu se rescrie.
-- Sursă: ICU; Mozilla RO (uz, nu normă)
+- Sursă: regula de fidelitate din SKILL.md (marcajul rămâne neatins); Mozilla RO (uz, nu normă); sintaxa din exemplu (`%(…)s`) e formatarea cu „%” din Python, convenție de localizare, fără normă
 
 ### RO-INT-050 Etichetele și variabilele, exact și în același număr
 - Nivel: normă

@@ -22,7 +22,7 @@ Cele două axe merg adesea împreună, dar nu mereu: o bancă poate fi distantă
 
 ## Adresarea
 
-Româna are trei trepte de politețe la persoana a II-a: „tu”, „dumneata” și „dumneavoastră” (DSL, s.v. POLITEȚE). În texte scrise pentru public folosești de obicei „tu” sau „dumneavoastră”, și uneori o formulă impersonală. Alegerea ține de produs și de cititor, nu de normă. Skill-ul cere doar ca alegerea să fie aceeași în tot textul.
+Româna are trei trepte de politețe la persoana a II-a: „tu”, „dumneata” și „dumneavoastră” (DSL, s.v. POLITEȚE). În texte scrise pentru public folosești de obicei „tu” sau „dumneavoastră”, și uneori o formulă impersonală. Alegerea ține de produs și de cititor, nu de normă. Skillul cere doar ca alegerea să fie aceeași în tot textul.
 
 **Cum alegi:**
 
@@ -102,7 +102,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Practic, au venit fix o sută de oameni.” → Corect: „Au venit exact o sută de oameni.”
 - De ce: Convenție de registru, nu normă. „Practic” ca umplutură orală (fără sensul „în practică”) și „fix” cu sensul „exact” țin de vorbire și ies din textul redacțional; DOOM 3 înregistrează ambele cuvinte, deci nu sunt greșeli. Cuvântul „practic” cu sens propriu („soluția e practică”) și „fix” ca adjectiv („preț fix”) rămân.
-- Sursă: convenție de registru a skill-ului; DOOM 3 s.v. practic, fix
+- Sursă: convenție de registru a skillului; DOOM 3 s.v. practic, fix
 
 ### RO-STI-414 Oralitatea și falsul dialog cu cititorul
 - Nivel: recomandare
@@ -168,7 +168,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Era gen o sută de oameni.” → Corect: „Erau aproximativ o sută de oameni.”
 - De ce: Convenție de registru. „Gen” ca marcă orală (cu sensul „cam” sau „cum ar fi”) nu e înregistrat în DOOM 3, care îl are doar ca substantiv; iese din textul redacțional. Ca umplutură se elimină, cu sensul „aproximativ” se înlocuiește. Substantivul „gen” și „de acest gen” nu intră sub regulă. La fel, „mda” (fam. în DOOM 3), „mno” și „lol” (argoul conversației scrise) nu intră în textul redacțional.
-- Sursă: convenție de registru a skill-ului; DOOM 3 s.v. gen, mda
+- Sursă: convenție de registru a skillului; DOOM 3 s.v. gen, mda
 
 ### RO-STI-431 „Nu-i bai”
 - Nivel: recomandare
@@ -186,7 +186,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Hai să discutăm bugetul.” → Corect: „Să discutăm bugetul.”
 - De ce: Convenție de registru, nu marcă de dicționar: în DOOM 3 marca *fam.* stă la substantivul „hai”, iar interjecția „hai” nu are marcă. Totuși îndemnul „hai (să)” aparține vorbirii, deci în comunicate, acte și rapoarte folosești conjunctivul de îndemn („Să discutăm”), care e neutru (vezi RO-NUG-114 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). În chat, în social media și în orice text cu ton conversațional ales, „hai” e firesc și nu se elimină. Nu adaugi o persoană („Propun să…”) dacă sursa nu o avea (vezi [fidelitate.md](fidelitate.md)).
-- Sursă: convenție de registru a skill-ului; DOOM 3 s.v. hai
+- Sursă: convenție de registru a skillului; DOOM 3 s.v. hai
 
 ### RO-STI-434 Textul pentru ro-RO evită formele moldovenești și calcurile după rusă
 - Nivel: recomandare
@@ -239,7 +239,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-442 „Dumneavoastră” ca alegere implicită în comunicarea instituțională
 - Nivel: recomandare
 - Greșit: „Salut! Cererea ta a fost înregistrată de primărie.” → Corect: „Bună ziua! Cererea dumneavoastră a fost înregistrată de primărie.”
-- De ce: Exemplul e un mesaj oficial al unei primării. „Dumneavoastră” este alegerea implicită pentru administrație, documente oficiale și comunicare instituțională, și de obicei pentru bănci și suport. În interfețele de software ambele variante sunt practici atestate și produsul alege (vezi [tipuri/interfata.md](tipuri/interfata.md)); skill-ul cere doar ca alegerea să rămână aceeași în tot produsul.
+- De ce: Exemplul e un mesaj oficial al unei primării. „Dumneavoastră” este alegerea implicită pentru administrație, documente oficiale și comunicare instituțională, și de obicei pentru bănci și suport. În interfețele de software ambele variante sunt practici atestate și produsul alege (vezi [tipuri/interfata.md](tipuri/interfata.md)); skillul cere doar ca alegerea să rămână aceeași în tot produsul.
 - Sursă: convenții de localizare de produs (uz, nu normă); DSL, s.v. POLITEȚE
 
 ## Vezi și

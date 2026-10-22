@@ -19,13 +19,13 @@ Italiana folosește condiționalul în două feluri pe care româna nu le acoper
 - Nivel: normă
 - Corect: „Bărbatul ar fi fost arestat.” (pentru „sarebbe stato arrestato”, fără sursă numită). Nu „Bărbatul a fost arestat.”
 - De ce: Originalul prezintă informația ca nesigură, fără certificare; traducerea la indicativ ar face-o mai sigură decât e (RO-FID-021 din [fidelitate.md](../fidelitate.md)). Româna are aceeași valoare, prezumtivul: „ar fi fost arestat” prezintă acțiunea ca presupusă (DEX ’98). Dacă originalul numește sursa, o păstrezi („potrivit poliției, a fost arestat” sau „ar fi fost arestat, potrivit poliției”). Dacă nu o numește, nu o adaugi. Condiționalul cu sursa numită e corect (RO-NUG-070 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
-- Sursă: DEX ’98 s.v. prezumtiv; Coteanu, §20 (condiționalul și optativul); regulă de fidelitate a skill-ului (P0, vezi [fidelitate.md](../fidelitate.md); sensul italian nereverificat local)
+- Sursă: DEX ’98 s.v. prezumtiv; Coteanu, §20 (condiționalul și optativul); regulă de fidelitate a skillului (P0, vezi [fidelitate.md](../fidelitate.md); sensul italian nereverificat local)
 
 ### RO-CAL-703 „Disse che sarebbe venuto”: viitorul din trecut nu se traduce prin „ar fi”
 - Nivel: normă
 - Greșit: „A spus că ar fi venit.” → Corect: „A spus că va veni.”
 - De ce: În italiană condizionale composto poate exprima viitorul văzut din trecut („disse che sarebbe venuto”). În română, „ar fi venit” după „a spus că” înseamnă că cel care relatează se îndoiește că persoana a venit (prezumție, Coteanu, §20). Pentru viitorul din trecut spui „a spus că va veni” sau „a spus că are să vină”. Cauți în context care din cele două valori are originalul; dacă nu se vede, semnalezi fraza.
-- Sursă: Coteanu, §20.1 (condiționalul prezent; ideea de prezumție în vorbirea indirectă, pe care exemplul cu condiționalul trecut o extinde); regulă de fidelitate a skill-ului (P0, vezi [fidelitate.md](../fidelitate.md); valoarea italiană nereverificată local)
+- Sursă: Coteanu, §20.1 (condiționalul prezent; ideea de prezumție în vorbirea indirectă, pe care exemplul cu condiționalul trecut o extinde); regulă de fidelitate a skillului (P0, vezi [fidelitate.md](../fidelitate.md); valoarea italiană nereverificată local)
 
 ## Prieteni falși italo-români
 

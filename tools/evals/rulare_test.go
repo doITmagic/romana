@@ -306,3 +306,38 @@ func TestSelecteaza(t *testing.T) {
 		t.Error("caz inexistent")
 	}
 }
+
+// La corectură, cererea spune explicit unde merg propunerile neaplicate: după
+// [[/TEXT]], ca rânduri OBS: cu forma citată (Propuneri le citește de acolo).
+// Cererea nu pomenește skill-ul și e aceeași în ambele brațe.
+func TestPromptCorecturaPropuneri(t *testing.T) {
+	c := Caz{ID: "corectura-x-01", Mod: "corectura", Intrare: "Am făcut un update."}
+	p := Prompt(c)
+	i, j := strings.Index(p, marcaOut), strings.LastIndex(p, MarcaObs)
+	if !strings.Contains(p, "Am făcut un update.") || !strings.Contains(p, marcaIn) || i < 0 || j < i {
+		t.Fatalf("cererea nu cere rândurile OBS după %s: %q", marcaOut, p)
+	}
+	for _, s := range []string{"nu le aplici", "„…”"} {
+		if !strings.Contains(p, s) {
+			t.Errorf("lipsește %q: %q", s, p)
+		}
+	}
+	for _, s := range []string{"skill", "romana", "normă", "recomandare"} {
+		if strings.Contains(strings.ToLower(p), s) {
+			t.Errorf("cererea pomenește %q: %q", s, p)
+		}
+	}
+	var stdin []string
+	ex := func(ctx context.Context, c Comanda) (string, error) {
+		stdin = append(stdin, c.Stdin)
+		return okStream, nil
+	}
+	for _, cu := range []bool{true, false} {
+		if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorClaude, cu, opt(t)); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if len(stdin) != 2 || stdin[0] != stdin[1] || stdin[0] != p {
+		t.Errorf("cererea diferă între brațe: %q", stdin)
+	}
+}

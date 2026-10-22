@@ -549,10 +549,10 @@ Bun:
 - Sursă: B. Croitor et al., 2014, p. 48; Coteanu, imperativul negativ; ÎOOP6 p. 112 (Imperativul: „fă!” vs „nu face!”)
 
 ### RO-GRA-067 „Voiam”, nu „vroiam”
-- Nivel: recomandare
-- Corect: „Voiam să plec mai devreme.” Forma „vroiam” nu o corectezi ca greșeală.
-- De ce: Imperfectul verbului „a voi” e „voiam”, „voiai”, „voia”; formele cu „r” sunt socotite contaminare între „a voi” și „a vrea”. DEX ’98 dă însă „vroi” ca variantă a lui „a vrea”, iar formele „vroiam, vroia” apar în dicționarele consultate, de aceea propui „voiam” fără să o corectezi pe „vroiam” ca greșeală de normă. În citat nu se corectează (vezi RO-NUG-039).
-- Sursă: B. Croitor et al., 2014, p. 41; DEX ’98 s.v. vrea (Var. vroi)
+- Nivel: normă
+- Greșit: „Vroiam să plec mai devreme.” → Corect: „Voiam să plec mai devreme.”
+- De ce: Imperfectul verbului „a voi” e „voiam”, „voiai”, „voia”; formele cu „r” sunt contaminare între „a voi” și „a vrea”. DOOM 3 spune explicit că nu sunt acceptate de normă („imperf. 1 (fam.) vroiam; literar: voiam”, §6.9.6). DEX ’98 dă „vroi” ca variantă a lui „a vrea”, dar pentru formă are prioritate DOOM 3. În citatul direct „vroiam” rămâne neatins (vezi RO-FID-001 din [fidelitate.md](fidelitate.md) și RO-NUG-039).
+- Sursă: DOOM 3, Observații și recomandări §6.9.6; B. Croitor et al., 2014, p. 41; DEX ’98 s.v. vrea (Var. vroi)
 
 ### RO-GRA-068 „Precedă”
 - Nivel: normă
@@ -657,14 +657,14 @@ Bun:
 ### RO-GRA-078 „Sunt”, nu „sînt”
 - Nivel: normă
 - Greșit: „Noi sîntem acasă.” → Corect: „Noi suntem acasă.”
-- De ce: Verbul „a fi” se scrie „sunt, suntem, sunteți”; seria „sînt” e greșită în textul de azi, fără excepție (RO-TIP-128 de mai jos). Într-un citat direct, grafia originală rămâne neschimbată, conform regulii de fidelitate a skill-ului (RO-FID-026, RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). Atenție: DOOM 3 §2.2.2 cere ca formele „sînt” din texte vechi să fie redate acum „sunt”; skill-ul păstrează totuși citatul, pe baza regulii de fidelitate.
-- Sursă: DOOM 3, §2.2.2 (norma); regulă de fidelitate a skill-ului și decizia proprietarului (22.10) (păstrarea în citat)
+- De ce: Verbul „a fi” se scrie „sunt, suntem, sunteți”; seria „sînt” e greșită în textul de azi, fără excepție (RO-TIP-128 de mai jos). Într-un citat direct, grafia originală rămâne neschimbată, conform regulii de fidelitate a skillului (RO-FID-026, RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)). Atenție: DOOM 3 §2.2.2 cere ca formele „sînt” din texte vechi să fie redate acum „sunt”; skillul păstrează totuși citatul, pe baza regulii de fidelitate.
+- Sursă: DOOM 3, §2.2.2 (norma); regulă de fidelitate a skillului și decizia proprietarului (22.10) (păstrarea în citat)
 
 ### RO-TIP-128 Grafia cu „î” interior și „sînt” se corectează mereu
 - Nivel: normă
 - Greșit: „Sînt cîrcotașă și, cînd am îmbătrînit, am rămas la fel.” → Corect: „Sunt cârcotașă și, când am îmbătrânit, am rămas la fel.” (și când grafia e aplicată consecvent, în tot textul)
-- De ce: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost norma până la hotărârea Academiei Române din 1993, care a revenit la „â” și „sunt” (DOOM 3 §2.2.1–2.2.2). Azi e greșeală, chiar dacă autorul o aplică consecvent de la un capăt la altul: nu există excepție pentru o convenție asumată a autorului sau a redacției. În corectură corectezi toate ocurențele („â” în interior, „sunt, suntem, sunteți”, RO-GRA-074 și RO-GRA-078) și spui o singură dată că ai unificat grafia după DOOM 3. În verificare raportezi grafia o singură dată, la prima apariție, cu mențiunea că se repetă în tot textul, nu fiecare formă în parte. Într-un citat direct grafia originală rămâne neschimbată, conform regulii de fidelitate a skill-ului (RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)); DOOM 3 §2.2.1 pct. 5 cere redarea tacită după normele actuale la editarea unor texte vechi, dar skill-ul nu rescrie citatele.
-- Sursă: DOOM 3 §2.2.1–2.2.2 și Hotărârea Academiei Române din 17 februarie 1993 (anexa); ÎOOP6 p. 25 (principiul distribuțional); decizia proprietarului skill-ului (22.10); păstrarea în citat: regulă de fidelitate a skill-ului
+- De ce: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost norma până la hotărârea Academiei Române din 1993, care a revenit la „â” și „sunt” (DOOM 3 §2.2.1–2.2.2). Azi e greșeală, chiar dacă autorul o aplică consecvent de la un capăt la altul: nu există excepție pentru o convenție asumată a autorului sau a redacției. În corectură corectezi toate ocurențele („â” în interior, „sunt, suntem, sunteți”, RO-GRA-074 și RO-GRA-078) și spui o singură dată că ai unificat grafia după DOOM 3. În verificare raportezi grafia o singură dată, la prima apariție, cu mențiunea că se repetă în tot textul, nu fiecare formă în parte. Într-un citat direct grafia originală rămâne neschimbată, conform regulii de fidelitate a skillului (RO-NUG-039 din [ce-nu-e-greseala.md](ce-nu-e-greseala.md)); DOOM 3 §2.2.1 pct. 5 cere redarea tacită după normele actuale la editarea unor texte vechi, dar skillul nu rescrie citatele.
+- Sursă: DOOM 3 §2.2.1–2.2.2 și Hotărârea Academiei Române din 17 februarie 1993 (anexa); ÎOOP6 p. 25 (principiul distribuțional); decizia proprietarului skillului (22.10); păstrarea în citat: regulă de fidelitate a skillului
 
 ### RO-GRA-080 Eliziunea prepoziției cu articolul
 - Nivel: normă
@@ -869,7 +869,7 @@ La trei sau patru consoane între vocale, prima rămâne în silaba dinainte, ce
 ### RO-GRA-098 Contaminarea a două construcții
 - Nivel: normă
 - Greșit: „Nu se merită să aștepți.” → Corect: „Nu merită să aștepți.”
-- De ce: Contaminarea amestecă două construcții corecte într-una greșită: „cartea care am citit-o” (din „care” subiect și „pe care” complement), „nu se merită”. Revii la una dintre construcțiile de bază. Pentru „vroiam” vezi RO-GRA-067, care nu e normă.
+- De ce: Contaminarea amestecă două construcții corecte într-una greșită: „cartea care am citit-o” (din „care” subiect și „pe care” complement), „nu se merită”. Revii la una dintre construcțiile de bază. Pentru „vroiam” vezi RO-GRA-067.
 - Sursă: DEX ’98 s.v. merita, care; B. Croitor et al., 2014, p. 52; curs, secțiunea „Erori gramaticale”
 
 ## 14. Topica și grupul verbal

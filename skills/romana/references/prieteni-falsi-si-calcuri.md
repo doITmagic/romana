@@ -146,8 +146,8 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 ### RO-CAL-053 „Bilion” se corectează în „miliard”
 - Nivel: normă
 - Greșit: „Compania valorează 3 bilioane de dolari, potrivit raportului anual.” → Corect: „Compania valorează 3 miliarde de dolari, potrivit raportului anual.” (dacă contextul indică 10¹², scrii „o mie de miliarde”)
-- De ce: DEX ’98 dă pentru „bilion” două valori, „o mie de miliarde” și, „în unele țări”, „un miliard”, iar DOOM 3 îl marchează rar. Cititorul nu poate ști care e voită, iar lectura greșită schimbă cifra de o mie de ori (P1). De aceea, prin decizia proprietarului skill-ului (22.10), cuvântul se corectează, deși ambele sensuri sunt atestate. Alegi după context: scrii „miliard” când contextul indică 10⁹ (traducere din engleză, sume de bani, economie) și „o mie de miliarde” când indică 10¹². Dacă nu poți decide, scrii „miliard” și semnalezi alegerea. Într-o traducere în care originalul spune „billion”, „bilion” e și abatere de fidelitate (normă, P0, vezi [fidelitate.md](fidelitate.md)), dar numai când poți verifica originalul. Engl. „trillion” e „o mie de miliarde” (10¹²); când traduci, verifici fiecare cifră. Scrierea cifrelor și a unităților e în [numere-date-unitati.md](numere-date-unitati.md).
-- Sursă: DEX ’98 s.v. bilion, miliard; DOOM 3 s.v. bilion; decizia proprietarului skill-ului (22.10)
+- De ce: DEX ’98 dă pentru „bilion” două valori, „o mie de miliarde” și, „în unele țări”, „un miliard”, iar DOOM 3 îl marchează rar. Cititorul nu poate ști care e voită, iar lectura greșită schimbă cifra de o mie de ori (P1). De aceea, prin decizia proprietarului skillului (22.10), cuvântul se corectează, deși ambele sensuri sunt atestate. Alegi după context: scrii „miliard” când contextul indică 10⁹ (traducere din engleză, sume de bani, economie) și „o mie de miliarde” când indică 10¹². Dacă nu poți decide, scrii „miliard” și semnalezi alegerea. Într-o traducere în care originalul spune „billion”, „bilion” e și abatere de fidelitate (normă, P0, vezi [fidelitate.md](fidelitate.md)), dar numai când poți verifica originalul. Engl. „trillion” e „o mie de miliarde” (10¹²); când traduci, verifici fiecare cifră. Scrierea cifrelor și a unităților e în [numere-date-unitati.md](numere-date-unitati.md).
+- Sursă: DEX ’98 s.v. bilion, miliard; DOOM 3 s.v. bilion; decizia proprietarului skillului (22.10)
 
 ### RO-CAL-030 „Specific” cu sensul „precis”
 - Nivel: recomandare
@@ -367,7 +367,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 - Nivel: normă
 - Greșit: „Căutăm un consultant orientat spre client.” → Corect: „Căutăm un consultant care să lucreze direct cu clienții.”
 - De ce: Regula privește doar traducerea și e o regulă de fidelitate (P0), nu de dicționar. „Orientat spre client” e corect în română și redă engl. „customer-oriented”: preocupat de client (DEX ’98 s.v. orienta, „a îndrepta într-o direcție”). Engl. „client-facing” spune altceva: postul presupune contact direct cu clienții. Când originalul spune „client-facing”, traducerea cu „orientat spre client” schimbă sensul. Fără original, fraza nu se semnalează.
-- Sursă: regulă de fidelitate a skill-ului (P0, vezi [fidelitate.md](fidelitate.md)); DEX ’98 s.v. orienta
+- Sursă: regulă de fidelitate a skillului (P0, vezi [fidelitate.md](fidelitate.md)); DEX ’98 s.v. orienta
 
 ### RO-CAL-086 „Manual de teren”
 - Nivel: recomandare

@@ -58,7 +58,7 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 - Nivel: de semnalat
 - Greșit: „să repete lucru în repository” → Corect: „indicații pe care le pot aplica din nou”
 - De ce: Un text tradus automat, cuvânt cu cuvânt, poate să nu aibă o greșeală de gramatică care să se corecteze și totuși să nu spună nimic. Aici originalul vorbea despre indicații care pot fi aplicate de mai multe ori (engl. „repeatable guidance”), iar traducerea a lipit cuvinte. Nu pui articolul sau acordul lipsă, ci cauți ce voia originalul și scrii asta. Dacă originalul nu e la îndemână și sensul nu se poate ghici, semnalezi fraza și întrebi.
-- Sursă: recomandare a skill-ului, fără normă
+- Sursă: recomandare a skillului, fără normă
 
 ### RO-CAL-502 Idiomurile se traduc după sens
 - Nivel: recomandare
@@ -88,7 +88,7 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 - Nivel: recomandare
 - Corect: „Și cum arată aceste condiții?” (pentru engl. „So what do these conditions look like?”). Nu o transformi în „Condițiile se prezintă după cum urmează.”
 - De ce: Originalul pune o întrebare retorică, mijloc expresiv pe care îl are și româna. O transformi în afirmație doar dacă registrul nu admite întrebări retorice (text juridic, administrativ, mesaje de sistem); altfel pierzi tonul autorului. Nici nu o calchiezi cuvânt cu cuvânt.
-- Sursă: recomandare a skill-ului, fără normă
+- Sursă: recomandare a skillului, fără normă
 
 ### RO-CAL-042 Sensul din frază, nu primul echivalent din dicționar
 - Nivel: recomandare
@@ -100,4 +100,4 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 - Nivel: recomandare
 - Greșit: „Sincer, noi practic doar am vrut să facem într-adevăr lucrurile simple.” → Corect: „Am vrut să simplificăm lucrurile.”
 - De ce: Cuvinte ca „just”, „really”, „actually”, „basically”, „honestly” ajustează tonul fără să aducă informație. Traduse fiecare cu câte un adverb românesc, fac fraza grea și neutră, cum ar fi: *sincer, practic, doar, într-adevăr*. Le redai după sens (dacă schimbă ceva) sau le omiți, mai ales când se adună. Când cuvântul poartă informație („doar” = „numai”, „actually” = „de fapt, contrar așteptărilor”), îl păstrezi. În citat nu scoți nimic (vezi RO-FID-026 din [fidelitate.md](../fidelitate.md)).
-- Sursă: recomandare a skill-ului, fără normă
+- Sursă: recomandare a skillului, fără normă

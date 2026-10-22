@@ -95,13 +95,13 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: recomandare
 - Corect: „În coaliție sunt neînțelegeri.” (pentru „Es gibt Streit in der Koalition”). Nu „Există ceartă în coaliție.”
 - De ce: Convenție de traducere. „Es gibt” introduce un fapt sau un eveniment. „Există” sună în română a constatare de inventar și se potrivește mai ales cu entități („există o soluție”). Pentru evenimente sau stări alegi un verb mai concret: „sunt neînțelegeri”, „coaliția se ceartă”.
-- Sursă: recomandare a skill-ului, fără normă
+- Sursă: recomandare a skillului, fără normă
 
 ### RO-CAL-611 Particulele modale nu se traduc cuvânt cu cuvânt
 - Nivel: recomandare
 - Corect: „Doar e medic.” (pentru „Er ist ja Arzt”). Nu „El este într-adevăr medic.”
 - De ce: Particulele (ja, doch, wohl, eben, halt, mal) nuanțează tonul fără să aducă informație. În „Er ist ja Arzt”, „ja” trimite la ceva știut de amândoi („doar”), nu întărește afirmația cu „într-adevăr”. Le omiți sau le redai prin sens („totuși”, „probabil”, „doar”), nu cuvânt cu cuvânt. Dacă particula schimbă sensul („wohl” = „probabil”), nu o omiți. În citat nu scoți nimic. Cazul general, pentru orice limbă sursă, e RO-CAL-051 din [en.md](en.md).
-- Sursă: recomandare a skill-ului, fără normă
+- Sursă: recomandare a skillului, fără normă
 
 ### RO-CAL-612 Konjunktiv I nu se calchiază prin condițional
 - Nivel: recomandare
@@ -113,7 +113,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: recomandare
 - Corect: „Cauza este disputată.” (pentru „Die Ursache ist umstritten”)
 - De ce: „Umstritten” spune că despre un fapt există păreri care se bat cap în cap. „Disputat” („care dă naștere la discuții vii, controversate”, DEX ’98) îi corespunde. „Contestat” („a nu recunoaște dreptul sau valoarea cuiva sau a ceva”, DEX ’98) este tot o formă corectă și nu o corectezi într-un text românesc; se potrivește însă mai bine când cineva atacă ceva anume (o decizie, un rezultat), nu când sursele dau explicații diferite. Dacă originalul numește cine dă care explicație, o spui așa; dacă nu, nu inventezi nume ([fidelitate.md](../fidelitate.md)). Sensul din frază, nu echivalentul din dicționar: RO-CAL-042 din [en.md](en.md).
-- Sursă: DEX ’98 s.v. disputat, contesta; regulă de fidelitate a skill-ului
+- Sursă: DEX ’98 s.v. disputat, contesta; regulă de fidelitate a skillului
 
 ### RO-CAL-614 „Umstritten” despre o măsură sau o persoană
 - Nivel: recomandare
@@ -131,7 +131,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: recomandare
 - Corect: „Alarmă falsă în gări din trei landuri: un anunț le-a cerut oamenilor să iasă, iar cauza este disputată” (în loc de „…evacuarea a fost cerută, iar cauza e contestată”)
 - De ce: Titlul tradus păstrează de obicei pasivul și substantivul abstract din original. Îl refaci cu verbul și agentul care erau în original („eine Durchsage forderte zum Verlassen auf”), fără să inventezi un agent nou. Este exemplul prin care se văd împreună RO-CAL-613 și regula titlului din [stilistica.md](../stilistica.md).
-- Sursă: regulă de fidelitate a skill-ului; Mic ghid CE, Rec. 6, p. 8
+- Sursă: regulă de fidelitate a skillului; Mic ghid CE, Rec. 6, p. 8
 
 ### RO-CAL-617 Instituțiile germane se articulează după regula împrumuturilor
 - Nivel: recomandare
@@ -161,7 +161,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: recomandare
 - Greșit: „Elanul a ieșit la marginea drumului, a traversat A13 și a dispărut într-o zonă împădurită.” → Corect: „Elanul a ieșit la marginea drumului, a traversat autostrada A13 și a dispărut într-o zonă împădurită.”
 - De ce: Presa germană scrie „auf der A13” sau „die A13”, cu codul ca nume întreg. În română codul însoțește substantivul: „autostrada A13”, „drumul național DN1”. Substantivul se pune cel puțin la prima apariție și ori de câte ori codul e complement direct („a traversat”, „a închis”) sau vine după „pe lângă”. În relatări de trafic, forma scurtă „pe A13” după ce autostrada a fost numită o dată nu se corectează.
-- Sursă: DEX ’98 s.v. autostradă (autostrada e un fel de șosea, deci codul numește drumul, nu tipul); recomandare a skill-ului, fără normă
+- Sursă: DEX ’98 s.v. autostradă (autostrada e un fel de șosea, deci codul numește drumul, nu tipul); recomandare a skillului, fără normă
 
 ### RO-CAL-622 Autobahn, Bundesstraße: clasa drumului din sursă se păstrează
 - Nivel: recomandare
@@ -179,7 +179,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: recomandare
 - Greșit: „Animalul stătea din nou pe autostradă și s-a ajuns aproape de un accident.” → Corect: „Animalul stătea din nou pe autostradă și a fost cât pe ce să se producă un accident.”
 - De ce: „Dabei kam es beinahe zu einem Unfall” este o construcție cu verb suport (RO-CAL-607) la care s-a adăugat „beinahe”. Tradusă piesă cu piesă, dă „s-a ajuns aproape de”, în care „a ajunge” nu mai are complementul lui obișnuit („a se ajunge la”). Româna are expresia „cât pe ce” („aproape, gata-gata”, DEX ’98), familiară și expresivă: „a fost cât pe ce să se ciocnească”. Într-un registru mai sobru: „era să se producă un accident”, „a fost la un pas de accident”.
-- Sursă: DEX ’98 s.v. ce (expr. „cât pe ce”); recomandare a skill-ului, fără normă
+- Sursă: DEX ’98 s.v. ce (expr. „cât pe ce”); recomandare a skillului, fără normă
 
 ### RO-CAL-625 „Immer wieder”: „periodic” promite regularitate
 - Nivel: recomandare
@@ -203,7 +203,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - Nivel: de semnalat
 - Greșit: „Casa Albă a publicat decretul vineri, ora locală, iar Beijingul a reacționat sâmbătă.” → Corect: „Casa Albă a publicat decretul vineri (ora Washingtonului), iar Beijingul a reacționat sâmbătă.”
 - De ce: „Am Freitag (Ortszeit)” înseamnă „vineri după ora locului de care e vorba”. „Vineri, ora locală” e formulă curentă în relatările de agenție despre evenimente externe și nu e greșeală când locul reiese din context (un decret american, într-un text despre SUA). Semnalezi doar când textul poate fi citit ca ora cititorului sau când mai multe locuri au fusuri diferite; atunci întrebi autorul și, dacă locul e dat în text, îl ancorezi („ora Washingtonului”). Nu adaugi tu un loc pe care sursa nu-l dă.
-- Sursă: recomandare a skill-ului, fără normă; claritatea referinței (RO-COE din [coerenta.md](../coerenta.md))
+- Sursă: recomandare a skillului, fără normă; claritatea referinței (RO-COE din [coerenta.md](../coerenta.md))
 
 ### RO-CAL-629 „Angeblich”, „vermeintlich”: nu dispar în traducere
 - Nivel: recomandare
