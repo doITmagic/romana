@@ -53,6 +53,9 @@ var prefixeleI = []string{
 	"bine", "nemai", "de", "din", "ori",
 }
 
+// faraSedila: „şi” cu sedilă e tot o legătură românească.
+var faraSedila = strings.NewReplacer("ş", "ș", "ţ", "ț")
+
 // cuvinteTari sunt legături românești care nu apar în engleză sau în cod.
 var cuvinteTari = map[string]bool{}
 
@@ -358,7 +361,7 @@ func PareRomana(text string) bool {
 		if in(ign, c.a) {
 			continue
 		}
-		cuv := strings.ToLower(text[c.a:c.b])
+		cuv := faraSedila.Replace(strings.ToLower(text[c.a:c.b]))
 		total++
 		if cuvinteTari[cuv] {
 			tari++

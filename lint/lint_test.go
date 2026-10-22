@@ -105,6 +105,11 @@ func TestPareRomana(t *testing.T) {
 	if PareRomana(mixt) {
 		t.Error("cuvintele din blocul de cod nu se numără")
 	}
+	// tocmai textele cu sedilă trebuie recunoscute: „şi” e tot „și”
+	sedila := "Am fost la mare şi la munte, dar nu am avut timp şi de plimbare."
+	if !PareRomana(sedila) {
+		t.Error("textul cu „şi” cu sedilă trebuie recunoscut")
+	}
 }
 
 func TestZeroPeCazurileCurate(t *testing.T) {
