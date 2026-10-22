@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"io"
+	"runtime"
 	"strconv"
 	"strings"
 	"sync/atomic"
@@ -404,4 +405,26 @@ func TestPanicaInUnealta(t *testing.T) {
 	}
 	s.trimite(`{"jsonrpc":"2.0","id":2,"method":"ping"}`)
 	s.raspuns()
+}
+
+type scriereStricata struct{}
+
+func (scriereStricata) Write([]byte) (int, error) { return 0, io.ErrClosedPipe }
+
+// Dacă scrierea eșuează și apelantul nu anulează ctx, gorutina de citire nu
+// are voie să rămână blocată pe trimiterea următoarei linii.
+func TestScriereEsuataNuLasaGorutinaAgatata(t *testing.T) {
+	inainte := runtime.NumGoroutine()
+	intrare := strings.Repeat(`{"jsonrpc":"2.0","id":1,"method":"ping"}`+"\n", 3)
+	err := Serveste(context.Background(), strings.NewReader(intrare), scriereStricata{}, &unelteFalse{gata: true}, "t")
+	if err == nil {
+		t.Fatal("eroarea de scriere trebuia întoarsă")
+	}
+	deadline := time.Now().Add(2 * time.Second)
+	for runtime.NumGoroutine() > inainte && time.Now().Before(deadline) {
+		time.Sleep(10 * time.Millisecond)
+	}
+	if n := runtime.NumGoroutine(); n > inainte {
+		t.Errorf("gorutină rămasă agățată: %d înainte, %d după", inainte, n)
+	}
 }

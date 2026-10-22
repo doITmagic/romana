@@ -132,6 +132,10 @@ type server struct {
 // sfârșitul intrării (întoarce nil) sau până la anularea ctx (întoarce
 // ctx.Err()). Un mesaj stricat nu oprește serverul.
 func Serveste(ctx context.Context, in io.Reader, out io.Writer, u Unelte, versiune string) error {
+	// ctx derivat: la întoarcere (și din eroare de scriere) gorutina de citire
+	// nu rămâne blocată pe trimiterea unei linii.
+	ctx, anuleaza := context.WithCancel(ctx)
+	defer anuleaza()
 	s := &server{u: u, versiune: versiune, out: out}
 
 	linii := make(chan []byte)
