@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Toți candidații – inclusiv cei independenți – au semnat codul de conduită. Moderatorul a spus: „Rugămintea mea e ca fiecare să răspundă cu «da» sau «nu».” În anii ’80, emisiunea se difuza lunar.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true,
     "interzis": [

@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Componenta „Dashboard” afișează activitatea recentă. Faceți click pe „Dashboard”, apoi alegeți filtrul dorit. Dashboardul se actualizează la fiecare 30 secunde.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

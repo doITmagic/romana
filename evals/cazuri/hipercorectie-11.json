@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Asistentul medical îl asistă pe doctor în sala de operații. Pe agenda zilei sunt patru întâlniri, iar versiunea curentă a planului a fost votată. Omul mort în incendiu avea 52 de ani.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true,
     "interzis": [

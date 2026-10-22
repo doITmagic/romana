@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Cerere: Rescrie pasajul într-un ton mai ferm, fără să schimbi faptele.\n\nPasaj: Noua metodă ar putea scurta durata tratamentului, dar studiul e încă în desfășurare.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "scurtează",

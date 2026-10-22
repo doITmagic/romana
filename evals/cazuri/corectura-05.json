@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Utilizator a fost șters.\nAți terminat {titlu}-ul.\nVă mulțumim pentru comandă. Îți trimitem factura pe e-mail.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

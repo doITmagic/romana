@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Sursă:\nMedicamentul ar putea reduce riscul de recidivă, spun cercetătorii.\n\nRescriere:\nMedicamentul reduce riscul de recidivă, spun cercetătorii.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

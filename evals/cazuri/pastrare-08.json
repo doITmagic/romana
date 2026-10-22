@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Pentru a instala pachetul, rulați:\n\n    sudo apt install pachet-romana\n\nInstalarea durează aproximativ 20 minute. Apoi verificați versiunea cu `pachet --version`.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

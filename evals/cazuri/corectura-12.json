@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Stimată doamnă director,\n\nNu am nici un motiv să mă îndoiesc de cifrele din raport, dar vă rog să-mi explicați de ce numai avem acces la datele din 2024. Am fost la arhivă doar odată și mi s-a spus că dosarele au fost mutate.\n\nCu respect,\nPaul Ilie",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

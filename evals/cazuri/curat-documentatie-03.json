@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "## Copii de siguranță\n\nAplicația face în fiecare noapte, la ora 2:00, o copie de siguranță a bazei de date. Copiile se păstrează 14 zile, apoi se șterg automat.\n\nPentru a restaura o copie, urmați pașii:\n\n1. Opriți aplicația.\n2. Alegeți copia dorită din directorul `copii/`.\n3. Rulați comanda `restaurare copii/2026-10-15.sql`.\n4. Porniți din nou aplicația.\n\nRestaurarea șterge datele curente. Dacă nu sunteți siguri, faceți mai întâi o copie manuală cu comanda `salvare manual`.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true
   }

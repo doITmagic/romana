@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Convertește fișierul ro.json în format YAML, fără să modifici niciun text.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "romana"

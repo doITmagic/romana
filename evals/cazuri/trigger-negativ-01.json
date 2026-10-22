@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Translate this paragraph from Romanian into English: „Echipa a terminat raportul joi, iar clientul l-a aprobat vineri.”",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "romana"

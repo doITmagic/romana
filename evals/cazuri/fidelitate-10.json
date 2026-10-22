@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Sursă:\nMinistrul a spus: „Nu putem promite nimic până nu vedem cifrele.”\n\nRescriere:\nMinistrul a promis că va rezolva problema după ce va vedea cifrele.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

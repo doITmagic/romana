@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "În acest contract, „Beneficiarul” este persoana care primește serviciul, iar „Prestatorul” este firma care îl oferă. Prestatorul se obligă să livreze lucrarea în termen de 30 zile.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

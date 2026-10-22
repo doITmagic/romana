@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Cerere: Tradu în română mesajul de interfață, păstrând sensul.\n\nMesaj: The update may take a few minutes. Do not close the app.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "cerut": [
       "câteva minute"

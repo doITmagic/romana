@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Pasărea zbură peste râu și se așeză pe un stâlp. Ploaia începu pe neașteptate, iar copiii fugiră spre casă, râzând.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true,
     "interzis": [

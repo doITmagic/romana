@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Firma Nord Instal are 25 ani de activitate pe piața instalațiilor. Colaborăm ca și subcontractor cu constructori mari și păstrăm o politică de prețuri consistentă de la un an la altul. Ofertele sunt valabile 30 de zile.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Scrie mesajele pentru un formular de înregistrare, cu adresare prin «dumneavoastră»: eticheta și eroarea pentru e-mail invalid, eroarea pentru o parolă mai scurtă de 8 caractere, textul butonului și mesajul de confirmare după trimitere. Câte o linie pe text.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "poți",

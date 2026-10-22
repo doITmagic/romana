@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Pentru informații vizitați https://exemplu.ro/contact_us?lang=ro sau scrieți la contact@exemplu.ro. Răspundem în cel mult 20 zile.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

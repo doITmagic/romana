@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Calculează dobânda pentru un credit de 20.000 de lei la 8% pe an, pe trei ani.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "romana"

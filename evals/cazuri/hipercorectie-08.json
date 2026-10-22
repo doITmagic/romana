@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Studenții au predat lucrarea miercuri, iar noua lege a intrat în vigoare luni. Au sosit primele rezultate ale testelor. Banca comercială a anunțat dobânzi mai mici pentru împrumuturile pe termen lung.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true,
     "interzis": [

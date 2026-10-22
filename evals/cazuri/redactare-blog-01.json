@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Scrie primul paragraf al unui articol de blog despre cum ne-am mutat echipa de 8 oameni de la e-mail la un canal de chat. Părerea autorului: după două luni, e-mailurile interne s-au înjumătățit, dar discuțiile s-au fragmentat. Nu adăuga cifre sau exemple în plus.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "a face sens",

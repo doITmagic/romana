@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Aplicația acceptă fișiere de până la 1,500 MB. Selectați opțiunea \"Import\" din meniu. După încărcare, platforma verifică formatul și vă trimite un raport pe e-mail.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

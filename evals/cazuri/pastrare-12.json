@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Potrivit raportului „State of Cloud 2025”, firmele mici folosesc serviciile în cloud mai rar decât cele mari. Autorii au intervievat 400 firme din șase țări europene.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

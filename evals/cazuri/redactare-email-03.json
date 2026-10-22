@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Scrie un răspuns la reclamația unui client care a primit un aspirator defect (modelul AX-200, cumpărat pe 3 septembrie). Faptele: îl înlocuim gratuit în 5 zile lucrătoare; curierul va suna înainte; nu putem returna banii acum. Ton politicos, adresare cu «dumneavoastră».",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "Sper că acest e-mail",

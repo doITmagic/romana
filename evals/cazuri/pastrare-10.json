@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Serverul întoarce un obiect JSON, de exemplu `{\"status\": \"ok\", \"mesaj\": \"Cererea a fost procesată\"}`, iar o cerere eșuată poate fii repetată după 5 minute.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

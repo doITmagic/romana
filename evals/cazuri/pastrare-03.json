@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Utilizator {nume} a fost adăugat în echipa {echipa}.\n{count, plural, one {# fișier} few {# fișiere} other {# de fișiere}}",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

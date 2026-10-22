@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Verifică dacă textul din README.ro.md sună natural în română și spune-mi ce calcuri din engleză găsești.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "cerut": [
       "romana"

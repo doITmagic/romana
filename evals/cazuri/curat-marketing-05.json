@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Cabinetul veterinar Pufoșii primește pisici, câini și animale mici (iepuri, hamsteri, cobai) în Oradea, de la 8:00 la 20:00, inclusiv sâmbăta. Programarea o poți face telefonic sau online, dar pentru urgențe nu ai nevoie de ea.\n\nLa prima vizită facem consultul și îți explicăm, pe înțelesul tău, ce am găsit și ce urmează. Vaccinările, deparazitările și analizele de sânge se fac în cabinet, iar rezultatele analizelor le primești în cel mult 24 de ore. Pentru operații colaborăm cu o clinică parteneră, unde mergem cu tine și cu animalul tău.\n\nConsultul costă 80 de lei. Dacă adopți un animal de la un adăpost din oraș, primul consult este gratuit.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true
   }

@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "De ani de zile spun că nu mă pot concentra dacă telefonul e în aceeași cameră. Luna trecută am vrut să văd dacă e adevărat și am lăsat telefonul, în fiecare zi, două ore, într-un sertar din hol. Nu l-am pus pe silențios și nici nu l-am oprit: l-am lăsat acolo, ca să nu-l aud și să nu-l văd.\n\nPrima săptămână a fost grea. Mă surprindeam mergând până la sertar fără să știu de ce. Din a doua săptămână, m-am obișnuit, iar în a treia am început să uit de el. În cele două ore reușeam să termin lucruri pe care înainte le tot amânam: răspunsuri la e-mailuri, un raport, o carte pe care o începusem în vara trecută.\n\nNu cred că telefonul e o problemă în sine. Cred că ni se pare firesc să fim disponibili tot timpul, deși nimeni nu ne-a cerut asta. Am rămas cu obiceiul: două ore pe zi, telefonul stă în sertar.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true
   }

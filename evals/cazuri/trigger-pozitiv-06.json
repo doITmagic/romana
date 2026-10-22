@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Can you check whether this Romanian sentence is correct? „Studenții care i-am întâlnit ieri sunt din Cluj.”",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "cerut": [
       "romana"

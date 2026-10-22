@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Sursă:\nRaportul nu exclude posibilitatea unui incendiu intenționat.\n\nRescriere:\nRaportul exclude posibilitatea unui incendiu intenționat.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

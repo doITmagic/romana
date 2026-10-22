@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Am văzut-o cu ochii mei coborând din tren. Duminică, orașul a sărbătorit hramul bisericii. Au venit mii de oameni, iar străzile au rămas pline până seara.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true,
     "interzis": [

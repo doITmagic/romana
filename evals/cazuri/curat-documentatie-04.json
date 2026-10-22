@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "## Conectarea la API\n\nCererile către API se trimit la adresa `https://api.example.org/v2`. Fiecare cerere trebuie să conțină antetul `Authorization` cu cheia dumneavoastră:\n\n    curl -H \"Authorization: Bearer CHEIA_DVS\" https://api.example.org/v2/proiecte\n\nRăspunsul este în format JSON. Dacă cheia este greșită, serverul întoarce codul 401. Dacă trimiteți mai mult de 100 de cereri pe minut, serverul întoarce codul 429, iar cererea trebuie repetată după un minut.\n\nCheile se creează din pagina Setări a contului. O cheie pierdută nu se poate recupera: ștergeți-o și creați alta.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true
   }

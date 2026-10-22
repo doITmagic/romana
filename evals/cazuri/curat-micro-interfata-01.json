@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Setări\nProfil\nNotificări\nConfidențialitate\nAjutor\n\nSalvați\nAnulați\nSe salvează…\nModificări salvate\n\nNiciun rezultat\nNu s-a găsit nimic pentru „{termen}”. Încercați alte cuvinte.\n\n1 fișier selectat\n3 fișiere selectate\n20 de fișiere selectate\n\nCont activ\nNotificări activate\nAți ieșit din cont. Autentificați-vă pentru a continua.\nParola a fost schimbată.\nNu aveți încă nicio notificare.\nUltima autentificare: 12 octombrie 2026, la 9:30.\nSpațiu folosit: 2,5 GB din 10 GB.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true
   }

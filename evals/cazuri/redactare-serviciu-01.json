@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Scrie un paragraf de prezentare pentru pagina de servicii a unui service auto din Bistrița, Auto Rapid. Faptele: schimbă uleiul și filtrele în 45 de minute; programul e de luni până vineri, între 8:00 și 18:00; prețul pornește de la 180 de lei; piesele schimbate au garanție de 6 luni.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "gratuit",

@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Scrie o știre din acest comunicat: Biblioteca Județeană Valea Cernei a primit 1.200 de cărți donate de o fundație; donația a fost anunțată luni; cărțile vor fi disponibile din 1 noiembrie; bibliotecara-șefă se numește Elena Matei. Nu adăuga nimic în plus.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "„",

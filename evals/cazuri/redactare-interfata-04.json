@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Scrie mesajele pentru un magazin online, cu adresare prin «dumneavoastră»: coșul gol, produsul adăugat în coș, stocul epuizat și un mesaj despre livrarea gratuită pentru comenzi de peste 200 de lei. Câte o linie pe text.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "poți",

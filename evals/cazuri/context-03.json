@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Suma actuală cheltuită pe restaurarea fațadei depășește cu mult bugetul din proiect. Diferența vine din materialele scumpite pe parcurs.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

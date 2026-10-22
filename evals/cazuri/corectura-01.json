@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Bună ziua,\n\nVă trimit documentul care l-am pregătit ieri împreună cu colegii. Am discutat cu directorul, iar sa hotărât să amânăm semnarea contractului cu o săptămână. Revin cu un mesaj imediat ce aflu data.\n\nCu stimă,\nAnca Georgescu",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

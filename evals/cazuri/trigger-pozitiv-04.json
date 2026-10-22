@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Tradu în română paragraful de mai jos, dar să sune firesc, nu ca o traducere:\n\nOur team is committed to delivering value to customers through a seamless experience.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "cerut": [
       "romana"

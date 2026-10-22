@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Tradu în română, în vocea unui blog personal: „Last month I switched my team to a 4-day work week. Output stayed the same, but 2 people said they felt less stressed. I am not sure it will work for every team.”",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "a face sens",

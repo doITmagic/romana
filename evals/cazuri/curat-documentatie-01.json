@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "## Instalare\n\nAplicația rulează pe Linux, macOS și Windows. Înainte de instalare verificați dacă aveți Go 1.22 sau o versiune mai nouă:\n\n    go version\n\nApoi descărcați codul sursă și compilați-l:\n\n    git clone https://example.org/depozit.git\n    cd depozit\n    go build -o raport ./cmd/raport\n\nComanda creează fișierul `raport` în directorul curent. Pentru a-l rula de oriunde, mutați-l într-un director din variabila PATH.\n\nDacă la compilare apare o eroare legată de versiunea Go, actualizați Go și repetați pașii de mai sus.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true
   }

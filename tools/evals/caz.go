@@ -12,7 +12,8 @@
 //	sursa      de unde vine textul (la setul public: autor, titlu, URL)
 //	licenta    licența textului (la setul public: MIT sau CC BY 4.0)
 //	intrare    ce primește agentul: textul de lucru, sau cererea, la trigger
-//	confirmat  true doar după ce Răzvan a confirmat cazul și răspunsul așteptat
+//	confirmat  true doar după ce cazul și răspunsul așteptat au trecut recenzia
+//	           (a lui Răzvan sau cea delegată de el, vezi evals/SURSE.md)
 //	asteptat   ce trebuie să iasă (vezi mai jos)
 //
 // # Ce înseamnă „asteptat”

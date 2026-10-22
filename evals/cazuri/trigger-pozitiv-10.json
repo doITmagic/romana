@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Spune-mi dacă „mă simt confortabil cu această idee” sună firesc în română sau e un calc din engleză.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "cerut": [
       "romana"

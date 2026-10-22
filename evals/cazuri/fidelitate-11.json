@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Sursă:\nHotelul are 40 de camere și un restaurant.\n\nRescriere:\nHotelul, mai mare decât orice alt hotel din oraș, are 40 de camere și un restaurant rafinat.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {

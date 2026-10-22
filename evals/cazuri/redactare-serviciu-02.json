@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Redactează titlul și textul de sub el pentru pagina «Cere ofertă» a firmei de curățenie Luciu, din Cluj. Faptele: curăță birouri de la 50 m²; echipa vine în 24 de ore de la cerere; oferta se trimite pe e-mail; prețul se calculează pe metru pătrat. Nu avem alte informații.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "gratuit",

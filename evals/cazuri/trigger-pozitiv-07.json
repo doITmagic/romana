@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Fă textele din interfața aplicației (fișierul ro.json) coerente și corecte gramatical. Păstrează variabilele {nume} și {count} neschimbate.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "cerut": [
       "romana"

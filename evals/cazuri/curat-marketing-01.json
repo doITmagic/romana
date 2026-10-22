@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Atelierul Roata Mare repară biciclete în Timișoara din 2014. Venim la tine acasă sau în fața biroului, iar reparațiile mici (frâne, schimbătoare, pene) le facem pe loc, în cel mult o oră. Pentru cele mai mari, preluăm bicicleta și o aducem înapoi în două zile lucrătoare.\n\nPrețul îl afli înainte să începem. Dacă bicicleta are nevoie de ceva ce nu ai cerut, te sunăm și hotărăști tu. Piesele schimbate au garanție de șase luni, iar manopera, de trei.\n\nLucrăm de luni până sâmbătă, între 8:00 și 19:00. Cel mai repede ne găsești la telefon, pe numărul de pe pagina de contact. Scrie-ne și un mesaj, dacă preferi: răspundem în aceeași zi.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "neatins": true
   }

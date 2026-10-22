@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Scrie o știre de 4–5 fraze pe baza acestor fapte: Primăria din Stejăreni de Sus a deschis marți o piscină publică nouă; a costat 3,2 milioane de lei; are 6 culoare; intrarea costă 15 lei pentru adulți; primarul, Ion Dragu, a spus că lucrările au durat 14 luni. Nu inventa citate.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "interzis": [
       "a declarat pentru",

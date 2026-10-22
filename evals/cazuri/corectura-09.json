@@ -6,7 +6,7 @@
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
   "intrare": "Firma are 15 angajați și 32 clienți permanenți. Anul trecut a încasat 2.5 milioane lei, față de 2 milioane de lei în anul dinainte.",
-  "confirmat": false,
+  "confirmat": true,
   "asteptat": {
     "observatii": [
       {
