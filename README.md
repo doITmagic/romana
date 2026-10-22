@@ -122,6 +122,24 @@ Without the skill, both engines "fixed" „click” into „clic”, and Codex a
 
 **What these numbers are not.** They come from this project's own test set, with one run per case, and they hold for the models listed above. There is no official benchmark yet for an agent that writes Romanian by the norms and avoids hypercorrection. A run on RONACC, the academic Romanian grammatical error correction corpus, is planned for 0.1.1.
 
+### Cost in tokens
+
+The skill makes the agent read rules, so it costs tokens. Measured on 23 October 2026 on 37 cases (correct forms that look wrong, clean press texts, corrections), one run per case, average input tokens per run:
+
+| | Without skill | Skill v0.1.0 | Skill after the split (0.1.1) |
+|---|---|---|---|
+| Claude | 4,453 | 103,172 | **86,839** (−16%) |
+| Codex | 18,155 | 129,001 | 132,521 |
+
+A large part of the input is read from the prompt cache, which is billed at a lower rate: about 35,000 tokens per run on Claude and 96,000 on Codex. Output grows much less: on Claude, from 677 to 1,872 tokens.
+
+What has been done to keep the cost down:
+- The agent loads only `SKILL.md` up front and opens a reference file only when the text needs it. The table in `SKILL.md` says which file covers which problem.
+- The four largest reference files were split by topic, so a file the agent opens is at most about 6,000 words instead of 12,000. The validator now refuses a `SKILL.md` above 6,000 words or a reference file above 6,500.
+- The test runner reports the cost of every run (`evals/RAPORT.md`, table „Consum”), so any change that makes the skill more expensive shows up.
+
+The split helped Claude, which reads whole files. It did not change Codex, which reads files in chunks with shell commands. The next steps planned: a compact index of the "not an error" forms, which are read before every correction (about 17,000 tokens today), and a shorter `SKILL.md`.
+
 Run the tests yourself with:
 
 ```
