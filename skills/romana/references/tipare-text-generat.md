@@ -2,14 +2,14 @@
 
 Fișierul acesta te ajută să recunoști și să corectezi tiparele care fac un text să sune generat automat: laude fără fapte, replici care anunță ce urmează să spună textul în loc să spună, deschideri și încheieri care nu zic nimic, verbe pompoase puse în locul lui „a fi”. Descrierile și exemplele sunt scrise pentru acest skill, pe subiecte românești obișnuite (un comunicat de primărie, o descriere de produs, un articol de blog).
 
-Un lucru contează mai mult decât restul: **tiparele nu sunt greșeli de limbă.** Fiecare cuvânt și fiecare construcție de aici există în dicționare și în gramatici și, luate separat, sunt corecte. Un semnal izolat nu se raportează. Ce contează e grupul: același tic repetat, sau mai multe tipare diferite strânse într-un pasaj. De aceea toate regulile de aici sunt recomandări, gravitatea e de regulă P2, și se aplică doar când semnalele se adună.
+Un lucru contează mai mult decât restul: **tiparele nu sunt greșeli de limbă.** Fiecare cuvânt și fiecare construcție de aici există în dicționare și în gramatici și, luate separat, sunt corecte. Un semnal izolat nu se raportează. Ce contează e grupul: același tic repetat, sau mai multe tipare diferite strânse într-un pasaj. De aceea toate regulile de aici sunt recomandări, gravitatea e de regulă P2, și se aplică doar când semnalele se adună; excepție fac urmele conversației (RO-STI-207, RO-STI-209), care se scot și când apar o singură dată.
 
 Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicționar general de științe. Științe ale limbii*, 1997; Mic ghid CE = *Mic ghid de redactare clară*, Comisia Europeană, 2013; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ediția a III-a; DEX ’98 = *Dicționarul explicativ al limbii române*, ediția a II-a, 1998. „Tipar de stil” înseamnă că tiparul nu are o normă în spate: e o observație de stil, care se semnalează doar în grup.
 
 ## Cum folosești fișierul
 
 - **La redactare**, nu pornești de la lista asta. Pornești de la ce vrei să spui, cu faptele pe care le ai (vezi SKILL.md). Lista o folosești abia la recitirea ciornei, ca să găsești locurile unde textul sună generat.
-- **În corectură**, rescrii un loc doar când tiparul face parte dintr-un grup și când poți păstra faptele sursei (vezi [fidelitate.md](fidelitate.md)). Un tipar izolat îl lași.
+- **În corectură**, propui rescrierea unui loc, separat de text, doar când tiparul face parte dintr-un grup și când poți păstra faptele sursei (vezi [fidelitate.md](fidelitate.md)). Un tipar izolat îl lași.
 - **În verificare**, raportezi grupul, nu fiecare apariție: numești tiparele găsite, citezi formele exact și spui că textul „seamănă probabil cu un text generat”. Nu spui niciodată „e scris de un model”. Densitatea e un indiciu, nu o dovadă.
 - **Ce pui în loc.** Un tipar se scoate înlocuind formula cu faptul pe care o ținea în loc. Dacă sursa nu are faptul, nu-l inventezi: scurtezi sau lași „[de completat: …]”. Unele corecturi din regulile de mai jos sunt scrise cu un asemenea semn tocmai pentru că faptul lipsește din exemplu.
 - **Urmele conversației** (replicile adresate celui care a cerut textul, un disclaimer de model) nu sunt tipare de stil, ci resturi din dialogul cu autorul. Se scot din textul livrat, chiar dacă apar o singură dată (RO-STI-207, RO-STI-209).
@@ -102,7 +102,7 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 
 ### RO-STI-217 Concesia falsă
 - Nivel: recomandare
-- Greșit: „Chiar dacă drumul nu a fost lipsit de obstacole, rezultatele sunt remarcabile.” → Corect: „Lucrarea s-a încheiat, deși [de completat: ce a mers prost, concret].”
+- Greșit: „Chiar dacă drumul nu a fost lipsit de obstacole, rezultatele sunt remarcabile.” → Corect: „Rezultatele sunt remarcabile, deși [de completat: ce a mers prost, concret].”
 - De ce: O rezervă generică, urmată imediat de o concluzie pozitivă care o anulează, nu spune nimic despre obstacole. Concesia în sine e o construcție gramaticală (DSL, s.v. CONCESIV); tiparul e lipsa conținutului. Numești concret compromisul real sau renunți la rezervă.
 - Sursă: DSL, s.v. CONCESIV; tipar de stil
 
@@ -159,7 +159,7 @@ Unele tipare se văd mai ales în româna de birou sau de presă: verbul-paravan
 ### RO-STI-232 Inflația retorică
 - Nivel: recomandare
 - Greșit: „Piața centrală e o simfonie de culori și arome.” → Corect: „În piața centrală se vând [de completat: ce se vinde].”
-- De ce: Imaginea pompoasă ține locul unei descrieri. Metafora e o figură legitimă într-un text literar sau într-o reportare asumată; într-un text informativ, imaginea pompoasă sună artificială. Semnalezi epitetul de umplutură și densitatea lui, nu cuvintele.
+- De ce: Imaginea pompoasă ține locul unei descrieri. Metafora e o figură legitimă într-un text literar sau într-un reportaj asumat; într-un text informativ, imaginea pompoasă sună artificială. Semnalezi epitetul de umplutură și densitatea lui, nu cuvintele.
 - Sursă: DSL, s.v. HIPERBOLĂ; tipar de stil
 
 ### RO-STI-224 Acumulările de adjective

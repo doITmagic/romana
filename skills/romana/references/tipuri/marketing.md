@@ -22,7 +22,7 @@ O pagină care trebuie să fie găsită într-un motor de căutare primește ră
 
 ### RO-STI-654 Tonul descrierilor de produs se potrivește domeniului
 - Nivel: recomandare
-- Greșit: „Hei, prieteni! Poliță de asigurare de viață la prețuri de nebunie!” → Corect: „Asigurarea de viață care acoperă familia ta, cu prima lunară fixă.”
+- Greșit: „Hei, prieteni! Poliță de asigurare de viață la prețuri de nebunie!” → Corect: „Poliță de asigurare de viață la prețuri avantajoase.”
 - De ce: Tonul se potrivește obiectului și cititorului: o asigurare, un medicament sau un contract cer alt ton decât un gadget sau o aplicație de joacă. Într-o descriere dată, tonul rămâne același de la primul rând la ultimul; un salt de la solemn la glumeț sau invers se vede ca o rupere de registru. E o recomandare de adecvare, nu o normă.
 - Sursă: Mic ghid CE p. 4 (Rec. 2: cititorul are întâietate); Coteanu, *Stilistica funcțională a limbii române*, vol. I, 1973 (nereverificat local)
 
@@ -52,9 +52,9 @@ O pagină care trebuie să fie găsită într-un motor de căutare primește ră
 - De ce: „Share of voice” nu e în dicționare și nu are un echivalent românesc consacrat. „Cota de vizibilitate față de concurenți” e o formă dedusă: „cotă” și „vizibilitate” sunt în DOOM 3, dar îmbinarea nu e fixată în dicționare. Ca atare, propui formularea descriptivă și o explici la prima apariție, iar în textul pentru specialiști poți păstra termenul englezesc, cu explicație.
 - Sursă: DOOM 3 s.v. cotă, vizibilitate; Mic ghid CE p. 11–13 (Rec. 9)
 
-## Ce rămâne greșeală și în marketing
+## Ce se verifică și în marketing
 
-Registrul liber al marketingului nu acoperă ce contrazice dicționarul. Tiparele cele mai des întâlnite în textele de vânzare, cu fișierele unde le găsești:
+Registrul liber al marketingului nu acoperă ce contrazice dicționarul. Tiparele cele mai des întâlnite în textele de vânzare, cu fișierele unde le găsești și unde e dat nivelul fiecăruia (cele mai multe sunt recomandări):
 
 - „aduce valoare”, „oferă soluții end-to-end”, „abordare user-friendly” și alte calcuri după engleză: [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md);
 - cuvinte englezești lăsate în text, forme cu cratimă sau fără: [imprumuturi.md](../imprumuturi.md);

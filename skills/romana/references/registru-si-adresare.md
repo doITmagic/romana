@@ -93,10 +93,10 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Sursă: Institutul de Lingvistică, monitorizarea limbii presei, 2021–2022 (nereverificat local); raportul CNA, 2009 (nereverificat local)
 
 ### RO-STI-411 „Ca… să” cu conjunctivul, „că” cu indicativul
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Speră că Teheranul să nu răspundă.” → Corect: „Speră ca Teheranul să nu răspundă.”
-- De ce: Conjuncția „ca” introduce conjunctivul când subiectul propoziției subordonate e altul decât cel al verbului principal („ca Teheranul să nu răspundă”), iar „că” introduce indicativul („că Teheranul nu va răspunde”). Combinația „că… să” e o contaminare. Dacă subiectul e același, nu e nevoie de niciunul: „Speră să nu răspundă.”
-- Sursă: raportul CNA, 2009 (nereverificat local)
+- De ce: Conjuncția „ca” introduce conjunctivul când subordonata are alt subiect decât verbul principal și subiectul stă înaintea verbului („ca Teheranul să nu răspundă”; cu subiectul după verb e corect și „să nu răspundă Teheranul”), iar „că” introduce indicativul („că Teheranul nu va răspunde”). Combinația „că… să” e o contaminare. Dacă subiectul e același, nu e nevoie de niciunul: „Speră să nu răspundă.”
+- Sursă: raportul CNA, 2009 (nereverificat local); DSL, s.v. DIRECT, -Ă (completiva directă)
 
 ### RO-STI-413 „Practic” și „fix” ca umplutură
 - Nivel: recomandare
@@ -108,7 +108,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 - Nivel: recomandare
 - Greșit: „Ce s-a întâmplat? Simplu: ți-ai dat seama că nu merge.” → Corect: „Utilizatorii au constatat că aplicația nu merge.”
 - De ce: Anacolutul, elipsa, persoana a II-a generică („ți-ai dat seama că…”) și întrebarea pusă cititorului numai ca să i se răspundă imediat țin de presa de opinie și de stilul colocvial. O știre relatează la persoana a III-a, iar în orice text informativ întrebarea retorică de tip șablon amână afirmația (vezi RO-STI-216 în [tipare-text-generat.md](tipare-text-generat.md)). Figurile sunt legitime unde sunt alese cu intenție.
-- Sursă: S. C. Semeniuc, 2017 (nereverificat local); DSL, s.v. ANACOLUT, ELIPSĂ
+- Sursă: S. C. Semeniuc, 2011; DSL, s.v. ANACOLUT, ELIPSĂ
 
 ### RO-STI-415 „Plus că”, „plus de asta”
 - Nivel: recomandare
@@ -179,7 +179,7 @@ Mărcile vorbirii („păi”, „gen”, „practic” ca umplutură, „fix”
 ### RO-STI-432 „De rahat”
 - Nivel: recomandare
 - Greșit: „Un serviciu de rahat.” → Corect: „Un serviciu de proastă calitate.”
-- De ce: Cuvântul „rahat” în sens figurat ține de registrul familiar și vulgar (DEX ’98: „fig., fam., lucru fără importanță”) și nu intră în textul redacțional. Îl înlocuiești cu „prost”, „de proastă calitate”, „neîngrijit”. În citat rămâne numai când contează formularea exactă.
+- De ce: Cuvântul „rahat” în sens figurat ține de registrul familiar și vulgar (DEX ’98: „fig., fam., lucru fără importanță”) și nu intră în textul redacțional. Îl înlocuiești cu „prost”, „de proastă calitate”, „neîngrijit”. În citatul direct rămâne neschimbat (vezi RO-FID-026 în [fidelitate.md](fidelitate.md)).
 - Sursă: DOOM 3 s.v. rahat; DEX ’98 s.v. rahat
 
 ### RO-STI-433 „Hai” în texte formale

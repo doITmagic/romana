@@ -26,8 +26,8 @@ Doi termeni se leagă de decizie: nomenclatura (SQL, React, nume de produse) se 
 
 ### RO-STI-818 Nomenclatura se păstrează, conceptele nu se traduc cuvânt cu cuvânt
 - Nivel: recomandare
-- Greșit: „Serverul face echilibrarea încărcării între instanțe.” → Corect: „Serverul distribuie cererile între instanțe (load balancing).”
-- De ce: Nomenclatura tehnică (numele limbajelor, ale bibliotecilor, ale produselor) se păstrează. O traducere literală („load balancing” → „echilibrarea încărcării”) se folosește doar dacă termenul e consacrat în domeniu; „load balancing” nu e în dicționare, iar echivalentul literal nu e un termen fixat. Oricare ai alege, îl ții consecvent. Dacă publicul larg nu cunoaște termenul englezesc, îl explici la prima apariție.
+- Greșit: „Serverul face load balancing între instanțe.” → Corect: „Serverul face echilibrarea încărcării (load balancing) între instanțe.”
+- De ce: Nomenclatura tehnică (numele limbajelor, ale bibliotecilor, ale produselor) se păstrează. O traducere literală („load balancing” → „echilibrarea încărcării”) se folosește doar dacă termenul e consacrat în domeniu; „load balancing” nu e în dicționare, iar „echilibrarea încărcării” e echivalentul folosit în documentația tehnică în română (RO-CAL-504 din [limbi-sursa/en.md](../limbi-sursa/en.md)). Oricare ai alege, îl ții consecvent. Dacă publicul larg nu cunoaște termenul englezesc, îl explici la prima apariție.
 - Sursă: Mic ghid CE p. 11–13 (Rec. 9); DOOM 3 (lipsa intrării „load balancing”)
 
 ### RO-STI-817 Termenul IT primește echivalentul românesc firesc, când există

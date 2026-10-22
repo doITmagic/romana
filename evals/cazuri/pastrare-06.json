@@ -11,13 +11,13 @@
     "observatii": [
       {
         "fragment": "„Sign up\"",
-        "nivel": "normă",
+        "nivel": "recomandare",
         "pilon": "tipografie"
       }
     ],
     "cerut": [
       "„Sign in”",
-      "„Sign up”"
+      "Sign up"
     ]
   }
 }

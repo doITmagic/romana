@@ -176,7 +176,7 @@ Surse pentru metodă: ghid gov-md §10.1 și §10.2; DSL, s.v. CONECTOR; C. Tint
 ### RO-COE-010 Când spargi o frază lungă, relația rămâne spusă
 - Nivel: recomandare
 - Greșit: „Am primit oferta după termen. O analizăm.” → Corect: „Am primit oferta după termen. O analizăm totuși.”
-- De ce: Fraza de pornire era „Deși am primit oferta după termen, o analizăm.” Într-o frază lungă, relația o spune conjuncția („deși”, „pentru că”, „dacă”). Când o spargi în fraze scurte, conjuncția dispare și relația trebuie spusă din nou, cu un conector („totuși”, „de aceea”, „în caz contrar”). Altfel rămân două fapte fără legătură.
+- De ce: Fraza de pornire era „Deși am primit oferta după termen, o analizăm.” Într-o frază lungă, relația o spune conjuncția („deși”, „pentru că”, „dacă”). Când o spargi în fraze scurte, conjuncția dispare și relația trebuie spusă din nou, cu un conector („totuși”, „de aceea”, „în caz contrar”). Altfel rămân două fapte fără legătură. Într-o rescriere, o relație a sursei pierdută la spargere e o abatere de la fidelitate (vezi [fidelitate.md](fidelitate.md)).
 - Sursă: Mic ghid CE p. 6 (Rec. 4)
 
 ## 4. Referința
@@ -281,7 +281,7 @@ Surse pentru metodă: ghid gov-md §1.4 și §1.5; Mic ghid CE p. 6 (Rec. 4).
 
 ### RO-COE-022 Timpul relatării rămâne același
 - Nivel: recomandare
-- Greșit: „Pompierii au ajuns în zece minute și sting incendiul până la prânz.” → Corect: „Pompierii au ajuns în zece minute și au stins incendiul până la prânz.”
+- Greșit: „Ieri, pompierii au ajuns în zece minute și sting incendiul până la prânz.” → Corect: „Ieri, pompierii au ajuns în zece minute și au stins incendiul până la prânz.”
 - De ce: Relatarea își alege un timp de bază, în presă de obicei perfectul compus, și îl păstrează pe tot firul. Prezentul folosit deliberat pentru o secvență întreagă e admis. Nu încalcă regula timpurile care arată ordinea momentelor, de exemplu mai-mult-ca-perfectul pentru ce se întâmplase înainte, și nici timpul din vorbirea indirectă („Mi-a spus că vine mâine” e corect). Regula se numește consecvența timpului, nu concordanța timpurilor, pe care româna o aplică puțin.
 - Sursă: DSL, s.v. CORESPONDENȚĂ (a timpurilor); L. Pop, „Mărci lingvistice și orientare discursivă”, 2010, p. 228
 

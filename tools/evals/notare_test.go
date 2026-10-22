@@ -307,3 +307,38 @@ func TestInterzisPeLimitaDeCuvantVerificare(t *testing.T) {
 		t.Errorf("%+v", n)
 	}
 }
+
+// La corectură, o observație care nu e normă (recomandare, de semnalat etc.)
+// nu se aplică obligatoriu în text: ajunge s-o propună în afara textului
+// corectat (rânduri OBS: sau secțiunea de după [[/TEXT]]). O normă trebuie în
+// continuare corectată în text.
+func TestCorecturaRecomandareInPropuneri(t *testing.T) {
+	c := Caz{ID: "corectura-x-09", Mod: "corectura",
+		Intrare: "Are 25 ani. Am făcut un update la aplicație.",
+		Asteptat: Asteptat{Observatii: []ObsAsteptata{
+			{Fragment: "25 ani", Nivel: "normă", Pilon: "tipografie"},
+			{Fragment: "un update", Nivel: "recomandare", Pilon: "semantică"},
+		}}}
+	text := "[[TEXT]]\nAre 25 de ani. Am făcut un update la aplicație.\n[[/TEXT]]\n"
+	// Recomandarea propusă după text, fără schimbare în text: nu lipsește.
+	if n := Noteaza(c, Rezultat{Iesire: text + "Propun și: „un update” → „o actualizare”."}); n.Lipsa != 0 || n.FalsPozitive != 0 {
+		t.Errorf("recomandare propusă după [[/TEXT]]: %+v", n)
+	}
+	// Recomandarea pe un rând OBS: nu lipsește.
+	if n := Noteaza(c, Rezultat{Iesire: "OBS: „un update” · recomandare · „o actualizare”\n" + text}); n.Lipsa != 0 {
+		t.Errorf("recomandare pe rând OBS: %+v", n)
+	}
+	// Recomandarea nici aplicată, nici propusă: lipsește.
+	if n := Noteaza(c, Rezultat{Iesire: text + "Am corectat numeralul."}); n.Lipsa != 1 {
+		t.Errorf("recomandare nepropusă: %+v", n)
+	}
+	// Recomandarea aplicată în text: nu lipsește (ca înainte).
+	if n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]\nAre 25 de ani. Am făcut o actualizare la aplicație.\n[[/TEXT]]"}); n.Lipsa != 0 || n.FalsPozitive != 0 {
+		t.Errorf("recomandare aplicată: %+v", n)
+	}
+	// Norma doar propusă, necorectată în text: lipsește.
+	n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]\nAre 25 ani. Am făcut un update la aplicație.\n[[/TEXT]]\nOBS: „25 ani” → „25 de ani”\nOBS: „un update” → „o actualizare”"})
+	if n.Lipsa != 1 {
+		t.Errorf("normă doar propusă: %+v", n)
+	}
+}

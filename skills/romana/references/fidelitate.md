@@ -43,7 +43,7 @@ Rămân neatinse:
 
 - codul, comenzile, numele de fișiere, adresele web, ancorele și structura de marcare a textului (titluri, liste, tabele);
 - cifrele, datele, numele proprii și termenii definiți în text;
-- citatele (în ele corectezi doar tipografia: ghilimelele, diacriticele);
+- citatele (în ele corectezi doar tipografia: ghilimelele, diacriticele lipsă sau cu sedilă; grafia veche cu „î”, ca în „sînt”, rămâne);
 - calificativele care restrâng o afirmație („de regulă”, „cu excepția”, „numai dacă”, „în măsura în care”);
 - partea care nu e în română, într-un text amestecat: lucrezi doar la partea în română.
 
@@ -55,7 +55,7 @@ Rămân neatinse:
 - **Certitudine sau nesiguranță** pe care sursa nu le avea.
 - **Un calificativ nou** („real”, „bun”, „agresiv”) care schimbă ce se spune.
 - **Un agent** acolo unde sursa nu numește unul.
-- **Ritm dramatic:** nu tai o frază obișnuită în propoziții scurte doar ca să sune mai viu (vezi RO-STI-206 în [tipare-text-generat.md](tipare-text-generat.md)).
+- **Ritm dramatic:** nu tai o frază obișnuită în propoziții scurte doar ca să sune mai viu. E o recomandare de stil, nu o abatere de fidelitate (vezi RO-STI-206 în [tipare-text-generat.md](tipare-text-generat.md)).
 
 ## Scara modalelor
 
@@ -78,8 +78,8 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 ### RO-FID-001 Forme populare din gura vorbitorului: citatul rămâne sau devine vorbire indirectă
 - Nivel: normă
 - Greșit: „«Voiam să plec mai devreme», a spus martorul.” → Corect: „«Vroiam să plec mai devreme», a spus martorul.”
-- De ce: În exemplu, sursa spune „vroiam”, iar varianta greșită a „reparat-o” în „voiam”. Citatul reproduce cuvintele vorbitorului, inclusiv formele populare sau nestandard („vroiam”, „plus că”, un „decât” afirmativ, o frază începută și lăsată neterminată). Norma se aplică textului tău, nu citatului. Dacă nu ești sigur cum a sunat exact fraza, treci la vorbirea indirectă („Martorul a spus că voia să plece mai devreme”), care îți dă voie să folosești forma standard. „Vroiam” nu e nici măcar o greșeală: DEX ’98 înregistrează „vroi” ca variantă a lui „vrea”.
-- Sursă: regulă de fidelitate a skill-ului; ghid gov-md §9.8.1; DEX ’98 s.v. vroi
+- De ce: În exemplu, sursa spune „vroiam”, iar varianta greșită a „reparat-o” în „voiam”. Citatul reproduce cuvintele vorbitorului, inclusiv formele populare sau nestandard („vroiam”, „plus că”, un „decât” afirmativ, o frază începută și lăsată neterminată). Norma se aplică textului tău, nu citatului. Dacă nu ești sigur cum a sunat exact fraza, treci la vorbirea indirectă („Martorul a spus că voia să plece mai devreme”), care îți dă voie să folosești forma standard. DEX ’98 înregistrează „vroi” ca variantă a lui „vrea”, dar DOOM 3 (§6.9.6) nu acceptă „vroiam” în normă (fam.; literar: „voiam”); în citat rămâne totuși, prin fidelitate.
+- Sursă: regulă de fidelitate a skill-ului; ghid gov-md §9.8.1; DEX ’98 s.v. vroi; DOOM 3, Observații și recomandări §6.9.6
 
 ### RO-FID-003 Pasivul din original rămâne pasiv când agentul lipsește
 - Nivel: normă

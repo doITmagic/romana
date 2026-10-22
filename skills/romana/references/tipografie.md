@@ -9,7 +9,7 @@ Tipografia e ultima trecere din ordinea de lucru (vezi SKILL.md). O verifici dup
 - **La redactare** scrii direct formele corecte; regulile de aici le folosești la recitirea ciornei.
 - **În corectură** corectezi ce e normă și propui ce e recomandare. Un text corect rămâne neschimbat.
 - **În verificare** raportezi fiecare abatere cu nivelul ei. Unde sursele se contrazic (nivelul „disputat”), nu alegi tu o variantă: ceri doar ca alegerea să fie aceeași în tot textul.
-- **Citatul direct** păstrează cuvintele sursei. În citat corectezi doar tipografia: ghilimelele, diacriticele, spațiile.
+- **Citatul direct** păstrează cuvintele sursei. În citat corectezi doar tipografia: ghilimelele, diacriticele lipsă sau cu sedilă, spațiile. Grafia veche cu „î” („sînt”, „cînd”) rămâne.
 - **Înainte să corectezi, verifici lista „ce nu e greșeală”** din [ce-nu-e-greseala.md](ce-nu-e-greseala.md): linia de pauză, ghilimelele «…», apostroful, punctul-și-virgula, „de ex.”, bara oblică, „totuși” cu sau fără virgule sunt forme corecte.
 
 Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; ÎOOP6 = *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); IER = Institutul European din România, *Ghid stilistic de traducere în limba română pentru uzul traducătorilor acquis-ului comunitar*, ed. a V-a, 2008 (practică de traducere juridică, nu normă pentru presă); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Legea 290/2018 = legea privind denumirile localităților din România. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină n-a putut fi verificată pe text local.
@@ -75,7 +75,7 @@ Bun: aceeași frază, cu ș, ț și Ș cu virgulă (U+0219, U+021B, U+0218).
 Româna scrie cu literă mică substantivele comune, funcțiile, titlurile, lunile, zilele, popoarele și limbile, și cu majusculă numele proprii și, în stilul oficial, anumite denumiri. Majuscula „de politețe” sau „de importanță”, pusă după modelul englezesc, e cea mai frecventă greșeală. Ordinea de lucru:
 
 1. Te întrebi dacă e un nume propriu (o instituție anume, un loc, un eveniment unic) sau un substantiv comun (un guvern, un oraș, o funcție).
-2. La un nume oficial complet scrii cu majusculă fiecare cuvânt plin și lași mici cuvintele ajutătoare (prepoziții, conjuncții, articole): Ministerul Afacerilor Externe.
+2. La un nume oficial complet scrii cu majusculă fiecare cuvânt plin și lași mici cuvintele ajutătoare (prepoziții, conjuncții, articole): Ministerul Afacerilor Externe. Compartimentele din interiorul unei instituții iau majusculă doar la primul cuvânt: „Direcția de studii economice” (RO-TIP-009).
 3. La un titlu de operă, de lege, de document, de publicație sau de emisiune scrii cu majusculă doar primul cuvânt și numele proprii din interior.
 4. Textul citat și numele purtate de oameni se scriu cum sunt.
 
@@ -105,7 +105,7 @@ Bun:
 ### RO-TIP-003 Majuscula la funcții: doar în stilul oficial sau când funcția denumește instituția
 - Nivel: normă
 - Corect: „Președintele Republicii semnează decretul.” (stil oficial, funcția celui mai înalt demnitar)
-- De ce: Majuscula la o funcție apare în stilul oficial reverențios (acte, protocol), în unele funcții înalte din acte și când funcția denumește chiar o instituție. Într-un articol de presă, o pagină de site sau un e-mail se scrie cu literă mică. Dacă textul e un act sau o scrisoare protocolară, urmezi convenția lui și ții aceeași alegere în tot textul.
+- De ce: Majuscula la o funcție apare în stilul oficial reverențios (acte, protocol), în unele funcții înalte din acte și când funcția denumește chiar o instituție. Într-un articol de presă sau pe o pagină de site se scrie cu literă mică. Într-un e-mail sau într-o scrisoare, DOOM 3 admite majuscula când autorul marchează o atitudine ceremonioasă ori reverențioasă: n-o corectezi. Dacă textul e un act sau o scrisoare protocolară, urmezi convenția lui și ții aceeași alegere în tot textul.
 - Sursă: DOOM 3 §3.2 II.2.2; ghid gov-md §4.1.5.3
 - Vezi și: RO-TIP-001
 
@@ -158,8 +158,8 @@ Bun:
 ### RO-TIP-009 Compartimentele unei instituții: doar primul cuvânt cu majusculă
 - Nivel: normă
 - Greșit: „Direcția de Studii Economice” → Corect: „Direcția de studii economice”
-- De ce: Organele de conducere și subdiviziunile din interiorul unei instituții (direcție, secție, serviciu, comisie permanentă) se scriu cu majusculă doar la primul cuvânt: „Direcția de studii economice”. DOOM 3 §3.1 I.3.1 admite și varianta „Direcția Studii economice” (cu două majuscule): nu o corectezi. Forma cu o singură majusculă este cea de bază; „Consiliul de administrație” e dat tot acolo. Instituția de sine stătătoare, cu personalitate juridică, rămâne la RO-TIP-005.
-- Sursă: ghid gov-md §4.1.7.3; DOOM 3 §3.1 I.3.1
+- De ce: Organele de conducere și subdiviziunile din interiorul unei instituții (direcție, secție, serviciu, comisie permanentă) se scriu cu majusculă doar la primul cuvânt: „Direcția de studii economice”. DOOM 3 §3.1 I.3.1 admite și varianta „Direcția Studii economice” (cu două majuscule): nu o corectezi. Forma cu o singură majusculă este cea de bază; „Consiliul de administrație” e dat tot acolo. Excepție: în actele UE, direcțiile generale ale organismelor europene iau majusculă la fiecare cuvânt plin: „Direcția Generală pentru Agricultură și Dezvoltare Rurală” (ÎOOP6 p. 82). Instituția de sine stătătoare, cu personalitate juridică, rămâne la RO-TIP-005.
+- Sursă: ghid gov-md §4.1.7.3; DOOM 3 §3.1 I.3.1; ÎOOP6 p. 82
 
 ### RO-TIP-085 Instituțiile străine traduse iau majusculă la cuvintele pline
 - Nivel: normă
@@ -441,7 +441,7 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 ### RO-TIP-113 Virgula nu e obligatorie înainte de „care”, „dacă”, „când”, „că”
 - Nivel: normă
 - Greșit: „Notificați, când este gata.” → Corect: „Notificați când este gata.”
-- De ce: Subordonata pusă după regentă nu primește automat virgulă. Nu se despart: completiva („Am observat că funcționează”), relativa determinativă („Fișierul pe care l-ați selectat”) și temporala pusă după regentă („Notificați când este gata”). Virgula se pune la cauzală (de regulă), la condițională (de regulă), la consecutivă și la orice subordonată intercalată. A cere virgulă înaintea oricărei subordonate e hipercorectitudine.
+- De ce: Subordonata pusă după regentă nu primește automat virgulă. Nu se despart: completiva („Am observat că funcționează”), relativa determinativă („Fișierul pe care l-ați selectat”) și temporala pusă după regentă („Notificați când este gata”). Virgula se pune la cauzală (de regulă), la condițională (de regulă), la consecutivă și la subordonata intercalată care întrerupe regenta („Tu, dacă nu ești nevoit, nu faci nimic”). Relativa determinativă nu se desparte nici când stă în interior („Fata care râde este sora lui”). A cere virgulă înaintea oricărei subordonate e hipercorectitudine.
 - Sursă: ghid gov-md §9.2.2.3, §9.2.2.5, §9.2.2.6 și §9.2.2.8; ÎOOP6 p. 59–61 (Virgula, viii, ix, xi)
 
 ### RO-TIP-114 Fără virgulă înaintea lui „sau” disjunctiv simplu
@@ -534,7 +534,7 @@ Verifici un semn din mijlocul frazei astfel: dacă are spații în jur, trebuie 
 
 Slab:
 
-> Ministrul - aflat la Bruxelles - a declarat că deschide între 8-21.
+> Ministrul - aflat la Bruxelles - a declarat că magazinul e deschis între 8-21.
 
 Bun:
 
@@ -602,7 +602,7 @@ Verificări rapide (mecanice, dar cu ochii pe excepții):
 
 1. spații duble;
 2. spațiu înaintea virgulei sau a punctului („cuvânt ,” → „cuvânt,”);
-3. cuvânt repetat imediat („de de”, „la la”), care se verifică pe text: unele repetiții sunt corecte („nu știu ce ce are”);
+3. cuvânt repetat imediat („de de”, „la la”), care se verifică pe text: unele repetiții sunt corecte („A plecat și și-a luat geanta”);
 4. bara oblică din „km/h” se păstrează și nu devine „km sau h”;
 5. ghilimelele de închidere sunt ” (U+201D), nu ghilimeaua dreaptă.
 
@@ -652,18 +652,18 @@ Pașii:
 
 1. Numele din alfabet latin rămân în forma originală, cu diacriticele lor: München, Škoda, Dvořák, Mickiewicz.
 2. Locurile cunoscute de multă vreme au forme românești consacrate (exonime), pe care le folosești în textul curent: Londra, Moscova, Viena, Varșovia, Florența, Neapole, Nisa.
-3. Numele din alte alfabete (rusă, bulgară, sârbă, chineză etc.) se transcriu după regulile românești, nu după forma englezească.
+3. Numele din alte alfabete (rusă, bulgară, chineză etc.) se transcriu după regulile românești, nu după forma englezească. Numele sârbești scrise cu chirilice se redau în alfabetul latin sârbesc (RO-TIP-079).
 4. Statele se numesc în forma oficială actuală, iar pentru formele concurente alegi una și o păstrezi.
 5. Derivatele păstrează grafia numelui: shakespearian, darwinism, newtonian.
 6. Articularea urmează pronunția: Bordeaux-ul, show-ul, dar Kremlinul (vezi RO-IMP-004 și RO-IMP-005 în [imprumuturi.md](imprumuturi.md)).
 
 Slab:
 
-> Președintele Macron l-a primit la Munich pe Pyotr Tchaikovsky.
+> Președintele Macron a fost la Munich și a vorbit despre Pyotr Ilyich Tchaikovsky.
 
 Bun:
 
-> Președintele Emmanuel Macron a fost la München și a vorbit despre Piotr Ilici Ceaikovski.
+> Președintele Macron a fost la München și a vorbit despre Piotr Ilici Ceaikovski.
 
 ### RO-TIP-070 Majusculele urmează regulile românei, nu ale limbii sursei
 - Nivel: normă
@@ -786,5 +786,5 @@ Pe lângă formulele de conversație și celelalte tipare din [tipare-text-gener
 - ghilimele drepte ("…") puse în locul celor românești; atenție, ghilimelele curbe „…” sunt tocmai cele corecte;
 - titluri cu majuscule pe fiecare cuvânt (RO-TIP-010).
 
-Un semn izolat nu dovedește nimic. Grupul de semne se semnalează ca „de semnalat”, cu propunerea de a curăța textul, și nu schimbi fondul.
+Un semn izolat nu dovedește nimic. Grupul de semne se semnalează ca „de semnalat”, cu propunerea de a curăța textul, și nu schimbi fondul. Asta privește doar originea textului: un semn care încalcă și o regulă proprie își păstrează nivelul ei, chiar izolat (titlul cu majuscule pe fiecare cuvânt e normă, RO-TIP-010; fraza introductivă se scoate, RO-STI-207).
 

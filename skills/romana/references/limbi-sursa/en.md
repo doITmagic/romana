@@ -30,7 +30,7 @@ Bun:
 
 > Ținem la confidențialitatea datelor dumneavoastră și ne angajăm să le protejăm.
 
-Prima variantă păstrează structura engleză: „a lua în serios”, „a fi angajat să asigure că”, „informațiile rămân protejate”. A doua spune același lucru cu verbe românești, iar angajamentul („ne angajăm”) și protecția au rămas.
+Prima variantă păstrează structura engleză: „a fi angajat să asigure că”, „informațiile rămân protejate”. A doua spune același lucru cu verbe românești, iar angajamentul („ne angajăm”) și protecția au rămas.
 
 ### Când există deja o versiune
 
@@ -87,7 +87,7 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 ### RO-CAL-506 Întrebările retorice rămân întrebări
 - Nivel: recomandare
 - Corect: „Și cum arată aceste condiții?” (pentru engl. „So what do these conditions look like?”). Nu o transformi în „Condițiile se prezintă după cum urmează.”
-- De ce: Originalul pune o întrebare retorică, mijloc expresiv pe care româna îl are și el. O transformi în afirmație doar dacă registrul nu admite întrebări retorice (text juridic, administrativ, mesaje de sistem); altfel pierzi tonul autorului. Nici nu o calchiezi cuvânt cu cuvânt.
+- De ce: Originalul pune o întrebare retorică, mijloc expresiv pe care îl are și româna. O transformi în afirmație doar dacă registrul nu admite întrebări retorice (text juridic, administrativ, mesaje de sistem); altfel pierzi tonul autorului. Nici nu o calchiezi cuvânt cu cuvânt.
 - Sursă: recomandare a skill-ului, fără normă
 
 ### RO-CAL-042 Sensul din frază, nu primul echivalent din dicționar

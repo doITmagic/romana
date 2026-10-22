@@ -5,7 +5,7 @@
   "set": "public",
   "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
   "licenta": "MIT",
-  "intrare": "Componenta „Dashboard” afișează activitatea recentă. Faceți click pe „Dashboard”, apoi alegeți filtrul dorit. Dashboard-ul se actualizează la fiecare 30 secunde.",
+  "intrare": "Componenta „Dashboard” afișează activitatea recentă. Faceți click pe „Dashboard”, apoi alegeți filtrul dorit. Dashboardul se actualizează la fiecare 30 secunde.",
   "confirmat": false,
   "asteptat": {
     "observatii": [
@@ -17,7 +17,7 @@
     ],
     "cerut": [
       "„Dashboard”",
-      "Dashboard-ul",
+      "Dashboardul",
       "30 de secunde"
     ]
   }

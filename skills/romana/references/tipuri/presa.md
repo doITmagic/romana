@@ -69,7 +69,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 
 ### RO-STI-616 Citatul reproduce exact cuvintele
 - Nivel: recomandare
-- Greșit: „Ministrul a anunțat că «bugetul crește cu aproximativ cinci la sută și vor fi angajați medici noi».” → Corect: „Ministrul a anunțat că bugetul crește cu cinci la sută. A adăugat: «Vom angaja medici noi».”
+- Greșit: „Ministrul a anunțat că «bugetul crește cu aproximativ cinci la sută și vor fi angajați medici noi».” → Corect: „Ministrul a anunțat că bugetul crește cu aproximativ cinci la sută și că vor fi angajați medici noi.”
 - De ce: Ce stă între ghilimele trebuie să fie ce a spus sursa, cu cuvintele ei. Rezumatul, cifra rotunjită sau cuvântul schimbat nu au loc în citat. Dacă ai doar un rezumat, îl scrii fără ghilimele. Textul citat nu se corectează, în afară de tipografie (RO-NUG-039 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
 - Sursă: Ghidul de jurnalism (ghidjurnalism) (nereverificat local); ghid gov-md §9.8.1
 
@@ -90,7 +90,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 ### RO-STI-610 Relatarea la perfect compus
 - Nivel: recomandare
 - Greșit: „Ieri, pompierii sting incendiul din cartier.” → Corect: „Luni, pompierii au stins incendiul din cartier.”
-- De ce: În presa de agenție relatarea se face la perfect compus. Prezentul rămâne pentru relatarea pe viu și pentru pozițiile permanente; titlul are regula lui (RO-STI-609). Cuvintele „ieri”, „azi” și „mâine” se evită, pentru că textul poate fi citit mult după publicare: scrii ziua sau data. Timpul de bază al relatării rămâne același pe tot firul (RO-COE-022 din [coerenta.md](../coerenta.md)).
+- De ce: În presa de agenție relatarea se face la perfect compus. Prezentul rămâne pentru relatarea pe viu și pentru pozițiile permanente; titlul are regula lui (RO-STI-609). Cuvintele „ieri”, „azi” și „mâine” se evită, pentru că textul poate fi citit mult după publicare: scrii ziua sau data. Ziua din «Corect» e ilustrativă: o iei din data publicării sau din sursă, altfel lași „[de completat: ziua]”. Timpul de bază al relatării rămâne același pe tot firul (RO-COE-022 din [coerenta.md](../coerenta.md)).
 - Sursă: monitorizarea presei IL; Irimieș; Ghidul de jurnalism (ghidjurnalism); Ghid de stil API (nereverificat local)
 
 ### RO-STI-609 Titlul: scurt, neutru, cu verb la activ
@@ -125,7 +125,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 
 Știrea românească curentă se construiește pe un tipar pe care îl poți aplica la redactare. Nu e normă, e felul în care scriu redacțiile de agenție și cele online.
 
-- **Lead-ul** e o singură frază care spune cine a făcut ce, când și unde. Dacă faptul vine dintr-o declarație sau din altă publicație, sursa stă la capătul aceleiași fraze („…, au transmis autoritățile, citate de Reuters”, „…, relatează AFP”). O frază de lead de treizeci–patruzeci de cuvinte e firească dacă are un singur fir: actor, verb la perfect compus, complement, circumstanță, sursă. Nu o spargi în două ca să pară scurtă, iar atribuirea o pui de preferat la coada primei fraze; cel mult în fraza imediat următoare, ca în regula de la începutul fișierului.
+- **Leadul** e o singură frază care spune cine a făcut ce, când și unde. Dacă faptul vine dintr-o declarație sau din altă publicație, sursa stă la capătul aceleiași fraze („…, au transmis autoritățile, citate de Reuters”, „…, relatează AFP”). O frază de lead de treizeci–patruzeci de cuvinte e firească dacă are un singur fir: actor, verb la perfect compus, complement, circumstanță, sursă. Nu o spargi în două ca să pară scurtă, iar atribuirea o pui de preferat la coada primei fraze; cel mult în fraza imediat următoare, ca în regula de la începutul fișierului.
 - **Paragrafele** au una sau două fraze, cu un fapt nou fiecare. Un paragraf de cinci fraze, cu faptul îngropat la mijloc, îl obligă pe cititor să-l caute.
 - **Ordinea:** în cele mai multe știri examinate, după lead vin detaliile faptului, iar contextul și istoricul vin mai târziu, nu între lead și detalii.
 - **Intertitlul**, când textul e destul de lung ca să-l ceară, spune ce e nou în secțiune, ca o frază sau ca un grup nominal cu informație. Eticheta generică de tipul „Ce urmează” sau „Contextul”, frecventă în textele generate, nu apare în presa examinată; o poți înlocui cu informația secțiunii.
@@ -185,7 +185,7 @@ Ambele variante au aceleași date. În prima, procentul rămâne în altă fraz�
 
 ## Lista de verificare pentru presa online
 
-Greșelile cele mai frecvente în presa online (după monitorizarea Institutului de Lingvistică) se verifică la sfârșit, fiecare în fișierul ei:
+Problemele cele mai frecvente în presa online (după monitorizarea Institutului de Lingvistică) se verifică la sfârșit, fiecare în fișierul ei și cu nivelul dat acolo:
 
 - ghilimele englezești în loc de „…”, cratimă în loc de linie de pauză, prefixe despărțite („mega proiect”): [tipografie.md](../tipografie.md) și [imprumuturi.md](../imprumuturi.md);
 - virgulă între subiect și predicat, lipsa virgulei înainte de „dar”, „iar”, „ci”, virgulă înainte de „etc.”, nume proprii neflexionate, „că” omis după verbele de declarație, fraze lungi cu gerunzii în lanț: [gramatica.md](../gramatica.md);
@@ -218,7 +218,7 @@ Sursă pentru listă: monitorizarea presei IL (nereverificat local).
 ### RO-STI-623 „Locul e lângă…”: referința fără antecedent
 - Nivel: recomandare
 - Greșit: „Potrivit Der Spiegel, locul e lângă Groß Köris, la aproximativ 50 de kilometri sud de Berlin.” → Corect: „Incidentul a avut loc lângă Groß Köris, la aproximativ 50 de kilometri sud de Berlin, scrie Der Spiegel.”
-- De ce: „Locul” nu are antecedent: nimic nu a fost numit „loc” mai sus, iar lead-ul spune doar „sudul landului Brandenburg”. Când localitatea nu a fost numită încă, o numești acum și spui ce s-a întâmplat acolo. Prezentul „e” pentru o poziție geografică nu e greșeală (RO-STI-610 păstrează prezentul pentru pozițiile permanente); problema e doar „locul” fără sprijin.
+- De ce: „Locul” nu are antecedent: nimic nu a fost numit „loc” mai sus, iar leadul spune doar „sudul landului Brandenburg”. Când localitatea nu a fost numită încă, o numești acum și spui ce s-a întâmplat acolo. Prezentul „e” pentru o poziție geografică nu e greșeală (RO-STI-610 păstrează prezentul pentru pozițiile permanente); problema e doar „locul” fără sprijin.
 - Sursă: recomandare a skill-ului, fără normă; coerența referințelor
 
 ## Vezi și

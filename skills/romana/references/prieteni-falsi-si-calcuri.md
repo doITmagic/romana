@@ -104,7 +104,7 @@ Când corectezi, pui cuvântul care spune sensul voit, nu echivalentul dintr-un 
 ### RO-CAL-021 „A defecta” nu înseamnă „a trece în tabăra adversă”
 - Nivel: recomandare
 - Greșit: „Defectarea a doi deputați a schimbat majoritatea.” → Corect: „Trecerea a doi deputați în tabăra adversă a schimbat majoritatea.”
-- De ce: „A se defecta” înseamnă „a se strica” și se spune despre mecanisme și aparate (DEX ’98). Engl. „to defect” înseamnă „a dezerta”, „a trece de partea adversarului”. Dacă originalul folosește sensul străin, o traducere care păstrează cuvântul duce cititorul român la alt fapt: e și abatere de fidelitate (normă, P0, vezi [fidelitate.md](fidelitate.md)).
+- De ce: „A se defecta” înseamnă „a se strica” și se spune despre mecanisme și aparate (DEX ’98). Engl. „to defect” înseamnă „a dezerta”, „a trece de partea adversarului”.
 - Sursă: DEX ’98 s.v. defecta
 
 ### RO-CAL-022 „Patetic” nu înseamnă „jalnic”
@@ -238,7 +238,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 - Sursă: DEX ’98 s.v. despre
 
 ### RO-CAL-040 „Situația este una gravă”
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Situația este una gravă.” → Corect: „Situația este gravă.”
 - De ce: „Una” reia aici chiar subiectul și nu adaugă nimic: situația e gravă. Construcția e la modă și se aseamănă cu engl. „the situation is a serious one”. Când „una” reia un substantiv ca să-l încadreze într-o categorie, construcția e firească și o lași: „Diferența nu e una de formă, ci de sens.”
 - Sursă: DOOM 3, §6.7.5
@@ -371,7 +371,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 
 ### RO-CAL-086 „Manual de teren”
 - Nivel: recomandare
-- Greșit: „Am publicat un manual de teren pentru agenții de vânzări.” → Corect: „Am publicat un ghid de lucru pentru agenții de vânzări.”
+- Greșit: „Am publicat un manual de teren pentru echipa de contabilitate.” → Corect: „Am publicat un ghid de lucru pentru echipa de contabilitate.”
 - De ce: În titlurile englezești, „field manual” înseamnă „ghid de folosit în lucru, la îndemână”. În română, „pe teren” înseamnă „la fața locului” (DEX ’98), deci „manual de teren” face cititorul să se gândească la muncă pe teren. Unde chiar e vorba de muncă pe teren (cercetare, geologie, armată), „ghid de teren” e corect.
 - Sursă: DEX ’98 s.v. teren
 
@@ -401,7 +401,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 
 ## Adjectivele compuse englezești
 
-Engleza face ușor adjective din două cuvinte legate prin cratimă („user-friendly”, „data-driven”). Româna nu are acest tipar: compusul nu se lasă în text și nici nu se traduce cuvânt cu cuvânt („utilizator-prietenos”). Îl redai printr-un grup de cuvinte, de obicei cu o prepoziție sau cu o relativă.
+Engleza face ușor adjective din două cuvinte legate prin cratimă („user-friendly”, „data-driven”). Româna nu are acest tipar, cu un substantiv urmat de un adjectiv sau de un participiu (DOOM 3 §4.1.1 îl admite doar la punctele cardinale: „nord-vestic”): compusul nu se lasă în text, afară de cele înregistrate în DOOM 3 („part-time”, „full-time”) și de termenii tehnici consacrați (RO-CAL-073), și nici nu se traduce cuvânt cu cuvânt („utilizator-prietenos”). Îl redai printr-un grup de cuvinte, de obicei cu o prepoziție sau cu o relativă.
 
 ### RO-CAL-101 „User-friendly”
 - Nivel: recomandare

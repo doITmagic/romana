@@ -6,8 +6,8 @@ Fișierul acesta te ajută să verifici dacă o frază e corectă ca formă: dac
 
 - **La redactare** scrii direct în română și te întrebi doar unde ai un dubiu: ce subiect are verbul, ce cuvânt determină genitivul, ce caz cere prepoziția. Regulile le folosești la recitirea ciornei.
 - **În corectură și în verificare** nu corectezi o formă doar pentru că „sună ciudat”. Înainte să judeci, citește [ce-nu-e-greseala.md](ce-nu-e-greseala.md): multe forme care par greșite sunt admise (acordul după „majoritatea”, „nici… nici”, „unul din”, „conform cu”, „copiii”, „votul a doi senatori”, „a finaliza” și altele).
-- **Nivelurile** sunt cele din SKILL.md. Normă înseamnă că forma contrazice DOOM 3, ÎOOP sau un dicționar (DEX ’98); la sintaxă (acord, regim, topica pronumelor neaccentuate), pe care aceste lucrări nu o tratează, forma contrazice gramatica academică (Coteanu) sau un manual aprobat care o aplică și o dă drept greșeală. Ghidul gov-md, scris pentru actele normative din Republica Moldova, singur nu face normă: când doar reia o normă DOOM sau ÎOOP, regula citează și norma (cu „nereverificat local” dacă n-am putut-o deschide), altfel e recomandare. Unde sursele se contrazic sau norma acceptă două acorduri, regula e recomandare sau disputată și nu se corectează ca greșeală.
-- **Citatul și textul de epocă nu se corectează.** O formă greșită dintr-un citat direct se lasă neschimbată; o semnalezi doar dacă te întreabă cineva despre ea.
+- **Nivelurile** sunt cele din SKILL.md. Normă înseamnă că forma contrazice DOOM 3, ÎOOP sau un dicționar (DEX ’98); la sintaxă (acord, regim, topica pronumelor neaccentuate), pe care aceste lucrări nu o tratează, forma contrazice gramatica academică (Coteanu) sau un manual aprobat care o aplică și o dă drept greșeală. Ghidul gov-md, scris pentru actele normative din Republica Moldova, singur nu face normă: când doar reia o normă DOOM sau ÎOOP, regula citează și norma (cu „nereverificat local” dacă n-am putut-o deschide), altfel e recomandare. Unde sursele se contrazic, regula e disputată; unde norma acceptă două acorduri, amândouă sunt „ce nu e greșeală” (sau recomandare, dacă sursa o preferă pe una). În niciun caz nu se corectează ca greșeală.
+- **Citatul direct nu se corectează, doar tipografic.** O formă greșită dintr-un citat direct se lasă neschimbată; o semnalezi doar dacă te întreabă cineva despre ea.
 - **Rolul cuvântului decide.** Multe perechi se aud la fel și se scriu diferit după rol („s-a” / „sa”, „fi” / „fii”). Înainte să marchezi o greșeală, spui rolul cuvântului în frază.
 - **Calcurile gramaticale din engleză** (subiect nearticulat, juxtapunere, gerunziu fără subiect propriu) sunt tratate aici; calcurile de vocabular sunt în [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md).
 - **Articularea și pluralul împrumuturilor** (site-ul, e-mailuri) sunt în [imprumuturi.md](imprumuturi.md), iar semnele de punctuație, ghilimelele și majusculele în [tipografie.md](tipografie.md).
@@ -47,7 +47,7 @@ Cazul pe care îl lași neatins: acordul după înțeles sau prin atracție, und
 ### RO-GRA-003 „Nici… nici” cu termeni la singular și la plural
 - Nivel: recomandare
 - Greșit: „Nici directorul, nici angajații nu a semnat.” → Corect: „Nici directorul, nici angajații nu au semnat.”
-- De ce: Cu termeni la singular, sursele nu tranșează între singular și plural (manualul aprobat acceptă ambele acorduri), deci nu corectezi niciuna dintre forme (RO-NUG-021). Când ultimul termen e la plural, propui verbul la plural, acordul sigur al subiectului multiplu. Pentru că manualul nu condamnă singularul nici aici, rămâne recomandare.
+- De ce: Cu termeni la singular, manualul aprobat acceptă explicit ambele acorduri, deci nu corectezi niciuna dintre forme (RO-NUG-021). Când ultimul termen e la plural, propui verbul la plural, acordul sigur al subiectului multiplu. Pentru că manualul nu condamnă singularul nici aici, rămâne recomandare.
 - Sursă: Coteanu, §33.1.2; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 107; ghid gov-md §7.3.3
 
 ### RO-GRA-004 Subiectul multiplu pus după verb
@@ -146,7 +146,7 @@ Bun:
 
 ### Metoda
 
-La genitiv întrebi „al cui?” sau „a cui?” și vezi ce cuvânt posedă. Articolul genitival (al, a, ai, ale) se acordă cu lucrul posedat, nu cu posesorul și nici cu cuvântul cel mai apropiat. Un articol hotărât de genitiv („casa vecinului”) se leagă direct de substantivul articulat; când între substantiv și genitiv apare altceva (un articol nehotărât, un adjectiv), apare „al”.
+La genitiv întrebi „al cui?” sau „a cui?” și vezi ce cuvânt posedă. Articolul genitival (al, a, ai, ale) se acordă cu lucrul posedat, nu cu posesorul și nici cu cuvântul cel mai apropiat. Genitivul se leagă direct de substantivul cu articol hotărât („casa vecinului”); când substantivul e determinat altfel decât prin articolul hotărât (de exemplu, prin articolul nehotărât: „o casă a vecinului”) sau când între el și genitiv apare altceva (un adjectiv: „casa nouă a vecinului”), apare „al”.
 
 Slab:
 
@@ -252,7 +252,7 @@ Bun:
 
 ### Metoda
 
-Cauți cazul pe care îl cere prepoziția (genitiv, dativ, acuzativ) și verifici dacă termenul care urmează îl are. „Din” și „dintre” înaintea unui plural nu se corectează una în alta (RO-NUG-005). La coordonare, vezi dacă prepoziția cere reluarea marcii de genitiv („în fața Guvernului și a Parlamentului”) sau nu („datorită publicului și încurajărilor”).
+Cauți cazul pe care îl cere prepoziția (genitiv, dativ, acuzativ) și verifici dacă termenul care urmează îl are. „Din” și „dintre” înaintea unui plural nu se corectează una în alta (RO-NUG-005). La coordonare, vezi dacă prepoziția cere reluarea mărcii de genitiv („în fața Guvernului și a Parlamentului”) sau nu („datorită publicului și încurajărilor”).
 
 Slab:
 
@@ -424,7 +424,7 @@ Corelativele au două părți și se folosesc întregi: „fie… fie”, „nic
 
 ### Metoda
 
-Pluralul articulat al substantivelor masculine în -u sau -i are doi „i” (primul e al desinenței, al doilea al articolului): „copiii”, „miniștrii”, „membrii”. Nearticulat are un singur „i”: „copii”, „miniștri”, „membri”. Proba e simplă: dacă poți pune „acești” înaintea cuvântului, are un singur „i” („acești membri”); dacă urmează un genitiv sau un posesiv și substantivul are articol, are doi („membrii partidului”).
+La substantivele masculine cu pluralul în -i, pluralul articulat are un „i” în plus față de cel nearticulat (ultimul „i” e al articolului): „copii” → „copiii”, „miniștri” → „miniștrii”, „membri” → „membrii”. Proba e simplă: dacă poți pune „acești” înaintea cuvântului, e forma nearticulată, fără „i”-ul articolului („acești membri”, „acești copii”); dacă urmează un genitiv sau un posesiv și substantivul are articol, primește și „i”-ul articolului („membrii partidului”, „copiii lor”).
 
 Substantivele neutre au la singular acordul masculinului și la plural acordul femininului: „un sistem nou”, „două sisteme noi”.
 
@@ -730,7 +730,7 @@ Bun:
 
 ### Metoda
 
-Întâi vezi dacă abrevierea păstrează ultima literă a cuvântului întreg („dl” = domnul): atunci nu are punct. Dacă nu o păstrează („nr.” = numărul, „str.” = strada), are punct. Siglele din majuscule se scriu de obicei fără puncte între litere.
+Întâi vezi dacă abrevierea păstrează ultima literă a cuvântului întreg („dl” = domnul): atunci nu are punct, cu câteva excepții tradiționale care au punct („dr.”, „drd.”, „lt.”, „mr.”, „slt.”, RO-GRA-091). Dacă nu o păstrează („nr.” = numărul, „str.” = strada), are punct. Siglele din majuscule se scriu de obicei fără puncte între litere.
 
 ### RO-GRA-090 Siglele din majuscule
 - Nivel: recomandare
@@ -772,7 +772,7 @@ Bun:
 
 ### Metoda
 
-La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte, celelalte trec în silaba următoare. Grupurile „lpt, mpt, mpț, ncș, nct, ncț, rct, rtf” se despart după a doua consoană, iar „rstn” după a treia. Compusele și derivatele cu prefix admit și despărțirea după structura morfologică.
+La trei sau patru consoane între vocale, prima rămâne în silaba dinainte, celelalte trec în silaba următoare. Grupurile „lpt, mpt, mpț, ncs, ncș, nct, ncț, ndv, rct, rtf, stm” se despart după a doua consoană („ast-matic”, „când-va”), la fel „ngst” („gang-ster”), iar „rstn” după a treia. Cinci consoane se despart după a doua („opt-sprezece”). Compusele și derivatele cu prefix admit și despărțirea după structura morfologică.
 
 ### RO-GRA-156 Trei consoane între vocale
 - Nivel: normă
@@ -783,7 +783,7 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 ### RO-GRA-157 Grupuri care se despart după a doua consoană
 - Nivel: normă
 - Greșit: „scul-ptor” → Corect: „sculp-tor”
-- De ce: Grupurile lpt, mpt, mpț, ncș, nct, ncț, rct, rtf se despart după a doua consoană: „sculp-tor”, „somp-tu-os”, „punc-taj”, „func-ți-e”, „arc-tic”, „jert-fă”. Grupul rstn se desparte după a treia („vârst-nic”).
+- De ce: Grupurile lpt, mpt, mpț, ncs, ncș, nct, ncț, ndv, rct, rtf, stm se despart după a doua consoană: „sculp-tor”, „somp-tu-os”, „sconc-sul”, „punc-taj”, „func-ți-e”, „când-va”, „arc-tic”, „jert-fă”, „ast-matic”. Grupul rstn se desparte după a treia („vârst-nic”).
 - Sursă: DOOM 3 §5.1.1.1 (regula 1.3, excepția VCC-CV: lp-t „sculp-ta”); DSL, s.v. SILABAȚIE
 
 ### RO-GRA-158 Despărțirea morfologică e admisă
@@ -839,7 +839,7 @@ La trei sau mai multe consoane între vocale, prima rămâne în silaba dinainte
 ### RO-GRA-173 Negația dublă și domeniul negației
 - Nivel: normă
 - Greșit: „Niciun fișier a fost găsit.” → Corect: „Niciun fișier nu a fost găsit.”
-- De ce: Cu „niciun”, „nimeni”, „nimic” româna cere și „nu” pe lângă verb, oriunde ar sta pronumele negativ în enunț. Ordinea negației după engleză nu e greșeală de normă, ci ambiguitate: „Toate fișierele nu au fost salvate” (engl. „not all”) poate însemna că niciunul sau că doar unele nu s-au salvat. O semnalezi ca ambiguitate și o rescrii după sens: „Nu toate fișierele au fost salvate” sau „Niciun fișier nu a fost salvat”.
+- De ce: Cu „niciun”, „nimeni”, „nimic” româna cere și „nu” pe lângă verb, oriunde ar sta pronumele negativ în enunț; excepție face grupul introdus de „fără”, care poartă singur negația („Lucrează fără niciun ajutor”). Ordinea negației după engleză nu e greșeală de normă, ci ambiguitate: „Toate fișierele nu au fost salvate” (engl. „not all”) poate însemna că niciunul sau că doar unele nu s-au salvat. O semnalezi ca ambiguitate și o rescrii după sens: „Nu toate fișierele au fost salvate” sau „Niciun fișier nu a fost salvat”.
 - Sursă: Coteanu, §14.5.5 (pronumele negativ); Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 79 (concordanța negativă); ghid gov-md §7.3.11
 
 ### RO-GRA-141 „Mult” și „foarte”

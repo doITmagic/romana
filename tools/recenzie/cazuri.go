@@ -106,6 +106,21 @@ func ghilimele(lista []string) string {
 	return strings.Join(q, ", ")
 }
 
+// etichetaInterzis spune ce înseamnă „interzis” în modul cazului (vezi
+// tools/evals/caz.go): la verificare, fragmente care nu se semnalează; la
+// corectură, fragmente care nu se schimbă; la redactare, forme care nu apar în
+// textul produs. Celelalte moduri păstrează eticheta de verificare.
+func etichetaInterzis(mod string) string {
+	switch mod {
+	case "corectura":
+		return "Nu are voie să schimbe:"
+	case "redactare":
+		return "Nu trebuie să apară în textul produs:"
+	default:
+		return "Nu are voie să semnaleze:"
+	}
+}
+
 func continutCaz(c evals.Caz) string {
 	var b strings.Builder
 	b.WriteString(c.Intrare)
@@ -121,7 +136,7 @@ func continutCaz(c evals.Caz) string {
 		}
 	}
 	if len(a.Interzis) > 0 {
-		b.WriteString("Nu are voie să semnaleze: " + ghilimele(a.Interzis) + "\n")
+		b.WriteString(etichetaInterzis(c.Mod) + " " + ghilimele(a.Interzis) + "\n")
 	}
 	if len(a.Cerut) > 0 {
 		b.WriteString("Trebuie să apară: " + ghilimele(a.Cerut) + "\n")

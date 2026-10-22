@@ -149,7 +149,7 @@ Cuvintele din regulile următoare nu sunt în DOOM 3, iar formele lor articulate
 
 ### Metoda: legat, cu câteva excepții
 
-Derivatele cu prefix și compusele cu elemente savante (prefixoide ca „auto-”, „multi-”, „mega-”, „cvasi-”) se scriu într-un cuvânt, inclusiv când se întâlnesc două vocale: „antiinflamator”, „coautor”, „reinstala”, „neautorizat”, „antivirus”, „interdepartamental”. Cratima apare doar în câteva cazuri:
+Derivatele cu prefix și compusele cu elemente savante (prefixoide ca „auto-”, „multi-”, „mega-”, „cvasi-”) se scriu într-un cuvânt, inclusiv când se întâlnesc două vocale: „antiinflamator”, „coautor”, „reinstala”, „neautorizat”, „antivirus”, „interdepartamental”. Cratima apare în câteva cazuri, dintre care cele mai frecvente sunt cele de mai jos; lista completă, cu grafiile facultative ca „ultra-progresist” sau „răs-străbun”, e în DOOM 3, §4.2.1 II:
 
 - la prefixul „ex-” cu sensul „fost”: „ex-ministru”;
 - când prefixul stă înaintea unei sigle, a unui nume propriu sau a unui an: „pro-UE”, „non-UE”, „anti-NATO”, „post-’89”.
@@ -158,7 +158,7 @@ Care prefix se folosește îl arată dicționarul: româna are „neguvernamenta
 
 Compusele din două substantive în care al doilea îl caracterizează pe primul se scriu cu cratimă: „termen-limită”, „cuvânt-cheie”, „situație-limită”.
 
-Surse pentru metodă: ghid gov-md §6.1 și §6.2; INJ p. 102.
+Surse pentru metodă: DOOM 3, §4.2.1; ghid gov-md §6.1 și §6.2; INJ p. 102.
 
 ### RO-IMP-003 Derivatele cu prefix se scriu legat
 - Nivel: normă

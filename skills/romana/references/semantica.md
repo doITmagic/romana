@@ -20,10 +20,10 @@ Bun:
 
 Pentru fiecare cuvânt de care nu ești sigur îți pui două întrebări: e corect în limbă și e potrivit aici, cu acest sens și în acest registru? Nivelul îl alegi așa:
 
-- **normă:** cuvântul e folosit cu un sens pe care dicționarul nu i-l dă și fraza ajunge să spună altceva, sau construcția contrazice ce arată dicționarul (verbul, prepoziția, expresia fixă);
+- **normă:** cuvântul e folosit cu un sens pe care dicționarul nu i-l dă și fraza ajunge să spună altceva, sau construcția contrazice ce arată dicționarul (verbul, prepoziția, expresia fixă); prietenii falși de sens au criteriul lor din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md) (recomandare, afară de „bilion”);
 - **recomandare:** sensul există în dicționar sau e larg răspândit, dar un cuvânt mai exact ori mai obișnuit spune lucrul mai bine;
 - **de semnalat:** cuvântul admite două lecturi, iar contextul nu o alege pe cea bună;
-- **ce nu e greșeală:** un sens nou deja înregistrat în dicționare (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
+- **ce nu e greșeală:** un sens nou deja înregistrat în DEX ’98 sau în DOOM 3 (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)); un sens găsit doar într-un dicționar mai nou rămâne recomandare.
 
 Un sens care lipsește din DEX ’98 poate fi înregistrat în dicționare mai noi. Când nu poți verifica, alegi nivelul mai slab și o spui.
 
@@ -150,7 +150,7 @@ Două verbe cu regim diferit nu pot avea un complement comun („a beneficiat ș
 ### RO-SEM-017 „A dispune” și „a dispune de”
 - Nivel: normă
 - Greșit: „Firma dispune o echipă de zece ingineri.” → Corect: „Firma dispune de o echipă de zece ingineri.”
-- De ce: Prepoziția schimbă sensul verbului: „a dispune ceva” înseamnă „a hotărî, a ordona” („instanța a dispus arestarea”), iar „a dispune de ceva” înseamnă „a avea la dispoziție” (DEX ’98). Fără „de”, fraza spune că firma a ordonat o echipă.
+- De ce: Prepoziția schimbă sensul verbului: „a dispune ceva” înseamnă „a hotărî, a ordona” („instanța a dispus arestarea”) sau „a așeza într-o anumită ordine” („a dispus scaunele în cerc”), iar „a dispune de ceva” înseamnă „a avea la dispoziție” (DEX ’98). Fără „de”, fraza spune că firma a ordonat sau a aranjat o echipă.
 - Sursă: DEX ’98 s.v. dispune
 
 ### RO-SEM-018 „A influența ceva”, nu „a influența asupra”

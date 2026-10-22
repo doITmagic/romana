@@ -17,25 +17,25 @@ Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepi
 
 ### RO-STI-751 Către o instituție: „Bună ziua”, „În regulă”
 - Nivel: recomandare
-- Greșit: „Salut, ok, aștept răspunsul.” → Corect: „Bună ziua, în regulă, aștept răspunsul.”
+- Greșit: „Salut, ok, aștept răspunsul.” → Corect: „Bună ziua, În regulă, aștept răspunsul.”
 - De ce: Către o instituție salutul potrivit e „Bună ziua”, nu „Salut”, iar acordul formal se spune „În regulă” sau „De acord”, nu „Ok”. „OK” e înregistrat în DOOM 3 ca formă familiară, deci nu e greșit, doar nepotrivit în registrul formal. Între colegi sau cunoștințe, „Salut” și „OK” sunt la locul lor și nu se corectează. Forma „Ok” nu e cea din DOOM 3 (vezi RO-IMP-012 din [imprumuturi.md](../imprumuturi.md)).
 - Sursă: DOOM 3 s.v. OK; DEX ’98 s.v. salut
 
 ### RO-STI-752 Deschiderea și încheierea în e-mailul formal
 - Nivel: recomandare
-- Greșit: „Hey! Ți-am atașat contractul. Pa!” → Corect: „Bună ziua, v-am atașat contractul. Cu stimă,”
+- Greșit: „Hey! Ți-am atașat contractul. Pa!” → Corect: „Bună ziua, V-am atașat contractul. Cu stimă,”
 - De ce: Registrul formal cere formule consacrate. Pentru deschidere: „Bună ziua,” sau „Stimată doamnă…,” / „Stimate domnule…,”. Pentru încheiere: „Cu stimă,” sau „Cu respect,”. DEX ’98 înregistrează „cu stimă” ca formulă de politețe folosită la încheierea unei scrisori. „Hey”, „Salut” și „Pa” sunt familiare. Formula de adresare și cea de încheiere se despart de text prin virgulă, iar numele de după încheiere nu primește punct.
 - Sursă: DEX ’98 s.v. stimă; ghid gov-md §9.1.8.2
 
 ### RO-STI-754 După formula de adresare, textul începe cu majusculă
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Stimată doamnă, vă scriu pentru a confirma programarea.” → Corect: „Stimată doamnă, Vă scriu pentru a confirma programarea.”
-- De ce: În corespondență, cuvântul cu care începe primul enunț după formula de adresare se scrie cu majusculă, deși urmează după virgulă. Regula vine dintr-un ghid de redactare pentru acte oficiale; într-un mesaj informal, cu „Bună,” sau „Salut,”, ambele scrieri se întâlnesc, iar litera mică nu se corectează. Pe rând nou, majuscula apare oricum.
-- Sursă: ghid gov-md §4.1.4 și §4.1.11.2
+- De ce: În corespondență, cuvântul cu care începe primul enunț după formula de adresare se scrie cu majusculă, deși urmează după virgulă. Regula e în DOOM 3 și în ÎOOP: după virgulă se scrie cu literă mică, „cu excepția cazului când virgula este pusă după o formulă de adresare în cereri, scrisori etc.”. Salutul informal dintr-un mesaj scurt („Bună,”, „Salut,”) nu e formula de adresare a unei scrisori; acolo litera mică nu se corectează. Pe rând nou, majuscula apare oricum.
+- Sursă: DOOM 3, §1.2.5; ÎOOP6, p. 83; ghid gov-md §4.1.4 și §4.1.11.2
 
 ### RO-STI-753 Majuscula de politețe în corespondența oficială
 - Nivel: recomandare
-- Greșit: „Doamnă directoare, vă rog să-mi aprobați cererea.” → Corect: „Doamnă Directoare, vă rog să-mi aprobați cererea.”
+- Greșit: „Doamnă directoare, Vă rog să-mi aprobați cererea.” → Corect: „Doamnă Directoare, Vă rog să-mi aprobați cererea.”
 - De ce: În corespondența oficială, termenii de adresare (substantive și pronume) se pot scrie cu inițială majusculă, ca semn de deferență: „Domnule Director”, „Dumneavoastră”. Ghidul recomandă ca „vă” și „veți” să rămână cu minusculă în interiorul enunțului. Majuscula de politețe nu se folosește în textul curent, în interfață sau în e-mailurile obișnuite, iar scrierea cu minusculă nu e greșeală: în exemplul de mai sus, „Greșit” înseamnă doar „fără majuscula de reverență”. E o recomandare de stil, nu de normă.
 - Sursă: ghid gov-md §4.1.10 și §4.2.1.14
 
@@ -51,7 +51,7 @@ Bun:
 
 > Bună ziua,
 >
-> Vă scriu pentru că abonamentul nr. [de completat: numărul] a fost facturat de două ori în luna martie. Vă rog să verificați și să-mi comunicați dacă diferența se returnează.
+> Vă scriu pentru că am o problemă cu abonamentul nr. [de completat: numărul]: [de completat: ce s-a întâmplat]. Vă rog să verificați și să-mi comunicați ce se poate face.
 >
 > Cu stimă,
 > [de completat: numele]

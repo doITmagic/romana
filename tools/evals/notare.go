@@ -52,6 +52,11 @@ type Judecata struct {
 //   - Lipsa: observații așteptate care n-au apărut, plus elemente din Cerut care
 //     lipsesc. La verificare un citat OBS se potrivește cu fragmentul așteptat
 //     doar dacă nu e mai lung de 3 ori fragmentul plus 40 de caractere, și nu acoperă mai mult de 70% din intrare.
+//     La corectură, o observație de normă apare doar dacă textul corectat o
+//     schimbă. Una de alt nivel (recomandare, de semnalat etc.) nu se aplică
+//     obligatoriu: apare și când textul o lasă neschimbată, dar ieșirea o
+//     propune separat (vezi Propuneri), cu aceeași potrivire a citatului ca la
+//     verificare.
 //   - Fidelitate: false dacă textul produs (corectat sau redactat) conține un
 //     număr care nu e în intrare, sau (la redactare) o formă din Interzis. Nu se
 //     verifică numerele dispărute și nici numeralele scrise cu litere. La
@@ -495,6 +500,32 @@ func numereNoi(intrare, iesire string) bool {
 	return false
 }
 
+// Propuneri întoarce partea de propuneri a unui răspuns de corectură: rândurile
+// „OBS:” de oriunde și tot ce urmează după [[/TEXT]]. Textul corectat (dintre
+// marcaje) nu intră aici.
+func Propuneri(iesire string) string {
+	parti := LinniiObs(iesire)
+	if i := strings.Index(iesire, marcaIn); i >= 0 {
+		if j := strings.Index(iesire[i:], marcaOut); j >= 0 {
+			parti = append(parti, iesire[i+j+len(marcaOut):])
+		}
+	}
+	return strings.Join(parti, "\n")
+}
+
+// propusa: partea de propuneri citează, între ghilimele, un fragment din
+// intrare care prinde observația (citatPrinde, ca la verificare).
+func propusa(propuneri, fragment, intrare string) bool {
+	in, nf := norm(intrare), norm(fragment)
+	for _, m := range reCitat.FindAllStringSubmatch(propuneri, -1) {
+		q := norm(m[1] + m[2] + m[3] + m[4])
+		if len([]rune(q)) >= 2 && strings.Contains(in, q) && citatPrinde(q, nf, in) {
+			return true
+		}
+	}
+	return false
+}
+
 func max2(a, b int) int {
 	if a > b {
 		return a
@@ -561,8 +592,14 @@ func noteazaCorectura(c Caz, r Rezultat, n *Nota) {
 			n.Probleme++
 		}
 	}
-	for _, g := range gasit {
-		if !g {
+	// O observație de normă se caută doar în textul corectat. Una de alt nivel
+	// poate rămâne neschimbată în text, dacă e propusă separat.
+	propuneri := Propuneri(r.Iesire)
+	for i, g := range gasit {
+		if !g && a.Observatii[i].Nivel != "normă" && propusa(propuneri, a.Observatii[i].Fragment, c.Intrare) {
+			gasit[i] = true
+		}
+		if !gasit[i] {
 			n.Lipsa++
 		}
 	}

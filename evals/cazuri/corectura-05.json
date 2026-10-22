@@ -11,7 +11,7 @@
     "observatii": [
       {
         "fragment": "Utilizator a fost șters.",
-        "nivel": "normă",
+        "nivel": "recomandare",
         "pilon": "gramatică"
       },
       {
@@ -26,7 +26,6 @@
       }
     ],
     "cerut": [
-      "Utilizatorul a fost șters",
       "{titlu}"
     ]
   }

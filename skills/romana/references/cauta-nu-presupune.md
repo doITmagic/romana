@@ -86,7 +86,7 @@ Nu orice verb din engleză e suspect. DOOM 3 înregistrează „a printa”, „
 ### RO-SEM-405 „Bolduiește” și alte verbe inventate pentru formatare
 - Nivel: recomandare
 - Greșit: „Bolduiește cuvintele-cheie.” → Corect: „Scrie cuvintele-cheie cu litere aldine.”
-- De ce: Formă dedusă: „a bolduiește”, ca verb pentru „a scrie cu litere aldine”, nu apare în dicționarele consultate. „Aldin” e adjectiv în DOOM 3 („literă aldină”). Pluralul „patterne” are alt statut: nu e atestat, iar DOOM 3 dă „patternuri” (vezi RO-IMP-028 în [imprumuturi.md](imprumuturi.md)).
+- De ce: Formă dedusă: „a boldui”, ca verb pentru „a scrie cu litere aldine”, nu apare în dicționarele consultate. „Aldin” e adjectiv în DOOM 3 („literă aldină”). Pluralul „patterne” are alt statut: nu e atestat, iar DOOM 3 dă „patternuri” (vezi RO-IMP-028 în [imprumuturi.md](imprumuturi.md)).
 - Sursă: DOOM 3 s.v. aldin
 
 ### RO-SEM-406 „Suprareprezent” și „ramare”

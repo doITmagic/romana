@@ -34,10 +34,10 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 - Sursă: DOOM 3, §6.5.2; DSL, s.v. ACORD
 
 ### RO-NUG-021 „Nici el, nici ea nu a venit” și „nu au venit”
-- Nivel: disputat
+- Nivel: ce nu e greșeală
 - Corect: „Nici directorul, nici adjunctul lui nu au semnat.” Acordul la singular („nu a semnat”) nu îl corectezi.
-- De ce: Cu subiectele legate prin „nici… nici”, pluralul e acordul sigur, fiindcă subiectul multiplu cere predicatul la plural (Coteanu). Singularul poate fi socotit acord prin atracție (DSL îl numește „abatere”), dar se întâlnește în uz. Sursele consultate nu tranșează cazul, deci nu corectezi niciuna dintre forme; dacă îl pomenești, spui că există două uzuri. Când ultimul subiect e la plural, verbul stă la plural („Nici directorul, nici angajații nu au semnat”).
-- Sursă: Coteanu, §33.1.2; DSL, s.v. ACORD
+- De ce: Cu subiectele legate prin „nici… nici”, pluralul e acordul sigur, fiindcă subiectul multiplu cere predicatul la plural (Coteanu). Singularul poate fi socotit acord prin atracție (DSL îl numește „abatere”), dar se întâlnește în uz. Manualul aprobat acceptă explicit ambele acorduri cu «nici… nici» («Nici copilul, nici bunica nu puteau/putea pleca»), deci nu corectezi niciuna dintre forme. Când ultimul subiect e la plural, verbul stă la plural („Nici directorul, nici angajații nu au semnat”).
+- Sursă: Coteanu, §33.1.2; DSL, s.v. ACORD; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 107
 
 ### RO-NUG-022 „Conform legii” și „conform cu legea”
 - Nivel: ce nu e greșeală
@@ -48,8 +48,8 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 ### RO-NUG-023 Variantele duble din DOOM 3
 - Nivel: ce nu e greșeală
 - Corect: „ambii” și „amândoi”, „prim-ministrul” și „primul-ministru”. Nu corectezi o variantă în cealaltă.
-- De ce: Regula falsă: dintre două forme ar fi corectă doar una, de obicei cea care „sună mai literar”. DOOM 3 înregistrează ambele cuvinte „ambii” și „amândoi”, iar ÎOOP6 permite articularea ambilor termeni ai compusului „prim-ministru” (ghidul gov-md recomandă totuși, în actele normative, articularea ultimului termen). Într-un text alegi una și o folosești consecvent (vezi RO-COE-005 din [coerenta.md](coerenta.md)), dar varianta aleasă de autor nu se corectează. Atenție la variantele care se despart după sens: „niveluri” e pluralul pentru înălțime și stadiu, iar „nivele” pentru instrumentul numit „nivelă” (DEX ’98), deci o pereche se protejează numai după ce îi verifici sensul.
-- Sursă: DOOM 3 s.v. ambii, amândoi; ghid gov-md §6.2.3 (cu trimitere la ÎOOP6); DEX ’98 s.v. nivel
+- De ce: Regula falsă: dintre două forme ar fi corectă doar una, de obicei cea care „sună mai literar”. DOOM 3 înregistrează ambele cuvinte „ambii” și „amândoi”, iar ÎOOP6 permite articularea ambilor termeni ai compusului „prim-ministru” (ghidul gov-md recomandă totuși, în actele normative, articularea ultimului termen). Într-un text alegi una și o folosești consecvent (vezi RO-COE-005 din [coerenta.md](coerenta.md)), dar varianta aleasă de autor nu se corectează. Atenție la variantele care se despart după sens: „capi” e pluralul pentru conducători, „capete” pentru partea corpului, iar „capuri” pentru promontorii (DOOM 3), deci o pereche se protejează numai după ce îi verifici sensul. „Niveluri” și „nivele” sunt însă admise pentru orice sens (DOOM 3, §6.8.9).
+- Sursă: DOOM 3 s.v. ambii, amândoi; ghid gov-md §6.2.3 (cu trimitere la ÎOOP6); DOOM 3 s.v. cap, nivel și §6.8.9
 
 ### RO-NUG-024 „Votul a doi senatori”
 - Nivel: ce nu e greșeală
@@ -324,7 +324,7 @@ Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat 
 ### RO-NUG-101 „Refresh”
 - Nivel: ce nu e greșeală
 - Corect: „Dați refresh paginii.” Nu corectezi pe motiv de anglicism.
-- De ce: Regula falsă: cuvântul n-ar fi admis în română. DOOM 3 îl înregistrează ca intrare nouă, articulat „refresh-ul”. Pentru publicul larg poți scrie, la redactare, „reîncărcați pagina”.
+- De ce: Regula falsă: cuvântul n-ar fi admis în română. DOOM 3 îl înregistrează ca intrare nouă, în îmbinarea „a da refresh”. Pentru publicul larg poți scrie, la redactare, „reîncărcați pagina”.
 - Sursă: DOOM 3 s.v. refresh
 
 ### RO-NUG-111 „A remedia”
@@ -364,8 +364,8 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-066 „De notorietate publică”
 - Nivel: ce nu e greșeală
 - Corect: „Faptul e de notorietate publică.” Nu scoți „publică”.
-- De ce: Regula falsă: „publică” ar fi o repetiție care trebuie scoasă. DEX ’98 definește notorietatea ca „faptul de a fi cunoscut de multă lume”, deci îmbinarea e pleonastică în esență; E. Grosu o numără totuși printre expresiile care nu se condamnă, fiindcă uzul le-a făcut tolerabile. Cazul e unul de uz curent, de aceea nu o corectezi.
-- Sursă: DEX ’98 s.v. notorietate; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 202–204
+- De ce: Regula falsă: „publică” ar fi o repetiție care trebuie scoasă. DEX ’98 definește notorietatea ca „faptul de a fi cunoscut de multă lume”, deci îmbinarea e pleonastică în esență; E. Grosu o dă totuși printre pleonasmele pe care uzul le apropie de cele tolerabile și a căror condamnare „pare deja a fi o nedreptate”. Cazul e unul de uz curent, de aceea nu o corectezi.
+- Sursă: DEX ’98 s.v. notorietate; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 203
 
 ### RO-NUG-038 „Autoritate competentă”
 - Nivel: ce nu e greșeală
@@ -536,8 +536,8 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-091 „De ex.” și „d.e.”
 - Nivel: ce nu e greșeală
 - Corect: „Unele documente, de ex. contractele, se arhivează zece ani.” Nu corectezi în „de exemplu”.
-- De ce: Regula falsă: abrevierile ar fi greșite, iar „de exemplu” s-ar scrie mereu întreg. „De ex.” și „d.e.” sunt abrevieri admise. Scrierea întreagă e o convenție de casă, pe care o urmezi doar dacă ți se cere. Abrevierile englezești „e.g.” și „i.e.” se înlocuiesc în textul românesc cu „de exemplu” sau cu „adică”.
-- Sursă: ghid gov-md §5.3.1.10
+- De ce: Regula falsă: abrevierile ar fi greșite, iar „de exemplu” s-ar scrie mereu întreg. „De ex.” și „d.e.” sunt abrevieri admise. Scrierea întreagă e o convenție de casă, pe care o urmezi doar dacă ți se cere. Abrevierile latinești „e.g.” și „i.e.” sunt și ele înregistrate în DOOM 3; la redactare poți scrie, pentru claritate, „de exemplu” sau „adică”, dar nu le corectezi.
+- Sursă: ghid gov-md §5.3.1.10; DOOM 3 s.v. exempli gratia, id est
 
 ### RO-NUG-119 Virgulele în jurul lui „totuși”
 - Nivel: ce nu e greșeală
@@ -559,9 +559,9 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-115 Virgula înaintea condiționalei și a cauzalei
 - Nivel: ce nu e greșeală
-- Corect: „Puteți salva documentul ca PDF, dacă aveți nevoie de o copie tipărită.” La fel de corect: „Nu se poate salva, deoarece fișierul lipsește.” Nu scoți virgula; fără virgulă e la fel de corect doar când arăți că e singura condiție.
-- De ce: Regula falsă: o subordonată pusă după regentă n-ar primi niciodată virgulă. Cauzala și condiționala se despart de obicei prin virgulă, oriunde ar sta. Fără virgulă rămân doar când autorul vrea să arate că e singura cauză sau singura condiție.
-- Sursă: ghid gov-md §9.2.2.9 și §9.2.2.10
+- Corect: „Puteți salva documentul ca PDF, dacă aveți nevoie de o copie tipărită.” La fel de corect: „Nu se poate salva, deoarece fișierul lipsește.” Nu scoți virgula; fără virgulă e corect când arăți că e singura condiție sau când virgula ar schimba sensul.
+- De ce: Regula falsă: o subordonată pusă după regentă n-ar primi niciodată virgulă. Cauzala și condiționala se despart de obicei prin virgulă, oriunde ar sta. Fără virgulă rămân când autorul vrea să arate că e singura cauză sau singura condiție, ori când virgula ar schimba sensul: „Nu plâng pentru că mi-e frică” (plâng, dar din alt motiv) față de „Nu plâng, pentru că mi-e frică”.
+- Sursă: ghid gov-md §9.2.2.9 și §9.2.2.10; ÎOOP6 p. 61
 
 ### RO-NUG-031 „De” după numeral: contează ultimele două cifre
 - Nivel: ce nu e greșeală

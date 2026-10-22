@@ -343,7 +343,7 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 ### RO-SEM-231 Perioadă de timp
 - Nivel: recomandare
 - Greșit: „Oferta e valabilă o perioadă de timp de trei luni.” → Corect: „Oferta e valabilă o perioadă de trei luni.”
-- De ce: Perioada e un interval de timp, deci „de timp” se poate scoate. Unele ghiduri dau îmbinarea ca pleonasm, altele o socotesc tolerată de uz, de aceea o propui doar ca scurtare, mai ales când urmează și durata.
+- De ce: Perioada e un interval de timp, deci „de timp” se poate scoate. INJ o dă ca pleonasm, iar E. Grosu o pune printre pleonasmele pe care uzul le-ar putea face tolerabile, de aceea o propui doar ca scurtare, mai ales când urmează și durata.
 - Sursă: INJ p. 72; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 203
 
 ### RO-SEM-239 A întreba o întrebare

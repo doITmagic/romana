@@ -24,7 +24,7 @@ Slab:
 
 Bun:
 
-> Ca să îmbunătățim serviciile, analizăm cum tratăm solicitările.
+> Ca să îmbunătățim serviciile, trebuie să analizăm cum tratăm solicitările.
 
 Prima variantă are o singură propoziție cu verb („se impune”) și patru substantive abstracte legate prin genitiv. A doua spune cine face ce.
 
@@ -60,7 +60,7 @@ Pentru ordinea cuvintelor, regula practică e simplă: ce e nou stă spre sfâr�
 
 ### RO-STI-007 Lungimea frazei nu are normă
 - Nivel: recomandare
-- Greșit: „Echipa, care analizase datele și care le trimisese conducerii, care ceruse o decizie, aștepta un răspuns, având în vedere că termenul trecuse.” → Corect: „Echipa analizase datele, le trimisese conducerii și ceruse o decizie. Termenul trecuse, iar echipa aștepta răspunsul.”
+- Greșit: „Echipa, care analizase datele, care le trimisese conducerii și care ceruse o decizie, aștepta un răspuns, având în vedere că termenul trecuse.” → Corect: „Echipa analizase datele, le trimisese conducerii și ceruse o decizie. Cum termenul trecuse, aștepta un răspuns.”
 - De ce: Ghidul Comisiei Europene vorbește despre o medie, nu despre un plafon, și cere conectori când spargi fraza, ca să nu se piardă relațiile logice. Frazele cu relative și gerunzii în lanț se sparg cel mai des, iar o frază lungă cu un singur fir e bună.
 - Sursă: Mic ghid CE p. 6 (Rec. 4)
 
@@ -190,7 +190,7 @@ Slab:
 
 Bun:
 
-> Trebuie să reducem timpul de răspuns de la zece zile la trei. Primul pas: să mutăm cererile pe un singur formular.
+> Trebuie să [de completat: ce schimbăm concret, de la ce cifră la ce cifră]. Primul pas: [de completat: acțiunea concretă și cine o face].
 
 Ce pui în loc: cifra, data, persoana și acțiunea. Dacă nu le ai din sursă, lași „[de completat: …]” și nu le inventezi.
 
@@ -226,7 +226,7 @@ Ce pui în loc: cifra, data, persoana și acțiunea. Dacă nu le ai din sursă, 
 
 ### RO-STI-049 Limbajul corporatist umflat
 - Nivel: recomandare
-- Greșit: „Livrăm rezultate palpabile de excepție prin sublinieri strategice.” → Corect: „Reducem costul cu [de completat: cât], în [de completat: cât timp].”
+- Greșit: „Livrăm rezultate palpabile de excepție prin sublinieri strategice.” → Corect: „Obținem [de completat: ce rezultat concret și cât de mare], în [de completat: cât timp].”
 - De ce: Formulările corporatiste abstracte, fără conținut verificabil („rezultate palpabile de excepție”, „livrează excelență”), se înlocuiesc cu varianta concretă: ce anume, cât, când. Ghidul spune că un limbaj abstract abundent îl poate face pe cititor să creadă că motivele autorului sunt îndoielnice. Terminologia de specialitate folosită precis nu intră aici.
 - Sursă: Mic ghid CE p. 9 (Rec. 7)
 
@@ -244,7 +244,7 @@ Ce pui în loc: cifra, data, persoana și acțiunea. Dacă nu le ai din sursă, 
 
 ### RO-STI-028 Cuvinte vagi: „ceva”, „cumva”, „oarecum”, „într-un fel”
 - Nivel: recomandare
-- Greșit: „Proiectul întâmpină ceva dificultăți.” → Corect: „Proiectul întârzie din cauza [de completat: dificultatea concretă].”
+- Greșit: „Proiectul întâmpină ceva dificultăți.” → Corect: „Proiectul întâmpină [de completat: dificultățile concrete].”
 - De ce: Când cuvintele vagi țin locul unei informații pe care autorul o are, scrii informația concretă. Rămân când obiectul nu e cunoscut sau când atenuarea e voită și onestă. Cuvintele în sine sunt corecte.
 - Sursă: Mic ghid CE p. 9 (Rec. 7); DEX ’98 s.v. cumva, oarecum
 
@@ -396,4 +396,4 @@ Prima variantă ține subiectul la sfârșit, în spatele a două circumstanțe,
 
 ## 10. Ce nu există
 
-Pentru română nu există o formulă de lizibilitate validată: LEMI, cea mai cunoscută, a fost făcută pentru literatura de copii. De aceea nu calculezi scoruri de lizibilitate și nu raportezi „nivel de lectură”. Judeci citind: fraza se înțelege la prima lectură? se vede cine face ce?
+Pentru română nu există o formulă de lizibilitate validată pentru textele de uz general (presă, site-uri, documentație): LEMI, cea mai cunoscută, a fost făcută și validată pentru literatura de copii. De aceea nu calculezi scoruri de lizibilitate și nu raportezi „nivel de lectură”. Judeci citind: fraza se înțelege la prima lectură? se vede cine face ce?

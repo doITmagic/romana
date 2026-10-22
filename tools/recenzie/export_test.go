@@ -8,6 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"github.com/doITmagic/romana/tools/evals"
 )
 
 // scrie creează un fișier de test în dir (cu directoare intermediare).
@@ -705,7 +707,7 @@ func TestExportaCazuriContinut(t *testing.T) {
 		t.Errorf("conținutul trebuie să înceapă cu intrarea:\n%s", c.Continut)
 	}
 	o := by["corectura-001"]
-	for _, s := range []string{"El a facut asta și a plecat.", "„facut” — normă, gramatică", "Nu are voie să semnaleze: „plecat”", "Trebuie să apară: „făcut”"} {
+	for _, s := range []string{"El a facut asta și a plecat.", "„facut” — normă, gramatică", "Nu are voie să schimbe: „plecat”", "Trebuie să apară: „făcut”"} {
 		if !strings.Contains(o.Continut, s) {
 			t.Errorf("corectura-001 fără %q:\n%s", s, o.Continut)
 		}
@@ -718,6 +720,26 @@ func TestExportaCazuriContinut(t *testing.T) {
 	}
 	if by["trigger-001"].Titlu != "trigger · trigger" {
 		t.Errorf("titlu trigger: %q", by["trigger-001"].Titlu)
+	}
+}
+
+func TestContinutCazEtichetaInterzisDupaMod(t *testing.T) {
+	for mod, eticheta := range map[string]string{
+		"verificare": "Nu are voie să semnaleze: „plecat”",
+		"corectura":  "Nu are voie să schimbe: „plecat”",
+		"redactare":  "Nu trebuie să apară în textul produs: „plecat”",
+	} {
+		c := evals.Caz{ID: "x", Mod: mod, Intrare: "El a plecat.", Sursa: "S", Licenta: "MIT",
+			Asteptat: evals.Asteptat{Interzis: []string{"plecat"}}}
+		got := continutCaz(c)
+		if !strings.Contains(got, eticheta) {
+			t.Errorf("%s: lipsește %q:\n%s", mod, eticheta, got)
+		}
+		for _, alta := range []string{"Nu are voie să semnaleze", "Nu are voie să schimbe", "Nu trebuie să apară în textul produs"} {
+			if !strings.HasPrefix(eticheta, alta) && strings.Contains(got, alta) {
+				t.Errorf("%s: eticheta altui mod %q:\n%s", mod, alta, got)
+			}
+		}
 	}
 }
 

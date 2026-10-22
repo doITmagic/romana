@@ -20,7 +20,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** *Dicționarul ortografic, ortoepic și morfologic al limbii române*, Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”.
 - **Ediție:** a III-a, revăzută și adăugită, Univers Enciclopedic Gold, București, 2021.
 - **Statut:** normă, pentru ortografie, ortoepie și morfologie (forme, accent, articulare, plural). Forma marcată cu asterisc este greșeală, chiar dacă o notă o introduce prin „de evitat”.
-- **Ce nu spune:** nu dă sensuri și nu e un dicționar explicativ. Absența unui cuvânt nu dovedește că e greșit, pentru că dicționarul nu cuprinde tot lexicul. Recomandările lui („de preferat”) nu fac din cealaltă variantă o greșeală. Nu spune nimic despre stil, topică sau claritate.
+- **Ce nu spune:** nu e un dicționar explicativ: indicațiile de sens sunt sumare și servesc doar la identificarea cuvântului (Îndrumări §5.3). Absența unui cuvânt nu dovedește că e greșit, pentru că dicționarul nu cuprinde tot lexicul. Recomandările lui („de preferat”) nu fac din cealaltă variantă o greșeală. Despre stil și claritate spune puțin: mărcile de registru (Îndrumări §5.2) și câteva observații și recomandări (cap. 6).
 - **Verificare:** multe trimiteri la paragraf sunt marcate „(nereverificat local)”.
 
 ### DOOM 2
@@ -31,7 +31,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 
 ### ÎOOP6
 - **Titlu:** *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, coordonat de Gabriela Pană Dindelegan. În unele locuri titlul apare prescurtat („…ortoepic și de punctuație”).
-- **Ediție:** a VI-a, Univers Enciclopedic, București, 2024. Prima ediție datează din 1960, iar a cincea din 1995.
+- **Ediție:** a VI-a, Univers Enciclopedic Gold, București, 2024. Prima ediție datează din 1960, iar a cincea din 1995.
 - **Statut:** normă, pentru ortografie, ortoepie, morfologie și punctuație (virgula, linia de pauză, ghilimelele). A fost pus de acord cu DOOM 3.
 - **Ce nu spune:** nu e dicționar: nu dă sensuri. Despre claritate sau stil spune puțin. Unele trimiteri la pagină sunt marcate „(nereverificat local)”.
 
@@ -41,7 +41,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** *Dicționarul explicativ al limbii române*, Academia Română, Institutul de Lingvistică „Iorgu Iordan”.
 - **Ediție:** a II-a, Univers Enciclopedic, București, 1998.
 - **Statut:** descriptiv. Dă sensurile, mărcile de registru (fam., pop., reg., arg., înv.) și variantele. Sensul din DEX ’98 decide dacă un cuvânt „înseamnă” ceva, dar pentru formă are prioritate DOOM 3.
-- **Ce nu spune:** nu cuprinde cuvintele sau sensurile apărute după 1998 (multe din informatică sau din uzul recent). Absența unui sens de acolo nu dovedește că sensul e greșit; la regulile de sens, un sens neatestat aici sau în DOOM 3 e recomandare (prieten fals), nu normă; un sens atestat în DEX ’98 sau în DOOM 3 nu e greșeală. Nu e normă ortografică.
+- **Ce nu spune:** nu cuprinde cuvintele sau sensurile apărute după 1998 (multe din informatică sau din uzul recent). Absența unui sens de acolo nu dovedește că sensul e greșit; la regulile de sens, un sens neatestat aici sau în DOOM 3 e recomandare (prieten fals), nu normă; un sens atestat în DEX ’98 sau în DOOM 3 nu e greșeală, cu excepția lui „bilion”, care se corectează în „miliard” prin decizia proprietarului skill-ului (RO-CAL-053). Nu e normă ortografică.
 
 ### DEX ’96
 - **Titlu:** *Dicționarul explicativ al limbii române*.
@@ -96,7 +96,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 ### Manuale aprobate de Ministerul Educației
 - **Titluri:** *Gramatica aplicată a limbii române*, clasa a IX-a (M.-C. Anisie, A. Ciobotaru, M. Lascăr, M.-R. Nedea, A.-D. Petrache, C. Pleșa), Editura Didactică și Pedagogică, 2026; manualele de *Limba și literatura română* pentru clasele a V-a (2022), a VI-a (2023) și a VII-a (2024), Editura Art Klett (F. Sâmihăian, S. Dobra, M. Halaszi, A. Davidoiu-Roman, H. Corcheș), și pentru clasa a VI-a, Editura Didactică și Pedagogică, 2023 (M. Norel, P. Bucurenciu, M. Dragu).
 - **Statut:** descriptiv-didactic, aplică norma academică; aprobate de Ministerul Educației. Se citează la pagină (*Gramatica aplicată*) sau la lecție (manualele Art Klett și EDP de gimnaziu).
-- **Ce nu spun:** nu sunt norme ale limbii; unde diferă de DOOM 3 sau de ÎOOP6, contează acestea. Exercițiile de corectare nu au cheie de răspuns în textul consultat, așa că un exercițiu arată ce socotește manualul greșeală, dar nu e dovadă. Manualele diferă între ele (de exemplu la pronumele subiect exprimat în plus), iar un singur manual nu face dintr-o preferință o normă. Nu tratează stilul, claritatea sau calcurile din engleză.
+- **Ce nu spun:** nu sunt norme ale limbii; unde diferă de DOOM 3 sau de ÎOOP6, contează acestea. Exercițiile de corectare nu au cheie de răspuns în textul consultat, așa că un exercițiu arată ce socotește manualul greșeală, dar nu e dovadă. Manualele diferă între ele (de exemplu la pronumele subiect exprimat în plus), iar un singur manual nu face dintr-o preferință o normă. Despre stil și claritate dau doar noțiuni generale (*Gramatica aplicată*, p. 134–145), fără reguli de redactare; nu tratează calcurile din engleză.
 
 ### GALR
 - **Titlu:** *Gramatica limbii române*, 2 vol. (*Cuvântul*, *Enunțul*), Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, Editura Academiei Române.
@@ -156,7 +156,7 @@ Toate sunt **descriptive**. Susțin o idee sau o metodă, nu fixează norme.
 - **C. Tintiuc**, „Levels of Text Analysis in the Hierarchy of Linguistic Units”, *Journal of Social Sciences* (Universitatea Tehnică a Moldovei), vol. 3, nr. 2, 2020, p. 68–79. Despre text ca unitate, coeziune, coerență, temă și remă. **Nu spune** nimic specific despre română; e în limba engleză și teoretică.
 - **A. N. Pavel Dicu**, „Conectorii aditivi și rolul lor în argumentare. Echivalențe semantico-pragmatice spaniolă–română”, 2015, p. 106–108. Despre conectori. **Nu spune** ce conector e potrivit în ce gen românesc; compară cu spaniola.
 - **L. Pop**, „Mărci lingvistice și orientare discursivă”, 2010, p. 228. Despre mărcile discursive și corespondența timpurilor. **Nu spune** reguli de redactare.
-- **S. C. Semeniuc**, „Clișeul în politica și în presa românească posttotalitară”, 2017. Despre clișeul verbal în limbajul politic și publicistic. **Nu spune** care clișee sunt greșeli. Trimiterea e marcată „(nereverificat local)”.
+- **S. C. Semeniuc**, „Clișeul în politica și în presa românească posttotalitară”, volum colectiv, Institutul European, 2011, p. 205–217. Despre clișeul verbal în limbajul politic și publicistic. **Nu spune** care clișee sunt greșeli.
 - **A. Grădinaru**, „Valori semantico-stilistice ale paronimiei”, 2006, p. 143–144. Despre paronimie. **Nu spune** care perechi de paronime se confundă în mod obișnuit.
 - **F. Thom**, *Limba de lemn*, traducere de Mona Antohi, Humanitas, București, 1993. Despre limba de lemn a regimurilor de tip sovietic (originalul francez e din 1987). **Nu spune** nimic despre româna de azi în afara exemplului istoric. Marcat „(nereverificat local)”.
 - **R. Zafiu**, articole („Datorie suverană”, „Plus că…”) despre uz și norme. Comentarii ale unei lingviste; locul și anul apariției nu au putut fi confirmate. **Nu sunt** norme.
@@ -199,6 +199,6 @@ Câmpul „Sursă” poate spune și că regula nu are o sursă externă. Înțe
 ## Ce nu este acoperit
 
 - Pentru italiană nu e citată nicio sursă specifică; sensul italian al prietenilor falși din [limbi-sursa/it.md](limbi-sursa/it.md) e marcat „(nereverificat local)”, iar sensul românesc e verificat în DEX ’98.
-- Pentru germană, studiile contrastive citate nu au putut fi deschise; regulile din [limbi-sursa/de.md](limbi-sursa/de.md) rămân recomandări.
+- Pentru germană, studiile contrastive citate nu au putut fi deschise; regulile din [limbi-sursa/de.md](limbi-sursa/de.md) care se sprijină doar pe ele rămân recomandări.
 - Pentru texte de presă, vezi „Surse de presă (neverificate)”.
 - Cărțile și textul DOOM, ÎOOP sau al dicționarelor nu intră în pachet; se citează doar la paragraf, pagină sau cuvânt.

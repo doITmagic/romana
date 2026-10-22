@@ -24,7 +24,7 @@ Cum decizi dacă un substantiv are nevoie de „de” după numeral:
 1. Iei ultimele două cifre ale numărului întreg: 20, 120 și 1.500 se termină în 20, 20 și 00.
 2. Dacă formează un număr de la 20 la 99 sau 00, pui „de”: „20 de elevi”, „120 de fișiere”, „1.500 de cazuri”, „100 de euro”.
 3. Dacă formează un număr de la 01 la 19, nu pui „de”: „19 persoane”, „101 ani”, „105 cazuri”, „201 ani”.
-4. Înaintea unui simbol sau a unei abrevieri nu scrii „de”: „20 kg”, „20 EUR”.
+4. Înaintea unui simbol de unitate sau de monedă nu scrii „de”: „20 kg”, „20 EUR”. Siglele folosite ca substantive îl primesc: „20 de ONG-uri”.
 5. După „milioane”, „miliarde” și „mii” scrise în cuvinte pui „de” și înaintea substantivului următor: „20 de milioane de locuitori”.
 6. Datele și anii nu intră sub regulă: „20 mai”, „anul 2020”.
 
@@ -41,7 +41,7 @@ Bun:
 ### RO-NUM-001 „De” după numeralul care se termină în 20–99 sau 00
 - Nivel: normă
 - Greșit: „1.500 cazuri noi” → Corect: „1.500 de cazuri noi”
-- De ce: Decid ultimele două cifre. Când ele fac 20 sau mai mult, inclusiv 00, substantivul primește „de”: „20 de elevi”, „25 de persoane”, „1.500 de cazuri”, „100 de euro”, „300 de persoane”. Când fac de la 01 la 19, „de” nu se pune: „19 persoane”, „101 ani”, „201 ani”. Lista lungă de exemple din ghiduri nu înlocuiește regula: o aplici la orice număr.
+- De ce: Decid ultimele două cifre. Când ele fac 20 sau mai mult, inclusiv 00, substantivul primește „de”: „20 de elevi”, „25 de persoane”, „1.500 de cazuri”, „100 de euro”, „300 de persoane”. Când fac de la 01 la 19, „de” nu se pune: „19 persoane”, „101 ani”, „201 ani”. La notele școlare și muzicale DOOM 3 admite și „de” („A luat doi de zece”, „Urmează doi de re”): nu le corectezi. Lista lungă de exemple din ghiduri nu înlocuiește regula: o aplici la orice număr.
 - Sursă: INJ p. 84–86; DOOM 3 §6.5.3; ÎOOP6 p. 108; CLDR, reguli de plural ro (categoria few)
 
 ### RO-NUM-002 Fără „de” înaintea unui simbol sau a unei abrevieri
@@ -78,7 +78,7 @@ Bun:
 - **Ora** se spune „ora unu”, „ora două”, „ora douăzeci și unu” („ora una”, „ora doi” sunt considerate greșite).
 - **Numeralul „unu”** când numeri nu devine „unul”: „unu, doi, trei”.
 - **„Procent” și „la sută”** nu se pun împreună („un procent de 25 la sută”): vezi RO-SEM-243 în [paronime-si-pleonasme.md](paronime-si-pleonasme.md). Alegi una dintre forme: „2%”, „doi la sută” sau „două procente”.
-- **Genitivul și dativul cu numeral** se pot face cu „a” („votul a doi senatori”, „dorința a mulți copii”; ÎOOP6 p. 103). Construcțiile cu „la” cu valoare de genitiv sunt neliterare („din cauza la doctor”); „la” cu dativul se admite doar la adjectivele din lista DOOM 3 §6.1.1 (anumit, numeros …). Vezi RO-NUG-024 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md).
+- **Genitivul cu numeral** se face cu „a” („votul a doi senatori”, „dorința a mulți copii”; ÎOOP6 p. 103), iar dativul cu „la” („a spus la cinci persoane”, Coteanu §10.2.3; „dau la câte cinci”, ÎOOP6 p. 108). Construcțiile cu „la” cu valoare de genitiv sunt neliterare („din cauza la doctor”); la adjectivele nehotărâte, „la” cu dativul se admite doar pentru lista DOOM 3 §6.1.1 (anumit, numeros …). Vezi RO-NUG-024 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md).
 
 Slab:
 
@@ -97,8 +97,8 @@ Bun:
 ### RO-NUM-006 Formele numeralelor 14–18
 - Nivel: normă
 - Greșit: „optisprezece” → Corect: „optsprezece”
-- De ce: Numeralele 17 și 18 au structura șapte/opt + spre + zece: „șaptesprezece”, „optsprezece”. Formele „optisprezece”, „optâsprezece” și „șaptisprezece” sunt pronunții greșite. Nu confunda cu variantele admise: „paisprezece/patrusprezece”, „șaisprezece/șasesprezece”, „șaizeci/șasezeci” sunt perechi atestate în dicționare, deci niciuna nu se corectează. Formele populare („unșpe”, „douășunu”) aparțin registrului familiar; nu le schimbi în citat.
-- Sursă: B. Croitor et al., 2014; DOOM 3, s.v. optsprezece, paisprezece; DEX ’98, s.v. paisprezece, șaisprezece, șaizeci
+- De ce: Numeralele 17 și 18 au structura șapte/opt + spre + zece: „șaptesprezece”, „optsprezece”. Formele „optisprezece”, „optâsprezece” și „șaptisprezece” sunt pronunții greșite. „Patrusprezece”, „șasesprezece” și „șasezeci” apar doar ca variante în unele dicționare (DEX ’98, MDA2); DOOM 3 și Croitor et al. dau ca forme corecte „paisprezece”, „șaisprezece”, „șaizeci”. Pe acestea le propui, fără să tratezi variantele ca greșeli de normă. Formele populare („unșpe”, „douășunu”) aparțin registrului familiar; nu le schimbi în citat.
+- Sursă: B. Croitor et al., 2014; DOOM 3, s.v. optsprezece, paisprezece; DEX ’98, s.v. paisprezece, șaisprezece; MDA2, s.v. șaizeci
 
 ### RO-NUM-007 Ordinalele cu „cinci” și „opt”
 - Nivel: normă
@@ -262,8 +262,8 @@ Bun:
 
 ### RO-NUM-056 „În jurul orei 19:02”: aproximare și minut exact
 - Nivel: recomandare
-- Greșit: „Spre seară, în jurul orei 19:02, animalul stătea din nou pe autostradă.” → Corect: „Spre seară, în jurul orei 19, animalul stătea din nou pe autostradă.”
-- De ce: Sursa spune „gegen 19:02 Uhr”, deci aproximarea e în original și „în jurul orei 19:02” este traducerea fidelă; nu o transformi în oră exactă („la 19:02”), căci ai schimba certitudinea sursei (RO-FID). Doar că „în jurul” cu minut exact sună contradictoriu în română. Pentru lizibilitate rotunjești: „în jurul orei 19”, „puțin după ora 19”. „La 19:02” rămâne pentru cazul în care sursa dă ora exact. „În jurul orei 19:02” nu se raportează ca greșeală de normă.
+- Greșit: „Spre seară, în jurul orei 19:02, animalul stătea din nou pe autostradă.” → Corect: „Spre seară, pe la ora 19:02, animalul stătea din nou pe autostradă.”
+- De ce: Sursa spune „gegen 19:02 Uhr”, deci aproximarea e în original și „în jurul orei 19:02” este traducerea fidelă; nu o transformi în oră exactă („la 19:02”), căci ai schimba certitudinea sursei (RO-FID). Doar că „în jurul” cu minut exact sună contradictoriu în română. Poți propune un adverb mai firesc („pe la ora 19:02”), dar nu rotunjești ora: ai schimba o cifră a sursei (RO-NUM-048). „La 19:02” rămâne pentru cazul în care sursa dă ora exact. „În jurul orei 19:02” nu se raportează ca greșeală de normă.
 - Sursă: recomandare a skill-ului, fără normă; RO-FID din [fidelitate.md](fidelitate.md); formatul orei: RO-NUM-025
 
 ### RO-NUM-057 Nota germană „2–” nu se transpune ca atare
@@ -324,7 +324,7 @@ Bun:
 ### Metoda: simbol, spațiu, fără punct
 
 - Simbolurile unităților nu au punct și nu se acordă: km, kg, m, h, ha, l, MHz, km/h. Literele sunt cele din Sistemul Internațional: kg cu k mic, W și A cu majusculă (vin de la nume de oameni).
-- Între număr și simbol se lasă spațiu, de preferință fix: „50 km”, „20 °C”. Fără spațiu se scriu doar simbolul gradului unghiular (45°) și, în tabele dense, valorile lipite.
+- Între număr și simbol se lasă spațiu, de preferință fix: „50 km”, „20 °C”. Fără spațiu se scriu simbolurile gradelor, minutelor și secundelor de arc (45°, 5°31′20″) și, în tabele dense, valorile lipite. La procent sunt corecte ambele forme („63%”, „63 %”, RO-NUM-054).
 - Unitatea se indică după ultima valoare dintr-un șir sau interval: „2,2; 2,4; 2,6 mm”, „de la 5 până la 10 kg”. Excepție: %, °C și °, care se repetă: „de la 65% până la 70%”.
 - Bara oblică ține locul lui „pe” și nu are spații: „km/h”, „EUR/m²”.
 

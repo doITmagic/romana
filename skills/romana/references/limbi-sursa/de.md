@@ -29,7 +29,7 @@ Bun:
 
 > Reforma adoptată joi de Bundestag urmează să intre în vigoare până la sfârșitul anului.
 
-Prima variantă păstrează ordinea germană (atribut lung înaintea substantivului, locuțiunea „în vigoare” despărțită de verb). A doua desface atributul după substantiv și lasă „a intra în vigoare” întreagă. „Soll” poate însemna „trebuie” (obligație) sau „urmează” (plan, relatare); o alegi după context, iar dacă nu se vede cu ce sens e, semnalezi.
+Prima variantă păstrează ordinea germană (complementele atributului puse înaintea participiului, locuțiunea „în vigoare” despărțită de verb). A doua pune participiul imediat după substantiv, cu complementele după el, și lasă „a intra în vigoare” întreagă. „Soll” poate însemna „trebuie” (obligație) sau „urmează” (plan, relatare); o alegi după context, iar dacă nu se vede cu ce sens e, semnalezi.
 
 ### Cum recunoști fraza germană
 
@@ -187,11 +187,11 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 - De ce: „Es kommt immer wieder vor” spune că se repetă, fără să promită intervale. „Periodic” înseamnă „care se repetă regulat, la intervale de timp egale” (DEX ’98), deci sugerează o regularitate pe care sursa nu o are. În uz, „periodic” apare și în sensul „din când în când” („verificat periodic”), așa că nu e greșeală de normă; alegi „din când în când”, „cu repetiție”, „tot mai des” (dacă sursa spune asta) când vrei să rămâi fidel sursei.
 - Sursă: DEX ’98 s.v. periodic
 
-### RO-CAL-626 „Gingen ein”: nu „au venit”
-- Nivel: recomandare
-- Greșit: „Cu puține zile în urmă au venit semnalări de lângă Marea Baltică.” → Corect: „Cu puține zile în urmă au fost primite semnalări de lângă Marea Baltică.”
-- De ce: „Sichtungen gingen ein” folosește „eingehen” în sensul de birou „a ajunge la destinatar” (Duden): mesajele ajung la poliție. Calcul este doar „au venit”; „semnalări” e corect (DEX ’98: a semnala = a aduce la cunoștință, a menționa). Româna spune „poliția a primit semnalări” sau „au fost primite semnalări”. Nu e greșeală de dicționar, deci nu o ridici la normă; nu corectezi „semnalări” și nici o construcție românească de origine, fără urmă de original german.
-- Sursă: Duden s.v. eingehen (nereverificat local); DEX ’98 s.v. semnala
+### RO-CAL-626 „Gingen ein”: „au venit” e corect
+- Nivel: ce nu e greșeală
+- Corect: „Cu puține zile în urmă au venit semnalări de lângă Marea Baltică.” (pentru „Sichtungen gingen ein”). Nu o corectezi; și „au fost primite semnalări” e corect.
+- De ce: „Sichtungen gingen ein” folosește „eingehen” în sensul de birou „a ajunge la destinatar” (Duden): mesajele ajung la poliție. „A veni” are în română chiar acest sens: „(Despre obiecte) a fi adus, trimis, expediat de cineva, de undeva” (DEX ’98 s.v. veni, 2), deci „au venit semnalări” nu e calc. „Semnalări” e corect (DEX ’98: a semnala = a aduce la cunoștință, a menționa).
+- Sursă: Duden s.v. eingehen (nereverificat local); DEX ’98 s.v. veni, semnala
 
 ### RO-CAL-627 „Standort”: „uzină” sau „sediu”, nu „locație”
 - Nivel: recomandare
@@ -201,8 +201,8 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 
 ### RO-CAL-628 „Ortszeit”: ora locală, când locul nu reiese
 - Nivel: de semnalat
-- Greșit: „Decretul a fost publicat vineri, ora locală.” → Corect: „Decretul a fost publicat vineri (ora Washingtonului).”
-- De ce: „Am Freitag (Ortszeit)” înseamnă „vineri după ora locului de care e vorba”. „Vineri, ora locală” e formulă curentă în relatările de agenție despre evenimente externe și nu e greșeală când locul reiese din context (un decret american, într-un text despre SUA). Semnalezi doar când textul poate fi citit ca ora cititorului sau când mai multe locuri au fusuri diferite; atunci întrebi autorul și, dacă locul e dat în text, îl ancorezi („ora Washingtonului”, „ora SUA”). Nu adaugi tu un loc pe care sursa nu-l dă.
+- Greșit: „Casa Albă a publicat decretul vineri, ora locală, iar Beijingul a reacționat sâmbătă.” → Corect: „Casa Albă a publicat decretul vineri (ora Washingtonului), iar Beijingul a reacționat sâmbătă.”
+- De ce: „Am Freitag (Ortszeit)” înseamnă „vineri după ora locului de care e vorba”. „Vineri, ora locală” e formulă curentă în relatările de agenție despre evenimente externe și nu e greșeală când locul reiese din context (un decret american, într-un text despre SUA). Semnalezi doar când textul poate fi citit ca ora cititorului sau când mai multe locuri au fusuri diferite; atunci întrebi autorul și, dacă locul e dat în text, îl ancorezi („ora Washingtonului”). Nu adaugi tu un loc pe care sursa nu-l dă.
 - Sursă: recomandare a skill-ului, fără normă; claritatea referinței (RO-COE din [coerenta.md](../coerenta.md))
 
 ### RO-CAL-629 „Angeblich”, „vermeintlich”: nu dispar în traducere

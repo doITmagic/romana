@@ -11,15 +11,14 @@
     "observatii": [
       {
         "fragment": "Utilizator {nume} a fost adăugat",
-        "nivel": "normă",
+        "nivel": "recomandare",
         "pilon": "gramatică"
       }
     ],
     "cerut": [
       "{nume}",
       "{echipa}",
-      "{count, plural, one {# fișier} few {# fișiere} other {# de fișiere}}",
-      "Utilizatorul {nume}"
+      "{count, plural, one {# fișier} few {# fișiere} other {# de fișiere}}"
     ]
   }
 }

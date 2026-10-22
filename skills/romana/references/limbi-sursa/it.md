@@ -16,16 +16,16 @@ Abrevierile din câmpul „Sursă”: DEX ’98 = *Dicționarul explicativ al li
 Italiana folosește condiționalul în două feluri pe care româna nu le acoperă cu același mod: pentru o informație nesigură, din presă („sarebbe stato arrestato”), și pentru viitorul văzut din trecut („disse che sarebbe venuto”). Româna folosește condiționalul în vorbirea indirectă pentru prezumție: ideea că vorbitorul nu garantează ce relatează (Coteanu, §20). De aceea o traducere mecanică schimbă sensul în al doilea caz și poate adăuga atribuire în primul.
 
 ### RO-CAL-701 „Condizionale giornalistico”: nesiguranța se păstrează, atribuirea nu se inventează
-- Nivel: recomandare
+- Nivel: normă
 - Corect: „Bărbatul ar fi fost arestat.” (pentru „sarebbe stato arrestato”, fără sursă numită). Nu „Bărbatul a fost arestat.”
 - De ce: Originalul prezintă informația ca nesigură, fără certificare; traducerea la indicativ ar face-o mai sigură decât e (RO-FID-021 din [fidelitate.md](../fidelitate.md)). Româna are aceeași valoare, prezumtivul: „ar fi fost arestat” prezintă acțiunea ca presupusă (DEX ’98). Dacă originalul numește sursa, o păstrezi („potrivit poliției, a fost arestat” sau „ar fi fost arestat, potrivit poliției”). Dacă nu o numește, nu o adaugi. Condiționalul cu sursa numită e corect (RO-NUG-070 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
-- Sursă: DEX ’98 s.v. prezumtiv; Coteanu, §20 (condiționalul și optativul); regulă de fidelitate a skill-ului (sensul italian nereverificat local)
+- Sursă: DEX ’98 s.v. prezumtiv; Coteanu, §20 (condiționalul și optativul); regulă de fidelitate a skill-ului (P0, vezi [fidelitate.md](../fidelitate.md); sensul italian nereverificat local)
 
 ### RO-CAL-703 „Disse che sarebbe venuto”: viitorul din trecut nu se traduce prin „ar fi”
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „A spus că ar fi venit.” → Corect: „A spus că va veni.”
 - De ce: În italiană condizionale composto poate exprima viitorul văzut din trecut („disse che sarebbe venuto”). În română, „ar fi venit” după „a spus că” înseamnă că cel care relatează se îndoiește că persoana a venit (prezumție, Coteanu, §20). Pentru viitorul din trecut spui „a spus că va veni” sau „a spus că are să vină”. Cauți în context care din cele două valori are originalul; dacă nu se vede, semnalezi fraza.
-- Sursă: Coteanu, §20.1 (condiționalul prezent; ideea de prezumție în vorbirea indirectă, pe care exemplul cu condiționalul trecut o extinde); regulă de fidelitate a skill-ului (valoarea italiană nereverificată local)
+- Sursă: Coteanu, §20.1 (condiționalul prezent; ideea de prezumție în vorbirea indirectă, pe care exemplul cu condiționalul trecut o extinde); regulă de fidelitate a skill-ului (P0, vezi [fidelitate.md](../fidelitate.md); valoarea italiană nereverificată local)
 
 ## Prieteni falși italo-români
 
@@ -55,11 +55,11 @@ Fiecare regulă are sensul românesc verificat în DEX ’98. Nivelul e recomand
 - De ce: Italianul „firma” este în primul rând „semnătura”. În română „firmă” este inscripția de la intrarea unui magazin sau denumirea sub care funcționează o întreprindere (DEX ’98); „semnătura” este „numele scris de mână sub un act”. Dacă originalul folosește sensul italian, o traducere care păstrează cuvântul duce cititorul român la alt fapt: e și abatere de fidelitate (normă, P0, vezi [fidelitate.md](../fidelitate.md)).
 - Sursă: DEX ’98 s.v. firmă, semnătură (sensul italian nereverificat local)
 
-### RO-CAL-707 „Confetti” nu înseamnă „confeti”
+### RO-CAL-707 „Confetti” italian nu înseamnă „confetti” românesc
 - Nivel: recomandare
-- Greșit: „La botez, invitații au primit confeti.” → Corect: „La botez, invitații au primit drajeuri.”
-- De ce: Italianul „confetti” sunt migdale glazurate, oferite la nunți și botezuri. În română „confeti” (scris și „confetti”) sunt „bucățele rotunde de hârtie colorată, aruncate la baluri și petreceri” (DEX ’98); „drajeu” este bomboana făcută dintr-o migdală acoperită cu glazură. Hârtia colorată se numește în italiană „coriandoli”. Dacă originalul folosește sensul italian, o traducere care păstrează cuvântul duce cititorul român la alt fapt: e și abatere de fidelitate (normă, P0, vezi [fidelitate.md](../fidelitate.md)).
-- Sursă: DEX ’98 s.v. confeti, drajeu (sensul italian nereverificat local)
+- Greșit: „La botez, invitații au primit confetti.” → Corect: „La botez, invitații au primit drajeuri.”
+- De ce: Italianul „confetti” sunt migdale glazurate, oferite la nunți și botezuri. În română „confetti” (DOOM 3; DEX ’98 îl dă la „confeti”) sunt „bucățele rotunde de hârtie colorată, aruncate la baluri și petreceri” (DEX ’98); „drajeu” este bomboana făcută dintr-o migdală acoperită cu glazură. Hârtia colorată se numește în italiană „coriandoli”. Dacă originalul folosește sensul italian, o traducere care păstrează cuvântul duce cititorul român la alt fapt: e și abatere de fidelitate (normă, P0, vezi [fidelitate.md](../fidelitate.md)).
+- Sursă: DOOM 3 s.v. confetti; DEX ’98 s.v. confeti, drajeu (sensul italian nereverificat local)
 
 ### RO-CAL-708 „Stampa” nu înseamnă „stampă”
 - Nivel: recomandare

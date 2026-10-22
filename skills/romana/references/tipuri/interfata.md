@@ -304,7 +304,7 @@ Un șir cu valoare inserată (`%{nume}`, `{count}`, `%(autor)s`) se scrie astfel
 - Nivel: normă
 - Greșit: „<0>Citește</0> {{nume}}” → Corect: „<0>Citește</0> {{name}}”
 - De ce: Etichetele numerotate (`<0>…</0>`) și variabilele (`{{name}}`) se reproduc exact, în aceeași formă și în același număr ca în sursă. Traduci textul dintre ele, nu marcajul.
-- Sursă: ICU
+- Sursă: regula de fidelitate din SKILL.md (marcajul rămâne neatins); sintaxa din exemplu e a i18next, convenție de localizare, fără normă
 
 ### RO-INT-051 Textele comparate de teste nu se traduc
 - Nivel: de semnalat

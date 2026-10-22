@@ -33,11 +33,32 @@
         "fragment": "care poată servi",
         "nivel": "normă",
         "pilon": "gramatică"
+      },
+      {
+        "fragment": "workshop-uri",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "Behaviour - CIB)\n",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "Behaviour - CIB),",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "DSA - Regulamentului",
+        "nivel": "normă",
+        "pilon": "tipografie"
       }
     ],
     "cerut": [
       "De asemenea",
-      "care să poată servi"
+      "care să poată servi",
+      "workshopuri"
     ]
   }
 }

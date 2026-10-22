@@ -16,7 +16,7 @@
       },
       {
         "fragment": "numai avem acces",
-        "nivel": "normă",
+        "nivel": "de semnalat",
         "pilon": "gramatică"
       },
       {
@@ -27,7 +27,6 @@
     ],
     "cerut": [
       "niciun motiv",
-      "nu mai avem acces",
       "o dată"
     ]
   }

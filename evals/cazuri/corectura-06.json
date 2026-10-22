@@ -11,12 +11,12 @@
     "observatii": [
       {
         "fragment": "1,500 MB",
-        "nivel": "normă",
+        "nivel": "de semnalat",
         "pilon": "tipografie"
       },
       {
         "fragment": "\"Import\"",
-        "nivel": "normă",
+        "nivel": "recomandare",
         "pilon": "tipografie"
       },
       {
@@ -24,10 +24,6 @@
         "nivel": "normă",
         "pilon": "coerență"
       }
-    ],
-    "cerut": [
-      "1.500 MB",
-      "„Import”"
     ]
   }
 }

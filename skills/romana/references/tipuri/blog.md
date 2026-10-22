@@ -49,7 +49,7 @@ Fiecare detaliu din varianta bună vine din ce a povestit autorul. Fără ele, v
 
 ### RO-STI-705 „A învățat o lecție importantă”
 - Nivel: recomandare
-- Greșit: „Din această experiență am învățat o lecție importantă.” → Corect: „De atunci verific două ori fiecare factură.”
+- Greșit: „Din această experiență am învățat o lecție importantă.” → Corect: „De atunci verific de două ori fiecare factură.”
 - De ce: Concluzia anunțată („o lecție importantă”) îi ia cititorului deducția. Dacă autorul îți dă ce a învățat, spui asta direct; dacă nu, lași cititorul să deducă. Expresia e corectă (DEX ’98, „lecție”) și nu e calc.
 - Sursă: DEX ’98 s.v. lecție
 
