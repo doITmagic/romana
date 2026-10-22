@@ -1,0 +1,76 @@
+name: release
+
+# Se declanșează doar la un tag de versiune (v*). Nu face nicio cerere către
+# dexonline.ro: binarul se construiește din sursele din repo.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  construieste:
+    name: ${{ matrix.os }}/${{ matrix.arch }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [linux, darwin, windows]
+        arch: [amd64, arm64]
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-go@v5.5.0
+        with:
+          go-version-file: go.mod
+      - name: Construiește binarul și arhiva
+        env:
+          CGO_ENABLED: "0"
+          GOOS: ${{ matrix.os }}
+          GOARCH: ${{ matrix.arch }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          set -eu
+          mkdir -p dist pachet
+          if [ "$GOOS" = "windows" ]; then BIN=romana.exe; else BIN=romana; fi
+          # Fără variabila, -X ar fi ignorat în tăcere: oprim build-ul.
+          grep -rqE '^var versiune\b|^\s+versiune\s+=' cmd/romana || { echo "lipsește var versiune în cmd/romana"; exit 1; }
+          go build -trimpath -ldflags "-s -w -X main.versiune=${TAG}" -o "pachet/${BIN}" ./cmd/romana
+          cp LICENSE README.md pachet/
+          NUME="romana_${TAG}_${GOOS}_${GOARCH}"
+          if [ "$GOOS" = "windows" ]; then
+            (cd pachet && zip -q "../dist/${NUME}.zip" ./*)
+          else
+            tar -C pachet -czf "dist/${NUME}.tar.gz" .
+          fi
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: romana_${{ matrix.os }}_${{ matrix.arch }}
+          path: dist/*
+          if-no-files-found: error
+
+  publica:
+    name: publică în GitHub Release
+    needs: construieste
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4.3.0
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Sumele de control
+        working-directory: dist
+        run: |
+          set -eu
+          sha256sum romana_* > SHA256SUMS
+          cat SHA256SUMS
+      - name: Publică
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -eu
+          gh release create "$TAG" dist/* --repo "$REPO" --title "$TAG" --generate-notes

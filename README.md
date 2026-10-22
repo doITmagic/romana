@@ -85,6 +85,39 @@ codex plugin add romana@romana
 
 The local installs above were tested with Claude Code 2.x and codex-cli 0.163. Installing directly from GitHub and through skills.sh (`npx skills add doITmagic/romana`) will be tested once the repository is public.
 
+### The `romana` binary (optional dictionary tool)
+
+The skill and the binary work together or separately. The skill needs no binary; the binary (CLI and MCP server) needs no skill and can be used from a terminal or from any MCP client.
+
+You do not need Go. On Linux and macOS:
+
+```
+curl -fsSL https://raw.githubusercontent.com/doITmagic/romana/main/install.sh | sh
+```
+
+The script picks the right archive from GitHub Releases, checks it against `SHA256SUMS` and installs `romana` into `~/.local/bin` (`ROMANA_DIR` changes the directory, `ROMANA_VERSIUNE` picks a version). It tells you if the directory is not in `PATH`. On Windows, download the `.zip` for your architecture from the Releases page and put `romana.exe` in a directory on `PATH`; the plugin hook does not run on Windows. With Go installed, `go install github.com/doITmagic/romana/cmd/romana@latest` works too.
+
+On first use, `romana cauta`, `romana verifica` and `romana mcp` download the dictionary data by themselves from the official dexonline export (GPL v2+), about 380 MB, and import it into a local SQLite database in roughly one minute. The export and the database are never shipped with romana.
+
+- No network: `--offline` or `ROMANA_FARA_RETEA=1` stops every request.
+- From a file you downloaded yourself: `romana import <dex-database.sql.gz>`.
+- Updates are checked at most once a week; `romana update` checks now.
+- Database path: `--db`, then `$ROMANA_DEX`, then `~/.local/share/romana/dex.sqlite`.
+
+The plugin declares the MCP server and the hook, so they start once the binary is on `PATH`. Without the plugin, register the server by hand:
+
+```
+claude mcp add romana -- romana mcp
+```
+
+and for Codex, in `~/.codex/config.toml`:
+
+```
+[mcp_servers.romana]
+command = "romana"
+args = ["mcp"]
+```
+
 ## How it is tested
 
 `evals/` holds the test cases: 146 public ones, written for this project or taken from CC BY texts, plus a private set of real press and literary texts that stays outside the repository. Every case runs on two engines (Claude and Codex), once with the skill and once without, and is scored mechanically:
