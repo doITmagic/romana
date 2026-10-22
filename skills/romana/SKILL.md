@@ -189,7 +189,7 @@ Regula de bază: ce e obiectiv se corectează, ce ține de gust doar se propune.
 
 ### Ce nu se corectează
 
-Formele de mai jos sunt corecte. Le lași cum sunt, chiar dacă alte ghiduri le condamnă. Lista completă e în [ce-nu-e-greseala.md](references/ce-nu-e-greseala.md).
+Formele de mai jos sunt corecte. Le lași cum sunt, chiar dacă alte ghiduri le condamnă. Lista completă e în [ce-nu-e-greseala.md](references/ce-nu-e-greseala.md) și [ce-nu-e-greseala-stil.md](references/ce-nu-e-greseala-stil.md).
 
 - „a realiza” cu sensul „a-și da seama”; „conform legii” și „conform cu legea”; „unul din” și „unul dintre”; „îmi cer scuze”; „marea majoritate”; „majoritatea a votat” și „majoritatea au votat”;
 - „să fii” la persoana a II-a („Vreau să fii acolo”); „copiii” (pluralul articulat); „a procesa”, „a implementa”, „a rula”, „a downloada”; „per” („prețul per litru”);
@@ -268,22 +268,27 @@ Formatul cerut de aplicație (o schemă JSON, un tabel, câmpuri fixe) are prior
 
 ## Ce fișier citești când
 
-Înainte să scrii, citești fișierul profilului. Înainte de orice corectură sau verificare, citești [ce-nu-e-greseala.md](references/ce-nu-e-greseala.md). Restul fișierelor le deschizi când ajungi la tema lor.
+Înainte să scrii, citești fișierul profilului. Înainte de orice corectură sau verificare, citești [ce-nu-e-greseala.md](references/ce-nu-e-greseala.md) și [ce-nu-e-greseala-stil.md](references/ce-nu-e-greseala-stil.md). Restul fișierelor le deschizi când ajungi la tema lor.
 
 | Fișier | Îl citești când |
 |---|---|
-| [gramatica.md](references/gramatica.md) | verifici acordul, cazurile, genitivul, relativele, formele verbale, negația, topica sau o construcție care pare tradusă |
+| [gramatica.md](references/gramatica.md) | verifici acordul, cazurile, genitivul, relativele, topica sau o construcție care pare tradusă |
+| [gramatica-forme.md](references/gramatica-forme.md) | verifici prepozițiile, conjuncțiile, pronumele, pluralul, genul și articolul substantivelor, formele verbale sau negația |
+| [gramatica-scriere.md](references/gramatica-scriere.md) | verifici scrierea cu „î” și „â”, „sunt”, cratima, cuvintele scrise legat sau separat, abrevierile, despărțirea la capăt de rând sau perechile care se confundă („s-a” / „sa”, „odată” / „o dată”) |
 | [imprumuturi.md](references/imprumuturi.md) | articulezi sau pui la plural un împrumut, alegi între cratimă și scrierea legată, scrii un cuvânt cu prefix |
 | [semantica.md](references/semantica.md) | alegi cuvântul potrivit pentru sens, verifici ce cuvinte merg împreună sau ce prepoziție cere un verb |
 | [paronime-si-pleonasme.md](references/paronime-si-pleonasme.md) | două cuvinte apropiate ca formă se pot confunda sau vrei să numești ceva pleonasm |
-| [prieteni-falsi-si-calcuri.md](references/prieteni-falsi-si-calcuri.md) | un cuvânt seamănă cu unul englezesc și ar putea avea alt sens sau o expresie pare tradusă |
+| [prieteni-falsi-si-calcuri.md](references/prieteni-falsi-si-calcuri.md) | un cuvânt seamănă cu unul englezesc și ar putea avea alt sens |
+| [calcuri.md](references/calcuri.md) | o expresie sau un adjectiv compus pare tradus cuvânt cu cuvânt („a face sens”, „user-friendly”) |
 | [stilistica.md](references/stilistica.md) | lucrezi la registru, la densitatea substantivelor abstracte, la limba de lemn sau la politețea tradusă |
 | [tipare-text-generat.md](references/tipare-text-generat.md) | textul sună generat și vrei să numești exact tiparele |
 | [coerenta.md](references/coerenta.md) | verifici legăturile dintre fraze și paragrafe, conectorii, referința, consecvența sau logica |
 | [registru-si-adresare.md](references/registru-si-adresare.md) | alegi între „tu” și „dumneavoastră”, fixezi nivelul de formalitate sau întâlnești forme familiare ori regionale |
-| [tipografie.md](references/tipografie.md) | verifici diacriticele, ghilimelele, linia de pauză, cratima, apostroful, majusculele sau urmele de chatbot |
+| [tipografie.md](references/tipografie.md) | verifici diacriticele, virgula, ghilimelele, linia de pauză, cratima, apostroful, spațiile sau urmele de chatbot |
+| [majuscule-si-nume.md](references/majuscule-si-nume.md) | verifici majusculele, numele proprii străine, denumirile de state sau localitățile |
 | [numere-date-unitati.md](references/numere-date-unitati.md) | scrii numere, date, ore, procente, unități sau sume |
-| [ce-nu-e-greseala.md](references/ce-nu-e-greseala.md) | vrei să corectezi o formă care doar „sună greșit” sau nu ești sigur că e greșeală |
+| [ce-nu-e-greseala.md](references/ce-nu-e-greseala.md) | vrei să corectezi o formă care doar „sună greșit” sau nu ești sigur că e greșeală: gramatică, sens, împrumuturi |
+| [ce-nu-e-greseala-stil.md](references/ce-nu-e-greseala-stil.md) | la fel, pentru îmbinări care par pleonasme, stil, coerență, tipografie și interfață |
 | [cauta-nu-presupune.md](references/cauta-nu-presupune.md) | întâlnești un cuvânt rar, nou, derivat sau tehnic ori un verb format din engleză |
 | [fidelitate.md](references/fidelitate.md) | rescrii, corectezi sau traduci un text |
 | [tipuri/presa.md](references/tipuri/presa.md) | textul e o știre sau un alt text de presă |

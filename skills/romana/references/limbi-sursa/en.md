@@ -7,7 +7,7 @@ Abrevierile din câmpul „Sursă”: DEX ’98 = *Dicționarul explicativ al li
 ## Cum folosești fișierul
 
 - **La traducere sau adaptare** parcurgi metoda de mai jos, apoi regulile de la sfârșit.
-- **La corectura unui text care sună tradus** cauți semnele: topica străină, substantive abstracte în loc de verbe, conectori din alt registru, expresii traduse cuvânt cu cuvânt. Nu corectezi o frază doar pentru că seamănă cu structura engleză. Ordinea subiect, verb, complement e normală în română (vezi RO-NUG-061 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
+- **La corectura unui text care sună tradus** cauți semnele: topica străină, substantive abstracte în loc de verbe, conectori din alt registru, expresii traduse cuvânt cu cuvânt. Nu corectezi o frază doar pentru că seamănă cu structura engleză. Ordinea subiect, verb, complement e normală în română (vezi RO-NUG-061 din [ce-nu-e-greseala-stil.md](../ce-nu-e-greseala-stil.md)).
 - **În orice caz** fidelitatea față de original e prima condiție. Ce păstrezi și ce nu ai voie să adaugi e în [fidelitate.md](../fidelitate.md).
 
 ## Metoda de traducere

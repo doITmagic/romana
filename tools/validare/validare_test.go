@@ -1,6 +1,8 @@
 package validare
 
 import (
+	"io/fs"
+	"os"
 	"path/filepath"
 	"strings"
 	"testing"
@@ -142,5 +144,62 @@ func TestIdInexistentNuEAvertisment(t *testing.T) {
 	}
 	if len(pr) != 1 || len(av) != 0 {
 		t.Fatalf("așteptam 1 problemă și 0 avertismente: %v / %v", pr, av)
+	}
+}
+
+// copieBun copiază testdata/bun într-un director temporar.
+func copieBun(t *testing.T) string {
+	t.Helper()
+	dst := t.TempDir()
+	err := filepath.WalkDir(filepath.Join("testdata", "bun"), func(cale string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		rel, _ := filepath.Rel(filepath.Join("testdata", "bun"), cale)
+		if d.IsDir() {
+			return os.MkdirAll(filepath.Join(dst, rel), 0o755)
+		}
+		b, err := os.ReadFile(cale)
+		if err != nil {
+			return err
+		}
+		return os.WriteFile(filepath.Join(dst, rel), b, 0o644)
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+	return dst
+}
+
+func adaugaCuvinte(t *testing.T, cale string, n int) {
+	t.Helper()
+	b, err := os.ReadFile(cale)
+	if err != nil {
+		t.Fatal(err)
+	}
+	b = append(b, []byte("\n"+strings.Repeat("cuvânt ", n)+"\n")...)
+	if err := os.WriteFile(cale, b, 0o644); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestLimitaCuvinte(t *testing.T) {
+	d := copieBun(t)
+	adaugaCuvinte(t, filepath.Join(d, "references", "gramatica.md"), maxCuvinteReferinta+1)
+	probleme, err := Pachet(d)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(probleme) != 1 || !strings.Contains(probleme[0].Motiv, "cuvinte") || !strings.HasSuffix(probleme[0].Cale, "gramatica.md") {
+		t.Fatalf("referință prea lungă: %v", probleme)
+	}
+	d = copieBun(t)
+	adaugaCuvinte(t, filepath.Join(d, "SKILL.md"), maxCuvinteSkill+1)
+	probleme, err = Pachet(d)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(probleme) != 1 || !strings.Contains(probleme[0].Motiv, "cuvinte") || probleme[0].Cale != "SKILL.md" {
+		t.Fatalf("SKILL.md prea lung: %v", probleme)
 	}
 }

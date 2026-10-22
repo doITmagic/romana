@@ -19,7 +19,7 @@ La o recomandare, forma din „Greșit” e forma de evitat, nu neapărat o gre�
 
 ## Registrul este o decizie pentru tot produsul
 
-Produsul alege o singură dată între „tu” și „dumneavoastră” și le folosește în toate mesajele, în toate limbile aplicației care folosesc aceeași voce și chiar în aceeași frază. Verbul, imperativul și posesivul urmează alegerea: „Salvează” și „contul tău” cu „tu”, „Salvați” și „contul dumneavoastră” cu „dumneavoastră”. Schimbarea adresării la jumătatea produsului e o rupere de coerență (RO-COE-019 din [coerenta.md](../coerenta.md)); criteriile alegerii sunt în [registru-si-adresare.md](../registru-si-adresare.md). Posesivul care traduce engl. „your” se scurtează când posesorul e clar (RO-CAL-105 din [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md)); „Salvați-vă munca dumneavoastră” e gramatical și cel mult o recomandare de scurtare (RO-SEM-216 din [paronime-si-pleonasme.md](../paronime-si-pleonasme.md)).
+Produsul alege o singură dată între „tu” și „dumneavoastră” și le folosește în toate mesajele, în toate limbile aplicației care folosesc aceeași voce și chiar în aceeași frază. Verbul, imperativul și posesivul urmează alegerea: „Salvează” și „contul tău” cu „tu”, „Salvați” și „contul dumneavoastră” cu „dumneavoastră”. Schimbarea adresării la jumătatea produsului e o rupere de coerență (RO-COE-019 din [coerenta.md](../coerenta.md)); criteriile alegerii sunt în [registru-si-adresare.md](../registru-si-adresare.md). Posesivul care traduce engl. „your” se scurtează când posesorul e clar (RO-CAL-105 din [calcuri.md](../calcuri.md)); „Salvați-vă munca dumneavoastră” e gramatical și cel mult o recomandare de scurtare (RO-SEM-216 din [paronime-si-pleonasme.md](../paronime-si-pleonasme.md)).
 
 ### RO-INT-031 Cererile și întrebările către utilizator, la persoana a II-a
 - Nivel: recomandare
@@ -105,7 +105,7 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 ### RO-INT-036 „Cu succes” ca umplutură
 - Nivel: recomandare
 - Greșit: „Modificările au fost salvate cu succes.” → Corect: „Modificările au fost salvate.”
-- De ce: Dacă mesajul apare după reușită, „cu succes” nu adaugă nimic. E o preferință de concizie: locuțiunea nu e greșită și rămâne firească unde reușita nu reiese din context („a absolvit cu succes”). Despre „Încărcare reușită” vezi RO-NUG-090 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md).
+- De ce: Dacă mesajul apare după reușită, „cu succes” nu adaugă nimic. E o preferință de concizie: locuțiunea nu e greșită și rămâne firească unde reușita nu reiese din context („a absolvit cu succes”). Despre „Încărcare reușită” vezi RO-NUG-090 din [ce-nu-e-greseala-stil.md](../ce-nu-e-greseala-stil.md).
 - Sursă: DEX ’98 s.v. succes
 
 ### RO-INT-058 „Operațiune completă”
@@ -117,7 +117,7 @@ Produsul alege o singură dată între „tu” și „dumneavoastră” și le 
 ### RO-INT-025 Starea goală
 - Nivel: recomandare
 - Greșit: „0 rezultate găsite” → Corect: „Niciun rezultat”
-- De ce: Pentru lista goală se preferă „Niciun rezultat” sau „Nu există rezultate”. „Nu au fost găsite rezultate” e corect și nu se marchează ca greșeală (RO-NUG-089 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)); varianta scurtă e o preferință. Exemplul „Greșit” nu e o greșeală de limbă, ci un mesaj mai puțin natural.
+- De ce: Pentru lista goală se preferă „Niciun rezultat” sau „Nu există rezultate”. „Nu au fost găsite rezultate” e corect și nu se marchează ca greșeală (RO-NUG-089 din [ce-nu-e-greseala-stil.md](../ce-nu-e-greseala-stil.md)); varianta scurtă e o preferință. Exemplul „Greșit” nu e o greșeală de limbă, ci un mesaj mai puțin natural.
 - Sursă: Mic ghid CE p. 4–6 (Rec. 2, 4)
 
 ### RO-INT-022 Zero, cu mesaj propriu
@@ -320,7 +320,7 @@ Româna are trei categorii de plural în CLDR și în ICU: `one`, `few` și `oth
 - `few`: 0, numerele de la 2 la 19 și cele care se termină în 01–19 (101, 119, 1001), plus zecimalele („1,5 fișiere”).
 - `other`: restul (20, 100, 120, 1.000), cu „de” după numeral („20 de fișiere”, „1.000 de fișiere”).
 
-Regula lui „de” e în RO-NUG-031 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md) și în [numere-date-unitati.md](../numere-date-unitati.md).
+Regula lui „de” e în RO-NUG-031 din [ce-nu-e-greseala-stil.md](../ce-nu-e-greseala-stil.md) și în [numere-date-unitati.md](../numere-date-unitati.md).
 
 ### RO-INT-020 Cele trei categorii
 - Nivel: normă

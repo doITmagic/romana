@@ -19,7 +19,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 
 Verbul de declarație spune două lucruri: ce a făcut sursa (a spus, a cerut, a admis) și cum o privește redacția. Verbele neutre (a spune, a declara, a indica, a transmite, a preciza) doar redau. Verbele de distanțare (a susține, a pretinde, a afirma, a acuza) arată rezervă față de ce spune sursa. Verbele de aprobare (a sublinia, a reaminti) îi dau dreptate. Alegi verbul după ce a făcut sursa, nu după ce simți tu față de ea, iar când nu ai alt temei, rămâi la un verb neutru. Un verb care atribuie sursei mai mult decât a făcut ea (o concesie, o dovadă) schimbă sensul; îl semnalezi și întrebi ce a făcut sursa (RO-STI-618).
 
-Markerii de atribuire românești („potrivit”, „conform”, „în opinia”, „după cum a anunțat”) sunt formele obișnuite ale genului și nu se înlocuiesc. Pentru condițional în atribuire („ar fi”), vezi RO-NUG-070 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md).
+Markerii de atribuire românești („potrivit”, „conform”, „în opinia”, „după cum a anunțat”) sunt formele obișnuite ale genului și nu se înlocuiesc. Pentru condițional în atribuire („ar fi”), vezi RO-NUG-070 din [ce-nu-e-greseala-stil.md](../ce-nu-e-greseala-stil.md).
 
 Slab:
 
@@ -70,7 +70,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 ### RO-STI-616 Citatul reproduce exact cuvintele
 - Nivel: normă
 - Greșit: „Ministrul a anunțat că «bugetul crește cu aproximativ cinci la sută și vor fi angajați medici noi».” → Corect: „Ministrul a anunțat că bugetul crește cu aproximativ cinci la sută și că vor fi angajați medici noi.”
-- De ce: În exemplu, ministrul a spus „circa cinci procente”, nu „aproximativ cinci la sută”, deci ghilimelele îi atribuie cuvintele redacției. Fragmentul citat după „că” e corect când reproduce cuvintele exacte și se potrivește cu fraza (RO-STI-604). Ce stă între ghilimele trebuie să fie ce a spus sursa, cu cuvintele ei. Rezumatul, cifra rotunjită sau cuvântul schimbat nu au loc în citat. Dacă ai doar un rezumat, îl scrii fără ghilimele. Când ai sursa, un citat care nu-i reproduce cuvintele e abatere de fidelitate (normă, P0, vezi [fidelitate.md](../fidelitate.md)); fără sursă, nu poți dovedi abaterea și doar semnalezi. Textul citat nu se corectează, în afară de tipografie (RO-NUG-039 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
+- De ce: În exemplu, ministrul a spus „circa cinci procente”, nu „aproximativ cinci la sută”, deci ghilimelele îi atribuie cuvintele redacției. Fragmentul citat după „că” e corect când reproduce cuvintele exacte și se potrivește cu fraza (RO-STI-604). Ce stă între ghilimele trebuie să fie ce a spus sursa, cu cuvintele ei. Rezumatul, cifra rotunjită sau cuvântul schimbat nu au loc în citat. Dacă ai doar un rezumat, îl scrii fără ghilimele. Când ai sursa, un citat care nu-i reproduce cuvintele e abatere de fidelitate (normă, P0, vezi [fidelitate.md](../fidelitate.md)); fără sursă, nu poți dovedi abaterea și doar semnalezi. Textul citat nu se corectează, în afară de tipografie (RO-NUG-039 din [ce-nu-e-greseala-stil.md](../ce-nu-e-greseala-stil.md)).
 - Sursă: Ghidul de jurnalism (ghidjurnalism) (nereverificat local); ghid gov-md §9.8.1; regulă de fidelitate a skillului (P0)
 
 ### RO-STI-607 Tăieturile din citat se marchează cu […]
@@ -116,7 +116,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 ### RO-STI-619 Sigla puțin cunoscută se scrie desfășurat la prima apariție
 - Nivel: recomandare
 - Greșit: „ANRE a anunțat noile tarife. ANRE a mai spus că…” → Corect: „Autoritatea Națională de Reglementare în Domeniul Energiei (ANRE) a anunțat noile tarife. ANRE a mai spus că…”
-- De ce: Regula este RO-TIP-088 din [tipografie.md](../tipografie.md): sigla puțin cunoscută se scrie desfășurat la prima apariție, cu sigla între paranteze, apoi se folosește forma scurtă. Jargonul se tratează la fel (RO-STI-613).
+- De ce: Regula este RO-TIP-088 din [majuscule-si-nume.md](../majuscule-si-nume.md): sigla puțin cunoscută se scrie desfășurat la prima apariție, cu sigla între paranteze, apoi se folosește forma scurtă. Jargonul se tratează la fel (RO-STI-613).
 - Sursă: Mic ghid CE p. 11–13 (Rec. 9)
 
 ## Construcția știrii

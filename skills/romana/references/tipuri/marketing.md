@@ -61,4 +61,4 @@ Registrul liber al marketingului nu acoperă ce contrazice dicționarul. Tiparel
 - limba de lemn, superlativele goale și tiparele textului generat: [stilistica.md](../stilistica.md) și [tipare-text-generat.md](../tipare-text-generat.md);
 - cifrele, prețurile, procentele: [numere-date-unitati.md](../numere-date-unitati.md).
 
-Posesivul din „parola dumneavoastră”, „contul tău” se scurtează când posesorul e clar din context (RO-CAL-105 din [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md)). „Salvați-vă munca dumneavoastră” e gramatical și cel mult o recomandare de scurtare (RO-SEM-216 din [paronime-si-pleonasme.md](../paronime-si-pleonasme.md)).
+Posesivul din „parola dumneavoastră”, „contul tău” se scurtează când posesorul e clar din context (RO-CAL-105 din [calcuri.md](../calcuri.md)). „Salvați-vă munca dumneavoastră” e gramatical și cel mult o recomandare de scurtare (RO-SEM-216 din [paronime-si-pleonasme.md](../paronime-si-pleonasme.md)).

@@ -36,9 +36,9 @@ Two principles run through all of it. A correct form "corrected" into another is
 ```
 skills/romana/
 ├── SKILL.md            the entry point: modes, levels, method, which file to read when
-└── references/         24 files, 853 rules
+└── references/         29 files, 854 rules
     ├── gramatica.md, semantica.md, coerenta.md, stilistica.md, tipografie.md, …
-    ├── ce-nu-e-greseala.md      93 forms that look wrong but are correct
+    ├── ce-nu-e-greseala*.md     99 forms that look wrong but are correct
     ├── limbi-sursa/             calques from English, German and Italian
     └── tipuri/                  conventions for news, marketing, blog, e-mail, UI, docs
 ```
@@ -53,7 +53,7 @@ Each rule has an ID, a level, a wrong → right pair, the reason and the source:
 - Sursă: INJ p. 84–86; DOOM 3 §6.5.3; ÎOOP6 p. 108; …
 ```
 
-Of the 853 rules, 290 are norms, 437 recommendations, 99 "not an error", 20 flags, 6 disputed and 1 avoidable anglicism. The norms rest on DOOM 3 (the official orthographic dictionary, 2021), ÎOOP 6 (the guide to spelling and punctuation, 2024), the explanatory dictionary and the academic grammar. The skill contains rules and examples written for this project; no text is copied from those works.
+Of the 854 rules, 289 are norms, 439 recommendations, 99 "not an error", 20 flags, 6 disputed and 1 avoidable anglicism. The norms rest on DOOM 3 (the official orthographic dictionary, 2021), ÎOOP 6 (the guide to spelling and punctuation, 2024), the explanatory dictionary and the academic grammar. The skill contains rules and examples written for this project; no text is copied from those works.
 
 The skill is self-contained: it needs no network, no local files and no other tool. A container test (`tools/independenta`) checks this before each release.
 

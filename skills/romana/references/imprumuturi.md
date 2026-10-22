@@ -48,7 +48,7 @@ Surse pentru metodă: ghid gov-md §9.11.4, §9.11.5 și §7.2.3; INJ p. 102.
 ### RO-IMP-001 Siglele și abrevierile primesc articolul și pluralul prin cratimă
 - Nivel: normă
 - Greșit: „Am primit trei CVuri și două SMSuri.” → Corect: „Am primit trei CV-uri și două SMS-uri.”
-- De ce: Siglele și abrevierile folosite ca substantive se articulează și se pun la plural cu cratimă: „ONG-uri”, „CV-ul”, „SMS-uri”, „pH-ul”, „TVA-ul”, „PR-ul”. Cratima le desparte de terminație și lasă sigla ușor de recunoscut. Sigla poate rămâne și neflexionată, cu un cuvânt-reper (RO-GRA-094 din [gramatica.md](gramatica.md)).
+- De ce: Siglele și abrevierile folosite ca substantive se articulează și se pun la plural cu cratimă: „ONG-uri”, „CV-ul”, „SMS-uri”, „pH-ul”, „TVA-ul”, „PR-ul”. Cratima le desparte de terminație și lasă sigla ușor de recunoscut. Sigla poate rămâne și neflexionată, cu un cuvânt-reper (RO-GRA-094 din [gramatica-scriere.md](gramatica-scriere.md)).
 - Sursă: DOOM 3 s.v. CV, SMS, ONG; ghid gov-md §5.2.2.3 și §9.11.5
 
 ## 2. Forme atestate și forme deduse
@@ -199,7 +199,7 @@ Surse pentru metodă: DOOM 3, §4.2.1; ghid gov-md §6.1 și §6.2; INJ p. 102.
 ### RO-IMP-009 Termen-limită, cuvânt-cheie
 - Nivel: normă
 - Greșit: „Termenul limită pentru înscriere e vineri.” → Corect: „Termenul-limită pentru înscriere e vineri.”
-- De ce: Compusele în care al doilea substantiv îl caracterizează pe primul se scriu cu cratimă: „termen-limită” (plural „termene-limită”), „cuvânt-cheie” („cuvinte-cheie”), „situație-limită”. Se articulează și se pune la plural doar primul termen. Regula generală a compuselor cu cratimă e RO-GRA-082 din [gramatica.md](gramatica.md).
+- De ce: Compusele în care al doilea substantiv îl caracterizează pe primul se scriu cu cratimă: „termen-limită” (plural „termene-limită”), „cuvânt-cheie” („cuvinte-cheie”), „situație-limită”. Se articulează și se pune la plural doar primul termen. Regula generală a compuselor cu cratimă e RO-GRA-082 din [gramatica-scriere.md](gramatica-scriere.md).
 - Sursă: DOOM 3 s.v. termen-limită, cuvânt-cheie, situație-limită; ghid gov-md §6.2.3
 
 ## 4. Împrumutul de care nu e nevoie

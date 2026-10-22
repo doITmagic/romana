@@ -7,7 +7,7 @@ Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepi
 ## Ce se schimbă față de limba literară standard
 
 - **Registrul și adresarea.** Le alege destinatarul. Unei instituții, unui necunoscut sau unui superior îi scrii cu „dumneavoastră”; unui coleg cu care lucrezi zilnic îi poți scrie cu „tu”. Alegerea rămâne aceeași în tot mesajul (RO-COE-019 din [coerenta.md](../coerenta.md); criteriile, în [registru-si-adresare.md](../registru-si-adresare.md)).
-- **Tonul.** Politicos și direct. Nu începi cu o întrebare despre starea destinatarului, ci cu salutul; formula tradusă din engleză „Sper că acest e-mail vă găsește bine” nu are echivalent firesc în română (RO-CAL-115 din [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md)).
+- **Tonul.** Politicos și direct. Nu începi cu o întrebare despre starea destinatarului, ci cu salutul; formula tradusă din engleză „Sper că acest e-mail vă găsește bine” nu are echivalent firesc în română (RO-CAL-115 din [calcuri.md](../calcuri.md)).
 - **Structura.** Subiectul mesajului spune despre ce e vorba. Scopul apare în primele rânduri, apoi detaliile, apoi ce urmează (ce faci tu, ce îi ceri destinatarului, până când). O cerere sau o întrebare pe paragraf. Mesajul nu repetă ce se vede deja în fir.
 - **Oralitatea.** Mică la mesajele către instituții, mai mare între colegi. Formele familiare („hai”, „mișto”) nu apar într-un mesaj formal.
 - **Vocabularul.** Formulele consacrate ale corespondenței („Vă rugăm să…”, „Vă mulțumim pentru…”, „Rămânem la dispoziția dumneavoastră”) se pun o dată și la locul lor, nu în fiecare frază (politețea tradusă din engleză e tratată în [stilistica.md](../stilistica.md)).

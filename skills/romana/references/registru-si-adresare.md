@@ -8,7 +8,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 
 - **La redactare**, fixezi registrul și adresarea înainte să scrii (vezi „Cele două axe”), apoi le ții până la sfârșit.
 - **În corectură și în verificare**, rar ai de-a face cu greșeli. Aproape tot ce e aici sunt recomandări de registru: propui, nu impui. Excepția sunt ruperile de consecvență din interiorul textului (adresarea schimbată la jumătatea lui), care sunt normă (vezi RO-COE-019 în [coerenta.md](coerenta.md)).
-- **Citatul rămâne cum e.** Formele familiare, populare sau argotice dintr-un citat direct nu se înlocuiesc (vezi RO-NUG-039 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md) și [fidelitate.md](fidelitate.md)). Regulile de mai jos privesc vocea ta, nu vocea altcuiva.
+- **Citatul rămâne cum e.** Formele familiare, populare sau argotice dintr-un citat direct nu se înlocuiesc (vezi RO-NUG-039 în [ce-nu-e-greseala-stil.md](ce-nu-e-greseala-stil.md) și [fidelitate.md](fidelitate.md)). Regulile de mai jos privesc vocea ta, nu vocea altcuiva.
 - **Registrul familiar ales de produs sau de autor** nu se corectează. Un blog, un chat sau o aplicație pentru tineri pot fi scrise în registru colocvial, dacă așa e decis și dacă tonul e același peste tot.
 
 ## Cele două axe

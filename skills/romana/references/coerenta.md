@@ -226,7 +226,7 @@ Surse pentru metodă: DSL, s.v. ANAFORĂ și DEIXIS; C. Tintiuc, *Levels of Text
 ### RO-COE-026 Pronumele preia genul românesc al substantivului
 - Nivel: normă
 - Greșit: „Ați primit un e-mail de confirmare. Aceasta conține linkul de activare.” → Corect: „Ați primit un e-mail de confirmare. Acesta conține linkul de activare.”
-- De ce: Pronumele se acordă în gen și în număr cu substantivul pe care îl reia. „E-mail” e neutru în română (pluralul e „e-mailuri”), deci la singular se reia cu „acesta” sau cu „el”. În engleză, „it” nu arată genul, iar traducerea pune ușor genul cuvântului la care se gândea traducătorul („pagina”, „aplicația”). „Aceasta” cu sensul „acest lucru” reia o idee întreagă, nu un substantiv. Regula generală a acordului pronumelui cu antecedentul este RO-GRA-154 din [gramatica.md](gramatica.md).
+- De ce: Pronumele se acordă în gen și în număr cu substantivul pe care îl reia. „E-mail” e neutru în română (pluralul e „e-mailuri”), deci la singular se reia cu „acesta” sau cu „el”. În engleză, „it” nu arată genul, iar traducerea pune ușor genul cuvântului la care se gândea traducătorul („pagina”, „aplicația”). „Aceasta” cu sensul „acest lucru” reia o idee întreagă, nu un substantiv. Regula generală a acordului pronumelui cu antecedentul este RO-GRA-154 din [gramatica-forme.md](gramatica-forme.md).
 - Sursă: DOOM 3 s.v. e-mail; ghid gov-md §7.3.17
 
 ### RO-COE-025 Trimiterile din text arată locul exact

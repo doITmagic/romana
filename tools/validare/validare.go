@@ -25,6 +25,13 @@ type Regula struct {
 
 const maxRanduri = 400
 
+// Limitele de mărime, în cuvinte: SKILL.md se încarcă la fiecare pornire, iar
+// un fișier din references/ se citește întreg când agentul îl deschide.
+const (
+	maxCuvinteSkill     = 6000
+	maxCuvinteReferinta = 6500
+)
+
 var niveluri = map[string]bool{
 	"normă": true, "recomandare": true, "anglicism evitabil": true,
 	"disputat": true, "de semnalat": true, "ce nu e greșeală": true,
@@ -70,6 +77,9 @@ func PachetCuOptiuni(dirSkill string, o Optiuni) (probleme []Problema, avertisme
 	pr = append(pr, frontmatter(randuri)...)
 	if len(randuri) > maxRanduri {
 		adauga("SKILL.md", fmt.Sprintf("are %d rânduri, limita este %d", len(randuri), maxRanduri))
+	}
+	if n := len(strings.Fields(skill)); n > maxCuvinteSkill {
+		adauga("SKILL.md", fmt.Sprintf("are %d de cuvinte, limita este %d", n, maxCuvinteSkill))
 	}
 
 	// fișierele din references/
@@ -155,6 +165,11 @@ func PachetCuOptiuni(dirSkill string, o Optiuni) (probleme []Problema, avertisme
 	for _, rel := range refs {
 		if !strings.HasSuffix(rel, ".md") {
 			continue
+		}
+		if b, err := os.ReadFile(filepath.Join(dirSkill, filepath.FromSlash(rel))); err == nil {
+			if n := len(strings.Fields(string(b))); n > maxCuvinteReferinta {
+				adauga(rel, fmt.Sprintf("are %d de cuvinte, limita este %d (sparge-l pe subiecte)", n, maxCuvinteReferinta))
+			}
 		}
 		reguli, probleme := Reguli(filepath.Join(dirSkill, filepath.FromSlash(rel)))
 		for _, p := range probleme {

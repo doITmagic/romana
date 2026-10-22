@@ -22,7 +22,7 @@ Fără statistici: nu avem o sursă pentru cât de des apar tiparele în textele
 - **Vocabularul** (RO-STI-213, RO-STI-225) se numără după aceeași regulă: un cuvânt mare într-un text nu e semnal; câteva, strânse într-un paragraf, da.
 - **Expresiile-cadru** (RO-STI-214) se numără mai strict: aceeași expresie de două ori, sau trei expresii diferite.
 - **Rescrierea completă** a unui text se justifică doar când aproape fiecare paragraf are câte un tipar și, pe deasupra, ritmul e uniform: fraze de aceeași lungime, construite la fel. Altfel corectezi punctual, locul cu locul.
-- Un text fără niciunul dintre aceste tipare nu e dovada că a fost scris de om, iar un text cu ele nu e dovada contrară. Nu lași și nu introduci greșeli ca să pară textul scris de om (vezi RO-NUG-098 în [ce-nu-e-greseala.md](ce-nu-e-greseala.md)).
+- Un text fără niciunul dintre aceste tipare nu e dovada că a fost scris de om, iar un text cu ele nu e dovada contrară. Nu lași și nu introduci greșeli ca să pară textul scris de om (vezi RO-NUG-098 în [ce-nu-e-greseala-stil.md](ce-nu-e-greseala-stil.md)).
 
 ## Tiparele după cât țin de limbă
 

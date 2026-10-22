@@ -40,7 +40,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 ### RO-CAL-601 Modul vorbirii indirecte din limba sursă nu se calchiază prin condițional
 - Nivel: recomandare
 - Corect: „Ministrul a anunțat că reforma intră în vigoare în toamnă.” (pentru „Der Minister kündigte an, die Reform trete im Herbst in Kraft”). Nu „…că reforma ar intra în vigoare în toamnă.”
-- De ce: Germana (Konjunktiv I) și alte limbi au un mod al vorbirii indirecte care nu arată îndoiala reporterului. Românescul „ar intra” o arată: condiționalul din vorbirea indirectă dă ideea de prezumție (Coteanu, §20). Româna redă de obicei afirmația relatată prin indicativ și verb de declarație; distanța, când originalul o vrea, se spune prin cuvinte („potrivit…”, „susține că…”). Condiționalul cu sursa numită rămâne corect (RO-NUG-070 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)), iar atribuirea nu se inventează ([fidelitate.md](../fidelitate.md)). Cazul german concret e RO-CAL-612.
+- De ce: Germana (Konjunktiv I) și alte limbi au un mod al vorbirii indirecte care nu arată îndoiala reporterului. Românescul „ar intra” o arată: condiționalul din vorbirea indirectă dă ideea de prezumție (Coteanu, §20). Româna redă de obicei afirmația relatată prin indicativ și verb de declarație; distanța, când originalul o vrea, se spune prin cuvinte („potrivit…”, „susține că…”). Condiționalul cu sursa numită rămâne corect (RO-NUG-070 din [ce-nu-e-greseala-stil.md](../ce-nu-e-greseala-stil.md)), iar atribuirea nu se inventează ([fidelitate.md](../fidelitate.md)). Cazul german concret e RO-CAL-612.
 - Sursă: IER, Ghid stilistic de traducere, §3.3.3, p. 61 (nereverificat local); Coteanu, §20 (condiționalul și optativul)
 
 ### RO-CAL-602 Verbul la finalul subordonatei
@@ -88,7 +88,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 ### RO-CAL-609 „Laut”, „zufolge”: „potrivit” sau „conform”
 - Nivel: recomandare
 - Corect: „Potrivit poliției, suspectul a fugit.” (pentru „Laut Polizei, ist der Verdächtige geflohen”)
-- De ce: Echivalentul românesc obișnuit al lui „laut” și „zufolge” este „potrivit” sau „conform”. Cazul (dativul, „potrivit poliției”) și construcția cu „cu” sunt tratate în RO-GRA-033 din [gramatica.md](../gramatica.md) și în RO-NUG-022 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md); aici nu se repetă. Atribuirea rămâne la cine a spus.
+- De ce: Echivalentul românesc obișnuit al lui „laut” și „zufolge” este „potrivit” sau „conform”. Cazul (dativul, „potrivit poliției”) și construcția cu „cu” sunt tratate în RO-GRA-033 din [gramatica-forme.md](../gramatica-forme.md) și în RO-NUG-022 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md); aici nu se repetă. Atribuirea rămâne la cine a spus.
 - Sursă: DOOM 3 s.v. conform, potrivit; DEX ’98 s.v. potrivit, conform
 
 ### RO-CAL-610 „Es gibt” nu se traduce literal
@@ -124,7 +124,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 ### RO-CAL-615 „An Bahnhöfen in drei Ländern”: nehotărârea originalului se păstrează
 - Nivel: ce nu e greșeală
 - Corect: „în gări din trei landuri” (pentru „an Bahnhöfen in drei Ländern”). Nu o corectezi în „în gările din trei landuri”.
-- De ce: Plural nearticulat în original, plural nearticulat în română: forma e corectă, iar articolul ar face gările cunoscute („acele gări”), adică altceva decât spune originalul. Articolul îl pui când originalul îl are sau când gările au fost pomenite înainte (RO-GRA-182 din [gramatica.md](../gramatica.md)). Nearticulatul rămâne corect când vrei sensul „unele, nu toate”.
+- De ce: Plural nearticulat în original, plural nearticulat în română: forma e corectă, iar articolul ar face gările cunoscute („acele gări”), adică altceva decât spune originalul. Articolul îl pui când originalul îl are sau când gările au fost pomenite înainte (RO-GRA-182 din [gramatica-forme.md](../gramatica-forme.md)). Nearticulatul rămâne corect când vrei sensul „unele, nu toate”.
 - Sursă: Coteanu, Gramatica de bază (1982), §29.4, p. 265
 
 ### RO-CAL-616 Titlul tradus se citește cu voce tare
@@ -148,7 +148,7 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 ### RO-CAL-619 Funcțiile germane se traduc și se scriu cu literă mică
 - Nivel: recomandare
 - Greșit: „Bundeskanzler Merz” → Corect: „cancelarul federal Merz”
-- De ce: Numele funcției rămâne substantiv comun, tradus și scris cu literă mică, în orice țară ar fi exercitată (RO-TIP-086 din [tipografie.md](../tipografie.md)). „Cancelar federal” = „șeful guvernului în Austria și în Germania” (DEX ’98). Nu adaugi prenumele pe care originalul nu îl are. Pentru „Ministerpräsident” (șeful guvernului unui land) spui „prim-ministrul landului”, cu numele landului.
+- De ce: Numele funcției rămâne substantiv comun, tradus și scris cu literă mică, în orice țară ar fi exercitată (RO-TIP-086 din [majuscule-si-nume.md](../majuscule-si-nume.md)). „Cancelar federal” = „șeful guvernului în Austria și în Germania” (DEX ’98). Nu adaugi prenumele pe care originalul nu îl are. Pentru „Ministerpräsident” (șeful guvernului unui land) spui „prim-ministrul landului”, cu numele landului.
 - Sursă: DEX ’98 s.v. cancelar; DOOM 3 s.v. prim-ministru
 
 ### RO-CAL-620 Conceptele fără echivalent: descrierea românească, cu originalul la prima apariție
@@ -214,5 +214,5 @@ Semnele sunt: verbul abia la final, auxiliarul despărțit de participiu prin ci
 ### RO-CAL-630 „Forst” în nume: pleonasm de semnalat
 - Nivel: de semnalat
 - Greșit: „A fugit în pădurea Schweriner Forst.” → Corect: „A fugit în Schweriner Forst („Forst” = pădure).”
-- De ce: „Forst” este o pădure exploatată silvic (Duden), deci „pădurea Schweriner Forst” spune de două ori „pădure”. Nu e greșeală: cititorul român nu știe ce înseamnă „Forst”, iar RO-TIP-014 din [tipografie.md](../tipografie.md) cere genericul înaintea numelui geografic. Semnalezi redundanța și propui explicația o dată, la prima apariție, apoi numele singur. Regula privește doar „Forst”; nu o extinzi la alte nume germane fără sursă românească. Traducerile consacrate rămân (RO-TIP-072): „Pădurea Neagră”.
+- De ce: „Forst” este o pădure exploatată silvic (Duden), deci „pădurea Schweriner Forst” spune de două ori „pădure”. Nu e greșeală: cititorul român nu știe ce înseamnă „Forst”, iar RO-TIP-014 din [majuscule-si-nume.md](../majuscule-si-nume.md) cere genericul înaintea numelui geografic. Semnalezi redundanța și propui explicația o dată, la prima apariție, apoi numele singur. Regula privește doar „Forst”; nu o extinzi la alte nume germane fără sursă românească. Traducerile consacrate rămân (RO-TIP-072): „Pădurea Neagră”.
 - Sursă: Duden s.v. Forst (verificat pe internet, nereverificat local); RO-TIP-014, RO-TIP-072

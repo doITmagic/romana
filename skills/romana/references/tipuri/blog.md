@@ -72,5 +72,5 @@ Persoana I, opiniile și exemplele personale se păstrează cum le-a scris autor
 Alte tipare întâlnite în blog, cu fișierele lor:
 
 - limba de lemn, începuturile și încheierile de umplutură, tiparele textului generat: [stilistica.md](../stilistica.md) și [tipare-text-generat.md](../tipare-text-generat.md);
-- formele familiare și regionale ale vocii autorului (nu se corectează dacă sunt ale lui, în afara citatului): [registru-si-adresare.md](../registru-si-adresare.md) și RO-NUG-039 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md);
+- formele familiare și regionale ale vocii autorului (nu se corectează dacă sunt ale lui, în afara citatului): [registru-si-adresare.md](../registru-si-adresare.md) și RO-NUG-039 din [ce-nu-e-greseala-stil.md](../ce-nu-e-greseala-stil.md);
 - cuvinte englezești lăsate în text: [imprumuturi.md](../imprumuturi.md).

@@ -1,5 +1,12 @@
 # Jurnal de modificări
 
+## Neversionat
+
+- **Fișierele mari din `references/` sparte pe subiecte**, ca agentul să citească mai puțin: `gramatica.md` → plus `gramatica-forme.md` și `gramatica-scriere.md`; `tipografie.md` → plus `majuscule-si-nume.md`; `ce-nu-e-greseala.md` → plus `ce-nu-e-greseala-stil.md`; `prieteni-falsi-si-calcuri.md` → plus `calcuri.md`. ID-urile regulilor rămân aceleași.
+- **Validatorul** limitează mărimea: `SKILL.md` până la 6.000 de cuvinte, fiecare fișier din `references/` până la 6.500.
+- **Evals:** consumul în tokeni pe rulare (tabelul „Consum”) și pornirea skillului măsurată și pe Codex.
+- **Corectat:** v0.1.0 avea de fapt 854 de reguli, dintre care 289 de normă (RO-SEM-247 coborâtă la recomandare și RO-CAL-507 nouă, ambele intrate înaintea tagului); README-ul și intrarea de mai jos spuneau 853 și 290.
+
 ## 0.1.0 (2026-10-22)
 
 Prima versiune: skillul și uneltele cu care se verifică.
