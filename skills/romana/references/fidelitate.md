@@ -61,7 +61,7 @@ Rămân neatinse:
 
 Verbele și adverbele care exprimă cât de sigură e o afirmație se pun pe o scară, și rescrierea rămâne pe aceeași treaptă. Aproximativ, de la mai sigur la mai puțin sigur: „e”, „trebuie” (obligație) sau „sigur” → „ar trebui” sau „se recomandă” → „probabil” → „poate” sau „ar putea” → „se spune că”. „Trebuie” are două lecturi: obligație („Trebuie să semnezi”) și presupunere („Trebuie să fie acasă”). Dacă textul nu lămurește despre care e vorba, nu hotărăști tu: semnalezi sau întrebi.
 
-Când mai multe mărci de nesiguranță se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), le reduci la una singură care păstrează gradul și condiția („măsura poate ajuta în unele cazuri”). Scoți ambalajul, nu gradul.
+Când mai multe mărci de nesiguranță se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), le reduci la una singură care păstrează gradul și condiția („probabil, măsura ar putea ajuta în unele cazuri”). Scoți ambalajul, nu gradul.
 
 ## Citate și atribuiri
 
@@ -186,7 +186,7 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 ### RO-FID-021 Certitudinea rămâne cea din sursă
 - Nivel: normă
 - Greșit: „Sursa: «Metoda poate reduce erorile.» → «Metoda reduce erorile.»” → Corect: „Metoda poate reduce erorile.”
-- De ce: „Poate reduce” spune că se întâmplă uneori sau în anumite condiții, „reduce” spune că se întâmplă. A trece de la prima la a doua înseamnă a-i promite cititorului mai mult decât sursa. Când modalizatorii se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), îi reduci la unul care păstrează gradul și condiția („măsura poate ajuta în unele cazuri”), dar nu îl ridici.
+- De ce: „Poate reduce” spune că reducerea e posibilă, „reduce” spune că se întâmplă. A trece de la prima la a doua înseamnă a-i promite cititorului mai mult decât sursa. Când modalizatorii se adună („s-ar zice că, probabil, măsura ar putea, în unele cazuri, să ajute”), îi reduci la unul care păstrează gradul și condiția („probabil, măsura ar putea ajuta în unele cazuri”), dar nu îl ridici.
 - Sursă: regulă de fidelitate a skillului; DSL, s.v. MODALITATE
 
 ### RO-FID-022 Condițiile și mărcile de opinie se păstrează

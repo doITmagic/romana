@@ -401,7 +401,7 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 
 ## Adjectivele compuse englezești
 
-Engleza face ușor adjective din două cuvinte legate prin cratimă („user-friendly”, „data-driven”). Româna nu are acest tipar, cu un substantiv urmat de un adjectiv sau de un participiu (DOOM 3 §4.1.1 îl admite doar la punctele cardinale: „nord-vestic”): compusul nu se lasă în text, afară de cele înregistrate în DOOM 3 („part-time”, „full-time”) și de termenii tehnici consacrați (RO-CAL-073), și nici nu se traduce cuvânt cu cuvânt („utilizator-prietenos”). Îl redai printr-un grup de cuvinte, de obicei cu o prepoziție sau cu o relativă.
+Engleza face ușor adjective din două cuvinte legate prin cratimă („user-friendly”, „data-driven”). Româna nu are acest tipar, cu un substantiv urmat de un adjectiv sau de un participiu (DOOM 3 §4.1.1 îl admite cu cratimă doar la punctele cardinale, „nord-vestic”, iar sudat în câteva cuvinte vechi, „codalb”): compusul nu se lasă în text, afară de cele înregistrate în DOOM 3 („part-time”, „full-time”) și de termenii tehnici consacrați (RO-CAL-073), și nici nu se traduce cuvânt cu cuvânt („utilizator-prietenos”). Îl redai printr-un grup de cuvinte, de obicei cu o prepoziție sau cu o relativă.
 
 ### RO-CAL-101 „User-friendly”
 - Nivel: recomandare

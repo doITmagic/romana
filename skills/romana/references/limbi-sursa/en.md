@@ -98,6 +98,6 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 
 ### RO-CAL-051 Cuvintele de umplutură ale originalului nu se traduc una câte una
 - Nivel: recomandare
-- Greșit: „Sincer, noi practic doar am vrut să facem într-adevăr lucrurile simple.” → Corect: „Am vrut să simplificăm lucrurile.”
+- Greșit: „Sincer, noi practic doar am vrut să facem într-adevăr lucrurile simple.” → Corect: „Am vrut doar să simplificăm lucrurile.”
 - De ce: Cuvinte ca „just”, „really”, „actually”, „basically”, „honestly” ajustează tonul fără să aducă informație. Traduse fiecare cu câte un adverb românesc, fac fraza grea și neutră, cum ar fi: *sincer, practic, doar, într-adevăr*. Le redai după sens (dacă schimbă ceva) sau le omiți, mai ales când se adună. Când cuvântul poartă informație („doar” = „numai”, „actually” = „de fapt, contrar așteptărilor”), îl păstrezi. În citat nu scoți nimic (vezi RO-FID-026 din [fidelitate.md](../fidelitate.md)).
 - Sursă: recomandare a skillului, fără normă

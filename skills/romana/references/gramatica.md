@@ -694,7 +694,7 @@ Bun:
 - Nivel: normă
 - Greșit: „Nu are nici un motiv.” → Corect: „Nu are niciun motiv.”
 - De ce: „Niciun, nicio, niciunul, niciuna, niciunui” se scriu legat când sunt adjective sau pronume negative. „Nici un” se scrie separat doar când „nici” e adverb sau conjuncție și „un” e articol sau numeral („Nu e nici naiv, nici un om neștiutor”). Rolul decide.
-- Sursă: DOOM 3, s.v. niciun, nici o; DOOM 3, §6.7.4; ÎOOP6 p. 106; ghid gov-md §7.3.11
+- Sursă: DOOM 3, s.v. niciun, nici o; DOOM 3, §6.7.4; ÎOOP6 p. 106
 
 ### RO-GRA-085 „Odată” și „o dată”
 - Nivel: normă
@@ -768,16 +768,16 @@ Bun:
 - De ce: Abrevierea obișnuită a lui „dumneavoastră” e „dvs.”, cu literă mică (se admite și „dv.”). În corespondența oficială, majuscula de politețe („Dumneavoastră”, „Dvs.”) e admisă, deci nu o corectezi acolo. În interfață pronumele nu se abreviază, iar în același text se păstrează aceeași formă (vezi RO-COE-005).
 - Sursă: ghid gov-md §5.3.1.6
 
-## 12. Silabație
+## 12. Despărțirea la capăt de rând
 
 ### Metoda
 
-La trei sau patru consoane între vocale, prima rămâne în silaba dinainte, celelalte trec în silaba următoare. Grupurile „lpt, mpt, mpț, ncs, ncș, nct, ncț, ndv, rct, rtf, stm” se despart după a doua consoană („ast-matic”, „când-va”), la fel „ngst” („gang-ster”), iar „rstn” după a treia. Cinci consoane se despart după a doua („opt-sprezece”). Compusele și derivatele cu prefix admit și despărțirea după structura morfologică.
+DOOM 3 deosebește despărțirea la capăt de rând (ortografie) de despărțirea în silabe (ortoepie); regulile de aici sunt ale celei dintâi. La trei sau patru consoane între vocale, prima rămâne pe rând, celelalte trec pe rândul următor. Grupurile „lpt, mpt, mpț, ncs, ncș, nct, ncț, ndv, rct, rtf, stm” se despart după a doua consoană („ast-matic”, „când-va”), la fel „ldsp”, „ndgr” și „ngst” („feld-spat”, „land-graf”, „gang-ster”), iar „rstn” după a treia. Cinci consoane se despart după a doua („opt-sprezece”). Compusele și derivatele cu prefix admit și despărțirea după structura morfologică, care nu indică însă rostirea silabisită.
 
 ### RO-GRA-156 Trei consoane între vocale
 - Nivel: normă
 - Greșit: „ast-ru” → Corect: „as-tru”
-- De ce: Prima consoană rămâne în silaba dinainte, celelalte trec în următoarea: „as-tru”, „în-tre”, „mon-stru”. Excepții: grupurile din RO-GRA-157 și despărțirea morfologică admisă la compuse și derivate.
+- De ce: Prima consoană rămâne pe rând, celelalte trec pe rândul următor: „as-tru”, „în-tre”, „mon-stru”. Excepții: grupurile din RO-GRA-157 și despărțirea morfologică admisă la compuse și derivate.
 - Sursă: DOOM 3 §5.1.1.1 (regula 1.3: trei consoane se despart după prima); DSL, s.v. SILABAȚIE
 
 ### RO-GRA-157 Grupuri care se despart după a doua consoană
@@ -839,8 +839,8 @@ La trei sau patru consoane între vocale, prima rămâne în silaba dinainte, ce
 ### RO-GRA-173 Negația dublă și domeniul negației
 - Nivel: normă
 - Greșit: „Niciun fișier a fost găsit.” → Corect: „Niciun fișier nu a fost găsit.”
-- De ce: Cu „niciun”, „nimeni”, „nimic” româna cere și „nu” pe lângă verb, oriunde ar sta pronumele negativ în enunț; excepție face grupul introdus de „fără”, care poartă singur negația („Lucrează fără niciun ajutor”). Ordinea negației după engleză nu e greșeală de normă, ci ambiguitate: „Toate fișierele nu au fost salvate” (engl. „not all”) poate însemna că niciunul sau că doar unele nu s-au salvat. O semnalezi ca ambiguitate și o rescrii după sens: „Nu toate fișierele au fost salvate” sau „Niciun fișier nu a fost salvat”.
-- Sursă: Coteanu, §14.5.5 (pronumele negativ); Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 79 (concordanța negativă); ghid gov-md §7.3.11
+- De ce: Cu „niciun”, „nimeni”, „nimic” româna cere și negația verbului („nu”; la gerunziu și la participiu, prefixul „ne-”: „Neavând niciun ajutor, a renunțat”), oriunde ar sta pronumele negativ în enunț; excepție face grupul introdus de „fără”, care poartă singur negația („Lucrează fără niciun ajutor”). Ordinea negației după engleză nu e greșeală de normă, ci ambiguitate: „Toate fișierele nu au fost salvate” (engl. „not all”) poate însemna că niciunul sau că doar unele nu s-au salvat. O semnalezi ca ambiguitate și o rescrii după sens: „Nu toate fișierele au fost salvate” sau „Niciun fișier nu a fost salvat”.
+- Sursă: Coteanu, §14.5.5 (pronumele negativ); Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 79 (concordanța negativă); ÎOOP6 p. 113 (gerunziul negativ)
 
 ### RO-GRA-141 „Mult” și „foarte”
 - Nivel: recomandare

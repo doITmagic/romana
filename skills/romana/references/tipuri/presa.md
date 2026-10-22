@@ -68,10 +68,10 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 - Sursă: Ghidul de jurnalism (ghidjurnalism) (nereverificat local)
 
 ### RO-STI-616 Citatul reproduce exact cuvintele
-- Nivel: recomandare
+- Nivel: normă
 - Greșit: „Ministrul a anunțat că «bugetul crește cu aproximativ cinci la sută și vor fi angajați medici noi».” → Corect: „Ministrul a anunțat că bugetul crește cu aproximativ cinci la sută și că vor fi angajați medici noi.”
-- De ce: Ce stă între ghilimele trebuie să fie ce a spus sursa, cu cuvintele ei. Rezumatul, cifra rotunjită sau cuvântul schimbat nu au loc în citat. Dacă ai doar un rezumat, îl scrii fără ghilimele. Textul citat nu se corectează, în afară de tipografie (RO-NUG-039 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
-- Sursă: Ghidul de jurnalism (ghidjurnalism) (nereverificat local); ghid gov-md §9.8.1
+- De ce: Ce stă între ghilimele trebuie să fie ce a spus sursa, cu cuvintele ei. Rezumatul, cifra rotunjită sau cuvântul schimbat nu au loc în citat. Dacă ai doar un rezumat, îl scrii fără ghilimele. Când ai sursa, un citat care nu-i reproduce cuvintele e abatere de fidelitate (normă, P0, vezi [fidelitate.md](../fidelitate.md)); fără sursă, nu poți dovedi abaterea și doar semnalezi. Textul citat nu se corectează, în afară de tipografie (RO-NUG-039 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
+- Sursă: Ghidul de jurnalism (ghidjurnalism) (nereverificat local); ghid gov-md §9.8.1; regulă de fidelitate a skillului (P0)
 
 ### RO-STI-607 Tăieturile din citat se marchează cu […]
 - Nivel: recomandare
@@ -131,7 +131,7 @@ Dacă directorul a spus doar data, „a recunoscut” îl arată făcând o conc
 - **Intertitlul**, când textul e destul de lung ca să-l ceară, spune ce e nou în secțiune, ca o frază sau ca un grup nominal cu informație. Eticheta generică de tipul „Ce urmează” sau „Contextul”, frecventă în textele generate, nu apare în presa examinată; o poți înlocui cu informația secțiunii.
 - **Încheierea** e ultimul fapt: o declarație, o cifră, pasul următor concret. Știrea nu are concluzie (vezi RO-STI-210 și RO-STI-211 din [tipare-text-generat.md](../tipare-text-generat.md)).
 
-Slab (lead fără sursă, cu data și sursa mutate în paragraful următor):
+Slab (sursa și data amânate în paragraful următor):
 
 > Președintele american Donald Trump a suspendat, printr-un decret, taxele vamale din pachetul de sancțiuni împotriva Rusiei, cu puțin timp înainte ca ele să intre în vigoare.
 >
@@ -143,7 +143,7 @@ Bun:
 >
 > Măsurile sunt suspendate până la o nouă decizie.
 
-Prima variantă prezintă ca fapt al redacției o relatare preluată, iar sursa vine abia după ce cititorul a luat faptul de bun. A doua pune data și sursa în lead și lasă paragraful următor pentru ce e nou.
+Prima variantă rămâne în limita admisă (sursa e în fraza imediat următoare), dar cititorul află cine relatează abia după ce a luat faptul de bun. A doua pune data și sursa în lead și lasă paragraful următor pentru ce e nou.
 
 Pentru intertitlu, același procedeu: în loc de eticheta „Ce urmează” (slab), scrii „Purdue continuă căutările fără epavă” (bun).
 
@@ -188,7 +188,9 @@ Ambele variante au aceleași date. În prima, procentul rămâne în altă fraz�
 Problemele cele mai frecvente în presa online (după monitorizarea Institutului de Lingvistică) se verifică la sfârșit, fiecare în fișierul ei și cu nivelul dat acolo:
 
 - ghilimele englezești în loc de „…”, cratimă în loc de linie de pauză, prefixe despărțite („mega proiect”): [tipografie.md](../tipografie.md) și [imprumuturi.md](../imprumuturi.md);
-- virgulă între subiect și predicat, lipsa virgulei înainte de „dar”, „iar”, „ci”, virgulă înainte de „etc.”, nume proprii neflexionate, „că” omis după verbele de declarație, fraze lungi cu gerunzii în lanț: [gramatica.md](../gramatica.md);
+- virgulă între subiect și predicat, lipsa virgulei înainte de „dar”, „iar”, „ci”, virgulă înainte de „etc.”: [tipografie.md](../tipografie.md);
+- nume proprii neflexionate, „că” omis după verbele de declarație: [gramatica.md](../gramatica.md);
+- fraze lungi cu gerunzii în lanț: [stilistica.md](../stilistica.md);
 - vorbire directă amestecată cu cea indirectă: RO-STI-604, mai sus;
 - „cea mai optimă” (pleonasm): [paronime-si-pleonasme.md](../paronime-si-pleonasme.md);
 - calcuri din engleză, de pildă „dramatic” cu sensul „foarte mare”: [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md).

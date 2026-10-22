@@ -105,7 +105,7 @@ Bun:
 ### RO-TIP-003 Majuscula la funcții: doar în stilul oficial sau când funcția denumește instituția
 - Nivel: normă
 - Corect: „Președintele Republicii semnează decretul.” (stil oficial, funcția celui mai înalt demnitar)
-- De ce: Majuscula la o funcție apare în stilul oficial reverențios (acte, protocol), în unele funcții înalte din acte și când funcția denumește chiar o instituție. Într-un articol de presă sau pe o pagină de site se scrie cu literă mică. Într-un e-mail sau într-o scrisoare, DOOM 3 admite majuscula când autorul marchează o atitudine ceremonioasă ori reverențioasă: n-o corectezi. Dacă textul e un act sau o scrisoare protocolară, urmezi convenția lui și ții aceeași alegere în tot textul.
+- De ce: Majuscula la o funcție apare în stilul oficial reverențios (acte, protocol), în unele funcții înalte din acte și când funcția denumește chiar o instituție. În textul neoficial (articol de presă, pagină de site) se scrie de regulă cu literă mică (RO-TIP-001). DOOM 3 admite însă majuscula în orice text în care autorul marchează o atitudine ceremonioasă ori reverențioasă (de obicei într-un e-mail sau într-o scrisoare): când contextul o arată, n-o corectezi. Dacă textul e un act sau o scrisoare protocolară, urmezi convenția lui și ții aceeași alegere în tot textul.
 - Sursă: DOOM 3 §3.2 II.2.2; ghid gov-md §4.1.5.3
 - Vezi și: RO-TIP-001
 
@@ -441,8 +441,8 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 ### RO-TIP-113 Virgula nu e obligatorie înainte de „care”, „dacă”, „când”, „că”
 - Nivel: normă
 - Greșit: „Notificați, când este gata.” → Corect: „Notificați când este gata.”
-- De ce: Subordonata pusă după regentă nu primește automat virgulă. Nu se despart: completiva („Am observat că funcționează”), relativa determinativă („Fișierul pe care l-ați selectat”) și temporala pusă după regentă („Notificați când este gata”). Virgula se pune la cauzală (de regulă), la condițională (de regulă), la consecutivă și la subordonata intercalată care întrerupe regenta („Tu, dacă nu ești nevoit, nu faci nimic”). Relativa determinativă nu se desparte nici când stă în interior („Fata care râde este sora lui”). A cere virgulă înaintea oricărei subordonate e hipercorectitudine.
-- Sursă: ghid gov-md §9.2.2.3, §9.2.2.5, §9.2.2.6 și §9.2.2.8; ÎOOP6 p. 59–61 (Virgula, viii, ix, xi)
+- De ce: Subordonata pusă după regentă nu primește automat virgulă. Nu se despart: completiva („Am observat că funcționează”), relativa determinativă („Fișierul pe care l-ați selectat”) și temporala pusă după regentă („Notificați când este gata”). Virgula se pune de regulă la cauzală și la condițională, mai ales când stau înaintea regentei, și la subordonata intercalată care întrerupe regenta („Tu, dacă nu ești nevoit, nu faci nimic”). Relativa determinativă nu se desparte nici când stă în interior („Fata care râde este sora lui”). Nici consecutiva strâns legată de regentă nu primește virgulă („Era prea obosit ca să se mai concentreze”, ÎOOP6 p. 117). A cere virgulă înaintea oricărei subordonate e hipercorectitudine.
+- Sursă: ghid gov-md §9.2.2.3, §9.2.2.5, §9.2.2.6 și §9.2.2.8; ÎOOP6 p. 59–61 (Virgula, viii, ix, xi) și p. 117
 
 ### RO-TIP-114 Fără virgulă înaintea lui „sau” disjunctiv simplu
 - Nivel: normă

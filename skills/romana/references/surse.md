@@ -33,7 +33,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, coordonat de Gabriela Pană Dindelegan. În unele locuri titlul apare prescurtat („…ortoepic și de punctuație”).
 - **Ediție:** a VI-a, Univers Enciclopedic Gold, București, 2024. Prima ediție datează din 1960, iar a cincea din 1995.
 - **Statut:** normă, pentru ortografie, ortoepie, morfologie și punctuație (virgula, linia de pauză, ghilimelele). A fost pus de acord cu DOOM 3.
-- **Ce nu spune:** nu e dicționar: nu dă sensuri. Despre claritate sau stil spune puțin. Unele trimiteri la pagină sunt marcate „(nereverificat local)”.
+- **Ce nu spune:** nu e dicționar explicativ: Vocabularul (cap. IV) dă doar glose minimale, ca să deosebească paronimele și omonimele. Despre claritate sau stil spune puțin. Unele trimiteri la pagină sunt marcate „(nereverificat local)”.
 
 ## Dicționare
 
@@ -96,7 +96,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 ### Manuale aprobate de Ministerul Educației
 - **Titluri:** *Gramatica aplicată a limbii române*, clasa a IX-a (M.-C. Anisie, A. Ciobotaru, M. Lascăr, M.-R. Nedea, A.-D. Petrache, C. Pleșa), Editura Didactică și Pedagogică, 2026; manualele de *Limba și literatura română* pentru clasele a V-a (2022), a VI-a (2023) și a VII-a (2024), Editura Art Klett (F. Sâmihăian, S. Dobra, M. Halaszi, A. Davidoiu-Roman, H. Corcheș), și pentru clasa a VI-a, Editura Didactică și Pedagogică, 2023 (M. Norel, P. Bucurenciu, M. Dragu).
 - **Statut:** descriptiv-didactic, aplică norma academică; aprobate de Ministerul Educației. Se citează la pagină (*Gramatica aplicată*) sau la lecție (manualele Art Klett și EDP de gimnaziu).
-- **Ce nu spun:** nu sunt norme ale limbii; unde diferă de DOOM 3 sau de ÎOOP6, contează acestea. Exercițiile de corectare nu au cheie de răspuns în textul consultat, așa că un exercițiu arată ce socotește manualul greșeală, dar nu e dovadă. Manualele diferă între ele (de exemplu la pronumele subiect exprimat în plus), iar un singur manual nu face dintr-o preferință o normă. Despre stil și claritate dau doar noțiuni generale (*Gramatica aplicată*, p. 134–145), fără reguli de redactare; nu tratează calcurile din engleză.
+- **Ce nu spun:** nu sunt norme ale limbii; unde diferă de DOOM 3 sau de ÎOOP6, contează acestea. Exercițiile de corectare nu au cheie de răspuns în textul consultat, așa că un exercițiu arată ce socotește manualul greșeală, dar nu e dovadă. Manualele diferă între ele (de exemplu la pronumele subiect exprimat în plus), iar un singur manual nu face dintr-o preferință o normă. Despre stil și claritate dau doar noțiuni generale (*Gramatica aplicată*, p. 134–145), iar lecțiile de redactare din manualele de gimnaziu privesc compunerea școlară (etapele scrierii), nu redactarea textelor profesionale; nu tratează calcurile din engleză.
 
 ### GALR
 - **Titlu:** *Gramatica limbii române*, 2 vol. (*Cuvântul*, *Enunțul*), Academia Română, Institutul de Lingvistică „Iorgu Iordan – Alexandru Rosetti”, Editura Academiei Române.
@@ -108,7 +108,7 @@ Fișierul acesta spune pe ce se sprijină regulile din `references/`: ce e fieca
 - **Titlu:** *Corectitudinea exprimării*, curs universitar.
 - **Ediție:** document din 2010, redactat în context chișinăuian (bibliografia citează lucrări până în 2009). În copia consultată nu apare niciun autor.
 - **Statut:** recomandare, didactic, care sintetizează norme ale vremii (inclusiv DOOM 2).
-- **Ce nu spune:** autorul nu e identificat; nu se poate cita ca lucrare de autor. Nu poate fi opera lui I. Coteanu: bibliografia cursului citează lucrări din 2009, mult după moartea lui (1999). Normele din el se verifică în DOOM 3.
+- **Ce nu spune:** autorul nu e identificat; nu se poate cita ca lucrare de autor. Nu poate fi opera lui I. Coteanu: bibliografia cursului citează lucrări din 2009, mult după moartea lui (1997). Normele din el se verifică în DOOM 3.
 
 ## Ghiduri de redactare și îndrumare
 

@@ -18,7 +18,7 @@ Italiana folosește condiționalul în două feluri pe care româna nu le acoper
 ### RO-CAL-701 „Condizionale giornalistico”: nesiguranța se păstrează, atribuirea nu se inventează
 - Nivel: normă
 - Corect: „Bărbatul ar fi fost arestat.” (pentru „sarebbe stato arrestato”, fără sursă numită). Nu „Bărbatul a fost arestat.”
-- De ce: Originalul prezintă informația ca nesigură, fără certificare; traducerea la indicativ ar face-o mai sigură decât e (RO-FID-021 din [fidelitate.md](../fidelitate.md)). Româna are aceeași valoare, prezumtivul: „ar fi fost arestat” prezintă acțiunea ca presupusă (DEX ’98). Dacă originalul numește sursa, o păstrezi („potrivit poliției, a fost arestat” sau „ar fi fost arestat, potrivit poliției”). Dacă nu o numește, nu o adaugi. Condiționalul cu sursa numită e corect (RO-NUG-070 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
+- De ce: Originalul prezintă informația ca nesigură, fără certificare; traducerea la indicativ ar face-o mai sigură decât e (RO-FID-021 din [fidelitate.md](../fidelitate.md)). Româna are aceeași valoare, prezumtivul: „ar fi fost arestat” prezintă acțiunea ca presupusă (DEX ’98). Dacă originalul numește sursa, o păstrezi împreună cu condiționalul („ar fi fost arestat, potrivit poliției”). Dacă nu o numește, nu o adaugi. Condiționalul cu sursa numită e corect (RO-NUG-070 din [ce-nu-e-greseala.md](../ce-nu-e-greseala.md)).
 - Sursă: DEX ’98 s.v. prezumtiv; Coteanu, §20 (condiționalul și optativul); regulă de fidelitate a skillului (P0, vezi [fidelitate.md](../fidelitate.md); sensul italian nereverificat local)
 
 ### RO-CAL-703 „Disse che sarebbe venuto”: viitorul din trecut nu se traduce prin „ar fi”
