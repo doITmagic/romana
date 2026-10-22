@@ -255,3 +255,77 @@ func TestParagrafRealCorect(t *testing.T) {
 		t.Errorf("zzqxvb trebuia găsit: %+v", r.Necunoscute)
 	}
 }
+
+// numara numără apelurile către dicționar.
+type numara struct {
+	fals
+	sugestii, exista int
+}
+
+func (n *numara) Exista(ctx context.Context, f string) (bool, error) {
+	n.exista++
+	return n.fals.Exista(ctx, f)
+}
+
+func (n *numara) Sugestii(ctx context.Context, f string, m int) ([]string, error) {
+	n.sugestii++
+	return n.fals.Sugestii(ctx, f, m)
+}
+
+func TestSugestiiMemorate(t *testing.T) {
+	c := &numara{fals: baza}
+	r, err := Text(context.Background(), c, strings.Repeat("casa sumarizată ", 50))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(r.Necunoscute) != 100 {
+		t.Fatalf("necunoscute: %d", len(r.Necunoscute))
+	}
+	if c.sugestii != 2 {
+		t.Errorf("Sugestii apelat de %d ori, aștept 2 (casa, sumarizată)", c.sugestii)
+	}
+	for _, u := range r.Necunoscute {
+		if u.Cuvant == "casa" && !reflect.DeepEqual(u.Sugestii, []string{"casă"}) {
+			t.Fatalf("sugestii pentru %q: %v", u.Cuvant, u.Sugestii)
+		}
+	}
+}
+
+func TestPrefixeleNuSeDescompun(t *testing.T) {
+	b := dictionar("anti soț ex nici o caz limită nato")
+	r, err := Text(context.Background(), b, "ex-soț nici-o anti-nato caz-limită")
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := cuvinte(r)
+	want := []string{"ex-soț", "nici-o", "anti-nato"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("necunoscute %v, aștept %v", got, want)
+	}
+}
+
+func TestMarkdownSiHtml(t *testing.T) {
+	r, err := Text(context.Background(), baza, "Un text <div class=\"foo\"> și ![sumarizată](a.png) și [text](pagina.md) unde")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got := cuvinte(r); !reflect.DeepEqual(got, []string{"sumarizată"}) {
+		t.Errorf("necunoscute %v, aștept doar textul-alternativ", got)
+	}
+}
+
+func TestGrafieVecheFaraSugestieZgomotoasa(t *testing.T) {
+	b := dictionar("sunt sint text")
+	r, err := Text(context.Background(), b, "Noi sînt acolo")
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, u := range r.Necunoscute {
+		if u.Cuvant == "sînt" && len(u.Sugestii) != 0 {
+			t.Errorf("sînt are sugestii %v deși linterul propune „sunt”", u.Sugestii)
+		}
+	}
+	if len(r.Lint) == 0 {
+		t.Error("linterul ar trebui să marcheze sînt")
+	}
+}

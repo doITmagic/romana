@@ -66,9 +66,24 @@ var fragmenteElidate = map[string]bool{
 	"într": true, "dintr": true, "printr": true,
 }
 
+// prefixe sunt părțile din față care nu mai fac, prin cratimă, un compus
+// acceptat pe părți: „ex-soț”, „anti-NATO”, „nici-o” trebuie să fie în dicționar
+// întregi.
+var prefixe = map[string]bool{
+	"anti": true, "ex": true, "nici": true, "pre": true, "post": true,
+	"super": true, "ultra": true, "supra": true, "contra": true, "auto": true,
+	"mini": true, "maxi": true, "mega": true, "semi": true, "pseudo": true,
+	"neo": true, "proto": true, "vice": true, "non": true, "micro": true,
+	"macro": true, "multi": true, "inter": true, "intra": true, "extra": true,
+	"hiper": true, "hipo": true, "co": true, "arhi": true, "sub": true,
+}
+
 const apostrofuri = "'’ʼ`‘"
 
 var reUrl = regexp.MustCompile(`(?i)(https?://|www\.)\S+|\S+@\S+\.\S+`)
+
+// reHtml prinde etichetele HTML (cu atribute) și ținta linkurilor Markdown.
+var reHtml = regexp.MustCompile(`</?[A-Za-z][^<>\n]*>|<!--.*?-->|\]\([^)]*\)`)
 
 type interval struct{ a, b int }
 
@@ -81,7 +96,8 @@ func in(zone []interval, p int) bool {
 	return false
 }
 
-// zoneIgnorate: blocuri de cod, cod inline și adrese (URL, e-mail).
+// zoneIgnorate: blocuri de cod, cod inline, adrese (URL, e-mail), etichete
+// HTML și ținta linkurilor Markdown.
 func zoneIgnorate(text string) []interval {
 	var z []interval
 	pos, blocDe := 0, 0
@@ -117,6 +133,9 @@ func zoneIgnorate(text string) []interval {
 		z = append(z, interval{blocDe, len(text)})
 	}
 	for _, m := range reUrl.FindAllStringIndex(text, -1) {
+		z = append(z, interval{m[0], m[1]})
+	}
+	for _, m := range reHtml.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], m[1]})
 	}
 	return z
@@ -229,6 +248,19 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 	rap := Raport{Necunoscute: []Necunoscut{}, Lint: lint.Verifica(text)}
 	ignorat := zoneIgnorate(text)
 	memo := map[string]bool{}
+	memoSug := map[string][]string{}
+	sugestii := func(forma string) ([]string, error) {
+		k := dex.Normalizeaza(forma)
+		if v, ok := memoSug[k]; ok {
+			return v, nil
+		}
+		v, err := c.Sugestii(ctx, forma, maxSugestii)
+		if err != nil {
+			return nil, err
+		}
+		memoSug[k] = v
+		return v, nil
+	}
 	exista := func(forma string) (bool, error) {
 		k := dex.Normalizeaza(forma)
 		if v, ok := memo[k]; ok {
@@ -267,8 +299,12 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 		u := Necunoscut{Cuvant: cuv, Inceput: j.a, Sfarsit: j.b}
 		if motiv := clasifica(cuv, inceputDePropozitie(text, j.a)); motiv != "" {
 			u.Neverificat, u.Motiv = true, motiv
-		} else if u.Sugestii, err = c.Sugestii(ctx, cuv, maxSugestii); err != nil {
-			return Raport{}, err
+		} else if !acoperitDeLint(rap.Lint, j.a, j.b) {
+			// altfel linterul dă deja propunerea; sugestiile ar fi un al doilea
+			// semnal, adesea zgomotos (sînt → sinț)
+			if u.Sugestii, err = sugestii(cuv); err != nil {
+				return Raport{}, err
+			}
 		}
 		rap.Necunoscute = append(rap.Necunoscute, u)
 	}
@@ -276,11 +312,31 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 	return rap, nil
 }
 
+// acoperitDeLint spune dacă vreo observație a linterului se suprapune cu
+// intervalul [a, b).
+func acoperitDeLint(obs []lint.Observatie, a, b int) bool {
+	for _, o := range obs {
+		if o.Inceput < b && a < o.Sfarsit {
+			return true
+		}
+	}
+	return false
+}
+
 // existaPeParti: compusul sau cliticul cu cratimă ori apostrof e acceptat
 // dacă fiecare parte e un cuvânt din dicționar sau un fragment elidat cunoscut.
 func existaPeParti(cuv string, exista func(string) (bool, error)) (bool, error) {
 	parti := strings.FieldsFunc(cuv, func(r rune) bool { return r == '-' || strings.ContainsRune(apostrofuri, r) })
 	if len(parti) < 2 {
+		return false, nil
+	}
+	elidat := false
+	for _, p := range parti {
+		if fragmenteElidate[dex.Normalizeaza(p)] {
+			elidat = true
+		}
+	}
+	if !elidat && prefixe[dex.Normalizeaza(parti[0])] {
 		return false, nil
 	}
 	for _, p := range parti {
