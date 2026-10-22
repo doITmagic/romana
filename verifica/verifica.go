@@ -14,7 +14,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"regexp"
 	"sort"
 	"strings"
 	"unicode"
@@ -81,71 +80,11 @@ var prefixe = map[string]bool{
 
 const apostrofuri = "'’ʼ`‘"
 
-var reUrl = regexp.MustCompile(`(?i)(https?://|www\.)\S+|\S+@\S+\.\S+`)
-
-// reHtml prinde etichetele HTML (cu atribute) și ținta linkurilor Markdown.
-var reHtml = regexp.MustCompile(`</?[A-Za-z][^<>\n]*>|<!--.*?-->|\]\([^)]*\)`)
-
-type interval struct{ a, b int }
-
-func in(zone []interval, p int) bool {
-	for _, z := range zone {
-		if p >= z.a && p < z.b {
-			return true
-		}
-	}
-	return false
-}
-
-// zoneIgnorate: blocuri de cod, cod inline, adrese (URL, e-mail), etichete
-// HTML și ținta linkurilor Markdown.
-func zoneIgnorate(text string) []interval {
-	var z []interval
-	pos, blocDe := 0, 0
-	inBloc := false
-	for _, linie := range strings.SplitAfter(text, "\n") {
-		t := strings.TrimSpace(linie)
-		if strings.HasPrefix(t, "```") || strings.HasPrefix(t, "~~~") {
-			if !inBloc {
-				inBloc, blocDe = true, pos
-			} else {
-				z = append(z, interval{blocDe, pos + len(linie)})
-				inBloc = false
-			}
-		} else if !inBloc {
-			for i := 0; i < len(linie); {
-				a := strings.IndexByte(linie[i:], '`')
-				if a < 0 {
-					break
-				}
-				a += i
-				b := strings.IndexByte(linie[a+1:], '`')
-				if b < 0 {
-					break
-				}
-				b += a + 1
-				z = append(z, interval{pos + a, pos + b + 1})
-				i = b + 1
-			}
-		}
-		pos += len(linie)
-	}
-	if inBloc {
-		z = append(z, interval{blocDe, len(text)})
-	}
-	for _, m := range reUrl.FindAllStringIndex(text, -1) {
-		z = append(z, interval{m[0], m[1]})
-	}
-	for _, m := range reHtml.FindAllStringIndex(text, -1) {
-		z = append(z, interval{m[0], m[1]})
-	}
-	return z
-}
-
 // jeton e un cuvânt găsit în text.
 type jeton struct {
 	a, b int
-	// sarit: conține cifre sau _, deci e număr, identificator sau cod.
+	// sarit: conține cifre sau _ între litere/cifre, deci e număr,
+	// identificator sau cod.
 	sarit bool
 }
 
@@ -154,13 +93,14 @@ func esteLitera(r rune) bool { return unicode.IsLetter(r) || unicode.Is(unicode.
 func esteLiteraSauCifra(r rune) bool { return esteLitera(r) || unicode.IsDigit(r) }
 
 // tokenizeaza împarte textul în cuvinte: litere românești, cu cratimă sau
-// apostrof doar în interior (între litere). Un cuvânt lipit de cifre sau de _
-// e marcat sarit.
+// apostrof doar în interior (între litere). Un cuvânt cu cifre sau cu _ între
+// litere (snake_case) e marcat sarit. „_” la marginea cuvântului e marcaj
+// Markdown (_italic_, __bold__) și nu intră în cuvânt.
 func tokenizeaza(text string) []jeton {
 	var out []jeton
 	for i := 0; i < len(text); {
 		r, w := utf8.DecodeRuneInString(text[i:])
-		if !esteLiteraSauCifra(r) && r != '_' {
+		if !esteLiteraSauCifra(r) {
 			i += w
 			continue
 		}
@@ -171,7 +111,14 @@ func tokenizeaza(text string) []jeton {
 			r2, w2 := utf8.DecodeRuneInString(text[j:])
 			switch {
 			case esteLitera(r2):
-			case unicode.IsDigit(r2) || r2 == '_':
+			case unicode.IsDigit(r2):
+				sarit = true
+			case r2 == '_':
+				ant, _ := utf8.DecodeLastRuneInString(text[i:j])
+				urm, _ := utf8.DecodeRuneInString(text[j+w2:])
+				if j+w2 >= len(text) || !esteLiteraSauCifra(urm) || !esteLiteraSauCifra(ant) {
+					break cuvant
+				}
 				sarit = true
 			case r2 == '-' || strings.ContainsRune(apostrofuri, r2):
 				// doar în interior: și înainte, și după trebuie să fie literă sau cifră
@@ -240,6 +187,18 @@ func clasifica(cuv string, inceput bool) string {
 	return ""
 }
 
+// maxLitereAbreviere: un cuvânt necunoscut de cel mult atâtea litere, urmat
+// imediat de punct, poate fi o abreviere (str., nr., vs., cf.).
+const maxLitereAbreviere = 4
+
+func esteAbreviere(text string, a, b int) bool {
+	if b >= len(text) || text[b] != '.' {
+		return false
+	}
+	n := utf8.RuneCountInString(text[a:b])
+	return n >= 2 && n <= maxLitereAbreviere && !strings.ContainsAny(text[a:b], "-"+apostrofuri)
+}
+
 // Text verifică fiecare cuvânt al textului în dicționar și rulează linterul.
 // Pozițiile sunt în octeți, în textul primit (CRLF nu le schimbă).
 func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
@@ -247,7 +206,7 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 		return Raport{}, fmt.Errorf("%w: %d de caractere, maximum %d", ErrPreaMare, n, MaxCaractere)
 	}
 	rap := Raport{Necunoscute: []Necunoscut{}, Lint: lint.Verifica(text)}
-	ignorat := zoneIgnorate(text)
+	ignorat := lint.Ignorat(text)
 	memo := map[string]bool{}
 	memoSug := map[string][]string{}
 	sugestii := func(forma string) ([]string, error) {
@@ -276,7 +235,7 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 	}
 
 	for n, j := range tokenizeaza(text) {
-		if j.sarit || in(ignorat, j.a) {
+		if j.sarit || ignorat(j.a) {
 			continue
 		}
 		if n%256 == 0 {
@@ -300,6 +259,8 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 		u := Necunoscut{Cuvant: cuv, Inceput: j.a, Sfarsit: j.b}
 		if motiv := clasifica(cuv, inceputDePropozitie(text, j.a)); motiv != "" {
 			u.Neverificat, u.Motiv = true, motiv
+		} else if esteAbreviere(text, j.a, j.b) {
+			u.Neverificat, u.Motiv = true, "posibilă abreviere"
 		} else if !acoperitDeLint(rap.Lint, j.a, j.b) {
 			// altfel linterul dă deja propunerea; sugestiile ar fi un al doilea
 			// semnal, adesea zgomotos (sînt → sinț)

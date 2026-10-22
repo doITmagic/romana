@@ -51,6 +51,17 @@ var prefixeleI = []string{
 	"para", "pan", "proto", "arhi", "vice", "pseudo", "cvasi", "micro",
 	"macro", "mono", "poli", "omni", "trans", "circum", "peste", "non",
 	"bine", "nemai", "de", "din", "ori",
+	// prefixoide de formare savantă și tehnică (videoînregistrare,
+	// bioîngrășăminte, portîncărcător)
+	"tele", "bio", "foto", "video", "audio", "radio", "super", "port",
+	"electro", "agro", "eco", "geo", "hidro", "termo", "nano", "stereo",
+	"cine", "aero", "moto", "euro", "neuro", "psiho", "socio", "antro",
+	"astro", "fono", "ciber", "lacto", "metro", "opto", "piro", "cardio",
+	"crono", "endo", "exo", "giga", "homo", "hetero", "izo", "kilo", "meta",
+	"necro", "orto", "paleo", "pato", "petro", "pluri", "retro", "tetra",
+	"xeno", "zoo", "ante", "ambi", "mili", "maxi", "neo", "balneo", "fito",
+	"hemo", "mecano", "morfo", "oligo", "stato", "tehno",
+	"biblio", "cosmo", "ideo", "demo",
 }
 
 // faraSedila: „şi” cu sedilă e tot o legătură românească.
@@ -69,6 +80,7 @@ func init() {
 func Verifica(text string) []Observatie {
 	ignorat := zoneIgnorate(text)
 	citate := zoneCitate(text)
+	vechi := minusculeCuI(text, ignorat)
 	var out []Observatie
 	add := func(o Observatie) {
 		if in(ignorat, o.Inceput) {
@@ -78,7 +90,7 @@ func Verifica(text string) []Observatie {
 	}
 
 	for _, c := range cuvinte(text) {
-		verificaCuvant(text, c.a, text[c.a:c.b], in(citate, c.a), add)
+		verificaCuvant(text, c.a, text[c.a:c.b], in(citate, c.a), vechi, add)
 	}
 	verificaSpatii(text, ignorat, add)
 
@@ -109,9 +121,9 @@ func cuvinte(text string) []interval {
 	return out
 }
 
-func verificaCuvant(text string, poz int, cuv string, citat bool, add func(Observatie)) {
+func verificaCuvant(text string, poz int, cuv string, citat bool, vechi map[string]bool, add func(Observatie)) {
 	// 1. Sedila. Se corectează și în citat (în citat se corectează tipografia).
-	if strings.ContainsAny(cuv, "şŞţŢ") {
+	if strings.ContainsAny(cuv, "şŞţŢ") && !areLiteraStraina(cuv) {
 		prop := strings.NewReplacer("ş", "ș", "Ş", "Ș", "ţ", "ț", "Ţ", "Ț").Replace(cuv)
 		add(Observatie{
 			Regula: "RO-TIP-027", Inceput: poz, Sfarsit: poz + len(cuv),
@@ -123,6 +135,9 @@ func verificaCuvant(text string, poz int, cuv string, citat bool, add func(Obser
 	}
 	if citat || numeLaMijloc(text, poz, cuv) {
 		return
+	}
+	if areLiteraStraina(cuv) {
+		return // nume sau cuvânt din altă limbă (Işık, Müller, maître)
 	}
 	low := strings.ToLower(cuv)
 
@@ -138,7 +153,7 @@ func verificaCuvant(text string, poz int, cuv string, citat bool, add func(Obser
 	}
 
 	// 3. Grafia veche cu „î” interior.
-	if prop, ok := grafiaVeche(cuv, low); ok {
+	if prop, ok := grafiaVeche(cuv, low, vechi); ok {
 		add(Observatie{
 			Regula: "RO-TIP-128", Inceput: poz, Sfarsit: poz + len(cuv),
 			Fragment: cuv, Propunere: prop,
@@ -170,7 +185,7 @@ func pastreazaMajuscula(model, inloc string) string {
 	return inloc
 }
 
-func grafiaVeche(cuv, low string) (string, bool) {
+func grafiaVeche(cuv, low string, vechi map[string]bool) (string, bool) {
 	runes := []rune(cuv)
 	lrunes := []rune(low)
 	n := len(runes)
@@ -185,6 +200,15 @@ func grafiaVeche(cuv, low string) (string, bool) {
 			runes[1] = 'u'
 		}
 		return string(runes), true
+	}
+	if frantuzesc(low) {
+		return "", false
+	}
+	// Cuvântul cu majusculă inițială poate fi un nume propriu (Pîrvu,
+	// Brîndușa), oriunde în propoziție: se semnalează doar dacă e un cuvânt
+	// uzual în grafia veche sau dacă forma cu minusculă apare și în text.
+	if r0 := []rune(cuv)[0]; unicode.IsUpper(r0) && !cuvantUzualVechi[low] && !vechi[low] {
+		return "", false
 	}
 	schimbat := false
 	for k := 1; k < n-1; k++ { // î interior: nu la început, nu la sfârșit
@@ -204,6 +228,63 @@ func grafiaVeche(cuv, low string) (string, bool) {
 func dupaPrefix(l []rune, k int) bool {
 	for _, p := range prefixeleI {
 		if utf8.RuneCountInString(p) == k && string(l[:k]) == p {
+			return true
+		}
+	}
+	return false
+}
+
+// cuvantUzualVechi: cuvinte românești uzuale scrise cu „î” interior după
+// grafia dinainte de 1993. Un cuvânt cu majusculă din această listă nu e
+// niciodată nume propriu.
+var cuvantUzualVechi = map[string]bool{}
+
+func init() {
+	for _, c := range strings.Fields(`cînd cînd cît cîtă cîți cîte cîtva cîndva cîteodată
+		pînă pîine pîini mîine mîna mîini mîinile mînă mîncare mînca mînînc mîndru mîndră
+		întîi întîia întîmplare întîmpla întîlni întîlnire întîlnit rîde rîu rîuri rîul
+		rînd rînduri rîndul vîrstă vîrsta vînt vîntul vîrf vîrful lîngă gînd gînduri gîndul gîndi
+		cîmp cîmpul cîmpie cîine cîini cuvînt cuvîntul pămînt pămîntul mormînt
+		sfîrșit sfîrșitul sfînt sfîntă tînăr tînără cîntec cînta cîntă romîn romînă
+		romîni romînesc romînească romînia rămîne rămîn urît hotărît
+		dîn dîntre sînt sîntem sînteți sîntă lumînare plîns plînge vîndut vînzare
+		pînză mînie cîrciumă bătrîn bătrînă bătrîni pîrîu strîmt strîns strînge`) {
+		cuvantUzualVechi[c] = true
+	}
+}
+
+// minusculeCuI: formele cu minusculă inițială și „î” interior din text (în
+// afara zonelor ignorate); servesc ca dovadă că o majusculă e aceeași grafie.
+func minusculeCuI(text string, ignorat []interval) map[string]bool {
+	m := map[string]bool{}
+	for _, c := range cuvinte(text) {
+		cuv := text[c.a:c.b]
+		r, _ := utf8.DecodeRuneInString(cuv)
+		if unicode.IsLower(r) && strings.Contains(cuv[utf8.RuneLen(r):], "î") && !in(ignorat, c.a) {
+			m[cuv] = true
+		}
+	}
+	return m
+}
+
+// areLiteraStraina: o literă care nu există în alfabetul românesc (ı, ğ, ö,
+// ü, ç, è, é, ê …). Cuvântul nu mai e românesc și nu se judecă după normă.
+func areLiteraStraina(cuv string) bool {
+	for _, r := range cuv {
+		if unicode.IsLetter(r) && !unicode.Is(unicode.Latin, r) {
+			return true
+		}
+		if unicode.IsLetter(r) && r > 127 && !strings.ContainsRune("ăâîșțĂÂÎȘȚşŞţŢ", r) {
+			return true
+		}
+	}
+	return false
+}
+
+// frantuzesc: formele franceze cu „î” (maître, connaître, paraît, il croît).
+func frantuzesc(low string) bool {
+	for _, f := range []string{"aît", "oît", "ître", "îtres"} {
+		if strings.Contains(low, f) {
 			return true
 		}
 	}
@@ -287,9 +368,30 @@ func in(zone []interval, p int) bool {
 	return false
 }
 
-// zoneIgnorate: blocuri de cod, cod inline și adrese (URL, e-mail).
+// reHtml prinde etichetele HTML (cu atribute), comentariile și ținta
+// linkurilor Markdown.
+var reHtml = regexp.MustCompile(`</?[A-Za-z][^<>\n]*>|(?s:<!--.*?-->)|\]\([^)]*\)`)
+
+// etichetePrinse: conținutul lor nu e text de verificat (cod, stil, text
+// preformatat).
+var etichetePrinse = []string{"script", "style", "pre", "code"}
+
+// Ignorat întoarce funcția care spune dacă o poziție (în octeți) e într-o
+// zonă pe care nici linterul, nici verificarea cuvintelor nu o judecă: blocuri
+// și cod inline, adrese, etichete HTML, conținutul <script>, <style>, <pre>,
+// <code> și front matter-ul YAML de la începutul fișierului. Regula e
+// într-un singur loc; pachetul verifica o folosește pe aceasta.
+func Ignorat(text string) func(int) bool {
+	z := zoneIgnorate(text)
+	return func(p int) bool { return in(z, p) }
+}
+
+// zoneIgnorate: vezi Ignorat.
 func zoneIgnorate(text string) []interval {
 	var z []interval
+	if a, b, ok := frontMatter(text); ok {
+		z = append(z, interval{a, b})
+	}
 	pos := 0
 	inBloc := false
 	blocDe := 0
@@ -326,7 +428,79 @@ func zoneIgnorate(text string) []interval {
 	for _, m := range reUrl.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], m[1]})
 	}
+	z = append(z, zonePrinse(text)...)
+	for _, m := range reHtml.FindAllStringIndex(text, -1) {
+		z = append(z, interval{m[0], m[1]})
+	}
 	return z
+}
+
+// zonePrinse: de la deschiderea unei etichete din etichetePrinse până la
+// închiderea ei (sau până la sfârșitul textului, dacă lipsește). Literele
+// mari nu contează.
+func zonePrinse(text string) []interval {
+	var z []interval
+	jos := strings.ToLower(text) // lungimea în octeți se poate schimba rar; verificăm
+	if len(jos) != len(text) {
+		jos = asciiJos(text)
+	}
+	for _, e := range etichetePrinse {
+		deschis, inchis := "<"+e, "</"+e
+		for i := 0; i < len(jos); {
+			a := strings.Index(jos[i:], deschis)
+			if a < 0 {
+				break
+			}
+			a += i
+			n := a + len(deschis)
+			if n < len(jos) && (jos[n] == '>' || jos[n] == ' ' || jos[n] == '\t' || jos[n] == '\n' || jos[n] == '\r' || jos[n] == '/') {
+				sf := len(text)
+				if c := strings.Index(jos[n:], inchis); c >= 0 {
+					sf = n + c
+					if g := strings.IndexByte(jos[sf:], '>'); g >= 0 {
+						sf += g + 1
+					} else {
+						sf = len(text)
+					}
+				}
+				z = append(z, interval{a, sf})
+				i = sf
+				continue
+			}
+			i = n
+		}
+	}
+	return z
+}
+
+// asciiJos coboară doar literele ASCII, ca să păstreze pozițiile în octeți.
+func asciiJos(s string) string {
+	b := []byte(s)
+	for i, c := range b {
+		if c >= 'A' && c <= 'Z' {
+			b[i] = c + 32
+		}
+	}
+	return string(b)
+}
+
+// frontMatter: blocul YAML „--- … ---” de la începutul fișierului, închis în
+// primele 100 de rânduri. Întoarce limitele blocului, cu rândul de închidere.
+func frontMatter(text string) (int, int, bool) {
+	t := strings.TrimPrefix(text, "\ufeff")
+	off := len(text) - len(t)
+	linii := strings.SplitAfter(t, "\n")
+	if len(linii) < 2 || strings.TrimRight(linii[0], " \t\r\n") != "---" {
+		return 0, 0, false
+	}
+	pos := len(linii[0])
+	for k := 1; k < len(linii) && k <= 100; k++ {
+		if strings.TrimRight(linii[k], " \t\r\n") == "---" {
+			return off, off + pos + len(linii[k]), true
+		}
+		pos += len(linii[k])
+	}
+	return 0, 0, false
 }
 
 // zoneCitate: textul dintre ghilimele, în același alineat.
