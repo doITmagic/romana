@@ -26,10 +26,6 @@ import (
 // versiune se setează la build: -ldflags "-X main.versiune=v0.1.0".
 var versiune = "dev"
 
-// graceActualizare: cât așteaptă cauta și verifica terminarea verificării în
-// fundal, după ce și-au scris rezultatul.
-const graceActualizare = 2 * time.Second
-
 // maxHook: fișierele mai mari de atât nu sunt citite de hook.
 const maxHook = 2 << 20
 
@@ -77,6 +73,7 @@ func main() {
 // optiuni sunt argumentele comune ale comenzilor.
 type optiuni struct {
 	offline, json, hook bool
+	fundal              bool // update pornit de actualizeazaInFundal: nefortat, cu ora în jurnal
 	calea               string
 	pozitionale         []string
 }
@@ -100,6 +97,8 @@ func parseaza(args []string) (o optiuni, err error) {
 			o.json = true
 		case a == "--hook":
 			o.hook = true
+		case a == "--fundal":
+			o.fundal = true
 		case a == "-" || !strings.HasPrefix(a, "-"):
 			o.pozitionale = append(o.pozitionale, a)
 		default:
@@ -159,33 +158,6 @@ func ruleaza(ctx context.Context, args []string, in io.Reader, out, errOut io.Wr
 	return 2
 }
 
-// pornesteActualizarea pornește verificarea de actualizare în fundal. Funcția
-// întoarsă așteaptă cel mult graceActualizare terminarea ei, apoi o oprește;
-// baza veche și cache-ul rămân neatinse la oprire.
-func pornesteActualizarea(ctx context.Context, bo baza.Optiuni, errOut io.Writer) (asteapta func()) {
-	if bo.CuImplicite().Offline {
-		return func() {}
-	}
-	cx, anuleaza := context.WithCancel(ctx)
-	gata := make(chan struct{})
-	go func() {
-		defer close(gata)
-		if schimbat, err := baza.Actualizeaza(cx, bo, false); err != nil && cx.Err() == nil {
-			fmt.Fprintf(errOut, "romana: actualizarea bazei a eșuat: %v\n", err)
-		} else if schimbat {
-			fmt.Fprintln(errOut, "romana: baza a fost actualizată")
-		}
-	}()
-	return func() {
-		select {
-		case <-gata:
-		case <-time.After(graceActualizare):
-		}
-		anuleaza()
-		<-gata
-	}
-}
-
 // deschideDictionar asigură baza (o descarcă dacă lipsește) și o deschide.
 func deschideDictionar(ctx context.Context, o optiuni, errOut io.Writer) (*dex.Dictionar, baza.Optiuni, error) {
 	bo := o.baza(errOut)
@@ -209,8 +181,7 @@ func cmdCauta(ctx context.Context, o optiuni, out, errOut io.Writer) int {
 		return 1
 	}
 	defer d.Close()
-	asteapta := pornesteActualizarea(ctx, bo, errOut)
-	defer asteapta()
+	actualizeazaInFundal(bo, errOut)
 	r, err := d.Cauta(ctx, o.pozitionale[0])
 	if err != nil {
 		fmt.Fprintf(errOut, "romana: %v\n", err)
@@ -288,8 +259,7 @@ func cmdVerifica(ctx context.Context, o optiuni, in io.Reader, out, errOut io.Wr
 		return 1
 	}
 	defer d.Close()
-	asteapta := pornesteActualizarea(ctx, bo, errOut)
-	defer asteapta()
+	actualizeazaInFundal(bo, errOut)
 	r, err := verifica.Text(ctx, d, text)
 	if err != nil {
 		fmt.Fprintf(errOut, "romana: %v\n", err)
@@ -404,6 +374,10 @@ func cmdImport(ctx context.Context, o optiuni, out, errOut io.Writer) int {
 			fmt.Fprintf(errOut, "romana: %v\n", err)
 			return 1
 		}
+		// starea veche (ETag-ul altui export) nu mai descrie baza
+		if err := baza.UitaStarea(bo); err != nil {
+			fmt.Fprintf(errOut, "romana: %v\n", err)
+		}
 		fmt.Fprintf(out, "Baza a fost importată în %s (%+v)\n", bo.CaleBaza, st)
 		return 0
 	}
@@ -421,6 +395,21 @@ func cmdImport(ctx context.Context, o optiuni, out, errOut io.Writer) int {
 }
 
 func cmdUpdate(ctx context.Context, o optiuni, out, errOut io.Writer) int {
+	if o.fundal {
+		// pornit de actualizeazaInFundal: respectă pauzele, scrie ora în jurnal
+		schimbat, err := baza.Actualizeaza(ctx, o.baza(errOut), false)
+		ora := time.Now().Format(time.RFC3339)
+		switch {
+		case err != nil:
+			fmt.Fprintf(errOut, "%s romana: actualizarea a eșuat: %v\n", ora, err)
+			return 1
+		case schimbat:
+			fmt.Fprintf(out, "%s romana: baza a fost actualizată\n", ora)
+		default:
+			fmt.Fprintf(out, "%s romana: baza e la zi\n", ora)
+		}
+		return 0
+	}
 	schimbat, err := baza.Actualizeaza(ctx, o.baza(errOut), true)
 	if err != nil {
 		fmt.Fprintf(errOut, "romana: %v\n", err)
@@ -435,13 +424,19 @@ func cmdUpdate(ctx context.Context, o optiuni, out, errOut io.Writer) int {
 }
 
 // unelte implementează mcp.Unelte peste dicționar. Baza se pregătește în
-// fundal; până atunci Stare spune de ce nu e gata. Redeschiderea după o
-// înlocuire a fișierului nu se încrucișează cu interogările în curs.
+// fundal; până atunci Stare spune de ce nu e gata. Când actualizarea din
+// fundal înlocuiește fișierul, următoarea cerere îl redeschide; redeschiderea
+// nu se încrucișează cu interogările în curs.
 type unelte struct {
 	mu      sync.RWMutex
 	d       *dex.Dictionar
+	cale    string      // fișierul deschis
+	fi      os.FileInfo // fișierul de la deschidere, ca înlocuirea să se vadă
 	mesaj   string
 	inchise bool
+
+	muVerif sync.Mutex // o singură verificare a fișierului odată
+	log     io.Writer  // unde se anunță redeschiderea; poate lipsi
 }
 
 func noiUnelte() *unelte {
@@ -450,6 +445,10 @@ func noiUnelte() *unelte {
 
 // deschide (re)deschide baza de la cale și o închide pe cea veche.
 func (u *unelte) deschide(cale string) error {
+	fi, err := os.Stat(cale) // înainte de deschidere: o înlocuire între ele doar redeschide încă o dată
+	if err != nil {
+		return err
+	}
 	nou, err := dex.Deschide(cale)
 	if err != nil {
 		return err
@@ -461,7 +460,7 @@ func (u *unelte) deschide(cale string) error {
 		nou.Close()
 		return errors.New("unealta e închisă")
 	}
-	u.d = nou
+	u.d, u.cale, u.fi = nou, cale, fi
 	u.mu.Unlock()
 	if vechi != nil {
 		vechi.Close() // sub RLock nu mai e nimeni pe el: schimbarea a așteptat Lock
@@ -499,7 +498,32 @@ func (u *unelte) Stare() (bool, string) {
 
 var errFaraBaza = errors.New("baza se pregătește")
 
+// improspateaza redeschide baza dacă fișierul ei a fost înlocuit între timp.
+func (u *unelte) improspateaza() {
+	u.muVerif.Lock()
+	defer u.muVerif.Unlock()
+	u.mu.RLock()
+	cale, fi := u.cale, u.fi
+	u.mu.RUnlock()
+	if cale == "" {
+		return
+	}
+	if nou, err := os.Stat(cale); err != nil || os.SameFile(fi, nou) {
+		return
+	}
+	err := u.deschide(cale)
+	if u.log == nil {
+		return
+	}
+	if err != nil {
+		fmt.Fprintf(u.log, "romana: baza actualizată nu se poate redeschide: %v\n", err)
+		return
+	}
+	fmt.Fprintln(u.log, "romana: baza a fost actualizată")
+}
+
 func (u *unelte) Cauta(ctx context.Context, cuvant string) (dex.Raspuns, error) {
+	u.improspateaza()
 	u.mu.RLock()
 	defer u.mu.RUnlock()
 	if u.d == nil {
@@ -509,6 +533,7 @@ func (u *unelte) Cauta(ctx context.Context, cuvant string) (dex.Raspuns, error) 
 }
 
 func (u *unelte) Verifica(ctx context.Context, text string) (verifica.Raport, error) {
+	u.improspateaza()
 	u.mu.RLock()
 	defer u.mu.RUnlock()
 	if u.d == nil {
@@ -534,6 +559,7 @@ func cmdMCP(ctx context.Context, o optiuni, in io.Reader, out, errOut io.Writer)
 	cx, anuleaza := context.WithCancel(ctx)
 	defer anuleaza()
 	u := noiUnelte()
+	u.log = log
 	bo := o.baza(log)
 	gata := make(chan struct{})
 	go func() {
@@ -552,20 +578,9 @@ func cmdMCP(ctx context.Context, o optiuni, in io.Reader, out, errOut io.Writer)
 			fmt.Fprintf(log, "romana: %v\n", err)
 			return
 		}
-		if bo.CuImplicite().Offline {
-			return
-		}
-		schimbat, err := baza.Actualizeaza(cx, bo, false)
-		switch {
-		case err != nil && cx.Err() == nil:
-			fmt.Fprintf(log, "romana: actualizarea bazei a eșuat: %v\n", err)
-		case schimbat:
-			if err := u.deschide(cale); err != nil {
-				fmt.Fprintf(log, "romana: baza actualizată nu se poate redeschide: %v\n", err)
-				return
-			}
-			fmt.Fprintln(log, "romana: baza a fost actualizată")
-		}
+		// descărcarea poate dura mai mult decât sesiunea: merge în proces separat,
+		// iar improspateaza redeschide baza când fișierul se schimbă
+		actualizeazaInFundal(bo, log)
 	}()
 	err := mcp.Serveste(cx, in, out, u, versiune)
 	anuleaza()

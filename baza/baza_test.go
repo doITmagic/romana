@@ -40,8 +40,12 @@ type server struct {
 	etag   atomic.Value // string
 	corp   atomic.Value // []byte
 	ua     atomic.Value // string
+	ims    atomic.Value // string: If-Modified-Since din ultima cerere
 	taie   atomic.Bool
 }
+
+// ultimaModificare: Last-Modified al exportului de probă.
+var ultimaModificare = time.Date(2026, 10, 21, 7, 28, 0, 0, time.UTC)
 
 func nouServer(t *testing.T) *server {
 	t.Helper()
@@ -56,9 +60,16 @@ func nouServer(t *testing.T) *server {
 			w.WriteHeader(http.StatusNotModified)
 			return
 		}
+		// RFC 9110 §13.1.3: cu If-None-Match, If-Modified-Since nu contează
+		s.ims.Store(r.Header.Get("If-Modified-Since"))
+		ims, err := http.ParseTime(r.Header.Get("If-Modified-Since"))
+		if r.Header.Get("If-None-Match") == "" && err == nil && !ultimaModificare.After(ims) {
+			w.WriteHeader(http.StatusNotModified)
+			return
+		}
 		corp := s.corp.Load().([]byte)
 		w.Header().Set("ETag", et)
-		w.Header().Set("Last-Modified", "Wed, 21 Oct 2026 07:28:00 GMT")
+		w.Header().Set("Last-Modified", ultimaModificare.Format(http.TimeFormat))
 		w.Header().Set("Content-Length", fmt.Sprint(len(corp)))
 		if s.taie.Load() {
 			w.Write(corp[:len(corp)/2])
@@ -533,5 +544,177 @@ func TestStareDupaEsecMutareCache(t *testing.T) {
 	}
 	if !st.Eroare.IsZero() {
 		t.Fatalf("baza e bună, nu trebuia marcată eroarea: %+v", st)
+	}
+}
+
+// importaManual pune baza la loc cu dex.Importa, fără stare.json (ca
+// „romana import <fișier>”), și îi dă data mtime.
+func importaManual(t *testing.T, o Optiuni, mtime time.Time) {
+	t.Helper()
+	if err := os.MkdirAll(filepath.Dir(o.CaleBaza), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := dex.Importa(context.Background(), strings.NewReader(dextest.Export()), o.CaleBaza); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.Chtimes(o.CaleBaza, mtime, mtime); err != nil {
+		t.Fatal(err)
+	}
+}
+
+// O bază importată din fișier, fără stare.json, nu se descarcă din nou la
+// fiecare pornire: data fișierului ține locul ultimei verificări, iar cererea
+// săptămânală e condiționată de ea.
+func TestBazaImportataFaraStare(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	importata := ultimaModificare.Add(24 * time.Hour) // după ultima modificare a exportului
+	importaManual(t, o, importata)
+	now := importata.Add(24 * time.Hour)
+	o.Acum = func() time.Time { return now }
+	if DeVerificat(o) {
+		t.Fatal("o zi după import: nu e de verificat")
+	}
+	if ch, err := Actualizeaza(context.Background(), o, false); ch || err != nil || s.cereri.Load() != 0 {
+		t.Fatalf("o zi după import: %v %v, cereri %d", ch, err, s.cereri.Load())
+	}
+	now = importata.Add(8 * 24 * time.Hour)
+	if !DeVerificat(o) {
+		t.Fatal("8 zile după import: e de verificat")
+	}
+	ch, err := Actualizeaza(context.Background(), o, false)
+	if err != nil || ch {
+		t.Fatalf("export neschimbat: schimbat=%v err=%v", ch, err)
+	}
+	if s.cereri.Load() != 1 || s.ims.Load() != importata.Format(http.TimeFormat) {
+		t.Fatalf("cereri %d, If-Modified-Since %q", s.cereri.Load(), s.ims.Load())
+	}
+	if DeVerificat(o) {
+		t.Fatal("după 304: nu mai e de verificat o săptămână")
+	}
+}
+
+// O bază importată înaintea ultimei modificări a exportului se actualizează.
+func TestBazaImportataVeche(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	importata := ultimaModificare.Add(-30 * 24 * time.Hour)
+	importaManual(t, o, importata)
+	o.Acum = func() time.Time { return ultimaModificare.Add(time.Hour) }
+	ch, err := Actualizeaza(context.Background(), o, false)
+	if err != nil || !ch {
+		t.Fatalf("export mai nou: schimbat=%v err=%v", ch, err)
+	}
+	if st := citesteStare(o.DirCache); st.ETag != `"v1"` {
+		t.Fatalf("starea după descărcare: %+v", st)
+	}
+}
+
+// Un proces oprit în timpul descărcării lasă doar „incercat” în stare: în
+// următoarea oră nu se mai încearcă.
+func TestIncercareIntrerupta(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	t0 := ultimaModificare.Add(30 * 24 * time.Hour)
+	importaManual(t, o, ultimaModificare.Add(-30*24*time.Hour))
+	if err := scrieStare(o.DirCache, stare{Incercat: t0}); err != nil {
+		t.Fatal(err)
+	}
+	now := t0.Add(10 * time.Minute)
+	o.Acum = func() time.Time { return now }
+	if DeVerificat(o) {
+		t.Fatal("încercare de acum 10 minute: nu e de verificat")
+	}
+	if ch, err := Actualizeaza(context.Background(), o, false); ch || err != nil || s.cereri.Load() != 0 {
+		t.Fatalf("în pauză: %v %v, cereri %d", ch, err, s.cereri.Load())
+	}
+	now = t0.Add(2 * time.Hour)
+	if !DeVerificat(o) {
+		t.Fatal("după o oră: e de verificat")
+	}
+	if ch, err := Actualizeaza(context.Background(), o, false); !ch || err != nil || s.cereri.Load() != 1 {
+		t.Fatalf("după pauză: %v %v, cereri %d", ch, err, s.cereri.Load())
+	}
+}
+
+// DeVerificat e fals cât o altă instanță ține blocarea și când rețeaua e oprită.
+func TestDeVerificatBlocareSiOffline(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	importaManual(t, o, ultimaModificare)
+	o.Acum = func() time.Time { return ultimaModificare.Add(30 * 24 * time.Hour) }
+	if !DeVerificat(o) {
+		t.Fatal("bază veche: e de verificat")
+	}
+	os.MkdirAll(o.DirCache, 0o755)
+	blocare := filepath.Join(o.DirCache, numeBlocare)
+	if err := os.WriteFile(blocare, []byte(fmt.Sprintf("%d\n", os.Getpid())), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.Chtimes(blocare, o.Acum(), o.Acum()); err != nil {
+		t.Fatal(err)
+	}
+	if DeVerificat(o) {
+		t.Fatal("blocare vie: nu e de verificat")
+	}
+	os.Remove(blocare)
+	o.Offline = true
+	if DeVerificat(o) {
+		t.Fatal("offline: nu e de verificat")
+	}
+	if s.cereri.Load() != 0 {
+		t.Fatalf("DeVerificat nu face cereri: %d", s.cereri.Load())
+	}
+}
+
+// Temporarele mai vechi de o oră (proces oprit) se șterg la următoarea
+// descărcare; cele noi rămân.
+func TestTemporareVechiSterse(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	now := time.Now()
+	o.Acum = func() time.Time { return now }
+	os.MkdirAll(o.DirCache, 0o755)
+	os.MkdirAll(filepath.Dir(o.CaleBaza), 0o755)
+	vechi := []string{
+		filepath.Join(o.DirCache, numeExport+".tmp111"),
+		o.CaleBaza + ".tmp222",
+	}
+	nou := o.CaleBaza + ".tmp333"
+	for _, f := range append(vechi, nou) {
+		if err := os.WriteFile(f, []byte("x"), 0o644); err != nil {
+			t.Fatal(err)
+		}
+	}
+	for _, f := range vechi {
+		os.Chtimes(f, now.Add(-2*time.Hour), now.Add(-2*time.Hour))
+	}
+	if _, err := Asigura(context.Background(), o); err != nil {
+		t.Fatal(err)
+	}
+	for _, f := range vechi {
+		if _, err := os.Stat(f); err == nil {
+			t.Errorf("temporarul vechi a rămas: %s", f)
+		}
+	}
+	if _, err := os.Stat(nou); err != nil {
+		t.Errorf("temporarul nou a fost șters: %v", err)
+	}
+}
+
+func TestUitaStarea(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	if err := UitaStarea(o); err != nil {
+		t.Fatalf("fără stare: %v", err)
+	}
+	if err := scrieStare(o.DirCache, stare{ETag: `"vechi"`}); err != nil {
+		t.Fatal(err)
+	}
+	if err := UitaStarea(o); err != nil {
+		t.Fatal(err)
+	}
+	if st := citesteStare(o.DirCache); st.ETag != "" {
+		t.Fatalf("starea a rămas: %+v", st)
 	}
 }

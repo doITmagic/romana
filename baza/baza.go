@@ -32,6 +32,7 @@ const (
 	numeExport    = "dex-database.sql.gz"
 	numeStare     = "stare.json"
 	numeBlocare   = "descarcare.lock"
+	numeJurnal    = "actualizare.log"
 	intervalVerif = 7 * 24 * time.Hour // cât timp nu mai întrebăm serverul
 	pauzaEroare   = time.Hour          // cât așteptăm după o eroare, fără --forțat
 	blocareVeche  = time.Hour          // o blocare mai veche se consideră părăsită
@@ -112,6 +113,9 @@ type stare struct {
 	ETag      string    `json:"etag,omitempty"`
 	Modificat string    `json:"modificat,omitempty"`
 	Eroare    time.Time `json:"eroare"` // ultima descărcare eșuată
+	// Incercat: începutul ultimei cereri, scris înaintea ei. Un proces oprit în
+	// timpul descărcării nu apucă să scrie eroarea; așa nu se reia imediat.
+	Incercat time.Time `json:"incercat"`
 }
 
 func citesteStare(dirCache string) (s stare) {
@@ -224,6 +228,73 @@ func blocheaza(ctx context.Context, o Optiuni) (func(), error) {
 	}
 }
 
+// UitaStarea șterge stare.json: după un import din fișier, ETag-ul și data
+// exportului vechi nu mai descriu baza. Data fișierului bazei ține locul
+// ultimei verificări.
+func UitaStarea(o Optiuni) error {
+	o = o.CuImplicite()
+	err := os.Remove(filepath.Join(o.DirCache, numeStare))
+	if errors.Is(err, os.ErrNotExist) {
+		return nil
+	}
+	return err
+}
+
+// Jurnal e fișierul în care scrie actualizarea pornită în fundal.
+func Jurnal(o Optiuni) string {
+	return filepath.Join(o.CuImplicite().DirCache, numeJurnal)
+}
+
+// verificatLa: data ultimei verificări din stare sau, fără ea (bază importată
+// din fișier), data fișierului bazei.
+func verificatLa(o Optiuni, st stare) time.Time {
+	if !st.Verificat.IsZero() {
+		return st.Verificat
+	}
+	if i, err := os.Stat(o.CaleBaza); err == nil {
+		return i.ModTime()
+	}
+	return time.Time{}
+}
+
+// inPauza: o actualizare nefortată nu întreabă acum serverul. Cu o bază bună,
+// ultima verificare e mai nouă de 7 zile; în orice caz, ultima eroare sau
+// ultima încercare e mai nouă de o oră.
+func inPauza(o Optiuni, st stare, bazaOk bool) bool {
+	acum := o.Acum()
+	if v := verificatLa(o, st); bazaOk && !v.IsZero() && acum.Sub(v) < intervalVerif {
+		return true
+	}
+	for _, t := range []time.Time{st.Eroare, st.Incercat} {
+		if !t.IsZero() && acum.Sub(t) < pauzaEroare {
+			return true
+		}
+	}
+	return false
+}
+
+// DeVerificat spune, fără nicio cerere, dacă o actualizare nefortată ar
+// întreba acum serverul: rețeaua e pornită, baza e bună, nu e în pauză și nicio
+// altă instanță nu descarcă. Comenzile scurte o folosesc ca să nu pornească
+// degeaba procesul de actualizare.
+func DeVerificat(o Optiuni) bool {
+	o = o.CuImplicite()
+	if o.Offline {
+		return false
+	}
+	if ok, err := bazaBuna(o); err != nil || !ok {
+		return false
+	}
+	if inPauza(o, citesteStare(o.DirCache), true) {
+		return false
+	}
+	cale := filepath.Join(o.DirCache, numeBlocare)
+	if _, err := os.Stat(cale); err == nil && !blocareParasita(cale, o.Acum()) {
+		return false
+	}
+	return true
+}
+
 // bazaBuna spune dacă CaleBaza există și are schema curentă.
 func bazaBuna(o Optiuni) (bool, error) {
 	if _, err := os.Stat(o.CaleBaza); err != nil {
@@ -274,8 +345,8 @@ func Asigura(ctx context.Context, o Optiuni) (string, error) {
 
 // Actualizeaza întreabă serverul dacă exportul s-a schimbat și, dacă da, îl
 // descarcă și înlocuiește baza atomic. Fără fortat, nu face nimic dacă ultima
-// verificare e mai nouă de 7 zile sau dacă ultima încercare a eșuat acum mai
-// puțin de o oră. Întoarce dacă baza s-a schimbat.
+// verificare e mai nouă de 7 zile sau dacă ultima încercare a pornit ori a
+// eșuat acum mai puțin de o oră. Întoarce dacă baza s-a schimbat.
 func Actualizeaza(ctx context.Context, o Optiuni, fortat bool) (bool, error) {
 	o = o.CuImplicite()
 	if o.Offline {
@@ -288,15 +359,8 @@ func Actualizeaza(ctx context.Context, o Optiuni, fortat bool) (bool, error) {
 	if err != nil {
 		return false, err
 	}
-	if !fortat {
-		st := citesteStare(o.DirCache)
-		acum := o.Acum()
-		if ok && !st.Verificat.IsZero() && acum.Sub(st.Verificat) < intervalVerif {
-			return false, nil
-		}
-		if !st.Eroare.IsZero() && acum.Sub(st.Eroare) < pauzaEroare {
-			return false, nil
-		}
+	if !fortat && inPauza(o, citesteStare(o.DirCache), ok) {
+		return false, nil
 	}
 	release, err := blocheaza(ctx, o)
 	if err != nil {
@@ -307,6 +371,12 @@ func Actualizeaza(ctx context.Context, o Optiuni, fortat bool) (bool, error) {
 	if ok { // cerere condiționată doar dacă avem o bază bună de păstrat
 		st := citesteStare(o.DirCache)
 		etag, modificat = st.ETag, st.Modificat
+		// bază importată din fișier, fără stare: data ei ține locul datei exportului
+		if etag == "" && modificat == "" {
+			if i, err := os.Stat(o.CaleBaza); err == nil {
+				modificat = i.ModTime().UTC().Format(http.TimeFormat)
+			}
+		}
 	}
 	return aduce(ctx, o, etag, modificat)
 }
@@ -328,6 +398,12 @@ func aduce(ctx context.Context, o Optiuni, etag, modificat string) (schimbat boo
 		return false, err
 	}
 	if err = os.MkdirAll(filepath.Dir(o.CaleBaza), 0o755); err != nil {
+		return false, err
+	}
+	stergeTemporareVechi(o)
+	inainte := citesteStare(o.DirCache)
+	inainte.Incercat = o.Acum()
+	if err = scrieStare(o.DirCache, inainte); err != nil {
 		return false, err
 	}
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, o.URL, nil)
@@ -389,6 +465,23 @@ func aduce(ctx context.Context, o Optiuni, etag, modificat string) (schimbat boo
 		return true, errStare
 	}
 	return true, errMutare
+}
+
+// stergeTemporareVechi șterge temporarele rămase de la un proces oprit în
+// timpul descărcării sau al importului. Se cheamă sub blocare; un temporar mai
+// nou de o oră poate fi al unui „romana import <fișier>” în lucru și rămâne.
+func stergeTemporareVechi(o Optiuni) {
+	for _, tipar := range []string{
+		filepath.Join(o.DirCache, numeExport+".tmp*"),
+		filepath.Join(filepath.Dir(o.CaleBaza), filepath.Base(o.CaleBaza)+".tmp*"),
+	} {
+		l, _ := filepath.Glob(tipar)
+		for _, f := range l {
+			if i, err := os.Stat(f); err == nil && o.Acum().Sub(i.ModTime()) > blocareVeche {
+				os.Remove(f)
+			}
+		}
+	}
 }
 
 func marime(n int64) string {
