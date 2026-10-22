@@ -207,7 +207,7 @@ func grafiaVeche(cuv, low string, vechi map[string]bool) (string, bool) {
 	// Cuvântul cu majusculă inițială poate fi un nume propriu (Pîrvu,
 	// Brîndușa), oriunde în propoziție: se semnalează doar dacă e un cuvânt
 	// uzual în grafia veche sau dacă forma cu minusculă apare și în text.
-	if r0 := []rune(cuv)[0]; unicode.IsUpper(r0) && !cuvantUzualVechi[low] && !vechi[low] {
+	if r0 := []rune(cuv)[0]; unicode.IsUpper(r0) && !cuvantUzualVechi[low] && !vechi[low] && !flexiuneUzualaVeche(low) {
 		return "", false
 	}
 	schimbat := false
@@ -248,9 +248,36 @@ func init() {
 		sfîrșit sfîrșitul sfînt sfîntă tînăr tînără cîntec cînta cîntă romîn romînă
 		romîni romînesc romînească romînia rămîne rămîn urît hotărît
 		dîn dîntre sînt sîntem sînteți sîntă lumînare plîns plînge vîndut vînzare
-		pînză mînie cîrciumă bătrîn bătrînă bătrîni pîrîu strîmt strîns strînge`) {
+		hotărîre pînză mînie cîrciumă bătrîn bătrînă bătrîni pîrîu strîmt strîns strînge`) {
 		cuvantUzualVechi[c] = true
 	}
+}
+
+// sufixeFlexiune: terminațiile pe care le poate primi un cuvânt uzual din
+// cuvantUzualVechi (articol, plural, genitiv).
+var sufixeFlexiune = map[string]bool{
+	"": true, "a": true, "ul": true, "ului": true, "lui": true, "le": true, "lea": true,
+	"ii": true, "ei": true, "ea": true, "i": true, "e": true, "ile": true, "ele": true,
+	"ilor": true, "elor": true, "lor": true, "uri": true, "urile": true, "urilor": true,
+	"rea": true, "ri": true, "rile": true, "rii": true, "ă": true, "ată": true,
+}
+
+// flexiuneUzualaVeche: forma flexionată a unui cuvânt din cuvantUzualVechi
+// (Întîmplarea, Tînărul, Gîndurile). Un nume propriu (Pîrvu, Mîndrescu) nu
+// are rădăcina urmată de o terminație de flexiune.
+func flexiuneUzualaVeche(low string) bool {
+	for c := range cuvantUzualVechi {
+		if utf8.RuneCountInString(c) < 4 {
+			continue
+		}
+		r := []rune(c)
+		for _, tulpina := range []string{c, string(r[:len(r)-1])} {
+			if rest, ok := strings.CutPrefix(low, tulpina); ok && sufixeFlexiune[rest] {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 // minusculeCuI: formele cu minusculă inițială și „î” interior din text (în
@@ -368,9 +395,14 @@ func in(zone []interval, p int) bool {
 	return false
 }
 
+// reEticheta: etichetă cu cel puțin un atribut „nume=valoare”; „<b și c>” din
+// proză (comparații, săgeți) nu are atribute cu „=” și nu se potrivește.
+const reAtr = `[A-Za-z_:][\w:.-]*(?:\s*=\s*(?:"[^"\n]*"|'[^'\n]*'|[^\s"'<>]+))?`
+const reEticheta = `</?[A-Za-z][A-Za-z0-9-]*(?:\s+` + reAtr + `)*?\s+[A-Za-z_:][\w:.-]*\s*=\s*(?:"[^"\n]*"|'[^'\n]*'|[^\s"'<>]+)(?:\s+` + reAtr + `)*\s*/?>`
+
 // reHtml prinde etichetele HTML (cu atribute), comentariile și ținta
 // linkurilor Markdown.
-var reHtml = regexp.MustCompile(`</?[A-Za-z][^<>\n]*>|(?s:<!--.*?-->)|\]\([^)]*\)`)
+var reHtml = regexp.MustCompile(`</?[A-Za-z][A-Za-z0-9-]*\s*/?>|` + reEticheta + `|(?s:<!--.*?-->)|\]\([^)]*\)`)
 
 // etichetePrinse: conținutul lor nu e text de verificat (cod, stil, text
 // preformatat).
@@ -493,15 +525,32 @@ func frontMatter(text string) (int, int, bool) {
 	if len(linii) < 2 || strings.TrimRight(linii[0], " \t\r\n") != "---" {
 		return 0, 0, false
 	}
+	if len(linii) < 2 || strings.TrimSpace(linii[1]) == "" {
+		return 0, 0, false // după „---” urmează imediat o cheie, nu un rând gol
+	}
 	pos := len(linii[0])
+	chei := 0
 	for k := 1; k < len(linii) && k <= 100; k++ {
-		if strings.TrimRight(linii[k], " \t\r\n") == "---" {
+		l := strings.TrimRight(linii[k], " \t\r\n")
+		if l == "---" {
+			if chei == 0 {
+				return 0, 0, false
+			}
 			return off, off + pos + len(linii[k]), true
+		}
+		switch {
+		case reCheieYaml.MatchString(l):
+			chei++
+		case l == "", l[0] == ' ' || l[0] == '\t', l[0] == '#', strings.HasPrefix(l, "- "):
+		default:
+			return 0, 0, false // proză, nu YAML
 		}
 		pos += len(linii[k])
 	}
 	return 0, 0, false
 }
+
+var reCheieYaml = regexp.MustCompile(`^[A-Za-z_][\w-]*\s*:`)
 
 // zoneCitate: textul dintre ghilimele, în același alineat.
 func zoneCitate(text string) []interval {
