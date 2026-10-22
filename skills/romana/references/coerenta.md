@@ -117,7 +117,7 @@ Surse pentru metodă: DSL, s.v. COEZIUNE; Mic ghid CE p. 14 (Rec. 10).
 - **exemplu:** „de exemplu”, „de pildă”;
 - **reformulare:** „adică”, „cu alte cuvinte”.
 
-Dacă nu poți numi relația, nu pui conector. Dacă o poți numi, verifici dacă nu cumva ordinea frazelor o spune deja: două fapte puse unul după altul se citesc firesc ca succesiune sau ca adăugare. Conectorul trebuie acolo unde, fără el, cititorul ar ghici greșit relația, mai ales la contrast, la concesie și la condiție. Același cuvânt poate avea două valori: „astfel” înseamnă „în felul acesta”, dar și „prin urmare” (DEX ’98), iar „or” înseamnă „însă”, dar și „deci”. Valoarea o arată contextul.
+Dacă nu poți numi relația, nu pui conector. Dacă o poți numi, verifici dacă nu cumva ordinea frazelor o spune deja: două fapte puse unul după altul se citesc firesc ca succesiune sau ca adăugare. Conectorul trebuie acolo unde, fără el, cititorul ar ghici greșit relația, mai ales la contrast, la concesie și la condiție. Același cuvânt poate avea două valori: „astfel” înseamnă „în felul acesta”, dar și „prin urmare” (DEX ’98), iar „or” înseamnă „însă”, dar și „deci”. La rândul lor, „deci” și „așadar” pot relua ce s-a spus ca să-l precizeze („Ne vedem la sfârșitul lunii, deci pe 30.”); relația există și aici, iar conectorul nu se corectează în „adică”. Valoarea o arată contextul.
 
 Slab:
 
@@ -146,7 +146,7 @@ Surse pentru metodă: ghid gov-md §10.1 și §10.2; DSL, s.v. CONECTOR; C. Tint
 ### RO-COE-011 Conectorul spune o relație care există
 - Nivel: normă
 - Greșit: „Magazinul se mută pe strada Avram Iancu. Prin urmare, programul rămâne același.” → Corect: „Magazinul se mută pe strada Avram Iancu. Programul rămâne același.”
-- De ce: „Prin urmare” anunță o consecință, iar programul nu decurge din mutare. Conectorul pus fără relație face textul să afirme ceva fals despre legătura dintre fapte, iar dovada e chiar textul. Corectezi scoțând conectorul sau punând unul care spune relația reală, dacă textul o arată.
+- De ce: „Prin urmare” anunță o consecință, iar programul nu decurge din mutare. Conectorul pus fără relație face textul să afirme ceva fals despre legătura dintre fapte, iar dovada e chiar textul. Corectezi scoțând conectorul sau punând unul care spune relația reală, dacă textul o arată. Relația se judecă față de tot ce a spus textul până acolo, nu doar față de fraza dinainte: în narațiune și în textul de opinie, „de asta” sau „așa că” trimit adesea la un fapt spus cu câteva fraze mai sus. Dacă cititorul poate reface relația din text, conectorul e corect și nu îl semnalezi; e normă doar când niciun fapt din text nu o susține.
 - Sursă: ghid gov-md §10.1 și §10.2.6
 
 ### RO-COE-028 Un conector de adăugare nu introduce un argument contrar
@@ -183,7 +183,7 @@ Surse pentru metodă: ghid gov-md §10.1 și §10.2; DSL, s.v. CONECTOR; C. Tint
 
 ### Metoda
 
-Un pronume, un demonstrativ sau un substantiv reluat trimit la ceva spus înainte: referentul lor. Trimiterea e bună când cititorul găsește referentul fără să caute: e aproape, are genul și numărul potrivite și nu are în preajmă un alt substantiv care s-ar potrivi la fel de bine.
+Un pronume, un demonstrativ sau un substantiv reluat trimit la ceva spus înainte: referentul lor. Trimiterea e bună când cititorul găsește referentul fără să caute: e aproape, are genul și numărul potrivite și nu are în preajmă un alt substantiv care s-ar potrivi la fel de bine. Referentul poate fi și un fapt pe care fraza dinainte doar îl lasă de înțeles. Când cititorul nu are decât o lectură, trimiterea e bună și nu o semnalezi.
 
 Ai trei feluri de reluare:
 
@@ -276,7 +276,7 @@ Surse pentru metodă: ghid gov-md §1.4 și §1.5; Mic ghid CE p. 6 (Rec. 4).
 ### RO-COE-019 Adresarea rămâne aceeași
 - Nivel: normă
 - Greșit: „Vă mulțumim pentru comandă. Îți trimitem factura prin e-mail în cel mult o oră.” → Corect: „Vă mulțumim pentru comandă. Vă trimitem factura prin e-mail în cel mult o oră.”
-- De ce: Produsul sau autorul alege între „tu” și „dumneavoastră”, iar alegerea rămâne aceeași în tot textul, în toate mesajele unui produs și în aceeași frază; dovada e chiar textul. Cu „dumneavoastră”, verbul stă la persoana a II-a plural, imperativul e la plural („Completați”), iar posesivul e „dumneavoastră”, nu „tău”. Adresarea diferită dintr-un citat sau dintr-un dialog redat nu e o ruptură.
+- De ce: Produsul sau autorul alege între „tu” și „dumneavoastră”, iar alegerea rămâne aceeași în tot textul, în toate mesajele unui produs și în aceeași frază; dovada e chiar textul. Cu „dumneavoastră”, verbul stă la persoana a II-a plural, imperativul e la plural („Completați”), iar posesivul e „dumneavoastră”, nu „tău”. Adresarea diferită dintr-un citat sau dintr-un dialog redat nu e o ruptură. Nu e ruptură nici persoana a II-a generică dintr-un sfat sau dintr-o listă de reguli („Citește întâi instrucțiunile.”, „Nu sări peste pași.”), pusă într-un text care li se adresează cititorilor la plural: ea nu numește cititorul, ci pe oricine. Cel mult o semnalezi (de semnalat), fără s-o corectezi.
 - Sursă: Mic ghid CE p. 4 (Rec. 2); ghid gov-md §1.5
 
 ### RO-COE-022 Timpul relatării rămâne același
@@ -323,7 +323,7 @@ Surse pentru metodă: INJ p. 32 și p. 37; Mic ghid CE p. 3 și p. 5 (Rec. 1 și
 ### RO-COE-034 Veriga lipsă din raționament
 - Nivel: de semnalat
 - Greșit: „Am mutat baza de date pe un server nou. De aceea, abonamentul se scumpește din iulie.” → Corect: „Am mutat baza de date pe un server nou. [de completat: de ce duce mutarea la scumpire?] De aceea, abonamentul se scumpește din iulie.”
-- De ce: Cititorul nu vede de ce scumpirea decurge din mutare: lipsește o premisă. Conectorul poate fi corect, dar raționamentul are un gol. Nu îl umpli cu un fapt pe care nu-l ai; semnalezi locul și întrebi autorul.
+- De ce: Cititorul nu vede de ce scumpirea decurge din mutare: lipsește o premisă. Conectorul poate fi corect, dar raționamentul are un gol. Nu îl umpli cu un fapt pe care nu-l ai; semnalezi locul și întrebi autorul. Semnalezi doar veriga pe care cititorul n-o poate pune singur: una pe care o dă experiența obișnuită nu lipsește. În „Am mutat biroul în camera din spate, ca să am liniște.” nu întrebi de ce e liniște acolo. Nici faptele pe care autorul le povestește despre el nu le pui la îndoială.
 - Sursă: INJ p. 32
 
 ### RO-COE-032 Informația care explică vine înaintea celei surprinzătoare

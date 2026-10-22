@@ -458,6 +458,13 @@ func atinge(h hunk, iv [2]int) bool {
 	return h.a > iv[0] && h.a < iv[1]
 }
 
+// atingeObs e atinge pentru fragmentele observațiilor: în plus, o inserare
+// pură chiar înaintea primului token al fragmentului îl atinge („au avut decât”
+// → „nu au avut decât”). Pentru Interzis rămâne atinge, mai strict.
+func atingeObs(h hunk, iv [2]int) bool {
+	return atinge(h, iv) || (h.b == h.a && h.a == iv[0])
+}
+
 var (
 	reNumar = regexp.MustCompile(`\d+(?:[.,]\d+)*`)
 	reGrupa = regexp.MustCompile(`(\d) (\d{3})\b`)
@@ -566,7 +573,7 @@ func noteazaCorectura(c Caz, r Rezultat, n *Nota) {
 		atins := map[[2]int]bool{}
 		for i, ivs := range ivObs {
 			for _, iv := range ivs {
-				if atinge(h, iv) {
+				if atingeObs(h, iv) {
 					gasit[i] = true
 					atins[iv] = true
 				}

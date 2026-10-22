@@ -203,6 +203,13 @@ Bun:
 - De ce: Lunile, zilele săptămânii, numele popoarelor, ale limbilor și ale disciplinelor de studiu sunt substantive comune; engleza le scrie cu majusculă, româna nu. Numele de oameni derivate din ele rămân cu majusculă acolo unde sunt nume proprii (Marțian).
 - Sursă: ghid gov-md §4.2.1.10; DOOM 3 §3.2 II.2.11
 
+### RO-TIP-129 „Internet” e substantiv comun: literă mică
+- Nivel: normă
+- Greșit: „Am găsit oferta pe Internet.” → Corect: „Am găsit oferta pe internet.”
+- De ce: DOOM 3 înregistrează „internet” ca substantiv comun, cu forma articulată „internetul”; majuscula e preluată din engleză, ca la luni și la limbi (RO-TIP-012). Corectezi fiecare apariție, articulată sau nu („pe internet”, „internetul mobil”). Numele proprii care conțin cuvântul (o organizație, un produs) se scriu cum le scrie titularul.
+- Sursă: DOOM 3 s.v. internet
+- Vezi și: RO-TIP-012
+
 ### RO-TIP-013 Sărbătorile au majusculă, datele obișnuite nu
 - Nivel: normă
 - Greșit: „de 1 decembrie, la mulți ani” → Corect: „de 1 Decembrie, la mulți ani”
@@ -214,7 +221,7 @@ Bun:
 ### RO-TIP-014 Termenul generic dinaintea unui nume geografic: literă mică
 - Nivel: normă
 - Greșit: „Fluviul Dunărea, pe Strada Lipscani” → Corect: „fluviul Dunărea, pe strada Lipscani”
-- De ce: Cuvântul generic (fluviul, județul, strada, munții) rămâne cu literă mică atunci când nu face parte din nume: „județul Cluj”, „munții Carpați”, „bulevardul Grigore Vieru”. În indicarea adresei, pe hărți și pe plăcuțe indicatoare termenul generic se scrie însă cu majusculă (RO-TIP-015).
+- De ce: Cuvântul generic (fluviul, județul, strada, munții) rămâne cu literă mică atunci când nu face parte din nume, adică atunci când e urmat de un nume propriu la nominativ: „județul Cluj”, „munții Carpați”, „bulevardul Grigore Vieru”. Când e urmat de un substantiv la genitiv, de un adjectiv sau de un numeral, face parte din nume și se scrie cu majusculă: „Strada Morii”, „Aleea Castanilor” (RO-TIP-015). În indicarea adresei, pe hărți și pe plăcuțe indicatoare termenul generic se scrie însă cu majusculă (RO-TIP-015).
 - Sursă: ghid gov-md §4.2.1.7; DOOM 3 §3.2 II.2.7
 
 ### RO-TIP-015 Termenul generic care face parte din nume are majusculă
@@ -349,7 +356,7 @@ Virgula de după „anunțat” e greșită: completiva pusă după regentă nu 
 ### RO-TIP-040 Fără virgulă înaintea lui „și” și „sau” simple
 - Nivel: normă
 - Greșit: „A citit raportul, și a plecat.” → Corect: „A citit raportul și a plecat.”
-- De ce: Părțile de propoziție și propozițiile legate prin „și” sau „sau” nu se despart prin virgulă. Excepțiile: perechile repetate („Au răspuns și clienții, și furnizorii”, „fie… fie”, „nici… nici”), unde virgula e obligatorie, și „și” cu sensul „iar”, urmat de negație („ghidurile publicate, și nu cele vechi”). Pentru „sau” disjunctiv, cazurile sunt la RO-TIP-114.
+- De ce: Părțile de propoziție și propozițiile legate prin „și” sau „sau” nu se despart prin virgulă. Excepțiile: perechile repetate („Au răspuns și clienții, și furnizorii”, „fie… fie”, „nici… nici”), unde virgula e obligatorie, și „și” cu sensul „iar”, urmat de negație („ghidurile publicate, și nu cele vechi”). Seria „A și B și C”, în care primul termen nu are „și”, nu e o pereche repetată și nu primește virgulă („Am anunțat clienții și furnizorii și banca”). Pentru „sau” disjunctiv, cazurile sunt la RO-TIP-114.
 - Sursă: ghid gov-md §9.2.1.9, §9.2.1.11 (N.B.), §9.2.1.15 și §9.2.2.1; Ghid UE §10.1.2.4–5 și §10.1.2.13 (nereverificat local); ÎOOP6 p. 57–58 (Virgula, ii–iii)
 
 ### RO-TIP-041 „Desigur că”, „bineînțeles că”, „sigur că”: fără virgulă

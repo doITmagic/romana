@@ -342,3 +342,21 @@ func TestCorecturaRecomandareInPropuneri(t *testing.T) {
 		t.Errorf("normă doar propusă: %+v", n)
 	}
 }
+
+func TestCorecturaInserareLaInceputulFragmentului(t *testing.T) {
+	c := Caz{ID: "corectura-x-10", Mod: "corectura",
+		Intrare: "Au plecat devreme, pentru că au avut decât o zi liberă.",
+		Asteptat: Asteptat{
+			Observatii: []ObsAsteptata{{Fragment: "au avut decât o zi", Nivel: "normă", Pilon: "gramatică"}},
+			Interzis:   []string{"pentru că"},
+		}}
+	// „nu” inserat chiar înaintea fragmentului atinge observația.
+	n := Noteaza(c, Rezultat{Iesire: "[[TEXT]]\nAu plecat devreme, pentru că nu au avut decât o zi liberă.\n[[/TEXT]]"})
+	if n.Lipsa != 0 || n.FalsPozitive != 0 || n.Probleme != 0 {
+		t.Errorf("inserare la începutul fragmentului: %+v", n)
+	}
+	// Pentru Interzis, inserarea de după el nu îl atinge.
+	if n.Probleme != 0 {
+		t.Errorf("inserarea după interzis nu trebuie să-l atingă: %+v", n)
+	}
+}

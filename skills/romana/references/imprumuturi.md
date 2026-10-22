@@ -36,7 +36,7 @@ Surse pentru metodă: ghid gov-md §9.11.4, §9.11.5 și §7.2.3; INJ p. 102.
 ### RO-IMP-004 Finala citită ca în română: articol și plural fără cratimă
 - Nivel: normă
 - Greșit: „Trend-ul s-a schimbat după weekend-ul trecut.” → Corect: „Trendul s-a schimbat după weekendul trecut.”
-- De ce: Când finala scrisă se citește ca în română, articolul și desinența se leagă direct de cuvânt. Formele atestate în DOOM 3 urmează regula: „trendul”, „weekenduri”, „summituri”, „linkuri”, „serverul”, „feedbackul”, „patternuri”, „businessuri”, „sprinturi”, „lobbyul”, „hobbyuri”. Cratima pusă la toate împrumuturile („trend-ul”, „link-ul”, „server-ul”) e o regulă inventată, care contrazice DOOM 3. La cuvintele care lipsesc din DOOM 3 („plugin”, „tool”, „skill”) forma fără cratimă e dedusă; vezi RO-IMP-033 și RO-IMP-034.
+- De ce: Când finala scrisă se citește ca în română, articolul și desinența se leagă direct de cuvânt. Formele atestate în DOOM 3 urmează regula: „trendul”, „weekenduri”, „summituri”, „linkuri”, „serverul”, „feedbackul”, „patternuri”, „businessuri”, „sprinturi”, „workshopuri”, „lobbyul”, „hobbyuri”. Cratima pusă la toate împrumuturile („trend-ul”, „link-ul”, „server-ul”) e o regulă inventată, care contrazice DOOM 3. La cuvintele care lipsesc din DOOM 3 („plugin”, „tool”, „skill”) forma fără cratimă e dedusă; vezi RO-IMP-033 și RO-IMP-034.
 - Sursă: DOOM 3 s.v. trend, weekend, summit, lobby; ghid gov-md §9.11.4 și §7.2.3
 
 ### RO-IMP-005 Finala care nu se citește ca în română: cu cratimă
@@ -163,8 +163,8 @@ Surse pentru metodă: DOOM 3, §4.2.1; ghid gov-md §6.1 și §6.2; INJ p. 102.
 ### RO-IMP-003 Derivatele cu prefix se scriu legat
 - Nivel: normă
 - Greșit: „Am făcut o scanare anti-virus și o re-instalare completă.” → Corect: „Am făcut o scanare antivirus și o reinstalare completă.”
-- De ce: Prefixul se leagă de cuvântul de bază, și când se întâlnesc două vocale („reinstalare”, „antiinflamator”, „coautor”). Formele atestate sunt scrise legat: „antivirus”, „reinstalare”, „subcapitol”, „supraîncărcare”, „interdepartamental”, „autoapărare”. La fel „auto-postabil” devine „autopostabil”, iar „multi-proces”, „multiproces”, ca forme deduse.
-- Sursă: DOOM 3 s.v. antivirus, reinstalare, antiinflamator, coautor; ghid gov-md §6.1; INJ p. 102
+- De ce: Prefixul se leagă de cuvântul de bază, și când se întâlnesc două vocale („reinstalare”, „antiinflamator”, „coautor”). Formele atestate sunt scrise legat: „antivirus”, „reinstalare”, „subcapitol”, „supraîncărcare”, „interdepartamental”, „autoapărare”. La fel „auto-postabil” devine „autopostabil”, iar „multi-proces”, „multiproces”, ca forme deduse. Excepție: la un derivat ocazional, pe care DOOM 3 nu îl înregistrează, cratima e facultativă când prefixul se termină cu aceeași literă cu care începe baza („ultra-ambițios” e la fel de corect ca „ultraambițios”); o asemenea formă nu se corectează. Derivatele înregistrate rămân legate („antiinflamator”, „antiimperialist”).
+- Sursă: DOOM 3 s.v. antivirus, reinstalare, antiinflamator, coautor; DOOM 3 §4.2.1 II.2.4 (cratima facultativă); ghid gov-md §6.1; INJ p. 102
 
 ### RO-IMP-013 Cratima la „ex-” și înaintea unei sigle, a unui nume propriu sau a unui an
 - Nivel: normă

@@ -65,7 +65,7 @@ Cazul pe care îl lași neatins: acordul după înțeles sau prin atracție, und
 ### RO-GRA-007 „O serie de”, „un număr de”, „o mulțime de” + plural
 - Nivel: disputat
 - Corect: „O serie de măsuri au fost luate.” La fel de corectă e „O serie de măsuri a fost luată.” Nu corectezi una în alta.
-- De ce: Sursele se contrazic. Unii autori preferă acordul după formă (singular); broșura Institutului de Lingvistică socotește acordul la plural, după înțeles, o toleranță a normei și dă ambele forme („o serie de accidente se produce / se produc”). Semnalezi cele două uzuri, fără să alegi tu unul; într-un text păstrezi aceeași alegere de la un capăt la altul.
+- De ce: Sursele se contrazic. Unii autori preferă acordul după formă (singular); broșura Institutului de Lingvistică socotește acordul la plural, după înțeles, o toleranță a normei și dă ambele forme („o serie de accidente se produce / se produc”). În verificare raportezi forma cu nivelul „disputat” și cu cele două uzuri, chiar dacă textul e consecvent, fără să alegi tu unul; la redactare păstrezi aceeași alegere de la un capăt la altul.
 - Sursă: B. Croitor et al., 2014, p. 56
 
 ### RO-GRA-008 Colectiv la singular fără determinant plural
@@ -330,8 +330,8 @@ Bun:
 
 ### RO-GRA-042 „A consta în” și „a consta din”
 - Nivel: disputat
-- Greșit: „Măsurile constau din vânzarea participațiilor.” → Corect: „Măsurile constau în vânzarea participațiilor.”
-- De ce: Ghidul gov-md cere „a consta în”, iar dicționarele admit și „a consta din”. Semnalezi cele două uzuri; într-un text oficial propui „în”.
+- Corect: „Măsurile constau în vânzarea participațiilor.” La fel de corectă e „Măsurile constau din vânzarea participațiilor.” Nu corectezi una în alta.
+- De ce: Ghidul gov-md cere „a consta în”, iar dicționarele admit și „a consta din”, cu sensul „a fi alcătuit din”. În verificare raportezi forma cu nivelul „disputat” și cu cele două uzuri, fără să alegi tu unul; într-un text oficial propui „în”.
 - Sursă: ghid gov-md §7.1.8
 
 ### RO-GRA-183 „A mai multor”

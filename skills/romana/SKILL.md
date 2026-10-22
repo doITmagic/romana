@@ -1,6 +1,6 @@
 ---
 name: romana
-description: "Scrie, corectează și verifică texte în română: gramatică, semantică, stilistică și coerență, fără calcuri din engleză și fără cuvinte inventate. Writes, corrects or reviews Romanian text: grammar, semantics, style and coherence, without English calques or invented words. Use when writing or checking Romanian content."
+description: "Scrie, corectează și verifică texte în română pentru public (pagini de site și de marketing, articole de blog, știri, e-mailuri, texte de interfață, documentație): gramatică, semantică, stilistică și coerență, fără calcuri din engleză și fără cuvinte inventate. Writes, corrects or reviews Romanian text meant for readers, including translations into Romanian. Use when the deliverable is such a text or when asked whether Romanian wording is correct or natural. Do not use when Romanian is merely the language of the conversation and the answer is code, a calculation, a factual reply or an explanation unrelated to wording, nor for poetry, fiction, translations out of Romanian or file conversions that leave the text unchanged."
 ---
 
 # Română coerentă și firească
@@ -60,7 +60,7 @@ La traducere, afli întâi ce afirmă fiecare frază a originalului, apoi scrii 
 - Posesia se exprimă prin genitiv: „raportul echipei”, „pagina produsului”. Articolul genitival (al, a, ai, ale) se acordă cu substantivul determinat, adică cu ce se posedă: „un raport al echipei”, „două rapoarte ale echipei”.
 - Când „care” e complement direct, primește „pe” și e reluat printr-un pronume: „raportul pe care l-am trimis ieri”.
 - Negația se dublează când apar „niciun”, „nimeni” sau „nimic”: „Niciun fișier nu s-a pierdut”, „Nu a sunat nimeni”.
-- Un împrumut se articulează fără cratimă când finala se citește cum se scrie („trendul”, „e-mailul”) și cu cratimă când finala scrisă nu se citește ca în română („site-ul”, „mouse-ul”).
+- Un împrumut primește articolul și pluralul fără cratimă când finala se citește cum se scrie („trendul”, „e-mailul”, „workshopuri”) și cu cratimă când finala scrisă nu se citește ca în română („site-ul”, „site-uri”, „mouse-ul”).
 
 ### Semantica
 
@@ -93,13 +93,14 @@ La traducere, afli întâi ce afirmă fiecare frază a originalului, apoi scrii 
 - Diacriticele se scriu mereu, iar ș și ț au virgulă dedesubt, și la majuscule (Ș, Ț). Scrii â în interiorul cuvântului și î la început, la sfârșit și după prefix („neînțeles”).
 - Ghilimelele sunt „…”, iar citatul din citat stă între «…».
 - Linia de pauză (–) pusă în frază are spațiu de ambele părți. Cratima (-) nu are spații.
+- Compusele din două substantive în care al doilea îl caracterizează pe primul se scriu cu cratimă: „termen-limită”, „cuvânt-cheie”, „acord-cadru”. Regula ține de tipar, deci se aplică și unui compus format la fel care lipsește din dicționar (RO-IMP-009).
 - Titlurile au majusculă doar la primul cuvânt și la numele proprii. Lunile, zilele, limbile și naționalitățile se scriu cu literă mică.
 - Numeralul primește „de” înaintea substantivului când ultimele lui două cifre fac 00 sau un număr de la 20 la 99: „20 de ani”, „100 de lei”, „1.500 de cazuri”, dar „12 ani”, „101 ani”. După zecimale nu se pune „de”: „1,5 fișiere”; în „4,775 milioane de euro”, „de” ține de „milioane”.
 - Miile se despart cu punct (1.000; 1.205.200), zecimalele cu virgulă (2,5). Anii și numerele de pagină nu au separator. Între număr și unitate pui spațiu („5 km”). La procente sunt corecte ambele forme („63%”, „63 %”); într-un text alegi una.
 
 ### Pe profiluri
 
-- **Presă.** Limba literară standard, pentru un cititor cu cultură medie. Frază clară, verb la activ când se știe cine face acțiunea, relatarea la perfect compus. Atribuirea e limpede: se vede cine spune fiecare lucru.
+- **Presă.** Limba literară standard, pentru un cititor cu cultură medie. Frază clară, verb la activ când se știe cine face acțiunea, relatarea la perfect compus. Atribuirea e limpede: se vede cine spune fiecare lucru. Aprecierile redacției, de exemplu cuvântul cu care numește o faptă sau o manevră, țin de judecata editorială: nu le semnalezi și nu le corectezi.
 - **Marketing.** Îi vorbești cititorului despre ce câștigă, în cuvintele lui, cu verbe și cu faptele pe care le ai. Tonul poate fi mai cald și mai direct decât în presă. Calcurile de construcție care contrazic dicționarul sau gramatica și cuvintele inventate rămân greșeli și aici.
 - **Blog.** Vocea autorului are loc: persoana I, părerile și exemplele lui, dacă le ai de la el. Nu le inventezi.
 - **E-mail.** Salutul și încheierea se potrivesc destinatarului. Unei instituții sau unui necunoscut îi scrii cu „dumneavoastră”: începi cu „Bună ziua,” și închei cu o formulă ca „Cu stimă,”. Scopul mesajului apare în primele rânduri.
@@ -140,7 +141,7 @@ Lista de mai jos o folosești când cauți probleme: în corectură, în verific
 - **Tiparele textului generat:** importanța declarată, nu arătată („joacă un rol esențial”); verbele-paravan („asigură realizarea instalării” în loc de „face instalarea”); copula ocolită („reprezintă” sau „constituie” unde ar merge „este”); antiteza falsă („Nu e doar un instrument, ci un partener.”); prudența îngrămădită („ar putea, într-o anumită măsură, să contribuie”).
 - **Frază:** subiectul nearticulat („Utilizator a fost șters”); un substantiv lipit de altul în loc de genitiv („pe pagina produs”); pronumele subiect repetat fără rost („Noi oferim… Noi livrăm…”); „ca și” cu sensul „în calitate de” („ca și consilier”); „pe” lipsă înaintea lui „care” („documentul care l-am trimis”); negația pusă ca în engleză („Toate fișierele nu au fost salvate”, unde nu se știe dacă s-a salvat vreunul); mai mult de un substantiv verbal abstract într-o frază sau mai mult de două genitive legate unul de altul.
 - **Cuvânt:** prieteni falși („o abordare consistentă” cu sensul „consecventă”, „evidență” cu sensul „dovadă”, „a aplica pentru un credit” în loc de „a solicita un credit”); expresii calchiate („a face sens” în loc de „a avea sens”); cuvinte cu două lecturi („ultima versiune”, care poate fi „cea mai recentă” sau „cea finală”); paronime („au adaptat un copil” în loc de „au adoptat”); pleonasme reale („a reveni înapoi”); verbe făcute din engleză și neatestate în dicționare („a rankula”, „a targeta”).
-- **Tipografie:** diacritice lipsă sau cu sedilă; ghilimele englezești ("…" sau “…”); cratimă în locul liniei de pauză dintr-o frază (la intervale, ca în „1990-2000”, cratima e forma preferată de DOOM 3); majusculă pe fiecare cuvânt din titlu; luni, zile, limbi și naționalități scrise cu majusculă („în Martie”, „în Engleză”); „de” lipsă după numeral („20 ani”); separatorul englezesc pentru mii („1,000”); urme de chatbot (asteriscuri de formatare rămase în text, emojiuri decorative, „Iată textul revizuit:”).
+- **Tipografie:** diacritice lipsă sau cu sedilă; grafia veche cu „î” în interiorul cuvântului și „sînt” în afara citatelor, greșită chiar dacă e aplicată consecvent (o raportezi o singură dată, la prima apariție, și spui că se repetă în tot textul); ghilimele englezești ("…" sau “…”); cratimă în locul liniei de pauză dintr-o frază (la intervale, ca în „1990-2000”, cratima e forma preferată de DOOM 3); majusculă pe fiecare cuvânt din titlu; luni, zile, limbi și naționalități scrise cu majusculă („în Martie”, „în Engleză”); „internet” și „web” scrise cu majusculă („pe Internet”, „Web-ul”), deși DOOM 3 le dă ca substantive comune („internetul”, „webul”); „de” lipsă după numeral („20 ani”); separatorul englezesc pentru mii („1,000”); urme de chatbot (asteriscuri de formatare rămase în text, emojiuri decorative, „Iată textul revizuit:”).
 
 ## Nivelurile și ce faci cu fiecare
 
@@ -148,11 +149,11 @@ Fiecare observație are un nivel. Nivelul spune cât de sigur e temeiul și ce a
 
 | Nivel | Ce intră | Ce faci |
 |---|---|---|
-| **normă** | Ce contrazice DOOM 3, ÎOOP (Îndreptarul ortografic, ortoepic și de punctuație) sau sensul din dicționar; excepție fac prietenii falși de sens, un sens străin neatestat în DEX ’98 sau în DOOM 3, care sunt recomandare (vezi mai jos, „Un calc e normă când…”), afară de „bilion”. Pentru sintaxă (acordul, regimul, topica pronumelor neaccentuate), pe care aceste lucrări nu o tratează, reperul e gramatica academică a limbii române. Forma marcată cu asterisc în DOOM 3 e greșeală, chiar dacă sursa o introduce cu „de evitat”. Tot aici intră ruperile de coerență pe care le dovedește textul însuși: un conector care afirmă o relație inexistentă; doi termeni diferiți pentru același concept tehnic, pentru aceeași noțiune definită sau pentru același produs, încât cititorul poate crede că sunt două lucruri; adresarea schimbată la jumătatea textului. La acestea, dovada e chiar textul. | În corectură o corectezi. În verificare o raportezi ca greșeală. |
+| **normă** | Ce contrazice DOOM 3, ÎOOP (Îndreptarul ortografic, ortoepic și de punctuație) sau sensul din dicționar; excepție fac prietenii falși de sens, un sens străin neatestat în DEX ’98 sau în DOOM 3, care sunt recomandare (vezi mai jos, „Un calc e normă când…”), afară de „bilion”. Pentru sintaxă (acordul, regimul, topica pronumelor neaccentuate), pe care aceste lucrări nu o tratează, reperul e gramatica academică a limbii române. Forma marcată cu asterisc în DOOM 3 e greșeală, chiar dacă sursa o introduce cu „de evitat”. Tot aici intră ruperile de coerență pe care le dovedește textul însuși: un conector care afirmă o relație inexistentă; doi termeni diferiți pentru același concept tehnic, pentru aceeași noțiune definită sau pentru același produs, încât cititorul poate crede că sunt două lucruri; adresarea schimbată la jumătatea textului, de la „tu” la „dumneavoastră” sau invers, față de același cititor (persoana a II-a generică dintr-un sfat, ca „Citește întâi instrucțiunile”, nu schimbă adresarea). La acestea, dovada e chiar textul. | În corectură o corectezi. În verificare o raportezi ca greșeală. |
 | **recomandare** | Ce sursa formulează ca preferință, plus claritatea și registrul. | Propui, nu impui. |
 | **anglicism evitabil** | O formă care există în dicționar, dar are un echivalent românesc firesc, iar sursele o consideră împrumut de lux. | Propui echivalentul. La redactare folosești echivalentul de la început. |
-| **disputat** | Sursele se contrazic. | Nu corectezi. Dacă pomenești cazul, spui că există două uzuri. |
-| **de semnalat** | O ambiguitate sau un risc de neînțelegere, fără să fie greșeală. Exemplu: „actual” poate însemna „curent” sau „real”. | Semnalezi și, dacă e nevoie, întrebi ce a vrut autorul. Nu schimbi textul. |
+| **disputat** | Sursele se contrazic. | Nu corectezi. În verificare, un acord sau un regim pe care sursele îl judecă diferit (pluralul după „o serie de”, „a consta din” față de „a consta în”) îl raportezi ca observație, cu nivelul „disputat” și cu cele două uzuri, chiar dacă textul e consecvent; nu alegi tu unul. În rest, dacă pomenești cazul, spui că există două uzuri. |
+| **de semnalat** | O ambiguitate sau un risc de neînțelegere, fără să fie greșeală. Exemplu: „actual” poate însemna „curent” sau „real”. | Semnalezi și, dacă e nevoie, întrebi ce a vrut autorul. Nu schimbi textul. Nu semnalezi o trimitere care are o singură lectură, chiar dacă referentul e doar subînțeles din fraza dinainte. |
 | **ce nu e greșeală** | Variantele admise și pseudonormele. | Nu semnalezi și nu corectezi. |
 
 Pe lângă nivel, fiecare observație are:
@@ -169,11 +170,12 @@ La „de semnalat”, gravitatea arată cât de mare e riscul de neînțelegere:
 
 Regula de bază: ce e obiectiv se corectează, ce ține de gust doar se propune. Testul: dacă singura justificare e „sună mai bine”, e gust. Poți face trei lucruri: corectezi, propui (iar la o ambiguitate semnalezi) sau lași textul cum e.
 
-- Când nu ești sigur de nivel, alegi nivelul mai slab: recomandare în loc de normă. Spui că e recomandare.
+- Când nu ești sigur de nivel, alegi nivelul mai slab: recomandare în loc de normă. Spui că e recomandare. Asta privește o problemă pe care o poți numi și sprijini pe ceva; o simplă bănuială nu devine observație. O îmbinare care doar ți se pare calchiată, fără sprijin în dicționar, într-o sursă sau într-o regulă din `references/`, intră cel mult în lista „neverificat”.
 - O regulă pe care nu o poți lega de o sursă nu o aplici ca normă. Excepție fac ruperile de coerență, unde dovada e chiar textul.
 - Hipercorectitudinea e la fel de gravă ca greșeala: o formă corectă „reparată” strică un text bun.
 - Un calc e normă când construcția contrazice dicționarul ori gramatica („a face sens” în loc de „a avea sens”). Un sens englezesc pe care dicționarul nu îl atestă (un prieten fals) e recomandare; excepție face „bilion”, care se corectează în „miliard”. Altfel e recomandare.
 - Nu „îmbunătățești” după gust un text corect.
+- Doi termeni pentru același produs sau concept tehnic („aplicația”, apoi „platforma”) îi unifici în corectură, spre termenul folosit primul. Nu lași unificarea doar ca propunere: întrebi numai când textul însuși arată că pot fi două lucruri (de exemplu, „aplicația de pe telefon” și „platforma web”).
 
 ### Înainte să judeci o formă
 
@@ -181,7 +183,7 @@ Regula de bază: ce e obiectiv se corectează, ce ține de gust doar se propune.
 - **Rolul cuvântului decide.** Un cuvânt nu e greșit în sine: „sa”, „va”, „care”, „decât”, „ca și” sunt corecte într-un context și greșite în altul. „Casa sa” e corect, „Guvernul sa întrunit” nu. „Nu are decât o zi” e corect, „are decât o zi” nu. Când semnalezi, explici rolul.
 - **Faci proba de înlocuire.** Pui forma la altă persoană, la plural sau la alt timp („s-a dus” → „s-au dus”, „va” → „voi”), ca să vezi forma corectă.
 - **Sensul îl dă dicționarul.** Paronimele, prietenii falși și sensurile noi se judecă după dicționar, nu după impresia că un cuvânt „sună englezește”.
-- **Citatul direct păstrează cuvintele sursei.** Corectezi doar tipografia (ghilimelele, diacriticele lipsă sau cu sedilă). Formele populare din gura vorbitorului și grafia veche cu „î” („sînt”, „cînd”) rămân.
+- **Citatul direct păstrează cuvintele sursei.** Corectezi doar tipografia (ghilimelele, diacriticele lipsă sau cu sedilă, majusculele, cratima). Formele populare din gura vorbitorului și grafia veche cu „î” („sînt”, „cînd”) rămân. Răspunsurile dintr-un interviu, scrise după numele vorbitorului, sunt și ele citat direct. În verificare, într-un citat raportezi doar aceste greșeli de tipografie, iar o scăpare evidentă de redare (un cuvânt scris de două ori la rând, o literă în plus) o dai ca „de semnalat”. Nu raportezi punctuația vorbitorului (virgulele puse sau lipsă, punctul care desparte o frază începută de continuarea ei), sintaxa lui (fraza lăsată neterminată, anacolutul, topica, repetiția pentru accent), cuvintele alese de el, inclusiv cele familiare sau străine, și nici trimiterile lui neclare.
 - **Numele proprii** se scriu cum le scrie purtătorul, cu diacriticele lor.
 - **Un cuvânt pomenit ca exemplu** („forma «sînt» a ieșit din normă”) nu e greșeală.
 
@@ -225,7 +227,7 @@ Cuvintele inventate scapă tocmai pentru că nu te îndoiești de ele, așa că 
 - **Ce verifici:** un cuvânt rar, un neologism, un derivat (cu ne-, re-, auto-, pre- sau alt prefix), un termen tehnic, pluralul sau articularea unui împrumut recent, un verb format din engleză.
 - **Cum verifici:** într-un dicționar, cu uneltele pe care le ai, de exemplu o unealtă de dicționar, un dicționar local sau o sursă pusă la dispoziție de utilizator. Nu faci cereri automate către dexonline.ro, pentru că licența site-ului le interzice.
 - **Dacă nu poți verifica:** la redactare alegi o formulare cu cuvinte de care ești sigur. În corectură și în verificare, forma intră în lista „neverificat” de la sfârșitul raportului; în corectură, o lași neschimbată în text. În listă intră doar formele cu adevărat suspecte, nu orice cuvânt pe care nu l-ai căutat.
-- **Ce dovedește dicționarul și ce nu:** lipsa dintr-un dicționar nu dovedește că forma e greșită, pentru că dicționarele rămân în urma limbii. Existența în dicționar nu confirmă nici sensul în care e folosit cuvântul, nici că forma e recomandată. Un calc de sens trece ușor tocmai pentru că forma există.
+- **Ce dovedește dicționarul și ce nu:** lipsa dintr-un dicționar nu dovedește că forma e greșită, pentru că dicționarele rămân în urma limbii. La fel, un plural pe care un dicționar nu îl dă nu e automat greșit: DOOM 3 înregistrează uneori, pe lângă pluralul obișnuit, un plural aparte pentru manifestări sau unul cu marcă de registru („fam.”), corect în registrul lui. Înainte să condamni o formă flexionară, citești intrarea întreagă din DOOM 3, dacă o ai; altfel forma intră în lista „neverificat”, nu în observații. Existența în dicționar nu confirmă nici sensul în care e folosit cuvântul, nici că forma e recomandată. Un calc de sens trece ușor tocmai pentru că forma există.
 - **Forme deduse:** când un împrumut lipsește din dicționar, forma lui articulată și pluralul le marchezi ca deduse, nu ca atestate.
 - **Două întrebări:** pentru fiecare cuvânt de care nu ești sigur te întrebi dacă e corect în limbă și dacă e potrivit aici, cu acest sens și în acest registru.
 
@@ -237,7 +239,7 @@ Regulile complete sunt în [cauta-nu-presupune.md](references/cauta-nu-presupune
 
 O observație conține, în această ordine:
 
-1. **locul:** paragraful, fraza sau rândul, și forma găsită, citată exact;
+1. **locul:** paragraful, fraza sau rândul, și forma găsită, citată exact; când problema e un semn (ghilimele, apostrof, cratimă, spațiu), citezi semnul împreună cu cuvântul de lângă el (de exemplu „'Mulțumim”, nu doar „'”), ca forma să poată fi găsită în text;
 2. **pilonul:** gramatică, semantică, stilistică, coerență sau tipografie;
 3. **nivelul:** unul dintre primele cinci din tabelul nivelurilor, scris exact așa (formele de la „ce nu e greșeală” nu se raportează);
 4. **gravitatea:** P0, P1 sau P2;
@@ -254,7 +256,7 @@ Lista „neverificat” cuprinde formele suspecte, fiecare citată exact și cu 
 
 ### Raportul, pe moduri
 
-- **Verificare:** începi cu un rezumat: câte observații ai pe fiecare nivel și câte sunt P0. Urmează observațiile, în ordinea trecerilor; la o trecere fără observații scrii „fără schimbări”. La sfârșit vine lista „neverificat”, dacă are ceva. Dacă textul nu are probleme, spui asta limpede și nu cauți observații ca să ai ce raporta.
+- **Verificare:** începi cu un rezumat: câte observații ai pe fiecare nivel și câte sunt P0. Urmează observațiile, în ordinea trecerilor; la o trecere fără observații scrii „fără schimbări”. Aceeași problemă găsită în mai multe locuri are câte o observație pentru fiecare loc (tiparele textului generat rămân semnalate în grup). Excepție face grafia veche cu „î” în interiorul cuvintelor („cînd”, „sînt”), care e greșeală și când autorul o aplică în tot textul: o raportezi într-o singură observație, la prima apariție, și spui că se repetă (RO-TIP-128). La sfârșit vine lista „neverificat”, dacă are ceva. Dacă textul nu are probleme, spui asta limpede și nu cauți observații ca să ai ce raporta. O recomandare de claritate o raportezi doar când poți spune ce ar putea înțelege greșit cititorul; o frază corectă, pe care o înțelege la prima lectură, nu primește observație doar pentru că s-ar putea formula mai exact.
 - **Corectură:** dai textul corectat, întreg. Urmează lista corecturilor, fiecare ca observație, în ordinea trecerilor și cu „fără schimbări” la trecerile fără corecturi, apoi, separat, propunerile pe care nu le-ai aplicat (recomandări, anglicisme evitabile, cazuri de semnalat). La sfârșit vine lista „neverificat”. Dacă textul era corect, îl dai neschimbat, cu mențiunea „fără schimbări”.
 - **Redactare:** dai textul. După el pui doar ce trebuie să decidă autorul: întrebările despre ambiguități, golurile marcate în text și lista „neverificat”, dacă există.
 

@@ -21,7 +21,7 @@ Bun:
 Pentru fiecare cuvânt de care nu ești sigur îți pui două întrebări: e corect în limbă și e potrivit aici, cu acest sens și în acest registru? Nivelul îl alegi așa:
 
 - **normă:** cuvântul e folosit cu un sens pe care dicționarul nu i-l dă și fraza ajunge să spună altceva, sau construcția contrazice ce arată dicționarul (verbul, prepoziția, expresia fixă); prietenii falși de sens au criteriul lor din [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md) (recomandare, afară de „bilion”);
-- **recomandare:** sensul există în dicționar sau e larg răspândit, dar un cuvânt mai exact ori mai obișnuit spune lucrul mai bine;
+- **recomandare:** sensul există în dicționar sau e larg răspândit, dar un cuvânt mai exact ori mai obișnuit spune lucrul mai bine; nu și când cuvântul autorului are în dicționar chiar sensul cerut de frază: o îmbinare corectă nu se schimbă pe alta doar pentru că aceea e mai frecventă („a provoca un scandal” rămâne, deși se spune mai des „a face scandal”);
 - **de semnalat:** cuvântul admite două lecturi, iar contextul nu o alege pe cea bună;
 - **ce nu e greșeală:** un sens nou deja înregistrat în DEX ’98 sau în DOOM 3 (vezi [ce-nu-e-greseala.md](ce-nu-e-greseala.md)); un sens găsit doar într-un dicționar mai nou rămâne recomandare.
 

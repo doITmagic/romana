@@ -183,7 +183,7 @@ Bun:
 ### RO-NUM-043 Miile nu se despart cu virgulă
 - Nivel: normă
 - Greșit: „1,500 de oameni” → Corect: „1.500 de oameni”
-- De ce: Virgula la mii e modelul englezesc, iar în română se citește ca zecimală (1,5). Miile se grupează cu punct (RO-NUM-015). Anii și paginile nu au separator (RO-NUM-016).
+- De ce: Virgula la mii e modelul englezesc, iar în română se citește ca zecimală (1,5). Miile se grupează cu punct (RO-NUM-015). Anii și paginile nu au separator (RO-NUM-016). Corectezi doar când contextul arată că e vorba de mii, ca în exemplu, unde „de” și oamenii exclud zecimala. Când ambele lecturi sunt posibile („1,500 MB”), cazul e de semnalat: întrebi și lași cifra, pentru că o lectură greșită schimbă valoarea (abatere de fidelitate, P0).
 - Sursă: DOOM 3 §1.2.6 II; ghid gov-md §7.4.1.4
 
 ### RO-NUM-017 Sumele cu multe zecimale

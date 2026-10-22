@@ -38,7 +38,7 @@ Dacă ți se dă o traducere existentă, o revizuiești, nu o iei de la capăt. 
 
 ### Sensul din frază, nu echivalentul din dicționar
 
-Un cuvânt englezesc are în dicționarul bilingv mai multe echivalente românești. Echivalentul din capul listei nu e mereu cel din frază. Alegi după ce spune fraza, nu după cuvântul care seamănă. Prietenii falși cunoscuți sunt în [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md); aici e regula generală, în RO-CAL-042.
+Un cuvânt englezesc are în dicționarul bilingv mai multe echivalente românești. Echivalentul din capul listei nu e mereu cel din frază. Alegi după ce spune fraza, nu după cuvântul care seamănă. Când fraza nu arată domeniul, alegi formularea adevărată în orice domeniu, nu termenul unui domeniu anume: „output” al unei echipe e „câtă treabă am făcut” sau „rezultatele”, nu „producția”, care numește bunurile fabricate. Prietenii falși cunoscuți sunt în [prieteni-falsi-si-calcuri.md](../prieteni-falsi-si-calcuri.md); aici e regula generală, în RO-CAL-042.
 
 ### Unde sunt celelalte reguli
 

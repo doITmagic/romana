@@ -251,6 +251,12 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 - De ce: Regula falsă: „mort” ar fi prea colocvial pentru presă. DEX ’98 dă pentru „mort” „care nu mai trăiește, care a murit”, iar pentru „a deceda” „a înceta din viață; a muri”: aceeași semnificație, registru diferit. „Decedat” se potrivește în comunicate oficiale și în texte juridice, dar nu e o condiție a știrii; „mort” e neutru și nu se corectează.
 - Sursă: DEX ’98 s.v. mort, deceda
 
+### RO-NUG-134 „Sintagmă” cu sensul „expresie”
+- Nivel: ce nu e greșeală
+- Corect: „Ministrul a vorbit despre «reforma pe bucăți», o sintagmă preluată apoi de toată presa.” Nu corectezi în „expresie” sau „formulare”.
+- De ce: Regula falsă: „sintagmă” ar numi doar un grup de cuvinte legate prin subordonare, deci n-ar putea numi o formulă preluată din discursul cuiva. DEX ’98 îi dă, prin extensie, și sensul de expresie sau locuțiune. Ce numește apoziția („o sintagmă preluată de…”) se judecă după toată construcția din fața ei, nu doar după cuvântul pus între ghilimele.
+- Sursă: DEX ’98 s.v. sintagmă
+
 ## Împrumuturi și cuvinte noi
 
 Un cuvânt nu e greșit doar pentru că vine din engleză. Un împrumut adaptat sau un sens nou deja înregistrat în DEX ’98 sau în DOOM 3 nu se corectează (vezi [imprumuturi.md](imprumuturi.md)); un sens găsit doar într-un dicționar mai nou rămâne recomandare (vezi [prieteni-falsi-si-calcuri.md](prieteni-falsi-si-calcuri.md)).
