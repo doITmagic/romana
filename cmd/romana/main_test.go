@@ -269,3 +269,35 @@ func TestBinarMCP(t *testing.T) {
 }
 
 func toJSON(v any) string { b, _ := json.Marshal(v); return string(b) }
+
+func TestHookFisierMareSiSingular(t *testing.T) {
+	dir := t.TempDir()
+	// peste 1 MiB, sub limita de fișier a hook-ului; JSON-ul de pe stdin e și el mare
+	text := "Aşa este.\n" + strings.Repeat("Aceasta este o propoziție obișnuită în limba română, fără nicio greșeală.\n", 20000)
+	if len(text) < 1<<20 || len(text) > maxHook {
+		t.Fatalf("fixture nepotrivit: %d", len(text))
+	}
+	c := filepath.Join(dir, "mare.md")
+	os.WriteFile(c, []byte(text), 0o644)
+	bj, _ := json.Marshal(map[string]any{"tool_input": map[string]string{"content": text, "file_path": c}})
+	out, _, cod := rul(t, string(bj), "verifica", "--hook")
+	if cod != 0 || !strings.Contains(out, "RO-TIP-027") {
+		t.Fatalf("hook-ul a tăcut pe JSON mare: cod %d, ieșire %.200q", cod, out)
+	}
+	if strings.Contains(out, "1 greșeli") {
+		t.Fatalf("acord greșit la singular: %.300q", out)
+	}
+}
+
+func TestEroriInRomana(t *testing.T) {
+	lipsa := filepath.Join(t.TempDir(), "nu-exista.txt")
+	for _, args := range [][]string{{"verifica", lipsa}, {"import", lipsa, "--offline"}} {
+		_, errOut, cod := rul(t, "", args...)
+		if cod != 1 {
+			t.Fatalf("%v: cod %d", args, cod)
+		}
+		if strings.Contains(errOut, "no such file") || !strings.Contains(errOut, "nu există") {
+			t.Fatalf("%v: eroare netradusă: %q", args, errOut)
+		}
+	}
+}

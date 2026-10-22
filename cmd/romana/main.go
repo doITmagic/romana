@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"io/fs"
 	"os"
 	"os/signal"
 	"path/filepath"
@@ -31,6 +32,22 @@ const graceActualizare = 2 * time.Second
 
 // maxHook: fișierele mai mari de atât nu sunt citite de hook.
 const maxHook = 2 << 20
+
+// limitaIntrareHook: cât din JSON-ul de pe stdin citește hook-ul. Pe calea
+// Write, tool_input conține tot conținutul fișierului (cu escape-uri, până la
+// de șase ori mai mare), deci limita trebuie să încapă peste maxHook.
+const limitaIntrareHook = 8 * maxHook
+
+// mesajFisier traduce erorile de sistem la deschiderea unui fișier.
+func mesajFisier(cale string, err error) string {
+	switch {
+	case errors.Is(err, fs.ErrNotExist):
+		return fmt.Sprintf("fișierul «%s» nu există", cale)
+	case errors.Is(err, fs.ErrPermission):
+		return fmt.Sprintf("nu am voie să citesc fișierul «%s»", cale)
+	}
+	return fmt.Sprintf("nu pot citi fișierul «%s»: %v", cale, err)
+}
 
 const ajutor = `romana: dicționarul limbii române, din exportul oficial dexonline.
 
@@ -90,6 +107,13 @@ func parseaza(args []string) (o optiuni, err error) {
 		}
 	}
 	return o, nil
+}
+
+func (o optiuni) pozitionale0() string {
+	if len(o.pozitionale) == 0 {
+		return "-"
+	}
+	return o.pozitionale[0]
 }
 
 func (o optiuni) baza(progres io.Writer) baza.Optiuni {
@@ -255,7 +279,7 @@ func cmdVerifica(ctx context.Context, o optiuni, in io.Reader, out, errOut io.Wr
 	}
 	text, err := citesteText(o, in)
 	if err != nil {
-		fmt.Fprintf(errOut, "romana: %v\n", err)
+		fmt.Fprintf(errOut, "romana: %s\n", mesajFisier(o.pozitionale0(), err))
 		return 1
 	}
 	d, bo, err := deschideDictionar(ctx, o, errOut)
@@ -313,7 +337,7 @@ func cmdHook(in io.Reader, out io.Writer) int {
 			FilePath string `json:"file_path"`
 		} `json:"tool_input"`
 	}
-	b, err := io.ReadAll(io.LimitReader(in, 1<<20))
+	b, err := io.ReadAll(io.LimitReader(in, limitaIntrareHook))
 	if err != nil || json.Unmarshal(b, &h) != nil || h.ToolInput.FilePath == "" {
 		return 0
 	}
@@ -340,7 +364,7 @@ func cmdHook(in io.Reader, out io.Writer) int {
 		return 0
 	}
 	var sb strings.Builder
-	fmt.Fprintf(&sb, "Verificarea ortografică a „%s” a găsit %d greșeli sigure:\n", filepath.Base(h.ToolInput.FilePath), len(obs))
+	fmt.Fprintf(&sb, "Verificarea ortografică a „%s” a găsit greșeli sigure (număr: %d):\n", filepath.Base(h.ToolInput.FilePath), len(obs))
 	for _, ob := range obs {
 		sb.WriteString("- " + formateazaObservatie(ob) + "\n")
 	}
@@ -366,7 +390,7 @@ func cmdImport(ctx context.Context, o optiuni, out, errOut io.Writer) int {
 	if len(o.pozitionale) == 1 {
 		f, err := os.Open(o.pozitionale[0])
 		if err != nil {
-			fmt.Fprintf(errOut, "romana: %v\n", err)
+			fmt.Fprintf(errOut, "romana: %s\n", mesajFisier(o.pozitionale[0], err))
 			return 1
 		}
 		defer f.Close()
