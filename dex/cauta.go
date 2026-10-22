@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"regexp"
 	"strings"
 )
 
@@ -37,6 +38,18 @@ type Lema struct {
 	Surse          []string    `json:"surse"`           // toate dicționarele care atestă lema, cu sau fără text afișabil
 	Definitii      []Definitie `json:"definitii"`       // doar din surse cu can_distribute = 1
 	Forme          []Forma     `json:"forme,omitempty"` // formele flexionare, cu etichetă
+	// TrimiteLa: lemele la care trimit definițiile ei fără alt conținut
+	// („DEGIVRA vb. I v. dejivra.”): de regulă lema e o variantă a celeilalte.
+	TrimiteLa []Trimitere `json:"trimite_la,omitempty"`
+	// Nota: doar când DOOM 3 nu atestă lema, dar atestă o lemă din TrimiteLa;
+	// spune, în cuvinte, ce formă se recomandă.
+	Nota string `json:"nota,omitempty"`
+}
+
+// Trimitere: lema la care trimite o definiție și dacă DOOM 3 o atestă.
+type Trimitere struct {
+	Forma string `json:"forma"`
+	Doom3 bool   `json:"doom3"`
 }
 
 // Definitie: textul unei definiții afișabile, cu sursa ei.
@@ -240,8 +253,15 @@ ORDER BY 1`, id, id)
 	if l.Doom3, err = d.atestataDoom3(ctx, id, l.Forma); err != nil {
 		return l, err
 	}
-	if l.Definitii, err = d.definitiiAfisabile(ctx, id, l.Forma); err != nil {
+	var tinte []string
+	if l.Definitii, tinte, err = d.definitiiAfisabile(ctx, id, l.Forma); err != nil {
 		return l, err
+	}
+	if l.TrimiteLa, err = d.trimiteri(ctx, l.Forma, tinte); err != nil {
+		return l, err
+	}
+	if !l.Doom3 {
+		l.Nota = notaTrimitere(l.Forma, l.TrimiteLa)
 	}
 	rows, err = d.db.QueryContext(ctx, `SELECT f.norm, COALESCE(i.description, ''), f.recommended, f.variant
 		FROM form f LEFT JOIN inflection i ON i.id = f.inflection_id
@@ -312,8 +332,9 @@ const filtruLicenta = "s.can_distribute = 1 AND d.text IS NOT NULL"
 // definitiiAfisabile: definițiile lemei care se pot afișa (doar surse cu
 // can_distribute = 1), fără dubluri. Dacă unele au cuvântul-titlu egal cu
 // lema, rămân doar acelea: „vroi” nu primește definiția lui „vrea” din
-// intrarea comună, ci doar trimiterea „VROI vb. IV v. vrea”.
-func (d *Dictionar) definitiiAfisabile(ctx context.Context, lexemeID int64, forma string) ([]Definitie, error) {
+// intrarea comună, ci doar trimiterea „VROI vb. IV v. vrea”. Întoarce și
+// lemele la care trimit definițiile păstrate (vezi trimitereDin).
+func (d *Dictionar) definitiiAfisabile(ctx context.Context, lexemeID int64, forma string) ([]Definitie, []string, error) {
 	rows, err := d.db.QueryContext(ctx, `
 SELECT s.short_name, d.text, COALESCE(d.lexicon, '') FROM entry_lexeme el
   JOIN entry_definition ed ON ed.entry_id = el.entry_id
@@ -322,29 +343,128 @@ SELECT s.short_name, d.text, COALESCE(d.lexicon, '') FROM entry_lexeme el
 WHERE el.lexeme_id = ? AND `+filtruLicenta+`
 GROUP BY d.id ORDER BY s.id, min(ed.rank), d.id`, lexemeID)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	defer rows.Close()
 	toate, potrivite := []Definitie{}, []Definitie{}
+	var tinteToate, tintePotrivite []string
 	for rows.Next() {
 		var df Definitie
 		var lexicon string
 		if err := rows.Scan(&df.Sursa, &df.Text, &lexicon); err != nil {
-			return nil, err
+			return nil, nil, err
 		}
+		tinta := trimitereDin(df.Text)
 		df.Text = textCurat(df.Text)
-		toate = append(toate, df)
+		toate, tinteToate = append(toate, df), append(tinteToate, tinta)
 		if titluLemei(lexicon, forma) {
-			potrivite = append(potrivite, df)
+			potrivite, tintePotrivite = append(potrivite, df), append(tintePotrivite, tinta)
 		}
 	}
 	if err := rows.Err(); err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	if len(potrivite) > 0 {
-		return potrivite, nil
+		return potrivite, tintePotrivite, nil
 	}
-	return toate, nil
+	return toate, tinteToate, nil
+}
+
+// reTrimitere: o definiție care doar trimite la altă lemă, în marcajul
+// exportului (@…@ cuvântul-titlu, $…$ formele, #…# abrevierile):
+// „@DEGIVR'A@ #vb.# I #v.# @dejivra.@”. Trimiterea de la sfârșitul unei
+// definiții adevărate („… - #V.# @grava.@”, la derivate) nu se potrivește.
+var reTrimitere = regexp.MustCompile(`^@[^@]+@\s*(?:\$[^$]*\$\s*)?(?:(?:#[^#]+#|\(#[^#]+#\))[\s,]*(?:[IVX]+\s+)?)*#[vV]\.#\s*@([^@]+?)\.?@\s*$`)
+
+// reIndice: indicele omonimelor („barem^1”).
+var reIndice = regexp.MustCompile(`\^\d+`)
+
+// reNotaSubsol: notele de subsol ale exportului („{{Notă: …/1}}”).
+var reNotaSubsol = regexp.MustCompile(`\{\{.*?\}\}`)
+
+// trimitereDin întoarce lema (normalizată) la care trimite o definiție fără
+// alt conținut, sau "".
+func trimitereDin(text string) string {
+	m := reTrimitere.FindStringSubmatch(strings.TrimSpace(reNotaSubsol.ReplaceAllString(text, "")))
+	if m == nil {
+		return ""
+	}
+	t := strings.ReplaceAll(reIndice.ReplaceAllString(m[1], ""), "'", "")
+	return Normalizeaza(strings.TrimSpace(strings.TrimSuffix(t, ".")))
+}
+
+// trimiteri: lemele la care trimit definițiile, fără dubluri și fără lema
+// însăși, fiecare cu atestarea ei în DOOM 3.
+func (d *Dictionar) trimiteri(ctx context.Context, forma string, tinte []string) ([]Trimitere, error) {
+	var rez []Trimitere
+	vazut := map[string]bool{Normalizeaza(forma): true}
+	for _, t := range tinte {
+		if t == "" || vazut[t] {
+			continue
+		}
+		vazut[t] = true
+		doom3, err := d.formaAtestataDoom3(ctx, t)
+		if err != nil {
+			return nil, err
+		}
+		rez = append(rez, Trimitere{Forma: t, Doom3: doom3})
+	}
+	return rez, nil
+}
+
+// formaAtestataDoom3: DOOM 3 atestă o lemă a cărei formă de bază e chiar forma
+// dată (normalizată).
+func (d *Dictionar) formaAtestataDoom3(ctx context.Context, forma string) (bool, error) {
+	rows, err := d.db.QueryContext(ctx, `SELECT DISTINCT l.id, l.form FROM form f
+		JOIN lexeme l ON l.id = f.lexeme_id WHERE f.norm = ?`, forma)
+	if err != nil {
+		return false, err
+	}
+	type lema struct {
+		id    int64
+		forma string
+	}
+	var leme []lema
+	for rows.Next() {
+		var l lema
+		if err := rows.Scan(&l.id, &l.forma); err != nil {
+			rows.Close()
+			return false, err
+		}
+		if Normalizeaza(l.forma) == forma {
+			leme = append(leme, l)
+		}
+	}
+	if err := rows.Close(); err != nil {
+		return false, err
+	}
+	for _, l := range leme {
+		if ok, err := d.atestataDoom3(ctx, l.id, l.forma); err != nil || ok {
+			return ok, err
+		}
+	}
+	return false, nil
+}
+
+// notaTrimitere: fraza pentru o lemă pe care DOOM 3 n-o atestă, când trimite
+// la lemele atestate; "" dacă niciuna nu e atestată.
+func notaTrimitere(forma string, t []Trimitere) string {
+	var atestate []string
+	for _, x := range t {
+		if x.Doom3 {
+			atestate = append(atestate, "„"+x.Forma+"”")
+		}
+	}
+	if len(atestate) == 0 {
+		return ""
+	}
+	lista, pronume, formele := strings.Join(atestate, " sau "), "o atestă", "ei"
+	if len(atestate) > 1 {
+		pronume, formele = "le atestă", "lor"
+	}
+	return fmt.Sprintf("DOOM 3 nu atestă „%s”, iar definiția trimite la %s, pe care DOOM 3 %s. "+
+		"De regulă se recomandă %s, cu formele %s flexionare; „%s” e o variantă pe care norma nu o înregistrează.",
+		forma, lista, pronume, lista, formele, forma)
 }
 
 // lemaFaraLexem alcătuiește o lemă (ID 0) din cuvântul-titlu al definițiilor

@@ -91,7 +91,7 @@ func importaTest(t *testing.T, gz bool) (*Dictionar, string) {
 		t.Fatal(err)
 	}
 	// sursa ascunsă și definițiile ei, definiția ștearsă și formele dublate nu se numără
-	if st.Surse != 5 || st.Definitii != 10 || st.Leme != 7 || st.Forme != 10 {
+	if st.Surse != 5 || st.Definitii != 11 || st.Leme != 8 || st.Forme != 11 {
 		t.Fatalf("statistici: %+v", st)
 	}
 	if st.PeSurse[0] != (Sursa{"DOOM 3", 4}) {
@@ -441,6 +441,58 @@ func TestSurseDoarAleLemei(t *testing.T) {
 			}
 			if are != w.doom || are != l.Doom3 {
 				t.Errorf("%s: DOOM 3 în surse = %v, Doom3 = %v; aștept %v", w.lema, are, l.Doom3, w.doom)
+			}
+		}
+	}
+}
+
+func TestTrimitereDin(t *testing.T) {
+	for text, vrut := range map[string]string{
+		`@DEGIVR'A@ #vb.# I #v.# @dejivra.@`:                   "dejivra",
+		`@ÎNSTREIN'AT^1@ #s. n.# #v.# @înstrăinat^1.@`:         "înstrăinat",
+		`@'ĂLALALT@ #pron. dem.#, #adj. dem.# #v.# @ălălalt.@`: "ălălalt",
+		`@HICLE'AN, -Ă@ #adj.# #V.# @viclean.@`:                "viclean",
+		`@VROI@ #vb.# IV #v.# @vrea.@`:                         "vrea",
+		`@VRO'I@ #vb.# IV #v.# @vrea.@{{Notă: altceva./1}}`:    "vrea",
+		// trimiterea de la sfârșitul unei definiții adevărate (derivat) nu contează
+		`@GRAV'AT, -Ă,@ $gravați, -te,$ #adj.# Care a fost supus operației de gravare. - #V.# @grava.@`: "",
+		`@CASĂ@ #s. f.# Clădire de locuit. - Din #lat.# @casa@.`:                                        "",
+		`@VROI@ #vb.# Formă veche pentru a voi.`:                                                        "",
+		``: "",
+	} {
+		if got := trimitereDin(text); got != vrut {
+			t.Errorf("trimitereDin(%q) = %q; aștept %q", text, got, vrut)
+		}
+	}
+}
+
+// O lemă pe care DOOM 3 n-o atestă, cu o definiție care trimite la o lemă
+// atestată, primește trimiterea și o notă care spune ce se recomandă.
+func TestTrimiteLaSiNota(t *testing.T) {
+	d, _ := importaTest(t, true)
+	ctx := context.Background()
+	r, err := d.Cauta(ctx, "degivra")
+	if err != nil || len(r.Leme) != 1 {
+		t.Fatalf("degivra: %+v %v", r, err)
+	}
+	l := r.Leme[0]
+	if l.Doom3 || len(l.TrimiteLa) != 1 || l.TrimiteLa[0] != (Trimitere{Forma: "dejivra", Doom3: true}) {
+		t.Fatalf("degivra: doom3=%v trimite_la=%+v", l.Doom3, l.TrimiteLa)
+	}
+	for _, cerut := range []string{"DOOM 3 nu atestă „degivra”", "„dejivra”", "se recomandă"} {
+		if !strings.Contains(l.Nota, cerut) {
+			t.Errorf("nota nu spune %q: %q", cerut, l.Nota)
+		}
+	}
+	// fără trimitere: nici notă
+	for _, cuvant := range []string{"dejivra", "vroi", "casă"} {
+		r, err := d.Cauta(ctx, cuvant)
+		if err != nil {
+			t.Fatal(err)
+		}
+		for _, l := range r.Leme {
+			if len(l.TrimiteLa) != 0 || l.Nota != "" {
+				t.Errorf("%s: trimite_la=%+v nota=%q", l.Forma, l.TrimiteLa, l.Nota)
 			}
 		}
 	}

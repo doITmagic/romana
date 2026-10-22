@@ -224,6 +224,9 @@ func scrieRaspuns(w io.Writer, r dex.Raspuns) {
 		if l.Doom3 {
 			fmt.Fprintln(w, "  atestată de DOOM 3")
 		}
+		if l.Nota != "" {
+			fmt.Fprintf(w, "  notă: %s\n", l.Nota)
+		}
 		if len(l.Surse) > 0 {
 			fmt.Fprintf(w, "  surse: %s\n", strings.Join(l.Surse, ", "))
 		}

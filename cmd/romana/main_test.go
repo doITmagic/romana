@@ -67,6 +67,11 @@ func TestCautaText(t *testing.T) {
 	if cod != 0 || !strings.Contains(out, "casă") {
 		t.Fatalf("cod %d, ieșire %q", cod, out)
 	}
+	// nota pentru o lemă pe care DOOM 3 n-o atestă, dar trimite la una atestată
+	out, _, cod = rul(t, "", "cauta", "--db", db, "--offline", "degivra")
+	if cod != 0 || !strings.Contains(out, "notă: DOOM 3 nu atestă „degivra”") || !strings.Contains(out, "„dejivra”") {
+		t.Fatalf("cod %d, ieșire %q", cod, out)
+	}
 }
 
 func TestVerificaStdin(t *testing.T) {

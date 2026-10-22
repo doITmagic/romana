@@ -72,19 +72,21 @@ func Export() string {
 		infl("50", "Verb, Infinitiv"),
 		infl("51", "Verb, Indicativ, prezent, persoana I, singular"),
 		infl("52", "Verb, Indicativ, imperfect, persoana I, singular")))
-	// 1 casă (F), 2 vroi (V), 3 dejivra (VT), 4 caz-limită (F, fără forme în tabelă)
-	b.WriteString(insert("Lexeme", lex("1", "casă", "F"), lex("2", "vroi", "V"), lex("3", "dejivra", "VT"), lex("4", "caz-limită", "F")))
+	// 1 casă (F), 2 vroi (V), 3 dejivra (VT), 4 caz-limită (F, fără forme în tabelă), 5 degivra (VT)
+	b.WriteString(insert("Lexeme", lex("1", "casă", "F"), lex("2", "vroi", "V"), lex("3", "dejivra", "VT"), lex("4", "caz-limită", "F"),
+		lex("5", "degivra", "VT")))
 	b.WriteString(insert("InflectedForm",
 		ifl("casă", "1", "1", "0", "1"), ifl("case", "1", "3", "0", "1"), ifl("casa", "1", "5", "0", "NULL"),
 		ifl("Casă", "1", "1", "0", "1"), // dublură cu literă mare: se contopește
 		ifl("vroi", "2", "50", "0", "1"), ifl("vroiam", "2", "52", "1", "0"),
-		ifl("dejivra", "3", "50", "0", "1"), ifl("dejivrez", "3", "51", "0", "1")))
+		ifl("dejivra", "3", "50", "0", "1"), ifl("dejivrez", "3", "51", "0", "1"),
+		ifl("degivra", "5", "50", "0", "1")))
 	b.WriteString(insert("LexemeSource", lsrc("3", "88")))
-	// intrările: 10 casă, 20 vroi, 30 dejivra, 40 caz-limită, 41 zi-lumină (fără lexem), 50 din sursa ascunsă
-	b.WriteString(insert("EntryLexeme", el("10", "1"), el("20", "2"), el("30", "3"), el("40", "4"), el("50", "1")))
+	// intrările: 10 casă, 20 vroi, 30 dejivra, 31 degivra, 40 caz-limită, 41 zi-lumină (fără lexem), 50 din sursa ascunsă
+	b.WriteString(insert("EntryLexeme", el("10", "1"), el("20", "2"), el("30", "3"), el("31", "5"), el("40", "4"), el("50", "1")))
 	b.WriteString(insert("EntryDefinition",
 		ed("10", "1", "1"), ed("10", "2", "2"), ed("10", "3", "3"), ed("20", "4", "1"), ed("30", "5", "1"),
-		ed("40", "6", "1"), ed("41", "7", "1"), ed("10", "8", "4"), ed("50", "9", "1")))
+		ed("40", "6", "1"), ed("41", "7", "1"), ed("10", "8", "4"), ed("50", "9", "1"), ed("31", "11", "1")))
 	b.WriteString("-- Dump completed\n-- MySQL dump 10.19\n")
 	b.WriteString(insert("Source", src("1", `DEX \'98`, "1"), src("7", "DCR2", "1"), src("27", `DEX \'09`, "0"),
 		src("88", "DOOM 3", "0"),
@@ -102,7 +104,9 @@ func Export() string {
 		def("7", "7", "zi-lumină", "0", `@ZI-LUMINĂ@ #s. f.# Fără lexem legat.`),
 		def("8", "1", "casă", "2", "ștearsă"),
 		def("9", "45", "casă", "0", "din sursa ascunsă"),
-		def("10", "46", "casă", "0", `@casă@ TEXT-LICENTA-NECUNOSCUTA`)))
+		def("10", "46", "casă", "0", `@casă@ TEXT-LICENTA-NECUNOSCUTA`),
+		// o definiție care doar trimite la altă lemă
+		def("11", "1", "degivra", "0", `@DEGIVR\'A@ #vb.# I #v.# @dejivra.@`)))
 	b.WriteString("-- Dump completed\n")
 	return b.String()
 }

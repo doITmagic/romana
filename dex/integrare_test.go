@@ -112,3 +112,35 @@ func TestBazaRealaSurseDoarAleLemei(t *testing.T) {
 		}
 	}
 }
+
+// Pe baza reală: „degivrat” și „vroi” trimit la forma pe care o atestă DOOM 3.
+func TestBazaRealaTrimiteri(t *testing.T) {
+	d := deschideBazaReala(t)
+	ctx := context.Background()
+	for cautat, tinta := range map[string]string{"degivrat": "dejivra", "degivra": "dejivra", "vroi": "vrea"} {
+		r, err := d.Cauta(ctx, cautat)
+		if err != nil {
+			t.Fatal(err)
+		}
+		gasit := false
+		for _, l := range r.Leme {
+			for _, x := range l.TrimiteLa {
+				if x.Forma == tinta && x.Doom3 && strings.Contains(l.Nota, "„"+tinta+"”") {
+					gasit = true
+				}
+			}
+		}
+		if !gasit {
+			t.Errorf("%s: nicio lemă nu trimite la %s cu notă: %+v", cautat, tinta, r.Leme)
+		}
+	}
+	r, err := d.Cauta(ctx, "casă")
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, l := range r.Leme {
+		if l.Forma == "casă" && l.Nota != "" {
+			t.Errorf("casă: notă nepotrivită %q", l.Nota)
+		}
+	}
+}
