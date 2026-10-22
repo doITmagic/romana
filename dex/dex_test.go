@@ -91,7 +91,7 @@ func importaTest(t *testing.T, gz bool) (*Dictionar, string) {
 		t.Fatal(err)
 	}
 	// sursa ascunsă și definițiile ei, definiția ștearsă și formele dublate nu se numără
-	if st.Surse != 4 || st.Definitii != 7 || st.Leme != 4 || st.Forme != 7 {
+	if st.Surse != 5 || st.Definitii != 8 || st.Leme != 4 || st.Forme != 7 {
 		t.Fatalf("statistici: %+v", st)
 	}
 	if st.PeSurse[0] != (Sursa{"DEX '98", 2}) {
@@ -168,6 +168,20 @@ func TestTextNeafisabilNeimportat(t *testing.T) {
 	}
 	if err := db.QueryRow(`SELECT count(*) FROM definition WHERE text LIKE '%' || ? || '%'`, subsirDoom3).Scan(&n); err != nil || n != 0 {
 		t.Errorf("textul DOOM 3 e în bază: %d (%v)", n, err)
+	}
+}
+
+// Sursa cu can_distribute NULL nu e nici ea distribuibilă: nici textul ei nu rămâne în bază.
+func TestTextLicentaNecunoscutaNeimportat(t *testing.T) {
+	_, cale := importaTest(t, false)
+	db, err := sql.Open("sqlite", "file:"+cale+"?mode=ro")
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer db.Close()
+	var n int
+	if err := db.QueryRow(`SELECT count(*) FROM definition WHERE text LIKE '%TEXT-LICENTA-NECUNOSCUTA%'`).Scan(&n); err != nil || n != 0 {
+		t.Errorf("textul sursei cu licență necunoscută e în bază: %d (%v)", n, err)
 	}
 }
 

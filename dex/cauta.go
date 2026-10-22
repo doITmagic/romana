@@ -33,7 +33,7 @@ type Lema struct {
 	Forma          string      `json:"forma"`
 	Descriere      string      `json:"descriere,omitempty"` // deosebește omonimele
 	ParteDeVorbire string      `json:"parte_de_vorbire,omitempty"`
-	Doom3          bool        `json:"doom3"`           // DOOM 3 atestă lema
+	Doom3          bool        `json:"doom3"`           // DOOM 3 atestă lema (sau o intrare comună cu ea); NU dovedește că forma e corectă: „vroi” iese true prin intrarea lui „vrea”, deși „vroiam” e greșit
 	Surse          []string    `json:"surse"`           // toate dicționarele care atestă lema, cu sau fără text afișabil
 	Definitii      []Definitie `json:"definitii"`       // doar din surse cu can_distribute = 1
 	Forme          []Forma     `json:"forme,omitempty"` // formele flexionare, cu etichetă

@@ -86,6 +86,8 @@ func dumpMic() string {
 	b.WriteString("-- Dump completed\n-- MySQL dump 10.19\n")
 	b.WriteString(insert("Source", src("1", `DEX \'98`, "1"), src("7", "DCR2", "1"), src("27", `DEX \'09`, "0"),
 		src("88", "DOOM 3", "0"),
+		// can_distribute necunoscut (NULL): se tratează ca nedistribuibil
+		src("46", "NECUNOSCUT", "NULL"),
 		// sursă ascunsă de dexonline (hidden, coloana 12): nu intră, nici definițiile ei
 		tuplu(29, map[int]string{0: "45", 1: "'ASCUNS'", 3: "'x'", 12: "1", 18: "NULL", 19: "1"})))
 	b.WriteString(insert("Definition",
@@ -97,7 +99,8 @@ func dumpMic() string {
 		def("6", "7", "caz-limită", "0", `@CAZ-LIMITĂ@ #s. n.# Situație la limită, inventată.`),
 		def("7", "7", "zi-lumină", "0", `@ZI-LUMINĂ@ #s. f.# Fără lexem legat.`),
 		def("8", "1", "casă", "2", "ștearsă"),
-		def("9", "45", "casă", "0", "din sursa ascunsă")))
+		def("9", "45", "casă", "0", "din sursa ascunsă"),
+		def("10", "46", "casă", "0", `@casă@ TEXT-LICENTA-NECUNOSCUTA`)))
 	b.WriteString("-- Dump completed\n")
 	return b.String()
 }

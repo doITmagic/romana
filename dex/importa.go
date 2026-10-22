@@ -166,7 +166,7 @@ func Importa(ctx context.Context, r io.Reader, caleSQLite string) (st Statistici
 	for _, q := range []string{
 		"DELETE FROM definition WHERE source_id NOT IN (SELECT id FROM source)",
 		"DELETE FROM entry_definition WHERE definition_id NOT IN (SELECT id FROM definition)",
-		"UPDATE definition SET text = NULL WHERE source_id IN (SELECT id FROM source WHERE can_distribute <> 1)",
+		"UPDATE definition SET text = NULL WHERE source_id IN (SELECT id FROM source WHERE can_distribute IS NOT 1)",
 		indexuri,
 	} {
 		if _, err = db.ExecContext(ctx, q); err != nil {
