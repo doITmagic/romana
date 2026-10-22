@@ -15,7 +15,10 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strconv"
+	"strings"
 	"sync"
+	"syscall"
 	"time"
 
 	"github.com/doITmagic/romana/dex"
@@ -90,12 +93,17 @@ func CaleImplicita() string {
 
 func dirCacheImplicit() string { return filepath.Join(acasa(), ".cache", "romana") }
 
+// acasa întoarce directorul acasă, mereu o cale absolută. Dacă nu se află
+// (fără $HOME), cade pe un director propriu utilizatorului în directorul
+// temporar, ca baza și cache-ul să nu depindă de directorul curent.
 func acasa() string {
-	if h := os.Getenv("HOME"); h != "" {
+	if h := os.Getenv("HOME"); h != "" && filepath.IsAbs(h) {
 		return h
 	}
-	h, _ := os.UserHomeDir()
-	return h
+	if h, err := os.UserHomeDir(); err == nil && filepath.IsAbs(h) {
+		return h
+	}
+	return filepath.Join(os.TempDir(), fmt.Sprintf("romana-acasa-%d", os.Getuid()))
 }
 
 // stare e conținutul lui stare.json.
@@ -147,15 +155,48 @@ func scrieStare(dirCache string, s stare) error {
 // serializează între procese.
 var ocupat sync.Mutex
 
-// blocheaza ia blocarea pe DirCache. Întoarce funcția de eliberare.
-func blocheaza(o Optiuni) (func(), error) {
+// sondareBlocare: cât așteptăm între două încercări de a lua blocarea.
+const sondareBlocare = 200 * time.Millisecond
+
+// procesViu spune dacă PID-ul din fișierul de blocare mai trăiește. Unde nu
+// se poate afla (alt sistem), răspunde „da”, iar vârsta blocării decide.
+func procesViu(pid int) bool {
+	p, err := os.FindProcess(pid)
+	if err != nil {
+		return true
+	}
+	err = p.Signal(syscall.Signal(0))
+	return err == nil || !errors.Is(err, os.ErrProcessDone) && !errors.Is(err, syscall.ESRCH)
+}
+
+// blocareParasita: blocarea e prea veche sau PID-ul ei nu mai trăiește.
+func blocareParasita(cale string, acum time.Time) bool {
+	i, err := os.Stat(cale)
+	if err != nil {
+		return false
+	}
+	if acum.Sub(i.ModTime()) > blocareVeche {
+		return true
+	}
+	b, err := os.ReadFile(cale)
+	if err != nil {
+		return false
+	}
+	pid, err := strconv.Atoi(strings.TrimSpace(string(b)))
+	return err == nil && pid > 0 && !procesViu(pid)
+}
+
+// blocheaza ia blocarea pe DirCache; dacă o ține altă instanță, așteaptă (cu
+// sondare) până se eliberează sau expiră ctx. Întoarce funcția de eliberare.
+func blocheaza(ctx context.Context, o Optiuni) (func(), error) {
 	ocupat.Lock()
 	if err := os.MkdirAll(o.DirCache, 0o755); err != nil {
 		ocupat.Unlock()
 		return nil, err
 	}
 	cale := filepath.Join(o.DirCache, numeBlocare)
-	for incercare := 0; ; incercare++ {
+	anuntat := false
+	for {
 		f, err := os.OpenFile(cale, os.O_CREATE|os.O_EXCL|os.O_WRONLY, 0o644)
 		if err == nil {
 			fmt.Fprintf(f, "%d\n", os.Getpid())
@@ -166,12 +207,20 @@ func blocheaza(o Optiuni) (func(), error) {
 			ocupat.Unlock()
 			return nil, err
 		}
-		if i, e := os.Stat(cale); e == nil && o.Acum().Sub(i.ModTime()) > blocareVeche && incercare == 0 {
+		if blocareParasita(cale, o.Acum()) {
 			os.Remove(cale) // părăsită de un proces mort
 			continue
 		}
-		ocupat.Unlock()
-		return nil, fmt.Errorf("baza: o altă instanță descarcă acum exportul (%s); încearcă peste câteva minute", cale)
+		if !anuntat {
+			anuntat = true
+			fmt.Fprintf(o.Progres, "o altă instanță descarcă exportul (%s); aștept…\n", cale)
+		}
+		select {
+		case <-ctx.Done():
+			ocupat.Unlock()
+			return nil, fmt.Errorf("baza: o altă instanță descarcă acum exportul (%s): %w", cale, ctx.Err())
+		case <-time.After(sondareBlocare):
+		}
 	}
 }
 
@@ -208,7 +257,7 @@ func Asigura(ctx context.Context, o Optiuni) (string, error) {
 	if o.Offline {
 		return "", errors.New("baza lipsește: rulează „romana import <fișier>” sau pornește fără --offline")
 	}
-	release, err := blocheaza(o)
+	release, err := blocheaza(ctx, o)
 	if err != nil {
 		return "", err
 	}
@@ -249,7 +298,7 @@ func Actualizeaza(ctx context.Context, o Optiuni, fortat bool) (bool, error) {
 			return false, nil
 		}
 	}
-	release, err := blocheaza(o)
+	release, err := blocheaza(ctx, o)
 	if err != nil {
 		return false, err
 	}
@@ -269,7 +318,7 @@ func Actualizeaza(ctx context.Context, o Optiuni, fortat bool) (bool, error) {
 // eroare, baza veche și cache-ul rămân neatinse, iar temporarele se șterg.
 func aduce(ctx context.Context, o Optiuni, etag, modificat string) (schimbat bool, err error) {
 	defer func() {
-		if err != nil && ctx.Err() == nil {
+		if err != nil && !schimbat && ctx.Err() == nil { // baza schimbată = e bună
 			st := citesteStare(o.DirCache)
 			st.Eroare = o.Acum()
 			scrieStare(o.DirCache, st) // cea mai bună încercare
@@ -332,11 +381,14 @@ func aduce(ctx context.Context, o Optiuni, etag, modificat string) (schimbat boo
 	if err != nil {
 		return false, fmt.Errorf("baza: import: %w", err)
 	}
-	if err = os.Rename(tmp.Name(), filepath.Join(o.DirCache, numeExport)); err != nil {
-		return true, err // baza e deja înlocuită; doar cache-ul a rămas în urmă
-	}
+	// baza e deja înlocuită: starea se scrie chiar dacă doar mutarea în cache
+	// eșuează, ca următoarea verificare să fie condiționată, nu o descărcare nouă
+	errMutare := os.Rename(tmp.Name(), filepath.Join(o.DirCache, numeExport))
 	st := stare{Verificat: o.Acum(), ETag: resp.Header.Get("ETag"), Modificat: resp.Header.Get("Last-Modified")}
-	return true, scrieStare(o.DirCache, st)
+	if errStare := scrieStare(o.DirCache, st); errMutare == nil {
+		return true, errStare
+	}
+	return true, errMutare
 }
 
 func marime(n int64) string {

@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strings"
 	"sync"
@@ -440,5 +441,97 @@ func TestAsiguraBazaReala(t *testing.T) {
 	got, err := Asigura(context.Background(), Optiuni{CaleBaza: cale, Offline: true})
 	if err != nil || got != cale {
 		t.Fatalf("got=%q err=%v", got, err)
+	}
+}
+
+// Fără $HOME, calea implicită nu are voie să fie relativă.
+func TestCaleImplicitaFaraAcasa(t *testing.T) {
+	t.Setenv("ROMANA_DEX", "")
+	t.Setenv("HOME", "")
+	if c := CaleImplicita(); !filepath.IsAbs(c) {
+		t.Fatalf("calea bazei e relativă: %q", c)
+	}
+	if c := dirCacheImplicit(); !filepath.IsAbs(c) {
+		t.Fatalf("calea cache-ului e relativă: %q", c)
+	}
+}
+
+// O blocare ținută de altă instanță se așteaptă; la eliberare, descărcarea merge.
+func TestBlocareAsteapta(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	if err := os.MkdirAll(o.DirCache, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	cale := filepath.Join(o.DirCache, numeBlocare)
+	if err := os.WriteFile(cale, []byte(fmt.Sprintf("%d\n", os.Getpid())), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	go func() {
+		time.Sleep(600 * time.Millisecond)
+		os.Remove(cale)
+	}()
+	ctx, stop := context.WithTimeout(context.Background(), 20*time.Second)
+	defer stop()
+	if _, err := Asigura(ctx, o); err != nil {
+		t.Fatalf("trebuia să aștepte eliberarea: %v", err)
+	}
+	arataBaza(t, o.CaleBaza)
+}
+
+// Așteptarea se oprește când ctx expiră.
+func TestBlocareAsteaptaPanaLaCtx(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	os.MkdirAll(o.DirCache, 0o755)
+	os.WriteFile(filepath.Join(o.DirCache, numeBlocare), []byte(fmt.Sprintf("%d\n", os.Getpid())), 0o644)
+	ctx, stop := context.WithTimeout(context.Background(), 400*time.Millisecond)
+	defer stop()
+	if _, err := Asigura(ctx, o); err == nil {
+		t.Fatal("trebuia eroare la expirarea ctx")
+	}
+	if s.cereri.Load() != 0 {
+		t.Fatal("nu trebuia nicio cerere")
+	}
+}
+
+// O blocare lăsată de un proces mort se preia imediat, fără să aștepte o oră.
+func TestBlocareProcesMort(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	os.MkdirAll(o.DirCache, 0o755)
+	// PID-ul unui proces terminat
+	cmd := exec.Command("true")
+	if err := cmd.Run(); err != nil {
+		t.Skip("nu pot porni un proces: ", err)
+	}
+	os.WriteFile(filepath.Join(o.DirCache, numeBlocare), []byte(fmt.Sprintf("%d\n", cmd.Process.Pid)), 0o644)
+	ctx, stop := context.WithTimeout(context.Background(), 10*time.Second)
+	defer stop()
+	if _, err := Asigura(ctx, o); err != nil {
+		t.Fatalf("blocarea procesului mort trebuia preluată: %v", err)
+	}
+}
+
+// Dacă doar mutarea exportului în cache eșuează, starea (ETag) se scrie totuși.
+func TestStareDupaEsecMutareCache(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	// o țintă care nu poate fi înlocuită cu un fișier: director nevid
+	tinta := filepath.Join(o.DirCache, numeExport)
+	if err := os.MkdirAll(filepath.Join(tinta, "gol"), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	schimbat, err := Actualizeaza(context.Background(), o, true)
+	if err == nil || !schimbat {
+		t.Fatalf("așteptam (true, eroare), am primit (%v, %v)", schimbat, err)
+	}
+	arataBaza(t, o.CaleBaza)
+	st := citesteStare(o.DirCache)
+	if st.ETag != `"v1"` || st.Verificat.IsZero() {
+		t.Fatalf("starea nu s-a scris: %+v", st)
+	}
+	if !st.Eroare.IsZero() {
+		t.Fatalf("baza e bună, nu trebuia marcată eroarea: %+v", st)
 	}
 }
