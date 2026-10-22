@@ -106,7 +106,7 @@ func indexeaza(rulari []Rulare) index {
 		k := cheieCaz{r.Motor, r.Caz, r.CuSkill}
 		ix.rulari[k] = append(ix.rulari[k], r)
 		ix.modele[r.Motor] = r.Model
-		if !seen[r.Motor] {
+		if !seen[r.Motor] && !strings.HasSuffix(r.Motor, SufixMCP) {
 			seen[r.Motor] = true
 			ix.motoare = append(ix.motoare, r.Motor)
 		}
@@ -390,6 +390,7 @@ func RaportMarkdown(cazuri []Caz, rulari []Rulare, meta Meta) string {
 		b.WriteString("\n")
 	}
 	scrieConsum(&b, ix, cazuri)
+	scrieMCP(&b, ix, cazuri, gs)
 	b.WriteString("### Prag de reușită\n\n| Motor | Criteriu | Verdict | Detaliu |\n|---|---|---|---|\n")
 	for _, v := range Prag(cazuri, rulari) {
 		fmt.Fprintf(&b, "| %s | %s | %s | %s |\n", v.Motor, v.Criteriu, v.Verdict, v.Detaliu)
@@ -447,3 +448,98 @@ func fmtMii(n int) string {
 	}
 	return s
 }
+
+// scrieMCP adaugă tabelul „MCP”: pentru fiecare motor care are rulări cu
+// serverul MCP (motorul apare ca „<motor>+mcp”), brațul „cu skill” față de
+// „cu skill + MCP”, pe grupe, doar pe cazurile cu rezultat valid în ambele.
+// Valorile sunt „cu skill / cu skill + MCP”; mai puțin e mai bine. Criteriul
+// (spec §11): fals pozitivele și lipsurile nu cresc cu MCP.
+func scrieMCP(b *strings.Builder, ix index, cazuri []Caz, grupe []string) {
+	for _, m := range ix.motoare {
+		mcp := m + SufixMCP
+		if !arataMCP(ix, mcp) {
+			continue
+		}
+		fmt.Fprintf(b, "### MCP (%s)\n\nValorile sunt „%s cu skill / %s”, pe cazurile cu rezultat valid în ambele brațe; mai puțin e mai bine. Consumul e media tokenilor pe rulare (intrarea include cache-ul).\n\n", m, m, mcp)
+		b.WriteString("| Grupa | n_comun | Probleme | Fals pozitive | Lipsă | Intrare | Ieșire |\n|---|---|---|---|---|---|---|\n")
+		var fpCu, fpMcp, lipsaCu, lipsaMcp float64
+		total := 0
+		for _, g := range grupe {
+			var sCu, sMcp []statCaz
+			var tCu, tMcp tokeniSuma
+			for _, c := range cazuri {
+				if Grupa(c) != g {
+					continue
+				}
+				rCu, rMcp := ix.rulari[cheieCaz{m, c.ID, true}], ix.rulari[cheieCaz{mcp, c.ID, true}]
+				a, okA := statistica(rCu)
+				d, okD := statistica(rMcp)
+				if !okA || !okD {
+					continue
+				}
+				sCu, sMcp = append(sCu, a), append(sMcp, d)
+				tCu.adauga(rCu)
+				tMcp.adauga(rMcp)
+			}
+			suma := func(v []statCaz, f func(statCaz) float64) float64 {
+				var t float64
+				for _, x := range v {
+					t += f(x)
+				}
+				return t
+			}
+			par := func(f func(statCaz) float64) string {
+				return fmtNum(suma(sCu, f)) + " / " + fmtNum(suma(sMcp, f))
+			}
+			prob := func(s statCaz) float64 { return s.probleme }
+			fp := func(s statCaz) float64 { return s.fp }
+			lipsa := func(s statCaz) float64 { return s.lipsa }
+			fpCu, fpMcp = fpCu+suma(sCu, fp), fpMcp+suma(sMcp, fp)
+			lipsaCu, lipsaMcp = lipsaCu+suma(sCu, lipsa), lipsaMcp+suma(sMcp, lipsa)
+			total += len(sCu)
+			fmt.Fprintf(b, "| %s | %d | %s | %s | %s | %s | %s |\n", g, len(sCu), par(prob), par(fp), par(lipsa),
+				tCu.medieIntrare()+" / "+tMcp.medieIntrare(), tCu.medieIesire()+" / "+tMcp.medieIesire())
+		}
+		verdict := "atins"
+		switch {
+		case total == 0:
+			verdict = "nemăsurabil"
+		case fpMcp > fpCu || lipsaMcp > lipsaCu:
+			verdict = "neatins"
+		}
+		fmt.Fprintf(b, "\nCriteriu: cu MCP, fals pozitivele și lipsurile nu cresc față de „cu skill”: **%s** (fals pozitive %s → %s, lipsă %s → %s, %d cazuri).\n\n",
+			verdict, fmtNum(fpCu), fmtNum(fpMcp), fmtNum(lipsaCu), fmtNum(lipsaMcp), total)
+	}
+}
+
+// arataMCP spune dacă motorul mcp are vreo rulare în index.
+func arataMCP(ix index, mcp string) bool {
+	for k := range ix.rulari {
+		if k.motor == mcp {
+			return true
+		}
+	}
+	return false
+}
+
+// tokeniSuma adună consumul rulărilor valide care îl raportează.
+type tokeniSuma struct{ intrare, iesire, n int }
+
+func (t *tokeniSuma) adauga(rulari []Rulare) {
+	for _, r := range rulari {
+		if r.Valida() && r.Rezultat.Tokeni != nil {
+			t.intrare += r.Rezultat.Tokeni.Intrare
+			t.iesire += r.Rezultat.Tokeni.Iesire
+			t.n++
+		}
+	}
+}
+
+func (t tokeniSuma) medie(x int) string {
+	if t.n == 0 {
+		return "–"
+	}
+	return fmtMii((x + t.n/2) / t.n)
+}
+func (t tokeniSuma) medieIntrare() string { return t.medie(t.intrare) }
+func (t tokeniSuma) medieIesire() string  { return t.medie(t.iesire) }

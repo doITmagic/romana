@@ -158,3 +158,49 @@ func TestRaportTokeni(t *testing.T) {
 		t.Errorf("\n%s", r)
 	}
 }
+
+func TestRaportMCP(t *testing.T) {
+	cazuri := []Caz{{ID: "curat-presa-01"}, {ID: "curat-presa-02"}}
+	tok := func(i, o int) Rezultat { return Rezultat{Tokeni: &Tokeni{Intrare: i, Iesire: o}} }
+	rulari := []Rulare{
+		{Caz: "curat-presa-01", Motor: "claude", Model: "sonnet", Nota: Nota{FalsPozitive: 2, Fidelitate: true}},
+		{Caz: "curat-presa-01", Motor: "claude", Model: "sonnet", CuSkill: true, Nota: Nota{FalsPozitive: 1, Lipsa: 1, Fidelitate: true}, Rezultat: tok(30000, 500)},
+		{Caz: "curat-presa-01", Motor: "claude+mcp", Model: "sonnet", CuSkill: true, Nota: Nota{FalsPozitive: 0, Fidelitate: true}, Rezultat: tok(50000, 700)},
+		{Caz: "curat-presa-02", Motor: "claude", Model: "sonnet", CuSkill: true, Nota: Nota{Fidelitate: true}, Rezultat: tok(10000, 100)},
+		{Caz: "curat-presa-02", Motor: "claude+mcp", Model: "sonnet", CuSkill: true, Eroare: "timeout"},
+	}
+	r := RaportMarkdown(cazuri, rulari, Meta{ModelJudecator: "opus", Judecari: 3})
+	if !strings.Contains(r, "### MCP") || !strings.Contains(r, "claude+mcp") {
+		t.Fatalf("lipsește tabelul MCP:\n%s", r)
+	}
+	// n_comun = 1 (curat-02 a căzut pe MCP); fals pozitive 1 → 0, lipsă 1 → 0, intrare 30.000 → 50.000
+	if !strings.Contains(r, "| curat | 1 | 0 / 0 | 1 / 0 | 1 / 0 | 30.000 / 50.000 | 500 / 700 |") {
+		t.Errorf("\n%s", r)
+	}
+	if !strings.Contains(r, "atins") {
+		t.Errorf("fără verdict:\n%s", r)
+	}
+	// brațul MCP nu apare ca motor de sine stătător în tabelul principal
+	if strings.Contains(r, "### claude+mcp") {
+		t.Errorf("claude+mcp nu e motor separat:\n%s", r)
+	}
+}
+
+func TestRaportMCPNeatins(t *testing.T) {
+	cazuri := []Caz{{ID: "curat-presa-01"}}
+	rulari := []Rulare{
+		{Caz: "curat-presa-01", Motor: "claude", Model: "sonnet", CuSkill: true, Nota: Nota{Fidelitate: true}},
+		{Caz: "curat-presa-01", Motor: "claude+mcp", Model: "sonnet", CuSkill: true, Nota: Nota{FalsPozitive: 2, Fidelitate: true}},
+	}
+	r := RaportMarkdown(cazuri, rulari, Meta{})
+	if !strings.Contains(r, "neatins") {
+		t.Errorf("creșterea fals pozitivelor trebuie să dea „neatins”:\n%s", r)
+	}
+}
+
+func TestRaportFaraMCP(t *testing.T) {
+	r := RaportMarkdown([]Caz{{ID: "curat-presa-01"}}, []Rulare{rul("curat-presa-01", true, 0, Nota{Fidelitate: true})}, Meta{})
+	if strings.Contains(r, "### MCP") {
+		t.Errorf("tabelul MCP fără rulări MCP:\n%s", r)
+	}
+}

@@ -2,6 +2,7 @@ package evals
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"os"
 	"path/filepath"
@@ -382,5 +383,110 @@ func TestParseClaudeStreamTokeni(t *testing.T) {
 	}
 	if o.Tokeni.Intrare != 3210 || o.Tokeni.Cache != 3000 || o.Tokeni.Iesire != 40 {
 		t.Errorf("%+v", o.Tokeni)
+	}
+}
+
+func TestArgsClaudeMCP(t *testing.T) {
+	m := Motor{"claude", "sonnet", "high"}
+	a := ArgsClaudeMCP(m, "/r", "/t/mcp.json")
+	j := strings.Join(a, " ")
+	for _, vrem := range []string{"--mcp-config /t/mcp.json", "--strict-mcp-config", "--plugin-dir /r", "--tools Skill,Read",
+		"--allowedTools " + UnealtaCauta + "," + UnealtaVerifica} {
+		if !strings.Contains(j, vrem) {
+			t.Errorf("lipsește %q în %s", vrem, j)
+		}
+	}
+	// fără --mcp, argumentele rămân cele de până acum
+	for _, cu := range []bool{false, true} {
+		if j := strings.Join(ArgsClaude(m, cu, "/r"), " "); strings.Contains(j, "--mcp-config") || strings.Contains(j, "allowedTools") {
+			t.Errorf("ArgsClaude(%v) cu MCP: %s", cu, j)
+		}
+	}
+}
+
+func TestConfigClaudeMCP(t *testing.T) {
+	b, err := ConfigClaudeMCP("/bin/romana", "/d/dex.sqlite")
+	if err != nil {
+		t.Fatal(err)
+	}
+	var c struct {
+		McpServers map[string]struct {
+			Command string
+			Args    []string
+		}
+	}
+	if err := json.Unmarshal(b, &c); err != nil {
+		t.Fatal(err)
+	}
+	s := c.McpServers["romana"]
+	if s.Command != "/bin/romana" || strings.Join(s.Args, " ") != "mcp --offline --db /d/dex.sqlite" {
+		t.Errorf("%+v", s)
+	}
+	b, _ = ConfigClaudeMCP("romana", "")
+	if strings.Contains(string(b), "--db") {
+		t.Errorf("fără --db: %s", b)
+	}
+}
+
+func TestMediuCodexMCP(t *testing.T) {
+	home := t.TempDir()
+	if err := ScrieConfigCodexMCP(home, "/bin/rom ana", "/d/dex.sqlite"); err != nil {
+		t.Fatal(err)
+	}
+	b, err := os.ReadFile(filepath.Join(home, "config.toml"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	s := string(b)
+	for _, vrem := range []string{"[mcp_servers.romana]", `command = "/bin/rom ana"`, `args = ["mcp", "--offline", "--db", "/d/dex.sqlite"]`} {
+		if !strings.Contains(s, vrem) {
+			t.Errorf("lipsește %q în\n%s", vrem, s)
+		}
+	}
+}
+
+func TestRuleazaCuMCP(t *testing.T) {
+	var cfgCitit string
+	ex := func(ctx context.Context, c Comanda) (string, error) {
+		if c.Nume == "claude" {
+			for i, a := range c.Arg {
+				if a == "--mcp-config" {
+					b, err := os.ReadFile(c.Arg[i+1])
+					if err != nil {
+						t.Errorf("config MCP ilizibil în timpul rulării: %v", err)
+					}
+					cfgCitit = string(b)
+				}
+			}
+			return okStream, nil
+		}
+		for _, e := range c.Env {
+			if h, ok := strings.CutPrefix(e, "CODEX_HOME="); ok {
+				b, err := os.ReadFile(filepath.Join(h, "config.toml"))
+				if err != nil || !strings.Contains(string(b), "mcp_servers.romana") {
+					t.Errorf("config.toml Codex: %v %s", err, b)
+				}
+			}
+		}
+		return "text", nil
+	}
+	c := Caz{ID: "x-01", Mod: "corectura", Intrare: "Buna."}
+	o := opt(t)
+	o.MCP, o.Romana, o.DB = true, "/bin/romana", "/d/dex.sqlite"
+	if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorClaude, true, o); err != nil || !strings.Contains(cfgCitit, "/bin/romana") {
+		t.Fatalf("claude: %v %q", err, cfgCitit)
+	}
+	if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorCodex, true, o); err != nil {
+		t.Fatal(err)
+	}
+	// fără cale spre romana, brațul MCP refuză
+	o.Romana = ""
+	if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorClaude, true, o); err == nil {
+		t.Error("fără --romana trebuie eroare")
+	}
+	// brațul MCP fără skill nu are sens
+	o.Romana = "/bin/romana"
+	if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorClaude, false, o); err == nil {
+		t.Error("MCP fără skill trebuie eroare")
 	}
 }
