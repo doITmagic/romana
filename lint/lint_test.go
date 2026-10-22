@@ -42,7 +42,7 @@ func TestGrafiaCuI(t *testing.T) {
 	if !strings.Contains(obs[0].Nota, "citat") {
 		t.Errorf("lipsește nota despre citat: %+v", obs[0])
 	}
-	for _, ok := range []string{"în", "înțeleg", "reînnoi", "neîncredere", "A urî și a hotărî. Îmi place.", "Poezia lui Topîrceanu."} {
+	for _, ok := range []string{"în", "înțeleg", "reînnoi", "neîncredere", "bineînțeles", "Bineînțeles", "nemaiîntâlnit", "nemaiîntâlnită", "deîndată", "dinîntâi", "A urî și a hotărî. Îmi place.", "Poezia lui Topîrceanu."} {
 		if o := Verifica(ok); len(o) != 0 {
 			t.Errorf("%q: aștept zero observații, am %+v", ok, o)
 		}

@@ -48,6 +48,7 @@ var prefixeleI = []string{
 	"ex", "extra", "tri", "bi", "mai", "prea", "multi", "hiper", "hipo",
 	"para", "pan", "proto", "arhi", "vice", "pseudo", "cvasi", "micro",
 	"macro", "mono", "poli", "omni", "trans", "circum", "peste", "non",
+	"bine", "nemai", "de", "din", "ori",
 }
 
 // cuvinteTari sunt legături românești care nu apar în engleză sau în cod.
