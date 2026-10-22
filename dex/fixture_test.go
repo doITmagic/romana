@@ -72,14 +72,16 @@ func dumpMic() string {
 		infl("52", "Verb, Indicativ, imperfect, persoana I, singular")))
 	// 1 casă (F), 2 vroi (V), 3 dejivra (VT), 4 caz-limită (F, fără forme în tabelă)
 	b.WriteString(insert("Lexeme", lex("1", "casă", "F"), lex("2", "vroi", "V"), lex("3", "dejivra", "VT"), lex("4", "caz-limită", "F"),
-		lex("5", "sumariza", "VT"), lex("6", "sumă", "F"), lex("7", "albă-neagră", "F"), lex("8", "degivra", "VT")))
+		lex("5", "sumariza", "VT"), lex("6", "sumă", "F"), lex("7", "albă-neagră", "F"), lex("8", "degivra", "VT"),
+		lex("9", "argați", "F"), lex("10", "acaț", "F")))
 	b.WriteString(insert("InflectedForm",
 		ifl("casă", "1", "1", "0", "1"), ifl("case", "1", "3", "0", "1"), ifl("casa", "1", "5", "0", "NULL"),
 		ifl("Casă", "1", "1", "0", "1"), // dublură cu literă mare: se contopește
 		ifl("vroi", "2", "50", "0", "1"), ifl("vroiam", "2", "52", "1", "0"),
 		ifl("dejivra", "3", "50", "0", "1"), ifl("dejivrez", "3", "51", "0", "1"),
 		ifl("sumariza", "5", "50", "0", "1"), ifl("sumă", "6", "1", "0", "1"), ifl("albă-neagră", "7", "1", "0", "1"),
-		ifl("degivra", "8", "50", "0", "1")))
+		ifl("degivra", "8", "50", "0", "1"),
+		ifl("argați", "9", "1", "0", "1"), ifl("acaț", "10", "1", "0", "1")))
 	b.WriteString(insert("LexemeSource", lsrc("3", "88")))
 	// intrările: 10 casă, 20 vroi, 30 dejivra, 40 caz-limită, 41 zi-lumină (fără lexem), 50 din sursa ascunsă
 	b.WriteString(insert("EntryLexeme", el("10", "1"), el("20", "2"), el("30", "3"), el("40", "4"), el("50", "1"),
@@ -88,10 +90,12 @@ func dumpMic() string {
 		// 70: cuvânt-titlu DOOM 3 fără diacritice și fără cratimă normalizată
 		el("70", "7"),
 		// 31: „degivra”, a cărei definiție doar trimite la „dejivra”
-		el("31", "8")))
+		el("31", "8"),
+		// 80: intrare comună; doar „acaț” are definiție proprie (cu trimitere), „argați” nu
+		el("80", "9"), el("80", "10")))
 	b.WriteString(insert("EntryDefinition",
 		ed("10", "1", "1"), ed("10", "2", "2"), ed("10", "3", "3"), ed("20", "4", "1"), ed("30", "5", "1"),
-		ed("40", "6", "1"), ed("41", "7", "1"), ed("10", "8", "4"), ed("50", "9", "1"), ed("60", "11", "1"), ed("70", "12", "1"), ed("31", "13", "1")))
+		ed("40", "6", "1"), ed("41", "7", "1"), ed("10", "8", "4"), ed("50", "9", "1"), ed("60", "11", "1"), ed("70", "12", "1"), ed("31", "13", "1"), ed("80", "14", "1")))
 	b.WriteString("-- Dump completed\n-- MySQL dump 10.19\n")
 	b.WriteString(insert("Source", src("1", `DEX \'98`, "1"), src("7", "DCR2", "1"), src("27", `DEX \'09`, "0"),
 		src("88", "DOOM 3", "0"),
@@ -112,7 +116,8 @@ func dumpMic() string {
 		def("10", "46", "casă", "0", `@casă@ TEXT-LICENTA-NECUNOSCUTA`),
 		def("11", "88", "sumă", "0", `@sumă@ `+subsirDoom3+` intrare comună`),
 		def("12", "88", "alba-neagra", "0", `@alba-neagra@ `+subsirDoom3+` cuvânt-titlu fără diacritice`),
-		def("13", "1", "degivra", "0", `@DEGIVR\'A@ #vb.# I #v.# @dejivra.@`)))
+		def("13", "1", "degivra", "0", `@DEGIVR\'A@ #vb.# I #v.# @dejivra.@`),
+		def("14", "1", "acaț", "0", `@ACAȚ@ #s. m.# #v.# @dejivra.@`)))
 	b.WriteString("-- Dump completed\n")
 	return b.String()
 }

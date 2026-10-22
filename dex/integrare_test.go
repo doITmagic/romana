@@ -144,3 +144,21 @@ func TestBazaRealaTrimiteri(t *testing.T) {
 		}
 	}
 }
+
+// Pe baza reală: lemele fără definiție proprie dintr-o intrare comună nu
+// moștenesc trimiterea vecinei („argați” nu trimite la „acaț”).
+func TestBazaRealaFaraTrimitereMostenita(t *testing.T) {
+	d := deschideBazaReala(t)
+	ctx := context.Background()
+	for _, forma := range []string{"argați", "vroit"} {
+		r, err := d.Cauta(ctx, forma)
+		if err != nil {
+			t.Fatal(err)
+		}
+		for _, l := range r.Leme {
+			if l.Forma == forma && (l.Nota != "" || len(l.TrimiteLa) != 0) {
+				t.Errorf("%s: trimite_la=%+v nota=%q", forma, l.TrimiteLa, l.Nota)
+			}
+		}
+	}
+}

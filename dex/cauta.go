@@ -333,7 +333,9 @@ const filtruLicenta = "s.can_distribute = 1 AND d.text IS NOT NULL"
 // can_distribute = 1), fără dubluri. Dacă unele au cuvântul-titlu egal cu
 // lema, rămân doar acelea: „vroi” nu primește definiția lui „vrea” din
 // intrarea comună, ci doar trimiterea „VROI vb. IV v. vrea”. Întoarce și
-// lemele la care trimit definițiile păstrate (vezi trimitereDin).
+// lemele la care trimit definițiile păstrate (vezi trimitereDin), dar doar
+// ale celor cu cuvântul-titlu egal cu lema: la revenirea pe toate definițiile
+// nu se întoarce nicio trimitere.
 func (d *Dictionar) definitiiAfisabile(ctx context.Context, lexemeID int64, forma string) ([]Definitie, []string, error) {
 	rows, err := d.db.QueryContext(ctx, `
 SELECT s.short_name, d.text, COALESCE(d.lexicon, '') FROM entry_lexeme el
@@ -347,7 +349,7 @@ GROUP BY d.id ORDER BY s.id, min(ed.rank), d.id`, lexemeID)
 	}
 	defer rows.Close()
 	toate, potrivite := []Definitie{}, []Definitie{}
-	var tinteToate, tintePotrivite []string
+	var tintePotrivite []string
 	for rows.Next() {
 		var df Definitie
 		var lexicon string
@@ -356,7 +358,7 @@ GROUP BY d.id ORDER BY s.id, min(ed.rank), d.id`, lexemeID)
 		}
 		tinta := trimitereDin(df.Text)
 		df.Text = textCurat(df.Text)
-		toate, tinteToate = append(toate, df), append(tinteToate, tinta)
+		toate = append(toate, df)
 		if titluLemei(lexicon, forma) {
 			potrivite, tintePotrivite = append(potrivite, df), append(tintePotrivite, tinta)
 		}
@@ -367,7 +369,10 @@ GROUP BY d.id ORDER BY s.id, min(ed.rank), d.id`, lexemeID)
 	if len(potrivite) > 0 {
 		return potrivite, tintePotrivite, nil
 	}
-	return toate, tinteToate, nil
+	// fără definiție proprie: se afișează definițiile intrării comune, dar
+	// trimiterile lor aparțin altor leme și nu se iau („argați” nu trimite
+	// la „acaț”).
+	return toate, nil, nil
 }
 
 // reTrimitere: o definiție care doar trimite la altă lemă, în marcajul

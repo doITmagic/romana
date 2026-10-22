@@ -91,10 +91,10 @@ func importaTest(t *testing.T, gz bool) (*Dictionar, string) {
 		t.Fatal(err)
 	}
 	// sursa ascunsă și definițiile ei, definiția ștearsă și formele dublate nu se numără
-	if st.Surse != 5 || st.Definitii != 11 || st.Leme != 8 || st.Forme != 11 {
+	if st.Surse != 5 || st.Definitii != 12 || st.Leme != 10 || st.Forme != 13 {
 		t.Fatalf("statistici: %+v", st)
 	}
-	if st.PeSurse[0] != (Sursa{"DOOM 3", 4}) {
+	if st.PeSurse[0] != (Sursa{"DEX '98", 4}) || st.PeSurse[1] != (Sursa{"DOOM 3", 4}) {
 		t.Fatalf("pe surse: %+v", st.PeSurse)
 	}
 	d, err := Deschide(cale)
@@ -495,5 +495,38 @@ func TestTrimiteLaSiNota(t *testing.T) {
 				t.Errorf("%s: trimite_la=%+v nota=%q", l.Forma, l.TrimiteLa, l.Nota)
 			}
 		}
+	}
+}
+
+// O lemă fără definiție proprie, într-o intrare comună cu o lemă care are o
+// definiție de trimitere, nu moștenește trimiterea vecinei: definițiile se
+// afișează, dar „trimite_la” și nota rămân goale.
+func TestFaraTrimitereDeLaVecina(t *testing.T) {
+	d, _ := importaTest(t, true)
+	ctx := context.Background()
+	r, err := d.Cauta(ctx, "argați")
+	if err != nil || len(r.Leme) != 1 {
+		t.Fatalf("argați: %+v %v", r, err)
+	}
+	l := r.Leme[0]
+	if len(l.TrimiteLa) != 0 || l.Nota != "" {
+		t.Errorf("argați: trimite_la=%+v nota=%q", l.TrimiteLa, l.Nota)
+	}
+	if len(l.Definitii) == 0 {
+		t.Errorf("argați: definițiile intrării comune trebuie să rămână")
+	}
+	// lema care are definiția de trimitere o păstrează
+	r, err = d.Cauta(ctx, "acaț")
+	if err != nil {
+		t.Fatal(err)
+	}
+	gasit := false
+	for _, l := range r.Leme {
+		if l.Forma == "acaț" && len(l.TrimiteLa) == 1 && l.Nota != "" {
+			gasit = true
+		}
+	}
+	if !gasit {
+		t.Errorf("acaț: trimiterea proprie lipsește: %+v", r.Leme)
 	}
 }
