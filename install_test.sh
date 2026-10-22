@@ -63,7 +63,14 @@ verifica "binarul instalat rulează" test "$("$DIR1/romana")" = "romana fals"
 verifica "avertizează că directorul nu e în PATH" grep -q "PATH" "$TMP/ies1"
 
 # 2. Suma greșită oprește instalarea.
-sed 's/^./0/' "$REL/SHA256SUMS" > "$REL/SHA256SUMS.nou"
+# Stricarea trebuie să schimbe suma și când aceasta începe deja cu 0.
+strica() { sed 's/^0/1/;t;s/^./0/'; }
+for linie in "0abc  f" "7abc  f"; do
+  if [ "$(printf '%s\n' "$linie" | strica)" = "$linie" ]; then
+    echo "PICĂ stricarea lasă neschimbată suma „$linie”"; PICA=1
+  fi
+done
+strica < "$REL/SHA256SUMS" > "$REL/SHA256SUMS.nou"
 mv "$REL/SHA256SUMS.nou" "$REL/SHA256SUMS"
 DIR2="$TMP/bin2"
 if instaleaza "$DIR2" "$TAG" "$TMP/ies2"; then
@@ -82,5 +89,12 @@ else
   echo "ok   versiunea inexistentă oprește instalarea"
 fi
 verifica "nu rămâne niciun binar după versiunea inexistentă" test ! -e "$DIR3/romana"
+
+# 4. Fluxul de release nu are voie să ascundă lipsa fișierelor.
+if grep -n '|| true' "$AICI/.github/workflows/release.yml" >/dev/null; then
+  echo "PICĂ release.yml conține '|| true'"; PICA=1
+else
+  echo "ok   release.yml nu ascunde erorile"
+fi
 
 exit "$PICA"

@@ -33,8 +33,10 @@ jobs:
           set -eu
           mkdir -p dist pachet
           if [ "$GOOS" = "windows" ]; then BIN=romana.exe; else BIN=romana; fi
+          # Fără variabila, -X ar fi ignorat în tăcere: oprim build-ul.
+          grep -rqE '^var versiune\b|^\s+versiune\s+=' cmd/romana || { echo "lipsește var versiune în cmd/romana"; exit 1; }
           go build -trimpath -ldflags "-s -w -X main.versiune=${TAG}" -o "pachet/${BIN}" ./cmd/romana
-          cp LICENSE README.md pachet/ 2>/dev/null || true
+          cp LICENSE README.md pachet/
           NUME="romana_${TAG}_${GOOS}_${GOARCH}"
           if [ "$GOOS" = "windows" ]; then
             (cd pachet && zip -q "../dist/${NUME}.zip" ./*)
