@@ -11,3 +11,4 @@ CLAUDE.local.md
 *.sql
 *.sql.gz
 evals-privat/
+.claude/worktrees/
