@@ -5,6 +5,7 @@ import (
 	"compress/gzip"
 	"context"
 	"fmt"
+	"io"
 	"net/http"
 	"net/http/httptest"
 	"os"
@@ -413,7 +414,7 @@ func TestEroareHTTP(t *testing.T) {
 		t.Fatal("500 trebuie să dea eroare")
 	}
 	for _, f := range fisiere(t, o.DirCache) {
-		if filepath.Base(f) != "stare.json" {
+		if b := filepath.Base(f); b != "stare.json" && b != numeBlocare {
 			t.Fatalf("a rămas în cache: %s", f)
 		}
 	}
@@ -474,13 +475,10 @@ func TestBlocareAsteapta(t *testing.T) {
 	if err := os.MkdirAll(o.DirCache, 0o755); err != nil {
 		t.Fatal(err)
 	}
-	cale := filepath.Join(o.DirCache, numeBlocare)
-	if err := os.WriteFile(cale, []byte(fmt.Sprintf("%d\n", os.Getpid())), 0o644); err != nil {
-		t.Fatal(err)
-	}
+	elibereaza := tineBlocarea(t, o)
 	go func() {
 		time.Sleep(600 * time.Millisecond)
-		os.Remove(cale)
+		elibereaza()
 	}()
 	ctx, stop := context.WithTimeout(context.Background(), 20*time.Second)
 	defer stop()
@@ -494,8 +492,8 @@ func TestBlocareAsteapta(t *testing.T) {
 func TestBlocareAsteaptaPanaLaCtx(t *testing.T) {
 	s := nouServer(t)
 	o := optiuni(t, s)
-	os.MkdirAll(o.DirCache, 0o755)
-	os.WriteFile(filepath.Join(o.DirCache, numeBlocare), []byte(fmt.Sprintf("%d\n", os.Getpid())), 0o644)
+	elibereaza := tineBlocarea(t, o)
+	defer elibereaza()
 	ctx, stop := context.WithTimeout(context.Background(), 400*time.Millisecond)
 	defer stop()
 	if _, err := Asigura(ctx, o); err == nil {
@@ -506,22 +504,171 @@ func TestBlocareAsteaptaPanaLaCtx(t *testing.T) {
 	}
 }
 
-// O blocare lăsată de un proces mort se preia imediat, fără să aștepte o oră.
+// Procesul copil al testelor de blocare: ia blocarea sistemului de operare pe
+// fișierul din ROMANA_TEST_BLOCARE, anunță pe stdout și o ține până e omorât.
+func TestProcesCopilBlocare(t *testing.T) {
+	cale := os.Getenv("ROMANA_TEST_BLOCARE")
+	if cale == "" {
+		t.Skip("rulează doar ca proces copil")
+	}
+	f, ok, err := incearcaBlocare(cale)
+	if err != nil || !ok {
+		fmt.Println("esec", err)
+		os.Exit(3)
+	}
+	_ = f
+	fmt.Println("gata")
+	time.Sleep(time.Minute)
+}
+
+// pornesteCopilCuBlocare pornește un proces care ține blocarea; întoarce
+// procesul, după ce acesta a anunțat că o are.
+func pornesteCopilCuBlocare(t *testing.T, o Optiuni) *exec.Cmd {
+	t.Helper()
+	if err := os.MkdirAll(o.DirCache, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	cmd := exec.Command(os.Args[0], "-test.run=^TestProcesCopilBlocare$")
+	cmd.Env = append(os.Environ(), "ROMANA_TEST_BLOCARE="+filepath.Join(o.DirCache, numeBlocare))
+	out, err := cmd.StdoutPipe()
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := cmd.Start(); err != nil {
+		t.Skip("nu pot porni un proces: ", err)
+	}
+	t.Cleanup(func() { cmd.Process.Kill(); cmd.Wait() })
+	linie := make([]byte, 5)
+	if _, err := io.ReadFull(out, linie); err != nil || string(linie) != "gata\n" {
+		t.Fatalf("copilul nu a luat blocarea: %q %v", linie, err)
+	}
+	return cmd
+}
+
+// tineBlocarea ia blocarea reală (alt descriptor de fișier, deci intră în
+// conflict cu cea a lui blocheaza) și întoarce funcția care o eliberează.
+func tineBlocarea(t *testing.T, o Optiuni) func() {
+	t.Helper()
+	if err := os.MkdirAll(o.DirCache, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	f, ok, err := incearcaBlocare(filepath.Join(o.DirCache, numeBlocare))
+	if err != nil || !ok {
+		t.Fatalf("nu pot lua blocarea: %v %v", ok, err)
+	}
+	var o1 sync.Once
+	return func() { o1.Do(func() { f.Close() }) }
+}
+
+// Blocarea ținută de un proces viu (alt proces) se așteaptă; când procesul
+// moare, sistemul de operare o eliberează și descărcarea merge imediat.
 func TestBlocareProcesMort(t *testing.T) {
 	s := nouServer(t)
 	o := optiuni(t, s)
-	os.MkdirAll(o.DirCache, 0o755)
-	// PID-ul unui proces terminat
-	cmd := exec.Command("true")
-	if err := cmd.Run(); err != nil {
-		t.Skip("nu pot porni un proces: ", err)
+	cmd := pornesteCopilCuBlocare(t, o)
+	ctx, stop := context.WithTimeout(context.Background(), 600*time.Millisecond)
+	if _, err := Asigura(ctx, o); err == nil {
+		t.Fatal("blocarea procesului viu trebuia așteptată")
 	}
-	os.WriteFile(filepath.Join(o.DirCache, numeBlocare), []byte(fmt.Sprintf("%d\n", cmd.Process.Pid)), 0o644)
-	ctx, stop := context.WithTimeout(context.Background(), 10*time.Second)
+	stop()
+	if s.cereri.Load() != 0 {
+		t.Fatal("nu trebuia nicio cerere cât blocarea e ținută")
+	}
+	cmd.Process.Kill()
+	cmd.Wait()
+	ctx, stop = context.WithTimeout(context.Background(), 10*time.Second)
 	defer stop()
 	if _, err := Asigura(ctx, o); err != nil {
 		t.Fatalf("blocarea procesului mort trebuia preluată: %v", err)
 	}
+	arataBaza(t, o.CaleBaza)
+}
+
+// Fișierul de blocare rămâne pe disc după eliberare și nu mai blochează pe nimeni.
+func TestBlocareFisierulRamane(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	if _, err := Asigura(context.Background(), o); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := os.Stat(filepath.Join(o.DirCache, numeBlocare)); err != nil {
+		t.Fatalf("fișierul de blocare trebuia să rămână: %v", err)
+	}
+	if _, err := Actualizeaza(context.Background(), o, true); err != nil {
+		t.Fatal(err)
+	}
+}
+
+// Două actualizări nefortate pornite aproape deodată: a doua, după ce primește
+// blocarea, vede pauza scrisă de prima și nu mai face cerere.
+func TestActualizareConcurentaOCerere(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	importaManual(t, o, ultimaModificare.Add(-30*24*time.Hour))
+	fix := ultimaModificare.Add(30 * 24 * time.Hour)
+	o.Acum = func() time.Time { return fix }
+	elibereaza := tineBlocarea(t, o) // ambele trec de verificarea dinainte de blocare
+	var wg sync.WaitGroup
+	for i := 0; i < 2; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			if _, err := Actualizeaza(context.Background(), o, false); err != nil {
+				t.Error(err)
+			}
+		}()
+	}
+	time.Sleep(500 * time.Millisecond)
+	elibereaza()
+	wg.Wait()
+	if n := s.cereri.Load(); n != 1 {
+		t.Fatalf("cereri: %d, vrut exact 1", n)
+	}
+}
+
+// După un 503 baza lipsește tot: Asigura nu reia descărcarea în pauză, dar
+// AsiguraAcum o face; după o oră, Asigura încearcă din nou.
+func TestAsiguraRespectaPauza(t *testing.T) {
+	var cereri atomic.Int32
+	var bun atomic.Bool
+	corp := exportGz(t)
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		cereri.Add(1)
+		if !bun.Load() {
+			http.Error(w, "nu", http.StatusServiceUnavailable)
+			return
+		}
+		w.Write(corp)
+	}))
+	defer srv.Close()
+	t0 := time.Date(2026, 10, 1, 12, 0, 0, 0, time.UTC)
+	now := t0
+	o := Optiuni{CaleBaza: filepath.Join(t.TempDir(), "dex.sqlite"), DirCache: t.TempDir(), URL: srv.URL,
+		Acum: func() time.Time { return now }}
+	ctx := context.Background()
+	if _, err := Asigura(ctx, o); err == nil {
+		t.Fatal("503 trebuie să dea eroare")
+	}
+	now = t0.Add(10 * time.Minute)
+	_, err := Asigura(ctx, o)
+	if err == nil || !strings.Contains(err.Error(), "10 minute") || !strings.Contains(err.Error(), "romana import") {
+		t.Fatalf("eroare de pauză așteptată, am primit: %v", err)
+	}
+	if cereri.Load() != 1 {
+		t.Fatalf("cereri: %d, vrut 1 (pauză)", cereri.Load())
+	}
+	if _, err := AsiguraAcum(ctx, o); err == nil || cereri.Load() != 2 {
+		t.Fatalf("AsiguraAcum trebuia să facă cererea: %v, cereri %d", err, cereri.Load())
+	}
+	bun.Store(true)
+	now = t0.Add(3 * time.Hour)
+	if _, err := Asigura(ctx, o); err != nil {
+		t.Fatalf("după o oră trebuia să încerce din nou: %v", err)
+	}
+	if cereri.Load() != 3 {
+		t.Fatalf("cereri: %d, vrut 3", cereri.Load())
+	}
+	arataBaza(t, o.CaleBaza)
 }
 
 // Dacă doar mutarea exportului în cache eșuează, starea (ETag) se scrie totuși.
@@ -647,17 +794,14 @@ func TestDeVerificatBlocareSiOffline(t *testing.T) {
 		t.Fatal("bază veche: e de verificat")
 	}
 	os.MkdirAll(o.DirCache, 0o755)
-	blocare := filepath.Join(o.DirCache, numeBlocare)
-	if err := os.WriteFile(blocare, []byte(fmt.Sprintf("%d\n", os.Getpid())), 0o644); err != nil {
-		t.Fatal(err)
-	}
-	if err := os.Chtimes(blocare, o.Acum(), o.Acum()); err != nil {
-		t.Fatal(err)
-	}
+	elibereaza := tineBlocarea(t, o)
 	if DeVerificat(o) {
 		t.Fatal("blocare vie: nu e de verificat")
 	}
-	os.Remove(blocare)
+	elibereaza()
+	if !DeVerificat(o) {
+		t.Fatal("blocare eliberată: e de verificat")
+	}
 	o.Offline = true
 	if DeVerificat(o) {
 		t.Fatal("offline: nu e de verificat")

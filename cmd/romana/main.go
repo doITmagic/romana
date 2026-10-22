@@ -388,7 +388,7 @@ func cmdImport(ctx context.Context, o optiuni, out, errOut io.Writer) int {
 		fmt.Fprintf(errOut, "romana: %v; dă un fișier: romana import <dex-database.sql.gz>\n", baza.ErrOffline)
 		return 1
 	}
-	cale, err := baza.Asigura(ctx, bo)
+	cale, err := baza.AsiguraAcum(ctx, bo)
 	if err != nil {
 		fmt.Fprintf(errOut, "romana: %v\n", err)
 		return 1
