@@ -51,4 +51,22 @@ func TestBazaReala(t *testing.T) {
 	if !doom3 {
 		t.Errorf("dejivra trebuie atestată de DOOM 3: %+v", r.Leme)
 	}
+	// regula DOOM 3: lexeme_source sau definiție cu cuvântul-titlu egal cu lema
+	for forma, want := range map[string]bool{
+		"vroi": false, "degivra": false, "vrea": true, "casă": true, "dejivra": true, "sumariza": false,
+	} {
+		r, err := d.Cauta(ctx, forma)
+		if err != nil {
+			t.Fatal(err)
+		}
+		got := false
+		for _, l := range r.Leme {
+			if Cheie(l.Forma) == Cheie(forma) {
+				got = got || l.Doom3
+			}
+		}
+		if got != want {
+			t.Errorf("Doom3(%s) = %v; aștept %v (%+v)", forma, got, want, r.Leme)
+		}
+	}
 }
