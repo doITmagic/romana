@@ -90,6 +90,12 @@ Regulile generale contra românei englezite sunt în fișierele lor, nu aici:
 - De ce: Originalul pune o întrebare retorică, mijloc expresiv pe care îl are și româna. O transformi în afirmație doar dacă registrul nu admite întrebări retorice (text juridic, administrativ, mesaje de sistem); altfel pierzi tonul autorului. Nici nu o calchiezi cuvânt cu cuvânt.
 - Sursă: recomandare a skillului, fără normă
 
+### RO-CAL-507 „A funcționa pentru cineva” (engl. „to work for”)
+- Nivel: recomandare
+- Greșit: „Dieta asta nu funcționează pentru oricine.” → Corect: „Dieta asta nu i se potrivește oricui.”
+- De ce: DEX ’98 dă pentru „a funcționa” sensul „a-și îndeplini funcția, rolul”, despre un mecanism, o instituție sau o metodă: „Liftul funcționează”, „Metoda funcționează”. Sensul englezesc „a fi potrivit cuiva, a da rezultate pentru cineva” nu e înregistrat. După context spui „a se potrivi”, „a merge la”, „a da rezultate”. „Metoda funcționează”, fără „pentru cineva”, rămâne corect.
+- Sursă: DEX ’98 s.v. funcționa
+
 ### RO-CAL-042 Sensul din frază, nu primul echivalent din dicționar
 - Nivel: recomandare
 - Greșit: „Comitetul a rezolvat să amâne decizia.” → Corect: „Comitetul a hotărât să amâne decizia.”

@@ -245,9 +245,9 @@ Formele de mai jos par repetiții, dar sunt corecte; le tratează pe larg [ce-nu
 - Sursă: DEX ’98 s.v. doar, numai; E. Grosu, „Pleonasmele: persuadare și eroare”, 2003, p. 204
 
 ### RO-SEM-247 Mijloace mass-media
-- Nivel: normă
+- Nivel: recomandare
 - Greșit: „Campania a fost promovată prin toate mijloacele mass-media.” → Corect: „Campania a fost promovată prin toate mijloacele de comunicare în masă.”
-- De ce: „Mass-media” înseamnă „totalitatea mijloacelor de informare a maselor” (DEX ’98), deci „mijloace mass-media” înseamnă „mijloacele mijloacelor”. Spui „mass-media”, „presa” sau „mijloacele de comunicare în masă”. Acordul lui „mass-media” este la RO-GRA-060 din [gramatica.md](gramatica.md).
+- De ce: „Mass-media” înseamnă „totalitatea mijloacelor de informare a maselor” (DEX ’98), deci „mijloace mass-media” repetă ideea. Repetarea e ascunsă într-un cuvânt împrumutat, pe care vorbitorul obișnuit nu-l descompune, iar construcția e curentă: e pleonasm latent, pe care îl propui, nu îl corectezi. Propui „mass-media”, „presa” sau „mijloacele de comunicare în masă”. Acordul lui „mass-media” este la RO-GRA-060 din [gramatica.md](gramatica.md).
 - Sursă: DEX ’98 s.v. mass-media; DSL, s.v. PLEONASM
 
 ### RO-SEM-248 Acum doi ani în urmă

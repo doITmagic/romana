@@ -264,14 +264,14 @@ Bun:
 
 ### RO-STI-001 „Faptul că” acolo unde ajunge „că”
 - Nivel: recomandare
-- Greșit: „Amintim faptul că hotărârea a fost publicată.” → Corect: „Amintim că hotărârea a fost publicată.”
+- Greșit: „Precizăm faptul că termenul a fost prelungit.” → Corect: „Precizăm că termenul a fost prelungit.”
 - De ce: „Faptul că” rămâne necesar unde verbul cere prepoziție („se referă la faptul că”, RO-GRA-039). Unde nu cere, „că” ajunge.
 - Sursă: Mic ghid CE p. 7 (Rec. 4); DOOM 3, §6.4.2
 
 ### RO-STI-002 „În cadrul” și „la nivelul” unde ajung „în” și „la”
 - Nivel: recomandare
 - Greșit: „profesor în cadrul Universității” → Corect: „profesor la Universitate”
-- De ce: Ghidul gov-md cere să eviți folosirea excesivă a lui „în cadrul” și „la nivelul” în locul lui „în” și „la”: „Dezbaterea se organizează la minister”, nu „la nivelul ministerului”. Ghidul CE dă și „în cadrul” → „în”. Fiecare cu rostul lui: „la nivelul orașului” rămâne când înseamnă „pe plan local”.
+- De ce: Ghidul gov-md cere să eviți folosirea excesivă a lui „în cadrul” și „la nivelul” în locul lui „în” și „la”: „Seminarul se ține la primărie”, nu „la nivelul primăriei”. Ghidul CE dă și „în cadrul” → „în”. Fiecare cu rostul lui: „la nivelul orașului” rămâne când înseamnă „pe plan local”.
 - Sursă: ghid gov-md §7.1.7; Mic ghid CE p. 7 (Rec. 4)
 
 ### RO-STI-014 Formule de umplutură cu corespondent mai scurt

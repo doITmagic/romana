@@ -393,10 +393,10 @@ Un calc de expresie traduce fiecare cuvânt al unei îmbinări fixe din altă li
 - De ce: Formula traduce cuvânt cu cuvânt engl. „I hope this email finds you well”. Formula românească apropiată, „Să te găsesc sănătos!”, o spune un om la despărțire (DEX ’96 s.v. găsi); un mesaj nu „găsește” pe nimeni. Un e-mail românesc începe de obicei cu salutul și trece repede la scop. Formulele de e-mail sunt în [tipuri/email.md](tipuri/email.md).
 - Sursă: DEX ’96 s.v. găsi
 
-### RO-CAL-105 Posesivul care traduce engl. „your”
+### RO-CAL-105 Posesivul care traduce engl. „your”, „my”
 - Nivel: recomandare
 - Greșit: „Introduceți parola dumneavoastră și apăsați «Conectare».” → Corect: „Introduceți parola și apăsați «Conectare».”
-- De ce: Engleza pune posesivul aproape peste tot („your password”, „your phone”). În română, substantivul articulat arată de obicei singur a cui e lucrul, când posesorul e limpede din context: „Conectați telefonul”, „Introduceți parola”. Forma cu „dumneavoastră” e gramaticală (și Mic ghid CE o folosește: „documentului dumneavoastră”), dar greoaie, de aceea o propui scurtată. Posesivul rămâne când face un contrast sau când lipsa lui ar crea echivoc („parola dumneavoastră, nu cea a administratorului”). Dativul posesiv pus lângă un posesiv („Salvați-vă munca dumneavoastră”) e tratat la RO-SEM-216 din [paronime-si-pleonasme.md](paronime-si-pleonasme.md).
+- De ce: Engleza pune posesivul aproape peste tot („your password”, „your phone”). În română, substantivul articulat arată de obicei singur a cui e lucrul, când posesorul e limpede din context: „Conectați telefonul”, „Introduceți parola”. Forma cu „dumneavoastră” e gramaticală (și Mic ghid CE o folosește: „documentului dumneavoastră”), dar greoaie, de aceea o propui scurtată. Posesivul rămâne când face un contrast sau când lipsa lui ar crea echivoc („parola dumneavoastră, nu cea a administratorului”). La persoana I e la fel: pentru „I moved my office” scrii „Mi-am mutat biroul”, cu dativul posesiv, sau „Am mutat biroul”, nu „Am mutat biroul meu”. Dativul posesiv pus lângă un posesiv („Salvați-vă munca dumneavoastră”) e tratat la RO-SEM-216 din [paronime-si-pleonasme.md](paronime-si-pleonasme.md).
 - Sursă: observație de stil, fără normă; posesivul explicit e gramatical
 
 ## Adjectivele compuse englezești

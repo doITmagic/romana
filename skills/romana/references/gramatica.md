@@ -159,13 +159,13 @@ Bun:
 ### RO-GRA-018 Articolul genitival se acordă cu ce e posedat
 - Nivel: normă
 - Greșit: „un caiet a meu” → Corect: „un caiet al meu”
-- De ce: Articolul se acordă în gen și număr cu substantivul determinat: „un caiet al meu”, „doi frați ai mamei”, „două rapoarte ale echipei”. Cazul „indicele de răspândire al virusului” e tratat la RO-GRA-019. Genitivul cu „a” înaintea unui numeral sau a unui cuantificator invariabil („votul a doi senatori”) e corect și nu se corectează (RO-NUG-024); greșit e „a” înaintea unui cuantificator care are formă proprie de genitiv (RO-GRA-183).
+- De ce: Articolul se acordă în gen și număr cu substantivul determinat: „un caiet al meu”, „doi frați ai mamei”, „două rapoarte ale echipei”. Cazul „gradul de poluare al râului” e tratat la RO-GRA-019. Genitivul cu „a” înaintea unui numeral sau a unui cuantificator invariabil („votul a doi senatori”) e corect și nu se corectează (RO-NUG-024); greșit e „a” înaintea unui cuantificator care are formă proprie de genitiv (RO-GRA-183).
 - Sursă: ghid gov-md §7.3.15; DSL, s.v. ACORD; DOOM 3, s.v. meu1 („un prieten al meu”)
 
 ### RO-GRA-019 Substantiv + de + substantiv + genitiv
 - Nivel: normă
-- Greșit: „indicele de răspândire al virusului” → Corect: „indicele de răspândire a virusului”
-- De ce: Dacă genitivul ține, ca sens, de al doilea substantiv („răspândirea virusului”), articolul se acordă cu acela. Dacă ambele substantive determină același genitiv, articolul se acordă cu primul („termenul de valabilitate al semnăturii”). Decizi după sens, întrebând „al cui?” pentru fiecare substantiv. DOOM 3 spune „se recomandă”, dar dă forma cu „al” cu asterisc, ca greșită.
+- Greșit: „gradul de poluare al râului” → Corect: „gradul de poluare a râului”
+- De ce: Dacă genitivul ține, ca sens, de al doilea substantiv („poluarea râului”), articolul se acordă cu acela. Dacă ambele substantive determină același genitiv, articolul se acordă cu primul („termenul de valabilitate al semnăturii”). Decizi după sens, întrebând „al cui?” pentru fiecare substantiv. DOOM 3 spune „se recomandă”, dar dă forma cu „al” cu asterisc, ca greșită.
 - Sursă: ghid gov-md §7.3.15; DOOM 3, §6.8.11
 
 ### RO-GRA-020 „Unei prietene a mele”
@@ -220,7 +220,7 @@ Bun:
 
 ### Metoda
 
-Verifici rolul lui „care” în propoziția pe care o introduce. Dacă e subiect („cartea care mi-a plăcut”), nu primește „pe”. Dacă e complement direct, primește „pe” și verbul are un pronume de reluare (-o, -l, -i, -le): „cartea pe care am citit-o”. Dacă e posesor, intră în construcția „al cărui, a cărei, ai căror, ale căror”, cu acord încrucișat.
+Verifici rolul lui „care” în propoziția pe care o introduce. Dacă e subiect („cartea care mi-a plăcut”), nu primește „pe”. Dacă e complement direct, primește „pe” și verbul are un pronume de reluare (-o, -l, -i, -le): „filmul pe care l-am văzut”. Dacă e posesor, intră în construcția „al cărui, a cărei, ai căror, ale căror”, cu acord încrucișat.
 
 Slab:
 
@@ -300,8 +300,8 @@ Bun:
 
 ### RO-GRA-036 „Din punct de vedere” / „din punctul de vedere”
 - Nivel: normă
-- Greșit: „din punct de vedere al statisticii” → Corect: „din punctul de vedere al statisticii”
-- De ce: Înaintea unui adjectiv, substantivul rămâne nearticulat („din punct de vedere statistic”); înaintea unui genitiv, se articulează („din punctul de vedere al statisticii”). Forma „din punct de vedere al/a” e greșită oriunde.
+- Greșit: „din punct de vedere al costurilor” → Corect: „din punctul de vedere al costurilor”
+- De ce: Înaintea unui adjectiv, substantivul rămâne nearticulat („din punct de vedere financiar”); înaintea unui genitiv, se articulează („din punctul de vedere al costurilor”). Forma „din punct de vedere al/a” e greșită oriunde.
 - Sursă: DOOM 3, §6.3.5; ghid gov-md §7.1.4
 
 ### RO-GRA-037 „Șef de secție”
@@ -366,8 +366,8 @@ Corelativele au două părți și se folosesc întregi: „fie… fie”, „nic
 
 ### RO-GRA-046 Corelativul stă înaintea fiecărui element coordonat
 - Nivel: recomandare
-- Greșit: „Se va desfășura fie în sistem clasic, fie online.” → Corect: „Se va desfășura în sistem fie clasic, fie online.”
-- De ce: Corelativul stă la același nivel înaintea fiecărui element. Când primul element include prepoziția, o poți lăsa înaintea corelativului dacă repeți și prepoziția la al doilea: „fie în sistem clasic, fie în sistem online”. Ce nu faci e să amesteci nivelurile.
+- Greșit: „Ședința se ține fie în format fizic, fie online.” → Corect: „Ședința se ține în format fie fizic, fie online.”
+- De ce: Corelativul stă la același nivel înaintea fiecărui element. Când primul element include prepoziția, o poți lăsa înaintea corelativului dacă repeți și prepoziția la al doilea: „fie în format fizic, fie în format online”. Ce nu faci e să amesteci nivelurile.
 - Sursă: DOOM 3, §6.4.3
 
 ### RO-GRA-047 „Decât” restrictiv cere negație
@@ -486,8 +486,8 @@ Bun:
 
 ### RO-GRA-149 Subiectul nearticulat dintr-un mesaj cu verb
 - Nivel: recomandare
-- Greșit: „Utilizator a fost șters.” → Corect: „Utilizatorul a fost șters.”
-- De ce: Într-o propoziție cu verb, subiectul care numește un referent anume se articulează enclitic, spre deosebire de engleză, unde „User was deleted” e uzual. Etichetele, titlurile și capetele de tabel fără verb pot rămâne nearticulate („Fișier salvat”), afară de cazul în care urmează un genitiv sau acordul cere articol. Același lucru pentru „the function” → „funcția”. Nici Coteanu, nici manualul aprobat nu interzic subiectul nearticulat: îl descriu ca pe o alegere (la sens general: „Copii citesc”), de aceea rămâne recomandare. Acordul unui termen luat dintr-un glosar cu fraza în care intră e tratat în RO-FID-010 din [fidelitate.md](fidelitate.md).
+- Greșit: „Fișier a fost mutat.” → Corect: „Fișierul a fost mutat.”
+- De ce: Într-o propoziție cu verb, subiectul care numește un referent anume se articulează enclitic, spre deosebire de engleză, unde „File was moved” e uzual. Etichetele, titlurile și capetele de tabel fără verb pot rămâne nearticulate („Fișier salvat”), afară de cazul în care urmează un genitiv sau acordul cere articol. Același lucru pentru „the function” → „funcția”. Nici Coteanu, nici manualul aprobat nu interzic subiectul nearticulat: îl descriu ca pe o alegere (la sens general: „Copii citesc”), de aceea rămâne recomandare. Acordul unui termen luat dintr-un glosar cu fraza în care intră e tratat în RO-FID-010 din [fidelitate.md](fidelitate.md).
 - Sursă: Coteanu, §11.10; Gramatica aplicată a limbii române, cls. a IX-a, EDP, 2026, p. 64 (alegerea articulării depinde de situația de comunicare); DSL (substantivul singular apare rar nearticulat în română)
 
 ### RO-GRA-150 Substantive alăturate după model englezesc
@@ -550,8 +550,8 @@ Bun:
 
 ### RO-GRA-067 „Voiam”, nu „vroiam”
 - Nivel: normă
-- Greșit: „Vroiam să plec mai devreme.” → Corect: „Voiam să plec mai devreme.”
-- De ce: Imperfectul verbului „a voi” e „voiam”, „voiai”, „voia”; formele cu „r” sunt contaminare între „a voi” și „a vrea”. DOOM 3 spune explicit că nu sunt acceptate de normă („imperf. 1 (fam.) vroiam; literar: voiam”, §6.9.6). DEX ’98 dă „vroi” ca variantă a lui „a vrea”, dar pentru formă are prioritate DOOM 3. În citatul direct „vroiam” rămâne neatins (vezi RO-FID-001 din [fidelitate.md](fidelitate.md) și RO-NUG-039).
+- Greșit: „Vroiam să sun la bancă.” → Corect: „Voiam să sun la bancă.”
+- De ce: Imperfectul verbului „a voi” e „voiam”, „voiai”, „voia”; formele cu „r” sunt contaminare între „a voi” și „a vrea”. DOOM 3 spune explicit că nu sunt acceptate de normă: „vroiam” e familiar, iar forma literară e „voiam” (§6.9.6). DEX ’98 dă „vroi” ca variantă a lui „a vrea”, dar pentru formă are prioritate DOOM 3. În citatul direct „vroiam” rămâne neatins (vezi RO-FID-001 din [fidelitate.md](fidelitate.md) și RO-NUG-039).
 - Sursă: DOOM 3, Observații și recomandări §6.9.6; B. Croitor et al., 2014, p. 41; DEX ’98 s.v. vrea (Var. vroi)
 
 ### RO-GRA-068 „Precedă”
@@ -636,11 +636,11 @@ Pentru perechile care se aud la fel (s-a / sa, v-a / va, l-a / la, ne-am / neam,
 
 Slab:
 
-> Guvernul sa întrunit âncă o dată, intrun cadru restrâns. Nu a găsit nici un motiv de neântelegere.
+> Comisia sa reunit âncă o dată, intrun cadru restrâns. Nu a găsit nici un motiv de neântelegere.
 
 Bun:
 
-> Guvernul s-a întrunit încă o dată, într-un cadru restrâns. Nu a găsit niciun motiv de neînțelegere.
+> Comisia s-a reunit încă o dată, într-un cadru restrâns. Nu a găsit niciun motiv de neînțelegere.
 
 ### RO-GRA-074 „Î” la început și la sfârșit, „â” în interior
 - Nivel: normă
@@ -674,7 +674,7 @@ Bun:
 
 ### RO-GRA-081 „S-a” / „sa”, „v-a” / „va”, „l-a” / „la”, „ne-am” / „neam”, „s-au” / „sau”
 - Nivel: normă
-- Greșit: „Guvernul sa întrunit.” → Corect: „Guvernul s-a întrunit.”
+- Greșit: „Comisia sa reunit.” → Corect: „Comisia s-a reunit.”
 - De ce: Formele cu cratimă sunt pronume + auxiliar („s-a întrunit”, „v-a spus”, „l-a văzut”, „s-au întâlnit”); formele fără cratimă sunt cuvinte de sine stătătoare („casa sa”, „va pleca”, „la școală”, „sau”). Proba cu persoana: „guvernele s-au întrunit”, „eu voi cânta” (deci „Ea va cânta mâine”, nu „Ea v-a cânta”). Fiecare formă e corectă în sine; greșeala se vede doar din rolul ei în frază. „Va” urmat de participiu e corect („va fi plecat”).
 - Sursă: DEX ’98 s.v. său, s-a; ghid gov-md §6.2.3
 

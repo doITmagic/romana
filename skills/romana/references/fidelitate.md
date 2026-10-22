@@ -43,7 +43,7 @@ Rămân neatinse:
 
 - codul, comenzile, numele de fișiere, adresele web, ancorele și structura de marcare a textului (titluri, liste, tabele);
 - cifrele, datele, numele proprii și termenii definiți în text;
-- citatele (în ele corectezi doar tipografia: ghilimelele, diacriticele lipsă sau cu sedilă; grafia veche cu „î”, ca în „sînt”, rămâne);
+- citatele (în ele corectezi doar tipografia: ghilimelele, diacriticele lipsă sau cu sedilă, majusculele, cratima și spațiile; grafia veche cu „î”, ca în „sînt”, rămâne);
 - calificativele care restrâng o afirmație („de regulă”, „cu excepția”, „numai dacă”, „în măsura în care”);
 - partea care nu e în română, într-un text amestecat: lucrezi doar la partea în română.
 
@@ -77,8 +77,8 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 
 ### RO-FID-001 Forme populare din gura vorbitorului: citatul rămâne sau devine vorbire indirectă
 - Nivel: normă
-- Greșit: „«Voiam să plec mai devreme», a spus martorul.” → Corect: „«Vroiam să plec mai devreme», a spus martorul.”
-- De ce: În exemplu, sursa spune „vroiam”, iar varianta greșită a „reparat-o” în „voiam”. Citatul reproduce cuvintele vorbitorului, inclusiv formele populare sau nestandard („vroiam”, „plus că”, un „decât” afirmativ, o frază începută și lăsată neterminată). Norma se aplică textului tău, nu citatului. Dacă nu ești sigur cum a sunat exact fraza, treci la vorbirea indirectă („Martorul a spus că voia să plece mai devreme”), care îți dă voie să folosești forma standard. DEX ’98 înregistrează „vroi” ca variantă a lui „vrea”, dar DOOM 3 (§6.9.6) nu acceptă „vroiam” în normă (fam.; literar: „voiam”): în textul tău e greșeală de normă (RO-GRA-067 din [gramatica.md](gramatica.md)), iar în citat rămâne totuși, prin fidelitate.
+- Greșit: „«Voiam să ies la timp», a spus martorul.” → Corect: „«Vroiam să ies la timp», a spus martorul.”
+- De ce: În exemplu, sursa spune „vroiam”, iar varianta greșită a „reparat-o” în „voiam”. Citatul reproduce cuvintele vorbitorului, inclusiv formele populare sau nestandard („vroiam”, „plus că”, un „decât” afirmativ, o frază începută și lăsată neterminată). Norma se aplică textului tău, nu citatului. Dacă nu ești sigur cum a sunat exact fraza, treci la vorbirea indirectă („Martorul a spus că voia să iasă la timp”), care îți dă voie să folosești forma standard. DEX ’98 înregistrează „vroi” ca variantă a lui „vrea”, dar DOOM 3 (§6.9.6) nu acceptă „vroiam” în normă (fam.; literar: „voiam”): în textul tău e greșeală de normă (RO-GRA-067 din [gramatica.md](gramatica.md)), iar în citat rămâne totuși, prin fidelitate.
 - Sursă: regulă de fidelitate a skillului; ghid gov-md §9.8.1; DEX ’98 s.v. vroi; DOOM 3, Observații și recomandări §6.9.6
 
 ### RO-FID-003 Pasivul din original rămâne pasiv când agentul lipsește
@@ -119,8 +119,8 @@ La traducere, originalul e sursa și singura referință. Întâi afli ce afirm�
 
 ### RO-FID-010 Traducerea se acordă gramatical cu fraza în care intră
 - Nivel: normă
-- Greșit: „Contul Utilizator a fost șters.” → Corect: „Contul utilizatorului a fost șters.”
-- De ce: Un termen luat dintr-un glosar sau dintr-o listă apare în forma de dicționar, dar în frază are rol, caz și număr. Traducerea înseamnă și acordul: articolul, cazul, genul, pluralul. Un termen lăsat în forma de bază ca să nu fie „atins” produce o frază agramată. Articularea subiectului dintr-un mesaj cu verb („Utilizatorul a fost șters”, nu „Utilizator a fost șters”) e RO-GRA-149 din [gramatica.md](gramatica.md).
+- Greșit: „Profilul Client a fost actualizat.” → Corect: „Profilul clientului a fost actualizat.”
+- De ce: Un termen luat dintr-un glosar sau dintr-o listă apare în forma de dicționar, dar în frază are rol, caz și număr. Traducerea înseamnă și acordul: articolul, cazul, genul, pluralul. Un termen lăsat în forma de bază ca să nu fie „atins” produce o frază agramată. Articularea subiectului dintr-un mesaj cu verb („Fișierul a fost mutat”, nu „Fișier a fost mutat”) e RO-GRA-149 din [gramatica.md](gramatica.md).
 - Sursă: regulă de fidelitate a skillului
 
 ### RO-FID-011 O etapă a procesului nu se înlocuiește cu alta

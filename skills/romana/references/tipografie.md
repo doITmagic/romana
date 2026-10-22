@@ -8,8 +8,8 @@ Tipografia e ultima trecere din ordinea de lucru (vezi SKILL.md). O verifici dup
 
 - **La redactare** scrii direct formele corecte; regulile de aici le folosești la recitirea ciornei.
 - **În corectură** corectezi ce e normă și propui ce e recomandare. Un text corect rămâne neschimbat.
-- **În verificare** raportezi fiecare abatere cu nivelul ei. Unde sursele se contrazic (nivelul „disputat”), nu alegi tu o variantă: ceri doar ca alegerea să fie aceeași în tot textul.
-- **Citatul direct** păstrează cuvintele sursei. În citat corectezi doar tipografia: ghilimelele, diacriticele lipsă sau cu sedilă, spațiile. Grafia veche cu „î” („sînt”, „cînd”) rămâne.
+- **În verificare** raportezi fiecare abatere cu nivelul ei. Unde sursele se contrazic (nivelul „disputat”), nu alegi tu o variantă: raportezi cazul cu cele două uzuri, ca în SKILL.md, iar la redactare păstrezi aceeași alegere în tot textul.
+- **Citatul direct** păstrează cuvintele sursei. În citat corectezi doar tipografia: ghilimelele, diacriticele lipsă sau cu sedilă, majusculele, cratima și spațiile. Grafia veche cu „î” („sînt”, „cînd”) rămâne.
 - **Înainte să corectezi, verifici lista „ce nu e greșeală”** din [ce-nu-e-greseala.md](ce-nu-e-greseala.md): linia de pauză, ghilimelele «…», apostroful, punctul-și-virgula, „de ex.”, bara oblică, „totuși” cu sau fără virgule sunt forme corecte.
 
 Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepic și morfologic al limbii române*, ed. a III-a, Academia Română, 2021; ÎOOP6 = *Îndreptar ortografic, ortoepic, morfologic și de punctuație*, ed. a VI-a, Academia Română, 2024; ghid gov-md = *Ghid de redactare lingvistică și tehnoredactare a actelor normative*, Cancelaria de Stat a Republicii Moldova, 2026; Ghid UE = *Ghidul de redactare interinstituțional* al Oficiului pentru Publicații al Uniunii Europene, partea în limba română (convenții ale actelor UE, nu normă generală); IER = Institutul European din România, *Ghid stilistic de traducere în limba română pentru uzul traducătorilor acquis-ului comunitar*, ed. a V-a, 2008 (practică de traducere juridică, nu normă pentru presă); INJ = *Corectitudine lingvistică în actele judecătorești*, Institutul Național al Justiției, Chișinău, 2020; B. Croitor et al. = B. Croitor et al., *Ești cool și dacă vorbești corect*, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”, 2014; Legea 290/2018 = legea privind denumirile localităților din România. Mențiunea „(nereverificat local)” arată că trimiterea la capitol, paragraf sau pagină n-a putut fi verificată pe text local.
@@ -158,7 +158,7 @@ Bun:
 ### RO-TIP-009 Compartimentele unei instituții: doar primul cuvânt cu majusculă
 - Nivel: normă
 - Greșit: „Direcția de Studii Economice” → Corect: „Direcția de studii economice”
-- De ce: Organele de conducere și subdiviziunile din interiorul unei instituții (direcție, secție, serviciu, comisie permanentă) se scriu cu majusculă doar la primul cuvânt: „Direcția de studii economice”. DOOM 3 §3.1 I.3.1 admite și varianta „Direcția Studii economice” (cu două majuscule): nu o corectezi. Forma cu o singură majusculă este cea de bază; „Consiliul de administrație” e dat tot acolo. Excepție: în actele UE, direcțiile generale ale organismelor europene iau majusculă la fiecare cuvânt plin: „Direcția Generală pentru Agricultură și Dezvoltare Rurală” (ÎOOP6 p. 82). Instituția de sine stătătoare, cu personalitate juridică, rămâne la RO-TIP-005.
+- De ce: Organele de conducere și subdiviziunile din interiorul unei instituții (direcție, secție, serviciu, comisie permanentă) se scriu cu majusculă doar la primul cuvânt: „Direcția de studii economice”. DOOM 3 §3.1 I.3.1 admite și varianta „Direcția Studii economice” (cu două majuscule): nu o corectezi. Forma cu o singură majusculă este cea de bază; „Consiliul de administrație” e dat tot acolo. Excepție: în actele UE, direcțiile generale ale organismelor europene iau majusculă la fiecare cuvânt plin: „Direcția Generală pentru Rețele și Transport” (exemplu inventat; regula e la ÎOOP6 p. 82). Instituția de sine stătătoare, cu personalitate juridică, rămâne la RO-TIP-005.
 - Sursă: ghid gov-md §4.1.7.3; DOOM 3 §3.1 I.3.1; ÎOOP6 p. 82
 
 ### RO-TIP-085 Instituțiile străine traduse iau majusculă la cuvintele pline
@@ -220,8 +220,8 @@ Bun:
 
 ### RO-TIP-014 Termenul generic dinaintea unui nume geografic: literă mică
 - Nivel: normă
-- Greșit: „Fluviul Dunărea, pe Strada Lipscani” → Corect: „fluviul Dunărea, pe strada Lipscani”
-- De ce: Cuvântul generic (fluviul, județul, strada, munții) rămâne cu literă mică atunci când nu face parte din nume, adică atunci când e urmat de un nume propriu la nominativ: „județul Cluj”, „munții Carpați”, „bulevardul Grigore Vieru”. Când e urmat de un substantiv la genitiv, de un adjectiv sau de un numeral, face parte din nume și se scrie cu majusculă: „Strada Morii”, „Aleea Castanilor” (RO-TIP-015). În indicarea adresei, pe hărți și pe plăcuțe indicatoare termenul generic se scrie însă cu majusculă (RO-TIP-015).
+- Greșit: „Excursia trece prin Județul Tulcea, de-a lungul Fluviului Dunărea.” → Corect: „Excursia trece prin județul Tulcea, de-a lungul fluviului Dunărea.”
+- De ce: Cuvântul generic (fluviul, județul, strada, munții) rămâne cu literă mică atunci când nu face parte din nume, adică atunci când e urmat de un nume propriu la nominativ: „județul Cluj”, „munții Carpați”, „bulevardul Grigore Vieru”. Când e urmat de un substantiv la genitiv, de un adjectiv sau de un numeral, face parte din nume și se scrie cu majusculă: „Strada Morii”, „Aleea Castanilor” (RO-TIP-015). În indicarea adresei, pe hărți și pe plăcuțe indicatoare termenul generic se scrie însă cu majusculă (RO-TIP-015), deci „Strada Lipscani nr. 5” dintr-o adresă nu se corectează.
 - Sursă: ghid gov-md §4.2.1.7; DOOM 3 §3.2 II.2.7
 
 ### RO-TIP-015 Termenul generic care face parte din nume are majusculă

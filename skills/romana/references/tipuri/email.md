@@ -30,7 +30,7 @@ Abrevierile din câmpul „Sursă”: DOOM 3 = *Dicționarul ortografic, ortoepi
 ### RO-STI-754 După formula de adresare, textul începe cu majusculă
 - Nivel: normă
 - Greșit: „Stimată doamnă, vă scriu pentru a confirma programarea.” → Corect: „Stimată doamnă, Vă scriu pentru a confirma programarea.”
-- De ce: În corespondență, cuvântul cu care începe primul enunț după formula de adresare se scrie cu majusculă, deși urmează după virgulă. Regula e în DOOM 3 și în ÎOOP: după virgulă se scrie cu literă mică, „cu excepția cazului când virgula este pusă după o formulă de adresare în cereri, scrisori etc.”. Salutul informal dintr-un mesaj scurt („Bună,”, „Salut,”) nu e formula de adresare a unei scrisori; acolo litera mică nu se corectează. Pe rând nou, majuscula apare oricum.
+- De ce: În corespondență, cuvântul cu care începe primul enunț după formula de adresare se scrie cu majusculă, deși urmează după virgulă. Regula e în DOOM 3 și în ÎOOP: după virgulă se scrie de regulă cu literă mică, dar formula de adresare dintr-o scrisoare sau dintr-o cerere face excepție. Salutul informal dintr-un mesaj scurt („Bună,”, „Salut,”) nu e formula de adresare a unei scrisori; acolo litera mică nu se corectează. Pe rând nou, majuscula apare oricum.
 - Sursă: DOOM 3, §1.2.5; ÎOOP6, p. 83; ghid gov-md §4.1.4 și §4.1.11.2
 
 ### RO-STI-753 Majuscula de politețe în corespondența oficială

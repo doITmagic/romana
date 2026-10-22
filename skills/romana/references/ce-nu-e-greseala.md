@@ -23,7 +23,7 @@ Abrevierile din câmpul „Sursă”: DSL = A. Bidu-Vrănceanu et al., *Dicțion
 
 ### RO-NUG-006 „Îmi cer scuze”
 - Nivel: ce nu e greșeală
-- Corect: „Îmi cer scuze pentru întârziere.” Nu corectezi în „vă cer scuze” sau în „vă rog să mă scuzați”.
+- Corect: „Îmi cer scuze pentru greșeală.” Nu corectezi în „vă cer scuze” sau în „vă rog să mă scuzați”.
 - De ce: Regula falsă: „îmi cer scuze” ar însemna că vorbitorul își cere scuze sieși. DEX ’98 dă expresia „a cere scuze”, adică „a-și exprima părerea de rău pentru o greșeală”. Pronumele „îmi” arată, ca în „îmi cer iertare”, că vorbitorul e cel care face gestul, nu cel căruia i se adresează scuzele.
 - Sursă: DEX ’98 s.v. scuză
 
@@ -437,7 +437,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-061 Ordinea subiect, verb, complement
 - Nivel: ce nu e greșeală
-- Corect: „Echipa a terminat raportul joi.” Nu muți subiectul după verb ca fraza să sune „mai românește”.
+- Corect: „Firma a livrat comanda luni.” Nu muți subiectul după verb ca fraza să sune „mai românește”.
 - De ce: Regula falsă: fiindcă româna are o topică liberă, ordinea subiect, verb, complement ar fi copiată din engleză. Topica ei e doar relativ liberă, cu o ordine obiectivă, socotită normală, și o ordine subiectivă, aleasă pentru efect (DSL). Ordinea subiect, verb, complement e o ordine normală și nu e semn de traducere. Semnele de traducere sunt altele: clișeele, ritmul uniform, topica limbii sursă (vezi [gramatica.md](gramatica.md)).
 - Sursă: DSL, s.v. TOPICĂ
 
@@ -479,13 +479,13 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 
 ### RO-NUG-039 Citatul direct
 - Nivel: ce nu e greșeală
-- Corect: „«Vroiam să plec mai devreme», a spus martorul.” În citat nu corectezi „vroiam”, „plus că” sau un „decât” afirmativ; corectezi doar tipografia (ghilimelele, diacriticele lipsă sau cu sedilă); grafia veche cu „î” („sînt”, „cînd”) rămâne neschimbată.
+- Corect: „«Vroiam să ies la timp», a spus martorul.” În citat nu corectezi „vroiam”, „plus că” sau un „decât” afirmativ; corectezi doar tipografia (ghilimelele, diacriticele lipsă sau cu sedilă, majusculele, cratima și spațiile); grafia veche cu „î” („sînt”, „cînd”) rămâne neschimbată.
 - De ce: Regula falsă: orice formă care nu e standard ar trebui corectată, oriunde ar apărea. Citatul direct păstrează cuvintele vorbitorului, inclusiv topica lui și formele populare; dacă le schimbi, citatul nu mai e exact. Același lucru e valabil pentru un cuvânt pomenit ca exemplu („forma «sînt» a ieșit din normă”).
 - Sursă: ghid gov-md §9.8.1
 
 ### RO-NUG-054 Numele proprii în grafia purtătorului
 - Nivel: ce nu e greșeală
-- Corect: „Poezia lui Topîrceanu a fost reeditată.” La fel: „Coseriu”, „Hasdeu”. Nu aplici regula lui „â” și nu adaugi diacritice acolo unde purtătorul le omite.
+- Corect: „Am recitit fabulele lui Topîrceanu.” La fel: „Coseriu”, „Hasdeu”. Nu aplici regula lui „â” și nu adaugi diacritice acolo unde purtătorul le omite.
 - De ce: Regula falsă: regulile de ortografie (â în interiorul cuvântului, diacriticele obligatorii) s-ar aplica și numelor de persoane. Numele de persoane se scriu cum le scrie purtătorul, după actul de identitate sau după tradiția familiei; numele străine își păstrează diacriticele lor, iar unele nume de familie omit deliberat diacriticele (Coseriu, Hasdeu).
 - Sursă: ghid gov-md §2.1.2 și §2.1.4
 
@@ -566,7 +566,7 @@ Un pleonasm repetă un sens fără să adauge informație (vezi [paronime-si-ple
 ### RO-NUG-115 Virgula înaintea condiționalei și a cauzalei
 - Nivel: ce nu e greșeală
 - Corect: „Puteți salva documentul ca PDF, dacă aveți nevoie de o copie tipărită.” La fel de corect: „Nu se poate salva, deoarece fișierul lipsește.” Nu scoți virgula; fără virgulă e corect când arăți că e singura condiție sau când virgula ar schimba sensul.
-- De ce: Regula falsă: o subordonată pusă după regentă n-ar primi niciodată virgulă. Cauzala și condiționala se despart de obicei prin virgulă, oriunde ar sta. Fără virgulă rămân când autorul vrea să arate că e singura cauză sau singura condiție, ori când virgula ar schimba sensul: „Nu plâng pentru că mi-e frică” (plâng, dar din alt motiv) față de „Nu plâng, pentru că mi-e frică”.
+- De ce: Regula falsă: o subordonată pusă după regentă n-ar primi niciodată virgulă. Cauzala și condiționala se despart de obicei prin virgulă, oriunde ar sta. Fără virgulă rămân când autorul vrea să arate că e singura cauză sau singura condiție, ori când virgula ar schimba sensul: „Nu vin pentru că plouă” (vin, dar din alt motiv) față de „Nu vin, pentru că plouă”.
 - Sursă: ghid gov-md §9.2.2.9 și §9.2.2.10; ÎOOP6 p. 61
 
 ### RO-NUG-031 „De” după numeral: contează ultimele două cifre
