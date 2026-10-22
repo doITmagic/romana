@@ -1,7 +1,7 @@
 # Testul de independență (spec §4.1): imaginea conține doar repo-ul.
 # Fără ~/romana-privat, fără materialul de lucru, fără dinlume, fără credențiale.
-# Versiunea Go corespunde cu `go 1.25` din go.mod, fixată exact.
-FROM golang:1.25.1-bookworm
+# Versiunea Go corespunde cu `go 1.26.0` din go.mod, fixată exact.
+FROM golang:1.26.0-bookworm
 
 ENV GOTOOLCHAIN=local \
     GOFLAGS=-mod=readonly \

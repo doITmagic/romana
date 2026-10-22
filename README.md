@@ -104,7 +104,7 @@ On first use, `romana cauta`, `romana verifica` and `romana mcp` download the di
 - Updates are checked at most once a week; `romana update` checks now.
 - Database path: `--db`, then `$ROMANA_DEX`, then `~/.local/share/romana/dex.sqlite`.
 
-The plugin declares the MCP server and the hook, so they start once the binary is on `PATH`. Without the plugin, register the server by hand:
+The plugin declares the MCP server (`.mcp.json`) and the hook (`hooks/hooks.json`), so they start once the binary is on `PATH`. Both are only for Claude Code; Codex reads neither, so register the server there by hand (below). The hook does not run on Windows, which has no `sh`. Without the plugin, register the server by hand:
 
 ```
 claude mcp add romana -- romana mcp
