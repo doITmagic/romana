@@ -202,34 +202,45 @@ func (d *Dictionar) lema(ctx context.Context, id int64) (Lema, error) {
 	if err != nil {
 		return l, err
 	}
-	// sursele care atestă lema: prin LexemeSource sau prin definițiile intrărilor ei
+	// sursele care atestă lema: legate de ea în lexeme_source sau cu o definiție
+	// al cărei cuvânt-titlu e chiar lema. Intrarea comună cu alt cuvânt nu ajunge,
+	// iar lista poate rămâne goală: e mai bine decât o sursă care nu atestă lema.
 	rows, err := d.db.QueryContext(ctx, `
-SELECT id, short_name FROM source WHERE id IN (
-  SELECT source_id FROM lexeme_source WHERE lexeme_id = ?
-  UNION
-  SELECT d.source_id FROM entry_lexeme el
-    JOIN entry_definition ed ON ed.entry_id = el.entry_id
-    JOIN definition d ON d.id = ed.definition_id
-    WHERE el.lexeme_id = ?) ORDER BY id`, id, id)
+SELECT s.id, s.short_name, NULL, 1 FROM lexeme_source ls JOIN source s ON s.id = ls.source_id WHERE ls.lexeme_id = ?
+UNION ALL
+SELECT s.id, s.short_name, d.lexicon, 0 FROM entry_lexeme el
+  JOIN entry_definition ed ON ed.entry_id = el.entry_id
+  JOIN definition d ON d.id = ed.definition_id
+  JOIN source s ON s.id = d.source_id
+  WHERE el.lexeme_id = ?
+ORDER BY 1`, id, id)
 	if err != nil {
 		return l, err
 	}
+	potrivite := []string{}
+	vazut := map[string]bool{}
 	for rows.Next() {
 		var sid int64
 		var nume string
-		if err := rows.Scan(&sid, &nume); err != nil {
+		var lexicon sql.NullString // NULL pe rândurile din lexeme_source
+		var dinLegatura int
+		if err := rows.Scan(&sid, &nume, &lexicon, &dinLegatura); err != nil {
 			rows.Close()
 			return l, err
 		}
-		l.Surse = append(l.Surse, nume)
+		if (dinLegatura == 1 || titluLemei(lexicon.String, l.Forma)) && !vazut[nume] {
+			vazut[nume] = true
+			potrivite = append(potrivite, nume)
+		}
 	}
 	if err := rows.Close(); err != nil {
 		return l, err
 	}
+	l.Surse = potrivite
 	if l.Doom3, err = d.atestataDoom3(ctx, id, l.Forma); err != nil {
 		return l, err
 	}
-	if l.Definitii, err = d.definitiiAfisabile(ctx, id); err != nil {
+	if l.Definitii, err = d.definitiiAfisabile(ctx, id, l.Forma); err != nil {
 		return l, err
 	}
 	rows, err = d.db.QueryContext(ctx, `SELECT f.norm, COALESCE(i.description, ''), f.recommended, f.variant
@@ -271,19 +282,26 @@ func (d *Dictionar) atestataDoom3(ctx context.Context, id int64, forma string) (
 		return false, err
 	}
 	defer rows.Close()
-	tinta, cheieTinta := Normalizeaza(forma), Cheie(forma)
 	for rows.Next() {
 		var lexicon sql.NullString
 		if err := rows.Scan(&lexicon); err != nil {
 			return false, err
 		}
-		// și după cheie: exportul are cuvinte-titlu DOOM 3 fără diacritice
-		// sau cratimă („alba-neagra” pentru „albă-neagră”)
-		if Normalizeaza(lexicon.String) == tinta || Cheie(lexicon.String) == cheieTinta {
+		if titluLemei(lexicon.String, forma) {
 			return true, nil
 		}
 	}
 	return false, rows.Err()
+}
+
+// titluLemei: cuvântul-titlu al unei definiții (lexicon) e chiar lema, comparat
+// normalizat sau redus la cheie, pentru că exportul are și cuvinte-titlu fără
+// diacritice sau cratimă („alba-neagra” pentru „albă-neagră”).
+func titluLemei(lexicon, forma string) bool {
+	if lexicon == "" {
+		return false
+	}
+	return Normalizeaza(lexicon) == Normalizeaza(forma) || Cheie(lexicon) == Cheie(forma)
 }
 
 // filtruLicenta: singurul loc din pachet în care se hotărăște ce text de
@@ -292,10 +310,12 @@ func (d *Dictionar) atestataDoom3(ctx context.Context, id int64, forma string) (
 const filtruLicenta = "s.can_distribute = 1 AND d.text IS NOT NULL"
 
 // definitiiAfisabile: definițiile lemei care se pot afișa (doar surse cu
-// can_distribute = 1), fără dubluri.
-func (d *Dictionar) definitiiAfisabile(ctx context.Context, lexemeID int64) ([]Definitie, error) {
+// can_distribute = 1), fără dubluri. Dacă unele au cuvântul-titlu egal cu
+// lema, rămân doar acelea: „vroi” nu primește definiția lui „vrea” din
+// intrarea comună, ci doar trimiterea „VROI vb. IV v. vrea”.
+func (d *Dictionar) definitiiAfisabile(ctx context.Context, lexemeID int64, forma string) ([]Definitie, error) {
 	rows, err := d.db.QueryContext(ctx, `
-SELECT s.short_name, d.text FROM entry_lexeme el
+SELECT s.short_name, d.text, COALESCE(d.lexicon, '') FROM entry_lexeme el
   JOIN entry_definition ed ON ed.entry_id = el.entry_id
   JOIN definition d ON d.id = ed.definition_id
   JOIN source s ON s.id = d.source_id
@@ -305,16 +325,26 @@ GROUP BY d.id ORDER BY s.id, min(ed.rank), d.id`, lexemeID)
 		return nil, err
 	}
 	defer rows.Close()
-	rez := []Definitie{}
+	toate, potrivite := []Definitie{}, []Definitie{}
 	for rows.Next() {
 		var df Definitie
-		if err := rows.Scan(&df.Sursa, &df.Text); err != nil {
+		var lexicon string
+		if err := rows.Scan(&df.Sursa, &df.Text, &lexicon); err != nil {
 			return nil, err
 		}
 		df.Text = textCurat(df.Text)
-		rez = append(rez, df)
+		toate = append(toate, df)
+		if titluLemei(lexicon, forma) {
+			potrivite = append(potrivite, df)
+		}
 	}
-	return rez, rows.Err()
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	if len(potrivite) > 0 {
+		return potrivite, nil
+	}
+	return toate, nil
 }
 
 // lemaFaraLexem alcătuiește o lemă (ID 0) din cuvântul-titlu al definițiilor

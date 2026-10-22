@@ -415,3 +415,33 @@ func TestScriereAtomica(t *testing.T) {
 		d.Close()
 	}
 }
+
+// Sursele unei leme sunt doar cele care o atestă pe ea, nu toate sursele
+// intrării comune: „sumariza” împarte intrarea cu definiția DOOM 3 a lui „sumă”.
+func TestSurseDoarAleLemei(t *testing.T) {
+	d, _ := importaTest(t, true)
+	ctx := context.Background()
+	for cautat, w := range map[string]struct {
+		lema string
+		doom bool
+	}{"sumariza": {"sumariza", false}, "casa": {"casă", true}, "dejivra": {"dejivra", true}} {
+		r, err := d.Cauta(ctx, cautat)
+		if err != nil {
+			t.Fatal(err)
+		}
+		for _, l := range r.Leme {
+			if l.Forma != w.lema {
+				continue
+			}
+			are := false
+			for _, s := range l.Surse {
+				if s == "DOOM 3" {
+					are = true
+				}
+			}
+			if are != w.doom || are != l.Doom3 {
+				t.Errorf("%s: DOOM 3 în surse = %v, Doom3 = %v; aștept %v", w.lema, are, l.Doom3, w.doom)
+			}
+		}
+	}
+}
