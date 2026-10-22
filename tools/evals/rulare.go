@@ -145,9 +145,10 @@ func Prompt(c Caz) string {
 // Cele două brațe au același ambalaj: aceleași unelte (Read, în plus Skill cu
 // skill), ieșire stream-json (se vede dacă skill-ul a pornit), același efort,
 // director temporar gol, nicio setare a utilizatorului (--setting-sources ""),
-// niciun server MCP, nicio sesiune salvată pe disc. Singura diferență e pluginul: „fără skill” adaugă
-// --disable-slash-commands (oprește skill-urile), „cu skill” adaugă
-// --plugin-dir spre repo.
+// niciun server MCP, în afară de «romana» dacă brațul MCP e cerut (vezi
+// ArgsClaudeMCP), nicio sesiune salvată pe disc. Singura diferență e pluginul:
+// „fără skill” adaugă --disable-slash-commands (oprește skill-urile), „cu
+// skill” adaugă --plugin-dir spre repo.
 func ArgsClaude(m Motor, cuSkill bool, repo string) []string {
 	a := []string{"-p", "--model", m.Model}
 	if m.Efort != "" {
