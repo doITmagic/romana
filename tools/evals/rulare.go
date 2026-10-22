@@ -170,7 +170,7 @@ func ArgsCodex(m Motor) []string {
 	if m.Efort != "" {
 		a = append(a, "-c", `model_reasoning_effort="`+m.Efort+`"`)
 	}
-	return append(a, "--ignore-rules", "--ephemeral", "-s", "read-only", "-")
+	return append(a, "--ignore-rules", "--ephemeral", "-s", "read-only", "--json", "-")
 }
 
 // AuthCodex întoarce calea auth.json a utilizatorului ($CODEX_HOME sau ~/.codex).
@@ -319,6 +319,15 @@ type IesireStream struct {
 	Text   string
 	Pornit bool     // skill-ul „romana” a fost invocat
 	Skills []string // skill-urile din evenimentul system/init
+	Tokeni *Tokeni  // consumul raportat de motor; nil dacă lipsește
+}
+
+// Tokeni este consumul unei rulări, cum îl raportează motorul: Intrare include
+// și partea citită din cache (Cache), Iesire e textul generat.
+type Tokeni struct {
+	Intrare int `json:"intrare"`
+	Cache   int `json:"cache"`
+	Iesire  int `json:"iesire"`
 }
 
 // ParseClaudeStream citește ieșirea stream-json: textul final, dacă a fost
@@ -338,6 +347,12 @@ func ParseClaudeStream(brut string) (IesireStream, error) {
 			Result  string          `json:"result"`
 			IsError bool            `json:"is_error"`
 			Skills  json.RawMessage `json:"skills"`
+			Usage   *struct {
+				Input       int `json:"input_tokens"`
+				CacheCreate int `json:"cache_creation_input_tokens"`
+				CacheRead   int `json:"cache_read_input_tokens"`
+				Output      int `json:"output_tokens"`
+			} `json:"usage"`
 			Message struct {
 				Content json.RawMessage `json:"content"`
 			} `json:"message"`
@@ -368,12 +383,76 @@ func ParseClaudeStream(brut string) (IesireStream, error) {
 		case "result":
 			gasitRezultat = true
 			o.Text, err = rezultat(ev.Result, ev.IsError)
+			if u := ev.Usage; u != nil {
+				o.Tokeni = &Tokeni{Intrare: u.Input + u.CacheCreate + u.CacheRead, Cache: u.CacheRead, Iesire: u.Output}
+			}
 		}
 	}
 	if !gasitRezultat && err == nil {
 		err = fmt.Errorf("claude: stream fără eveniment „result”")
 	}
 	return o, err
+}
+
+// ParseCodexJSON citește ieșirea `codex exec --json`: textul e ultimul
+// agent_message, consumul vine din turn.completed, iar skillul „romana” e
+// socotit pornit dacă vreo comandă rulată de Codex i-a citit SKILL.md.
+// cunoscut e fals când ieșirea nu are evenimente JSON (o versiune fără
+// --json); atunci textul e ieșirea întreagă.
+func ParseCodexJSON(brut string) (o IesireStream, cunoscut bool, err error) {
+	gasitMesaj := false
+	for _, linie := range strings.Split(brut, "\n") {
+		linie = strings.TrimSpace(linie)
+		if linie == "" || linie[0] != '{' {
+			continue
+		}
+		var ev struct {
+			Type  string          `json:"type"`
+			Item  json.RawMessage `json:"item"`
+			Usage *struct {
+				Input  int `json:"input_tokens"`
+				Cached int `json:"cached_input_tokens"`
+				Output int `json:"output_tokens"`
+			} `json:"usage"`
+		}
+		if json.Unmarshal([]byte(linie), &ev) != nil || ev.Type == "" {
+			continue
+		}
+		cunoscut = true
+		switch ev.Type {
+		case "item.started", "item.completed":
+			var it struct {
+				Type string `json:"type"`
+				Text string `json:"text"`
+			}
+			if json.Unmarshal(ev.Item, &it) != nil {
+				continue
+			}
+			if it.Type == "agent_message" {
+				if ev.Type == "item.completed" {
+					o.Text, gasitMesaj = strings.TrimSpace(it.Text), true
+				}
+			} else if strings.Contains(string(ev.Item), "romana/SKILL.md") {
+				o.Pornit = true
+			}
+		case "turn.completed":
+			if u := ev.Usage; u != nil {
+				if o.Tokeni == nil {
+					o.Tokeni = &Tokeni{}
+				}
+				o.Tokeni.Intrare += u.Input
+				o.Tokeni.Cache += u.Cached
+				o.Tokeni.Iesire += u.Output
+			}
+		}
+	}
+	if !cunoscut {
+		return IesireStream{Text: strings.TrimSpace(brut)}, false, nil
+	}
+	if !gasitMesaj {
+		return o, true, fmt.Errorf("codex: evenimente fără agent_message")
+	}
+	return o, true, nil
 }
 
 // RadacinaRepo caută în sus, de la dir, rădăcina repo-ului (are skills/romana/SKILL.md).
@@ -474,7 +553,7 @@ func RuleazaCu(ctx context.Context, ex Executor, repo string, c Caz, motor Motor
 			return r, err
 		}
 		o, err := ParseClaudeStream(brut)
-		r.Iesire, r.Pornit, r.Skills, r.PornitCunoscut = o.Text, o.Pornit, o.Skills, true
+		r.Iesire, r.Pornit, r.Skills, r.PornitCunoscut, r.Tokeni = o.Text, o.Pornit, o.Skills, true, o.Tokeni
 		if err != nil {
 			return r, err
 		}
@@ -487,7 +566,11 @@ func RuleazaCu(ctx context.Context, ex Executor, repo string, c Caz, motor Motor
 		if err != nil {
 			return r, err
 		}
-		r.Iesire = strings.TrimSpace(brut)
+		o, cunoscut, err := ParseCodexJSON(brut)
+		r.Iesire, r.Pornit, r.PornitCunoscut, r.Tokeni = o.Text, o.Pornit, cunoscut, o.Tokeni
+		if err != nil {
+			return r, err
+		}
 	default:
 		return r, fmt.Errorf("motor necunoscut %q", motor.Nume)
 	}

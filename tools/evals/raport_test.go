@@ -142,3 +142,19 @@ func TestPragFPSiFidelitate(t *testing.T) {
 		t.Errorf("4 cazuri < minim: %+v", x)
 	}
 }
+
+func TestRaportTokeni(t *testing.T) {
+	cazuri := []Caz{{ID: "curat-presa-01"}, {ID: "curat-presa-02"}}
+	var rulari []Rulare
+	for i, id := range []string{"curat-presa-01", "curat-presa-02"} {
+		f := rul(id, false, 0, Nota{Fidelitate: true})
+		f.Rezultat = Rezultat{Tokeni: &Tokeni{Intrare: 1000, Iesire: 100}}
+		c := rul(id, true, 0, Nota{Fidelitate: true})
+		c.Rezultat = Rezultat{Tokeni: &Tokeni{Intrare: 30000 + 2000*i, Cache: 20000, Iesire: 300}}
+		rulari = append(rulari, f, c)
+	}
+	r := RaportMarkdown(cazuri, rulari, Meta{})
+	if !strings.Contains(r, "### Consum") || !strings.Contains(r, "| claude | 1.000 / 31.000 | 100 / 300 | 2 / 2 |") {
+		t.Errorf("\n%s", r)
+	}
+}

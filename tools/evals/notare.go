@@ -23,6 +23,10 @@ type Rezultat struct {
 
 	// Judecata este nota judecătorului LLM, doar la redactare (nil în rest).
 	Judecata *Judecata `json:"judecata,omitempty"`
+
+	// Tokeni e consumul rulării principale (fără judecător), cum îl raportează
+	// motorul; nil dacă motorul nu-l dă.
+	Tokeni *Tokeni `json:"tokeni,omitempty"`
 }
 
 // Judecata este verdictul judecătorului pentru un text redactat, după lista

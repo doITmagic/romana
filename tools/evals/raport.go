@@ -389,10 +389,61 @@ func RaportMarkdown(cazuri []Caz, rulari []Rulare, meta Meta) string {
 		}
 		b.WriteString("\n")
 	}
+	scrieConsum(&b, ix, cazuri)
 	b.WriteString("### Prag de reușită\n\n| Motor | Criteriu | Verdict | Detaliu |\n|---|---|---|---|\n")
 	for _, v := range Prag(cazuri, rulari) {
 		fmt.Fprintf(&b, "| %s | %s | %s | %s |\n", v.Motor, v.Criteriu, v.Verdict, v.Detaliu)
 	}
 	b.WriteString("\n")
 	return b.String()
+}
+
+// scrieConsum adaugă media tokenilor pe rulare, fără și cu skill, din rulările
+// valide care au consumul raportat. Fără niciun consum raportat nu scrie nimic.
+func scrieConsum(b *strings.Builder, ix index, cazuri []Caz) {
+	type suma struct{ intrare, iesire, n int }
+	var randuri []string
+	for _, m := range ix.motoare {
+		var s [2]suma
+		for _, c := range cazuri {
+			for i, cu := range []bool{false, true} {
+				for _, r := range ix.rulari[cheieCaz{m, c.ID, cu}] {
+					if r.Valida() && r.Rezultat.Tokeni != nil {
+						s[i].intrare += r.Rezultat.Tokeni.Intrare
+						s[i].iesire += r.Rezultat.Tokeni.Iesire
+						s[i].n++
+					}
+				}
+			}
+		}
+		if s[0].n+s[1].n == 0 {
+			continue
+		}
+		medie := func(x, n int) string {
+			if n == 0 {
+				return "–"
+			}
+			return fmtMii((x + n/2) / n)
+		}
+		randuri = append(randuri, fmt.Sprintf("| %s | %s / %s | %s / %s | %d / %d |", m,
+			medie(s[0].intrare, s[0].n), medie(s[1].intrare, s[1].n),
+			medie(s[0].iesire, s[0].n), medie(s[1].iesire, s[1].n), s[0].n, s[1].n))
+	}
+	if len(randuri) == 0 {
+		return
+	}
+	b.WriteString("### Consum\n\nTokeni medii pe rulare, „fără skill / cu skill”, fără judecător. Intrarea include partea citită din cache.\n\n| Motor | Intrare | Ieșire | Rulări |\n|---|---|---|---|\n")
+	for _, r := range randuri {
+		b.WriteString(r + "\n")
+	}
+	b.WriteString("\n")
+}
+
+// fmtMii scrie un întreg cu punct între grupele de mii: 31000 → „31.000”.
+func fmtMii(n int) string {
+	s := fmt.Sprint(n)
+	for i := len(s) - 3; i > 0; i -= 3 {
+		s = s[:i] + "." + s[i:]
+	}
+	return s
 }

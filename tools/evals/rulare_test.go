@@ -32,7 +32,7 @@ func TestArgsClaude(t *testing.T) {
 
 func TestArgsCodex(t *testing.T) {
 	a := ArgsCodex(Motor{"codex", "gpt-6.1-sol", "high"})
-	vrem := []string{"exec", "-m", "gpt-6.1-sol", "-c", `model_reasoning_effort="high"`, "--ignore-rules", "--ephemeral", "-s", "read-only", "-"}
+	vrem := []string{"exec", "-m", "gpt-6.1-sol", "-c", `model_reasoning_effort="high"`, "--ignore-rules", "--ephemeral", "-s", "read-only", "--json", "-"}
 	if !reflect.DeepEqual(a, vrem) {
 		t.Errorf("%q", a)
 	}
@@ -339,5 +339,48 @@ func TestPromptCorecturaPropuneri(t *testing.T) {
 	}
 	if len(stdin) != 2 || stdin[0] != stdin[1] || stdin[0] != p {
 		t.Errorf("cererea diferă între brațe: %q", stdin)
+	}
+}
+
+func TestParseCodexJSON(t *testing.T) {
+	brut := `{"type":"thread.started","thread_id":"x"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"command_execution","command":"bash -lc 'sed -n 1,200p .agents/skills/romana/SKILL.md'","exit_code":0}}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"o ciornă"}}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"[[TEXT]]Bună.[[/TEXT]]"}}
+{"type":"turn.completed","usage":{"input_tokens":20301,"cached_input_tokens":12288,"output_tokens":6,"reasoning_output_tokens":0}}`
+	o, cunoscut, err := ParseCodexJSON(brut)
+	if err != nil || !cunoscut {
+		t.Fatalf("%v %v", cunoscut, err)
+	}
+	if o.Text != "[[TEXT]]Bună.[[/TEXT]]" || !o.Pornit {
+		t.Errorf("%+v", o)
+	}
+	if o.Tokeni == nil || o.Tokeni.Intrare != 20301 || o.Tokeni.Cache != 12288 || o.Tokeni.Iesire != 6 {
+		t.Errorf("tokeni: %+v", o.Tokeni)
+	}
+	// Fără comandă care citește skillul: nepornit.
+	o, _, _ = ParseCodexJSON(`{"type":"item.completed","item":{"type":"agent_message","text":"gata"}}`)
+	if o.Pornit || o.Text != "gata" {
+		t.Errorf("%+v", o)
+	}
+	// Ieșire fără evenimente (versiune veche): textul rămâne, pornirea e necunoscută.
+	o, cunoscut, err = ParseCodexJSON(" text simplu \n")
+	if err != nil || cunoscut || o.Text != "text simplu" {
+		t.Errorf("%+v %v %v", o, cunoscut, err)
+	}
+	// Evenimente fără mesaj final: eroare.
+	if _, _, err := ParseCodexJSON(`{"type":"turn.completed","usage":{"input_tokens":1}}`); err == nil {
+		t.Error("așteptam eroare fără agent_message")
+	}
+}
+
+func TestParseClaudeStreamTokeni(t *testing.T) {
+	o, err := ParseClaudeStream(`{"type":"result","result":"ok","usage":{"input_tokens":10,"cache_creation_input_tokens":200,"cache_read_input_tokens":3000,"output_tokens":40}}`)
+	if err != nil || o.Tokeni == nil {
+		t.Fatalf("%+v %v", o, err)
+	}
+	if o.Tokeni.Intrare != 3210 || o.Tokeni.Cache != 3000 || o.Tokeni.Iesire != 40 {
+		t.Errorf("%+v", o.Tokeni)
 	}
 }
