@@ -300,10 +300,47 @@ func limitaCitat(fragment string) int { return 3*lung(fragment) + 40 }
 // nu e prea lung față de fragment și nu acoperă aproape toată intrarea (decât
 // dacă și fragmentul e cam cât intrarea).
 func citatPrinde(q, nf, intrare string) bool {
+	if lung(q) < 3 {
+		return citatScurtPrinde(q, nf, intrare)
+	}
 	if lung(q) > limitaCitat(nf) || !potrivire(q, nf) {
 		return false
 	}
 	return !(lung(q)*10 > lung(intrare)*7 && lung(nf)*2 < lung(intrare))
+}
+
+// citatScurtPrinde: un citat de sub 3 caractere („el”, „si”) prinde fragmentul
+// doar dacă e un cuvânt din el și toate aparițiile lui ca un cuvânt în intrare
+// cad în aparițiile fragmentului; altfel nu se știe la ce loc trimite.
+func citatScurtPrinde(q, nf, intrare string) bool {
+	if q == "" || len(apareCuvant(nf, q)) == 0 {
+		return false
+	}
+	var zone [][2]int
+	for off := 0; off <= len(intrare); {
+		k := strings.Index(intrare[off:], nf)
+		if k < 0 {
+			break
+		}
+		zone = append(zone, [2]int{off + k, off + k + len(nf)})
+		off += k + 1
+	}
+	if len(zone) == 0 {
+		return false
+	}
+	for _, p := range apareCuvant(intrare, q) {
+		inZona := false
+		for _, z := range zone {
+			if p >= z[0] && p+len(q) <= z[1] {
+				inZona = true
+				break
+			}
+		}
+		if !inZona {
+			return false
+		}
+	}
+	return true
 }
 
 func noteazaVerificare(c Caz, r Rezultat, n *Nota) {

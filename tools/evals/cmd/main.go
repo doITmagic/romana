@@ -38,6 +38,7 @@ func run() error {
 		neconf    = flag.Bool("include-neconfirmate", false, "include cazurile neconfirmate în scor")
 		raport    = flag.String("raport", "", "fișierul Markdown cu raportul (implicit: stdout)")
 		brut      = flag.String("brut", "", "fișier JSON cu rulările și ieșirile brute")
+		renoteaza = flag.String("renoteaza", "", "fișier --brut dintr-o rulare anterioară: notează din nou ieșirile salvate, fără rulări noi")
 		flux      = flag.String("flux", os.ExpandEnv("$ROMANA_FLUX"), "flux.json din dinlume, pentru modelul și efortul Codex")
 		paralel   = flag.Int("paralel", 3, "rulări simultane")
 		minute    = flag.Int("minute", 10, "limita de timp pe rulare")
@@ -81,6 +82,14 @@ func run() error {
 	}
 	if len(cazuri) == 0 {
 		return fmt.Errorf("niciun caz de rulat")
+	}
+
+	if *renoteaza != "" {
+		rulari, err := renoteazaBrut(*renoteaza, cazuri)
+		if err != nil {
+			return err
+		}
+		return scrie(rulari, cazuri, *brut, *raport, *judecator, *judecari, *repetari)
 	}
 
 	claude, codex := evals.MotorClaude, evals.MotorCodex
@@ -157,24 +166,59 @@ func run() error {
 	}
 	wg.Wait()
 
+	return scrie(rulari, cazuri, *brut, *raport, *judecator, *judecari, *repetari)
+}
+
+// renoteazaBrut citește rulările salvate cu --brut și le notează din nou cu
+// cazurile și notarea de acum. Rulările cazurilor care nu mai sunt în set se
+// sar; cele căzute își păstrează eroarea.
+func renoteazaBrut(cale string, cazuri []evals.Caz) ([]evals.Rulare, error) {
+	b, err := os.ReadFile(cale)
+	if err != nil {
+		return nil, err
+	}
+	var toate []evals.Rulare
+	if err := json.Unmarshal(b, &toate); err != nil {
+		return nil, fmt.Errorf("%s: %w", cale, err)
+	}
+	ix := map[string]evals.Caz{}
+	for _, c := range cazuri {
+		ix[c.ID] = c
+	}
+	var rulari []evals.Rulare
+	for _, r := range toate {
+		c, ok := ix[r.Caz]
+		if !ok {
+			continue
+		}
+		if r.Eroare == "" {
+			r.Nota = evals.Noteaza(c, r.Rezultat)
+		}
+		rulari = append(rulari, r)
+	}
+	return rulari, nil
+}
+
+// scrie salvează rulările (dacă e cerut --brut) și raportul.
+func scrie(rulari []evals.Rulare, cazuri []evals.Caz, brut, raport, judecator string, judecari, repetari int) error {
 	// Ieșirile brute se scriu primele: o rulare completă costă, iar raportul se
 	// poate reface din ele.
-	if *brut != "" {
+	if brut != "" {
 		b, err := json.MarshalIndent(rulari, "", " ")
 		if err != nil {
 			return err
 		}
-		if err := os.MkdirAll(filepath.Dir(*brut), 0o755); err != nil {
+		if err := os.MkdirAll(filepath.Dir(brut), 0o755); err != nil {
 			return err
 		}
-		if err := os.WriteFile(*brut, b, 0o644); err != nil {
+		if err := os.WriteFile(brut, b, 0o644); err != nil {
 			return err
 		}
 	}
-	md := "# Evals\n\n" + evals.RaportMarkdown(cazuri, rulari, evals.Meta{ModelJudecator: *judecator, Judecari: *judecari, Repetari: *repetari})
-	if *raport == "" {
+	md := "# Evals\n\n" + evals.RaportMarkdown(cazuri, rulari, evals.Meta{ModelJudecator: judecator, Judecari: judecari, Repetari: repetari})
+	if raport == "" {
 		fmt.Print(md)
 		return nil
 	}
-	return os.WriteFile(*raport, []byte(md), 0o644)
+	return os.WriteFile(raport, []byte(md), 0o644)
 }

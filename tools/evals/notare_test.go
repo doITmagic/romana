@@ -360,3 +360,18 @@ func TestCorecturaInserareLaInceputulFragmentului(t *testing.T) {
 		t.Errorf("inserarea după interzis nu trebuie să-l atingă: %+v", n)
 	}
 }
+
+func TestVerificareCitatScurtUnicInFragment(t *testing.T) {
+	c := Caz{ID: "context-x-11", Mod: "verificare",
+		Intrare:  "Ei ascund si alte lucruri despre proiect.",
+		Asteptat: Asteptat{Observatii: []ObsAsteptata{{Fragment: "ascund si", Nivel: "normă", Pilon: "tipografie"}}}}
+	// „si” apare o singură dată, chiar în fragment: citatul scurt îl prinde.
+	if n := Noteaza(c, Rezultat{Iesire: "OBS: „si” → „și”"}); n.Lipsa != 0 || n.FalsPozitive != 0 {
+		t.Errorf("citat scurt, unic, în fragment: %+v", n)
+	}
+	// Dacă „si” apare și în afara fragmentului, citatul scurt e ambiguu și nu prinde.
+	c.Intrare = "Ei ascund si alte lucruri, si nu spun de ce."
+	if n := Noteaza(c, Rezultat{Iesire: "OBS: „si” → „și”"}); n.Lipsa != 1 || n.FalsPozitive != 1 {
+		t.Errorf("citat scurt ambiguu: %+v", n)
+	}
+}
