@@ -11,6 +11,7 @@ import (
 	"os/exec"
 	"path/filepath"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -144,9 +145,10 @@ func Prompt(c Caz) string {
 // Cele două brațe au același ambalaj: aceleași unelte (Read, în plus Skill cu
 // skill), ieșire stream-json (se vede dacă skill-ul a pornit), același efort,
 // director temporar gol, nicio setare a utilizatorului (--setting-sources ""),
-// niciun server MCP, nicio sesiune salvată pe disc. Singura diferență e pluginul: „fără skill” adaugă
-// --disable-slash-commands (oprește skill-urile), „cu skill” adaugă
-// --plugin-dir spre repo.
+// niciun server MCP, în afară de «romana» dacă brațul MCP e cerut (vezi
+// ArgsClaudeMCP), nicio sesiune salvată pe disc. Singura diferență e pluginul:
+// „fără skill” adaugă --disable-slash-commands (oprește skill-urile), „cu
+// skill” adaugă --plugin-dir spre repo.
 func ArgsClaude(m Motor, cuSkill bool, repo string) []string {
 	a := []string{"-p", "--model", m.Model}
 	if m.Efort != "" {
@@ -159,6 +161,51 @@ func ArgsClaude(m Motor, cuSkill bool, repo string) []string {
 		a = append(a, "--disable-slash-commands", "--tools", "Read")
 	}
 	return a
+}
+
+// Uneltele serverului MCP „romana”, așa cum le vede Claude (mcp__<server>__<unealtă>).
+const (
+	UnealtaCauta    = "mcp__romana__cauta_cuvant"
+	UnealtaVerifica = "mcp__romana__verifica_text"
+)
+
+// SufixMCP se adaugă numelui motorului în rapoarte pentru brațul cu skill și MCP.
+const SufixMCP = "+mcp"
+
+// ArgsClaudeMCP sunt argumentele brațului „cu skill + MCP”: cele ale brațului
+// cu skill, plus --mcp-config spre fișierul dat (--strict-mcp-config rămâne,
+// deci alt server nu poate intra) și cele două unelte pe lista permisă.
+func ArgsClaudeMCP(m Motor, repo, cfg string) []string {
+	a := ArgsClaude(m, true, repo)
+	return append(a, "--mcp-config", cfg, "--allowedTools", UnealtaCauta+","+UnealtaVerifica)
+}
+
+// argsServerMCP sunt argumentele cu care brațul MCP pornește `romana`. Serverul
+// rulează mereu fără rețea; baza se dă doar dacă db nu e goală.
+func argsServerMCP(db string) []string {
+	a := []string{"mcp", "--offline"}
+	if db != "" {
+		a = append(a, "--db", db)
+	}
+	return a
+}
+
+// ConfigClaudeMCP întoarce conținutul fișierului pentru --mcp-config.
+func ConfigClaudeMCP(romana, db string) ([]byte, error) {
+	return json.Marshal(map[string]any{"mcpServers": map[string]any{
+		"romana": map[string]any{"command": romana, "args": argsServerMCP(db)},
+	}})
+}
+
+// ScrieConfigCodexMCP scrie în home (CODEX_HOME-ul temporar) config.toml cu
+// serverul MCP „romana”.
+func ScrieConfigCodexMCP(home, romana, db string) error {
+	var args []string
+	for _, a := range argsServerMCP(db) {
+		args = append(args, strconv.Quote(a))
+	}
+	toml := "[mcp_servers.romana]\ncommand = " + strconv.Quote(romana) + "\nargs = [" + strings.Join(args, ", ") + "]\n"
+	return os.WriteFile(filepath.Join(home, "config.toml"), []byte(toml), 0o600)
 }
 
 // ArgsCodex întoarce argumentele pentru `codex exec`; promptul vine pe stdin
@@ -507,6 +554,9 @@ type Optiuni struct {
 	ModelJudecator string // implicit „opus”: altă familie/treaptă decât brațul Sonnet
 	Judecari       int    // câte judecăți pe un text (mediana lor); implicit 3
 	AuthCodex      string // implicit AuthCodex()
+	MCP            bool   // brațul cu skill pornește și serverul `romana mcp` (cere cuSkill)
+	Romana         string // calea binarului romana, obligatorie cu MCP
+	DB             string // baza dex (--db); goală = implicita binarului
 }
 
 func (o Optiuni) cuImplicite() Optiuni {
@@ -544,11 +594,32 @@ func RuleazaCu(ctx context.Context, ex Executor, repo string, c Caz, motor Motor
 	}
 	defer os.RemoveAll(tmp)
 
+	if opt.MCP {
+		if !cuSkill {
+			return Rezultat{}, fmt.Errorf("brațul MCP merge doar cu skill")
+		}
+		if opt.Romana == "" {
+			return Rezultat{}, fmt.Errorf("brațul MCP cere calea binarului romana (--romana)")
+		}
+	}
+
 	var r Rezultat
 	prompt := Prompt(c)
 	switch motor.Nume {
 	case "claude":
-		brut, err := ex(ctx, Comanda{Dir: tmp, Stdin: prompt, Nume: "claude", Arg: ArgsClaude(motor, cuSkill, repo)})
+		args := ArgsClaude(motor, cuSkill, repo)
+		if opt.MCP {
+			cfg, err := ConfigClaudeMCP(opt.Romana, opt.DB)
+			if err != nil {
+				return r, err
+			}
+			cale := filepath.Join(tmp, "mcp.json")
+			if err := os.WriteFile(cale, cfg, 0o600); err != nil {
+				return r, err
+			}
+			args = ArgsClaudeMCP(motor, repo, cale)
+		}
+		brut, err := ex(ctx, Comanda{Dir: tmp, Stdin: prompt, Nume: "claude", Arg: args})
 		if err != nil {
 			return r, err
 		}
@@ -561,6 +632,11 @@ func RuleazaCu(ctx context.Context, ex Executor, repo string, c Caz, motor Motor
 		work, home, err := MediuCodex(ctx, ex, tmp, repo, opt.AuthCodex, cuSkill)
 		if err != nil {
 			return r, err
+		}
+		if opt.MCP {
+			if err := ScrieConfigCodexMCP(home, opt.Romana, opt.DB); err != nil {
+				return r, err
+			}
 		}
 		brut, err := ex(ctx, Comanda{Dir: work, Stdin: prompt, Nume: "codex", Arg: ArgsCodex(motor), Env: []string{"CODEX_HOME=" + home}})
 		if err != nil {

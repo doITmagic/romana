@@ -8,7 +8,9 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"os/exec"
 	"path/filepath"
+	"slices"
 	"strings"
 	"sync"
 	"time"
@@ -45,6 +47,9 @@ func run() error {
 		repetari  = flag.Int("repetari", 1, "câte rulări pe caz și pe braț (raportul arată media și dispersia)")
 		judecator = flag.String("judecator", "opus", "modelul Claude al judecătorului de la redactare")
 		judecari  = flag.Int("judecari", 3, "câte judecăți pe un text (se ia mediana)")
+		mcpF      = flag.Bool("mcp", false, "adaugă brațul „cu skill + MCP” (serverul `romana mcp`); motorul apare în raport ca <motor>+mcp")
+		romanaF   = flag.String("romana", "", "calea binarului romana pentru --mcp (implicit: cel din PATH)")
+		dbF       = flag.String("db", "", "baza dex pentru serverul MCP (implicit: cea a binarului)")
 		dirPub    = flag.String("dir-public", "evals/cazuri", "directorul cu setul public")
 		ids       listaFlag
 	)
@@ -121,6 +126,30 @@ func run() error {
 		variante = []bool{false}
 	}
 
+	romana := *romanaF
+	if *mcpF {
+		if !slices.Contains(variante, true) {
+			return fmt.Errorf("--mcp merge doar cu brațul cu skill; scoate --fara-skill")
+		}
+		if romana == "" {
+			p, err := exec.LookPath("romana")
+			if err != nil {
+				return fmt.Errorf("--mcp: binarul romana nu e în PATH; dă calea cu --romana")
+			}
+			romana = p
+		}
+		abs, err := filepath.Abs(romana)
+		if err != nil {
+			return err
+		}
+		romana = abs
+		if *dbF != "" {
+			if *dbF, err = filepath.Abs(*dbF); err != nil {
+				return err
+			}
+		}
+	}
+
 	repo, err := evals.RadacinaRepo(".")
 	if err != nil {
 		return err
@@ -129,6 +158,7 @@ func run() error {
 		c   evals.Caz
 		m   evals.Motor
 		cu  bool
+		mcp bool
 		rep int
 	}
 	var jobs []job
@@ -136,7 +166,10 @@ func run() error {
 		for _, m := range motoare {
 			for _, cu := range variante {
 				for r := 0; r < *repetari; r++ {
-					jobs = append(jobs, job{c, m, cu, r})
+					jobs = append(jobs, job{c, m, cu, false, r})
+					if cu && *mcpF {
+						jobs = append(jobs, job{c, m, cu, true, r})
+					}
 				}
 			}
 		}
@@ -153,15 +186,20 @@ func run() error {
 			defer func() { <-sem }()
 			ctx, cancel := context.WithTimeout(context.Background(), time.Duration(*minute)*time.Minute)
 			defer cancel()
-			r, err := evals.RuleazaCu(ctx, evals.ExecReal, repo, j.c, j.m, j.cu, opt)
-			ru := evals.Rulare{Caz: j.c.ID, Motor: j.m.Nume, Model: j.m.Model, CuSkill: j.cu, Repetare: j.rep, Rezultat: r}
+			o, nume := opt, j.m.Nume
+			if j.mcp {
+				o.MCP, o.Romana, o.DB = true, romana, *dbF
+				nume += evals.SufixMCP
+			}
+			r, err := evals.RuleazaCu(ctx, evals.ExecReal, repo, j.c, j.m, j.cu, o)
+			ru := evals.Rulare{Caz: j.c.ID, Motor: nume, Model: j.m.Model, CuSkill: j.cu, Repetare: j.rep, Rezultat: r}
 			if err != nil {
 				ru.Eroare = err.Error()
 			} else {
 				ru.Nota = evals.Noteaza(j.c, r)
 			}
 			rulari[i] = ru
-			fmt.Fprintf(os.Stderr, "%s %s skill=%v #%d: %+v %s\n", j.c.ID, j.m.Nume, j.cu, j.rep, ru.Nota, ru.Eroare)
+			fmt.Fprintf(os.Stderr, "%s %s skill=%v #%d: %+v %s\n", j.c.ID, nume, j.cu, j.rep, ru.Nota, ru.Eroare)
 		}()
 	}
 	wg.Wait()
