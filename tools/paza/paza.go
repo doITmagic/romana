@@ -45,6 +45,8 @@ func Verifica(radacina string) ([]Problema, error) {
 			probleme = append(probleme, Problema{rel, "fișier EPUB interzis (cărți și surse nu intră în depozit)"})
 		case ".djvu", ".djv":
 			probleme = append(probleme, Problema{rel, "fișier DjVu interzis (cărți și surse nu intră în depozit)"})
+		case ".sqlite", ".sqlite3", ".db", ".sql", ".gz":
+			probleme = append(probleme, Problema{rel, "bază de date sau export interzis (exportul dexonline și baza construită din el nu se distribuie)"})
 		case ".txt":
 			info, err := d.Info()
 			if err != nil {

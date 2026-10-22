@@ -77,3 +77,22 @@ func TestPazaSareSuperpowers(t *testing.T) {
 		t.Fatalf("nu așteptam probleme: %v", probleme)
 	}
 }
+
+func TestPazaRefuzaBazeDeDate(t *testing.T) {
+	r := t.TempDir()
+	for _, f := range []string{"dex.sqlite", "dex.sqlite3", "x.db", "dex-database.sql", "dex-database.sql.gz"} {
+		scrie(t, r, f, 10)
+	}
+	probleme, err := Verifica(r)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(probleme) != 5 {
+		t.Fatalf("așteptam 5 probleme, am primit %d: %v", len(probleme), probleme)
+	}
+	for _, p := range probleme {
+		if !strings.Contains(p.Motiv, "bază de date") {
+			t.Errorf("%s: motivul %q nu pomenește baza de date", p.Cale, p.Motiv)
+		}
+	}
+}

@@ -5,7 +5,7 @@ Fiecare caz din `evals/cazuri/` are aici sursa, licența, URL-ul și nota de atr
 1. **Texte scrise de noi, sub licența MIT** a repo-ului. Persoanele, firmele, localitățile și cifrele din ele sunt inventate. Nu reprezintă fapte reale și nu trebuie citate ca atare.
 2. **Un text ApTI, sub CC BY 4.0**, păstrat nemodificat, ca extras (`corectura-apti-02`). Alte trei extrase ApTI, din articole ale proiectului „I'll miss you when I scroll” (cofinanțat AFCN), au fost mutate în setul privat. Atribuirea de mai jos este cea cerută de licență.
 
-Textele cu drepturi rezervate (presă, reviste, literatură, texte oficiale cu licență neclară) nu intră în repo. Ele stau doar local, în setul privat (`~/romana-privat/evals-privat/` sau calea din `ROMANA_EVALS_PRIVAT`), nu se redistribuie și nu apar în niciun fișier din repo.
+Textele cu drepturi rezervate (presă, reviste, literatură, texte oficiale cu licență neclară) nu intră în repo. Ele stau doar local, în setul privat, într-un director din afara repo-ului (calea din `ROMANA_EVALS_PRIVAT`), nu se redistribuie și nu apar în niciun fișier din repo.
 
 Toate cazurile au `confirmat: true`. Răzvan a delegat confirmarea unei recenzii făcute de doi recenzenți-model independenți (Codex și Claude Fable). Fiecare a citit textul și răspunsul așteptat al fiecărui caz. Dezacordurile au fost arbitrate cu dovadă din DOOM 3, din ÎOOP și din dicționar, iar cazurile greșite au fost corectate. Un caz nou intră cu `confirmat: false` și e exclus din scor până trece aceeași recenzie.
 

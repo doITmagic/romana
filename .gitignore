@@ -5,3 +5,9 @@
 *.djv
 docs/cercetare/
 CLAUDE.local.md
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.sql.gz
+evals-privat/

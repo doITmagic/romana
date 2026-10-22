@@ -157,18 +157,24 @@ func run() error {
 	}
 	wg.Wait()
 
-	md := "# Evals\n\n" + evals.RaportMarkdown(cazuri, rulari, evals.Meta{ModelJudecator: *judecator, Judecari: *judecari, Repetari: *repetari})
-	if *raport == "" {
-		fmt.Print(md)
-	} else if err := os.WriteFile(*raport, []byte(md), 0o644); err != nil {
-		return err
-	}
+	// Ieșirile brute se scriu primele: o rulare completă costă, iar raportul se
+	// poate reface din ele.
 	if *brut != "" {
-		b, _ := json.MarshalIndent(rulari, "", " ")
+		b, err := json.MarshalIndent(rulari, "", " ")
+		if err != nil {
+			return err
+		}
 		if err := os.MkdirAll(filepath.Dir(*brut), 0o755); err != nil {
 			return err
 		}
-		return os.WriteFile(*brut, b, 0o644)
+		if err := os.WriteFile(*brut, b, 0o644); err != nil {
+			return err
+		}
 	}
-	return nil
+	md := "# Evals\n\n" + evals.RaportMarkdown(cazuri, rulari, evals.Meta{ModelJudecator: *judecator, Judecari: *judecari, Repetari: *repetari})
+	if *raport == "" {
+		fmt.Print(md)
+		return nil
+	}
+	return os.WriteFile(*raport, []byte(md), 0o644)
 }
