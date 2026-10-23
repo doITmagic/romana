@@ -12,7 +12,7 @@ romana is free, open-source software made by DO IT MAGIC SOFTWARE SRL (Pitești,
 
 ## Contact
 
-Open an issue at <https://github.com/doITmagic/romana/issues>, or use the contact page at <https://doitmagic.ro/>.
+Write to <razvan@doitmagic.ro>, or open an issue at <https://github.com/doITmagic/romana/issues>. Company website: <https://doitmagic.ro/>.
 
 ---
 

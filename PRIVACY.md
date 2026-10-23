@@ -50,7 +50,7 @@ The binary gives the assistant the dictionary tools and, in Claude Code, the hoo
 
 ## Contact
 
-Questions, requests or concerns about your data: open an issue at <https://github.com/doITmagic/romana/issues>, or use the contact page at <https://doitmagic.ro/>.
+Questions, requests or concerns about your data: write to <razvan@doitmagic.ro>. For bugs or questions about the rules, open an issue at <https://github.com/doITmagic/romana/issues>. Company website: <https://doitmagic.ro/>.
 
 ---
 
