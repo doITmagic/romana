@@ -248,7 +248,7 @@ The first measurement with the dictionary was worse than the skill alone: Claude
 
 ### What these numbers are not
 
-They come from this project's own test set, with one or two runs per case, and they hold for the models listed above. There is no official benchmark yet for an agent that writes Romanian by the norms and avoids hypercorrection. A run on RONACC, the academic corpus for Romanian grammatical error correction, is in progress; its reference pairs are checked against DOOM 3 first, because some of them are stricter than the norm.
+They come from this project's own test set, with one or two runs per case, and they hold for the models listed above. There is no official benchmark yet for an agent that writes Romanian by the norms and avoids hypercorrection. A run on [RONACC](https://nextcloud.readerbench.com/index.php/s/9pwymesT5sycxoM) (Romanian National Audiovisual Council Corpus), the academic corpus for Romanian grammatical error correction, is in progress. The corpus comes from Coteț, Ruseti and Dascălu, [*Neural Grammatical Error Correction for Romanian*](https://arxiv.org/abs/2604.23627) (ICTAI 2020); it has no license file, so its sentences stay outside this repository. In the run, its reference pairs are checked against DOOM 3 first, because some of them are stricter than the norm.
 
 The full tables, per engine and per group, are in [`evals/RAPORT.md`](evals/RAPORT.md) (skill vs no skill), [`evals/RAPORT-MCP.md`](evals/RAPORT-MCP.md) (four arms, including 4 of the word cases) and [`evals/RAPORT-CUVINTE.md`](evals/RAPORT-CUVINTE.md) (the other 16 word cases).
 
@@ -428,7 +428,7 @@ The pre-commit hook in `.githooks/` runs the guard and the validator. [CONTRIBUT
 
 ## Roadmap
 
-- a measurement on RONACC, the academic corpus for Romanian grammatical error correction, with the reference pairs checked against DOOM 3 first;
+- a measurement on [RONACC](https://nextcloud.readerbench.com/index.php/s/9pwymesT5sycxoM), the academic corpus for Romanian grammatical error correction ([Coteț et al., 2020](https://arxiv.org/abs/2604.23627)), with the reference pairs checked against DOOM 3 first;
 - a compact index of the "not an error" forms, so the agent reads less before every correction;
 - more rules for the gaps the tests found („dejivra”, „dintr-odată”).
 
