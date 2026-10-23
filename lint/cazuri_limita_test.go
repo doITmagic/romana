@@ -336,3 +336,37 @@ func TestRunda5Lint(t *testing.T) {
 		}
 	}
 }
+
+// Runda a șasea: toate exemplele raportate, într-un singur loc.
+func TestRunda6Lint(t *testing.T) {
+	for text, fragment := range map[string]string{
+		"Vino ! zise el, pentru că sunt aici.":                     " !",
+		"Cine ești ? nu știu, pentru că sunt aici.":                " ?",
+		"Rezultatul : Ion a câștigat, 2020 a fost bun.":            " :",
+		"Exemplu : Ana, 1990 a fost un an bun.":                    " :",
+		"Cluj : Dacia, 1990 a fost anul, pentru că sunt aici.":     " :",
+		"L-a lovit cu : putere, pentru că sunt aici.":              " :",
+		"Lucrăm prin ; metoda nouă, pentru că sunt aici.":          " ;",
+		"Cluj : Dacia, 1990. Ce faci ? Bine, pentru că sunt aici.": " ?",
+	} {
+		if f := fragmente(text); f[fragment] != "RO-TIP-068" {
+			t.Errorf("%q: aștept RO-TIP-068 pe %q, am %v", text, fragment, f)
+		}
+	}
+	for _, text := range []string{
+		"Semnul exclamării ! se pune la sfârșit, iar după ! urmează majusculă.",
+		"Caracterele ! și ? sunt folosite, iar marcate cu ! sunt altele.",
+		"București : Editura didactică și pedagogică, 1990.",
+		"București : Editura „Dacia”, 1990.",
+		"București : Univers Enciclopedic Gold, 2010 (ed. a 2-a).",
+		"București : Editura Academiei, 1990 ; Iași : Junimea, 1991.",
+		"Iași ; București : Polirom, 2005.",
+		"Moroianu. - Ed. a 6-a. - București : Univers Enciclopedic Gold, 2024",
+		"de Filologie, ed. a 10-a (noiembrie 2006), Iași : Editura Universității „Alexandru Ioan Cuza”, 2007,",
+		"Vezi și Paris : Larousse, 1973, pp. 177-207.",
+	} {
+		if f := fragmente(text); len(f) != 0 {
+			t.Errorf("%q: nicio observație, am %v", text, f)
+		}
+	}
+}
