@@ -37,7 +37,10 @@ const (
 )
 
 var (
-	reUrl   = regexp.MustCompile(`(?i)(https?://|www\.)\S+|\S+@\S+\.\S+`)
+	// reUrl: adresa se oprește la ghilimele, paranteze și < >, ca textul lipit de
+	// ea (<a href="…">Text</a>, [text](…)urmare) să fie verificat; punctuația de
+	// la sfârșit o taie sfarsitUrl.
+	reUrl   = regexp.MustCompile(`(?i)(?:https?://|www\.)[^\s<>"'()\[\]]+|[^\s<>"'()\[\]]+@[^\s<>"'()\[\]]+\.[^\s<>"'()\[\]]+`)
 	reSpPct = regexp.MustCompile(`([\p{L}\p{N}”»"')\]])( +)([,.;:?!])(\s|$)`)
 	reMarj  = regexp.MustCompile(`^(>\s*)*([-*+]|\d+[.)])$`)
 )
@@ -241,7 +244,7 @@ var cuvantUzualVechi = map[string]bool{}
 
 func init() {
 	for _, c := range strings.Fields(`cînd cînd cît cîtă cîți cîte cîtva cîndva cîteodată
-		pînă pîine pîini mîine mîna mîini mîinile mînă mîncare mînca mînînc mîndru mîndră
+		pînă pîine pîini mîine mîna mîini mîinile mînă mîncare mînca mînînc
 		întîi întîia întîmplare întîmpla întîlni întîlnire întîlnit rîde rîu rîuri rîul
 		rînd rînduri rîndul vîrstă vîrsta vînt vîntul vîrf vîrful lîngă gînd gînduri gîndul gîndi
 		cîmp cîmpul cîmpie cîine cîini cuvînt cuvîntul pămînt pămîntul mormînt
@@ -253,28 +256,33 @@ func init() {
 	}
 }
 
-// sufixeFlexiune: terminațiile pe care le poate primi un cuvânt uzual din
-// cuvantUzualVechi (articol, plural, genitiv).
+// sufixeFlexiune: terminațiile neambigue pe care le poate primi un cuvânt
+// uzual din cuvantUzualVechi (articol, plural, genitiv). Lipsesc „a”, „e”,
+// „ea”, „i”: lipite de o rădăcină, fac nume de familie (Cîndea, Gîndea).
 var sufixeFlexiune = map[string]bool{
-	"": true, "a": true, "ul": true, "ului": true, "lui": true, "le": true, "lea": true,
-	"ii": true, "ei": true, "ea": true, "i": true, "e": true, "ile": true, "ele": true,
-	"ilor": true, "elor": true, "lor": true, "uri": true, "urile": true, "urilor": true,
-	"rea": true, "ri": true, "rile": true, "rii": true, "ă": true, "ată": true,
+	"ul": true, "ului": true, "lui": true, "le": true, "lea": true,
+	"ii": true, "ile": true, "ele": true, "ilor": true, "elor": true, "lor": true,
+	"uri": true, "urile": true, "urilor": true, "rea": true, "rii": true,
 }
 
 // flexiuneUzualaVeche: forma flexionată a unui cuvânt din cuvantUzualVechi
-// (Întîmplarea, Tînărul, Gîndurile). Un nume propriu (Pîrvu, Mîndrescu) nu
-// are rădăcina urmată de o terminație de flexiune.
+// (Întîmplarea, Tînărul, Gîndurile): cuvântul întreg cu o terminație din
+// sufixeFlexiune, cel terminat în „e” cu articolul „a” (Pîinea, Hotărîrea) sau
+// cel terminat în „ă” cu „a” în loc (Vîrsta). Rădăcina nu se scurtează, ca un
+// nume (Mîndrea, Cîndea, Pîrvu) să nu treacă drept flexiune.
 func flexiuneUzualaVeche(low string) bool {
 	for c := range cuvantUzualVechi {
 		if utf8.RuneCountInString(c) < 4 {
 			continue
 		}
-		r := []rune(c)
-		for _, tulpina := range []string{c, string(r[:len(r)-1])} {
-			if rest, ok := strings.CutPrefix(low, tulpina); ok && sufixeFlexiune[rest] {
-				return true
-			}
+		if rest, ok := strings.CutPrefix(low, c); ok && sufixeFlexiune[rest] {
+			return true
+		}
+		if strings.HasSuffix(c, "e") && low == c+"a" {
+			return true
+		}
+		if b, ok := strings.CutSuffix(c, "ă"); ok && low == b+"a" {
+			return true
 		}
 	}
 	return false
@@ -284,7 +292,7 @@ func flexiuneUzualaVeche(low string) bool {
 // după grafia dinainte de 1993; prind formele flexionate care nu sunt în
 // cuvantUzualVechi (Gîndesc, Vînzătorul, Întîmplător).
 var radaciniVechi = strings.Fields(`cînd cînt cît cîmp cîin cîștig cîrcium cîrm cîrlig
-	pînă pîin pîrî pîlp mîin mînă mîna mînc mîni mînu mîndr mîng mîhn
+	pînă pîin pîrî pîlp mîin mînă mîna mînc mîni mînu mîng mîhn
 	întîi întîmpl întîln întîrzi rîd rîs rîu rînd rîv vînt vînz vînd vînăt vîrst vîrf
 	gînd gît tînăr tîrz tîrg tîrî tîmpl sfîrș sfînt sfîș pămînt cuvînt mormînt hotărî
 	rămîn romîn bătrîn lumîn plîn strîn strîmt stîng stînc pînz lîng sîng grîu frîu brîu
@@ -292,7 +300,7 @@ var radaciniVechi = strings.Fields(`cînd cînt cît cîmp cîin cîștig cîrci
 
 // sufixeNume: terminații de nume de familie (Mîndrescu, Rîpeanu): un cuvânt cu
 // majusculă care se termină așa rămâne posibil nume propriu.
-var sufixeNume = []string{"escu", "eanu", "ache"}
+var sufixeNume = []string{"escu", "eanu", "ache", "ea", "oiu"}
 
 // radacinaUzualaVeche: cuvântul începe cu o rădăcină din radaciniVechi și nu
 // are terminație de nume de familie.
@@ -365,6 +373,11 @@ func numeLaMijloc(text string, poz int, cuv string) bool {
 		case '\n':
 			return false
 		}
+		if pr == '-' && k-w > 0 { // Popescu-Mîndru: cratima lipită de un cuvânt e a numelui compus
+			if p2, _ := utf8.DecodeLastRuneInString(text[:k-w]); unicode.IsLetter(p2) {
+				return true
+			}
+		}
 		return !strings.ContainsRune(".!?…:;\"„«»”“-–—*#>(•", pr)
 	}
 	return false
@@ -376,8 +389,11 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 		inceput := pos
 		pos += len(linie)
 		taiat := strings.TrimRight(linie, "\r\n")
-		if strings.HasPrefix(strings.TrimSpace(taiat), "|") {
-			continue // tabel Markdown, aliniat cu spații
+		if strings.HasPrefix(strings.TrimLeft(taiat, " \t>"), "|") {
+			continue // tabel Markdown (și în citat, după „> ”), aliniat cu spații
+		}
+		if strings.HasPrefix(taiat, "    ") || strings.HasPrefix(taiat, "\t") || coloaneAliniate(taiat) {
+			continue // cod indentat sau coloane aliniate: spațiile au rost
 		}
 		// Spațiu înaintea semnelor de punctuație.
 		for _, m := range reSpPct.FindAllStringSubmatchIndex(taiat, -1) {
@@ -413,6 +429,14 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 		}
 	}
 }
+
+// coloaneAliniate: rândul are cel puțin două goluri de câte trei spații sau
+// mai multe între cuvinte, ca un tabel scris cu spații.
+func coloaneAliniate(linie string) bool {
+	return len(reGolColoana.FindAllStringIndex(strings.TrimSpace(linie), 2)) >= 2
+}
+
+var reGolColoana = regexp.MustCompile(` {3,}`)
 
 type interval struct{ a, b int }
 
@@ -457,11 +481,13 @@ func zoneIgnorate(text string) []interval {
 	pos := 0
 	inBloc := false
 	blocDe := 0
+	var gardC byte // gardul care a deschis blocul: îl închide doar același caracter,
+	gardN := 0     // cel puțin la fel de lung, singur pe rând
 	for _, linie := range strings.SplitAfter(text, "\n") {
 		t := strings.TrimSpace(linie)
-		if strings.HasPrefix(t, "```") || strings.HasPrefix(t, "~~~") {
+		if c, n, gol := gard(t); c != 0 && (!inBloc || (c == gardC && n >= gardN && gol)) {
 			if !inBloc {
-				inBloc, blocDe = true, pos
+				inBloc, blocDe, gardC, gardN = true, pos, c, n
 			} else {
 				z = append(z, interval{blocDe, pos + len(linie)})
 				inBloc = false
@@ -488,6 +514,9 @@ func zoneIgnorate(text string) []interval {
 		z = append(z, interval{blocDe, len(text)})
 	}
 	for _, m := range reUrl.FindAllStringIndex(text, -1) {
+		z = append(z, interval{m[0], sfarsitUrl(text, m[0], m[1])})
+	}
+	for _, m := range reFormula.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], m[1]})
 	}
 	z = append(z, zonePrinse(text, z)...) // z are deja codul: o etichetă din cod nu deschide nimic
@@ -495,6 +524,35 @@ func zoneIgnorate(text string) []interval {
 		z = append(z, interval{m[0], m[1]})
 	}
 	return z
+}
+
+// sfarsitUrl: punctuația de la sfârșitul unei adrese ține de frază („vezi
+// https://a.ro/c.”), nu de adresă.
+func sfarsitUrl(text string, a, b int) int {
+	for b > a && strings.ContainsRune(".,;:!?", rune(text[b-1])) {
+		b--
+	}
+	return b
+}
+
+// reFormula: matematica din Markdown, $$…$$ și $…$ pe un singur rând. Un „$”
+// urmat de cifră e un preț („$5”), nu o formulă.
+var reFormula = regexp.MustCompile(`\$\$[\s\S]+?\$\$|\$[^\s$\d][^$\n]*?[^\s$\\]\$|\$[^\s$\d]\$`)
+
+// gard: un rând care deschide sau închide un bloc de cod: cel puțin trei „`” sau
+// „~” la început. Întoarce caracterul, lungimea și dacă rândul are doar gardul.
+func gard(t string) (c byte, n int, gol bool) {
+	if len(t) < 3 || (t[0] != '`' && t[0] != '~') {
+		return 0, 0, false
+	}
+	c = t[0]
+	for n < len(t) && t[n] == c {
+		n++
+	}
+	if n < 3 {
+		return 0, 0, false
+	}
+	return c, n, strings.TrimSpace(t[n:]) == ""
 }
 
 // zonePrinse: de la deschiderea unei etichete din etichetePrinse până la
@@ -579,10 +637,11 @@ func frontMatter(text string) (int, int, bool) {
 
 var reCheieYaml = regexp.MustCompile(`^[A-Za-z_][\w-]*\s*:`)
 
-// zoneCitate: textul dintre ghilimele, în același alineat.
+// zoneCitate: textul dintre ghilimele, în același alineat. „ se închide cu ”
+// sau cu “ (grafie frecventă în textele convertite), cu cea mai apropiată.
 func zoneCitate(text string) []interval {
 	var z []interval
-	inchide := map[rune]rune{'„': '”', '«': '»', '“': '”', '"': '"'}
+	inchide := map[rune]string{'„': "”“", '«': "»", '“': "”", '"': `"`}
 	for i := 0; i < len(text); {
 		r, w := utf8.DecodeRuneInString(text[i:])
 		inc, ok := inchide[r]
@@ -590,13 +649,14 @@ func zoneCitate(text string) []interval {
 			i += w
 			continue
 		}
-		fin := strings.IndexRune(text[i+w:], inc)
+		fin := strings.IndexAny(text[i+w:], inc)
 		if fin < 0 || strings.Contains(text[i+w:i+w+fin], "\n\n") {
 			i += w
 			continue
 		}
-		z = append(z, interval{i, i + w + fin + 1})
-		i += w + fin + 1
+		_, wi := utf8.DecodeRuneInString(text[i+w+fin:])
+		z = append(z, interval{i, i + w + fin + wi})
+		i += w + fin + wi
 	}
 	return z
 }

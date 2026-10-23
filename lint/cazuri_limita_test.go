@@ -3,7 +3,10 @@ package lint
 // Cazurile limită găsite la recenzia fazei 2: zonele HTML și front matter-ul,
 // prefixoidele cu „î”, numele proprii și cuvintele străine.
 
-import "testing"
+import (
+	"strings"
+	"testing"
+)
 
 func TestZoneHtmlSiFrontMatter(t *testing.T) {
 	for _, ok := range []string{
@@ -162,5 +165,97 @@ func TestRadaciniVechiCuMajuscula(t *testing.T) {
 		if obs := Verifica(nume); len(obs) != 0 {
 			t.Errorf("%q: numele nu se atinge: %+v", nume, obs)
 		}
+	}
+}
+
+// regulile și fragmentele observațiilor, pentru comparații scurte
+func fragmente(text string) map[string]string {
+	m := map[string]string{}
+	for _, o := range Verifica(text) {
+		m[text[o.Inceput:o.Sfarsit]] = o.Regula
+	}
+	return m
+}
+
+// Numele de familie cu „î” la început de propoziție sau de rând nu se ating;
+// nici în numele compuse cu cratimă.
+func TestNumeDeFamilieLaInceput(t *testing.T) {
+	for _, text := range []string{
+		"Mîndrea a plecat. Cîndea Ion a venit.\nCîntea a spus ceva.\n- Cîndea Maria\n\nGîndea e un nume.",
+		"Mîndru a venit acasă.",
+		"Au venit Ion și Popescu-Mîndru acasă.",
+	} {
+		if f := fragmente(text); len(f) != 0 {
+			t.Errorf("%q: numele nu se ating: %v", text, f)
+		}
+	}
+	// formele articulate ale cuvintelor uzuale rămân prinse
+	f := fragmente("Pîinea e caldă. Mîncarea e gata. Hotărîrea e luată. Întîlnirea a fost lungă.")
+	for _, c := range []string{"Pîinea", "Mîncarea", "Hotărîrea", "Întîlnirea"} {
+		if f[c] != "RO-TIP-128" {
+			t.Errorf("%s trebuie semnalat: %v", c, f)
+		}
+	}
+}
+
+// Gardurile de cod se închid doar cu același caracter, cel puțin la fel de lung.
+func TestGarduriDeCod(t *testing.T) {
+	text := "````markdown\n```text\nsînt aici\n```\nsînt  două\n````\n\nApoi cînd vine.\n\n~~~\n```\nsînt\n~~~\nUn alt rând și sînt."
+	f := fragmente(text)
+	gasite := 0
+	for _, o := range Verifica(text) {
+		if o.Regula == "RO-TIP-128" {
+			gasite++
+			if o.Inceput < strings.Index(text, "Apoi") {
+				t.Errorf("semnalat în cod: %q la %d", text[o.Inceput:o.Sfarsit], o.Inceput)
+			}
+		}
+	}
+	if f["cînd"] != "RO-TIP-128" || gasite != 2 {
+		t.Errorf("aștept „cînd” și ultimul „sînt”: %v (%d)", f, gasite)
+	}
+}
+
+// Formulele, coloanele aliniate, codul indentat și tabelele din citat nu
+// primesc observații de spațiu.
+func TestSpatiiInZoneSpeciale(t *testing.T) {
+	for _, text := range []string{
+		"Fie $f(x) , g(x)$ și $$a , b$$ funcții, iar drumul e lung pentru că sunt aici.",
+		"Iată comanda, iar drumul e lung pentru că sunt aici:\n\n    $ ls    -la   # listare\n    x = a ? 1 : 2\n",
+		"Tabelul, iar drumul e lung pentru că sunt aici:\n\n> | a   | b |\n> | c  | x  y |\n",
+		"Nume          Cantitate   Preț\nMere          5           3,5\nși așa mai departe, pentru că sunt aici",
+	} {
+		for _, o := range Verifica(text) {
+			if o.Regula == "RO-TIP-068" || o.Regula == "" {
+				t.Errorf("%q: observație de spațiu falsă: %q", text, text[o.Inceput:o.Sfarsit])
+			}
+		}
+	}
+	// spațiul dublu obișnuit și spațiul înaintea virgulei rămân prinse
+	f := fragmente("Drumul e lung  și frumos , iar eu sunt aici pentru că vreau.")
+	if _, ok := f["  "]; !ok || f[" ,"] != "RO-TIP-068" {
+		t.Errorf("spațiile obișnuite trebuie prinse: %v", f)
+	}
+}
+
+// Citatul închis cu „…“ e tot citat.
+func TestCitatInchisCuGhilimeleSus(t *testing.T) {
+	text := "Citat franțuzesc: „toute âme et ses abîmes“ cu final, iar el a zis: „vroiam să plec“ și gata."
+	if f := fragmente(text); len(f) != 0 {
+		t.Errorf("citatele nu se ating: %v", f)
+	}
+}
+
+// URL-ul se oprește la ghilimele, paranteze și punctuația de la sfârșit: textul
+// lipit de el se verifică.
+func TestUrlNuInghiteTextul(t *testing.T) {
+	text := `<p>Vezi <a href="https://exemplu.ro/x">Şcoala noastră</a> și sînt aici, [sit](https://a.ro/b)cînd, https://a.ro/c.</p>`
+	f := fragmente(text)
+	if f["Şcoala"] != "RO-TIP-027" || f["cînd"] != "RO-TIP-128" {
+		t.Errorf("textul de lângă URL trebuie verificat: %v", f)
+	}
+	ign := Ignorat(text)
+	if !ign(strings.Index(text, "exemplu.ro")) || ign(strings.Index(text, "c.</p>")+1) {
+		t.Error("URL-ul trebuie ignorat până la „.” final, fără el")
 	}
 }
