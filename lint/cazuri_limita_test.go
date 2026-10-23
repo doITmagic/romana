@@ -294,3 +294,23 @@ func TestRunda3Lint(t *testing.T) {
 	nimic("Iată, pentru că sunt aici:\n\n    x = a ? 1 : 2\n")
 	nimic("Capitolul unu . . . . . . . . . 5\nCapitolul doi . . . . . . . . . 9\nși așa mai departe, pentru că sunt aici")
 }
+
+// Runda a patra: imperfectul plural și cuvintele uzuale cu majusculă se prind;
+// semnul pomenit („Semnul ! poate”) și descrierea bibliografică nu sunt greșeli.
+func TestRunda4Lint(t *testing.T) {
+	f := fragmente("Mîncau pîine. Gîndeau mult. Rîdeau toți. Cîntau frumos. Pămîntean sau nu.")
+	for _, c := range []string{"Mîncau", "Gîndeau", "Rîdeau", "Cîntau", "Pămîntean"} {
+		if f[c] != "RO-TIP-128" {
+			t.Errorf("%s trebuie semnalat: %v", c, f)
+		}
+	}
+	for _, text := range []string{"Stîncu a venit. Tîrzu a râs. Pînzaru a zis.", "    Semnul ! poate marca intervenții, iar semnul ? arată îndoiala.",
+		"    București : Univers Enciclopedic, 2005."} {
+		if f := fragmente(text); len(f) != 0 {
+			t.Errorf("%q: nicio observație, am %v", text, f)
+		}
+	}
+	if f := fragmente("Ce faci ? Bine, mulțumesc, pentru că sunt aici."); f[" ?"] != "RO-TIP-068" {
+		t.Errorf("„ ?” urmat de propoziție nouă trebuie semnalat: %v", f)
+	}
+}

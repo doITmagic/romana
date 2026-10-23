@@ -306,7 +306,14 @@ var radaciniVechi = strings.Fields(`cînd cînt cît cîmp cîin cîștig cîrci
 
 // sufixeNume: terminații de nume de familie (Mîndrescu, Rîpeanu): un cuvânt cu
 // majusculă care se termină așa rămâne posibil nume propriu.
-var sufixeNume = []string{"escu", "eanu", "ache", "oiu", "aru", "ciu", "an", "u"}
+var sufixeNume = []string{"escu", "eanu", "ache", "oiu", "aru", "ciu"}
+
+// numeInU: „-u” după consoană e terminația multor nume de familie (Stîncu,
+// Tîrzu); după vocală („-au”, „-eau”) e imperfectul plural (Mîncau, Gîndeau).
+func numeInU(low string) bool {
+	r := []rune(low)
+	return len(r) > 2 && r[len(r)-1] == 'u' && !strings.ContainsRune("aeiouăâî", r[len(r)-2])
+}
 
 // verbeEa: rădăcinile din radaciniVechi care fac imperfect în „-ea” (Gîndea,
 // Rîdea, Plîngea). Altă rădăcină + „ea” e un nume de familie (Cîndea, Cîntea).
@@ -327,6 +334,9 @@ func radacinaUzualaVeche(low string) (veche, ambigua bool) {
 		if strings.HasSuffix(low, s) {
 			return false, false
 		}
+	}
+	if numeInU(low) {
+		return false, false
 	}
 	for _, r := range radaciniVechi {
 		if strings.HasPrefix(low, r) {
@@ -433,7 +443,7 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 		// conducere dintr-un cuprins („Capitolul . . . 5”).
 		for _, m := range reSpPct.FindAllStringSubmatchIndex(taiat, -1) {
 			sp0, pc0, pc1 := m[4], m[6], m[7]
-			if (indentat && pareCod(taiat)) || punctDeConducere(taiat, pc0) {
+			if (indentat && pareCod(taiat)) || punctDeConducere(taiat, pc0) || semnPomenit(taiat, pc0) || reISBD.MatchString(taiat) {
 				continue
 			}
 			add(Observatie{
@@ -470,6 +480,21 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 		}
 	}
 }
+
+// semnPomenit: „!” sau „?” urmat de spațiu și de o literă mică nu încheie
+// propoziția: e semnul pomenit („Semnul ! poate marca…”).
+func semnPomenit(linie string, p int) bool {
+	if c := linie[p]; c != '!' && c != '?' {
+		return false
+	}
+	urm := strings.TrimLeft(linie[p+1:], " ")
+	r, _ := utf8.DecodeRuneInString(urm)
+	return len(urm) < len(linie[p+1:]) && unicode.IsLower(r)
+}
+
+// reISBD: descrierea bibliografică „Loc : Editură, an”, cu spațiu înainte de
+// două-puncte prin convenție.
+var reISBD = regexp.MustCompile(`\p{Lu}[\p{L}-]+ : \p{Lu}[^\n]*,\s*\d{4}`)
 
 // pareCod: un rând cu semne care apar în cod și rar în proză.
 func pareCod(linie string) bool {
