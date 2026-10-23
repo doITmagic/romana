@@ -1,6 +1,6 @@
 {
   "name": "romana",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Use for every request to write, correct, proofread, check or translate into Romanian a text meant for readers, however short: web and marketing pages, blog articles, news, e-mails, interface text, documentation or a single sentence, and whenever asked whether Romanian wording is correct or natural. Without it, models “correct” forms that are right (unul din, prețuri scumpe, click) and miss real errors. Also use it when dictionary tools such as cauta_cuvant or verifica_text are available: they check words, not the text. Scrie, corectează și verifică texte în română: gramatică, semantică, stilistică și coerență, fără calcuri și fără cuvinte inventate. Do not use when Romanian is merely the language of the conversation and the answer is code, a calculation, a factual reply or an explanation unrelated to wording, nor for poetry, fiction, translations out of Romanian or file conversions that leave the text unchanged.",
   "author": {
     "name": "DO IT MAGIC SOFTWARE",

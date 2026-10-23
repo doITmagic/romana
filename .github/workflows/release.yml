@@ -58,8 +58,8 @@ jobs:
         run: |
           set -eu
           mkdir -p dist
-          # Doar skillul: serverul MCP și hook-ul au nevoie de binarul local, care nu rulează în browser.
-          zip -q -r dist/romana-plugin.zip plugin.json skills/romana assets LICENSE PRIVACY.md TERMS.md README.md
+          # Skillul și serverul MCP public (mcp.json); serverul local și hook-ul au nevoie de binar, care nu rulează în browser.
+          zip -q -r dist/romana-plugin.zip plugin.json mcp.json skills/romana assets LICENSE PRIVACY.md TERMS.md README.md
           unzip -l dist/romana-plugin.zip | tail -1
       - uses: actions/upload-artifact@v4.6.2
         with:

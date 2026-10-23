@@ -12,3 +12,6 @@ CLAUDE.local.md
 *.sql.gz
 evals-privat/
 .claude/worktrees/
+
+# secretele serverului MCP public
+deploy/mcp/.env

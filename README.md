@@ -26,6 +26,7 @@ Language models write Romanian that is grammatical but often sounds translated: 
 | **Plugin** (recommended) | the skill, plus the dictionary as MCP tools, plus a hook that checks every file the agent writes | Claude Code. In Codex the plugin brings the skill; add the MCP server by hand. In claude.ai and ChatGPT it brings the skill only |
 | **Skill only** | the 854 rules the agent reads while it writes, corrects or reviews; no binary, no network | any agent that reads Agent Skills (Claude Code, Codex, Cursor, Gemini CLI, Copilot …) |
 | **MCP server only** | dictionary lookups (`cauta_cuvant`) and text checks (`verifica_text`), without the rules | any MCP client |
+| **Public MCP server** | `https://mcp.doitmagic.ro/mcp`, no install: the safe-error check (`verifica_greseli`) and the 854 rules (`cauta_regula`), without the dictionary | any MCP client that takes a URL (ChatGPT, claude.ai, Cursor …) |
 | **CLI** | `romana cauta` and `romana verifica` in a terminal or a script | people, CI |
 
 The plugin, the MCP server and the CLI use the `romana` binary: one prebuilt file, no Go needed. On first use it downloads the official dexonline export (~360 MB) and builds a local database (~300 MB) in about a minute.
@@ -46,7 +47,7 @@ The plugin, the MCP server and the CLI use the `romana` binary: one prebuilt fil
 
 ## Install
 
-Pick one: [Plugin](#plugin-recommended) · [Skill only](#skill-only) · [MCP server only](#mcp-server-only). The plugin and the MCP server also need [the `romana` binary](#the-romana-binary).
+Pick one: [Plugin](#plugin-recommended) · [Skill only](#skill-only) · [MCP server only](#mcp-server-only) · [Public MCP server](#public-mcp-server). The plugin and the MCP server also need [the `romana` binary](#the-romana-binary).
 
 ### Plugin (recommended)
 
@@ -70,7 +71,7 @@ Then [install the binary](#the-romana-binary) and add the server by hand to `~/.
 
 **claude.ai** (web and desktop app): Customize → Plugins → Add → **Add marketplace** → *Add from a repository* → `doITmagic/romana` → Sync, then **Add** on Romana. With *Sync automatically* on, new versions arrive by themselves. You get the skill; the MCP server and the hook need the local binary, so they do not run there.
 
-**ChatGPT** (plugins for Codex): Plugins → Add → *Upload plugin archive*, with [`romana-plugin.zip`](https://github.com/doITmagic/romana/releases/latest/download/romana-plugin.zip) from the latest release, then *Install*. The archive holds the skill only, without the MCP server and the hook.
+**ChatGPT** (plugins for Codex): Plugins → Add → *Upload plugin archive*, with [`romana-plugin.zip`](https://github.com/doITmagic/romana/releases/latest/download/romana-plugin.zip) from the latest release, then *Install*. The archive holds the skill and the [public MCP server](#public-mcp-server), without the local dictionary and the hook.
 
 ### Skill only
 
@@ -81,6 +82,12 @@ No binary and no network.
 - **Codex:** the two `codex plugin` commands above.
 - **claude.ai and ChatGPT:** the plugin brings only the skill anyway; see above.
 - **Other agents** (Cursor, Gemini CLI, Copilot and others): copy `skills/romana/` into the directory where your tool looks for Agent Skills (see its documentation). We test Claude Code and Codex.
+
+### Public MCP server
+
+`https://mcp.doitmagic.ro/mcp` (Streamable HTTP), free, read-only, nothing to install. It has two tools that need no dictionary: `verifica_greseli` (ș and ț with a cedilla, the old spelling with „î” and „sînt”, „vroiam”, spacing around punctuation) and `cauta_regula` (the 854 rules of the skill, by ID or by words). The dexonline dictionary is not on the server: its license does not allow serving it to others, so `cauta_cuvant` stays with the local binary.
+
+Add the URL as a remote MCP server in your client, for example `claude mcp add --transport http romana-public https://mcp.doitmagic.ro/mcp`. The Codex plugin and the ChatGPT archive already include it (`mcp.json`). The server keeps no texts; see [PRIVACY.md](PRIVACY.md) and [TERMS.md](TERMS.md). Its code is `cmd/romana-public`, and `deploy/mcp/` runs it in Docker behind nginx-proxy.
 
 ### MCP server only
 

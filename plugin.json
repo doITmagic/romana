@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "romana",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Use for every request to write, correct, proofread, check or translate into Romanian a text meant for readers, however short: web and marketing pages, blog articles, news, e-mails, interface text, documentation or a single sentence, and whenever asked whether Romanian wording is correct or natural. Without it, models “correct” forms that are right (unul din, prețuri scumpe, click) and miss real errors. Also use it when dictionary tools such as cauta_cuvant or verifica_text are available: they check words, not the text. Scrie, corectează și verifică texte în română: gramatică, semantică, stilistică și coerență, fără calcuri și fără cuvinte inventate. Do not use when Romanian is merely the language of the conversation and the answer is code, a calculation, a factual reply or an explanation unrelated to wording, nor for poetry, fiction, translations out of Romanian or file conversions that leave the text unchanged.",
   "author": {
     "name": "DO IT MAGIC SOFTWARE",
@@ -22,13 +22,14 @@
       "interface": {
         "displayName": "romana",
         "shortDescription": "Write and proofread Romanian",
-        "longDescription": "romana is a writing and proofreading aid for Romanian. It helps you write, correct and check Romanian text meant for readers: articles, web and marketing pages, e-mails, documents, interface text or a single sentence. It also translates into Romanian.\n\nIt follows the current norms of the Romanian Academy (DOOM 3 for spelling and word forms, ÎOOP for punctuation) through 854 rules, each with its source, and a list of forms that look wrong but are correct, so that what is right stays as it is.\n\nIt works on four levels: grammar (agreement, verb forms, cases, numerals), meaning (English calques, false friends, pleonasms, invented words), style (register, natural sentences, the patterns of generated text) and coherence (logical links, references). Typography is checked last: ș and ț with a comma below, Romanian quotation marks, numbers and capitals.\n\nThree modes: write (new texts, rewrites, translations into Romanian), correct (fixes what is objectively wrong and only suggests matters of taste) and check (a report of the problems, each with its level and reason, without rewriting the text).\n\nFor anyone who writes in Romanian: bloggers, marketers, journalists, lawyers, translators, developers writing interface text.\n\nLimitations: the plugin holds rules, not a dictionary, and works from those rules alone. An optional local dictionary tool (the romana binary, built on the official dexonline export) is installed separately, on your computer. It does not cover poetry, fiction or translation out of Romanian.\n\nOpen source, MIT license: https://github.com/doITmagic/romana",
+        "longDescription": "romana is a writing and proofreading aid for Romanian. It helps you write, correct and check Romanian text meant for readers: articles, web and marketing pages, e-mails, documents, interface text or a single sentence. It also translates into Romanian.\n\nIt follows the current norms of the Romanian Academy (DOOM 3 for spelling and word forms, ÎOOP for punctuation) through 854 rules, each with its source, and a list of forms that look wrong but are correct, so that what is right stays as it is.\n\nIt works on four levels: grammar (agreement, verb forms, cases, numerals), meaning (English calques, false friends, pleonasms, invented words), style (register, natural sentences, the patterns of generated text) and coherence (logical links, references). Typography is checked last: ș and ț with a comma below, Romanian quotation marks, numbers and capitals.\n\nThree modes: write (new texts, rewrites, translations into Romanian), correct (fixes what is objectively wrong and only suggests matters of taste) and check (a report of the problems, each with its level and reason, without rewriting the text).\n\nFor anyone who writes in Romanian: bloggers, marketers, journalists, lawyers, translators, developers writing interface text.\n\nTwo read-only tools from the romana server back the rules: verifica_greseli finds the errors that are wrong anywhere (ș and ț with a cedilla, the old spelling with „î” inside words and „sînt”, „vroiam”, spaces before punctuation), and cauta_regula returns the exact rule, with its level and source.\n\nLimitations: the tools check only those errors and the rules; meaning, agreement, coherence and style are judged by the model with the rules. There is no dictionary on the server: an optional local dictionary tool (the romana binary, built on the official dexonline export) is installed separately, on your computer. It does not cover poetry, fiction or translation out of Romanian.\n\nOpen source, MIT license: https://github.com/doITmagic/romana",
         "developerName": "DO IT MAGIC SOFTWARE",
         "category": "Communication",
         "capabilities": [
           "Write Romanian",
           "Correct Romanian",
-          "Check Romanian"
+          "Check Romanian",
+          "Look up writing rules"
         ],
         "websiteURL": "https://doitmagic.ro/blog/romana-agenti-ai-scriu-corect-in-romana/",
         "supportURL": "https://github.com/doITmagic/romana/issues",
@@ -44,12 +45,63 @@
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png"
       },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Finds cedilla diacritics",
+              "prompt": "Verifică diacriticele din textul acesta: „Aşa cum ştim, ţara are nevoie de reforme.”",
+              "tools_triggered": "verifica_greseli",
+              "expected_behavior": "Reports ş and ţ written with a cedilla, proposes ș and ț with a comma below and cites rule RO-TIP-027; the rest of the sentence is left unchanged."
+            },
+            {
+              "description": "Finds old spelling and a wrong verb form",
+              "prompt": "Corectează: „Nu sînt sigur că vroiam să vin.”",
+              "tools_triggered": "verifica_greseli",
+              "expected_behavior": "Corrects „sînt” to „sunt” (RO-TIP-128) and „vroiam” to „voiam” (RO-GRA-067), and returns the corrected sentence."
+            },
+            {
+              "description": "Finds wrong spacing",
+              "prompt": "Verifică spațierea: „Bună ziua , ce mai faceți ?”",
+              "tools_triggered": "verifica_greseli",
+              "expected_behavior": "Flags the spaces before the comma and before the question mark (RO-TIP-068) and gives „Bună ziua, ce mai faceți?”."
+            },
+            {
+              "description": "Looks up a rule by ID",
+              "prompt": "Ce spune regula RO-TIP-027?",
+              "tools_triggered": "cauta_regula",
+              "expected_behavior": "Returns rule RO-TIP-027 (diacritics are mandatory, with a comma below ș and ț) with its level, wrong and correct examples, explanation and source."
+            },
+            {
+              "description": "Checks a calque against the rules",
+              "prompt": "E corect „a face sens” în română? Arată-mi regula.",
+              "tools_triggered": "cauta_regula",
+              "expected_behavior": "Finds rule RO-CAL-063, explains that „a face sens” is a calque of „to make sense” and proposes „a avea sens”, citing the rule."
+            }
+          ],
+          "negative": [
+            {
+              "description": "General knowledge, no Romanian text to check",
+              "prompt": "What is the capital of France?"
+            },
+            {
+              "description": "Code task",
+              "prompt": "Write a Python function that sorts a list of numbers."
+            },
+            {
+              "description": "Translation out of Romanian",
+              "prompt": "Translate into English: „Bună dimineața, ce mai faci?”"
+            }
+          ]
+        },
+        "commerce": false
+      },
       "publication": {
-        "release_notes": "First release in the directory: the romana skill, 854 sourced rules for writing, correcting and checking Romanian.",
+        "release_notes": "romana with its public MCP server: the skill's 854 sourced rules for writing, correcting and checking Romanian, plus two read-only tools, verifica_greseli and cauta_regula.",
         "translations": {
           "ro-RO": {
             "subtitle": "Scrie și corectează în română",
-            "description": "romana te ajută să scrii, să corectezi și să verifici texte în limba română pentru cititori: articole, pagini de site și de marketing, e-mailuri, documente, texte de interfață sau o singură frază. Traduce și în română.\n\nUrmează normele actuale ale Academiei Române (DOOM 3 pentru scrierea și formele cuvintelor, ÎOOP pentru punctuație) prin 854 de reguli, fiecare cu sursa ei, și printr-o listă de forme care par greșite, dar sunt corecte. Așa, ce e corect rămâne neschimbat.\n\nLucrează pe patru niveluri: gramatica (acordul, formele verbelor, cazurile, numeralele), sensul (calcurile din engleză, prietenii falși, pleonasmele, cuvintele inventate), stilul (registrul, fraza firească, tiparele textului generat) și coerența (legăturile logice, trimiterile). Tipografia se verifică la sfârșit: ș și ț cu virgulă, ghilimelele românești, numerele și majusculele.\n\nAre trei moduri: redactare (texte noi, rescrieri, traduceri în română), corectură (repară ce e obiectiv greșit și doar propune ce ține de gust) și verificare (un raport cu problemele, fiecare cu nivelul și motivul ei, fără rescrierea textului).\n\nE pentru oricine scrie în română: bloggeri, oameni de marketing, jurnaliști, juriști, traducători, programatori care scriu texte de interfață.\n\nLimite: pluginul conține reguli, nu un dicționar, și lucrează doar cu ele. Un dicționar local, opțional (binarul romana, construit pe exportul oficial dexonline), se instalează separat, pe calculator. Nu se ocupă de poezie, de proză literară și nici de traduceri din română.\n\nOpen source, licență MIT: https://github.com/doITmagic/romana"
+            "description": "romana te ajută să scrii, să corectezi și să verifici texte în limba română pentru cititori: articole, pagini de site și de marketing, e-mailuri, documente, texte de interfață sau o singură frază. Traduce și în română.\n\nUrmează normele actuale ale Academiei Române (DOOM 3 pentru scrierea și formele cuvintelor, ÎOOP pentru punctuație) prin 854 de reguli, fiecare cu sursa ei, și printr-o listă de forme care par greșite, dar sunt corecte. Așa, ce e corect rămâne neschimbat.\n\nLucrează pe patru niveluri: gramatica (acordul, formele verbelor, cazurile, numeralele), sensul (calcurile din engleză, prietenii falși, pleonasmele, cuvintele inventate), stilul (registrul, fraza firească, tiparele textului generat) și coerența (legăturile logice, trimiterile). Tipografia se verifică la sfârșit: ș și ț cu virgulă, ghilimelele românești, numerele și majusculele.\n\nAre trei moduri: redactare (texte noi, rescrieri, traduceri în română), corectură (repară ce e obiectiv greșit și doar propune ce ține de gust) și verificare (un raport cu problemele, fiecare cu nivelul și motivul ei, fără rescrierea textului).\n\nE pentru oricine scrie în română: bloggeri, oameni de marketing, jurnaliști, juriști, traducători, programatori care scriu texte de interfață.\n\nRegulile sunt sprijinite de două unelte, doar de citire, de pe serverul romana: verifica_greseli găsește greșelile care sunt greșeli oriunde (ș și ț cu sedilă, grafia veche cu „î” în interiorul cuvântului și „sînt”, „vroiam”, spațiul dinaintea semnelor de punctuație), iar cauta_regula dă regula exactă, cu nivelul și sursa ei.\n\nLimite: uneltele verifică doar aceste greșeli și regulile; sensul, acordul, coerența și stilul le judecă modelul, după reguli. Pe server nu există dicționar: un dicționar local, opțional (binarul romana, construit pe exportul oficial dexonline), se instalează separat, pe calculator. Nu se ocupă de poezie, de proză literară și nici de traduceri din română.\n\nOpen source, licență MIT: https://github.com/doITmagic/romana"
           }
         }
       }

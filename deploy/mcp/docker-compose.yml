@@ -1,0 +1,39 @@
+# Serverul MCP public, în spatele nginx-proxy și acme-companion (rețeaua ssl_default).
+# Pe server, din rădăcina repo-ului:
+#   VERSIUNE=$(git describe --tags) docker compose -f deploy/mcp/docker-compose.yml up -d --build
+# Variabilele opționale stau în deploy/mcp/.env (nu intră în git): OPENAI_APPS_CHALLENGE, ACCES.
+services:
+  romana-mcp:
+    build:
+      context: ../..
+      dockerfile: deploy/mcp/Dockerfile
+      args:
+        VERSIUNE: ${VERSIUNE:-dev}
+    image: romana-mcp:${VERSIUNE:-dev}
+    container_name: romana-mcp
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 64
+    environment:
+      - VIRTUAL_HOST=mcp.doitmagic.ro
+      - VIRTUAL_PORT=8080
+      - LETSENCRYPT_HOST=mcp.doitmagic.ro
+      - LETSENCRYPT_EMAIL=razvan@doitmagic.ro
+      - OPENAI_APPS_CHALLENGE=${OPENAI_APPS_CHALLENGE:-}
+      - ACCES=${ACCES:-}
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "3"
+    networks:
+      - proxy-net
+
+networks:
+  proxy-net:
+    external: true
+    name: ssl_default

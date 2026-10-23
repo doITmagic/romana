@@ -1,8 +1,11 @@
-// Package mcp implementează un server MCP (Model Context Protocol) pe stdio,
-// cu două unelte de dicționar pentru limba română: cauta_cuvant și
-// verifica_text.
+// Package mcp implementează un server MCP (Model Context Protocol) pentru
+// limba română, în două variante:
 //
-// Transportul e cel stdio din specificația MCP: câte un mesaj JSON-RPC 2.0 pe
+//   - pe stdio (Serveste), cu dicționarul local: cauta_cuvant și verifica_text;
+//   - pe HTTP (Public), fără dicționar, pentru un server public:
+//     verifica_greseli și cauta_regula (vezi public.go).
+//
+// Transportul stdio e cel din specificația MCP: câte un mesaj JSON-RPC 2.0 pe
 // linie. Pe ieșire nu se scrie nimic în afară de aceste mesaje; logurile, dacă
 // există, merg pe stderr, în binarul care cheamă Serveste.
 //
@@ -146,8 +149,17 @@ type raspunsRPC struct {
 	Error   *eroareRPC      `json:"error,omitempty"`
 }
 
+// setUnelte e ce oferă un server: lista uneltelor, instrucțiunile din
+// initialize și apelul unei unelte. apel întoarce cunoscuta = false pentru o
+// unealtă care nu există (eroare de protocol); altfel, rezultatul MCP.
+type setUnelte interface {
+	unelte() []unealta
+	instructiuni() string
+	apel(ctx context.Context, nume string, argumente json.RawMessage) (rezultat map[string]any, cunoscuta bool)
+}
+
 type server struct {
-	u        Unelte
+	set      setUnelte
 	versiune string
 	mu       sync.Mutex // serializează scrierile pe out
 	out      io.Writer
@@ -161,7 +173,7 @@ func Serveste(ctx context.Context, in io.Reader, out io.Writer, u Unelte, versiu
 	// nu rămâne blocată pe trimiterea unei linii.
 	ctx, anuleaza := context.WithCancel(ctx)
 	defer anuleaza()
-	s := &server{u: u, versiune: versiune, out: out}
+	s := &server{set: dictionar{u}, versiune: versiune, out: out}
 
 	linii := make(chan []byte)
 	eroareCitire := make(chan error, 1)
@@ -216,33 +228,46 @@ func (s *server) scrie(m any) error {
 	return err
 }
 
-func (s *server) eroare(id json.RawMessage, cod int, mesaj string) error {
+func eroare(id json.RawMessage, cod int, mesaj string) *raspunsRPC {
 	if len(id) == 0 {
 		id = json.RawMessage("null")
 	}
-	return s.scrie(raspunsRPC{JSONRPC: "2.0", ID: id, Error: &eroareRPC{Cod: cod, Mesaj: mesaj}})
+	return &raspunsRPC{JSONRPC: "2.0", ID: id, Error: &eroareRPC{Cod: cod, Mesaj: mesaj}}
 }
 
-func (s *server) raspunde(id json.RawMessage, rezultat any) error {
-	return s.scrie(raspunsRPC{JSONRPC: "2.0", ID: id, Result: rezultat})
+func raspuns(id json.RawMessage, rezultat any) *raspunsRPC {
+	return &raspunsRPC{JSONRPC: "2.0", ID: id, Result: rezultat}
 }
 
 // trateaza procesează un mesaj. Întoarce eroare doar când scrierea pe out a
 // eșuat (clientul a plecat): atunci nu mai are rost să continue.
 func (s *server) trateaza(ctx context.Context, linie []byte) error {
-	if linie[0] == '[' {
-		return s.eroare(nil, eroareCerere, "loturile de mesaje nu sunt acceptate (MCP "+VersiuneProtocol+")")
+	if r := proceseaza(ctx, s.set, s.versiune, linie); r != nil {
+		return s.scrie(r)
+	}
+	return nil
+}
+
+// proceseaza răspunde la un mesaj JSON-RPC; nil când mesajul nu cere răspuns
+// (notificări, răspunsuri ale clientului). Comun pentru stdio și HTTP.
+func proceseaza(ctx context.Context, set setUnelte, versiune string, mesaj []byte) *raspunsRPC {
+	mesaj = bytes.TrimSpace(mesaj)
+	if len(mesaj) == 0 {
+		return eroare(nil, eroareCerere, "mesaj gol")
+	}
+	if mesaj[0] == '[' {
+		return eroare(nil, eroareCerere, "loturile de mesaje nu sunt acceptate (MCP "+VersiuneProtocol+")")
 	}
 	var c cerere
-	if err := json.Unmarshal(linie, &c); err != nil {
-		return s.eroare(nil, eroareJSON, "JSON invalid: "+err.Error())
+	if err := json.Unmarshal(mesaj, &c); err != nil {
+		return eroare(nil, eroareJSON, "JSON invalid: "+err.Error())
 	}
 	notificare := len(c.ID) == 0
 	if c.Method == "" {
 		// un răspuns al clientului la o cerere a serverului: serverul nu
 		// face cereri, deci nu e nimic de făcut
 		if notificare {
-			return s.eroare(nil, eroareCerere, "mesajul nu are „method”")
+			return eroare(nil, eroareCerere, "mesajul nu are „method”")
 		}
 		return nil
 	}
@@ -252,61 +277,74 @@ func (s *server) trateaza(ctx context.Context, linie []byte) error {
 
 	switch c.Method {
 	case "initialize":
-		return s.raspunde(c.ID, map[string]any{
+		return raspuns(c.ID, map[string]any{
 			"protocolVersion": VersiuneProtocol,
 			"capabilities":    map[string]any{"tools": map[string]any{"listChanged": false}},
-			"serverInfo":      map[string]any{"name": "romana", "version": s.versiune},
-			"instructions": "Dicționar local al limbii române, din exportul oficial dexonline. " +
-				"Folosește cauta_cuvant pentru fiecare cuvânt de care nu ești sigur. verifica_text e o trecere mecanică (ortografie, diacritice, cuvinte necunoscute): " +
-				"o rulezi la final, după ce ai citit tu textul pentru sens, ambiguități, acord și coerență, nu în locul acestei lecturi; un raport gol nu înseamnă un text corect. " +
-				"Uneltele verifică doar cuvintele: nu țin locul instrucțiunilor de scriere, corectură sau verificare pe care le ai pentru română. " +
-				"Dacă ai la dispoziție un skill pentru texte în română (de exemplu „romana”), încarcă-l înainte de prima unealtă. " +
-				"Un cuvânt necunoscut nu e neapărat greșit, iar „atestat de DOOM 3” e un indiciu, nu o dovadă.",
+			"serverInfo":      map[string]any{"name": "romana", "version": versiune},
+			"instructions":    set.instructiuni(),
 		})
 	case "ping":
-		return s.raspunde(c.ID, map[string]any{})
+		return raspuns(c.ID, map[string]any{})
 	case "tools/list":
-		return s.raspunde(c.ID, map[string]any{"tools": lista})
+		return raspuns(c.ID, map[string]any{"tools": set.unelte()})
 	case "tools/call":
-		return s.apel(ctx, c)
+		var p struct {
+			Name      string          `json:"name"`
+			Arguments json.RawMessage `json:"arguments"`
+		}
+		if err := json.Unmarshal(c.Params, &p); err != nil || p.Name == "" {
+			return eroare(c.ID, eroareParametri, "parametri invalizi pentru tools/call: lipsește „name”")
+		}
+		r, ok := set.apel(ctx, p.Name, p.Arguments)
+		if !ok {
+			return eroare(c.ID, eroareParametri, "unealtă necunoscută: "+p.Name)
+		}
+		return raspuns(c.ID, r)
 	default:
-		return s.eroare(c.ID, eroareMetoda, "metodă necunoscută: "+c.Method)
+		return eroare(c.ID, eroareMetoda, "metodă necunoscută: "+c.Method)
 	}
 }
 
-func (s *server) apel(ctx context.Context, c cerere) error {
-	var p struct {
-		Name      string          `json:"name"`
-		Arguments json.RawMessage `json:"arguments"`
-	}
-	if err := json.Unmarshal(c.Params, &p); err != nil || p.Name == "" {
-		return s.eroare(c.ID, eroareParametri, "parametri invalizi pentru tools/call: lipsește „name”")
-	}
+// dictionar e setul de unelte de pe stdio, peste dicționarul local.
+type dictionar struct{ u Unelte }
+
+func (dictionar) unelte() []unealta { return lista }
+
+func (dictionar) instructiuni() string {
+	return "Dicționar local al limbii române, din exportul oficial dexonline. " +
+		"Folosește cauta_cuvant pentru fiecare cuvânt de care nu ești sigur. verifica_text e o trecere mecanică (ortografie, diacritice, cuvinte necunoscute): " +
+		"o rulezi la final, după ce ai citit tu textul pentru sens, ambiguități, acord și coerență, nu în locul acestei lecturi; un raport gol nu înseamnă un text corect. " +
+		"Uneltele verifică doar cuvintele: nu țin locul instrucțiunilor de scriere, corectură sau verificare pe care le ai pentru română. " +
+		"Dacă ai la dispoziție un skill pentru texte în română (de exemplu „romana”), încarcă-l înainte de prima unealtă. " +
+		"Un cuvânt necunoscut nu e neapărat greșit, iar „atestat de DOOM 3” e un indiciu, nu o dovadă."
+}
+
+func (d dictionar) apel(ctx context.Context, nume string, argumente json.RawMessage) (map[string]any, bool) {
 	var camp string
-	switch p.Name {
+	switch nume {
 	case "cauta_cuvant":
 		camp = "cuvant"
 	case "verifica_text":
 		camp = "text"
 	default:
-		return s.eroare(c.ID, eroareParametri, "unealtă necunoscută: "+p.Name)
+		return nil, false
 	}
 
-	if gata, mesaj := s.u.Stare(); !gata {
+	if gata, mesaj := d.u.Stare(); !gata {
 		if mesaj == "" {
 			mesaj = "baza se pregătește"
 		}
-		return s.raspunde(c.ID, rezultatEroare(mesaj))
+		return rezultatEroare(mesaj), true
 	}
 
-	valoare, ok := argument(p.Arguments, camp)
+	valoare, ok := argument(argumente, camp)
 	if !ok {
-		return s.raspunde(c.ID, rezultatEroare(fmt.Sprintf("argumentul „%s” lipsește sau nu e un text nevid", camp)))
+		return rezultatEroare(fmt.Sprintf("argumentul „%s” lipsește sau nu e un text nevid", camp)), true
 	}
 
 	var (
-		raspuns any
-		err     error
+		rezultat any
+		err      error
 	)
 	func() {
 		// o unealtă care intră în panică nu trebuie să oprească serverul
@@ -317,20 +355,20 @@ func (s *server) apel(ctx context.Context, c cerere) error {
 		}()
 		if camp == "cuvant" {
 			var r dex.Raspuns
-			if r, err = s.u.Cauta(ctx, valoare); err == nil {
-				raspuns = normalizeazaRaspuns(r)
+			if r, err = d.u.Cauta(ctx, valoare); err == nil {
+				rezultat = normalizeazaRaspuns(r)
 			}
 		} else {
 			var r verifica.Raport
-			if r, err = s.u.Verifica(ctx, valoare); err == nil {
-				raspuns = normalizeazaRaport(r).Primele(MaxObservatii)
+			if r, err = d.u.Verifica(ctx, valoare); err == nil {
+				rezultat = normalizeazaRaport(r).Primele(MaxObservatii)
 			}
 		}
 	}()
 	if err != nil {
-		return s.raspunde(c.ID, rezultatEroare(err.Error()))
+		return rezultatEroare(err.Error()), true
 	}
-	return s.raspunde(c.ID, rezultatOk(raspuns))
+	return rezultatOk(rezultat), true
 }
 
 // argument scoate câmpul-text din obiectul de argumente; false dacă lipsește,

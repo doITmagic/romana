@@ -1,0 +1,14 @@
+# Doar codul Go și fișierele de referință ale skillului intră în imagine.
+*
+!go.mod
+!go.sum
+!*.go
+!cmd/
+!dex/
+!baza/
+!lint/
+!mcp/
+!reguli/
+!verifica/
+!skills/romana/references/
+**/*_test.go
