@@ -314,3 +314,25 @@ func TestRunda4Lint(t *testing.T) {
 		t.Errorf("„ ?” urmat de propoziție nouă trebuie semnalat: %v", f)
 	}
 }
+
+// Runda a cincea: excepțiile pentru semnul pomenit și pentru ISBD sunt înguste.
+func TestRunda5Lint(t *testing.T) {
+	// textul și fragmentul care trebuie semnalat RO-TIP-068
+	for text, fragment := range map[string]string{
+		"Vino ! zise el, pentru că sunt aici.":                     " !",
+		"Cine ești ? nu știu, pentru că sunt aici.":                " ?",
+		"Rezultatul : Ion a câștigat, 2020 a fost bun.":            " :",
+		"Exemplu : Ana, 1990 a fost un an bun.":                    " :",
+		"Cluj : Dacia, 1990. Ce faci ? Bine, pentru că sunt aici.": " ?", // ISBD-ul scutește doar „ :”
+	} {
+		if f := fragmente(text); f[fragment] != "RO-TIP-068" {
+			t.Errorf("%q: aștept RO-TIP-068 pe %q, am %v", text, fragment, f)
+		}
+	}
+	for _, text := range []string{"Semnul ! poate marca, iar semnele ? arată, iar marcate cu ! sunt altele.",
+		"București : Editura Științifică și Enciclopedică, 1985.", "Iași : Polirom, 2004, ISBN 973-0-00000-0"} {
+		if f := fragmente(text); len(f) != 0 {
+			t.Errorf("%q: nicio observație, am %v", text, f)
+		}
+	}
+}

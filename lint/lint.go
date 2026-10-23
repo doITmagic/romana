@@ -443,7 +443,7 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 		// conducere dintr-un cuprins („Capitolul . . . 5”).
 		for _, m := range reSpPct.FindAllStringSubmatchIndex(taiat, -1) {
 			sp0, pc0, pc1 := m[4], m[6], m[7]
-			if (indentat && pareCod(taiat)) || punctDeConducere(taiat, pc0) || semnPomenit(taiat, pc0) || reISBD.MatchString(taiat) {
+			if (indentat && pareCod(taiat)) || punctDeConducere(taiat, pc0) || semnPomenit(taiat, sp0, pc0) || colonISBD(taiat, pc0) {
 				continue
 			}
 			add(Observatie{
@@ -481,20 +481,31 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 	}
 }
 
-// semnPomenit: „!” sau „?” urmat de spațiu și de o literă mică nu încheie
-// propoziția: e semnul pomenit („Semnul ! poate marca…”).
-func semnPomenit(linie string, p int) bool {
-	if c := linie[p]; c != '!' && c != '?' {
+// semnPomenit: semnul de la p e numit, nu folosit („Semnul ! poate marca…”,
+// „marcate cu ! modificările”): cuvântul dinaintea spațiului (de la sp) e unul
+// din cuvintePentruSemn. O replică („Vino ! zise el”) rămâne greșeală.
+func semnPomenit(linie string, sp, p int) bool {
+	if c := linie[p]; c != '!' && c != '?' && c != ':' && c != ';' {
 		return false
 	}
-	urm := strings.TrimLeft(linie[p+1:], " ")
-	r, _ := utf8.DecodeRuneInString(urm)
-	return len(urm) < len(linie[p+1:]) && unicode.IsLower(r)
+	inainte := strings.Fields(linie[:sp])
+	return len(inainte) > 0 && cuvintePentruSemn[strings.ToLower(inainte[len(inainte)-1])]
 }
 
-// reISBD: descrierea bibliografică „Loc : Editură, an”, cu spațiu înainte de
-// două-puncte prin convenție.
-var reISBD = regexp.MustCompile(`\p{Lu}[\p{L}-]+ : \p{Lu}[^\n]*,\s*\d{4}`)
+var cuvintePentruSemn = map[string]bool{"semnul": true, "semnele": true, "semn": true, "simbolul": true,
+	"caracterul": true, "cu": true, "prin": true}
+
+// reISBD: descrierea bibliografică de la începutul rândului, „Loc : Editură,
+// an”, cu spațiu înainte de două-puncte prin convenție. Editura e scrisă cu
+// majuscule (și legăturile ei), iar după an urmează sfârșitul, punctuație sau
+// ISBN-ul.
+var reISBD = regexp.MustCompile(`^\s*(?:[-–•]\s*)?\p{Lu}[\p{L}.-]*(?:[ -]\p{Lu}[\p{L}.-]*)* (:) \p{Lu}[\p{L}.-]*(?: (?:\p{Lu}[\p{L}.-]*|și|de|a|al|pentru))*, \d{4}(?:[.;,]|\s*$|\s+ISBN)`)
+
+// colonISBD: două-punctele de la p sunt cele dintr-o descriere bibliografică.
+func colonISBD(linie string, p int) bool {
+	m := reISBD.FindStringSubmatchIndex(linie)
+	return m != nil && p == m[2]
+}
 
 // pareCod: un rând cu semne care apar în cod și rar în proză.
 func pareCod(linie string) bool {
