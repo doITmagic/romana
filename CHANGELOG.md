@@ -2,9 +2,60 @@
 
 ## Neversionat
 
+A doua fază: unealta de dicționar. Skillul și binarul merg și împreună, și separat.
+
+### Binarul `romana`
+
+- **Comenzile:**
+  - `cauta <cuvânt>`: de la orice formă flexionată la leme, cu partea de vorbire, formele cu etichetă, dicționarele care atestă cuvântul și definițiile pe care licența le permite;
+  - `verifica [fișier]`: cuvintele care nu sunt în dicționar și greșelile sigure;
+  - `mcp`: server MCP pe stdio, cu `cauta_cuvant` și `verifica_text`;
+  - `import [fișier]` și `update`: baza;
+  - `verifica --hook`: pentru hook-ul PostToolUse din Claude Code.
+
+  Toate au `--json` și `--offline`.
+- **Datele** vin din exportul oficial dexonline (GPL v2+). Exportul și baza nu se distribuie: fiecare utilizator își construiește baza local, într-un minut.
+  - La prima folosire, binarul descarcă singur exportul (~360 MB).
+  - Verifică actualizări cel mult o dată pe săptămână, cu cerere condiționată, într-un proces separat. După o descărcare eșuată face o pauză de o oră, iar `romana import` o pornește imediat.
+  - Afișează doar definițiile surselor care permit asta (DEX ’98, DEX ’96). Celelalte apar doar ca nume, în lista de surse.
+- **DOOM 3:** câmpul `doom3` spune dacă dicționarul ortografic al Academiei atestă lema. E un indiciu, nu o dovadă.
+  - Când DOOM 3 nu atestă o lemă, dar definiția ei trimite la una atestată („DEGIVRA vb. I v. dejivra.”), `nota` spune ce se recomandă.
+  - Dacă forma e atestată ca alt cuvânt (un omonim), nota cere judecata după sens.
+- **Greșelile sigure** (linterul):
+  - ș și ț cu sedilă (RO-TIP-027);
+  - grafia veche cu „î” în interior și „sînt” (RO-TIP-128);
+  - „vroiam” (RO-GRA-067);
+  - spațiile înaintea punctuației și spațiul dublu.
+
+  Nu se ating:
+  - codul, URL-urile, HTML-ul și front matter-ul;
+  - formulele și tabelele;
+  - citatele;
+  - numele proprii, cuvintele străine și compusele cu prefixoide („videoînregistrare”).
+- **`verifica_text`** spune în fiecare răspuns ce nu verifică: acordul, sensul, coerența, punctuația și stilul. Un raport gol nu înseamnă un text corect.
+- **Distribuirea:**
+  - binare gata compilate pentru Linux, macOS și Windows (amd64 și arm64), cu `SHA256SUMS`;
+  - `install.sh`, fără Go;
+  - sau `go install github.com/doITmagic/romana/cmd/romana@latest`.
+- **Pluginul pentru Claude Code** declară serverul MCP (`.mcp.json`) și hook-ul (`hooks/hooks.json`). Uneltele se declară doar de citire, așa că le cheamă și Codex fără aprobare, chiar într-un sandbox doar de citire.
+
+### Skillul
+
+- **s6** („Caută cuvântul, nu-l presupune”) numește uneltele și ordinea lor: MCP, apoi CLI, apoi metoda de până acum. Mai spune:
+  - un raport gol nu scutește de treceri;
+  - ce face agentul cu `nota`.
+
+  Fără unelte, skillul merge ca înainte; testul de independență trece.
 - **Fișierele mari din `references/` sparte pe subiecte**, ca agentul să citească mai puțin: `gramatica.md` → plus `gramatica-forme.md` și `gramatica-scriere.md`; `tipografie.md` → plus `majuscule-si-nume.md`; `ce-nu-e-greseala.md` → plus `ce-nu-e-greseala-stil.md`; `prieteni-falsi-si-calcuri.md` → plus `calcuri.md`. ID-urile regulilor rămân aceleași.
+
+### Evals și unelte
+
+- **Evals:**
+  - brațul „cu skill + MCP” (`--mcp`, pe Claude și pe Codex), comparat cu brațul „cu skill”;
+  - consumul în tokeni pe rulare (tabelul „Consum”);
+  - pornirea skillului, măsurată și pe Codex.
 - **Validatorul** limitează mărimea: `SKILL.md` până la 6.000 de cuvinte, fiecare fișier din `references/` până la 6.500.
-- **Evals:** consumul în tokeni pe rulare (tabelul „Consum”) și pornirea skillului măsurată și pe Codex.
+- **Paza** blochează fișierele de bază de date și arhivele (`.sqlite`, `.db`, `.sql`, `.gz`).
 - **Corectat:** v0.1.0 avea de fapt 854 de reguli, dintre care 289 de normă (RO-SEM-247 coborâtă la recomandare și RO-CAL-507 nouă, ambele intrate înaintea tagului); README-ul și intrarea de mai jos spuneau 853 și 290.
 
 ## 0.1.0 (2026-10-22)
