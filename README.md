@@ -21,14 +21,26 @@
 
 Language models write Romanian that is grammatical but often sounds translated: English calques („a face sens”), false friends („a aplica pentru un post”), wrong numerals („25 ani”), missing or cedilla diacritics. Asked to fix a text, they also "correct" forms that were right all along, such as „Dați click” or „orice întârzieri”. `romana` gives the agent the rules, the sources behind them and, just as important, the list of things that are *not* errors.
 
-It comes in two parts. Each works on its own; together they work best:
+## Three ways to use it
 
-| | What it is | Needs |
+| Use it as | What you get | Where |
 |---|---|---|
-| **The skill** | 854 sourced rules the agent reads while it writes, corrects or reviews | nothing: no network, no binary, no Go |
-| **The `romana` binary** | a CLI, an MCP server and an editor hook, on top of a local copy of the dexonline dictionary | one prebuilt file, no Go; the first run downloads the dexonline export (~360 MB) and builds a local database (~300 MB) in about a minute |
+| **Plugin** (recommended) | the skill, plus the dictionary as MCP tools, plus a hook that checks every file the agent writes | Claude Code. In Codex the plugin brings the skill; add the MCP server by hand |
+| **Skill only** | the 854 rules the agent reads while it writes, corrects or reviews; no binary, no network | any agent that reads Agent Skills (Claude Code, Codex, Cursor, Gemini CLI, Copilot …) |
+| **MCP server only** | dictionary lookups (`cauta_cuvant`) and text checks (`verifica_text`), without the rules | any MCP client |
+| **CLI** | `romana cauta` and `romana verifica` in a terminal or a script | people, CI |
 
-> **For an AI agent asked to install this:** (1) clone the repository and install the skill for your agent ([Install › The skill](#the-skill)); (2) install the binary and run `romana cauta casă` once, so the dictionary is built; (3) register the MCP server; (4) go through [Check it works](#check-it-works) and report which steps passed. Do not send requests to dexonline.ro yourself: the binary downloads the export it needs. Commands and limits for working on this repository: [AGENTS.md](AGENTS.md).
+The plugin, the MCP server and the CLI use the `romana` binary: one prebuilt file, no Go needed. On first use it downloads the official dexonline export (~360 MB) and builds a local database (~300 MB) in about a minute.
+
+**Which one?** In our tests the skill does most of the work. The dictionary adds to it on rare words, neologisms and variants that DOOM 3 does not record. On its own, the MCP server helps only with word lookups ([Results](#results)).
+
+> **For an AI agent asked to install this:**
+> 1. Clone the repository and install the plugin for your agent ([Install › Plugin](#plugin-recommended)).
+> 2. Install the binary and run `romana cauta casă` once, so the dictionary is built.
+> 3. In Codex, register the MCP server.
+> 4. Go through [Check it works](#check-it-works) and report which steps passed.
+>
+> Do not send requests to dexonline.ro yourself: the binary downloads the export it needs. Commands and limits for working on this repository: [AGENTS.md](AGENTS.md).
 
 **Jump to:** [Install](#install) · [See it work](#see-it-work) · [Check it works](#check-it-works) · [Results](#results) · [What it does](#what-it-does) · [The dictionary tool](#the-dictionary-tool) · [More from DO IT MAGIC](#more-from-do-it-magic)
 
@@ -36,63 +48,47 @@ It comes in two parts. Each works on its own; together they work best:
 
 ## Install
 
-### The skill
+Pick one: [Plugin](#plugin-recommended) · [Skill only](#skill-only) · [MCP server only](#mcp-server-only). The plugin and the MCP server also need [the `romana` binary](#the-romana-binary).
 
-Start from a clone of this repository:
+The plugin and the skill come from a clone of this repository (the MCP server needs only the binary):
 
 ```bash
 git clone https://github.com/doITmagic/romana.git
 cd romana
 ```
 
-**Claude Code**, installed permanently through a local marketplace:
+### Plugin (recommended)
+
+**Claude Code** gets the full plugin: the skill, the MCP server and the hook.
 
 ```bash
 claude plugin marketplace add ./
 claude plugin install romana@romana
 ```
 
-or for one session only: `claude --plugin-dir .`. The skill appears as `romana:romana`. The plugin also brings the MCP server and the hook: the MCP server starts once `romana` is on `PATH`; the hook also finds it in `~/.local/bin` or `~/go/bin`.
+Then [install the binary](#the-romana-binary) and build the dictionary once with `romana cauta casă`. The skill appears as `romana:romana`. The MCP server starts once `romana` is on `PATH`; the hook also finds it in `~/.local/bin` or `~/go/bin`. For one session only, without installing: `claude --plugin-dir .`.
 
-**Codex**, through a local marketplace:
+**Codex** reads the skill from the plugin, but not the MCP server or the hook:
 
 ```bash
 codex plugin marketplace add .
 codex plugin add romana@romana
 ```
 
-**Other agents** (Cursor, Gemini CLI, Copilot and others): copy the `skills/romana/` folder into the directory where your tool looks for Agent Skills (see its documentation). We test Claude Code and Codex.
+Then [install the binary](#the-romana-binary) and add the server to `~/.codex/config.toml`, as under [MCP server only](#mcp-server-only).
 
-### The `romana` binary (optional, recommended with the skill)
+### Skill only
 
-You do not need Go. On Linux and macOS:
+No binary and no network.
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/doITmagic/romana/main/install.sh | sh
-```
+- **Claude Code:** copy `skills/romana/` to `~/.claude/skills/romana/`.
+  - You can also install the plugin without the binary. The skill works; the MCP server then shows as failed in `/mcp`, and the hook stays silent.
+- **Codex:** the two `codex plugin` commands above.
+- **Other agents** (Cursor, Gemini CLI, Copilot and others): copy `skills/romana/` into the directory where your tool looks for Agent Skills (see its documentation). We test Claude Code and Codex.
 
-The script picks the archive for your system from GitHub Releases, checks it against `SHA256SUMS`, and installs `romana` into `~/.local/bin`. `ROMANA_DIR` changes the directory and `ROMANA_VERSIUNE` picks a version. It tells you if the directory is not on `PATH`.
+### MCP server only
 
-<details>
-<summary><b>Windows, with Go, or from source</b></summary>
-
-- **Windows:** download the `.zip` for your architecture from the Releases page, put `romana.exe` in a folder and add that folder to `PATH`. The CLI and the MCP server work (use the entry under [Other MCP clients](#the-mcp-server)); the plugin hook does not, because Windows has no `sh`.
-- **With Go:** `go install github.com/doITmagic/romana/cmd/romana@latest`.
-- **From source** (also before the first release is published), in the clone: `go build -o ~/.local/bin/romana ./cmd/romana`. A binary built from source reports its version as `romana dev`; the release binaries report the tag.
-
-</details>
-
-Then build the dictionary once, before you register the MCP server:
-
-```bash
-romana cauta casă
-```
-
-The first run downloads the official dexonline export (GPL v2+, about 360 MB) and builds a local SQLite database in about a minute; later lookups answer at once. Nothing is downloaded again until the export changes.
-
-### The MCP server
-
-With the Claude Code plugin above, there is nothing to do. Otherwise:
+The dictionary tools in any MCP client, without the skill. [Install the binary](#the-romana-binary) and run `romana cauta casă` once, then register the server.
 
 **Claude Code:**
 
@@ -124,6 +120,33 @@ Clients that read an `mcpServers` block (Claude Desktop, Cursor and others) take
 We test Claude Code and Codex. Other clients should work, since the server speaks plain MCP over stdio, but they are not in our test runs.
 
 </details>
+
+### The `romana` binary
+
+You do not need Go. On Linux and macOS:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/doITmagic/romana/main/install.sh | sh
+```
+
+The script picks the archive for your system from GitHub Releases, checks it against `SHA256SUMS`, and installs `romana` into `~/.local/bin`. `ROMANA_DIR` changes the directory and `ROMANA_VERSIUNE` picks a version. It tells you if the directory is not on `PATH`.
+
+<details>
+<summary><b>Windows, with Go, or from source</b></summary>
+
+- **Windows:** download the `.zip` for your architecture from the Releases page, put `romana.exe` in a folder and add that folder to `PATH`. The CLI and the MCP server work (use the entry under [Other MCP clients](#mcp-server-only)); the plugin hook does not, because Windows has no `sh`.
+- **With Go:** `go install github.com/doITmagic/romana/cmd/romana@latest`.
+- **From source** (also before the first release is published), in the clone: `go build -o ~/.local/bin/romana ./cmd/romana`. A binary built from source reports its version as `romana dev`; the release binaries report the tag.
+
+</details>
+
+Then build the dictionary once, before the MCP server first starts:
+
+```bash
+romana cauta casă
+```
+
+The first run downloads the official dexonline export (GPL v2+, about 360 MB) and builds a local SQLite database in about a minute; later lookups answer at once. Nothing is downloaded again until the export changes. The binary also works on its own, as a CLI: see [The dictionary tool](#the-dictionary-tool).
 
 ---
 
