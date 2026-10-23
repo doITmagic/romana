@@ -68,14 +68,14 @@ claude plugin install romana@romana
 
 Then [install the binary](#the-romana-binary) and build the dictionary once with `romana cauta casă`. The skill appears as `romana:romana`. The MCP server starts once `romana` is on `PATH`; the hook also finds it in `~/.local/bin` or `~/go/bin`. For one session only, without installing: `claude --plugin-dir .`.
 
-**Codex** reads the skill from the plugin, but not the MCP server or the hook:
+**Codex** reads the skill from the plugin; the plugin's MCP server entry and its hook are only for Claude Code:
 
 ```bash
 codex plugin marketplace add .
 codex plugin add romana@romana
 ```
 
-Then [install the binary](#the-romana-binary) and add the server to `~/.codex/config.toml`, as under [MCP server only](#mcp-server-only).
+Then [install the binary](#the-romana-binary) and add the server by hand to `~/.codex/config.toml`, as under [MCP server only](#mcp-server-only).
 
 ### Skill only
 
@@ -134,7 +134,7 @@ The script picks the archive for your system from GitHub Releases, checks it aga
 <details>
 <summary><b>Windows, with Go, or from source</b></summary>
 
-- **Windows:** download the `.zip` for your architecture from the Releases page, put `romana.exe` in a folder and add that folder to `PATH`. The CLI and the MCP server work (use the entry under [Other MCP clients](#mcp-server-only)); the plugin hook does not, because Windows has no `sh`.
+- **Windows:** download the `.zip` for your architecture from the Releases page, put `romana.exe` in a folder and add that folder to `PATH`. The CLI and the MCP server work (use the entry under [Other MCP clients](#mcp-server-only)); the plugin hook does not run on Windows, because Windows has no `sh`.
 - **With Go:** `go install github.com/doITmagic/romana/cmd/romana@latest`.
 - **From source** (also before the first release is published), in the clone: `go build -o ~/.local/bin/romana ./cmd/romana`. A binary built from source reports its version as `romana dev`; the release binaries report the tag.
 
@@ -231,13 +231,26 @@ The skill meets every threshold on Claude. Two weak spots remain: on real press 
 
 ### The skill, with and without the dictionary tool
 
-<!-- MCP-RESULTS -->
+From the final run on 23 October 2026: the 42 cases where the dictionary could help or hurt (12 reviews where a form is right or wrong depending on context, 13 corrections, 17 correct forms that look wrong), two runs per case, in four arms. Averages per run; lower is better.
+
+| | No skill, no dictionary | Dictionary only | Skill only | Skill + dictionary |
+|---|---|---|---|---|
+| Claude: false positives | 23 | 13.5 | 7.5 | **0** |
+| Claude: missed | 14.5 | 12.5 | **1** | **1** |
+| Codex: false positives | 36 | 41 | **1.5** | **1.5** |
+| Codex: missed | 6 | 6.5 | **2.5** | 3 |
+
+On the 20 word cases (variants, wrong forms such as „să continuie”, and words the dictionary does not have, which the agent must leave alone and list as unverified), missed per run: Claude 5.5 / 3.5 / 3.5 / **1.5**, Codex 5.5 / 4 / 1 / **0**, in the same order. No arm flagged a correct form there.
+
+What it means: the skill does most of the work. The dictionary alone helps little, and on Codex it adds false positives. Together they give the best result on Claude and on words; on Codex they are level with the skill alone on the 42 cases (half a missed error more, on average).
+
+The first measurement with the dictionary was worse than the skill alone: Claude missed 6 problems instead of 0.5. The saved answers showed why: with two tools that "check Romanian text", the skill did not load in 19 of 84 runs, and the dictionary checks words, not meaning. The skill's description now says it applies when dictionary tools are present, and the server's instructions tell the agent to load a Romanian writing skill first. Since then, Claude loads the skill in every run.
 
 ### What these numbers are not
 
 They come from this project's own test set, with one or two runs per case, and they hold for the models listed above. There is no official benchmark yet for an agent that writes Romanian by the norms and avoids hypercorrection. A run on RONACC, the academic corpus for Romanian grammatical error correction, is in progress; its reference pairs are checked against DOOM 3 first, because some of them are stricter than the norm.
 
-The full tables, per engine and per group, are in [`evals/RAPORT.md`](evals/RAPORT.md) and [`evals/RAPORT-MCP.md`](evals/RAPORT-MCP.md).
+The full tables, per engine and per group, are in [`evals/RAPORT.md`](evals/RAPORT.md) (skill vs no skill), [`evals/RAPORT-MCP.md`](evals/RAPORT-MCP.md) (four arms, including 4 of the word cases) and [`evals/RAPORT-CUVINTE.md`](evals/RAPORT-CUVINTE.md) (the other 16 word cases).
 
 ---
 
@@ -353,7 +366,7 @@ The skill is self-contained: it needs no network, no local files and no other to
 
 ## How it is tested
 
-`evals/` holds the test cases: 146 public ones, written for this project or taken from CC BY texts, plus a private set of real press and literary texts that stays outside the repository. Almost every case runs on two engines (Claude and Codex), with and without the skill; the 22 cases about when the skill starts run only with the skill. For the dictionary tool, cases run with the skill alone and with the skill plus the MCP server. Scoring is mechanical:
+`evals/` holds the test cases: 166 public ones (146, plus 20 about single words), written for this project or taken from CC BY texts, plus a private set of real press and literary texts that stays outside the repository. Almost every case runs on two engines (Claude and Codex), with and without the skill; the 22 cases about when the skill starts run only with the skill. For the dictionary tool, cases run in four arms: no skill, dictionary only, skill only, and skill plus the MCP server. Scoring is mechanical:
 
 - **false positives:** correct text that was changed or flagged;
 - **missed:** real errors left in place;
@@ -363,7 +376,7 @@ The groups include clean texts, which must come out unchanged, correct forms tha
 
 ```bash
 go run ./tools/evals/cmd --motor amandoua --ambele --raport evals/RAPORT.md     # skill vs no skill
-go run ./tools/evals/cmd --motor amandoua --cu-skill --mcp --raport evals/RAPORT-MCP.md   # + dictionary tool
+go run ./tools/evals/cmd --motor amandoua --ambele --mcp --repetari 2 --raport evals/RAPORT-MCP.md   # four arms
 ```
 
 The binary itself has its own tests (`go test -race ./...`), including runs against the real database when it is present, and it was reviewed in six rounds before 0.2.0, each finding checked by a second reviewer that tried to refute it.
@@ -380,6 +393,8 @@ The skill makes the agent read rules, so it costs tokens. Measured on 23 October
 | Codex | 18,155 | 129,001 | 132,521 |
 
 A large part of the input is read from the prompt cache, which is billed at a lower rate: about 35,000 tokens per run on Claude and 96,000 on Codex. Output grows much less: on Claude, from 677 to 1,872 tokens.
+
+In the final 0.2.0 run (46 cases, two runs each, [`evals/RAPORT-MCP.md`](evals/RAPORT-MCP.md)), the average input per run went from 4,369 to 77,698 tokens on Claude and from 19,048 to 162,816 on Codex with the skill; output went from 564 to 1,444 and from 212 to 666. With the dictionary tool as well, Claude's input changes by −16% to +85% depending on the group.
 
 What keeps the cost down:
 - The agent loads only `SKILL.md` up front and opens a reference file only when the text needs it.

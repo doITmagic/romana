@@ -24,7 +24,8 @@ The skill needs no network and no tool. The binary downloads the dexonline expor
 ## Tests
 
 - [Results, skill vs no skill](evals/RAPORT.md)
-- [Results, skill vs skill + dictionary tool](evals/RAPORT-MCP.md)
+- [Results in four arms: no skill, dictionary only, skill only, skill + dictionary](evals/RAPORT-MCP.md)
+- [Results on single words, four arms](evals/RAPORT-CUVINTE.md)
 - [Test case sources and licenses](evals/SURSE.md)
 
 ## Optional
