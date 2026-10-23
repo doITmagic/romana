@@ -1,5 +1,11 @@
 # Jurnal de modificări
 
+## 0.2.1 (2026-10-23)
+
+- **Skillul pornește singur și în claude.ai.** Descrierea spune acum explicit să fie folosit la orice cerere de scris, corectat, verificat sau tradus în română, oricât de scurtă. Într-o conversație nouă din claude.ai, la o corectură scurtă, skillul nu pornea, iar modelul „corecta” forme corecte („unul din”, „prețuri scumpe”, „click”). Testele de pornire, pe Claude: 22 din 22 la cazurile în care trebuie să pornească, 0 din 22 la cele în care nu.
+- **Instalarea direct din GitHub, fără clonare:** `claude plugin marketplace add doITmagic/romana` și `codex plugin marketplace add doITmagic/romana`. În claude.ai, prin „Add marketplace” → `doITmagic/romana`; în ChatGPT, prin arhiva `romana-plugin.zip`.
+- **Release-ul are și `romana-plugin.zip`**, cu skillul, fără serverul MCP și hook-ul, pentru aplicațiile care încarcă un plugin ca arhivă.
+
 ## 0.2.0 (2026-10-23)
 
 A doua fază: unealta de dicționar. Skillul și binarul merg și împreună, și separat.

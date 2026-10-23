@@ -25,7 +25,7 @@ Language models write Romanian that is grammatical but often sounds translated: 
 
 | Use it as | What you get | Where |
 |---|---|---|
-| **Plugin** (recommended) | the skill, plus the dictionary as MCP tools, plus a hook that checks every file the agent writes | Claude Code. In Codex the plugin brings the skill; add the MCP server by hand |
+| **Plugin** (recommended) | the skill, plus the dictionary as MCP tools, plus a hook that checks every file the agent writes | Claude Code. In Codex the plugin brings the skill; add the MCP server by hand. In claude.ai and ChatGPT it brings the skill only |
 | **Skill only** | the 854 rules the agent reads while it writes, corrects or reviews; no binary, no network | any agent that reads Agent Skills (Claude Code, Codex, Cursor, Gemini CLI, Copilot …) |
 | **MCP server only** | dictionary lookups (`cauta_cuvant`) and text checks (`verifica_text`), without the rules | any MCP client |
 | **CLI** | `romana cauta` and `romana verifica` in a terminal or a script | people, CI |
@@ -35,7 +35,7 @@ The plugin, the MCP server and the CLI use the `romana` binary: one prebuilt fil
 **Which one?** In our tests the skill does most of the work. The dictionary adds to it on rare words, neologisms and variants that DOOM 3 does not record. On its own, the MCP server helps only with word lookups ([Results](#results)).
 
 > **For an AI agent asked to install this:**
-> 1. Clone the repository and install the plugin for your agent ([Install › Plugin](#plugin-recommended)).
+> 1. Install the plugin straight from GitHub, no clone needed: `claude plugin marketplace add doITmagic/romana`, then `claude plugin install romana@romana` (in Codex: `codex plugin marketplace add doITmagic/romana`, then `codex plugin add romana@romana`).
 > 2. Install the binary and run `romana cauta casă` once, so the dictionary is built.
 > 3. In Codex, register the MCP server.
 > 4. Go through [Check it works](#check-it-works) and report which steps passed.
@@ -50,40 +50,38 @@ The plugin, the MCP server and the CLI use the `romana` binary: one prebuilt fil
 
 Pick one: [Plugin](#plugin-recommended) · [Skill only](#skill-only) · [MCP server only](#mcp-server-only). The plugin and the MCP server also need [the `romana` binary](#the-romana-binary).
 
-The plugin and the skill come from a clone of this repository (the MCP server needs only the binary):
-
-```bash
-git clone https://github.com/doITmagic/romana.git
-cd romana
-```
-
 ### Plugin (recommended)
 
 **Claude Code** gets the full plugin: the skill, the MCP server and the hook.
 
 ```bash
-claude plugin marketplace add ./
+claude plugin marketplace add doITmagic/romana
 claude plugin install romana@romana
 ```
 
-Then [install the binary](#the-romana-binary) and build the dictionary once with `romana cauta casă`. The skill appears as `romana:romana`. The MCP server starts once `romana` is on `PATH`; the hook also finds it in `~/.local/bin` or `~/go/bin`. For one session only, without installing: `claude --plugin-dir .`.
+Then [install the binary](#the-romana-binary) and build the dictionary once with `romana cauta casă`. The skill appears as `romana:romana`. The MCP server starts once `romana` is on `PATH`; the hook also finds it in `~/.local/bin` or `~/go/bin`. You can also just give the agent the address of this repository and ask it to install the plugin: it runs the same commands. From a clone, for one session only, without installing: `claude --plugin-dir .`.
 
 **Codex** reads the skill from the plugin; the plugin's MCP server entry and its hook are only for Claude Code:
 
 ```bash
-codex plugin marketplace add .
+codex plugin marketplace add doITmagic/romana
 codex plugin add romana@romana
 ```
 
 Then [install the binary](#the-romana-binary) and add the server by hand to `~/.codex/config.toml`, as under [MCP server only](#mcp-server-only).
 
+**claude.ai** (web and desktop app): Customize → Plugins → Add → **Add marketplace** → *Add from a repository* → `doITmagic/romana` → Sync, then **Add** on Romana. With *Sync automatically* on, new versions arrive by themselves. You get the skill; the MCP server and the hook need the local binary, so they do not run there.
+
+**ChatGPT** (plugins for Codex): Plugins → Add → *Upload plugin archive*, with [`romana-plugin.zip`](https://github.com/doITmagic/romana/releases/latest/download/romana-plugin.zip) from the latest release, then *Install*. The archive holds the skill only, without the MCP server and the hook.
+
 ### Skill only
 
 No binary and no network.
 
-- **Claude Code:** copy `skills/romana/` to `~/.claude/skills/romana/`.
+- **Claude Code:** copy `skills/romana/` from a clone (`git clone https://github.com/doITmagic/romana.git`) to `~/.claude/skills/romana/`.
   - You can also install the plugin without the binary. The skill works; the MCP server then shows as failed in `/mcp`, and the hook stays silent.
 - **Codex:** the two `codex plugin` commands above.
+- **claude.ai and ChatGPT:** the plugin brings only the skill anyway; see above.
 - **Other agents** (Cursor, Gemini CLI, Copilot and others): copy `skills/romana/` into the directory where your tool looks for Agent Skills (see its documentation). We test Claude Code and Codex.
 
 ### MCP server only

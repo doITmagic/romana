@@ -49,9 +49,27 @@ jobs:
           path: dist/*
           if-no-files-found: error
 
+  plugin:
+    name: arhiva pluginului (ChatGPT și alte aplicații care încarcă un .zip)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: Construiește romana-plugin.zip
+        run: |
+          set -eu
+          mkdir -p dist
+          # Doar skillul: serverul MCP și hook-ul au nevoie de binarul local, care nu rulează în browser.
+          zip -q -r dist/romana-plugin.zip plugin.json skills/romana LICENSE README.md
+          unzip -l dist/romana-plugin.zip | tail -1
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: romana-plugin
+          path: dist/*
+          if-no-files-found: error
+
   publica:
     name: publică în GitHub Release
-    needs: construieste
+    needs: [construieste, plugin]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -64,7 +82,7 @@ jobs:
         working-directory: dist
         run: |
           set -eu
-          sha256sum romana_* > SHA256SUMS
+          sha256sum romana_* romana-plugin.zip > SHA256SUMS
           cat SHA256SUMS
       - name: Publică
         env:
