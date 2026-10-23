@@ -1,0 +1,33 @@
+name: actiune
+
+# Testează acțiunea GitHub (action.yml) pe un fișier cu greșeli sigure
+# cunoscute. Descarcă doar binarul din GitHub Releases; nicio cerere către
+# dexonline.ro.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ["action.yml", ".github/workflows/actiune.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: Fișierul de test
+        run: |
+          printf '%s\n' \
+            'Aşa cum ştim, ţara are nevoie de reforme și de oameni care să le ducă la capăt.' \
+            'Nu sînt sigur că vroiam să vin , dar am venit pentru că este important.' \
+            'Dacă nu facem asta acum, nu o mai facem niciodată, iar copiii noștri vor plăti prețul.' \
+            > test-actiune.md
+      - name: Acțiunea
+        id: romana
+        uses: ./
+        with:
+          files: "test-actiune.md"
+      - name: Rezultatul
+        run: |
+          test "${{ steps.romana.outputs.errors }}" = "6" || { echo "aștept 6 greșeli, am ${{ steps.romana.outputs.errors }}"; exit 1; }
