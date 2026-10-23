@@ -170,7 +170,6 @@ func (d *Dictionar) Cauta(ctx context.Context, cuvant string) (Raspuns, error) {
 			r.Leme = append(r.Leme, l)
 		}
 	}
-	notePentruOmonime(r.Leme)
 	r.Exista = len(r.Leme) > 0
 	if !r.Exista {
 		if r.Sugestii, err = d.Sugestii(ctx, cuvant, 5); err != nil {
@@ -262,7 +261,17 @@ ORDER BY 1`, id, id)
 		return l, err
 	}
 	if !l.Doom3 {
-		l.Nota = notaTrimitere(l.Forma, l.TrimiteLa)
+		if l.Nota = notaTrimitere(l.Forma, l.TrimiteLa); l.Nota != "" {
+			// un omonim cu aceeași formă e atestat („piano” adv. lângă „piano” s.n.):
+			// nota nu condamnă forma, ci cere judecata după sens
+			omonim, err := d.formaAtestataDoom3(ctx, Normalizeaza(l.Forma))
+			if err != nil {
+				return l, err
+			}
+			if omonim {
+				l.Nota = notaOmonim(l.Forma, l.TrimiteLa)
+			}
+		}
 	}
 	rows, err = d.db.QueryContext(ctx, `SELECT f.norm, COALESCE(i.description, ''), f.recommended, f.variant
 		FROM form f LEFT JOIN inflection i ON i.id = f.inflection_id
@@ -452,23 +461,6 @@ func (d *Dictionar) formaAtestataDoom3(ctx context.Context, forma string) (bool,
 	return false, nil
 }
 
-// notePentruOmonime: când o lemă cu aceeași formă e atestată de DOOM 3 (un
-// omonim: „piano” adverb lângă „piano” s.n.), nota lemei neatestate nu mai
-// spune că norma nu înregistrează forma, ci cere judecata după sens.
-func notePentruOmonime(leme []Lema) {
-	atestate := map[string]bool{}
-	for _, l := range leme {
-		if l.Doom3 {
-			atestate[Normalizeaza(l.Forma)] = true
-		}
-	}
-	for i, l := range leme {
-		if l.Nota != "" && atestate[Normalizeaza(l.Forma)] {
-			leme[i].Nota = notaOmonim(l.Forma, l.TrimiteLa)
-		}
-	}
-}
-
 // notaOmonim: varianta notei pentru o lemă al cărei omonim e atestat.
 func notaOmonim(forma string, t []Trimitere) string {
 	var atestate []string
@@ -478,7 +470,7 @@ func notaOmonim(forma string, t []Trimitere) string {
 		}
 	}
 	lista := strings.Join(atestate, " sau ")
-	return fmt.Sprintf("DOOM 3 nu atestă lema aceasta, iar definiția ei trimite la %s. Forma „%s” e însă atestată de DOOM 3 ca alt cuvânt (lema cu „doom3”: true), "+
+	return fmt.Sprintf("DOOM 3 nu atestă lema aceasta, iar definiția ei trimite la %s. Forma „%s” e însă atestată de DOOM 3 ca alt cuvânt, "+
 		"deci judecă după sens: %s se recomandă doar pentru sensul acestei leme.", lista, forma, lista)
 }
 

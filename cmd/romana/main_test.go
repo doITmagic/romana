@@ -372,3 +372,22 @@ func TestHookLimitaObservatii(t *testing.T) {
 		t.Errorf("lipsește restul: %.300q", ctx[len(ctx)-300:])
 	}
 }
+
+func TestCitatShell(t *testing.T) {
+	for in, vrut := range map[string]string{
+		"/tmp/a/fișier.md":             "/tmp/a/fișier.md",
+		"/tmp/dir ț $x/f `y` \"a\".md": `'/tmp/dir ț $x/f ` + "`y`" + ` "a".md'`,
+		"/tmp/l'apostrof.md":           `'/tmp/l'\''apostrof.md'`,
+	} {
+		if got := citatShell(in); got != vrut {
+			t.Errorf("citatShell(%q) = %s; aștept %s", in, got, vrut)
+		}
+		// shell-ul primește înapoi exact calea
+		if sh, err := exec.LookPath("sh"); err == nil {
+			out, err := exec.Command(sh, "-c", "printf %s "+citatShell(in)).Output()
+			if err != nil || string(out) != in {
+				t.Errorf("sh: %q, %v; aștept %q", out, err, in)
+			}
+		}
+	}
+}

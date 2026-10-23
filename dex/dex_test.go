@@ -558,3 +558,16 @@ func TestNotaLaOmonimAtestat(t *testing.T) {
 		t.Errorf("degivra: %q", n)
 	}
 }
+
+// Nota pentru omonim nu depinde de ce alte leme întoarce căutarea: lema e
+// judecată singură, după forma ei.
+func TestNotaOmonimFaraSetulCautarii(t *testing.T) {
+	d, _ := importaTest(t, true)
+	l, err := d.lema(context.Background(), 13) // „piano” s.n., singur
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(l.Nota, "alt cuvânt") {
+		t.Errorf("nota: %q", l.Nota)
+	}
+}

@@ -15,6 +15,7 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"unicode"
 
 	"github.com/doITmagic/romana/baza"
 	"github.com/doITmagic/romana/dex"
@@ -28,6 +29,18 @@ var versiune = "dev"
 
 // maxHook: fișierele mai mari de atât nu sunt citite de hook.
 const maxHook = 2 << 20
+
+// citatShell pune calea între apostrofuri, pentru shell: „$”, backtick și
+// spațiile nu mai au efect când agentul copiază comanda. Apostroful din cale
+// devine '\”. Căile fără caractere speciale rămân așa cum sunt.
+func citatShell(s string) string {
+	if s != "" && strings.IndexFunc(s, func(r rune) bool {
+		return !(unicode.IsLetter(r) || unicode.IsDigit(r) || strings.ContainsRune("/._-+,", r))
+	}) < 0 {
+		return s
+	}
+	return "'" + strings.ReplaceAll(s, "'", `'\''`) + "'"
+}
 
 // maxObsHook: câte observații pune hook-ul în contextul agentului; restul
 // le dă „romana verifica <fișier>”.
@@ -356,7 +369,7 @@ func cmdHook(in io.Reader, out io.Writer) int {
 		sb.WriteString("- " + formateazaObservatie(ob) + "\n")
 	}
 	if rest := len(obs) - maxObsHook; rest > 0 {
-		fmt.Fprintf(&sb, "(și încă %d; lista completă: romana verifica %q)\n", rest, cale)
+		fmt.Fprintf(&sb, "(și încă %d; lista completă: romana verifica %s)\n", rest, citatShell(cale))
 	}
 	sb.WriteString("Corectează-le în fișier, apoi continuă.")
 	iesire := map[string]any{"hookSpecificOutput": map[string]string{
