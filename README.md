@@ -21,7 +21,7 @@
 
 Language models write Romanian that is grammatical but often sounds translated: English calques („a face sens”), false friends („a aplica pentru un post”), wrong numerals („25 ani”), missing or cedilla diacritics. Asked to fix a text, they also "correct" forms that were right all along, such as „Dați click” or „orice întârzieri”. `romana` gives the agent the rules, the sources behind them and, just as important, the list of things that are *not* errors.
 
-It comes in two parts. Use either one, or both:
+It comes in two parts. Each works on its own; together they work best:
 
 | | What it is | Needs |
 |---|---|---|
@@ -30,44 +30,7 @@ It comes in two parts. Use either one, or both:
 
 > **For an AI agent asked to install this:** (1) clone the repository and install the skill for your agent ([Install › The skill](#the-skill)); (2) install the binary and run `romana cauta casă` once, so the dictionary is built; (3) register the MCP server; (4) go through [Check it works](#check-it-works) and report which steps passed. Do not send requests to dexonline.ro yourself: the binary downloads the export it needs. Commands and limits for working on this repository: [AGENTS.md](AGENTS.md).
 
-**Jump to:** [See it work](#see-it-work) · [Install](#install) · [Check it works](#check-it-works) · [Results](#results) · [What it does](#what-it-does) · [The dictionary tool](#the-dictionary-tool) · [More from DO IT MAGIC](#more-from-do-it-magic)
-
----
-
-## See it work
-
-**The agent, with and without the skill.** The test case `hipercorectie-09` asks for a correction of a text that is already correct:
-
-> Datele se sincronizează în timp real. Dați click pe pictogramă, apoi dați refresh listei. Nu au fost găsite rezultate pentru căutarea dvs.
-
-Without the skill, both Claude and Codex "fixed" „click” into „clic”, and Codex also rewrote „dați refresh listei”. With the skill, both returned the text unchanged: DOOM 3, the official spelling dictionary, records „click” and „refresh”, and the sentence is grammatical.
-
-**The dictionary tool.** A form the norm does not record, and what to use instead:
-
-```console
-$ romana cauta degivrat
-degivra (verb)
-  notă: DOOM 3 nu atestă „degivra”, iar definiția trimite la „dejivra”, pe care DOOM 3 o atestă.
-        De regulă se recomandă „dejivra”, cu formele ei flexionare; „degivra” e o variantă pe
-        care norma nu o înregistrează.
-  surse: DEX '98, Ortografic, NODEX, DN, DEX '09, DOR, MDA2
-  [DEX '98] DEGIVRA vb. I v. dejivra.
-```
-
-The errors that are wrong in any context, and the words the dictionary does not know (output shortened with „…”):
-
-```console
-$ printf 'Aşa e, cînd vine. Sînt aici.\n' | romana verifica -
-„Aşa” → „Așa”: ș și ț se scriu cu virgulă dedesubt, nu cu sedilă; … (DOOM 3 §1.1.3.2) [RO-TIP-027]
-„cînd” → „când”: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost înlocuită din 1993 … [RO-TIP-128]
-„Sînt” → „Sunt”: … [RO-TIP-128]
-Verificarea acoperă doar existența fiecărui cuvânt în dicționar și greșelile sigure, …
-
-$ echo "Aplicatia trimite raportul." | romana verifica -
-necunoscut: „Aplicatia” – poate: aplicația
-```
-
-The tool speaks Romanian, because so do the texts it checks. Every report ends with what it does *not* check (agreement, meaning, coherence, punctuation, style), so an empty report is never read as "the text is correct".
+**Jump to:** [Install](#install) · [See it work](#see-it-work) · [Check it works](#check-it-works) · [Results](#results) · [What it does](#what-it-does) · [The dictionary tool](#the-dictionary-tool) · [More from DO IT MAGIC](#more-from-do-it-magic)
 
 ---
 
@@ -100,7 +63,7 @@ codex plugin add romana@romana
 
 **Other agents** (Cursor, Gemini CLI, Copilot and others): copy the `skills/romana/` folder into the directory where your tool looks for Agent Skills (see its documentation). We test Claude Code and Codex.
 
-### The `romana` binary (optional)
+### The `romana` binary (optional, recommended with the skill)
 
 You do not need Go. On Linux and macOS:
 
@@ -161,6 +124,43 @@ Clients that read an `mcpServers` block (Claude Desktop, Cursor and others) take
 We test Claude Code and Codex. Other clients should work, since the server speaks plain MCP over stdio, but they are not in our test runs.
 
 </details>
+
+---
+
+## See it work
+
+**The agent, with and without the skill.** The test case `hipercorectie-09` asks for a correction of a text that is already correct:
+
+> Datele se sincronizează în timp real. Dați click pe pictogramă, apoi dați refresh listei. Nu au fost găsite rezultate pentru căutarea dvs.
+
+Without the skill, both Claude and Codex "fixed" „click” into „clic”, and Codex also rewrote „dați refresh listei”. With the skill, both returned the text unchanged: DOOM 3, the official spelling dictionary, records „click” and „refresh”, and the sentence is grammatical.
+
+**The dictionary tool.** A form the norm does not record, and what to use instead:
+
+```console
+$ romana cauta degivrat
+degivra (verb)
+  notă: DOOM 3 nu atestă „degivra”, iar definiția trimite la „dejivra”, pe care DOOM 3 o atestă.
+        De regulă se recomandă „dejivra”, cu formele ei flexionare; „degivra” e o variantă pe
+        care norma nu o înregistrează.
+  surse: DEX '98, Ortografic, NODEX, DN, DEX '09, DOR, MDA2
+  [DEX '98] DEGIVRA vb. I v. dejivra.
+```
+
+The errors that are wrong in any context, and the words the dictionary does not know (output shortened with „…”):
+
+```console
+$ printf 'Aşa e, cînd vine. Sînt aici.\n' | romana verifica -
+„Aşa” → „Așa”: ș și ț se scriu cu virgulă dedesubt, nu cu sedilă; … (DOOM 3 §1.1.3.2) [RO-TIP-027]
+„cînd” → „când”: Grafia cu „î” în interiorul cuvintelor și „sînt” a fost înlocuită din 1993 … [RO-TIP-128]
+„Sînt” → „Sunt”: … [RO-TIP-128]
+Verificarea acoperă doar existența fiecărui cuvânt în dicționar și greșelile sigure, …
+
+$ echo "Aplicatia trimite raportul." | romana verifica -
+necunoscut: „Aplicatia” – poate: aplicația
+```
+
+The tool speaks Romanian, because so do the texts it checks. Every report ends with what it does *not* check (agreement, meaning, coherence, punctuation, style), so an empty report is never read as "the text is correct".
 
 ---
 
