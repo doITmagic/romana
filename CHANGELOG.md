@@ -4,6 +4,7 @@
 
 - `romana verifica --sigure [fișiere…]`: doar greșelile sigure, fără dicționar și fără rețea, pe mai multe fișiere, cu rândul și coloana; fișierele care nu par în română se sar. Cu `--github`, ca adnotări GitHub Actions.
 - Acțiunea GitHub (`action.yml`, `uses: doITmagic/romana@v0`): verifică textele în română din pull request-uri și pune adnotări pe rânduri; `fail: true` oprește jobul.
+- Pluginul pentru Claude (`.mcp.json`) aduce și serverul public, `romana-public`: în claude.ai, unde serverul local nu rulează, instalarea pluginului dă și uneltele `verifica_greseli` și `cauta_regula`.
 - README: GIF-ul demonstrației (serverul public apelat din Codex), configurarea pentru GitHub Copilot (VS Code și agentul de pe github.com), secțiunea „GitHub Action”.
 
 ## 0.3.0 (2026-10-23)

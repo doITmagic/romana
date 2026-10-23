@@ -3,6 +3,10 @@
     "romana": {
       "command": "romana",
       "args": ["mcp"]
+    },
+    "romana-public": {
+      "type": "http",
+      "url": "https://mcp.doitmagic.ro/mcp"
     }
   }
 }
