@@ -1,5 +1,9 @@
 # Jurnal de modificări
 
+## 0.2.3 (2026-10-23)
+
+- Pictograma nouă, pentru cataloage: marca „romana” de pe banner, pe care un corector o face de mână „română”, cu „^”, cu căciula și cu nota „corectă” deasupra. Sursa HTML e alături de imagine.
+
 ## 0.2.2 (2026-10-23)
 
 - Pregătit pentru cataloagele oficiale (directorul Claude și catalogul de pluginuri OpenAI): pictograma pluginului, `PRIVACY.md` și datele listării OpenAI în `plugin.json` (`extensions.com.openai`), cu descrierea și în română.
