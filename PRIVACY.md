@@ -55,3 +55,5 @@ Questions, requests or concerns about your data: open an issue at <https://githu
 ---
 
 *Pe scurt, în română:* skillul nu trimite nimic, iar binarul opțional descarcă doar exportul oficial de pe dexonline.ro și lucrează local. Serverul public `mcp.doitmagic.ro` primește doar textul sau întrebarea pe care asistentul i le trimite, le procesează în memorie ca să răspundă și nu le păstrează. Proxy-ul web din fața lui ține jurnalul obișnuit de acces (adresa IP, ora, adresa cerută), fără texte. Pentru statistici, Umami-ul nostru înregistrează unealta, aplicația client, țara, căutările din cauta_regula și regulile găsite, fără textele verificate și fără adresele IP.
+
+Also published on doitmagic.ro: [in English](https://doitmagic.ro/romana/privacy/) and [în română](https://doitmagic.ro/romana/confidentialitate/).

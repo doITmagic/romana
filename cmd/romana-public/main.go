@@ -20,6 +20,7 @@ package main
 
 import (
 	"context"
+	_ "embed"
 	"fmt"
 	"io"
 	"log/slog"
@@ -37,6 +38,22 @@ import (
 	"github.com/doITmagic/romana/mcp"
 	"github.com/doITmagic/romana/reguli"
 )
+
+// pagina e pagina de start (HTML, doar CSS inline), încorporată în binar.
+//
+//go:embed pagina.html
+var pagina []byte
+
+// cspPagina e politica paginii de start: stil inline și imagini de pe același
+// domeniu, nimic altceva. Celelalte rute păstrează politica strictă.
+const cspPagina = "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+
+// securityTxt e /.well-known/security.txt (RFC 9116). Expires se
+// împrospătează o dată pe an. Nu are rând Policy: repo-ul nu are SECURITY.md.
+const securityTxt = "Contact: mailto:razvan@doitmagic.ro\n" +
+	"Expires: 2027-10-23T00:00:00Z\n" +
+	"Preferred-Languages: ro, en\n" +
+	"Canonical: https://mcp.doitmagic.ro/.well-known/security.txt\n"
 
 // versiune se setează la build: -ldflags "-X main.versiune=v0.3.0".
 var versiune = "dev"
@@ -189,11 +206,38 @@ func Server(cfg Config) *echo.Echo {
 		}
 		return c.String(http.StatusOK, jeton)
 	})
-	e.GET("/", func(c *echo.Context) error {
-		return c.String(http.StatusOK, "romana: server MCP pentru texte în limba română (verifica_greseli, cauta_regula).\n"+
-			"Adresa MCP: https://mcp.doitmagic.ro/mcp (Streamable HTTP, POST)\n"+
-			"Cod sursă, confidențialitate și condiții: https://github.com/doITmagic/romana\n")
-	})
+	radacina := func(c *echo.Context) error {
+		c.Response().Header().Add("Vary", "Accept")
+		// clienții care cer text simplu sau JSON primesc textul scurt, nu HTML
+		if acc := strings.ToLower(c.Request().Header.Get("Accept")); !strings.Contains(acc, "text/html") &&
+			(strings.Contains(acc, "text/plain") || strings.Contains(acc, "application/json")) {
+			return c.String(http.StatusOK, "romana: server MCP pentru texte în limba română (verifica_greseli, cauta_regula).\n"+
+				"Adresa MCP: https://mcp.doitmagic.ro/mcp (Streamable HTTP, POST)\n"+
+				"Un proiect DO IT MAGIC SOFTWARE: https://doitmagic.ro/\n"+
+				"Cod sursă: https://github.com/doITmagic/romana\n")
+		}
+		h := c.Response().Header()
+		h.Set("Content-Security-Policy", cspPagina)
+		h.Set("Cache-Control", "public, max-age=300")
+		return c.Blob(http.StatusOK, "text/html; charset=utf-8", pagina)
+	}
+	e.GET("/", radacina)
+	e.HEAD("/", radacina)
+
+	iconita := func(c *echo.Context) error {
+		c.Response().Header().Set("Cache-Control", "public, max-age=86400")
+		return c.Blob(http.StatusOK, "image/png", romana.Iconita)
+	}
+	for _, cale := range []string{"/icon.png", "/favicon.ico"} {
+		e.GET(cale, iconita)
+		e.HEAD(cale, iconita)
+	}
+	security := func(c *echo.Context) error {
+		c.Response().Header().Set("Cache-Control", "public, max-age=86400")
+		return c.String(http.StatusOK, securityTxt)
+	}
+	e.GET("/.well-known/security.txt", security)
+	e.HEAD("/.well-known/security.txt", security)
 	return e
 }
 

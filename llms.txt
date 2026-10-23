@@ -19,7 +19,7 @@ The skill needs no network and no tool. The binary downloads the dexonline expor
 
 - [Binary source](cmd/romana/main.go): commands `cauta`, `verifica`, `mcp`, `import`, `update`
 - [MCP server](mcp/server.go): tool descriptions and schemas
-- [Public MCP server](cmd/romana-public/main.go): https://mcp.doitmagic.ro/mcp, `verifica_greseli` and `cauta_regula`, no dictionary; tools in [mcp/public.go](mcp/public.go)
+- [Public MCP server](cmd/romana-public/main.go): https://mcp.doitmagic.ro/mcp, `verifica_greseli` and `cauta_regula`, no dictionary; start page, icon and security.txt on the same host; tools in [mcp/public.go](mcp/public.go)
 - [Install script](install.sh): prebuilt binaries from GitHub Releases, checked against SHA256SUMS
 
 ## Tests

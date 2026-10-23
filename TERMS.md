@@ -17,3 +17,5 @@ Open an issue at <https://github.com/doITmagic/romana/issues>, or use the contac
 ---
 
 *Pe scurt, în română:* romana e software gratuit și open source, sub licența MIT, fără garanție, și nu cere cont. Serverul MCP public e gratuit pentru orice asistent AI, în limitele lui, fără garanție de disponibilitate. Verifică textele importante înainte să le publici. Baza de dicționar construită de binar rămâne pe calculatorul tău, pentru uzul tău, și nu se redistribuie.
+
+Also published on doitmagic.ro: [in English](https://doitmagic.ro/romana/terms/) and [în română](https://doitmagic.ro/romana/conditii/).

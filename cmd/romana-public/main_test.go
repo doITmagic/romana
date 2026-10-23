@@ -193,8 +193,110 @@ func TestPaginiSiAntete(t *testing.T) {
 	if w := cerere(t, server(t, ""), "GET", "/.well-known/openai-apps-challenge", ""); w.Code != http.StatusNotFound {
 		t.Errorf("fără jeton: %d", w.Code)
 	}
-	if w := cerere(t, h, "GET", "/", ""); w.Code != 200 || !strings.Contains(w.Body.String(), "github.com/doITmagic/romana") {
-		t.Errorf("/: %d", w.Code)
+	if w := cerere(t, h, "GET", "/", "", "Accept", "text/plain"); w.Code != 200 || !strings.HasPrefix(w.Header().Get("Content-Type"), "text/plain") ||
+		!strings.Contains(w.Body.String(), "github.com/doITmagic/romana") || !strings.Contains(w.Body.String(), "https://doitmagic.ro/") {
+		t.Errorf("/ cu text simplu: %d %q", w.Code, w.Body)
+	}
+}
+
+const cspStrict = "default-src 'none'; frame-ancestors 'none'"
+
+func TestPaginaDeStart(t *testing.T) {
+	h := server(t, "")
+	for _, acc := range [][]string{nil, {"Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}} {
+		w := cerere(t, h, "GET", "/", "", acc...)
+		corp := w.Body.String()
+		if w.Code != 200 || w.Header().Get("Content-Type") != "text/html; charset=utf-8" {
+			t.Fatalf("/: %d %s", w.Code, w.Header().Get("Content-Type"))
+		}
+		for _, vrut := range []string{"https://doitmagic.ro/", "https://mcp.doitmagic.ro/mcp", "claude mcp add --transport http romana-public",
+			"https://claude.ai/directory/romana", "https://doitmagic.ro/blog/romana-agenti-ai-scriu-corect-in-romana/", "https://github.com/doITmagic/romana",
+			"https://doitmagic.ro/romana/confidentialitate/", "https://doitmagic.ro/romana/conditii/", "https://doitmagic.ro/romana/privacy/",
+			"https://doitmagic.ro/romana/terms/", `src="/icon.png"`, `name="viewport"`, "<code"} {
+			if !strings.Contains(corp, vrut) {
+				t.Errorf("pagina nu conține %q", vrut)
+			}
+		}
+		// fără resurse de pe alte domenii și fără scripturi (nici statistici)
+		for _, interzis := range []string{"<script", "<link rel=\"stylesheet\"", "@import", "umami", "src=\"http", "url(http"} {
+			if strings.Contains(corp, interzis) {
+				t.Errorf("pagina nu are voie să conțină %q", interzis)
+			}
+		}
+		csp := w.Header().Get("Content-Security-Policy")
+		if !strings.Contains(csp, "style-src 'unsafe-inline'") || !strings.Contains(csp, "img-src 'self'") || strings.Contains(csp, "script-src") ||
+			!strings.Contains(csp, "default-src 'none'") || !strings.Contains(csp, "frame-ancestors 'none'") {
+			t.Errorf("CSP-ul paginii: %q", csp)
+		}
+		if w.Header().Get("X-Frame-Options") != "DENY" || w.Header().Get("X-Content-Type-Options") != "nosniff" {
+			t.Errorf("antetele de securitate lipsesc de pe pagină: %v", w.Header())
+		}
+	}
+	// text simplu și JSON rămân ca înainte, cu legătura spre firmă
+	for _, acc := range []string{"application/json", "text/plain"} {
+		w := cerere(t, h, "GET", "/", "", "Accept", acc)
+		if !strings.HasPrefix(w.Header().Get("Content-Type"), "text/plain") || !strings.Contains(w.Body.String(), "https://mcp.doitmagic.ro/mcp") {
+			t.Errorf("Accept %s: %s %q", acc, w.Header().Get("Content-Type"), w.Body)
+		}
+		if w.Header().Get("Content-Security-Policy") != cspStrict {
+			t.Errorf("Accept %s: CSP %q", acc, w.Header().Get("Content-Security-Policy"))
+		}
+	}
+	// HEAD: aceleași antete (httptest nu taie corpul la HEAD; serverul real o face)
+	w := cerere(t, h, "HEAD", "/", "")
+	if w.Code != 200 || w.Header().Get("Content-Type") != "text/html; charset=utf-8" || !strings.Contains(w.Header().Get("Content-Security-Policy"), "unsafe-inline") {
+		t.Errorf("HEAD /: %d %v", w.Code, w.Header())
+	}
+}
+
+func TestCSPStrictPeCelelalteRute(t *testing.T) {
+	h := server(t, "jeton")
+	rute := [][2]string{{"GET", "/healthz"}, {"GET", "/mcp"}, {"GET", "/icon.png"}, {"GET", "/favicon.ico"},
+		{"GET", "/.well-known/security.txt"}, {"GET", "/.well-known/openai-apps-challenge"}, {"GET", "/nu-exista"}}
+	for _, r := range rute {
+		if csp := cerere(t, h, r[0], r[1], "").Header().Get("Content-Security-Policy"); csp != cspStrict {
+			t.Errorf("%s %s: CSP %q", r[0], r[1], csp)
+		}
+	}
+	w := cerere(t, h, "POST", "/mcp", `{"jsonrpc":"2.0","id":1,"method":"ping"}`)
+	if w.Code != 200 || w.Header().Get("Content-Security-Policy") != cspStrict {
+		t.Errorf("POST /mcp: %d CSP %q", w.Code, w.Header().Get("Content-Security-Policy"))
+	}
+}
+
+func TestIconita(t *testing.T) {
+	h := server(t, "")
+	for _, cale := range []string{"/icon.png", "/favicon.ico"} {
+		w := cerere(t, h, "GET", cale, "")
+		if w.Code != 200 || w.Header().Get("Content-Type") != "image/png" || !strings.HasPrefix(w.Body.String(), "\x89PNG\r\n\x1a\n") {
+			t.Errorf("%s: %d %s (%d octeți)", cale, w.Code, w.Header().Get("Content-Type"), w.Body.Len())
+		}
+		if w := cerere(t, h, "HEAD", cale, ""); w.Code != 200 || w.Header().Get("Content-Type") != "image/png" {
+			t.Errorf("HEAD %s: %d %s", cale, w.Code, w.Header().Get("Content-Type"))
+		}
+	}
+}
+
+func TestSecurityTxt(t *testing.T) {
+	h := server(t, "")
+	for _, m := range []string{"GET", "HEAD"} {
+		w := cerere(t, h, m, "/.well-known/security.txt", "")
+		if w.Code != 200 || !strings.HasPrefix(w.Header().Get("Content-Type"), "text/plain") {
+			t.Fatalf("%s security.txt: %d %s", m, w.Code, w.Header().Get("Content-Type"))
+		}
+		if m == "HEAD" {
+			continue
+		}
+		corp := w.Body.String()
+		for _, vrut := range []string{"Contact: mailto:razvan@doitmagic.ro\n", "Expires: 2027-10-23T00:00:00Z\n", "Preferred-Languages: ro, en\n",
+			"Canonical: https://mcp.doitmagic.ro/.well-known/security.txt\n"} {
+			if !strings.Contains(corp, vrut) {
+				t.Errorf("security.txt nu conține %q: %q", vrut, corp)
+			}
+		}
+		if strings.Contains(corp, "Policy:") {
+			t.Errorf("repo-ul nu are SECURITY.md, deci nu are voie rând Policy: %q", corp)
+		}
 	}
 }
 

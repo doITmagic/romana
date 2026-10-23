@@ -11,4 +11,5 @@
 !reguli/
 !verifica/
 !skills/romana/references/
+!assets/icon.png
 **/*_test.go

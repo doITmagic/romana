@@ -33,8 +33,8 @@
         ],
         "websiteURL": "https://doitmagic.ro/blog/romana-agenti-ai-scriu-corect-in-romana/",
         "supportURL": "https://github.com/doITmagic/romana/issues",
-        "privacyPolicyURL": "https://github.com/doITmagic/romana/blob/main/PRIVACY.md",
-        "termsOfServiceURL": "https://github.com/doITmagic/romana/blob/main/TERMS.md",
+        "privacyPolicyURL": "https://doitmagic.ro/romana/privacy/",
+        "termsOfServiceURL": "https://doitmagic.ro/romana/terms/",
         "defaultPrompt": [
           "Corectează-mi textul următor și explică pe scurt fiecare schimbare.",
           "Scrie în română o descriere de produs pentru un magazin online, fără calcuri din engleză.",

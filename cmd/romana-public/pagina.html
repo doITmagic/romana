@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>romana: server MCP pentru texte în limba română</title>
+<meta name="description" content="Serverul MCP public al proiectului romana: verifică greșelile sigure din textele în română și caută în cele 854 de reguli. Gratuit, doar de citire, fără cont.">
+<link rel="icon" type="image/png" href="/favicon.ico">
+<style>
+:root {
+  --fond: #050810;
+  --panou: #0b1022;
+  --linie: #1b2442;
+  --primar: #0055ff;
+  --secundar: #3d62ff;
+  --text: #e8ecf8;
+  --estompat: #a3adcc;
+  --legatura: #8aa3ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 24px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 0; overflow-wrap: anywhere; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.5rem; }
+h3 { font-size: 1rem; margin: 1.2rem 0 0.2rem; }
+p, ul { margin: 0.6rem 0; }
+ul { padding-left: 1.2rem; }
+li { margin: 0.35rem 0; }
+a { color: var(--legatura); }
+a:hover { color: var(--text); }
+a:focus-visible, code:focus-visible { outline: 2px solid var(--secundar); outline-offset: 2px; }
+code, pre {
+  font: 0.9rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--panou);
+  border: 1px solid var(--linie);
+  border-radius: 6px;
+}
+code { padding: 0.1em 0.4em; overflow-wrap: anywhere; }
+pre { padding: 10px 12px; overflow-x: auto; margin: 0.5rem 0; }
+pre code { padding: 0; border: 0; background: none; overflow-wrap: normal; }
+.adresa {
+  display: block;
+  margin: 1rem 0;
+  padding: 14px 16px;
+  border-color: var(--primar);
+  font-size: 1rem;
+  user-select: all;
+  -webkit-user-select: all;
+}
+.nota { color: var(--estompat); font-size: 0.95rem; }
+hr { border: 0; border-top: 1px solid var(--linie); margin: 2.2rem 0 0; }
+footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--linie); color: var(--estompat); font-size: 0.95rem; }
+footer p { margin: 0.4rem 0; }
+.legaturi a { white-space: nowrap; }
+</style>
+</head>
+<body>
+<main>
+<header>
+<img src="/icon.png" alt="Pictograma romana" width="72" height="72">
+<h1>romana: server MCP pentru texte în limba română</h1>
+</header>
+
+<section lang="ro">
+<p>Serverul dă asistentului tău de AI două unelte. <code>verifica_greseli</code> găsește în textele românești greșelile care sunt greșeli oriunde: ș și ț cu sedilă, grafia veche cu „î” în interiorul cuvintelor și „sînt”, „vroiam”, spațiile dinaintea semnelor de punctuație și spațiile duble, fiecare cu regula și sursa ei. <code>cauta_regula</code> caută în cele 854 de reguli ale skillului romana, după ID (<code>RO-TIP-027</code>) sau după cuvinte („a face sens”).</p>
+<p>Serverul nu judecă sensul, acordul, coerența sau stilul, iar dicționarul dexonline nu e pe el. E gratuit, doar de citire și nu cere cont. Cele mai bune rezultate le dă împreună cu skillul romana.</p>
+
+<h2>Adresa serverului</h2>
+<code class="adresa">https://mcp.doitmagic.ro/mcp</code>
+<p class="nota">Streamable HTTP, fără autentificare.</p>
+
+<h2>Cum îl adaugi</h2>
+<h3>claude.ai</h3>
+<p>Din <a href="https://claude.ai/directory/romana">directorul Claude</a> sau, în aplicația web ori pe desktop: Customize → Connectors → <em>Add custom connector</em>, cu adresa de mai sus și fără autentificare.</p>
+<h3>Claude Code</h3>
+<pre><code>claude mcp add --transport http romana-public https://mcp.doitmagic.ro/mcp</code></pre>
+<h3>Codex</h3>
+<p>Pluginul instalat din <code>doITmagic/romana</code> îl include deja. Manual, în <code>~/.codex/config.toml</code>:</p>
+<pre><code>[mcp_servers.romana-public]
+url = "https://mcp.doitmagic.ro/mcp"</code></pre>
+<h3>ChatGPT</h3>
+<p>Instalează arhiva <a href="https://github.com/doITmagic/romana/releases/latest/download/romana-plugin.zip"><code>romana-plugin.zip</code></a> (Plugins → Add → <em>Upload plugin archive</em>); ea conține deja serverul.</p>
+<p class="nota">Pentru Cursor, VS Code și GitHub Copilot, vezi <a href="https://github.com/doITmagic/romana#public-mcp-server">README</a>.</p>
+
+<h2>Confidențialitate</h2>
+<p>Textele verificate rămân în memorie doar cât se calculează răspunsul și nu se păstrează. Statisticile de folosire înregistrează unealta, aplicația clientă, țara, interogările către <code>cauta_regula</code> și ID-urile regulilor găsite, nu textele. Detaliile sunt la <a href="https://doitmagic.ro/romana/confidentialitate/">confidențialitate</a> și <a href="https://doitmagic.ro/romana/conditii/">condiții</a>.</p>
+</section>
+
+<hr>
+
+<section lang="en">
+<h2>English</h2>
+<p>romana is a free, read-only MCP server for Romanian text, with two tools: <code>verifica_greseli</code> finds the errors that are wrong anywhere (ș and ț with a cedilla, the old spelling with „î” inside words, „sînt”, „vroiam”, spaces before punctuation, double spaces), and <code>cauta_regula</code> searches the 854 rules of the romana skill by ID or by words. It does not judge meaning, agreement, coherence or style, and it keeps no texts.</p>
+<p>Add this address as a remote MCP server (Streamable HTTP, no authentication) in claude.ai (<a href="https://claude.ai/directory/romana">Claude directory</a> or Customize → Connectors → <em>Add custom connector</em>), Claude Code, Codex, ChatGPT, Cursor or VS Code:</p>
+<code class="adresa">https://mcp.doitmagic.ro/mcp</code>
+<p>Setup for each app: <a href="https://github.com/doITmagic/romana#public-mcp-server">README</a>. <a href="https://doitmagic.ro/romana/privacy/">Privacy</a> · <a href="https://doitmagic.ro/romana/terms/">Terms</a>.</p>
+</section>
+
+<footer>
+<p>Un proiect <a href="https://doitmagic.ro/">DO IT MAGIC SOFTWARE</a> · <span lang="en">A project by <a href="https://doitmagic.ro/">DO IT MAGIC SOFTWARE</a></span></p>
+<p class="legaturi"><a href="https://doitmagic.ro/blog/romana-agenti-ai-scriu-corect-in-romana/">Articol</a> · <a href="https://github.com/doITmagic/romana">GitHub</a> · <a href="https://claude.ai/directory/romana">Directorul Claude</a> · <a href="https://doitmagic.ro/romana/confidentialitate/">Confidențialitate</a> · <a href="https://doitmagic.ro/romana/conditii/">Condiții</a> · <a href="https://doitmagic.ro/romana/privacy/" lang="en">Privacy</a> · <a href="https://doitmagic.ro/romana/terms/" lang="en">Terms</a></p>
+</footer>
+</main>
+</body>
+</html>
