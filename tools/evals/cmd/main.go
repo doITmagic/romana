@@ -10,7 +10,6 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"slices"
 	"strings"
 	"sync"
 	"time"
@@ -47,7 +46,7 @@ func run() error {
 		repetari  = flag.Int("repetari", 1, "câte rulări pe caz și pe braț (raportul arată media și dispersia)")
 		judecator = flag.String("judecator", "opus", "modelul Claude al judecătorului de la redactare")
 		judecari  = flag.Int("judecari", 3, "câte judecăți pe un text (se ia mediana)")
-		mcpF      = flag.Bool("mcp", false, "adaugă brațul „cu skill + MCP” (serverul `romana mcp`); motorul apare în raport ca <motor>+mcp")
+		mcpF      = flag.Bool("mcp", false, "adaugă fiecărui braț (cu și fără skill) varianta cu serverul `romana mcp`; motorul apare în raport ca <motor>+mcp")
 		romanaF   = flag.String("romana", "", "calea binarului romana pentru --mcp (implicit: cel din PATH)")
 		dbF       = flag.String("db", "", "baza dex pentru serverul MCP (implicit: cea a binarului)")
 		dirPub    = flag.String("dir-public", "evals/cazuri", "directorul cu setul public")
@@ -128,9 +127,6 @@ func run() error {
 
 	romana := *romanaF
 	if *mcpF {
-		if !slices.Contains(variante, true) {
-			return fmt.Errorf("--mcp merge doar cu brațul cu skill; scoate --fara-skill")
-		}
 		if romana == "" {
 			p, err := exec.LookPath("romana")
 			if err != nil {
@@ -167,7 +163,7 @@ func run() error {
 			for _, cu := range variante {
 				for r := 0; r < *repetari; r++ {
 					jobs = append(jobs, job{c, m, cu, false, r})
-					if cu && *mcpF {
+					if *mcpF { // fiecare braț, cu sau fără skill, are și varianta cu MCP
 						jobs = append(jobs, job{c, m, cu, true, r})
 					}
 				}

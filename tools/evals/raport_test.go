@@ -204,3 +204,41 @@ func TestRaportFaraMCP(t *testing.T) {
 		t.Errorf("tabelul MCP fără rulări MCP:\n%s", r)
 	}
 }
+
+// Tabelul cu patru brațe: fără skill, doar dicționarul, doar skillul, skill +
+// dicționar, pe cazurile valide în toate brațele prezente.
+func TestRaportPatruBrate(t *testing.T) {
+	cazuri := []Caz{{ID: "curat-presa-01"}, {ID: "curat-presa-02"}}
+	n := func(fp, l int) Nota { return Nota{FalsPozitive: fp, Lipsa: l, Fidelitate: true} }
+	pornit := Rezultat{PornitCunoscut: true, Pornit: true}
+	nepornit := Rezultat{PornitCunoscut: true}
+	rulari := []Rulare{
+		{Caz: "curat-presa-01", Motor: "claude", Model: "sonnet", Nota: n(4, 3)},
+		{Caz: "curat-presa-01", Motor: "claude+mcp", Model: "sonnet", Nota: n(2, 3)},
+		{Caz: "curat-presa-01", Motor: "claude", Model: "sonnet", CuSkill: true, Nota: n(0, 1), Rezultat: pornit},
+		{Caz: "curat-presa-01", Motor: "claude+mcp", Model: "sonnet", CuSkill: true, Nota: n(0, 2), Rezultat: nepornit},
+		// curat-02 lipsește din brațul „doar dicționar”: nu intră în comparație
+		{Caz: "curat-presa-02", Motor: "claude", Model: "sonnet", Nota: n(1, 0)},
+		{Caz: "curat-presa-02", Motor: "claude", Model: "sonnet", CuSkill: true, Nota: n(0, 0), Rezultat: pornit},
+		{Caz: "curat-presa-02", Motor: "claude+mcp", Model: "sonnet", CuSkill: true, Nota: n(0, 0), Rezultat: pornit},
+	}
+	r := RaportMarkdown(cazuri, rulari, Meta{})
+	if !strings.Contains(r, "### Patru brațe (claude)") {
+		t.Fatalf("lipsește tabelul cu patru brațe:\n%s", r)
+	}
+	if !strings.Contains(r, "| curat | 1 | 4 / 2 / 0 / 0 | 3 / 3 / 1 / 2 | 1/1 / 0/1 |") {
+		t.Errorf("rândul curat:\n%s", r)
+	}
+}
+
+func TestRaportPatruBrateDoarCuSkill(t *testing.T) {
+	// fără rulări „doar dicționar”, tabelul nu apare
+	cazuri := []Caz{{ID: "curat-presa-01"}}
+	rulari := []Rulare{
+		{Caz: "curat-presa-01", Motor: "claude", Model: "sonnet", CuSkill: true, Nota: Nota{Fidelitate: true}},
+		{Caz: "curat-presa-01", Motor: "claude+mcp", Model: "sonnet", CuSkill: true, Nota: Nota{Fidelitate: true}},
+	}
+	if r := RaportMarkdown(cazuri, rulari, Meta{}); strings.Contains(r, "Patru brațe") {
+		t.Errorf("tabel fără brațul „doar dicționar”:\n%s", r)
+	}
+}

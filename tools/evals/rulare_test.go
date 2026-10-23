@@ -388,13 +388,24 @@ func TestParseClaudeStreamTokeni(t *testing.T) {
 
 func TestArgsClaudeMCP(t *testing.T) {
 	m := Motor{"claude", "sonnet", "high"}
-	a := ArgsClaudeMCP(m, "/r", "/t/mcp.json")
+	a := ArgsClaudeMCP(m, true, "/r", "/t/mcp.json")
 	j := strings.Join(a, " ")
 	for _, vrem := range []string{"--mcp-config /t/mcp.json", "--strict-mcp-config", "--plugin-dir /r", "--tools Skill,Read",
 		"--allowedTools " + UnealtaCauta + "," + UnealtaVerifica} {
 		if !strings.Contains(j, vrem) {
 			t.Errorf("lipsește %q în %s", vrem, j)
 		}
+	}
+	// dicționarul fără skill: ambalajul brațului „fără skill”, plus serverul
+	j = strings.Join(ArgsClaudeMCP(m, false, "/r", "/t/mcp.json"), " ")
+	for _, vrem := range []string{"--mcp-config /t/mcp.json", "--disable-slash-commands", "--tools Read",
+		"--allowedTools " + UnealtaCauta + "," + UnealtaVerifica} {
+		if !strings.Contains(j, vrem) {
+			t.Errorf("fără skill: lipsește %q în %s", vrem, j)
+		}
+	}
+	if strings.Contains(j, "--plugin-dir") {
+		t.Errorf("fără skill nu se încarcă pluginul: %s", j)
 	}
 	// fără --mcp, argumentele rămân cele de până acum
 	for _, cu := range []bool{false, true} {
@@ -484,9 +495,12 @@ func TestRuleazaCuMCP(t *testing.T) {
 	if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorClaude, true, o); err == nil {
 		t.Error("fără --romana trebuie eroare")
 	}
-	// brațul MCP fără skill nu are sens
-	o.Romana = "/bin/romana"
-	if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorClaude, false, o); err == nil {
-		t.Error("MCP fără skill trebuie eroare")
+	// brațul „doar dicționar”: MCP fără skill, pe ambele motoare
+	o.Romana, cfgCitit = "/bin/romana", ""
+	if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorClaude, false, o); err != nil || !strings.Contains(cfgCitit, "/bin/romana") {
+		t.Fatalf("claude fără skill: %v %q", err, cfgCitit)
+	}
+	if _, err := RuleazaCu(context.Background(), ex, repoFals(t), c, MotorCodex, false, o); err != nil {
+		t.Fatal(err)
 	}
 }

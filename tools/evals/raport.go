@@ -391,6 +391,7 @@ func RaportMarkdown(cazuri []Caz, rulari []Rulare, meta Meta) string {
 	}
 	scrieConsum(&b, ix, cazuri)
 	scrieMCP(&b, ix, cazuri, gs)
+	scriePatruBrate(&b, ix, cazuri, gs)
 	b.WriteString("### Prag de reușită\n\n| Motor | Criteriu | Verdict | Detaliu |\n|---|---|---|---|\n")
 	for _, v := range Prag(cazuri, rulari) {
 		fmt.Fprintf(&b, "| %s | %s | %s | %s |\n", v.Motor, v.Criteriu, v.Verdict, v.Detaliu)
@@ -510,6 +511,95 @@ func scrieMCP(b *strings.Builder, ix index, cazuri []Caz, grupe []string) {
 		fmt.Fprintf(b, "\nCriteriu: cu MCP, fals pozitivele și lipsurile nu cresc față de „cu skill”: **%s** (fals pozitive %s → %s, lipsă %s → %s, %d cazuri).\n\n",
 			verdict, fmtNum(fpCu), fmtNum(fpMcp), fmtNum(lipsaCu), fmtNum(lipsaMcp), total)
 	}
+}
+
+// scriePatruBrate adaugă, pentru fiecare motor cu rulări „doar dicționar”
+// (MCP fără skill), tabelul care pune alături cele patru brațe: fără skill,
+// doar dicționarul, doar skillul, skill + dicționar. Intră doar cazurile cu
+// rezultat valid în toate brațele care au rulări; valorile sunt sume pe grupă
+// ale mediilor pe caz.
+func scriePatruBrate(b *strings.Builder, ix index, cazuri []Caz, grupe []string) {
+	for _, m := range ix.motoare {
+		mcp := m + SufixMCP
+		if !areRulari(ix, mcp, false) {
+			continue
+		}
+		brate := []cheieCaz{{motor: m}, {motor: mcp}, {motor: m, cu: true}, {motor: mcp, cu: true}}
+		prezente := make([]bool, len(brate))
+		for i, k := range brate {
+			prezente[i] = areRulari(ix, k.motor, k.cu)
+		}
+		fmt.Fprintf(b, "### Patru brațe (%s)\n\nValorile sunt „fără skill / doar dicționar / doar skill / skill + dicționar”, pe cazurile cu rezultat valid în toate brațele; mai puțin e mai bine. „Skill pornit” numără rulările în care skillul a fost invocat, „doar skill / skill + dicționar”; „–” înseamnă un braț fără rulări.\n\n", m)
+		b.WriteString("| Grupa | n_comun | Fals pozitive | Lipsă | Skill pornit |\n|---|---|---|---|---|\n")
+		for _, g := range grupe {
+			fp, lipsa := make([]float64, len(brate)), make([]float64, len(brate))
+			pornit, cunoscut := make([]int, len(brate)), make([]int, len(brate))
+			n := 0
+		cazuri:
+			for _, c := range cazuri {
+				if Grupa(c) != g {
+					continue
+				}
+				s := make([]statCaz, len(brate))
+				for i, k := range brate {
+					if !prezente[i] {
+						continue
+					}
+					var ok bool
+					if s[i], ok = statistica(ix.rulari[cheieCaz{k.motor, c.ID, k.cu}]); !ok {
+						continue cazuri
+					}
+				}
+				n++
+				for i, k := range brate {
+					if !prezente[i] {
+						continue
+					}
+					fp[i] += s[i].fp
+					lipsa[i] += s[i].lipsa
+					for _, r := range ix.rulari[cheieCaz{k.motor, c.ID, k.cu}] {
+						if r.Valida() && r.Rezultat.PornitCunoscut {
+							cunoscut[i]++
+							if r.Rezultat.Pornit {
+								pornit[i]++
+							}
+						}
+					}
+				}
+			}
+			if n == 0 {
+				continue
+			}
+			patru := func(v []float64) string {
+				p := make([]string, len(v))
+				for i := range v {
+					p[i] = "–"
+					if prezente[i] {
+						p[i] = fmtNum(v[i])
+					}
+				}
+				return strings.Join(p, " / ")
+			}
+			porniri := []string{"–", "–"}
+			for j, i := range []int{2, 3} {
+				if prezente[i] && cunoscut[i] > 0 {
+					porniri[j] = fmt.Sprintf("%d/%d", pornit[i], cunoscut[i])
+				}
+			}
+			fmt.Fprintf(b, "| %s | %d | %s | %s | %s |\n", g, n, patru(fp), patru(lipsa), strings.Join(porniri, " / "))
+		}
+		b.WriteString("\n")
+	}
+}
+
+// areRulari spune dacă brațul (motor, cu sau fără skill) are vreo rulare.
+func areRulari(ix index, motor string, cu bool) bool {
+	for k := range ix.rulari {
+		if k.motor == motor && k.cu == cu {
+			return true
+		}
+	}
+	return false
 }
 
 // arataMCP spune dacă motorul mcp are vreo rulare în index.

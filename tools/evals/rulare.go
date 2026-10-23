@@ -169,14 +169,15 @@ const (
 	UnealtaVerifica = "mcp__romana__verifica_text"
 )
 
-// SufixMCP se adaugă numelui motorului în rapoarte pentru brațul cu skill și MCP.
+// SufixMCP se adaugă numelui motorului în rapoarte pentru brațele cu serverul
+// MCP (cu skill sau fără).
 const SufixMCP = "+mcp"
 
-// ArgsClaudeMCP sunt argumentele brațului „cu skill + MCP”: cele ale brațului
-// cu skill, plus --mcp-config spre fișierul dat (--strict-mcp-config rămâne,
-// deci alt server nu poate intra) și cele două unelte pe lista permisă.
-func ArgsClaudeMCP(m Motor, repo, cfg string) []string {
-	a := ArgsClaude(m, true, repo)
+// ArgsClaudeMCP sunt argumentele unui braț cu serverul MCP: cele ale brațului
+// cu sau fără skill, plus --mcp-config spre fișierul dat (--strict-mcp-config
+// rămâne, deci alt server nu poate intra) și cele două unelte pe lista permisă.
+func ArgsClaudeMCP(m Motor, cuSkill bool, repo, cfg string) []string {
+	a := ArgsClaude(m, cuSkill, repo)
 	return append(a, "--mcp-config", cfg, "--allowedTools", UnealtaCauta+","+UnealtaVerifica)
 }
 
@@ -554,7 +555,7 @@ type Optiuni struct {
 	ModelJudecator string // implicit „opus”: altă familie/treaptă decât brațul Sonnet
 	Judecari       int    // câte judecăți pe un text (mediana lor); implicit 3
 	AuthCodex      string // implicit AuthCodex()
-	MCP            bool   // brațul cu skill pornește și serverul `romana mcp` (cere cuSkill)
+	MCP            bool   // brațul pornește și serverul `romana mcp` (cu sau fără skill)
 	Romana         string // calea binarului romana, obligatorie cu MCP
 	DB             string // baza dex (--db); goală = implicita binarului
 }
@@ -595,9 +596,6 @@ func RuleazaCu(ctx context.Context, ex Executor, repo string, c Caz, motor Motor
 	defer os.RemoveAll(tmp)
 
 	if opt.MCP {
-		if !cuSkill {
-			return Rezultat{}, fmt.Errorf("brațul MCP merge doar cu skill")
-		}
 		if opt.Romana == "" {
 			return Rezultat{}, fmt.Errorf("brațul MCP cere calea binarului romana (--romana)")
 		}
@@ -617,7 +615,7 @@ func RuleazaCu(ctx context.Context, ex Executor, repo string, c Caz, motor Motor
 			if err := os.WriteFile(cale, cfg, 0o600); err != nil {
 				return r, err
 			}
-			args = ArgsClaudeMCP(motor, repo, cale)
+			args = ArgsClaudeMCP(motor, cuSkill, repo, cale)
 		}
 		brut, err := ex(ctx, Comanda{Dir: tmp, Stdin: prompt, Nume: "claude", Arg: args})
 		if err != nil {
