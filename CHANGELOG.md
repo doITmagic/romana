@@ -1,6 +1,6 @@
 # Jurnal de modificări
 
-## Neversionat
+## 0.2.0 (2026-10-23)
 
 A doua fază: unealta de dicționar. Skillul și binarul merg și împreună, și separat.
 
@@ -32,6 +32,7 @@ A doua fază: unealta de dicționar. Skillul și binarul merg și împreună, ș
   - formulele și tabelele;
   - citatele;
   - numele proprii, cuvintele străine și compusele cu prefixoide („videoînregistrare”).
+- **Un text scris complet fără diacritice** primește o singură notă (`fara_diacritice`), nu câte o observație pentru fiecare cuvânt.
 - **`verifica_text`** spune în fiecare răspuns ce nu verifică: acordul, sensul, coerența, punctuația și stilul. Un raport gol nu înseamnă un text corect.
 - **Distribuirea:**
   - binare gata compilate pentru Linux, macOS și Windows (amd64 și arm64), cu `SHA256SUMS`;
@@ -46,16 +47,20 @@ A doua fază: unealta de dicționar. Skillul și binarul merg și împreună, ș
   - ce face agentul cu `nota`.
 
   Fără unelte, skillul merge ca înainte; testul de independență trece.
+- **Skillul și dicționarul se încarcă împreună.** Descrierea skillului spune acum că se folosește și când agentul are unelte de dicționar, iar instrucțiunile serverului MCP îi cer agentului să încarce întâi un skill pentru texte în română. Înainte, cu dicționarul conectat, Claude nu încărca skillul în 19 din 84 de rulări; acum îl încarcă în toate.
 - **Fișierele mari din `references/` sparte pe subiecte**, ca agentul să citească mai puțin: `gramatica.md` → plus `gramatica-forme.md` și `gramatica-scriere.md`; `tipografie.md` → plus `majuscule-si-nume.md`; `ce-nu-e-greseala.md` → plus `ce-nu-e-greseala-stil.md`; `prieteni-falsi-si-calcuri.md` → plus `calcuri.md`. ID-urile regulilor rămân aceleași.
 
 ### Evals și unelte
 
 - **Evals:**
-  - brațul „cu skill + MCP” (`--mcp`, pe Claude și pe Codex), comparat cu brațul „cu skill”;
+  - patru brațe: fără skill, doar dicționar, doar skill, skill și dicționar (`--ambele --mcp`, pe Claude și pe Codex), cu tabelul „Patru brațe”;
+  - 20 de cazuri noi pe cuvinte (`cuvinte-*`): variante, forme greșite și cuvinte pe care dicționarul nu le are, cu așteptarea nouă „neverificat”;
+  - rezultatul final, pe 42 de cazuri, în medie pe rulare: cu skill și dicționar, Claude nu mai semnalează nicio formă corectă (7,5 doar cu skill) și ratează o greșeală, ca doar cu skill; Codex e la egalitate cu skillul singur la formele corecte (1,5) și ratează 3 greșeli, față de 2,5. Pe cuvinte, dicționarul scade greșelile scăpate de la 3,5 la 1,5 pe Claude și de la 1 la 0 pe Codex ([`evals/RAPORT-MCP.md`](evals/RAPORT-MCP.md), [`evals/RAPORT-CUVINTE.md`](evals/RAPORT-CUVINTE.md));
   - consumul în tokeni pe rulare (tabelul „Consum”);
   - pornirea skillului, măsurată și pe Codex.
 - **Validatorul** limitează mărimea: `SKILL.md` până la 6.000 de cuvinte, fiecare fișier din `references/` până la 6.500.
 - **Paza** blochează fișierele de bază de date și arhivele (`.sqlite`, `.db`, `.sql`, `.gz`).
+- **Repo-ul devine public.** Documentele interne (starea, designul, planurile) nu mai sunt în repo. Runner-ul de evals nu mai are căi locale implicite: setul privat se ia din `ROMANA_EVALS_PRIVAT` (implicit `~/.local/share/romana/evals-privat`), iar `flux.json` din `ROMANA_FLUX`.
 - **Corectat:** v0.1.0 avea de fapt 854 de reguli, dintre care 289 de normă (RO-SEM-247 coborâtă la recomandare și RO-CAL-507 nouă, ambele intrate înaintea tagului); README-ul și intrarea de mai jos spuneau 853 și 290.
 
 ## 0.1.0 (2026-10-22)

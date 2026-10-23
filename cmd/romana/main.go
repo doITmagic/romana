@@ -24,7 +24,7 @@ import (
 	"github.com/doITmagic/romana/verifica"
 )
 
-// versiune se setează la build: -ldflags "-X main.versiune=v0.1.0".
+// versiune se setează la build: -ldflags "-X main.versiune=v0.2.0".
 var versiune = "dev"
 
 // maxHook: fișierele mai mari de atât nu sunt citite de hook.

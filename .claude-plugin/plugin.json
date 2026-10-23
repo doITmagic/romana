@@ -1,6 +1,6 @@
 {
   "name": "romana",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Scrie, corectează și verifică texte în română pentru public (pagini de site și de marketing, articole de blog, știri, e-mailuri, texte de interfață, documentație): gramatică, semantică, stilistică și coerență, fără calcuri din engleză și fără cuvinte inventate. Writes, corrects or reviews Romanian text meant for readers, including translations into Romanian. Use when the deliverable is such a text or when asked whether Romanian wording is correct or natural, also when dictionary tools such as cauta_cuvant or verifica_text are available: they check words, not the text. Do not use when Romanian is merely the language of the conversation and the answer is code, a calculation, a factual reply or an explanation unrelated to wording, nor for poetry, fiction, translations out of Romanian or file conversions that leave the text unchanged.",
   "author": { "name": "DO IT MAGIC SOFTWARE" },
   "repository": "https://github.com/doITmagic/romana",
