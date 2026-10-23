@@ -133,7 +133,7 @@ func TestDirPrivat(t *testing.T) {
 		t.Errorf("DirPrivat() = %q", got)
 	}
 	t.Setenv("ROMANA_EVALS_PRIVAT", "")
-	if got := DirPrivat(); !strings.HasSuffix(got, filepath.Join("romana-privat", "evals-privat")) {
+	if got := DirPrivat(); !strings.HasSuffix(got, filepath.Join(".local", "share", "romana", "evals-privat")) {
 		t.Errorf("DirPrivat() implicit = %q", got)
 	}
 }

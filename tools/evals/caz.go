@@ -119,16 +119,16 @@ func set(v ...string) map[string]bool {
 }
 
 // DirPrivat întoarce directorul setului privat: ROMANA_EVALS_PRIVAT, dacă e
-// setată, altfel ~/romana-privat/evals-privat.
+// setată, altfel ~/.local/share/romana/evals-privat.
 func DirPrivat() string {
 	if d := os.Getenv("ROMANA_EVALS_PRIVAT"); d != "" {
 		return d
 	}
 	home, err := os.UserHomeDir()
 	if err != nil {
-		return filepath.Join("romana-privat", "evals-privat")
+		return "evals-privat"
 	}
-	return filepath.Join(home, "romana-privat", "evals-privat")
+	return filepath.Join(home, ".local", "share", "romana", "evals-privat")
 }
 
 // Micro spune dacă e un micro-text (ID cu „-micro-”), de ponderat separat în scor.

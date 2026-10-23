@@ -40,7 +40,7 @@ func run() error {
 		raport    = flag.String("raport", "", "fișierul Markdown cu raportul (implicit: stdout)")
 		brut      = flag.String("brut", "", "fișier JSON cu rulările și ieșirile brute")
 		renoteaza = flag.String("renoteaza", "", "fișier --brut dintr-o rulare anterioară: notează din nou ieșirile salvate, fără rulări noi")
-		flux      = flag.String("flux", os.ExpandEnv("$ROMANA_FLUX"), "flux.json din dinlume, pentru modelul și efortul Codex")
+		flux      = flag.String("flux", os.Getenv("ROMANA_FLUX"), "flux.json din dinlume, pentru modelul și efortul Codex (implicit: ROMANA_FLUX; fără el, valorile de rezervă)")
 		paralel   = flag.Int("paralel", 3, "rulări simultane")
 		minute    = flag.Int("minute", 10, "limita de timp pe rulare")
 		repetari  = flag.Int("repetari", 1, "câte rulări pe caz și pe braț (raportul arată media și dispersia)")
@@ -103,7 +103,7 @@ func run() error {
 		if cfg.EfortClaude != "" {
 			claude.Efort = cfg.EfortClaude
 		}
-	} else if *motorF != "claude" {
+	} else if *motorF != "claude" && *flux != "" {
 		fmt.Fprintf(os.Stderr, "atenție: modelul Codex nu s-a citit din %s (%v); folosesc %s, efort %s\n", *flux, errFlux, codex.Model, codex.Efort)
 	}
 	var motoare []evals.Motor

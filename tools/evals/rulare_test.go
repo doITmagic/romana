@@ -265,9 +265,9 @@ func TestFluxVerificator(t *testing.T) {
 }
 
 func TestFluxReal(t *testing.T) {
-	f := os.ExpandEnv("$ROMANA_FLUX")
-	if _, err := os.Stat(f); err != nil {
-		t.Skip("flux.json lipsește")
+	f := os.Getenv("ROMANA_FLUX")
+	if f == "" {
+		t.Skip("ROMANA_FLUX nu e setată")
 	}
 	cfg, err := FluxVerificator(f)
 	if err != nil || cfg.ModelCodex == "" || cfg.EfortCodex == "" {
