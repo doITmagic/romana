@@ -268,12 +268,35 @@ func TestIconita(t *testing.T) {
 	h := server(t, "")
 	for _, cale := range []string{"/icon.png", "/favicon.ico"} {
 		w := cerere(t, h, "GET", cale, "")
+		if w.Body.Len() > 64<<10 {
+			t.Errorf("%s: %d octeți, pictograma servită trebuie să rămână mică", cale, w.Body.Len())
+		}
 		if w.Code != 200 || w.Header().Get("Content-Type") != "image/png" || !strings.HasPrefix(w.Body.String(), "\x89PNG\r\n\x1a\n") {
 			t.Errorf("%s: %d %s (%d octeți)", cale, w.Code, w.Header().Get("Content-Type"), w.Body.Len())
 		}
 		if w := cerere(t, h, "HEAD", cale, ""); w.Code != 200 || w.Header().Get("Content-Type") != "image/png" {
 			t.Errorf("HEAD %s: %d %s", cale, w.Code, w.Header().Get("Content-Type"))
 		}
+	}
+}
+
+// TestSecurityTxtExpira pică cu 30 de zile înainte de data din Expires, ca
+// fișierul să fie reînnoit (data din main.go și textul din testul de mai
+// sus) înainte să expire pe tăcute.
+func TestSecurityTxtExpira(t *testing.T) {
+	const prefix = "Expires: "
+	i := strings.Index(securityTxt, prefix)
+	if i < 0 {
+		t.Fatal("security.txt nu are rând Expires")
+	}
+	rest := securityTxt[i+len(prefix):]
+	val := rest[:strings.Index(rest, "\n")]
+	exp, err := time.Parse(time.RFC3339, val)
+	if err != nil {
+		t.Fatalf("Expires %q nu e dată RFC 3339: %v", val, err)
+	}
+	if ramas := time.Until(exp); ramas < 30*24*time.Hour {
+		t.Errorf("security.txt expiră la %s (în %s): reînnoiește Expires în main.go și în TestSecurityTxt", val, ramas.Round(time.Hour))
 	}
 }
 

@@ -13,8 +13,9 @@ var Referinte embed.FS
 // DirReferinte e rădăcina fișierelor din Referinte.
 const DirReferinte = "skills/romana/references"
 
-// Iconita e pictograma proiectului (PNG, 1024 × 1024): serverul public o
+// Iconita e pictograma proiectului, în 256 × 256 (PNG; originalul de 1024 × 1024 e
+// assets/icon.png, folosit de manifestele pluginului): serverul public o
 // servește la /icon.png și /favicon.ico.
 //
-//go:embed assets/icon.png
+//go:embed assets/icon-256.png
 var Iconita []byte

@@ -49,7 +49,8 @@ var pagina []byte
 const cspPagina = "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
 
 // securityTxt e /.well-known/security.txt (RFC 9116). Expires se
-// împrospătează o dată pe an. Nu are rând Policy: repo-ul nu are SECURITY.md.
+// împrospătează o dată pe an (TestSecurityTxtExpira pică cu 30 de zile înainte
+// de dată, ca să nu expire pe tăcute). Nu are rând Policy: repo-ul nu are SECURITY.md.
 const securityTxt = "Contact: mailto:razvan@doitmagic.ro\n" +
 	"Expires: 2027-10-23T00:00:00Z\n" +
 	"Preferred-Languages: ro, en\n" +

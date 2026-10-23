@@ -3,7 +3,8 @@
 ## Neversionat
 
 - **Pagina de start a serverului public** (`https://mcp.doitmagic.ro/`): HTML mic, încorporat în binar, doar cu CSS inline, în română și, pe scurt, în engleză. Are adresa MCP, pașii pentru claude.ai, Claude Code, Codex și ChatGPT, „Un proiect DO IT MAGIC SOFTWARE” cu legătură spre doitmagic.ro și legături spre articol, GitHub, directorul Claude, confidențialitate și condiții. Doar această rută are o politică CSP mai largă (`style-src 'unsafe-inline'; img-src 'self'`); restul rutelor, `/mcp` inclus, păstrează politica strictă. Clienții care cer `text/plain` sau `application/json` primesc, ca înainte, textul simplu, acum cu legătura spre doitmagic.ro.
-- `/icon.png` și `/favicon.ico` servesc pictograma proiectului (directorul Claude folosește favicon-ul serverului când nu are pictogramă), iar `/.well-known/security.txt` (RFC 9116) dă contactul pentru raportarea vulnerabilităților.
+- `/icon.png` și `/favicon.ico` servesc pictograma proiectului, în 256 × 256 (directorul Claude folosește favicon-ul serverului când nu are pictogramă), iar `/.well-known/security.txt` (RFC 9116) dă contactul pentru raportarea vulnerabilităților.
+- Pagina de start și manifestele pluginului descriu `verifica_greseli` ca în descrierea uneltei: „greșelile sigure, cele care nu depind de context”. `TestSecurityTxtExpira` pică cu 30 de zile înainte de data din `Expires`, ca fișierul security.txt să fie reînnoit la timp.
 - `PRIVACY.md` și `TERMS.md` sunt publicate și pe doitmagic.ro, iar manifestele de plugin trimit la paginile acelea, în engleză.
 
 ## 0.3.1 (2026-10-23)
