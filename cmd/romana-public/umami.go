@@ -16,7 +16,7 @@ import (
 // eveniment pentru fiecare initialize și fiecare apel de unealtă, cu numele
 // uneltei, al aplicației client, interogarea lui cauta_regula și, la
 // verifica_greseli, lungimea textului și regulile găsite. Textul verificat nu
-// pleacă niciodată. Adresa IP merge doar în antetul X-Forwarded-For, ca Umami
+// pleacă niciodată. Adresa IP merge doar în antetul True-Client-IP, ca Umami
 // să afle țara; Umami nu o păstrează.
 
 // eveniment e ce se trimite: Nume e unealta sau „initialize”.
@@ -108,7 +108,9 @@ func (u *umami) trimite(ctx context.Context) {
 			req.Header.Set("Content-Type", "application/json")
 			req.Header.Set("User-Agent", uaUmami)
 			if e.IP != "" {
-				req.Header.Set("X-Forwarded-For", e.IP)
+				// Umami citește întâi True-Client-IP; X-Real-IP și X-Forwarded-For
+				// le rescrie nginx-proxy din fața lui cu adresa serverului nostru.
+				req.Header.Set("True-Client-IP", e.IP)
 			}
 			resp, err := u.client.Do(req)
 			if err != nil {

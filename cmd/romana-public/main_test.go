@@ -273,7 +273,7 @@ func TestUmamiPrimesteFaraText(t *testing.T) {
 	primite := make(chan string, 4)
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		b, _ := io.ReadAll(r.Body)
-		primite <- r.URL.Path + " " + r.UserAgent() + " " + r.Header.Get("X-Forwarded-For") + " " + string(b)
+		primite <- r.URL.Path + " " + r.UserAgent() + " " + r.Header.Get("True-Client-IP") + " " + string(b)
 	}))
 	defer srv.Close()
 	ctx, anuleaza := context.WithCancel(context.Background())
