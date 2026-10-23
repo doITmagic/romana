@@ -151,3 +151,22 @@ func TestPrefixCuCratima(t *testing.T) {
 		}
 	}
 }
+
+// Un text scris complet fără diacritice: raportul o spune o dată, în
+// „fara_diacritice”, ca lista de necunoscute să nu fie citită drept zeci de
+// greșeli separate (skillul o semnalează o singură dată, pentru tot textul).
+func TestTextFaraDiacritice(t *testing.T) {
+	d := fals{"vă": true, "mulțumim": true, "pentru": true, "cererea": true, "trimisă": true, "și": true, "lipsește": true, "dosarul": true}
+	r, err := Text(context.Background(), d, "Va multumim pentru cererea trimisa. Dosarul si lipseste.")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if r.FaraDiacritice == "" {
+		t.Fatalf("aștept nota fara_diacritice: %+v", r)
+	}
+	// un text cu diacritice, cu o singură scăpare, nu primește nota
+	r, _ = Text(context.Background(), d, "Vă mulțumim pentru cererea trimisa și dosarul.")
+	if r.FaraDiacritice != "" {
+		t.Errorf("o scăpare nu e text fără diacritice: %q", r.FaraDiacritice)
+	}
+}

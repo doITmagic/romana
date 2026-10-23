@@ -307,6 +307,9 @@ func cmdVerifica(ctx context.Context, o optiuni, in io.Reader, out, errOut io.Wr
 	if len(r.Lint) == 0 && len(r.Necunoscute) == 0 {
 		fmt.Fprintln(out, "Nicio observație.")
 	}
+	if r.FaraDiacritice != "" {
+		fmt.Fprintln(out, r.FaraDiacritice)
+	}
 	fmt.Fprintln(out, r.Limite)
 	return 0
 }

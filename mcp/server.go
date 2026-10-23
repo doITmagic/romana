@@ -65,6 +65,7 @@ const descriereVerifica = `Trecere mecanică peste un text în română: caută 
 	`Întoarce două liste. „necunoscute” are cuvintele care nu există în tabela de forme, cu poziția în octeți (inceput, sfarsit), ` +
 	`„sugestii” (forme care diferă doar prin diacritice sau cratimă) și câmpul „neverificat”. ` +
 	`„Necunoscut” nu înseamnă „greșit”: înseamnă doar că dicționarul nu are forma. ` +
+	`Când textul nu are deloc diacritice, „fara_diacritice” o spune o dată: e o singură problemă, a întregului text, nu câte una pentru fiecare cuvânt din listă. ` +
 	`„neverificat” = true marchează ce dicționarul nu poate judeca (nume proprii, numere, adrese, cod, cuvinte în alt alfabet); „motiv” spune de ce. ` +
 	`„lint” are greșelile sigure, independente de context (de exemplu ș și ț scrise cu sedilă): fiecare cu fragmentul, propunerea, un mesaj care explică greșeala și, uneori, o notă despre excepții (de exemplu citatul exact). ` +
 	`Unealta nu corectează textul și nu decide: dă materialul, iar cuvintele necunoscute trebuie judecate din context. ` +

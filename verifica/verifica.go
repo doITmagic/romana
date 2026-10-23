@@ -58,7 +58,15 @@ type Raport struct {
 	Lint        []lint.Observatie `json:"lint"`
 	Limite      string            `json:"limite"` // mereu Limite: ce nu verifică unealta
 	Trunchiat   *Trunchiere       `json:"trunchiat,omitempty"`
+	// FaraDiacritice: textul nu are deloc diacritice, iar mai multe cuvinte
+	// există doar cu ele. E o singură problemă, a întregului text; nota o spune,
+	// ca lista de necunoscute să nu fie citită ca greșeli separate.
+	FaraDiacritice string `json:"fara_diacritice,omitempty"`
 }
+
+// minFaraDiacritice: de la câte cuvinte cu sugestii doar de diacritice, într-un
+// text fără nicio diacritică, raportul dă nota FaraDiacritice.
+const minFaraDiacritice = 3
 
 // Trunchiere: câte elemente aveau listele înainte de Primele.
 type Trunchiere struct {
@@ -303,7 +311,31 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 		rap.Necunoscute = append(rap.Necunoscute, u)
 	}
 	sort.SliceStable(rap.Necunoscute, func(a, b int) bool { return rap.Necunoscute[a].Inceput < rap.Necunoscute[b].Inceput })
+	rap.FaraDiacritice = notaFaraDiacritice(text, rap.Necunoscute)
 	return rap, nil
+}
+
+// notaFaraDiacritice întoarce nota pentru un text scris complet fără
+// diacritice, sau "" dacă textul are diacritice ori prea puține cuvinte le cer.
+func notaFaraDiacritice(text string, nec []Necunoscut) string {
+	if strings.ContainsAny(text, "ăâîșțĂÂÎȘȚşţŞŢ") {
+		return ""
+	}
+	var exemplu Necunoscut
+	n := 0
+	for _, u := range nec {
+		if len(u.Sugestii) > 0 {
+			if n == 0 {
+				exemplu = u
+			}
+			n++
+		}
+	}
+	if n < minFaraDiacritice {
+		return ""
+	}
+	return fmt.Sprintf("Textul nu are deloc diacritice: %d cuvinte există în dicționar doar cu ele (de exemplu „%s” → „%s”). "+
+		"E o singură problemă, a întregului text: se semnalează o dată, nu cuvânt cu cuvânt.", n, exemplu.Cuvant, exemplu.Sugestii[0])
 }
 
 // SemnalatDeLint spune dacă linterul a semnalat deja cuvântul (cu o
