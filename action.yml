@@ -1,0 +1,73 @@
+# Acțiunea GitHub romana: verifică greșelile sigure din textele în română
+# (ș și ț cu sedilă, grafia veche cu „î” și „sînt”, „vroiam”, spațierea) și le
+# arată ca adnotări pe rândurile din pull request. Nu folosește dicționarul și
+# nu face nicio cerere către dexonline.ro: descarcă doar binarul romana din
+# GitHub Releases. Merge pe runnere Linux și macOS.
+name: romana
+description: Finds the sure errors in Romanian texts (cedilla diacritics, old „î” spelling, „vroiam”, spacing) and annotates them in pull requests.
+author: DO IT MAGIC SOFTWARE
+branding:
+  icon: check-circle
+  color: blue
+
+inputs:
+  files:
+    description: Files to check, as bash glob patterns separated by spaces. Default, every Markdown file in the repository.
+    default: "**/*.md"
+  fail:
+    description: '"true" fails the job when sure errors are found; by default they are only annotations.'
+    default: "false"
+  version:
+    description: romana version to use (for example v0.3.1). Default, the latest release.
+    default: ""
+
+outputs:
+  errors:
+    description: Number of sure errors found.
+    value: ${{ steps.verifica.outputs.errors }}
+
+runs:
+  using: composite
+  steps:
+    - name: Install romana
+      shell: bash
+      env:
+        ROMANA_VERSIUNE: ${{ inputs.version }}
+        ROMANA_DIR: ${{ runner.temp }}/romana-bin
+      run: sh "$GITHUB_ACTION_PATH/install.sh"
+
+    - name: Check Romanian texts
+      id: verifica
+      shell: bash
+      env:
+        FILES: ${{ inputs.files }}
+        FAIL: ${{ inputs.fail }}
+        BIN: ${{ runner.temp }}/romana-bin/romana
+      run: |
+        shopt -s globstar nullglob
+        fisiere=()
+        for tipar in $FILES; do
+          for f in $tipar; do
+            case "$f" in
+              .git/*|*/.git/*|node_modules/*|*/node_modules/*|vendor/*|*/vendor/*) continue ;;
+            esac
+            [ -f "$f" ] && fisiere+=("$f")
+          done
+        done
+        if [ ${#fisiere[@]} -eq 0 ]; then
+          echo "romana: no files match: $FILES"
+          echo "errors=0" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+        iesire=$("$BIN" verifica --sigure --github "${fisiere[@]}")
+        [ -n "$iesire" ] && printf '%s\n' "$iesire"
+        n=$(printf '%s\n' "$iesire" | grep -c '^::warning' || true)
+        echo "errors=$n" >> "$GITHUB_OUTPUT"
+        {
+          echo "### romana"
+          echo "$n sure error(s) in ${#fisiere[@]} file(s) checked. Files that do not look Romanian are skipped."
+        } >> "$GITHUB_STEP_SUMMARY"
+        if [ "$FAIL" = "true" ] && [ "$n" -gt 0 ]; then
+          echo "::error title=romana::$n sure error(s) in Romanian texts"
+          exit 1
+        fi

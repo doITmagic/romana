@@ -1,10 +1,11 @@
 name: release
 
-# Se declanșează doar la un tag de versiune (v*). Nu face nicio cerere către
+# Se declanșează doar la un tag de versiune (v1.2.3); tagul mobil „v0” al acțiunii
+# GitHub nu face release. Nu face nicio cerere către
 # dexonline.ro: binarul se construiește din sursele din repo.
 on:
   push:
-    tags: ["v*"]
+    tags: ["v*.*.*"]
 
 permissions:
   contents: read

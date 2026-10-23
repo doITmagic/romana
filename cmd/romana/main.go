@@ -16,6 +16,7 @@ import (
 	"sync"
 	"time"
 	"unicode"
+	"unicode/utf8"
 
 	"github.com/doITmagic/romana/baza"
 	"github.com/doITmagic/romana/dex"
@@ -68,6 +69,8 @@ Folosire:
   romana cauta <cuvânt> [--json]       definițiile, lemele și formele cuvântului
   romana verifica [fișier|-] [--json]  cuvintele necunoscute și greșelile sigure dintr-un text
   romana verifica --hook               pentru hook-ul PostToolUse (JSON pe stdin)
+  romana verifica --sigure [fișiere…]  doar greșelile sigure, fără dicționar și fără rețea;
+                                       cu --github, ca adnotări pentru GitHub Actions
   romana mcp                           server MCP pe stdio (cauta_cuvant, verifica_text)
   romana import [fișier]               importă exportul (fără fișier, îl descarcă)
   romana update                        reface baza dacă exportul s-a schimbat
@@ -90,6 +93,7 @@ func main() {
 // optiuni sunt argumentele comune ale comenzilor.
 type optiuni struct {
 	offline, json, hook bool
+	sigure, github      bool // verifica: doar lint, fără dicționar; ieșire ca adnotări GitHub
 	fundal              bool // update pornit de actualizeazaInFundal: nefortat, cu ora în jurnal
 	calea               string
 	pozitionale         []string
@@ -114,6 +118,10 @@ func parseaza(args []string) (o optiuni, err error) {
 			o.json = true
 		case a == "--hook":
 			o.hook = true
+		case a == "--sigure":
+			o.sigure = true
+		case a == "--github":
+			o.github = true
 		case a == "--fundal":
 			o.fundal = true
 		case a == "-" || !strings.HasPrefix(a, "-"):
@@ -162,6 +170,9 @@ func ruleaza(ctx context.Context, args []string, in io.Reader, out, errOut io.Wr
 	case "verifica":
 		if o.hook {
 			return cmdHook(in, out)
+		}
+		if o.sigure {
+			return cmdVerificaSigure(o, in, out, errOut)
 		}
 		return cmdVerifica(ctx, o, in, out, errOut)
 	case "mcp":
@@ -312,6 +323,82 @@ func cmdVerifica(ctx context.Context, o optiuni, in io.Reader, out, errOut io.Wr
 	}
 	fmt.Fprintln(out, r.Limite)
 	return 0
+}
+
+// cmdVerificaSigure: doar greșelile sigure (pachetul lint), pe unul sau mai
+// multe fișiere, fără dicționar și fără nicio cerere în rețea. E ce rulează
+// acțiunea GitHub: nimic de descărcat, nimic de pe dexonline. Fișierele care
+// nu par scrise în română se sar.
+func cmdVerificaSigure(o optiuni, in io.Reader, out, errOut io.Writer) int {
+	fisiere := o.pozitionale
+	if len(fisiere) == 0 {
+		fisiere = []string{"-"}
+	}
+	total, cuObservatii := 0, 0
+	for _, f := range fisiere {
+		text, err := citesteText(optiuni{pozitionale: []string{f}}, in)
+		if err != nil {
+			fmt.Fprintf(errOut, "romana: %s\n", mesajFisier(f, err))
+			return 1
+		}
+		if !lint.PareRomana(text) {
+			continue
+		}
+		obs := lint.Verifica(text)
+		if len(obs) > 0 {
+			cuObservatii++
+		}
+		for _, ob := range obs {
+			total++
+			linie, col := pozitie(text, ob.Inceput)
+			if o.github {
+				fmt.Fprintln(out, adnotareGitHub(f, linie, col, ob))
+			} else {
+				fmt.Fprintf(out, "%s:%d:%d: %s\n", f, linie, col, formateazaObservatie(ob))
+			}
+		}
+	}
+	if !o.github {
+		if total == 0 {
+			fmt.Fprintln(out, "Nicio greșeală sigură.")
+		} else {
+			fmt.Fprintf(out, "%d %s în %d %s.\n", total, plural(total, "greșeală sigură", "greșeli sigure"), cuObservatii, plural(cuObservatii, "fișier", "fișiere"))
+		}
+		fmt.Fprintln(out, "Verificarea acoperă doar greșelile sigure, independente de context; ortografia cuvintelor, acordul, sensul și stilul nu sunt verificate.")
+	}
+	return 0
+}
+
+func plural(n int, unu, mai string) string {
+	if n == 1 {
+		return unu
+	}
+	if n >= 20 {
+		return "de " + mai
+	}
+	return mai
+}
+
+// pozitie: rândul și coloana (de la 1, coloana în caractere) ale octetului p.
+func pozitie(text string, p int) (linie, col int) {
+	if p > len(text) {
+		p = len(text)
+	}
+	inceput := strings.LastIndexByte(text[:p], '\n') + 1
+	return strings.Count(text[:p], "\n") + 1, utf8.RuneCountInString(text[inceput:p]) + 1
+}
+
+// adnotareGitHub: o observație ca „workflow command” GitHub Actions, care
+// apare ca adnotare pe rândul fișierului în pull request.
+func adnotareGitHub(fisier string, linie, col int, ob lint.Observatie) string {
+	prop := strings.NewReplacer("%", "%25", "\r", "%0D", "\n", "%0A", ":", "%3A", ",", "%2C")
+	mesaj := strings.NewReplacer("%", "%25", "\r", "%0D", "\n", "%0A")
+	titlu := "romana"
+	if ob.Regula != "" {
+		titlu += " " + ob.Regula
+	}
+	return fmt.Sprintf("::warning file=%s,line=%d,col=%d,title=%s::%s",
+		prop.Replace(fisier), linie, col, prop.Replace(titlu), mesaj.Replace(formateazaObservatie(ob)))
 }
 
 func formateazaObservatie(ob lint.Observatie) string {

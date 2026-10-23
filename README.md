@@ -117,11 +117,19 @@ url = "https://mcp.doitmagic.ro/mcp"
 { "mcpServers": { "romana-public": { "url": "https://mcp.doitmagic.ro/mcp" } } }
 ```
 
-**VS Code**, in `.vscode/mcp.json`:
+**VS Code** (GitHub Copilot chat and agent mode), in `.vscode/mcp.json`:
 
 ```json
 { "servers": { "romana-public": { "type": "http", "url": "https://mcp.doitmagic.ro/mcp" } } }
 ```
+
+**GitHub Copilot coding agent**, on github.com: the repository's Settings → Copilot → Coding agent → MCP configuration:
+
+```json
+{ "mcpServers": { "romana": { "type": "http", "url": "https://mcp.doitmagic.ro/mcp", "tools": ["*"] } } }
+```
+
+The agent can then check the Romanian texts it writes in pull requests. For a check that runs on every pull request without an agent, use the [GitHub Action](#github-action).
 
 **Limits**, so that the server stays fast for everyone: 10 requests per second from the same address (bursts up to 50), 8 requests processed at once, texts up to 200,000 characters (1 MiB per request), `cauta_regula` queries up to 200 characters, 10 seconds per request; the container has half a CPU and 128 MB of memory. Per address and per day (UTC): 2,000 tool calls and 600 different rules from `cauta_regula`; ChatGPT's published addresses are exempt, since all its users share them. Over a limit the server answers `429` or `503` with `Retry-After`. All the rules are on GitHub anyway, in [`skills/romana/references/`](skills/romana/references/).
 
@@ -216,6 +224,10 @@ Tips:
 - **The public server is not a dictionary.** It knows the sure errors and the rules, not every word. For word lookups install the [local binary](#mcp-server-only).
 
 ## See it work
+
+**The public MCP server, called from Codex.** The assistant checks a text with `verifica_greseli`, looks up each rule with `cauta_regula`, and answers with the corrected text and the rules ([full video, 2 minutes](https://doitmagic.ro/demo/romana-mcp-demo-5a62eed3b999.mp4)):
+
+![Codex calls verifica_greseli and cauta_regula on the romana public MCP server and returns the corrected text with rules RO-TIP-027, RO-TIP-128, RO-GRA-067 and RO-TIP-068](docs/assets/romana-mcp-demo.gif)
 
 **The agent, with and without the skill.** The test case `hipercorectie-09` asks for a correction of a text that is already correct:
 
@@ -348,6 +360,27 @@ Two principles run through all of it. A correct form "corrected" into another is
 
 ## The dictionary tool
 
+### GitHub Action
+
+Checks the Romanian texts in a repository on every push or pull request and annotates the sure errors on their lines. It downloads only the `romana` binary from this repository's releases: no dictionary, no request to dexonline.ro. Linux and macOS runners.
+
+```yaml
+# .github/workflows/romana.yml
+name: romana
+on: [pull_request]
+jobs:
+  romana:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: doITmagic/romana@v0
+        with:
+          files: "**/*.md docs/**/*.html"   # bash globs; default "**/*.md"
+          fail: "false"                     # "true" fails the job on findings
+```
+
+The step's `errors` output has the number of findings. Locally, the same check is `romana verifica --sigure --github <files>`.
+
 ### Commands
 
 | Command | What it does |
@@ -355,6 +388,7 @@ Two principles run through all of it. A correct form "corrected" into another is
 | `romana cauta <word>` | from any inflected form to its lemmas: part of speech, inflected forms, the dictionaries that record it, the definitions whose license allows display, DOOM 3 attestation |
 | `romana verifica [file\|-]` | the words not in the dictionary (with suggestions that differ only in diacritics or a hyphen) and the errors that are wrong in any context |
 | `romana mcp` | the MCP server, over stdio |
+| `romana verifica --sigure [files…]` | only the sure errors, with no database and no network, for one or more files, as `file:line:column:`; files that do not look Romanian are skipped. With `--github`, as GitHub Actions annotations |
 | `romana verifica --hook` | the Claude Code `PostToolUse` hook: runs only the linter (no database, no network) on `.md`, `.txt` and `.html` files right after the agent writes them, and gives the agent the sure errors |
 | `romana import [file]` | builds the database from an export you downloaded, or downloads it |
 | `romana update` | checks now whether the export changed |

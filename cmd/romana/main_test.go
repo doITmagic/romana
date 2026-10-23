@@ -401,3 +401,48 @@ func TestVerificaTextFaraDubluri(t *testing.T) {
 		t.Fatalf("cod %d, ieșire %q", cod, out)
 	}
 }
+
+const textSigur = "Aşa cum ştim, ţara are nevoie de reforme și de oameni care să le ducă la capăt.\n" +
+	"Nu sînt sigur că vroiam să vin , dar am venit pentru că este important.\n" +
+	"Dacă nu facem asta acum, nu o mai facem niciodată, iar copiii noștri vor plăti prețul.\n"
+
+func TestVerificaSigureFaraDictionar(t *testing.T) {
+	dir := t.TempDir()
+	f := filepath.Join(dir, "a.md")
+	if err := os.WriteFile(f, []byte(textSigur), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	en := filepath.Join(dir, "en.md")
+	if err := os.WriteFile(en, []byte("This is an English file , with a space before the comma and nothing Romanian in it at all.\n"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	// fără bază și fără rețea: HOME e gol, iar ROMANA_FARA_RETEA e pus de rul
+	out, errOut, cod := rul(t, "", "verifica", "--sigure", f, en)
+	if cod != 0 || errOut != "" {
+		t.Fatalf("cod %d, stderr %q", cod, errOut)
+	}
+	for _, x := range []string{f + ":1:1: „Aşa” → „Așa”", f + ":2:4: „sînt” → „sunt”", "[RO-GRA-067]", f + ":2:31: „ ,” → „,”", "6 greșeli sigure în 1 fișier."} {
+		if !strings.Contains(out, x) {
+			t.Errorf("lipsește %q din:\n%s", x, out)
+		}
+	}
+	if strings.Contains(out, en) {
+		t.Errorf("fișierul în engleză trebuia sărit:\n%s", out)
+	}
+}
+
+func TestVerificaSigureGitHub(t *testing.T) {
+	f := filepath.Join(t.TempDir(), "x,y.md")
+	if err := os.WriteFile(f, []byte(textSigur), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	out, _, cod := rul(t, "", "verifica", "--sigure", "--github", f)
+	linii := strings.Split(strings.TrimSpace(out), "\n")
+	if cod != 0 || len(linii) != 6 {
+		t.Fatalf("cod %d, %d rânduri:\n%s", cod, len(linii), out)
+	}
+	esc := strings.ReplaceAll(f, ",", "%2C")
+	if want := "::warning file=" + esc + ",line=1,col=9,title=romana RO-TIP-027::„ştim” → „știm”"; !strings.HasPrefix(linii[1], want) {
+		t.Errorf("adnotarea:\n%s\naștept începutul:\n%s", linii[1], want)
+	}
+}

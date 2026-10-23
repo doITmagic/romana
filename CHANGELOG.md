@@ -1,5 +1,11 @@
 # Jurnal de modificări
 
+## 0.3.1 (2026-10-23)
+
+- `romana verifica --sigure [fișiere…]`: doar greșelile sigure, fără dicționar și fără rețea, pe mai multe fișiere, cu rândul și coloana; fișierele care nu par în română se sar. Cu `--github`, ca adnotări GitHub Actions.
+- Acțiunea GitHub (`action.yml`, `uses: doITmagic/romana@v0`): verifică textele în română din pull request-uri și pune adnotări pe rânduri; `fail: true` oprește jobul.
+- README: GIF-ul demonstrației (serverul public apelat din Codex), configurarea pentru GitHub Copilot (VS Code și agentul de pe github.com), secțiunea „GitHub Action”.
+
 ## 0.3.0 (2026-10-23)
 
 - **Server MCP public**, la `https://mcp.doitmagic.ro/mcp` (Streamable HTTP), gratuit și doar de citire, cu două unelte care nu cer dicționarul: `verifica_greseli` (greșelile sigure din pachetul `lint`) și `cauta_regula` (cele 854 de reguli ale skillului, după ID sau după cuvinte). Dicționarul dexonline nu ajunge pe server, pentru că licența nu permite redistribuirea lui.
