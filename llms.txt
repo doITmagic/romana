@@ -31,4 +31,4 @@ The skill needs no network and no tool. The binary downloads the dexonline expor
 
 - [Changelog](CHANGELOG.md)
 - [Contributing](CONTRIBUTING.md)
-- [More projects by DO IT MAGIC SOFTWARE](https://doitmagic.ro/proiecte/)
+- [More open-source projects by DO IT MAGIC SOFTWARE](https://github.com/doITmagic)

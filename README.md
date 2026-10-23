@@ -421,16 +421,13 @@ The pre-commit hook in `.githooks/` runs the guard and the validator. [CONTRIBUT
 
 ## More from DO IT MAGIC
 
-`romana` is built by [DO IT MAGIC SOFTWARE](https://doitmagic.ro/), a software studio in Pitești, Romania, working on AI agents, Go and local-first tools.
+`romana` is built by [DO IT MAGIC SOFTWARE](https://doitmagic.ro/), a software studio in Pitești, Romania, working on AI agents, Go and local-first tools. Other open-source projects:
 
-- **[RagCode MCP](https://github.com/doITmagic/rag-code-mcp)**: semantic code search for AI assistants, 100% local, written in Go. The story behind it: [case study on doitmagic.ro](https://doitmagic.ro/blog/studiu-de-caz-ragcode-mcp/).
+- **[RagCode MCP](https://github.com/doITmagic/rag-code-mcp)**: semantic code search for AI assistants, 100% local, written in Go.
 - **[ai-agent-skills](https://github.com/doITmagic/ai-agent-skills)**: a community registry of agent skill packs for RagCode.
 - **[trello-mcp-complete](https://github.com/doITmagic/trello-mcp-complete)**: an MCP server for Trello boards, lists and cards.
-- **[Speak2Me](https://doitmagic.ro/software/)**: Romanian voice dictation, offline and fully local. How we chose the model: [Romanian speech-to-text, tested offline on CPU](https://doitmagic.ro/blog/speech-to-text-romana-offline/).
-- **Working with AI agents:** [programming with AI agents](https://doitmagic.ro/blog/programare-cu-agenti-ai-40-la-suta-mai-putin-cod/), and [from vibe code to production](https://doitmagic.ro/servicii/vibe-code-productie/) when an app built with AI needs to be checked and shipped.
-- **Technical SEO for Romanian sites:** [site audit, structured data, sitemap and indexing for Google and Bing](https://doitmagic.ro/servicii/seo-geo/).
 
-All projects: [doitmagic.ro/proiecte](https://doitmagic.ro/proiecte/).
+All public repositories: [github.com/doITmagic](https://github.com/doITmagic).
 
 ---
 
