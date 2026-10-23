@@ -1,0 +1,22 @@
+{
+  "id": "cuvinte-12",
+  "mod": "corectura",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Nu agreem deloc ședințele lungi, așa că le ținem sub o oră.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "agreem",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "agreăm"
+    ]
+  }
+}

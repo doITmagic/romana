@@ -1,0 +1,19 @@
+{
+  "id": "cuvinte-03",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Anul acesta am semănat ovăs pe trei hectare, iar recolta a ieșit mai bună decât ne așteptam.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "ovăs",
+        "nivel": "recomandare",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

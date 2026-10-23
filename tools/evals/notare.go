@@ -280,6 +280,19 @@ func FragmenteSemnalate(iesire, intrare string) []string {
 	return out
 }
 
+// SectiuneNeverificat întoarce partea raportului de la primul rând care
+// pomenește lista „neverificat” (titlu sau rând de felul „Neverificat: …”)
+// până la sfârșit; "" dacă lista lipsește.
+func SectiuneNeverificat(iesire string) string {
+	linii := strings.Split(iesire, "\n")
+	for i, l := range linii {
+		if strings.Contains(strings.ToLower(l), "neverificat") {
+			return strings.Join(linii[i:], "\n")
+		}
+	}
+	return ""
+}
+
 // LinniiObs întoarce rândurile de observație (cele care încep cu „OBS:”, după
 // eventuale liniuțe, numere, asteriscuri sau «>»).
 func LinniiObs(iesire string) []string {
@@ -352,11 +365,18 @@ func noteazaVerificare(c Caz, r Rezultat, n *Nota) {
 	a := c.Asteptat
 	gasit := make([]bool, len(a.Observatii))
 	violat := make([]bool, len(a.Interzis))
+	neverificat := make([]bool, len(a.Neverificat))
 	for _, q := range flagged {
 		asteptata := false
 		for i, o := range a.Observatii {
 			if citatPrinde(q, norm(o.Fragment), norm(c.Intrare)) {
 				gasit[i] = true
+				asteptata = true
+			}
+		}
+		for i, z := range a.Neverificat {
+			if citatPrinde(q, norm(z), norm(c.Intrare)) {
+				neverificat[i] = true
 				asteptata = true
 			}
 		}
@@ -377,6 +397,12 @@ func noteazaVerificare(c Caz, r Rezultat, n *Nota) {
 	}
 	for _, g := range gasit {
 		if !g {
+			n.Lipsa++
+		}
+	}
+	lista := norm(SectiuneNeverificat(r.Iesire))
+	for i, z := range a.Neverificat {
+		if !neverificat[i] && !strings.Contains(lista, norm(z)) {
 			n.Lipsa++
 		}
 	}

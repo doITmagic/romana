@@ -1,0 +1,15 @@
+{
+  "id": "cuvinte-08",
+  "mod": "verificare",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Procesul de onboardare durează două săptămâni și include o întâlnire cu fiecare echipă.",
+  "confirmat": false,
+  "asteptat": {
+    "neverificat": [
+      "onboardare"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "cuvinte-10",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Am brainstormat împreună cu echipa și am ales trei idei pentru campania de toamnă.",
+  "confirmat": false,
+  "asteptat": {
+    "neverificat": [
+      "brainstormat"
+    ]
+  }
+}

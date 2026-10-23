@@ -1,0 +1,28 @@
+{
+  "id": "cuvinte-20",
+  "mod": "corectura",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Vă mul\u0163umim pentru răbdare \u015fi vă trimitem factura corectată astăzi.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "mul\u0163umim",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "\u015fi vă",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "mulțumim",
+      "și vă"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "cuvinte-17",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Acțiunea în instanță s-a perimat în martie, iar firma a încercat să eludeze controlul; amenda a fost eșalonată pe șase luni.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "perimat",
+      "eludeze",
+      "eșalonată"
+    ]
+  }
+}

@@ -189,3 +189,11 @@ func TestMicro(t *testing.T) {
 		t.Error("Micro recunoaște greșit ID-urile")
 	}
 }
+
+func TestNeverificatTrebuieSaFieInIntrare(t *testing.T) {
+	c := Caz{ID: "cuvinte-99", Mod: "verificare", Set: "public", Sursa: "x", Licenta: "MIT", Intrare: "Am forwardat mesajul.",
+		Asteptat: Asteptat{Neverificat: []string{"brainstormat"}}}
+	if err := valideaza(c); err == nil {
+		t.Error("un fragment „neverificat” care nu e în intrare trebuie refuzat")
+	}
+}

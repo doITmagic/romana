@@ -1,0 +1,19 @@
+{
+  "id": "cuvinte-02",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Redacțiunea ziarului a primit peste o sută de scrisori de la cititori după publicarea anchetei.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Redacțiunea",
+        "nivel": "recomandare",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

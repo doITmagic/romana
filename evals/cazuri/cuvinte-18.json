@@ -1,0 +1,18 @@
+{
+  "id": "cuvinte-18",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Inspectorii au venit inopinat, iar furnizorul se poate prevala de clauza de forță majoră. Noua bandă va fluidiza traficul.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "inopinat",
+      "prevala",
+      "fluidiza"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cuvinte-04",
+  "mod": "verificare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Hotelul vă primește într-un decor maiestos, cu vedere spre lac și spre munții din jur.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "maiestos",
+        "nivel": "recomandare",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

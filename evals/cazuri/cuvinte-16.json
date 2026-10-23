@@ -1,0 +1,17 @@
+{
+  "id": "cuvinte-16",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Noul sistem va eficientiza procesarea comenzilor, iar echipa a prioritizat cererile urgente.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "eficientiza",
+      "prioritizat"
+    ]
+  }
+}

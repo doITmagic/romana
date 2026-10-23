@@ -1,0 +1,22 @@
+{
+  "id": "cuvinte-14",
+  "mod": "corectura",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Salvați preferințile înainte să închideți fereastra.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "preferințile",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "preferințele"
+    ]
+  }
+}

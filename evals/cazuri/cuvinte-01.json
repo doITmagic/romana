@@ -1,0 +1,19 @@
+{
+  "id": "cuvinte-01",
+  "mod": "verificare",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Meteorologii anunță precipitațiuni abundente în vestul țării până joi seara, iar temperaturile vor scădea cu cinci grade.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "precipitațiuni",
+        "nivel": "recomandare",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cuvinte-06",
+  "mod": "verificare",
+  "profil": "blog",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Rododendrul are nevoie de un sol acid și de umbră parțială în lunile de vară.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "Rododendrul",
+        "nivel": "recomandare",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

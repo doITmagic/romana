@@ -1,0 +1,28 @@
+{
+  "id": "cuvinte-19",
+  "mod": "corectura",
+  "profil": "presă",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Ședința a început la ora 10, iar echipa a prezentat rezultatele si planul pentru urmatoarea luna.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "si planul",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      },
+      {
+        "fragment": "urmatoarea luna",
+        "nivel": "normă",
+        "pilon": "tipografie"
+      }
+    ],
+    "cerut": [
+      "și planul",
+      "următoarea lună"
+    ]
+  }
+}

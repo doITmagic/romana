@@ -375,3 +375,21 @@ func TestVerificareCitatScurtUnicInFragment(t *testing.T) {
 		t.Errorf("citat scurt ambiguu: %+v", n)
 	}
 }
+
+// „neverificat”: un cuvânt pe care dicționarul nu-l are se poate semnala fie
+// într-un rând OBS, fie în lista „neverificat” a raportului (cum cere skillul).
+func TestNeverificatInListaSauObs(t *testing.T) {
+	c := Caz{ID: "cuvinte-07", Mod: "verificare", Intrare: "Am forwardat mesajul clientului.",
+		Asteptat: Asteptat{Neverificat: []string{"forwardat"}}}
+	for iesire, lipsa := range map[string]int{
+		"Nu am observații.\n\nNeverificat: „forwardat” (nu e în dicționar).":    0,
+		"**Lista „neverificat”**\n- „forwardat”: verbul nu apare în dicționare": 0,
+		"OBS: „forwardat” · semantică · recomandare · „trimis mai departe”":     0,
+		"Nu am găsit probleme. Am citit „forwardat”, care pare în regulă.":      1,
+		"Nu am găsit probleme.": 1,
+	} {
+		if n := Noteaza(c, Rezultat{Iesire: iesire}); n.Lipsa != lipsa || n.FalsPozitive != 0 {
+			t.Errorf("%q: %+v, aștept lipsă %d și 0 fals pozitive", iesire, n, lipsa)
+		}
+	}
+}

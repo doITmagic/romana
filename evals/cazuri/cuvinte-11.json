@@ -1,0 +1,22 @@
+{
+  "id": "cuvinte-11",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Dacă aplicația nu răspunde, așteptați câteva secunde și lăsați procesul să continuie.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "să continuie",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "să continue"
+    ]
+  }
+}

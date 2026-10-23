@@ -4,7 +4,7 @@
 // privat). Câmpurile:
 //
 //	id         identificator unic, cu prefixul grupei: curat-, corectura-, context-,
-//	           hipercorectie-, fidelitate-, pastrare-, trigger-
+//	           hipercorectie-, fidelitate-, pastrare-, cuvinte-, trigger-
 //	mod        redactare | corectura | verificare | trigger
 //	profil     presă | marketing | blog | e-mail | interfață | documentație |
 //	           literatură | standard (gol, la trigger, când cererea nu are text)
@@ -31,6 +31,9 @@
 //     acoperă „observatii”. Încărcarea refuză un element care nu e în intrare.
 //   - interzis, la redactare: forme care nu au voie să apară în textul produs
 //     (un fapt inventat, o certitudine în plus).
+//   - neverificat, la verificare: cuvinte pe care dicționarul nu le are. Skillul
+//     le trece în lista „neverificat”, nu printre greșeli; contează găsite dacă
+//     apar într-un rând OBS sau în secțiunea „neverificat” a raportului.
 //   - cerut: șiruri care trebuie să apară. În corectură și redactare: în textul
 //     întors (forma corectată, cod, citate, valori inserate, un „[de completat]”).
 //     În verificare: în observații.
@@ -86,6 +89,9 @@ type Asteptat struct {
 	Observatii []ObsAsteptata `json:"observatii,omitempty"`
 	Interzis   []string       `json:"interzis,omitempty"`
 	Cerut      []string       `json:"cerut,omitempty"`
+	// Neverificat: cuvinte pe care dicționarul nu le are; în verificare trebuie
+	// semnalate într-un rând OBS sau în lista „neverificat” a raportului.
+	Neverificat []string `json:"neverificat,omitempty"`
 }
 
 // ObsAsteptata este o observație pe care agentul trebuie s-o facă.
@@ -228,6 +234,14 @@ func valideaza(c Caz) error {
 			if z == "" || !strings.Contains(c.Intrare, z) {
 				return fmt.Errorf("interzis %q nu e fragment din intrare", z)
 			}
+		}
+	}
+	for _, z := range a.Neverificat {
+		if c.Mod != "verificare" {
+			return fmt.Errorf("neverificat merge doar la verificare")
+		}
+		if z == "" || !strings.Contains(c.Intrare, z) {
+			return fmt.Errorf("neverificat %q nu e fragment din intrare", z)
 		}
 	}
 	for i, o := range a.Observatii {

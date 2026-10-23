@@ -1,0 +1,15 @@
+{
+  "id": "cuvinte-07",
+  "mod": "verificare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Am forwardat mesajul clientului către colegii de la vânzări, ca să vă răspundă până mâine.",
+  "confirmat": false,
+  "asteptat": {
+    "neverificat": [
+      "forwardat"
+    ]
+  }
+}

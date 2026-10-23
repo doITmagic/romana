@@ -1,0 +1,19 @@
+{
+  "id": "cuvinte-05",
+  "mod": "verificare",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Funcția complectează automat câmpurile goale cu valorile din profilul utilizatorului.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "complectează",
+        "nivel": "recomandare",
+        "pilon": "gramatică"
+      }
+    ]
+  }
+}

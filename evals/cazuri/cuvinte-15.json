@@ -1,0 +1,17 @@
+{
+  "id": "cuvinte-15",
+  "mod": "corectura",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Anul acesta am lansat două podcasturi și am cumpărat laptopuri noi pentru toată echipa.",
+  "confirmat": false,
+  "asteptat": {
+    "neatins": true,
+    "interzis": [
+      "podcasturi",
+      "laptopuri"
+    ]
+  }
+}

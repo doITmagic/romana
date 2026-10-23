@@ -1,0 +1,22 @@
+{
+  "id": "cuvinte-13",
+  "mod": "corectura",
+  "profil": "documentație",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Sistemul evaluiază cererea în cel mult trei minute și vă anunță prin e-mail.",
+  "confirmat": false,
+  "asteptat": {
+    "observatii": [
+      {
+        "fragment": "evaluiază",
+        "nivel": "normă",
+        "pilon": "gramatică"
+      }
+    ],
+    "cerut": [
+      "evaluează"
+    ]
+  }
+}
