@@ -14,7 +14,7 @@ Skill pentru agenți AI (Claude Code, Codex) care scriu, corectează și verific
   - `recenzie`: exportul pentru pagina de recenzie.
   - `evals`: rularea cazurilor și notarea lor.
   - `independenta`: testul în container.
-- `docs/superpowers/`: designul și planul fazei 1. `docs/STARE.md` e starea curentă.
+- Designul, planurile, starea curentă și registrul de decizii stau doar local, în `.superpowers/` (ignorat de git; vezi `CLAUDE.local.md`).
 
 ## Comenzi
 
@@ -43,5 +43,5 @@ Hook-ul de pre-commit din `.githooks/` rulează paza și validatorul. Nu-l ocoli
 - **Niveluri.** Autoritatea e tabelul din `SKILL.md`. Hipercorectitudinea, adică o formă corectă condamnată, e la fel de gravă ca o greșeală lăsată să treacă. Deciziile proprietarului despre niveluri sunt în registrul local (vezi `CLAUDE.local.md`).
 - **Diacritice:** ș și ț cu virgulă. Ghilimele: „…”, cu «…» pentru citatul din citat. Apostrof: ’.
 - **Corecturile se fac în skill, nu în cazurile de test**, când un eval pică.
-- **Nimic pe GitHub fără cererea explicită a proprietarului.** Înainte de primul push public, documentele interne (`docs/STARE.md`, `docs/superpowers/`) și istoria trebuie curățate de căi locale și de numele surselor private.
+- **Nimic pe GitHub fără cererea explicită a proprietarului.** Repo-ul e public: documentele interne nu intră în el, iar în fișierele comise nu apar căi locale și nici numele surselor private.
 - **Commit-uri** în română, cu prefix (`feat(skill):`, `fix(evals):` …).
