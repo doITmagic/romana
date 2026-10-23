@@ -32,5 +32,6 @@ The skill needs no network and no tool. The binary downloads the dexonline expor
 
 - [Changelog](CHANGELOG.md)
 - [Privacy](PRIVACY.md): what the skill and the binary send (nothing of yours) and store
+- [Terms of use](TERMS.md): MIT license, no warranty, no service or account
 - [Contributing](CONTRIBUTING.md)
 - [More open-source projects by DO IT MAGIC SOFTWARE](https://github.com/doITmagic)

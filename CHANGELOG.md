@@ -1,5 +1,11 @@
 # Jurnal de modificări
 
+## 0.2.4 (2026-10-23)
+
+- `TERMS.md`, condițiile de folosire (licența MIT, fără garanție, fără serviciu și fără cont), cu legătura în ambele manifeste; catalogul OpenAI o cere.
+- Descrierea pentru catalogul OpenAI nu mai numește alte aplicații de AI, iar categoria e „Communication”.
+- `romana-plugin.zip` conține și `TERMS.md`.
+
 ## 0.2.3 (2026-10-23)
 
 - Pictograma nouă, pentru cataloage: marca „romana” de pe banner, pe care un corector o face de mână „română”, cu „^”, cu căciula și cu nota „corectă” deasupra. Sursa HTML e alături de imagine.
