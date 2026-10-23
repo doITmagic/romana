@@ -391,3 +391,13 @@ func TestCitatShell(t *testing.T) {
 		}
 	}
 }
+
+// În ieșirea text, un cuvânt deja semnalat ca greșeală sigură nu mai apare și
+// ca „necunoscut”; JSON-ul le păstrează pe amândouă.
+func TestVerificaTextFaraDubluri(t *testing.T) {
+	db := bazaDeProba(t)
+	out, _, cod := rul(t, "Aşa e casa, cînd vine.", "verifica", "-", "--db", db, "--offline")
+	if cod != 0 || !strings.Contains(out, "RO-TIP-128") || strings.Contains(out, "necunoscut: „cînd”") {
+		t.Fatalf("cod %d, ieșire %q", cod, out)
+	}
+}

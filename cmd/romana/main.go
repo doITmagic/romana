@@ -292,6 +292,9 @@ func cmdVerifica(ctx context.Context, o optiuni, in io.Reader, out, errOut io.Wr
 		fmt.Fprintln(out, formateazaObservatie(ob))
 	}
 	for _, n := range r.Necunoscute {
+		if r.SemnalatDeLint(n) {
+			continue // linterul l-a semnalat deja, cu propunerea
+		}
 		linie := fmt.Sprintf("necunoscut: „%s”", n.Cuvant)
 		switch {
 		case n.Neverificat:

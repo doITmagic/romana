@@ -306,6 +306,12 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 	return rap, nil
 }
 
+// SemnalatDeLint spune dacă linterul a semnalat deja cuvântul (cu o
+// propunere), ca o afișare pentru oameni să nu-l repete ca „necunoscut”.
+func (r Raport) SemnalatDeLint(n Necunoscut) bool {
+	return acoperitDeLint(r.Lint, n.Inceput, n.Sfarsit)
+}
+
 // acoperitDeLint spune dacă vreo observație a linterului se suprapune cu
 // intervalul [a, b).
 func acoperitDeLint(obs []lint.Observatie, a, b int) bool {
