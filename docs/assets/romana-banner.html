@@ -1,5 +1,6 @@
 <!doctype html>
-<!-- Sursa bannerului din README. Randare: google-chrome --headless --screenshot=romana-banner.png --window-size=1200,800 romana-banner.html
+<!-- Sursa bannerului din README. Randare: google-chrome --headless=new --hide-scrollbars --virtual-time-budget=5000 --screenshot=romana-banner.png --window-size=1200,800 romana-banner.html
+     Pictograma din dreapta sus e pictograma pluginului, încărcată din sursa ei HTML (assets/icon.html), ca să rămână una singură.
      Fonturile (Space Mono, Inter, licență OFL) vin de la Google Fonts la randare; brieful e în romana-banner.brief.md. -->
 <html><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Space+Mono:wght@400;700&display=block">
@@ -29,6 +30,9 @@ h1 span{color:#0055ff;}
   font-family:'Space Mono';font-size:18px;color:#d0d6e0;background:rgba(0,85,255,.08);}
 .site{position:absolute;right:80px;top:688px;font-family:'Space Mono';font-size:18px;letter-spacing:.06em;color:#8c9096;}
 .site b{color:#0055ff;font-weight:400;}
+.icon{position:absolute;left:900px;top:56px;width:220px;height:220px;border-radius:48px;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(61,98,255,.45),0 30px 80px rgba(0,85,255,.25);}
+.icon iframe{width:1024px;height:1024px;border:0;transform:scale(.21484375);transform-origin:0 0;}
 .chips span.a{border-color:rgba(77,255,145,.55);color:#4dff91;background:rgba(77,255,145,.06);}
 </style></head><body><div class="b">
 <div class="grid"></div>
@@ -37,6 +41,7 @@ h1 span{color:#0055ff;}
 <div class="g" style="left:1060px;top:-20px;font-size:170px">î</div>
 <div class="g" style="left:880px;top:250px;font-size:150px;opacity:.06">ț</div>
 <div class="g" style="left:1090px;top:270px;font-size:120px;opacity:.06">â</div>
+<div class="icon"><iframe src="../../assets/icon.html" scrolling="no"></iframe></div>
 <div class="top">DO IT MAGIC · open source · <b>MIT</b></div>
 <h1>roman<span>a</span></h1>
 <div class="t1">Romanian that reads like Romanian.</div>

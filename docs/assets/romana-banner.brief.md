@@ -18,6 +18,7 @@
 
 - **Conținutul:**
   - eticheta „DO IT MAGIC · open source · MIT”;
+  - pictograma pluginului în dreapta sus, încărcată din sursa ei HTML (din dosarul assets de la rădăcină), ca să existe una singură;
   - titlul „romana”, cu ultimul „a” în albastru;
   - fraza „Romanian that reads like Romanian.” și subtitlul;
   - cardul de terminal (`romana cauta degivrat` cu nota DOOM 3 și `romana verifica` pe sedilă și pe „î” vechi);
