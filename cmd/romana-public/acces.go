@@ -80,27 +80,24 @@ func (l *listaIP) citeste(ctx context.Context, url string) error {
 	return nil
 }
 
-// doarChatGPT oprește cererile care nu vin de la ChatGPT. Lista se citește la
-// pornire și apoi la fiecare 6 ore.
-func doarChatGPT(ctx context.Context, url string, log *slog.Logger) (echo.MiddlewareFunc, error) {
-	l := &listaIP{}
-	if err := l.citeste(ctx, url); err != nil {
-		return nil, err
-	}
-	go func() {
-		t := time.NewTicker(6 * time.Hour)
-		defer t.Stop()
-		for {
-			select {
-			case <-ctx.Done():
-				return
-			case <-t.C:
-				if err := l.citeste(ctx, url); err != nil {
-					log.Warn("lista de adrese ChatGPT nu s-a reîmprospătat; rămâne cea veche", "eroare", err)
-				}
+// reimprospateaza recitește lista la fiecare 6 ore, până la anularea ctx.
+func (l *listaIP) reimprospateaza(ctx context.Context, url string, log *slog.Logger) {
+	t := time.NewTicker(6 * time.Hour)
+	defer t.Stop()
+	for {
+		select {
+		case <-ctx.Done():
+			return
+		case <-t.C:
+			if err := l.citeste(ctx, url); err != nil {
+				log.Warn("lista de adrese ChatGPT nu s-a reîmprospătat; rămâne cea veche", "eroare", err)
 			}
 		}
-	}()
+	}
+}
+
+// doarChatGPT oprește cererile MCP care nu vin de la adresele din l.
+func doarChatGPT(l *listaIP) echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c *echo.Context) error {
 			if c.Request().URL.Path == "/mcp" && !l.permite(c.RealIP()) {
@@ -108,5 +105,5 @@ func doarChatGPT(ctx context.Context, url string, log *slog.Logger) (echo.Middle
 			}
 			return next(c)
 		}
-	}, nil
+	}
 }

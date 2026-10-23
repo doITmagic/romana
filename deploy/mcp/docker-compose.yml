@@ -2,6 +2,8 @@
 # Pe server, din rădăcina repo-ului:
 #   VERSIUNE=$(git describe --tags) docker compose -f deploy/mcp/docker-compose.yml up -d --build
 # Variabilele opționale stau în deploy/mcp/.env (nu intră în git): OPENAI_APPS_CHALLENGE, ACCES.
+name: romana-mcp
+
 services:
   romana-mcp:
     build:
@@ -16,6 +18,7 @@ services:
     cap_drop: [ALL]
     security_opt: ["no-new-privileges:true"]
     mem_limit: 128m
+    memswap_limit: 128m # fără swap: peste 128 MB containerul se oprește și repornește
     cpus: 0.5
     pids_limit: 64
     environment:
@@ -25,6 +28,11 @@ services:
       - LETSENCRYPT_EMAIL=razvan@doitmagic.ro
       - OPENAI_APPS_CHALLENGE=${OPENAI_APPS_CHALLENGE:-}
       - ACCES=${ACCES:-}
+      # Go eliberează memoria înainte să ajungă la limita containerului
+      - GOMEMLIMIT=96MiB
+      # statisticile de folosire: unealta și aplicația client, fără texte și fără IP
+      - UMAMI_URL=https://stats.doitmagic.ro
+      - UMAMI_SITE=09e480a4-d304-4610-8b40-b9098cf4435c
     logging:
       driver: json-file
       options:

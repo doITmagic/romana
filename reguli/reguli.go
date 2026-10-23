@@ -202,6 +202,10 @@ func normalizeaza(s string) string {
 	return strings.TrimSpace(b.String())
 }
 
+// maxTermeni: câți termeni distincți se caută dintr-o interogare; restul se
+// ignoră, ca o interogare lungă să nu coste cât sute de căutări.
+const maxTermeni = 12
+
 // cuvinteGoale nu ajută la căutare.
 var cuvinteGoale = map[string]bool{}
 
@@ -229,6 +233,9 @@ func termeni(interogare string) []string {
 		if !vazut[t] {
 			vazut[t] = true
 			out = append(out, t)
+			if len(out) == maxTermeni {
+				break
+			}
 		}
 	}
 	return out

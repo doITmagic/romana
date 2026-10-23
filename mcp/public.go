@@ -17,6 +17,9 @@ import (
 // MaxCaracterePublic: cel mai lung text primit de verifica_greseli.
 const MaxCaracterePublic = 200_000
 
+// MaxInterogare: cea mai lungă interogare primită de cauta_regula.
+const MaxInterogare = 200
+
 const descriereGreseli = `Găsește greșelile sigure dintr-un text în română, cele care sunt greșeli oriunde ar apărea: ` +
 	`ș și ț scrise cu sedilă (ş, ţ) în loc de virgulă, grafia veche cu „î” în interiorul cuvântului și „sînt” (înlocuite din 1993 de „â” și „sunt”), ` +
 	`formele „vroiam, vroiai…” în loc de „voiam, voiai…”, spațiul dinaintea semnelor de punctuație și spațiile duble. ` +
@@ -107,11 +110,15 @@ func (p *Public) apel(_ context.Context, nume string, argumente json.RawMessage)
 		if n := utf8.RuneCountInString(text); n > MaxCaracterePublic {
 			return rezultatEroare(fmt.Sprintf("textul are %d de caractere; limita e %d", n, MaxCaracterePublic)), true
 		}
-		return rezultatOk(raportGreseli(lint.Verifica(text))), true
+		obs, total := lint.VerificaMax(text, MaxObservatii)
+		return rezultatOk(raportGreseli(obs, total)), true
 	case "cauta_regula":
 		interogare, ok := argument(argumente, "interogare")
 		if !ok {
 			return rezultatEroare("argumentul „interogare” lipsește sau nu e un text nevid"), true
+		}
+		if n := utf8.RuneCountInString(interogare); n > MaxInterogare {
+			return rezultatEroare(fmt.Sprintf("interogarea are %d de caractere; limita e %d (un ID sau câteva cuvinte)", n, MaxInterogare)), true
 		}
 		max, err := argumentMax(argumente)
 		if err != nil {
@@ -143,14 +150,13 @@ type trunchiere struct {
 
 const limiteGreseli = "Verificarea acoperă doar greșelile sigure, independente de context. Ortografia cuvintelor, acordul, sensul, coerența, punctuația și stilul nu sunt verificate: un raport fără observații nu înseamnă un text corect."
 
-func raportGreseli(obs []lint.Observatie) raport {
+func raportGreseli(obs []lint.Observatie, total int) raport {
 	r := raport{Observatii: obs, Limite: limiteGreseli}
 	if r.Observatii == nil {
 		r.Observatii = []lint.Observatie{}
 	}
-	if len(r.Observatii) > MaxObservatii {
-		r.Trunchiat = &trunchiere{Total: len(r.Observatii)}
-		r.Observatii = r.Observatii[:MaxObservatii]
+	if total > len(r.Observatii) {
+		r.Trunchiat = &trunchiere{Total: total}
 	}
 	return r
 }

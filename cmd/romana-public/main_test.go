@@ -3,12 +3,15 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"io"
 	"log/slog"
+	"net"
 	"net/http"
 	"net/http/httptest"
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/doITmagic/romana"
 	"github.com/doITmagic/romana/mcp"
@@ -21,7 +24,7 @@ func server(t *testing.T, jeton string) http.Handler {
 	if err != nil {
 		t.Fatal(err)
 	}
-	return Server(mcp.NouPublic(col, "test"), jeton, slog.New(slog.NewTextHandler(io.Discard, nil)))
+	return Server(Config{Public: mcp.NouPublic(col, "test"), Jeton: jeton, Log: slog.New(slog.NewTextHandler(io.Discard, nil))})
 }
 
 func cerere(t *testing.T, h http.Handler, metoda, cale, corp string, antete ...string) *httptest.ResponseRecorder {
@@ -220,13 +223,13 @@ func TestDoarChatGPT(t *testing.T) {
 	defer lista.Close()
 	ctx, anuleaza := context.WithCancel(context.Background())
 	defer anuleaza()
-	m, err := doarChatGPT(ctx, lista.URL, slog.New(slog.NewTextHandler(io.Discard, nil)))
-	if err != nil {
+	l := &listaIP{}
+	if err := l.citeste(ctx, lista.URL); err != nil {
 		t.Fatal(err)
 	}
 	col, _ := reguli.Incarca(romana.Referinte, romana.DirReferinte)
-	e := Server(mcp.NouPublic(col, "t"), "", slog.New(slog.NewTextHandler(io.Discard, nil)))
-	e.Use(m)
+	e := Server(Config{Public: mcp.NouPublic(col, "t"), Log: slog.New(slog.NewTextHandler(io.Discard, nil))})
+	e.Use(doarChatGPT(l))
 	ping := `{"jsonrpc":"2.0","id":1,"method":"ping"}`
 	if w := cerere(t, e, "POST", "/mcp", ping, "X-Forwarded-For", "198.51.100.7"); w.Code != 200 {
 		t.Errorf("adresă ChatGPT: %d", w.Code)
@@ -236,5 +239,109 @@ func TestDoarChatGPT(t *testing.T) {
 	}
 	if w := cerere(t, e, "GET", "/healthz", "", "X-Forwarded-For", "203.0.113.1"); w.Code != 200 {
 		t.Errorf("healthz rămâne deschis: %d", w.Code)
+	}
+}
+
+func TestEvenimente(t *testing.T) {
+	init := `{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"clientInfo":{"name":"openai-mcp","version":"1.0"}}}`
+	if e, ok := evenimentDin([]byte(init), nil, "python-httpx/0.27", "1.2.3.4"); !ok || e.Nume != "initialize" || e.Client != "openai-mcp" || e.IP != "1.2.3.4" {
+		t.Errorf("initialize: %+v", e)
+	}
+	ver := `{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"verifica_greseli","arguments":{"text":"Aşa șî aşa"}}}`
+	rasp := `{"result":{"structuredContent":{"observatii":[{"regula":"RO-TIP-027"},{"regula":"RO-TIP-027"},{"regula":""}]}}}`
+	e, ok := evenimentDin([]byte(ver), []byte(rasp), "Cursor/1.2 (darwin)", "")
+	if !ok || e.Nume != "verifica_greseli" || e.Client != "Cursor" || e.Lungime != 10 || e.Reguli != "RO-TIP-027" || e.Interogare != "" {
+		t.Errorf("verifica_greseli: %+v", e)
+	}
+	if d := e.date(); d["interogare"] != nil || d["lungime"] != 10 {
+		t.Errorf("datele verifica_greseli nu au voie să conțină textul: %v", d)
+	}
+	cau := `{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"cauta_regula","arguments":{"interogare":"  a face   sens "}}}`
+	rasp = `{"result":{"structuredContent":{"total":272,"reguli":[{"id":"RO-CAL-063"},{"id":"RO-CAL-036"}]}}}`
+	e, ok = evenimentDin([]byte(cau), []byte(rasp), "claude-user", "")
+	if !ok || e.Interogare != "a face sens" || e.Rezultate != 272 || e.Reguli != "RO-CAL-036 RO-CAL-063" {
+		t.Errorf("cauta_regula: %+v", e)
+	}
+	for _, m := range []string{`{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"altceva"}}`, `{"jsonrpc":"2.0","id":4,"method":"tools/list"}`, `nu e json`} {
+		if _, ok := evenimentDin([]byte(m), nil, "x", ""); ok {
+			t.Errorf("%s nu se numără", m)
+		}
+	}
+}
+
+func TestUmamiPrimesteFaraText(t *testing.T) {
+	primite := make(chan string, 4)
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		b, _ := io.ReadAll(r.Body)
+		primite <- r.URL.Path + " " + r.UserAgent() + " " + r.Header.Get("X-Forwarded-For") + " " + string(b)
+	}))
+	defer srv.Close()
+	ctx, anuleaza := context.WithCancel(context.Background())
+	defer anuleaza()
+	col, _ := reguli.Incarca(romana.Referinte, romana.DirReferinte)
+	stat := nouUmami(ctx, srv.URL, "site-1", slog.New(slog.NewTextHandler(io.Discard, nil)))
+	h := Server(Config{Public: mcp.NouPublic(col, "t"), Log: slog.New(slog.NewTextHandler(io.Discard, nil)), Stat: stat})
+	cerere(t, h, "POST", "/mcp", apel("verifica_greseli", `{"text":"TEXT-SECRET cu ş"}`), "User-Agent", "claude-user", "X-Forwarded-For", "203.0.113.50")
+	got := <-primite
+	if !strings.HasPrefix(got, "/api/send ") || !strings.Contains(got, `"name":"verifica_greseli"`) || !strings.Contains(got, `"client":"claude-user"`) || !strings.Contains(got, `"website":"site-1"`) {
+		t.Fatalf("eveniment: %s", got)
+	}
+	if strings.Contains(got, "TEXT-SECRET") || strings.Contains(got, "172.18.0.5") {
+		t.Fatalf("textul sau adresa proxy-ului au ajuns în statistici: %s", got)
+	}
+	if !strings.Contains(got, " 203.0.113.50 ") || strings.Contains(got, `"203.0.113.50"`) || !strings.Contains(got, `"reguli":"RO-TIP-027"`) {
+		t.Fatalf("IP-ul clientului trebuie să fie doar în antet, iar regulile în date: %s", got)
+	}
+}
+
+func TestCotaZilnica(t *testing.T) {
+	col, _ := reguli.Incarca(romana.Referinte, romana.DirReferinte)
+	q := nouaCota()
+	zi := time.Date(2026, 10, 23, 23, 59, 0, 0, time.UTC)
+	q.acum = func() time.Time { return zi }
+	scutite := &listaIP{}
+	p := []*net.IPNet{{IP: net.ParseIP("198.51.100.0"), Mask: net.CIDRMask(24, 32)}}
+	scutite.prefixe.Store(&p)
+	h := Server(Config{Public: mcp.NouPublic(col, "t"), Log: slog.New(slog.NewTextHandler(io.Discard, nil)), Cota: q, Scutite: scutite})
+	de := func(ip string) []string { return []string{"X-Forwarded-For", ip} }
+
+	// reguli diferite: o căutare reală se numără, apoi umplem cota direct
+	// (limita pe secundă ar opri sute de cereri în test)
+	if w := cerere(t, h, "POST", "/mcp", apel("cauta_regula", `{"interogare":"diacritice","max":10}`), de("203.0.113.7")...); w.Code != 200 {
+		t.Fatalf("înainte de cotă: %d", w.Code)
+	}
+	if n := len(q.adrese["203.0.113.7"].reguli); n == 0 {
+		t.Fatalf("regulile întoarse nu s-au numărat: %d", n)
+	}
+	for i := 0; len(q.adrese["203.0.113.7"].reguli) < maxReguliZi; i++ {
+		q.reguli("203.0.113.7", []string{fmt.Sprintf("RO-X-%03d", i)})
+	}
+	w := cerere(t, h, "POST", "/mcp", apel("cauta_regula", `{"interogare":"virgula"}`), de("203.0.113.7")...)
+	if w.Code != http.StatusTooManyRequests || !strings.Contains(w.Body.String(), "github.com") || w.Header().Get("Retry-After") != "61" {
+		t.Fatalf("cota de reguli: %d %q retry=%s", w.Code, w.Body, w.Header().Get("Retry-After"))
+	}
+	if w := cerere(t, h, "POST", "/mcp", apel("verifica_greseli", `{"text":"Aşa"}`), de("203.0.113.7")...); w.Code != 200 {
+		t.Fatalf("verifica_greseli după cota de reguli: %d", w.Code)
+	}
+	// adresa ChatGPT nu are cotă
+	for i := 0; i < 5; i++ {
+		q.reguli("198.51.100.9", []string{fmt.Sprintf("RO-Z-%03d", i)})
+	}
+	if c := q.adrese["198.51.100.9"]; c != nil && c.apeluri != 0 {
+		t.Fatal("adresa scutită a fost numărată")
+	}
+	// apeluri: după 2.000, totul e refuzat
+	q.adrese["203.0.113.8"] = &contor{apeluri: maxApeluriZi, reguli: map[string]struct{}{}}
+	if w := cerere(t, h, "POST", "/mcp", apel("verifica_greseli", `{"text":"x"}`), de("203.0.113.8")...); w.Code != http.StatusTooManyRequests {
+		t.Fatalf("cota de apeluri: %d", w.Code)
+	}
+	// ping și initialize nu intră în cotă
+	if w := cerere(t, h, "POST", "/mcp", `{"jsonrpc":"2.0","id":1,"method":"ping"}`, de("203.0.113.8")...); w.Code != 200 {
+		t.Fatalf("ping sub cotă: %d", w.Code)
+	}
+	// a doua zi, cota se golește
+	zi = zi.Add(2 * time.Minute)
+	if w := cerere(t, h, "POST", "/mcp", apel("verifica_greseli", `{"text":"x"}`), de("203.0.113.8")...); w.Code != 200 {
+		t.Fatalf("a doua zi: %d", w.Code)
 	}
 }

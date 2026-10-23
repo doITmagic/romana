@@ -83,7 +83,7 @@ func TestLimitaRezultate(t *testing.T) {
 
 func TestFormatulFisierului(t *testing.T) {
 	fsys := fstest.MapFS{
-		"ref/a.md": {Data: []byte("# Titlu\n\nIntro.\n\n### RO-AAA-001 Prima\n- Nivel: normă\n- De ce: pentru că.\n\n## Altă secțiune\n\nNu face parte din regulă.\n\n### RO-AAA-002 A doua\n- Nivel: recomandare\n")},
+		"ref/a.md":     {Data: []byte("# Titlu\n\nIntro.\n\n### RO-AAA-001 Prima\n- Nivel: normă\n- De ce: pentru că.\n\n## Altă secțiune\n\nNu face parte din regulă.\n\n### RO-AAA-002 A doua\n- Nivel: recomandare\n")},
 		"ref/sub/b.md": {Data: []byte("### RO-BBB-001 Din subdosar\n- Nivel: disputat\n")},
 		"ref/c.txt":    {Data: []byte("### RO-CCC-001 Ignorat\n")},
 	}

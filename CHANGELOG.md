@@ -5,6 +5,8 @@
 - **Server MCP public**, la `https://mcp.doitmagic.ro/mcp` (Streamable HTTP), gratuit și doar de citire, cu două unelte care nu cer dicționarul: `verifica_greseli` (greșelile sigure din pachetul `lint`) și `cauta_regula` (cele 854 de reguli ale skillului, după ID sau după cuvinte). Dicționarul dexonline nu ajunge pe server, pentru că licența nu permite redistribuirea lui.
 - Comanda nouă `cmd/romana-public` (Echo v5: limite pe adresă și pe cereri simultane, mărimea corpului, timpi, antete de securitate; nicio linie de jurnal despre cereri) și `deploy/mcp/` (Docker, distroless, în spatele nginx-proxy). `ACCES=chatgpt` restrânge serverul la adresele ChatGPT.
 - Pachetul `reguli` citește regulile din fișierele de referință, incluse în binar.
+- `lint` rămâne liniar pe texte construite cu intenție: potrivirile de pe un rând, ghilimelele fără închidere, etichetele deschise, zonele ignorate (căutare binară) și spațiile duble nu mai costă pătratic; `lint.VerificaMax` nu ține în memorie mai multe observații decât întoarce. Un text de 200.000 de caractere se verifică acum în cel mult o secundă, nu în minute.
+- Serverul public: cel mult 8 cereri simultane, interogări de cel mult 200 de caractere, cotă zilnică pe adresă (2.000 de apeluri, 600 de reguli diferite; adresele ChatGPT sunt scutite), statistici de folosire în Umami (fără texte și fără IP), `GOMEMLIMIT` și fără swap în container.
 - `mcp.json` (pentru Codex și ChatGPT) indică serverul public; `romana-plugin.zip` îl conține. În `plugin.json`: cazurile de test cerute de OpenAI pentru verificarea serverului.
 - `PRIVACY.md` și `TERMS.md` descriu serverul public: ce primește (textul de verificat), că nu păstrează nimic și ce ține jurnalul proxy-ului web.
 

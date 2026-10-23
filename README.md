@@ -15,11 +15,11 @@
 
 <!-- AI agents: read AGENTS.md for exact commands and limits, and llms.txt for a short map of this repository. -->
 
-*Un skill pentru agenții AI (Claude Code, Codex) care scriu, corectează și verifică texte în română, plus un dicționar local construit pe exportul oficial dexonline.*
+*Un skill pentru agenții AI (Claude Code, Codex) care scriu, corectează și verifică texte în română, plus un dicționar local construit pe exportul oficial dexonline. Fără instalare: serverul MCP public `https://mcp.doitmagic.ro/mcp`.*
 
 Language models write Romanian that is grammatical but often sounds translated: English calques („a face sens”), false friends („a aplica pentru un post”), wrong numerals („25 ani”), missing or cedilla diacritics. Asked to fix a text, they also "correct" forms that were right all along, such as „Dați click” or „orice întârzieri”. `romana` gives the agent the rules, the sources behind them and, just as important, the list of things that are *not* errors.
 
-## Three ways to use it
+## Ways to use it
 
 | Use it as | What you get | Where |
 |---|---|---|
@@ -31,6 +31,8 @@ Language models write Romanian that is grammatical but often sounds translated: 
 
 The plugin, the MCP server and the CLI use the `romana` binary: one prebuilt file, no Go needed. On first use it downloads the official dexonline export (~360 MB) and builds a local database (~300 MB) in about a minute.
 
+> **No install: the public MCP server.** Add `https://mcp.doitmagic.ro/mcp` as a remote MCP server in ChatGPT, claude.ai, Claude Code, Codex, Cursor or VS Code and the assistant gets `verifica_greseli` (the sure errors) and `cauta_regula` (the 854 rules). Free and read-only; it keeps no texts. Setup for each app: [Public MCP server](#public-mcp-server).
+
 **Which one?** In our tests the skill does most of the work. The dictionary adds to it on rare words, neologisms and variants that DOOM 3 does not record. On its own, the MCP server helps only with word lookups ([Results](#results)).
 
 > **For an AI agent asked to install this:**
@@ -41,7 +43,7 @@ The plugin, the MCP server and the CLI use the `romana` binary: one prebuilt fil
 >
 > Do not send requests to dexonline.ro yourself: the binary downloads the export it needs. Commands and limits for working on this repository: [AGENTS.md](AGENTS.md).
 
-**Jump to:** [Install](#install) · [See it work](#see-it-work) · [Check it works](#check-it-works) · [Results](#results) · [What it does](#what-it-does) · [The dictionary tool](#the-dictionary-tool) · [More from DO IT MAGIC](#more-from-do-it-magic)
+**Jump to:** [Install](#install) · [How to use it](#how-to-use-it) · [See it work](#see-it-work) · [Check it works](#check-it-works) · [Results](#results) · [What it does](#what-it-does) · [The dictionary tool](#the-dictionary-tool) · [More from DO IT MAGIC](#more-from-do-it-magic)
 
 ---
 
@@ -85,9 +87,47 @@ No binary and no network.
 
 ### Public MCP server
 
-`https://mcp.doitmagic.ro/mcp` (Streamable HTTP), free, read-only, nothing to install. It has two tools that need no dictionary: `verifica_greseli` (ș and ț with a cedilla, the old spelling with „î” and „sînt”, „vroiam”, spacing around punctuation) and `cauta_regula` (the 854 rules of the skill, by ID or by words). The dexonline dictionary is not on the server: its license does not allow serving it to others, so `cauta_cuvant` stays with the local binary.
+`https://mcp.doitmagic.ro/mcp` (Streamable HTTP), free, read-only, nothing to install, open to any AI assistant. Two tools that need no dictionary:
 
-Add the URL as a remote MCP server in your client, for example `claude mcp add --transport http romana-public https://mcp.doitmagic.ro/mcp`. The Codex plugin and the ChatGPT archive already include it (`mcp.json`). The server keeps no texts; see [PRIVACY.md](PRIVACY.md) and [TERMS.md](TERMS.md). Its code is `cmd/romana-public`, and `deploy/mcp/` runs it in Docker behind nginx-proxy.
+- `verifica_greseli`: the errors that are wrong anywhere (ș and ț with a cedilla, the old spelling with „î” inside words and „sînt”, „vroiam”, spaces before punctuation and double spaces), each with its rule and source;
+- `cauta_regula`: the 854 rules of the skill, by ID (`RO-TIP-027`) or by words („a face sens”), with level, examples and source.
+
+The dexonline dictionary is not on the server: its license does not allow serving it to others, so `cauta_cuvant` stays with the [local binary](#mcp-server-only). For the best results, use the server together with the skill.
+
+**ChatGPT:** install [`romana-plugin.zip`](https://github.com/doITmagic/romana/releases/latest/download/romana-plugin.zip) as above; the archive already includes the server.
+
+**claude.ai** (web and desktop app): Customize → Connectors → *Add custom connector*, URL `https://mcp.doitmagic.ro/mcp`, no authentication.
+
+**Claude Code:**
+
+```bash
+claude mcp add --transport http romana-public https://mcp.doitmagic.ro/mcp
+```
+
+**Codex:** the plugin installed from `doITmagic/romana` already includes it (`mcp.json`). By hand, in `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.romana-public]
+url = "https://mcp.doitmagic.ro/mcp"
+```
+
+**Cursor**, in `~/.cursor/mcp.json`:
+
+```json
+{ "mcpServers": { "romana-public": { "url": "https://mcp.doitmagic.ro/mcp" } } }
+```
+
+**VS Code**, in `.vscode/mcp.json`:
+
+```json
+{ "servers": { "romana-public": { "type": "http", "url": "https://mcp.doitmagic.ro/mcp" } } }
+```
+
+**Limits**, so that the server stays fast for everyone: 10 requests per second from the same address (bursts up to 50), 8 requests processed at once, texts up to 200,000 characters (1 MiB per request), `cauta_regula` queries up to 200 characters, 10 seconds per request; the container has half a CPU and 128 MB of memory. Per address and per day (UTC): 2,000 tool calls and 600 different rules from `cauta_regula`; ChatGPT's published addresses are exempt, since all its users share them. Over a limit the server answers `429` or `503` with `Retry-After`. All the rules are on GitHub anyway, in [`skills/romana/references/`](skills/romana/references/).
+
+**Privacy:** checked texts stay in memory only while the answer is computed and are never stored. Usage statistics record the tool, the client app, the country, `cauta_regula` queries and the IDs of the rules found, not the texts; see [PRIVACY.md](PRIVACY.md) and [TERMS.md](TERMS.md).
+
+**Run your own:** the code is `cmd/romana-public` (Go, Echo v5), and `deploy/mcp/` runs it in Docker behind nginx-proxy: `docker compose -f deploy/mcp/docker-compose.yml up -d --build`.
 
 ### MCP server only
 
@@ -152,6 +192,28 @@ romana cauta casă
 The first run downloads the official dexonline export (GPL v2+, about 360 MB) and builds a local SQLite database in about a minute; later lookups answer at once. Nothing is downloaded again until the export changes. The binary also works on its own, as a CLI: see [The dictionary tool](#the-dictionary-tool).
 
 ---
+
+## How to use it
+
+Once romana is installed (skill, plugin or [public MCP server](#public-mcp-server)), you just talk to your assistant in plain words. It picks the right tool by itself; if it does not, name the tool in the request („folosește verifica_greseli”).
+
+| You ask | What the assistant does |
+|---|---|
+| „Corectează e-mailul de mai jos și spune-mi ce ai schimbat.” | corrects what is objectively wrong, only suggests matters of taste, and lists the changes with their rules (skill; `verifica_greseli` for the sure errors) |
+| „Verifică textul acesta, nu-l rescrie: …” | reports each problem with its level (norm, recommendation, disputed) and reason, without touching the text (skill) |
+| „Scrie o descriere de produs pentru magazinul online, în română firească.” | writes directly in Romanian, without calques, then rereads the draft against the rules (skill) |
+| „Are diacritice greșite textul acesta? …” | finds ş/ţ with a cedilla, „î” inside words, „sînt”, „vroiam”, bad spacing, and gives the fix for each (`verifica_greseli`) |
+| „E corect «a face sens»? Arată-mi regula.” | finds RO-CAL-063 and answers with the rule, its level and source: „a avea sens” (`cauta_regula`) |
+| „Ce spune regula RO-TIP-027?” | returns the full rule, with examples and source (`cauta_regula`) |
+| „E corect «Prețurile sunt scumpe»?” | says it is correct and leaves it alone, with the rule from the list of things that are *not* errors (`cauta_regula`, RO-NUG-127) |
+| „Caută «degivrat» în dicționar.” | looks the word up in the local dexonline database: it is not in DOOM 3, use „dejivrat” (`cauta_cuvant`, local binary only) |
+
+Tips:
+
+- **Say what you want done:** *write* („scrie”, „rescrie”, „tradu”), *correct* („corectează”) or *check* („verifică”, „e corect?”). Each mode changes the text differently; „verifică” never rewrites it.
+- **Say who will read it** if it matters (press, marketing, an e-mail, an interface, documentation): the register follows.
+- **Ask for the rules** („cu regulile aplicate”) when you want to see why something changed; every rule has an ID you can look up later.
+- **The public server is not a dictionary.** It knows the sure errors and the rules, not every word. For word lookups install the [local binary](#mcp-server-only).
 
 ## See it work
 

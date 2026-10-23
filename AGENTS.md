@@ -10,7 +10,9 @@ Instructions for AI coding agents. People should start with [README.md](README.m
   - `baza/`: download and update of the export;
   - `lint/`: sure errors;
   - `verifica/`: text check;
-  - `mcp/`: MCP server.
+  - `mcp/`: MCP server (stdio with the dictionary; the public set without it, in `public.go`);
+  - `reguli/`: the skill's rules, embedded in the binary (`reguli.go` at the root), searched by ID or words.
+- `cmd/romana-public/`: the public MCP server at https://mcp.doitmagic.ro/mcp (Streamable HTTP, Echo v5): `verifica_greseli` and `cauta_regula`, never the dictionary (the dexonline export must not be redistributed). `deploy/mcp/` runs it in Docker behind nginx-proxy.
 - `evals/`: public test cases; `tools/`: validator, guard, test runner, independence test.
 
 ## Commands

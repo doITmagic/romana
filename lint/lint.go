@@ -82,24 +82,46 @@ func init() {
 
 // Verifica întoarce observațiile pentru text, în ordinea poziției.
 func Verifica(text string) []Observatie {
+	o, _ := VerificaMax(text, -1)
+	return o
+}
+
+// VerificaMax întoarce cel mult max observații, primele în ordinea poziției,
+// și numărul lor total; max < 0 înseamnă toate. Nu ține în memorie mai mult
+// decât întoarce: un text plin de greșeli nu umple memoria.
+func VerificaMax(text string, max int) ([]Observatie, int) {
 	ignorat := zoneIgnorate(text)
 	citate := zoneCitate(text)
 	vechi := minusculeCuI(text, ignorat)
 	var out []Observatie
-	add := func(o Observatie) {
-		if in(ignorat, o.Inceput) {
-			return
+	total := 0
+	// Fiecare trecere găsește observațiile în ordinea poziției, deci primele
+	// max din fiecare trecere conțin primele max din total.
+	trecere := func() func(Observatie) {
+		n := 0
+		return func(o Observatie) {
+			if in(ignorat, o.Inceput) {
+				return
+			}
+			total++
+			if max < 0 || n < max {
+				out = append(out, o)
+				n++
+			}
 		}
-		out = append(out, o)
 	}
 
+	add := trecere()
 	for _, c := range cuvinte(text) {
 		verificaCuvant(text, c.a, text[c.a:c.b], in(citate, c.a), vechi, add)
 	}
-	verificaSpatii(text, ignorat, add)
+	verificaSpatii(text, ignorat, trecere())
 
 	sort.SliceStable(out, func(a, b int) bool { return out[a].Inceput < out[b].Inceput })
-	return out
+	if max >= 0 && len(out) > max {
+		out = out[:max]
+	}
+	return out, total
 }
 
 // cuvinte întoarce limitele cuvintelor (litere maximale; cratima desparte).
@@ -441,10 +463,23 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 		// Spațiu înaintea semnelor de punctuație. Pe un rând indentat care
 		// arată a cod (x = a ? 1 : 2) spațiul are rost; la fel în punctele de
 		// conducere dintr-un cuprins („Capitolul . . . 5”).
+		// Tot ce privește rândul întreg se calculează o singură dată pe rând,
+		// ca un rând lung cu multe potriviri să rămână liniar.
+		cod := indentat && pareCod(taiat)
+		var isbd [][]int
+		isbdGata := false
 		for _, m := range reSpPct.FindAllStringSubmatchIndex(taiat, -1) {
 			sp0, pc0, pc1 := m[4], m[6], m[7]
-			if (indentat && pareCod(taiat)) || punctDeConducere(taiat, pc0) || semnPomenit(taiat, sp0, pc0) || colonISBD(taiat, pc0) {
+			if cod || punctDeConducere(taiat, pc0) || semnPomenit(taiat, sp0, pc0) {
 				continue
+			}
+			if c := taiat[pc0]; c == ':' || c == ';' {
+				if !isbdGata {
+					isbd, isbdGata = reISBD.FindAllStringSubmatchIndex(taiat, -1), true
+				}
+				if colonISBD(isbd, taiat, pc0) {
+					continue
+				}
 			}
 			add(Observatie{
 				Regula: "RO-TIP-068", Inceput: inceput + sp0, Sfarsit: inceput + pc1,
@@ -457,6 +492,7 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 		}
 		// Spațiu dublu în interiorul rândului. Skillul nu are o regulă
 		// dedicată, deci Regula rămâne goală.
+		primText := strings.IndexFunc(taiat, func(r rune) bool { return !unicode.IsSpace(r) })
 		for i := 0; i < len(taiat); {
 			if taiat[i] != ' ' {
 				i++
@@ -466,9 +502,13 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 			for j < len(taiat) && taiat[j] == ' ' {
 				j++
 			}
-			if j-i >= 2 && j < len(taiat) && strings.TrimSpace(taiat[:i]) != "" &&
+			// înaintea spațiilor e text (nu indentare), iar textul nu e doar
+			// marcajul unei liste („-”, „1.”, „> 2)”), care e scurt
+			text := primText >= 0 && primText < i
+			marcaj := text && i-primText <= 32 && reMarj.MatchString(strings.TrimSpace(taiat[primText:i]))
+			if j-i >= 2 && j < len(taiat) && text &&
 				!strings.ContainsRune(",.;:?!", rune(taiat[j])) &&
-				!reMarj.MatchString(strings.TrimSpace(taiat[:i])) &&
+				!marcaj &&
 				!in(ignorat, inceput+i) {
 				add(Observatie{
 					Inceput: inceput + i, Sfarsit: inceput + j,
@@ -490,15 +530,41 @@ func semnPomenit(linie string, sp, p int) bool {
 	if c := linie[p]; c != '!' && c != '?' {
 		return false
 	}
-	w := strings.Fields(linie[:sp])
-	if len(w) == 0 {
+	ultim, rest := cuvantInainte(linie[:sp])
+	if ultim == "" {
 		return false
 	}
-	ultim := strings.ToLower(w[len(w)-1])
+	ultim = strings.ToLower(ultim)
 	if cuvintePentruSemn[ultim] {
 		return true
 	}
-	return (ultim == "și" || ultim == "sau") && len(w) > 1 && (w[len(w)-2] == "!" || w[len(w)-2] == "?")
+	if ultim != "și" && ultim != "sau" {
+		return false
+	}
+	penultim, _ := cuvantInainte(rest)
+	return penultim == "!" || penultim == "?"
+}
+
+// cuvantInainte: ultimul cuvânt (șir fără spații) din s și ce e înaintea lui.
+// Citește de la coadă, deci costă cât cuvântul, nu cât rândul.
+func cuvantInainte(s string) (cuv, rest string) {
+	sf := len(s)
+	for sf > 0 {
+		r, w := utf8.DecodeLastRuneInString(s[:sf])
+		if !unicode.IsSpace(r) {
+			break
+		}
+		sf -= w
+	}
+	in := sf
+	for in > 0 {
+		r, w := utf8.DecodeLastRuneInString(s[:in])
+		if unicode.IsSpace(r) {
+			break
+		}
+		in -= w
+	}
+	return s[in:sf], s[:in]
 }
 
 var cuvintePentruSemn = map[string]bool{"semnul": true, "semnele": true, "semn": true, "semne": true,
@@ -514,8 +580,9 @@ var reISBD = regexp.MustCompile(`(\p{Lu}[\p{L}-]*(?: ; \p{Lu}[\p{L}-]*)*) (:) [^
 
 // colonISBD: semnul de la p e două-punctele unei descrieri bibliografice,
 // „;”-ul dintre locurile ei sau „;”-ul care o desparte de următoarea.
-func colonISBD(linie string, p int) bool {
-	for _, m := range reISBD.FindAllStringSubmatchIndex(linie, -1) {
+// isbd sunt potrivirile lui reISBD în linie, calculate o dată pe rând.
+func colonISBD(isbd [][]int, linie string, p int) bool {
+	for _, m := range isbd {
 		switch {
 		case p == m[4]:
 			return true
@@ -549,13 +616,33 @@ var reGolColoana = regexp.MustCompile(` {3,}`)
 
 type interval struct{ a, b int }
 
+// in: p e într-una din zone. Zonele trebuie să fie sortate și unite (vezi
+// uneste), ca să se poată căuta binar: un text cu zeci de mii de zone și de
+// cuvinte nu are voie să coste pătratic.
 func in(zone []interval, p int) bool {
-	for _, z := range zone {
-		if p >= z.a && p < z.b {
-			return true
+	i := sort.Search(len(zone), func(i int) bool { return zone[i].b > p })
+	return i < len(zone) && zone[i].a <= p
+}
+
+// uneste sortează intervalele și le unește pe cele care se ating sau se
+// suprapun. Nu modifică slice-ul primit.
+func uneste(z []interval) []interval {
+	if len(z) == 0 {
+		return nil
+	}
+	s := append([]interval(nil), z...)
+	sort.Slice(s, func(i, j int) bool { return s[i].a < s[j].a })
+	out := s[:1]
+	for _, x := range s[1:] {
+		if u := &out[len(out)-1]; x.a <= u.b {
+			if x.b > u.b {
+				u.b = x.b
+			}
+		} else {
+			out = append(out, x)
 		}
 	}
-	return false
+	return out
 }
 
 // reEticheta: etichetă cu cel puțin un atribut „nume=valoare”; „<b și c>” din
@@ -625,12 +712,13 @@ func zoneIgnorate(text string) []interval {
 	for _, m := range reUrl.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], sfarsitUrl(text, m[0], m[1])})
 	}
-	z = append(z, zoneFormule(text, z)...) // z are deja codul: un „$” din cod nu deschide o formulă
-	z = append(z, zonePrinse(text, z)...)  // z are deja codul: o etichetă din cod nu deschide nimic
+	cod := uneste(z)
+	z = append(z, zoneFormule(text, cod)...) // codul: un „$” din cod nu deschide o formulă
+	z = append(z, zonePrinse(text, cod)...)  // codul: o etichetă din cod nu deschide nimic
 	for _, m := range reHtml.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], m[1]})
 	}
-	return z
+	return uneste(z)
 }
 
 // sfarsitUrl: punctuația de la sfârșitul unei adrese ține de frază („vezi
@@ -669,8 +757,9 @@ func zoneFormule(text string, cod []interval) []interval {
 			z = append(z, interval{m[0], m[1]})
 		}
 	}
+	duble := uneste(z) // formulele simple din interiorul celor duble nu mai contează
 	for _, m := range reFormulaSimpla.FindAllStringSubmatchIndex(acoperit, -1) {
-		if !in(z, m[2]) {
+		if !in(duble, m[2]) {
 			z = append(z, interval{m[2], m[3]})
 		}
 	}
@@ -713,14 +802,18 @@ func zonePrinse(text string, cod []interval) []interval {
 			a += i
 			n := a + len(deschis)
 			if n < len(jos) && !in(cod, a) && (jos[n] == '>' || jos[n] == ' ' || jos[n] == '\t' || jos[n] == '\n' || jos[n] == '\r' || jos[n] == '/') {
-				if c := strings.Index(jos[n:], inchis); c >= 0 {
-					sf := n + c
-					if g := strings.IndexByte(jos[sf:], '>'); g >= 0 {
-						z = append(z, interval{a, sf + g + 1})
-						i = sf + g + 1
-						continue
-					}
+				c := strings.Index(jos[n:], inchis)
+				if c < 0 {
+					break // fără închidere aici, nici deschiderile de mai jos nu au
 				}
+				sf := n + c
+				g := strings.IndexByte(jos[sf:], '>')
+				if g < 0 {
+					break
+				}
+				z = append(z, interval{a, sf + g + 1})
+				i = sf + g + 1
+				continue
 			}
 			i = n
 		}
@@ -780,6 +873,12 @@ var reCheieYaml = regexp.MustCompile(`^[A-Za-z_][\w-]*\s*:`)
 func zoneCitate(text string) []interval {
 	var z []interval
 	inchide := map[rune]string{'„': "”“", '«': "»", '“': "”", '"': `"`}
+	// Ghilimelele nu trec de sfârșitul alineatului, deci închiderea se caută
+	// doar până acolo. faraInchidere ține minte, pe alineatul curent, ce
+	// deschideri nu au închidere: altfel un alineat plin de „ fără ” ar costa
+	// pătratic.
+	sfAlineat := -1
+	faraInchidere := map[rune]bool{}
 	for i := 0; i < len(text); {
 		r, w := utf8.DecodeRuneInString(text[i:])
 		inc, ok := inchide[r]
@@ -787,8 +886,21 @@ func zoneCitate(text string) []interval {
 			i += w
 			continue
 		}
-		fin := strings.IndexAny(text[i+w:], inc)
-		if fin < 0 || strings.Contains(text[i+w:i+w+fin], "\n\n") {
+		if i >= sfAlineat {
+			if k := strings.Index(text[i:], "\n\n"); k >= 0 {
+				sfAlineat = i + k
+			} else {
+				sfAlineat = len(text)
+			}
+			clear(faraInchidere)
+		}
+		if faraInchidere[r] || i+w > sfAlineat {
+			i += w
+			continue
+		}
+		fin := strings.IndexAny(text[i+w:sfAlineat], inc)
+		if fin < 0 {
+			faraInchidere[r] = true
 			i += w
 			continue
 		}
@@ -796,7 +908,7 @@ func zoneCitate(text string) []interval {
 		z = append(z, interval{i, i + w + fin + wi})
 		i += w + fin + wi
 	}
-	return z
+	return uneste(z)
 }
 
 // PareRomana spune dacă textul pare scris în română. Ignoră blocurile de cod
