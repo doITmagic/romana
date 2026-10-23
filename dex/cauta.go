@@ -170,6 +170,7 @@ func (d *Dictionar) Cauta(ctx context.Context, cuvant string) (Raspuns, error) {
 			r.Leme = append(r.Leme, l)
 		}
 	}
+	notePentruOmonime(r.Leme)
 	r.Exista = len(r.Leme) > 0
 	if !r.Exista {
 		if r.Sugestii, err = d.Sugestii(ctx, cuvant, 5); err != nil {
@@ -449,6 +450,36 @@ func (d *Dictionar) formaAtestataDoom3(ctx context.Context, forma string) (bool,
 		}
 	}
 	return false, nil
+}
+
+// notePentruOmonime: când o lemă cu aceeași formă e atestată de DOOM 3 (un
+// omonim: „piano” adverb lângă „piano” s.n.), nota lemei neatestate nu mai
+// spune că norma nu înregistrează forma, ci cere judecata după sens.
+func notePentruOmonime(leme []Lema) {
+	atestate := map[string]bool{}
+	for _, l := range leme {
+		if l.Doom3 {
+			atestate[Normalizeaza(l.Forma)] = true
+		}
+	}
+	for i, l := range leme {
+		if l.Nota != "" && atestate[Normalizeaza(l.Forma)] {
+			leme[i].Nota = notaOmonim(l.Forma, l.TrimiteLa)
+		}
+	}
+}
+
+// notaOmonim: varianta notei pentru o lemă al cărei omonim e atestat.
+func notaOmonim(forma string, t []Trimitere) string {
+	var atestate []string
+	for _, x := range t {
+		if x.Doom3 {
+			atestate = append(atestate, "„"+x.Forma+"”")
+		}
+	}
+	lista := strings.Join(atestate, " sau ")
+	return fmt.Sprintf("DOOM 3 nu atestă lema aceasta, iar definiția ei trimite la %s. Forma „%s” e însă atestată de DOOM 3 ca alt cuvânt (lema cu „doom3”: true), "+
+		"deci judecă după sens: %s se recomandă doar pentru sensul acestei leme.", lista, forma, lista)
 }
 
 // notaTrimitere: fraza pentru o lemă pe care DOOM 3 n-o atestă, când trimite

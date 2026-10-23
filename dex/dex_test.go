@@ -91,10 +91,10 @@ func importaTest(t *testing.T, gz bool) (*Dictionar, string) {
 		t.Fatal(err)
 	}
 	// sursa ascunsă și definițiile ei, definiția ștearsă și formele dublate nu se numără
-	if st.Surse != 5 || st.Definitii != 12 || st.Leme != 10 || st.Forme != 13 {
+	if st.Surse != 5 || st.Definitii != 13 || st.Leme != 13 || st.Forme != 16 {
 		t.Fatalf("statistici: %+v", st)
 	}
-	if st.PeSurse[0] != (Sursa{"DEX '98", 4}) || st.PeSurse[1] != (Sursa{"DOOM 3", 4}) {
+	if st.PeSurse[0] != (Sursa{"DEX '98", 5}) || st.PeSurse[1] != (Sursa{"DOOM 3", 4}) {
 		t.Fatalf("pe surse: %+v", st.PeSurse)
 	}
 	d, err := Deschide(cale)
@@ -528,5 +528,33 @@ func TestFaraTrimitereDeLaVecina(t *testing.T) {
 	}
 	if !gasit {
 		t.Errorf("acaț: trimiterea proprie lipsește: %+v", r.Leme)
+	}
+}
+
+// Când un omonim cu aceeași formă e atestat de DOOM 3, nota nu mai spune că
+// norma nu înregistrează forma: cere judecata după sens.
+func TestNotaLaOmonimAtestat(t *testing.T) {
+	d, _ := importaTest(t, true)
+	r, err := d.Cauta(context.Background(), "piano")
+	if err != nil {
+		t.Fatal(err)
+	}
+	gasit := false
+	for _, l := range r.Leme {
+		if l.Doom3 || l.Nota == "" {
+			continue
+		}
+		gasit = true
+		if strings.Contains(l.Nota, "norma nu o înregistrează") || !strings.Contains(l.Nota, "alt cuvânt") || !strings.Contains(l.Nota, "„pian”") {
+			t.Errorf("nota la omonim: %q", l.Nota)
+		}
+	}
+	if !gasit {
+		t.Fatalf("lema „piano” care trimite la „pian” trebuie să aibă notă: %+v", r.Leme)
+	}
+	// fără omonim atestat, nota rămâne cea obișnuită
+	r, _ = d.Cauta(context.Background(), "degivra")
+	if n := r.Leme[0].Nota; !strings.Contains(n, "norma nu o înregistrează") {
+		t.Errorf("degivra: %q", n)
 	}
 }
