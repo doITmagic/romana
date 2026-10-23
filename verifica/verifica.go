@@ -57,6 +57,26 @@ type Raport struct {
 	Necunoscute []Necunoscut      `json:"necunoscute"`
 	Lint        []lint.Observatie `json:"lint"`
 	Limite      string            `json:"limite"` // mereu Limite: ce nu verifică unealta
+	Trunchiat   *Trunchiere       `json:"trunchiat,omitempty"`
+}
+
+// Trunchiere: câte elemente aveau listele înainte de Primele.
+type Trunchiere struct {
+	Necunoscute int `json:"necunoscute"`
+	Lint        int `json:"lint"`
+}
+
+// Primele întoarce o copie cu cel mult n elemente în fiecare listă; dacă a tăiat
+// ceva, Trunchiat spune câte erau. Un text vechi, plin de sedile, ar da altfel
+// mii de observații într-un singur răspuns.
+func (r Raport) Primele(n int) Raport {
+	if len(r.Necunoscute) <= n && len(r.Lint) <= n {
+		return r
+	}
+	r.Trunchiat = &Trunchiere{Necunoscute: len(r.Necunoscute), Lint: len(r.Lint)}
+	r.Necunoscute = r.Necunoscute[:min(n, len(r.Necunoscute)):min(n, len(r.Necunoscute))]
+	r.Lint = r.Lint[:min(n, len(r.Lint)):min(n, len(r.Lint))]
+	return r
 }
 
 // Limite: ce nu acoperă verificarea. Stă în fiecare raport, pentru că un
@@ -213,6 +233,9 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 		return Raport{}, fmt.Errorf("%w: %d de caractere, maximum %d", ErrPreaMare, n, MaxCaractere)
 	}
 	rap := Raport{Necunoscute: []Necunoscut{}, Lint: lint.Verifica(text), Limite: Limite}
+	if rap.Lint == nil {
+		rap.Lint = []lint.Observatie{} // listă goală, nu null, în JSON
+	}
 	ignorat := lint.Ignorat(text)
 	memo := map[string]bool{}
 	memoSug := map[string][]string{}

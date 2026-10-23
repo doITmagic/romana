@@ -68,7 +68,11 @@ const descriereVerifica = `Verifică un text în română: caută fiecare cuvân
 	`„lint” are greșelile sigure, independente de context (de exemplu ș și ț scrise cu sedilă): fiecare cu fragmentul, propunerea, un mesaj care explică greșeala și, uneori, o notă despre excepții (de exemplu citatul exact). ` +
 	`Unealta nu corectează textul și nu decide: dă materialul, iar cuvintele necunoscute trebuie judecate din context. ` +
 	`Nu verifică acordul, sensul, coerența, punctuația sau stilul: un raport fără observații nu înseamnă un text corect („limite” o spune în fiecare răspuns). ` +
-	`Textul poate avea cel mult ` + maxCaractereTxt + ` de caractere.`
+	`Textul poate avea cel mult ` + maxCaractereTxt + ` de caractere. Fiecare listă are cel mult 200 de elemente; „trunchiat”, dacă apare, spune câte erau în total.`
+
+// MaxObservatii: câte elemente are cel mult fiecare listă din răspunsul
+// verifica_text; un text vechi, plin de sedile, ar da altfel zeci de MB.
+const MaxObservatii = 200
 
 // maxCaractereTxt: limita din verifica, scrisă cu puncte pentru lizibilitate.
 const maxCaractereTxt = "200.000"
@@ -314,7 +318,7 @@ func (s *server) apel(ctx context.Context, c cerere) error {
 		} else {
 			var r verifica.Raport
 			if r, err = s.u.Verifica(ctx, valoare); err == nil {
-				raspuns = normalizeazaRaport(r)
+				raspuns = normalizeazaRaport(r).Primele(MaxObservatii)
 			}
 		}
 	}()

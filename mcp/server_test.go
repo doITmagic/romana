@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"runtime"
 	"strconv"
@@ -40,6 +41,9 @@ func (u *unelteFalse) Verifica(_ context.Context, text string) (verifica.Raport,
 	u.apeluri.Add(1)
 	if u.eroare != nil {
 		return verifica.Raport{}, u.eroare
+	}
+	if text == "multe" { // un text vechi, plin de sedile
+		return verifica.Raport{Necunoscute: []verifica.Necunoscut{}, Lint: make([]lint.Observatie, 5000)}, nil
 	}
 	return verifica.Raport{
 		Necunoscute: []verifica.Necunoscut{{Cuvant: "sumarizată", Inceput: 3, Sfarsit: 14}},
@@ -182,6 +186,9 @@ func TestDescrieriSeExplica(t *testing.T) {
 		if !strings.Contains(jos, cerut) {
 			t.Errorf("descrierile nu spun %q", cerut)
 		}
+	}
+	if !strings.Contains(toate, fmt.Sprintf("cel mult %d de elemente", MaxObservatii)) {
+		t.Error("descrierea nu spune limita MaxObservatii")
 	}
 	if strings.Contains(jos, "skill") || strings.Contains(toate, "RO-") {
 		t.Error("descrierile presupun skillul")
@@ -431,5 +438,19 @@ func TestScriereEsuataNuLasaGorutinaAgatata(t *testing.T) {
 	}
 	if n := runtime.NumGoroutine(); n > inainte {
 		t.Errorf("gorutină rămasă agățată: %d înainte, %d după", inainte, n)
+	}
+}
+
+// Un raport uriaș se taie: cel mult MaxObservatii pe listă, cu totalul în „trunchiat”.
+func TestVerificaTextTrunchiat(t *testing.T) {
+	s := porneste(t, &unelteFalse{gata: true})
+	s.trimite(apel(1, "verifica_text", `{"text":"multe"}`))
+	sc := rezultat(t, s.raspuns())["structuredContent"].(map[string]any)
+	if n := len(sc["lint"].([]any)); n != MaxObservatii {
+		t.Errorf("lint: %d observații, aștept %d", n, MaxObservatii)
+	}
+	tr, _ := sc["trunchiat"].(map[string]any)
+	if tr["lint"] != float64(5000) {
+		t.Errorf("trunchiat = %v", sc["trunchiat"])
 	}
 }

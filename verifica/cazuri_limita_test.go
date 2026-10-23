@@ -2,9 +2,12 @@ package verifica
 
 import (
 	"context"
+	"encoding/json"
 	"reflect"
 	"strings"
 	"testing"
+
+	"github.com/doITmagic/romana/lint"
 )
 
 func TestUnderscoreMarkdown(t *testing.T) {
@@ -89,5 +92,32 @@ func TestRaportulSpuneCeNuVerifica(t *testing.T) {
 		if !strings.Contains(strings.ToLower(r.Limite), cerut) {
 			t.Errorf("limite nu spune %q: %q", cerut, r.Limite)
 		}
+	}
+}
+
+// Fără observații, listele ies goale, nu null: CLI-ul și MCP-ul au aceeași schemă.
+func TestListeGoaleNuNull(t *testing.T) {
+	r, err := Text(context.Background(), fals{"casa": true, "e": true, "mare": true}, "Casa e mare.")
+	if err != nil {
+		t.Fatal(err)
+	}
+	b, _ := json.Marshal(r)
+	if !strings.Contains(string(b), `"lint":[]`) || !strings.Contains(string(b), `"necunoscute":[]`) {
+		t.Fatalf("JSON: %s", b)
+	}
+}
+
+// Primele taie listele lungi și spune câte erau.
+func TestPrimele(t *testing.T) {
+	r := Raport{Necunoscute: make([]Necunoscut, 3), Lint: make([]lint.Observatie, 5), Limite: Limite}
+	t2 := r.Primele(2)
+	if len(t2.Lint) != 2 || len(t2.Necunoscute) != 2 || t2.Trunchiat == nil || t2.Trunchiat.Lint != 5 || t2.Trunchiat.Necunoscute != 3 {
+		t.Fatalf("trunchiat: %+v", t2)
+	}
+	if len(r.Lint) != 5 {
+		t.Fatal("Primele nu are voie să schimbe raportul inițial")
+	}
+	if r.Primele(10).Trunchiat != nil {
+		t.Fatal("sub limită: fără trunchiere")
 	}
 }

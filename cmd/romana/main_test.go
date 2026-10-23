@@ -345,3 +345,30 @@ func TestHookFifoNuBlocheaza(t *testing.T) {
 		t.Fatal("hook-ul s-a blocat pe FIFO")
 	}
 }
+
+// Hook-ul nu inundă contextul agentului: cel mult maxObsHook observații, plus
+// câte au mai rămas și comanda care le dă pe toate.
+func TestHookLimitaObservatii(t *testing.T) {
+	c := filepath.Join(t.TempDir(), "vechi.md")
+	text := strings.Repeat("Aşa e ţara şi aşa rămâne, iar drumul e lung pentru că sunt aici.\n", 100)
+	os.WriteFile(c, []byte(text), 0o644)
+	out, _, cod := rul(t, hookJSON(c), "verifica", "--hook")
+	if cod != 0 {
+		t.Fatalf("cod %d", cod)
+	}
+	var h struct {
+		HookSpecificOutput struct {
+			AdditionalContext string `json:"additionalContext"`
+		} `json:"hookSpecificOutput"`
+	}
+	if err := json.Unmarshal([]byte(out), &h); err != nil {
+		t.Fatalf("%v: %.200q", err, out)
+	}
+	ctx := h.HookSpecificOutput.AdditionalContext
+	if n := strings.Count(ctx, "\n- "); n != maxObsHook {
+		t.Errorf("%d observații listate, aștept %d", n, maxObsHook)
+	}
+	if !strings.Contains(ctx, "încă 350") || !strings.Contains(ctx, "romana verifica") {
+		t.Errorf("lipsește restul: %.300q", ctx[len(ctx)-300:])
+	}
+}

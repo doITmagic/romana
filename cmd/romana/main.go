@@ -29,6 +29,10 @@ var versiune = "dev"
 // maxHook: fișierele mai mari de atât nu sunt citite de hook.
 const maxHook = 2 << 20
 
+// maxObsHook: câte observații pune hook-ul în contextul agentului; restul
+// le dă „romana verifica <fișier>”.
+const maxObsHook = 50
+
 // limitaIntrareHook: cât din JSON-ul de pe stdin citește hook-ul. Pe calea
 // Write, tool_input conține tot conținutul fișierului (cu escape-uri, până la
 // de șase ori mai mare), deci limita trebuie să încapă peste maxHook.
@@ -348,8 +352,11 @@ func cmdHook(in io.Reader, out io.Writer) int {
 	}
 	var sb strings.Builder
 	fmt.Fprintf(&sb, "Verificarea ortografică a „%s” a găsit greșeli sigure (număr: %d):\n", filepath.Base(h.ToolInput.FilePath), len(obs))
-	for _, ob := range obs {
+	for _, ob := range obs[:min(len(obs), maxObsHook)] {
 		sb.WriteString("- " + formateazaObservatie(ob) + "\n")
+	}
+	if rest := len(obs) - maxObsHook; rest > 0 {
+		fmt.Fprintf(&sb, "(și încă %d; lista completă: romana verifica %q)\n", rest, cale)
 	}
 	sb.WriteString("Corectează-le în fișier, apoi continuă.")
 	iesire := map[string]any{"hookSpecificOutput": map[string]string{
