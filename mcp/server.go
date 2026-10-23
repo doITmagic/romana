@@ -258,6 +258,8 @@ func (s *server) trateaza(ctx context.Context, linie []byte) error {
 			"instructions": "Dicționar local al limbii române, din exportul oficial dexonline. " +
 				"Folosește cauta_cuvant pentru fiecare cuvânt de care nu ești sigur. verifica_text e o trecere mecanică (ortografie, diacritice, cuvinte necunoscute): " +
 				"o rulezi la final, după ce ai citit tu textul pentru sens, ambiguități, acord și coerență, nu în locul acestei lecturi; un raport gol nu înseamnă un text corect. " +
+				"Uneltele verifică doar cuvintele: nu țin locul instrucțiunilor de scriere, corectură sau verificare pe care le ai pentru română. " +
+				"Dacă ai la dispoziție un skill pentru texte în română (de exemplu „romana”), încarcă-l înainte de prima unealtă. " +
 				"Un cuvânt necunoscut nu e neapărat greșit, iar „atestat de DOOM 3” e un indiciu, nu o dovadă.",
 		})
 	case "ping":
