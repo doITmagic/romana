@@ -289,6 +289,8 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 		u := Necunoscut{Cuvant: cuv, Inceput: j.a, Sfarsit: j.b}
 		if motiv := clasifica(cuv, inceputDePropozitie(text, j.a)); motiv != "" {
 			u.Neverificat, u.Motiv = true, motiv
+		} else if prefixInainteDeNume(cuv) {
+			u.Neverificat, u.Motiv = true, "prefix cu cratimă înaintea unui nume propriu, a unei sigle sau a unui număr"
 		} else if esteAbreviere(text, j.a, j.b) {
 			u.Neverificat, u.Motiv = true, "posibilă abreviere"
 		} else if !acoperitDeLint(rap.Lint, j.a, j.b) {
@@ -315,6 +317,18 @@ func acoperitDeLint(obs []lint.Observatie, a, b int) bool {
 	return false
 }
 
+// prefixInainteDeNume: un prefix din prefixe, cu cratimă, urmat de un cuvânt cu
+// majusculă sau de o cifră (anti-NATO, post-Covid, pre-2020): forma e corectă,
+// dar dicționarul nu are cum s-o știe.
+func prefixInainteDeNume(cuv string) bool {
+	p0, rest, ok := strings.Cut(cuv, "-")
+	if !ok || !prefixe[dex.Normalizeaza(p0)] || rest == "" {
+		return false
+	}
+	r, _ := utf8.DecodeRuneInString(rest)
+	return unicode.IsUpper(r) || unicode.IsDigit(r)
+}
+
 // existaPeParti: compusul sau cliticul cu cratimă ori apostrof e acceptat
 // dacă fiecare parte e un cuvânt din dicționar sau un fragment elidat cunoscut.
 func existaPeParti(cuv string, exista func(string) (bool, error)) (bool, error) {
@@ -328,7 +342,12 @@ func existaPeParti(cuv string, exista func(string) (bool, error)) (bool, error) 
 			elidat = true
 		}
 	}
-	if !elidat && prefixe[dex.Normalizeaza(parti[0])] {
+	if p0 := dex.Normalizeaza(parti[0]); !elidat && prefixe[p0] {
+		// „ex-” se scrie cu cratimă (ex-soț, ex-ministru); celelalte prefixe se
+		// scriu legat, deci compusul trebuie să fie întreg în dicționar
+		if p0 == "ex" && len(parti) == 2 {
+			return exista(parti[1])
+		}
 		return false, nil
 	}
 	for _, p := range parti {

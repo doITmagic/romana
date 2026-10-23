@@ -291,6 +291,8 @@ func TestSugestiiMemorate(t *testing.T) {
 	}
 }
 
+// Prefixele care se scriu legat nu se descompun după cratimă; „ex-” („fost”)
+// se scrie cu cratimă, deci „ex-soț” e corect dacă „soț” există (RO-IMP-013).
 func TestPrefixeleNuSeDescompun(t *testing.T) {
 	b := dictionar("anti soț ex nici o caz limită nato")
 	r, err := Text(context.Background(), b, "ex-soț nici-o anti-nato caz-limită")
@@ -298,7 +300,7 @@ func TestPrefixeleNuSeDescompun(t *testing.T) {
 		t.Fatal(err)
 	}
 	got := cuvinte(r)
-	want := []string{"ex-soț", "nici-o", "anti-nato"}
+	want := []string{"nici-o", "anti-nato"}
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("necunoscute %v, aștept %v", got, want)
 	}

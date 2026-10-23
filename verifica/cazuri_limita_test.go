@@ -3,6 +3,7 @@ package verifica
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"reflect"
 	"strings"
 	"testing"
@@ -119,5 +120,34 @@ func TestPrimele(t *testing.T) {
 	}
 	if r.Primele(10).Trunchiat != nil {
 		t.Fatal("sub limită: fără trunchiere")
+	}
+}
+
+// Prefixul cu cratimă înaintea unui nume propriu, a unei sigle sau a unui an
+// e corect (anti-NATO, post-Covid) și nu se judecă după dicționar; „ex-” cu
+// cratimă e corect înaintea oricărui cuvânt existent (ex-soț).
+func TestPrefixCuCratima(t *testing.T) {
+	d := fals{"mulți": true, "sunt": true, "și": true, "soț": true, "iar": true, "e": true, "istorie": true, "război": true, "o": true, "nicio": true}
+	text := "Mulți sunt anti-NATO și post-Covid, iar ex-URSS e istorie și ex-soț și anti-război și nici-o"
+	r, err := Text(context.Background(), d, text)
+	if err != nil {
+		t.Fatal(err)
+	}
+	stare := map[string]string{}
+	for _, n := range r.Necunoscute {
+		stare[n.Cuvant] = fmt.Sprint(n.Neverificat, " ", n.Motiv)
+	}
+	for _, c := range []string{"anti-NATO", "post-Covid", "ex-URSS"} {
+		if !strings.HasPrefix(stare[c], "true") {
+			t.Errorf("%s: aștept neverificat, am %q", c, stare[c])
+		}
+	}
+	if _, ok := stare["ex-soț"]; ok {
+		t.Errorf("ex-soț trebuie acceptat: %q", stare["ex-soț"])
+	}
+	for _, c := range []string{"anti-război", "nici-o"} {
+		if stare[c] != "false " {
+			t.Errorf("%s: aștept necunoscut simplu, am %q", c, stare[c])
+		}
 	}
 }
