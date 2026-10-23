@@ -20,7 +20,7 @@ const MaxCaracterePublic = 200_000
 // MaxInterogare: cea mai lungă interogare primită de cauta_regula.
 const MaxInterogare = 200
 
-const descriereGreseli = `Găsește greșelile sigure dintr-un text în română, cele care sunt greșeli oriunde ar apărea: ` +
+const descriereGreseli = `Găsește greșelile sigure dintr-un text în română, adică cele care nu depind de context: ` +
 	`ș și ț scrise cu sedilă (ş, ţ) în loc de virgulă, grafia veche cu „î” în interiorul cuvântului și „sînt” (înlocuite din 1993 de „â” și „sunt”), ` +
 	`formele „vroiam, vroiai…” în loc de „voiam, voiai…”, spațiul dinaintea semnelor de punctuație și spațiile duble. ` +
 	`Pentru fiecare: fragmentul, poziția în octeți (inceput, sfarsit), propunerea, un mesaj care explică greșeala cu sursa, ID-ul regulii (RO-<PIL>-<NNN>) ` +
@@ -40,7 +40,7 @@ var listaPublica = []unealta{
 		Title:       "Verifică greșelile sigure",
 		Description: descriereGreseli,
 		InputSchema: schema("text", "Textul de verificat, în română. Markdown, cod inline și blocuri de cod sunt acceptate; codul nu se verifică."),
-		Annotations: doarCitire,
+		Annotations: doarCitire("Verifică greșelile sigure"),
 	},
 	{
 		Name:        "cauta_regula",
@@ -54,7 +54,7 @@ var listaPublica = []unealta{
 			},
 			"required": []string{"interogare"},
 		},
-		Annotations: doarCitire,
+		Annotations: doarCitire("Caută o regulă de scriere"),
 	},
 }
 

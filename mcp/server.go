@@ -93,15 +93,17 @@ type unealta struct {
 // adnotari: indiciile MCP despre efectele uneltei. Clienții (Codex, de
 // exemplu) cer aprobare la uneltele care nu se declară doar de citire.
 type adnotari struct {
-	ReadOnly    bool `json:"readOnlyHint"`
-	Destructive bool `json:"destructiveHint"`
-	Idempotent  bool `json:"idempotentHint"`
-	OpenWorld   bool `json:"openWorldHint"`
+	Title       string `json:"title,omitempty"` // numele afișat în cataloage (directorul Claude îl cere aici)
+	ReadOnly    bool   `json:"readOnlyHint"`
+	Destructive bool   `json:"destructiveHint"`
+	Idempotent  bool   `json:"idempotentHint"`
+	OpenWorld   bool   `json:"openWorldHint"`
 }
 
-// doarCitire: ambele unelte doar citesc baza locală, fără rețea și fără să
-// schimbe ceva.
-var doarCitire = adnotari{ReadOnly: true, Idempotent: true}
+// doarCitire: uneltele doar citesc, fără rețea și fără să schimbe ceva.
+func doarCitire(titlu string) adnotari {
+	return adnotari{Title: titlu, ReadOnly: true, Idempotent: true}
+}
 
 func schema(camp, descriere string) map[string]any {
 	return map[string]any{
@@ -119,14 +121,14 @@ var lista = []unealta{
 		Title:       "Caută un cuvânt în dicționar",
 		Description: descriereCauta,
 		InputSchema: schema("cuvant", "Cuvântul sau forma de căutat, în orice formă flexionată, de preferat cu diacritice (ă, â, î, ș, ț)."),
-		Annotations: doarCitire,
+		Annotations: doarCitire("Caută un cuvânt în dicționar"),
 	},
 	{
 		Name:        "verifica_text",
 		Title:       "Verifică un text în română",
 		Description: descriereVerifica,
 		InputSchema: schema("text", "Textul de verificat, în română. Markdown, cod inline și blocuri de cod sunt acceptate; codul nu se verifică."),
-		Annotations: doarCitire,
+		Annotations: doarCitire("Verifică un text în română"),
 	},
 }
 
