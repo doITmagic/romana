@@ -32,7 +32,7 @@ services:
       - GOMEMLIMIT=96MiB
       # statisticile de folosire: unealta și aplicația client, fără texte și fără IP
       - UMAMI_URL=https://stats.doitmagic.ro
-      - UMAMI_SITE=09e480a4-d304-4610-8b40-b9098cf4435c
+      - UMAMI_SITE=37bc60ec-4ff7-4eb9-94cf-0a59e6253114
     logging:
       driver: json-file
       options:
