@@ -7,6 +7,9 @@
     "url": "https://doitmagic.ro/"
   },
   "homepage": "https://doitmagic.ro/blog/romana-agenti-ai-scriu-corect-in-romana/",
+  "documentationUrl": "https://github.com/doITmagic/romana#readme",
+  "supportUrl": "https://github.com/doITmagic/romana/issues",
+  "privacyPolicyUrl": "https://github.com/doITmagic/romana/blob/main/PRIVACY.md",
   "repository": "https://github.com/doITmagic/romana",
   "license": "MIT",
   "keywords": [
