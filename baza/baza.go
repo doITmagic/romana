@@ -242,15 +242,21 @@ func verificatLa(o Optiuni, st stare) time.Time {
 // ultima încercare e mai nouă de o oră.
 func inPauza(o Optiuni, st stare, bazaOk bool) bool {
 	acum := o.Acum()
-	if v := verificatLa(o, st); bazaOk && !v.IsZero() && acum.Sub(v) < intervalVerif {
+	if bazaOk && deCurand(verificatLa(o, st), acum, intervalVerif) {
 		return true
 	}
-	for _, t := range []time.Time{st.Eroare, st.Incercat} {
-		if !t.IsZero() && acum.Sub(t) < pauzaEroare {
-			return true
-		}
+	return deCurand(st.Eroare, acum, pauzaEroare) || deCurand(st.Incercat, acum, pauzaEroare)
+}
+
+// deCurand: t e în trecut și mai nou decât prag. O dată din viitor (ceas
+// decalat, stare scrisă pe altă mașină) nu contează: altfel ar ține pauza până
+// ajunge ceasul la ea.
+func deCurand(t, acum time.Time, prag time.Duration) bool {
+	if t.IsZero() {
+		return false
 	}
-	return false
+	d := acum.Sub(t)
+	return d >= 0 && d < prag
 }
 
 // DeVerificat spune, fără nicio cerere, dacă o actualizare nefortată ar
@@ -452,7 +458,7 @@ func aduce(ctx context.Context, o Optiuni, etag, modificat string) (schimbat boo
 	switch resp.StatusCode {
 	case http.StatusNotModified:
 		st := citesteStare(o.DirCache)
-		st.Verificat, st.Eroare = o.Acum(), time.Time{}
+		st.Verificat, st.Eroare, st.Incercat = o.Acum(), time.Time{}, time.Time{}
 		return false, scrieStare(o.DirCache, st)
 	case http.StatusOK:
 	default:

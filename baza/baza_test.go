@@ -21,6 +21,13 @@ import (
 	"github.com/doITmagic/romana/dex/dextest"
 )
 
+// TestMain golește ROMANA_FARA_RETEA din mediu: testele vorbesc doar cu
+// servere httptest locale, iar cele care cer modul offline îl pun singure.
+func TestMain(m *testing.M) {
+	os.Unsetenv("ROMANA_FARA_RETEA")
+	os.Exit(m.Run())
+}
+
 func exportGz(t testing.TB) []byte {
 	t.Helper()
 	var b bytes.Buffer
@@ -860,5 +867,41 @@ func TestUitaStarea(t *testing.T) {
 	}
 	if st := citesteStare(o.DirCache); st.ETag != "" {
 		t.Fatalf("starea a rămas: %+v", st)
+	}
+}
+
+// O dată din viitor (ceas decalat, stare.json scrisă pe altă mașină) nu ține
+// pauza la nesfârșit: se ignoră.
+func TestDateDinViitorNuTinPauza(t *testing.T) {
+	t0 := time.Date(2026, 10, 1, 12, 0, 0, 0, time.UTC)
+	viitor := t0.Add(400 * 24 * time.Hour)
+	o := Optiuni{CaleBaza: filepath.Join(t.TempDir(), "dex.sqlite"), DirCache: t.TempDir(),
+		Acum: func() time.Time { return t0 }}
+	for _, st := range []stare{{Eroare: viitor}, {Incercat: viitor}} {
+		if inPauza(o, st, false) {
+			t.Errorf("fără bază, %+v: nu e pauză", st)
+		}
+	}
+	if inPauza(o, stare{Verificat: viitor}, true) {
+		t.Error("o verificare din viitor nu amână verificarea")
+	}
+}
+
+// Un 304 încheie încercarea: Incercat nu mai rămâne în stare.
+func TestRaspuns304StergeIncercat(t *testing.T) {
+	s := nouServer(t)
+	o := optiuni(t, s)
+	t0 := time.Date(2026, 10, 1, 12, 0, 0, 0, time.UTC)
+	now := t0
+	o.Acum = func() time.Time { return now }
+	if _, err := Asigura(context.Background(), o); err != nil {
+		t.Fatal(err)
+	}
+	now = t0.Add(10 * 24 * time.Hour)
+	if _, err := Actualizeaza(context.Background(), o, false); err != nil {
+		t.Fatal(err)
+	}
+	if st := citesteStare(o.DirCache); !st.Incercat.IsZero() {
+		t.Fatalf("după 304, incercat = %v", st.Incercat)
 	}
 }
