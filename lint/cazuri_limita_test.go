@@ -118,3 +118,49 @@ func TestEticheteHtmlNuProza(t *testing.T) {
 		t.Errorf("etichetele reale rămân ignorate: %+v", o)
 	}
 }
+
+// O etichetă pomenită în proză sau în cod, fără închidere, nu ascunde restul
+// documentului; conținutul unei etichete închise rămâne ignorat.
+func TestEtichetaNeinchisaNuAscundeRestul(t *testing.T) {
+	for _, text := range []string{
+		"Folosește `<code>` pentru cod. Apoi cînd vine pîinea, sînt aici.",
+		"Scrie <script> în pagină, apoi cînd vine pîinea.",
+		"```html\n<style>\n```\nApoi cînd vine pîinea.",
+		"Stă scris „<pre>” aici. Apoi cînd plouă, vine pîinea.",
+	} {
+		gasit := false
+		for _, o := range Verifica(text) {
+			if o.Regula == "RO-TIP-128" && text[o.Inceput:o.Sfarsit] == "cînd" {
+				gasit = true
+			}
+		}
+		if !gasit {
+			t.Errorf("„cînd” trebuie semnalat în %q: %+v", text, Verifica(text))
+		}
+	}
+	text := "<script>const x = ok ? 1 : 2; var cînd = 1;</script>\nAici e bine."
+	if obs := Verifica(text); len(obs) != 0 {
+		t.Errorf("conținutul din <script> închis trebuie ignorat: %+v", obs)
+	}
+}
+
+// Grafia veche cu majusculă (început de propoziție, titlu, majuscule întregi)
+// se prinde și pentru cuvintele uzuale care nu sunt în lista scurtă, prin
+// rădăcină; numele de persoană cu „î” rămân neatinse.
+func TestRadaciniVechiCuMajuscula(t *testing.T) {
+	text := "Gîndesc la asta. Întîmplător e aici. Vînzătorul a plecat. Mîncăm acum.\n\n# Cîntăm\n\nGÎNDESC MULT. Rîvna lui e mare."
+	vrut := map[string]bool{"Gîndesc": true, "Întîmplător": true, "Vînzătorul": true, "Mîncăm": true, "Cîntăm": true, "GÎNDESC": true, "Rîvna": true}
+	for _, o := range Verifica(text) {
+		if o.Regula == "RO-TIP-128" {
+			delete(vrut, text[o.Inceput:o.Sfarsit])
+		}
+	}
+	if len(vrut) != 0 {
+		t.Errorf("nesemnalate: %v", vrut)
+	}
+	for _, nume := range []string{"Pîrvu a venit.", "Mîndrescu a venit.", "Rîpeanu a scris.", "Brîndușa a plecat."} {
+		if obs := Verifica(nume); len(obs) != 0 {
+			t.Errorf("%q: numele nu se atinge: %+v", nume, obs)
+		}
+	}
+}

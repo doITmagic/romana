@@ -207,7 +207,7 @@ func grafiaVeche(cuv, low string, vechi map[string]bool) (string, bool) {
 	// Cuvântul cu majusculă inițială poate fi un nume propriu (Pîrvu,
 	// Brîndușa), oriunde în propoziție: se semnalează doar dacă e un cuvânt
 	// uzual în grafia veche sau dacă forma cu minusculă apare și în text.
-	if r0 := []rune(cuv)[0]; unicode.IsUpper(r0) && !cuvantUzualVechi[low] && !vechi[low] && !flexiuneUzualaVeche(low) {
+	if r0 := []rune(cuv)[0]; unicode.IsUpper(r0) && !cuvantUzualVechi[low] && !vechi[low] && !flexiuneUzualaVeche(low) && !radacinaUzualaVeche(low) {
 		return "", false
 	}
 	schimbat := false
@@ -275,6 +275,36 @@ func flexiuneUzualaVeche(low string) bool {
 			if rest, ok := strings.CutPrefix(low, tulpina); ok && sufixeFlexiune[rest] {
 				return true
 			}
+		}
+	}
+	return false
+}
+
+// radaciniVechi: începuturi de cuvinte românești uzuale scrise cu „î” interior
+// după grafia dinainte de 1993; prind formele flexionate care nu sunt în
+// cuvantUzualVechi (Gîndesc, Vînzătorul, Întîmplător).
+var radaciniVechi = strings.Fields(`cînd cînt cît cîmp cîin cîștig cîrcium cîrm cîrlig
+	pînă pîin pîrî pîlp mîin mînă mîna mînc mîni mînu mîndr mîng mîhn
+	întîi întîmpl întîln întîrzi rîd rîs rîu rînd rîv vînt vînz vînd vînăt vîrst vîrf
+	gînd gît tînăr tîrz tîrg tîrî tîmpl sfîrș sfînt sfîș pămînt cuvînt mormînt hotărî
+	rămîn romîn bătrîn lumîn plîn strîn strîmt stîng stînc pînz lîng sîng grîu frîu brîu
+	zîmb dîmb urît urîț crîng înfrîn`)
+
+// sufixeNume: terminații de nume de familie (Mîndrescu, Rîpeanu): un cuvânt cu
+// majusculă care se termină așa rămâne posibil nume propriu.
+var sufixeNume = []string{"escu", "eanu", "ache"}
+
+// radacinaUzualaVeche: cuvântul începe cu o rădăcină din radaciniVechi și nu
+// are terminație de nume de familie.
+func radacinaUzualaVeche(low string) bool {
+	for _, s := range sufixeNume {
+		if strings.HasSuffix(low, s) {
+			return false
+		}
+	}
+	for _, r := range radaciniVechi {
+		if strings.HasPrefix(low, r) {
+			return true
 		}
 	}
 	return false
@@ -460,7 +490,7 @@ func zoneIgnorate(text string) []interval {
 	for _, m := range reUrl.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], m[1]})
 	}
-	z = append(z, zonePrinse(text)...)
+	z = append(z, zonePrinse(text, z)...) // z are deja codul: o etichetă din cod nu deschide nimic
 	for _, m := range reHtml.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], m[1]})
 	}
@@ -468,9 +498,10 @@ func zoneIgnorate(text string) []interval {
 }
 
 // zonePrinse: de la deschiderea unei etichete din etichetePrinse până la
-// închiderea ei (sau până la sfârșitul textului, dacă lipsește). Literele
-// mari nu contează.
-func zonePrinse(text string) []interval {
+// închiderea ei. Literele mari nu contează. O deschidere din cod (zonele cod,
+// adică backticks și blocuri) sau fără închidere nu prinde nimic: „<code>”
+// pomenit în proză nu ascunde restul documentului.
+func zonePrinse(text string, cod []interval) []interval {
 	var z []interval
 	jos := strings.ToLower(text) // lungimea în octeți se poate schimba rar; verificăm
 	if len(jos) != len(text) {
@@ -485,19 +516,15 @@ func zonePrinse(text string) []interval {
 			}
 			a += i
 			n := a + len(deschis)
-			if n < len(jos) && (jos[n] == '>' || jos[n] == ' ' || jos[n] == '\t' || jos[n] == '\n' || jos[n] == '\r' || jos[n] == '/') {
-				sf := len(text)
+			if n < len(jos) && !in(cod, a) && (jos[n] == '>' || jos[n] == ' ' || jos[n] == '\t' || jos[n] == '\n' || jos[n] == '\r' || jos[n] == '/') {
 				if c := strings.Index(jos[n:], inchis); c >= 0 {
-					sf = n + c
+					sf := n + c
 					if g := strings.IndexByte(jos[sf:], '>'); g >= 0 {
-						sf += g + 1
-					} else {
-						sf = len(text)
+						z = append(z, interval{a, sf + g + 1})
+						i = sf + g + 1
+						continue
 					}
 				}
-				z = append(z, interval{a, sf})
-				i = sf
-				continue
 			}
 			i = n
 		}
