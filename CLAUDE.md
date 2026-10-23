@@ -4,7 +4,9 @@ Skill pentru agenți AI (Claude Code, Codex) care scriu, corectează și verific
 
 ## Structura
 
-- `skills/romana/`: skillul. Conține `SKILL.md` și `references/` (24 de fișiere, ~850 de reguli `RO-<PIL>-<NNN>`).
+- `skills/romana/`: skillul. Conține `SKILL.md` și `references/` (29 de fișiere, 854 de reguli `RO-<PIL>-<NNN>`).
+- `cmd/romana/` și pachetele `dex`, `baza`, `lint`, `verifica`, `mcp`: binarul `romana` (faza 2).
+- `AGENTS.md`: aceleași reguli, în engleză, pentru agenții de cod; `llms.txt`: harta repo-ului.
 - `evals/`: cazurile de test publice (`cazuri/*.json`) și sursele lor (`SURSE.md`).
 - `tools/`: unelte în Go.
   - `paza`: ce nu are voie să intre în repo.

@@ -1,0 +1,34 @@
+# romana
+
+> A writing skill for AI agents (Claude Code, Codex and others) that writes, corrects and reviews Romanian by the norms of the Romanian Academy (DOOM 3, ÎOOP), with 854 sourced rules and a list of forms that are not errors; plus `romana`, a Go binary (CLI, MCP server, Claude Code hook) on top of a local copy of the official dexonline export. The skill and the binary work together or separately. MIT license; built by DO IT MAGIC SOFTWARE (https://doitmagic.ro/).
+
+The skill needs no network and no tool. The binary downloads the dexonline export (GPL v2+) on first use and makes no other request to dexonline.ro. Its two MCP tools, `cauta_cuvant` and `verifica_text`, are read-only. A word the dictionary does not know is not necessarily wrong.
+
+## Start here
+
+- [README](README.md): what it does, install, how to check it works, test results
+- [AGENTS.md](AGENTS.md): commands, limits, and how an agent should read the dictionary's answers
+- [SKILL.md](skills/romana/SKILL.md): the skill's entry point: modes, levels, method, which reference file to read when
+
+## Rules
+
+- [Reference files](skills/romana/references/): 29 files by topic (grammar, semantics, style, coherence, typography, numbers, calques, text types)
+- What is not an error, forms that look wrong but are correct: [ce-nu-e-greseala.md](skills/romana/references/ce-nu-e-greseala.md) and [ce-nu-e-greseala-stil.md](skills/romana/references/ce-nu-e-greseala-stil.md)
+
+## Dictionary tool
+
+- [Binary source](cmd/romana/main.go): commands `cauta`, `verifica`, `mcp`, `import`, `update`
+- [MCP server](mcp/server.go): tool descriptions and schemas
+- [Install script](install.sh): prebuilt binaries from GitHub Releases, checked against SHA256SUMS
+
+## Tests
+
+- [Results, skill vs no skill](evals/RAPORT.md)
+- [Results, skill vs skill + dictionary tool](evals/RAPORT-MCP.md)
+- [Test case sources and licenses](evals/SURSE.md)
+
+## Optional
+
+- [Changelog](CHANGELOG.md)
+- [Contributing](CONTRIBUTING.md)
+- [More projects by DO IT MAGIC SOFTWARE](https://doitmagic.ro/proiecte/)

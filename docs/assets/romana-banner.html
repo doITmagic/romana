@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- Sursa bannerului din README. Randare: google-chrome --headless --screenshot=romana-banner.png --window-size=1200,800 romana-banner.html
+     Fonturile (Space Mono, Inter, licență OFL) se iau de pe disc la randare; brieful e în romana-banner.brief.md. -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Space Mono';font-weight:700;src:url('fonts/space-mono-700-latin-ext.woff2') format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Space Mono';font-weight:700;src:url('fonts/space-mono-700-latin.woff2') format('woff2');}
+@font-face{font-family:'Space Mono';font-weight:400;src:url('fonts/space-mono-400-latin-ext.woff2') format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Space Mono';font-weight:400;src:url('fonts/space-mono-400-latin.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-weight:300;src:url('fonts/inter-300-latin-ext.woff2') format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Inter';font-weight:300;src:url('fonts/inter-300-latin.woff2') format('woff2');}
+html,body{margin:0;padding:0;background:#050810;}
+.b{position:relative;width:1200px;height:800px;overflow:hidden;
+  background:radial-gradient(ellipse 900px 600px at 18% 30%, #0c1a4d 0%, rgba(5,8,16,0) 70%),
+             radial-gradient(ellipse 700px 500px at 95% 100%, #1b0f45 0%, rgba(5,8,16,0) 70%), #050810;
+  font-family:'Inter',sans-serif;color:#fff;}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,85,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,85,255,.07) 1px,transparent 1px);background-size:48px 48px;
+  -webkit-mask-image:radial-gradient(ellipse 85% 75% at 50% 45%, #000 40%, transparent 100%);}
+.g{position:absolute;font-family:'Space Mono';font-weight:700;color:#3d62ff;opacity:.09;line-height:1;}
+.top{position:absolute;left:80px;top:62px;font-family:'Space Mono';font-weight:400;font-size:18px;letter-spacing:.18em;color:#8c9096;text-transform:uppercase;}
+.top b{color:#4dff91;font-weight:400;}
+h1{position:absolute;left:74px;top:96px;margin:0;font-family:'Space Mono';font-weight:700;font-size:150px;letter-spacing:-.02em;line-height:1;}
+h1 span{color:#0055ff;}
+.t1{position:absolute;left:80px;top:282px;font-size:46px;color:#e8ecf4;letter-spacing:-.01em;}
+.t2{position:absolute;left:80px;top:346px;font-size:26px;color:#a7adbb;}
+.card{position:absolute;left:80px;top:420px;width:1040px;height:214px;border-radius:14px;background:rgba(9,14,34,.92);
+  border:1px solid rgba(61,98,255,.45);box-shadow:0 0 0 1px rgba(0,85,255,.08),0 30px 80px rgba(0,85,255,.18);}
+.dots{position:absolute;left:22px;top:18px;}
+.dots i{display:inline-block;width:12px;height:12px;border-radius:6px;margin-right:8px;background:#2a3150;}
+.code{position:absolute;left:30px;top:48px;font-family:'Space Mono';font-weight:400;font-size:23px;line-height:37px;color:#d0d6e0;white-space:pre;}
+.p{color:#3d62ff}.ok{color:#4dff91}.bad{color:#ff6b7a}.dim{color:#8c9096}
+.chips{position:absolute;left:80px;top:676px;}
+.chips span{display:inline-block;margin-right:12px;padding:9px 18px;border:1px solid rgba(61,98,255,.6);border-radius:999px;
+  font-family:'Space Mono';font-size:18px;color:#d0d6e0;background:rgba(0,85,255,.08);}
+.site{position:absolute;right:80px;top:688px;font-family:'Space Mono';font-size:18px;letter-spacing:.06em;color:#8c9096;}
+.site b{color:#0055ff;font-weight:400;}
+.chips span.a{border-color:rgba(77,255,145,.55);color:#4dff91;background:rgba(77,255,145,.06);}
+</style></head><body><div class="b">
+<div class="grid"></div>
+<div class="g" style="left:760px;top:40px;font-size:260px">ă</div>
+<div class="g" style="left:960px;top:150px;font-size:200px">ș</div>
+<div class="g" style="left:1060px;top:-20px;font-size:170px">î</div>
+<div class="g" style="left:880px;top:250px;font-size:150px;opacity:.06">ț</div>
+<div class="g" style="left:1090px;top:270px;font-size:120px;opacity:.06">â</div>
+<div class="top">DO IT MAGIC · open source · <b>MIT</b></div>
+<h1>roman<span>a</span></h1>
+<div class="t1">Romanian that reads like Romanian.</div>
+<div class="t2">A writing skill for AI agents, and a local dictionary built on dexonline.</div>
+<div class="card"><div class="dots"><i></i><i></i><i></i></div><div class="code"><span class="p">$</span> romana cauta degivrat
+  <span class="dim">notă:</span> DOOM 3 nu atestă „degivra” → se recomandă <span class="ok">„dejivra”</span>
+<span class="p">$</span> romana verifica nota.md
+  <span class="bad">„Aşa”</span> → <span class="ok">„Așa”</span>   <span class="bad">„cînd”</span> → <span class="ok">„când”</span>   <span class="dim">[RO-TIP-027, RO-TIP-128]</span></div></div>
+<div class="chips"><span>Claude Code</span><span>Codex</span><span>MCP server</span><span>Go CLI</span><span class="a">854 sourced rules</span></div>
+<div class="site">doitmagic<b>.ro</b></div>
+</div></body></html>
