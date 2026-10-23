@@ -34,5 +34,4 @@ Refuză să pornească fără `ANTHROPIC_API_KEY`. Cheia trece doar ca variabil�
 
 - Rularea modului `evals`, după ce Răzvan confirmă cazurile din `evals/cazuri` (spec §8.5) și există o cheie API.
 - Verificat la prima rulare că CLI-ul nu cere și alte gazde decât `api.anthropic.com` (dacă da, se adaugă în `filtru` doar ce e strict necesar). Pe urmă, versiunea `claude` fixată exact.
-- `evals` pornește cu `--flux` implicit spre un fișier din dinlume, care nu există în container; pentru motorul `claude` nu ar trebui să conteze, dar de confirmat.
 - Pragul din Task 11 în container: se verifică din raportul `evals`.
