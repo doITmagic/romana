@@ -1,10 +1,57 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "romana",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Use for every request to write, correct, proofread, check or translate into Romanian a text meant for readers, however short: web and marketing pages, blog articles, news, e-mails, interface text, documentation or a single sentence, and whenever asked whether Romanian wording is correct or natural. Without it, models “correct” forms that are right (unul din, prețuri scumpe, click) and miss real errors. Also use it when dictionary tools such as cauta_cuvant or verifica_text are available: they check words, not the text. Scrie, corectează și verifică texte în română: gramatică, semantică, stilistică și coerență, fără calcuri și fără cuvinte inventate. Do not use when Romanian is merely the language of the conversation and the answer is code, a calculation, a factual reply or an explanation unrelated to wording, nor for poetry, fiction, translations out of Romanian or file conversions that leave the text unchanged.",
-  "author": { "name": "DO IT MAGIC SOFTWARE" },
+  "author": {
+    "name": "DO IT MAGIC SOFTWARE",
+    "url": "https://doitmagic.ro/"
+  },
+  "homepage": "https://doitmagic.ro/blog/romana-agenti-ai-scriu-corect-in-romana/",
   "repository": "https://github.com/doITmagic/romana",
   "license": "MIT",
-  "keywords": ["romanian", "română", "language", "writing", "skill"]
+  "keywords": [
+    "romanian",
+    "română",
+    "language",
+    "writing",
+    "skill"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "romana",
+        "shortDescription": "Write and proofread Romanian",
+        "longDescription": "romana helps you write, correct and check Romanian text meant for readers: articles, web and marketing pages, e-mails, documents, interface text or a single sentence. It also translates into Romanian.\n\nIt follows the current norms of the Romanian Academy (DOOM 3 for spelling and word forms, ÎOOP for punctuation) through 854 rules, each with its source, and a list of forms that look wrong but are correct, so that what is right stays as it is.\n\nIt works on four levels: grammar (agreement, verb forms, cases, numerals), meaning (English calques, false friends, pleonasms, invented words), style (register, natural sentences, the patterns of generated text) and coherence (logical links, references). Typography is checked last: ș and ț with a comma below, Romanian quotation marks, numbers and capitals.\n\nThree modes: write (new texts, rewrites, translations into Romanian), correct (fixes what is objectively wrong and only suggests matters of taste) and check (a report of the problems, each with its level and reason, without rewriting the text).\n\nFor anyone who writes in Romanian: bloggers, marketers, journalists, lawyers, translators, developers writing interface text.\n\nLimitations: the skill holds rules, not a dictionary. The optional dictionary tools (the romana binary, built on the official dexonline export) run locally in Codex and Claude Code and are installed separately; in ChatGPT the skill works from its rules alone. It does not cover poetry, fiction or translation out of Romanian.\n\nOpen source, MIT license: https://github.com/doITmagic/romana",
+        "developerName": "DO IT MAGIC SOFTWARE",
+        "category": "Productivity",
+        "capabilities": [
+          "Write Romanian",
+          "Correct Romanian",
+          "Check Romanian"
+        ],
+        "websiteURL": "https://doitmagic.ro/blog/romana-agenti-ai-scriu-corect-in-romana/",
+        "supportURL": "https://github.com/doITmagic/romana/issues",
+        "privacyPolicyURL": "https://github.com/doITmagic/romana/blob/main/PRIVACY.md",
+        "defaultPrompt": [
+          "Corectează-mi textul următor și explică pe scurt fiecare schimbare.",
+          "Scrie în română o descriere de produs pentru un magazin online, fără calcuri din engleză.",
+          "E corect „Prețurile sunt scumpe”?"
+        ],
+        "brandColor": "#0055FF",
+        "brandColorDark": "#3D62FF",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      },
+      "publication": {
+        "release_notes": "First release in the directory: the romana skill, 854 sourced rules for writing, correcting and checking Romanian.",
+        "translations": {
+          "ro-RO": {
+            "subtitle": "Scrie și corectează în română",
+            "description": "romana te ajută să scrii, să corectezi și să verifici texte în română pentru cititori: articole, pagini de site și de marketing, e-mailuri, documente, texte de interfață sau o singură frază. Traduce și în română.\n\nUrmează normele actuale ale Academiei Române (DOOM 3 pentru scrierea și formele cuvintelor, ÎOOP pentru punctuație) prin 854 de reguli, fiecare cu sursa ei, și printr-o listă de forme care par greșite, dar sunt corecte. Așa, ce e corect rămâne neschimbat.\n\nLucrează pe patru niveluri: gramatica (acordul, formele verbelor, cazurile, numeralele), sensul (calcurile din engleză, prietenii falși, pleonasmele, cuvintele inventate), stilul (registrul, fraza firească, tiparele textului generat) și coerența (legăturile logice, trimiterile). Tipografia se verifică la sfârșit: ș și ț cu virgulă, ghilimelele românești, numerele și majusculele.\n\nAre trei moduri: redactare (texte noi, rescrieri, traduceri în română), corectură (repară ce e obiectiv greșit și doar propune ce ține de gust) și verificare (un raport cu problemele, fiecare cu nivelul și motivul ei, fără rescrierea textului).\n\nE pentru oricine scrie în română: bloggeri, oameni de marketing, jurnaliști, juriști, traducători, programatori care scriu texte de interfață.\n\nLimite: skillul conține reguli, nu un dicționar. Uneltele de dicționar, opționale (binarul romana, construit pe exportul oficial dexonline), rulează local în Codex și în Claude Code și se instalează separat; în ChatGPT, skillul lucrează doar cu regulile. Nu se ocupă de poezie, de proză literară și nici de traduceri din română.\n\nOpen source, licență MIT: https://github.com/doITmagic/romana"
+          }
+        }
+      }
+    }
+  }
 }

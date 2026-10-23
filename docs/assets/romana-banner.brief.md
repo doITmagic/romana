@@ -1,16 +1,9 @@
 # Brieful bannerului din README
 
-- **Fișiere:** `romana-banner.html` (sursa) și `romana-banner.png` (1200×800, cel din README).
+- **Fișiere:** sursa HTML de lângă acest brief și imaginea randată din ea (1200×800, cea din README).
 - **Desenat de mână** (HTML și CSS, randat cu Chrome headless): Recraft nu era configurat în sesiunea din 23.10.2026, deci s-a folosit varianta de rezervă din skillul de grafică.
-- **Randare:**
-
-  ```
-  google-chrome --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 \
-    --allow-file-access-from-files --screenshot=romana-banner.png --window-size=1200,800 \
-    file://$PWD/romana-banner.html
-  ```
-
-  Fonturile se iau de pe disc, din `site/static/assets/fonts` (Space Mono 400 și 700, Inter 300, licență OFL). Calea e scrisă în `@font-face`; pe alt calculator se schimbă acolo.
+- **Randare:** cu Chrome headless, la 1200×800; comanda exactă e în comentariul de la începutul sursei HTML.
+  Fonturile (Space Mono 400 și 700, Inter 300, licență OFL) vin de la Google Fonts la randare.
 - **Mărimea și aerul:** ca bannerul din `rag-code-mcp` (1024×682, fond închis, titlu mare), dar cu alt model. Diferențele: diacriticele românești pe fundal și un card de terminal cu ieșirea reală a binarului.
 - **Paleta doitmagic.ro:**
 

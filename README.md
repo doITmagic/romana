@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="./docs/assets/romana-banner.png" alt="romana: a Romanian writing skill for AI agents and a local Romanian dictionary tool (CLI and MCP server) built on dexonline" width="100%">
-</div>
+![romana: a Romanian writing skill for AI agents and a local Romanian dictionary tool (CLI and MCP server) built on dexonline](docs/assets/romana-banner.png)
 
 <div align="center">
 

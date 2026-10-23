@@ -1,5 +1,11 @@
 # Jurnal de modificări
 
+## 0.2.2 (2026-10-23)
+
+- Pregătit pentru cataloagele oficiale (directorul Claude și catalogul de pluginuri OpenAI): pictograma pluginului, `PRIVACY.md` și datele listării OpenAI în `plugin.json` (`extensions.com.openai`), cu descrierea și în română.
+- `romana-plugin.zip` conține și pictograma, și `PRIVACY.md`.
+- Bannerul din README e în sintaxă Markdown, iar brieful lui nu mai numește imaginea în cod; validatorul directorului Claude le semnala pe amândouă.
+
 ## 0.2.1 (2026-10-23)
 
 - **Skillul pornește singur și în claude.ai.** Descrierea spune acum explicit să fie folosit la orice cerere de scris, corectat, verificat sau tradus în română, oricât de scurtă. Într-o conversație nouă din claude.ai, la o corectură scurtă, skillul nu pornea, iar modelul „corecta” forme corecte („unul din”, „prețuri scumpe”, „click”). Testele de pornire, pe Claude: 22 din 22 la cazurile în care trebuie să pornească, 0 din 22 la cele în care nu.
