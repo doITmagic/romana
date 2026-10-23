@@ -60,7 +60,8 @@ const descriereCauta = `Caută un cuvânt românesc în dicționarul local const
 	`Când lema are „doom3” = false și o trimitere are „doom3” = true, câmpul „nota” spune asta în cuvinte: de regulă se recomandă forma la care se trimite (aici „dejivra”, deci „dejivrat”, nu „degivrat”). ` +
 	`Un cuvânt care lipsește din dicționar nu e neapărat greșit (neologisme, nume proprii, termeni noi): decizia rămâne la cel care citește rezultatul.`
 
-const descriereVerifica = `Verifică un text în română: caută fiecare cuvânt în dicționarul local și rulează un verificator de greșeli sigure. ` +
+const descriereVerifica = `Trecere mecanică peste un text în română: caută fiecare cuvânt în dicționarul local și rulează un verificator de greșeli sigure. ` +
+	`Se folosește după propria lectură a textului (sens, ambiguități, forme disputate, acord, coerență), nu în locul ei. ` +
 	`Întoarce două liste. „necunoscute” are cuvintele care nu există în tabela de forme, cu poziția în octeți (inceput, sfarsit), ` +
 	`„sugestii” (forme care diferă doar prin diacritice sau cratimă) și câmpul „neverificat”. ` +
 	`„Necunoscut” nu înseamnă „greșit”: înseamnă doar că dicționarul nu are forma. ` +
@@ -255,7 +256,8 @@ func (s *server) trateaza(ctx context.Context, linie []byte) error {
 			"capabilities":    map[string]any{"tools": map[string]any{"listChanged": false}},
 			"serverInfo":      map[string]any{"name": "romana", "version": s.versiune},
 			"instructions": "Dicționar local al limbii române, din exportul oficial dexonline. " +
-				"Folosește cauta_cuvant pentru un cuvânt de care nu ești sigur și verifica_text pentru un text întreg. " +
+				"Folosește cauta_cuvant pentru fiecare cuvânt de care nu ești sigur. verifica_text e o trecere mecanică (ortografie, diacritice, cuvinte necunoscute): " +
+				"o rulezi la final, după ce ai citit tu textul pentru sens, ambiguități, acord și coerență, nu în locul acestei lecturi; un raport gol nu înseamnă un text corect. " +
 				"Un cuvânt necunoscut nu e neapărat greșit, iar „atestat de DOOM 3” e un indiciu, nu o dovadă.",
 		})
 	case "ping":

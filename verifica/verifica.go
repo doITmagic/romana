@@ -83,7 +83,7 @@ func (r Raport) Primele(n int) Raport {
 // raport gol citit ca „textul e corect” face agentul să sară peste acord și
 // coerență (proba cu MCP din 23.10).
 const Limite = "Verificarea acoperă doar existența fiecărui cuvânt în dicționar și greșelile sigure, independente de context. " +
-	"Acordul, sensul, coerența, punctuația și stilul nu sunt verificate: un raport fără observații nu înseamnă un text corect."
+	"Acordul, sensul, ambiguitățile, formele disputate, coerența, punctuația și stilul nu sunt verificate: un raport fără observații nu înseamnă un text corect."
 
 // fragmenteElidate sunt bucăți scurte care apar lângă cratimă sau apostrof
 // (s-a, m-am, într-o, dă-l, n-ai) și nu sunt cuvinte de sine stătătoare.
