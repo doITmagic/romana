@@ -40,7 +40,8 @@ var (
 	// reUrl: adresa se oprește la ghilimele, paranteze și < >, ca textul lipit de
 	// ea (<a href="…">Text</a>, [text](…)urmare) să fie verificat; punctuația de
 	// la sfârșit o taie sfarsitUrl.
-	reUrl   = regexp.MustCompile(`(?i)(?:https?://|www\.)[^\s<>"'()\[\]]+|[^\s<>"'()\[\]]+@[^\s<>"'()\[\]]+\.[^\s<>"'()\[\]]+`)
+	// Parantezele perechi rămân în adresă (Iași_(oraș), ca la Wikipedia).
+	reUrl   = regexp.MustCompile(`(?i)(?:https?://|www\.)(?:[^\s<>"()\[\]]|\([^\s<>"()\[\]]*\))+|[^\s<>"'()\[\]]+@[^\s<>"'()\[\]]+\.[^\s<>"'()\[\]]+`)
 	reSpPct = regexp.MustCompile(`([\p{L}\p{N}”»"')\]])( +)([,.;:?!])(\s|$)`)
 	reMarj  = regexp.MustCompile(`^(>\s*)*([-*+]|\d+[.)])$`)
 )
@@ -156,7 +157,7 @@ func verificaCuvant(text string, poz int, cuv string, citat bool, vechi map[stri
 	}
 
 	// 3. Grafia veche cu „î” interior.
-	if prop, ok := grafiaVeche(cuv, low, vechi); ok {
+	if prop, ok := grafiaVeche(cuv, low, vechi, urmeazaVerb(text, poz+len(cuv))); ok {
 		add(Observatie{
 			Regula: "RO-TIP-128", Inceput: poz, Sfarsit: poz + len(cuv),
 			Fragment: cuv, Propunere: prop,
@@ -188,7 +189,7 @@ func pastreazaMajuscula(model, inloc string) string {
 	return inloc
 }
 
-func grafiaVeche(cuv, low string, vechi map[string]bool) (string, bool) {
+func grafiaVeche(cuv, low string, vechi map[string]bool, subiect bool) (string, bool) {
 	runes := []rune(cuv)
 	lrunes := []rune(low)
 	n := len(runes)
@@ -210,8 +211,13 @@ func grafiaVeche(cuv, low string, vechi map[string]bool) (string, bool) {
 	// Cuvântul cu majusculă inițială poate fi un nume propriu (Pîrvu,
 	// Brîndușa), oriunde în propoziție: se semnalează doar dacă e un cuvânt
 	// uzual în grafia veche sau dacă forma cu minusculă apare și în text.
-	if r0 := []rune(cuv)[0]; unicode.IsUpper(r0) && !cuvantUzualVechi[low] && !vechi[low] && !flexiuneUzualaVeche(low) && !radacinaUzualaVeche(low) {
-		return "", false
+	// „Gîndea” e și imperfect, și nume de familie: urmat de un verb („Gîndea a
+	// venit”) e subiectul, deci numele; imperfectul („Gîndea mult”) nu e urmat
+	// de verb.
+	if r0 := []rune(cuv)[0]; unicode.IsUpper(r0) && !cuvantUzualVechi[low] && !vechi[low] && !flexiuneUzualaVeche(low) {
+		if veche, ambigua := radacinaUzualaVeche(low); !veche || (ambigua && subiect) {
+			return "", false
+		}
 	}
 	schimbat := false
 	for k := 1; k < n-1; k++ { // î interior: nu la început, nu la sfârșit
@@ -300,22 +306,51 @@ var radaciniVechi = strings.Fields(`cînd cînt cît cîmp cîin cîștig cîrci
 
 // sufixeNume: terminații de nume de familie (Mîndrescu, Rîpeanu): un cuvânt cu
 // majusculă care se termină așa rămâne posibil nume propriu.
-var sufixeNume = []string{"escu", "eanu", "ache", "ea", "oiu"}
+var sufixeNume = []string{"escu", "eanu", "ache", "oiu", "aru", "ciu", "an", "u"}
+
+// verbeEa: rădăcinile din radaciniVechi care fac imperfect în „-ea” (Gîndea,
+// Rîdea, Plîngea). Altă rădăcină + „ea” e un nume de familie (Cîndea, Cîntea).
+var verbeEa = map[string]bool{"gînd": true, "rîd": true, "plîn": true, "strîn": true, "rămîn": true,
+	"zîmb": true, "întîln": true, "sfîrș": true, "cîștig": true}
+
+// toponimeCuI: nume de localități care își păstrează oficial „î” (Republica
+// Moldova).
+var toponimeCuI = map[string]bool{"sîngerei": true, "sîngera": true, "rîșcani": true, "rîbnița": true}
 
 // radacinaUzualaVeche: cuvântul începe cu o rădăcină din radaciniVechi și nu
 // are terminație de nume de familie.
-func radacinaUzualaVeche(low string) bool {
+func radacinaUzualaVeche(low string) (veche, ambigua bool) {
+	if toponimeCuI[low] {
+		return false, false
+	}
 	for _, s := range sufixeNume {
 		if strings.HasSuffix(low, s) {
-			return false
+			return false, false
 		}
 	}
 	for _, r := range radaciniVechi {
 		if strings.HasPrefix(low, r) {
-			return true
+			if !strings.HasSuffix(low, "ea") {
+				return true, false
+			}
+			return verbeEa[r], verbeEa[r] // imperfect sau nume de familie
 		}
 	}
-	return false
+	return false, false
+}
+
+// verbeDupaSubiect: forme verbale care urmează de obicei subiectului.
+var verbeDupaSubiect = map[string]bool{"e": true, "este": true, "era": true, "a": true, "au": true,
+	"va": true, "ar": true, "s-a": true, "l-a": true, "o": true, "nu": true}
+
+// urmeazaVerb: primul cuvânt de după poziția p e o formă din verbeDupaSubiect.
+func urmeazaVerb(text string, p int) bool {
+	rest := strings.TrimLeft(text[p:], " \t")
+	i := strings.IndexFunc(rest, func(r rune) bool { return !unicode.IsLetter(r) && r != '-' })
+	if i < 0 {
+		i = len(rest)
+	}
+	return verbeDupaSubiect[strings.ToLower(rest[:i])]
 }
 
 // minusculeCuI: formele cu minusculă inițială și „î” interior din text (în
@@ -392,17 +427,23 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 		if strings.HasPrefix(strings.TrimLeft(taiat, " \t>"), "|") {
 			continue // tabel Markdown (și în citat, după „> ”), aliniat cu spații
 		}
-		if strings.HasPrefix(taiat, "    ") || strings.HasPrefix(taiat, "\t") || coloaneAliniate(taiat) {
-			continue // cod indentat sau coloane aliniate: spațiile au rost
-		}
-		// Spațiu înaintea semnelor de punctuație.
+		indentat := strings.HasPrefix(taiat, "    ") || strings.HasPrefix(taiat, "\t")
+		// Spațiu înaintea semnelor de punctuație. Pe un rând indentat care
+		// arată a cod (x = a ? 1 : 2) spațiul are rost; la fel în punctele de
+		// conducere dintr-un cuprins („Capitolul . . . 5”).
 		for _, m := range reSpPct.FindAllStringSubmatchIndex(taiat, -1) {
 			sp0, pc0, pc1 := m[4], m[6], m[7]
+			if (indentat && pareCod(taiat)) || punctDeConducere(taiat, pc0) {
+				continue
+			}
 			add(Observatie{
 				Regula: "RO-TIP-068", Inceput: inceput + sp0, Sfarsit: inceput + pc1,
 				Fragment: taiat[sp0:pc1], Propunere: taiat[pc0:pc1],
 				Mesaj: "Virgula, punctul, punctul și virgula, două-puncte, semnul întrebării și cel al exclamării se lipesc de cuvântul dinainte (DOOM 3 §1.2.3; ghid gov-md §9.1.11)",
 			})
+		}
+		if indentat || coloaneAliniate(taiat) {
+			continue // cod indentat sau coloane aliniate: spațiile multiple au rost
 		}
 		// Spațiu dublu în interiorul rândului. Skillul nu are o regulă
 		// dedicată, deci Regula rămâne goală.
@@ -428,6 +469,19 @@ func verificaSpatii(text string, ignorat []interval, add func(Observatie)) {
 			i = j
 		}
 	}
+}
+
+// pareCod: un rând cu semne care apar în cod și rar în proză.
+func pareCod(linie string) bool {
+	return strings.ContainsAny(linie, "=;{}()<>$#\\/`|")
+}
+
+// punctDeConducere: semnul de la poziția p face parte dintr-un șir de puncte
+// de conducere (". . . ." sau "....").
+func punctDeConducere(linie string, p int) bool {
+	c := linie[p]
+	urm := strings.TrimLeft(linie[p+1:], " ")
+	return len(urm) > 0 && urm[0] == c
 }
 
 // coloaneAliniate: rândul are cel puțin două goluri de câte trei spații sau
@@ -516,10 +570,8 @@ func zoneIgnorate(text string) []interval {
 	for _, m := range reUrl.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], sfarsitUrl(text, m[0], m[1])})
 	}
-	for _, m := range reFormula.FindAllStringIndex(text, -1) {
-		z = append(z, interval{m[0], m[1]})
-	}
-	z = append(z, zonePrinse(text, z)...) // z are deja codul: o etichetă din cod nu deschide nimic
+	z = append(z, zoneFormule(text, z)...) // z are deja codul: un „$” din cod nu deschide o formulă
+	z = append(z, zonePrinse(text, z)...)  // z are deja codul: o etichetă din cod nu deschide nimic
 	for _, m := range reHtml.FindAllStringIndex(text, -1) {
 		z = append(z, interval{m[0], m[1]})
 	}
@@ -529,15 +581,46 @@ func zoneIgnorate(text string) []interval {
 // sfarsitUrl: punctuația de la sfârșitul unei adrese ține de frază („vezi
 // https://a.ro/c.”), nu de adresă.
 func sfarsitUrl(text string, a, b int) int {
-	for b > a && strings.ContainsRune(".,;:!?", rune(text[b-1])) {
+	for b > a && strings.ContainsRune(".,;:!?'", rune(text[b-1])) {
 		b--
 	}
 	return b
 }
 
-// reFormula: matematica din Markdown, $$…$$ și $…$ pe un singur rând. Un „$”
-// urmat de cifră e un preț („$5”), nu o formulă.
-var reFormula = regexp.MustCompile(`\$\$[\s\S]+?\$\$|\$[^\s$\d][^$\n]*?[^\s$\\]\$|\$[^\s$\d]\$`)
+// Formulele din Markdown: blocul $$ … $$ cu delimitatorii singuri pe rând,
+// $$…$$ și $…$ pe un singur rând. Ca la Pandoc: după „$” de deschidere și
+// înaintea celui de închidere nu e spațiu, „$” de deschidere nu e lipit de o
+// literă sau de o cifră (US$a), iar cel de închidere nu e urmat de una ($HOME
+// … "$PATH"); un „$” urmat de cifră e un preț („$5”).
+var (
+	reFormulaBloc   = regexp.MustCompile(`(?m)^[ \t]*\$\$[ \t]*\n(?:.*\n)*?[ \t]*\$\$[ \t]*$`)
+	reFormulaDubla  = regexp.MustCompile(`\$\$[^\s$][^\n$]*?[^\s$]\$\$`)
+	reFormulaSimpla = regexp.MustCompile(`(?:^|[^\p{L}\p{N}$\\])(\$[^\s$\d](?:[^$\n]*?[^\s$\\])?\$)(?:[^\p{L}\p{N}$]|$)`)
+)
+
+// zoneFormule: formulele, căutate în textul cu codul acoperit (cod sunt zonele
+// de cod deja găsite), ca „$CERC” din `…` să nu deschidă o formulă.
+func zoneFormule(text string, cod []interval) []interval {
+	b := []byte(text)
+	for _, z := range cod {
+		for i := z.a; i < z.b && i < len(b); i++ {
+			b[i] = ' '
+		}
+	}
+	acoperit := string(b)
+	var z []interval
+	for _, re := range []*regexp.Regexp{reFormulaBloc, reFormulaDubla} {
+		for _, m := range re.FindAllStringIndex(acoperit, -1) {
+			z = append(z, interval{m[0], m[1]})
+		}
+	}
+	for _, m := range reFormulaSimpla.FindAllStringSubmatchIndex(acoperit, -1) {
+		if !in(z, m[2]) {
+			z = append(z, interval{m[2], m[3]})
+		}
+	}
+	return z
+}
 
 // gard: un rând care deschide sau închide un bloc de cod: cel puțin trei „`” sau
 // „~” la început. Întoarce caracterul, lungimea și dacă rândul are doar gardul.

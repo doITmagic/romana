@@ -259,3 +259,38 @@ func TestUrlNuInghiteTextul(t *testing.T) {
 		t.Error("URL-ul trebuie ignorat până la „.” final, fără el")
 	}
 }
+
+// Runda a treia: formulele nu înghit proza ($$ de preț, „$” din cod sau din
+// variabile), imperfectul cu majusculă se prinde, numele de familie și
+// toponimele oficiale cu „î” nu se ating, URL-urile Wikipedia rămân întregi,
+// iar punctuația lipită de spațiu se verifică și pe rândurile indentate.
+func TestRunda3Lint(t *testing.T) {
+	trebuie := func(text string, cuvinte ...string) {
+		t.Helper()
+		f := fragmente(text)
+		for _, c := range cuvinte {
+			if _, ok := f[c]; !ok {
+				t.Errorf("%q: aștept observație pe %q, am %v", text, c, f)
+			}
+		}
+	}
+	nimic := func(text string) {
+		t.Helper()
+		if f := fragmente(text); len(f) != 0 {
+			t.Errorf("%q: nicio observație, am %v", text, f)
+		}
+	}
+	trebuie("Restaurant ieftin: $$ (mediu).\n\nCînd vii, ia pîine, mîine.\n\nRestaurant scump: $$$ (foarte scump).", "Cînd", "pîine", "mîine")
+	trebuie("Variabilele $HOME și $PATH; cînd vii: \"$HOME\" mîine \"$PATH\" gata.", "cînd")
+	trebuie("Prețul e US$a, cînd vii, nu US$b.", "cînd")
+	trebuie("Din `$CERC/a.json` alege și sînt greșeli, apoi `$CERC/b.json` gata.", "sînt")
+	nimic("Formula $x , y$ și $$a , b$$ sunt aici, iar drumul e lung pentru că sunt aici.")
+	trebuie("Gîndea mult la asta.", "Gîndea")
+	nimic("Cîndea a venit. Cîntea a spus. Stîncu a venit. Pînzaru a zis. Tîrzu a râs.")
+	nimic("Sîngerei e raion. Rîșcani e oraș.")
+	nimic("Vezi https://ro.wikipedia.org/wiki/Iași_(oraș) și https://x.ro/a_(Pîine)/d și https://x.ro/a'b/cînd azi.")
+	trebuie("- punct unu\n    continuare cu text , și altceva", " ,")
+	trebuie("    Stimate domn , vă scriu.", " ,")
+	nimic("Iată, pentru că sunt aici:\n\n    x = a ? 1 : 2\n")
+	nimic("Capitolul unu . . . . . . . . . 5\nCapitolul doi . . . . . . . . . 9\nși așa mai departe, pentru că sunt aici")
+}
