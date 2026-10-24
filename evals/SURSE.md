@@ -7,7 +7,7 @@ Fiecare caz din `evals/cazuri/` are aici sursa, licența, URL-ul și nota de atr
 
 Textele cu drepturi rezervate (presă, reviste, literatură, texte oficiale cu licență neclară) nu intră în repo. Ele stau doar local, în setul privat, într-un director din afara repo-ului (calea din `ROMANA_EVALS_PRIVAT`), nu se redistribuie și nu apar în niciun fișier din repo.
 
-Toate cazurile au `confirmat: true`. Răzvan a delegat confirmarea unei recenzii făcute de doi recenzenți-model independenți (Codex și Claude Fable). Fiecare a citit textul și răspunsul așteptat al fiecărui caz. Dezacordurile au fost arbitrate cu dovadă din DOOM 3, din ÎOOP și din dicționar, iar cazurile greșite au fost corectate. Un caz nou intră cu `confirmat: false` și e exclus din scor până trece aceeași recenzie.
+Toate cazurile au `confirmat: true`. Răzvan a delegat confirmarea unei recenzii făcute de doi recenzenți-model independenți: Codex și Claude Fable, iar de la 24.10.2026, Codex și Claude Opus (primele cazuri: `fidelitate-18`…`fidelitate-20`). Fiecare a citit textul și răspunsul așteptat al fiecărui caz. Dezacordurile au fost arbitrate cu dovadă din DOOM 3, din ÎOOP și din dicționar, iar cazurile greșite au fost corectate. Un caz nou intră cu `confirmat: false` și e exclus din scor până trece aceeași recenzie.
 
 ## Atribuire CC BY 4.0 (ApTI)
 
@@ -97,6 +97,9 @@ Toate cazurile de mai jos sunt texte originale scrise pentru acest proiect, făr
 | `fidelitate-15` | redactare | presă |
 | `fidelitate-16` | redactare | marketing |
 | `fidelitate-17` | redactare | interfață |
+| `fidelitate-18` | redactare | e-mail |
+| `fidelitate-19` | redactare | marketing |
+| `fidelitate-20` | redactare | interfață |
 | `hipercorectie-02` | verificare | presă |
 | `hipercorectie-03` | corectura | blog |
 | `hipercorectie-04` | verificare | documentație |

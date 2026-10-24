@@ -1,0 +1,22 @@
+{
+  "id": "fidelitate-20",
+  "mod": "redactare",
+  "profil": "interfață",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Cerere: Scurtează textul notificării la cel mult 20 de cuvinte, păstrând sensul.\n\nText: Vă informăm că abonamentul dumneavoastră se va reînnoi în mod automat pe data de 1 martie, cu excepția cazului în care alegeți să îl anulați din setările contului cu cel puțin 48 de ore înainte de această dată.",
+  "confirmat": true,
+  "asteptat": {
+    "cerut": [
+      "1 martie",
+      "48 de ore"
+    ],
+    "interzis": [
+      "oricând",
+      "lunar",
+      "anual",
+      "gratuit"
+    ]
+  }
+}

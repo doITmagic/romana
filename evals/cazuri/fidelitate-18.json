@@ -1,0 +1,31 @@
+{
+  "id": "fidelitate-18",
+  "mod": "redactare",
+  "profil": "e-mail",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Cerere: Rescrie notificarea mai direct și mai prietenos, fără să adaugi informații.\n\nNotificare (trimisă de platforma de comerț online prin care ați cumpărat de la un vânzător independent): Comanda dumneavoastră a fost transmisă vânzătorului. Produsele se pregătesc pentru expediere în cel mult două zile lucrătoare, după care coletul se predă spre livrare.",
+  "confirmat": true,
+  "asteptat": {
+    "cerut": [
+      "două zile lucrătoare"
+    ],
+    "interzis": [
+      "pregătim",
+      "vom pregăti",
+      "ambalăm",
+      "predăm",
+      "vom preda",
+      "am predat",
+      "expediem",
+      "vom expedia",
+      "fi expediate în",
+      "sunt expediate în",
+      "se expediază în",
+      "curier",
+      "curierul",
+      "curierului"
+    ]
+  }
+}

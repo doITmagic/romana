@@ -1,0 +1,34 @@
+{
+  "id": "fidelitate-19",
+  "mod": "redactare",
+  "profil": "marketing",
+  "set": "public",
+  "sursa": "Text original scris pentru acest proiect, fără sursă externă; persoanele, firmele și cifrele sunt inventate",
+  "licenta": "MIT",
+  "intrare": "Cerere: Simplifică paragraful pentru pagina de retur a magazinului, fără să schimbi condițiile.\n\nParagraf: Produsele pot fi returnate în termen de 14 zile calendaristice de la data primirii coletului. Contravaloarea produselor se restituie în cel mult 10 zile de la data la care depozitul nostru a recepționat produsul returnat.",
+  "confirmat": true,
+  "asteptat": {
+    "cerut": [
+      "14 zile",
+      "10 zile"
+    ],
+    "interzis": [
+      "de la comandă",
+      "de la plasarea comenzii",
+      "de la data comenzii",
+      "de la cumpărare",
+      "de la data cumpărării",
+      "de la achiziție",
+      "de la data achiziției",
+      "de la data facturii",
+      "de la emiterea facturii",
+      "de la expediere",
+      "de la expedierea",
+      "de la data expedierii",
+      "de la trimitere",
+      "de la trimiterea",
+      "de la data trimiterii",
+      "lucrătoare"
+    ]
+  }
+}
