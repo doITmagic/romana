@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -563,5 +564,18 @@ func TestTextSimpluBilingv(t *testing.T) {
 		if !strings.Contains(txt, s) {
 			t.Errorf("textul simplu nu conține %q", s)
 		}
+	}
+}
+
+// Sigla DO IT MAGIC, ca în antetul site-ului, servită de pe același domeniu
+// (CSP-ul paginii permite doar imagini de la 'self').
+func TestSiglaDoItMagic(t *testing.T) {
+	h := server(t, "")
+	w := cerere(t, h, "GET", "/doitmagic.webp", "")
+	if w.Code != 200 || w.Header().Get("Content-Type") != "image/webp" || !bytes.HasPrefix(w.Body.Bytes(), []byte("RIFF")) {
+		t.Fatalf("/doitmagic.webp: %d %s", w.Code, w.Header().Get("Content-Type"))
+	}
+	if p := cerere(t, h, "GET", "/", "", "Accept", "text/html").Body.String(); !strings.Contains(p, `src="/doitmagic.webp"`) {
+		t.Error("pagina nu folosește sigla")
 	}
 }

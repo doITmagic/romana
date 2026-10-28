@@ -44,6 +44,11 @@ import (
 //go:embed pagina.html
 var pagina []byte
 
+// sigla e sigla DO IT MAGIC din antetul site-ului doitmagic.ro (368 × 84).
+//
+//go:embed doitmagic.webp
+var sigla []byte
+
 // cspPagina e politica paginii de start: stil inline și imagini de pe același
 // domeniu, nimic altceva. Celelalte rute păstrează politica strictă.
 const cspPagina = "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
@@ -249,6 +254,12 @@ func Server(cfg Config) *echo.Echo {
 		e.GET(cale, iconita)
 		e.HEAD(cale, iconita)
 	}
+	siglaWebp := func(c *echo.Context) error {
+		c.Response().Header().Set("Cache-Control", "public, max-age=86400")
+		return c.Blob(http.StatusOK, "image/webp", sigla)
+	}
+	e.GET("/doitmagic.webp", siglaWebp)
+	e.HEAD("/doitmagic.webp", siglaWebp)
 	security := func(c *echo.Context) error {
 		c.Response().Header().Set("Cache-Control", "public, max-age=86400")
 		return c.String(http.StatusOK, securityTxt)
