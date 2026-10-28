@@ -48,6 +48,25 @@ var pagina []byte
 // domeniu, nimic altceva. Celelalte rute păstrează politica strictă.
 const cspPagina = "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
 
+// textSimplu: pagina de start pentru clienții care cer text simplu sau JSON
+// (agenți, curl): aceleași informații ca pagina HTML, în română și în engleză.
+const textSimplu = `romana: server MCP pentru texte în limba română / MCP server for Romanian text
+Adresa MCP / MCP address: https://mcp.doitmagic.ro/mcp (Streamable HTTP, POST, fără autentificare / no authentication)
+
+Unelte:
+- verifica_greseli: greșelile sigure, cele care nu depind de context (ș și ț cu sedilă, grafia veche cu „î” și „sînt”, „vroiam”, spațiile dinaintea punctuației și spațiile duble). Întoarce text_corectat, adică textul cu toate aceste greșeli corectate, și lista lor, fiecare cu linia, contextul, propunerea, regula și sursa.
+- cauta_regula: cele 854 de reguli ale skillului romana, după ID (RO-TIP-027) sau după cuvinte, cu nivelul, exemplele și sursa.
+Limite: cel mult 200.000 de caractere pe apel (un text mai lung se trimite pe bucăți); cel mult 200 de greșeli descrise pe răspuns, dar text_corectat le cuprinde pe toate; interogarea are cel mult 200 de caractere și primește cel mult 10 reguli; de la aceeași adresă IP, cel mult 2.000 de apeluri și 600 de reguli diferite pe zi (UTC) și 10 cereri pe secundă.
+
+Tools:
+- verifica_greseli: the errors that do not depend on context (ș and ț with a cedilla, the old spelling with „î” and „sînt”, „vroiam”, spaces before punctuation and double spaces). Returns text_corectat, the text with all these errors corrected, and a list of them, each with its line, context, fix, rule and source.
+- cauta_regula: the 854 rules of the romana skill, by ID (RO-TIP-027) or by words, with level, examples and source.
+Limits: at most 200,000 characters per call (send a longer text in parts); at most 200 itemized errors per response, while text_corectat includes all of them; a query has at most 200 characters and gets at most 10 rules; from the same IP address, at most 2,000 calls and 600 distinct rules per day (UTC) and 10 requests per second.
+
+Un proiect DO IT MAGIC SOFTWARE / A project by DO IT MAGIC SOFTWARE: https://doitmagic.ro/
+Cod sursă / Source code: https://github.com/doITmagic/romana
+`
+
 // securityTxt e /.well-known/security.txt (RFC 9116). Expires se
 // împrospătează o dată pe an (TestSecurityTxtExpira pică cu 30 de zile înainte
 // de dată, ca să nu expire pe tăcute). Nu are rând Policy: repo-ul nu are SECURITY.md.
@@ -212,11 +231,7 @@ func Server(cfg Config) *echo.Echo {
 		// clienții care cer text simplu sau JSON primesc textul scurt, nu HTML
 		if acc := strings.ToLower(c.Request().Header.Get("Accept")); !strings.Contains(acc, "text/html") &&
 			(strings.Contains(acc, "text/plain") || strings.Contains(acc, "application/json")) {
-			return c.String(http.StatusOK, "romana: server MCP pentru texte în limba română (verifica_greseli, cauta_regula).\n"+
-				"Adresa MCP: https://mcp.doitmagic.ro/mcp (Streamable HTTP, POST)\n"+
-				"Limite: cel mult 200.000 de caractere pe text; de la aceeași adresă IP, cel mult 2.000 de apeluri și 600 de reguli diferite pe zi (UTC).\n"+
-				"Un proiect DO IT MAGIC SOFTWARE: https://doitmagic.ro/\n"+
-				"Cod sursă: https://github.com/doITmagic/romana\n")
+			return c.String(http.StatusOK, textSimplu)
 		}
 		h := c.Response().Header()
 		h.Set("Content-Security-Policy", cspPagina)

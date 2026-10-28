@@ -552,3 +552,16 @@ func TestLimiteVizibile(t *testing.T) {
 		t.Errorf("textul de la / nu spune limitele: %s", txt)
 	}
 }
+
+// Agenții care cer text simplu primesc aceleași informații ca pagina, în
+// română și în engleză: uneltele, ce întorc și limitele.
+func TestTextSimpluBilingv(t *testing.T) {
+	txt := cerere(t, server(t, ""), "GET", "/", "", "Accept", "text/plain").Body.String()
+	for _, s := range []string{"verifica_greseli", "cauta_regula", "text_corectat", "https://mcp.doitmagic.ro/mcp",
+		"Limite:", "200.000 de caractere", "2.000 de apeluri", "600 de reguli",
+		"Limits:", "200,000 characters", "2,000 calls", "600 distinct rules", "Tools:", "Unelte:"} {
+		if !strings.Contains(txt, s) {
+			t.Errorf("textul simplu nu conține %q", s)
+		}
+	}
+}
