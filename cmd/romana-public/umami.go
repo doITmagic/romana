@@ -13,13 +13,14 @@ import (
 )
 
 // Statistici de folosire, trimise în Umami-ul nostru (stats.doitmagic.ro): un
-// eveniment pentru fiecare initialize și fiecare apel de unealtă, cu numele
-// uneltei, al aplicației client, interogarea lui cauta_regula și, la
-// verifica_greseli, lungimea textului și regulile găsite. Textul verificat nu
+// eveniment pentru fiecare initialize, tools/list și apel de unealtă, cu numele
+// uneltei, al aplicației client și tipul ei (robot sau client), interogarea lui
+// cauta_regula și, la verifica_greseli, lungimea textului și regulile găsite.
+// Textul verificat nu
 // pleacă niciodată. Adresa IP merge doar în antetul True-Client-IP, ca Umami
 // să afle țara; Umami nu o păstrează.
 
-// eveniment e ce se trimite: Nume e unealta sau „initialize”.
+// eveniment e ce se trimite: Nume e unealta, „initialize” sau „tools/list”.
 type eveniment struct {
 	Nume       string
 	Client     string // clientInfo.name din initialize sau User-Agent, scurtat
@@ -32,7 +33,7 @@ type eveniment struct {
 }
 
 func (e eveniment) date() map[string]any {
-	d := map[string]any{"client": e.Client}
+	d := map[string]any{"client": e.Client, "tip": tipClient(e.Client)}
 	switch e.Nume {
 	case "cauta_regula":
 		d["interogare"] = e.Interogare
@@ -50,6 +51,23 @@ func (e eveniment) date() map[string]any {
 		}
 	}
 	return d
+}
+
+// semneRobot: bucăți din numele roboților cataloagelor MCP, care se conectează
+// și citesc lista de unelte fără să le cheme.
+var semneRobot = []string{"probe", "health", "inspect", "beacon", "detector", "tracker",
+	"catalog", "directory", "crawler", "spider", "scanner"}
+
+// tipClient: „robot” pentru un catalog sau un verificator automat, „client”
+// pentru rest, inclusiv numele necunoscute.
+func tipClient(client string) string {
+	c := strings.ToLower(client)
+	for _, s := range semneRobot {
+		if strings.Contains(c, s) {
+			return "robot"
+		}
+	}
+	return "client"
 }
 
 type umami struct {
@@ -153,6 +171,8 @@ func evenimentDin(cerere, raspuns []byte, userAgent, ip string) (eveniment, bool
 		if n := scurt(m.Params.ClientInfo.Name); n != "" {
 			e.Client = n
 		}
+	case "tools/list":
+		e.Nume = "tools/list"
 	case "tools/call":
 		var r struct {
 			Result struct {

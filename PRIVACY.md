@@ -32,7 +32,7 @@ The server limits how many requests it accepts from the same address. For that i
 
 To see how the server is used and to improve the rules, each call is recorded in our own Umami instance (`stats.doitmagic.ro`, self-hosted on the same server, no third party). A record holds:
 
-- the tool name (or `initialize`) and the name of the client app (for example `openai-mcp` or `Cursor`, without version or system);
+- the tool name (or `initialize`, or `tools/list`), the name of the client app (for example `openai-mcp` or `Cursor`, without version or system) and whether that name looks like an automated directory checker (`robot`) or not (`client`);
 - for `cauta_regula`: the query (at most 100 characters), how many rules matched and the IDs of the rules returned;
 - for `verifica_greseli`: the length of the text and the IDs of the rules it triggered (for example `RO-TIP-027`), never the text itself;
 - the country, region and city that Umami derives from the IP address. The address itself is not stored: Umami uses it only for that and for an anonymous, salted session hash that changes over time.

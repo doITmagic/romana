@@ -387,10 +387,30 @@ func TestEvenimente(t *testing.T) {
 	if !ok || e.Interogare != "a face sens" || e.Rezultate != 272 || e.Reguli != "RO-CAL-036 RO-CAL-063" {
 		t.Errorf("cauta_regula: %+v", e)
 	}
-	for _, m := range []string{`{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"altceva"}}`, `{"jsonrpc":"2.0","id":4,"method":"tools/list"}`, `nu e json`} {
+	lista := `{"jsonrpc":"2.0","id":4,"method":"tools/list"}`
+	if e, ok := evenimentDin([]byte(lista), nil, "claude-code/2.1.3 (cli)", ""); !ok || e.Nume != "tools/list" || e.Client != "claude-code" {
+		t.Errorf("tools/list: %+v", e)
+	}
+	for _, m := range []string{`{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"altceva"}}`, `{"jsonrpc":"2.0","method":"notifications/initialized"}`, `nu e json`} {
 		if _, ok := evenimentDin([]byte(m), nil, "x", ""); ok {
 			t.Errorf("%s nu se numără", m)
 		}
+	}
+}
+
+func TestTipClient(t *testing.T) {
+	for client, vrut := range map[string]string{
+		"catalog-health": "robot", "registrulmcp-probe": "robot", "agentready-probe": "robot",
+		"catalog-inspect": "robot", "alpic-beacon-ai-review": "robot", "apps-atlas-detector": "robot",
+		"ai-app-tracker": "robot", "pod-directory-probe": "robot", "Probe": "robot",
+		"claude-code": "client", "Anthropic": "client", "openai-mcp": "client", "Cursor": "client", "necunoscut": "client",
+	} {
+		if got := tipClient(client); got != vrut {
+			t.Errorf("tipClient(%q) = %q, vrut %q", client, got, vrut)
+		}
+	}
+	if d := (eveniment{Nume: "tools/list", Client: "catalog-health"}).date(); d["tip"] != "robot" {
+		t.Errorf("datele trebuie să aibă tipul: %v", d)
 	}
 }
 
