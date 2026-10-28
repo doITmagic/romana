@@ -29,7 +29,15 @@ type Observatie struct {
 	Mesaj string `json:"mesaj"`
 	// Nota (opțională) numește excepția: de exemplu citatul direct.
 	Nota string `json:"nota,omitempty"`
+	// Linie (de la 1) și Context (fragmentul cu cel mult două cuvinte de o
+	// parte și de alta, de pe același rând) găsesc locul fără să numeri
+	// octeți sau caractere.
+	Linie   int    `json:"linie"`
+	Context string `json:"context"`
 }
+
+// maxContext: câte caractere ia contextul, cel mult, de fiecare parte.
+const maxContext = 40
 
 const (
 	notaCitat = "În citatul direct grafia originală rămâne neschimbată; corectezi doar dacă fragmentul nu e citat."
@@ -90,10 +98,66 @@ func Verifica(text string) []Observatie {
 // și numărul lor total; max < 0 înseamnă toate. Nu ține în memorie mai mult
 // decât întoarce: un text plin de greșeli nu umple memoria.
 func VerificaMax(text string, max int) ([]Observatie, int) {
+	out, total, _ := verifica(text, max, false)
+	return out, total
+}
+
+// VerificaSiCorecteaza e VerificaMax plus textul cu toate corecturile
+// aplicate, inclusiv cele care nu încap în cele max observații.
+func VerificaSiCorecteaza(text string, max int) ([]Observatie, int, string) {
+	out, total, toate := verifica(text, max, true)
+	return out, total, aplica(text, toate)
+}
+
+// Corecteaza întoarce textul cu toate greșelile sigure corectate.
+func Corecteaza(text string) string {
+	_, _, corectat := VerificaSiCorecteaza(text, 0)
+	return corectat
+}
+
+// Aplica înlocuiește în text fragmentele observațiilor cu propunerile lor.
+// Sare peste observațiile care nu se mai potrivesc cu textul sau care se
+// suprapun cu una dinainte.
+func Aplica(text string, obs []Observatie) string {
+	c := make([]corectura, len(obs))
+	for i, o := range obs {
+		c[i] = corectura{o.Inceput, o.Sfarsit, o.Fragment, o.Propunere}
+	}
+	return aplica(text, c)
+}
+
+// corectura: doar ce trebuie ca să aplici o observație; textul corectat se
+// face din toate observațiile, fără să le țină întregi în memorie.
+type corectura struct {
+	a, b                int
+	fragment, propunere string
+}
+
+func aplica(text string, c []corectura) string {
+	sort.SliceStable(c, func(i, j int) bool { return c[i].a < c[j].a })
+	var sb strings.Builder
+	sb.Grow(len(text))
+	p := 0
+	for _, x := range c {
+		if x.a < p || x.b > len(text) || text[x.a:x.b] != x.fragment {
+			continue
+		}
+		sb.WriteString(text[p:x.a])
+		sb.WriteString(x.propunere)
+		p = x.b
+	}
+	sb.WriteString(text[p:])
+	return sb.String()
+}
+
+// verifica: primele max observații (toate, dacă max < 0), totalul și, cu
+// corecturi = true, corecturile tuturor observațiilor.
+func verifica(text string, max int, corecturi bool) ([]Observatie, int, []corectura) {
 	ignorat := zoneIgnorate(text)
 	citate := zoneCitate(text)
 	vechi := minusculeCuI(text, ignorat)
 	var out []Observatie
+	var toate []corectura
 	total := 0
 	// Fiecare trecere găsește observațiile în ordinea poziției, deci primele
 	// max din fiecare trecere conțin primele max din total.
@@ -104,6 +168,9 @@ func VerificaMax(text string, max int) ([]Observatie, int) {
 				return
 			}
 			total++
+			if corecturi {
+				toate = append(toate, corectura{o.Inceput, o.Sfarsit, o.Fragment, o.Propunere})
+			}
 			if max < 0 || n < max {
 				out = append(out, o)
 				n++
@@ -121,7 +188,83 @@ func VerificaMax(text string, max int) ([]Observatie, int) {
 	if max >= 0 && len(out) > max {
 		out = out[:max]
 	}
-	return out, total
+	localizeaza(text, out)
+	return out, total, toate
+}
+
+// localizeaza completează Linie și Context; obs sunt în ordinea poziției.
+func localizeaza(text string, obs []Observatie) {
+	linie, p := 1, 0
+	for i := range obs {
+		a, b := obs[i].Inceput, obs[i].Sfarsit
+		linie += strings.Count(text[p:a], "\n")
+		p = a
+		// contextul are cel mult maxContext caractere (4 octeți fiecare) de
+		// o parte și de alta: nu e nevoie să cauți rândul mai departe
+		st := max(0, a-4*maxContext)
+		for st < a && !utf8.RuneStart(text[st]) {
+			st++
+		}
+		st += strings.LastIndexByte(text[st:a], '\n') + 1
+		dr := min(len(text), b+4*maxContext)
+		for dr > b && dr < len(text) && !utf8.RuneStart(text[dr]) {
+			dr--
+		}
+		if j := strings.IndexByte(text[b:dr], '\n'); j >= 0 {
+			dr = b + j
+		}
+		stanga := text[st:a]
+		dreapta := strings.TrimRightFunc(text[b:dr][:inainte(text[b:dr], 2)], unicode.IsSpace)
+		obs[i].Linie = linie
+		obs[i].Context = stanga[inapoi(stanga, 2):] + text[a:b] + dreapta
+	}
+}
+
+// inapoi: unde încep ultimele n cuvinte din s, cel mult maxContext caractere.
+func inapoi(s string, n int) int {
+	i, r := len(s), 0
+	pas := func(spatiu bool) {
+		for i > 0 && r < maxContext {
+			c, w := utf8.DecodeLastRuneInString(s[:i])
+			if unicode.IsSpace(c) != spatiu {
+				return
+			}
+			i -= w
+			r++
+		}
+	}
+	for k := 0; k < n; k++ {
+		pas(true)
+		pas(false)
+	}
+	for i < len(s) { // fără spațiile de la început
+		c, w := utf8.DecodeRuneInString(s[i:])
+		if !unicode.IsSpace(c) {
+			break
+		}
+		i += w
+	}
+	return i
+}
+
+// inainte: unde se termină primele n cuvinte din s, cel mult maxContext caractere.
+func inainte(s string, n int) int {
+	i, r := 0, 0
+	pas := func(spatiu bool) {
+		for i < len(s) && r < maxContext {
+			c, w := utf8.DecodeRuneInString(s[i:])
+			if unicode.IsSpace(c) != spatiu {
+				return
+			}
+			i += w
+			r++
+		}
+	}
+	for k := 0; k < n; k++ {
+		pas(true)
+		pas(false)
+	}
+	return i
 }
 
 // cuvinte întoarce limitele cuvintelor (litere maximale; cratima desparte).

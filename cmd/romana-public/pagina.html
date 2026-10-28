@@ -5,113 +5,400 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <title>romana: server MCP pentru texte în limba română</title>
-<meta name="description" content="Serverul MCP public al proiectului romana: verifică greșelile sigure din textele în română și caută în cele 854 de reguli. Gratuit, doar de citire, fără cont.">
+<meta name="description" content="Serverul MCP public al proiectului romana: verifică greșelile sigure din textele în română, întoarce textul corectat și caută în cele 854 de reguli. Gratuit, doar de citire, fără cont.">
 <link rel="icon" type="image/png" href="/favicon.ico">
 <style>
+/* culorile și fonturile site-ului doitmagic.ro; fără resurse externe (CSP) */
 :root {
   --fond: #050810;
-  --panou: #0b1022;
-  --linie: #1b2442;
-  --primar: #0055ff;
-  --secundar: #3d62ff;
-  --text: #e8ecf8;
-  --estompat: #a3adcc;
-  --legatura: #8aa3ff;
+  --panou: rgba(10, 10, 15, 0.8);
+  --card: rgba(255, 255, 255, 0.03);
+  --margine: rgba(255, 255, 255, 0.1);
+  --margine-albastra: rgba(45, 82, 255, 0.22);
+  --albastru: #2d52ff;
+  --albastru-deschis: #8ea5ff;
+  --accent: #7c5cfc;
+  --accent-text: #a594ff;
+  --text: #e8eeff;
+  --estompat: #97a3c2;
+  --mono: 'Space Mono', 'Share Tech Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--fond);
   color: var(--text);
-  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font: 17px/1.75 var(--sans);
+  -webkit-font-smoothing: antialiased;
 }
-main { max-width: 720px; margin: 0 auto; padding: 32px 16px 24px; }
-header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
-header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
-h1 { font-size: 1.6rem; line-height: 1.25; margin: 0; overflow-wrap: anywhere; }
-.autor { margin: 0.3rem 0 0; color: var(--estompat); font-size: 0.95rem; }
-h2 { font-size: 1.2rem; margin: 2rem 0 0.5rem; }
-h3 { font-size: 1rem; margin: 1.2rem 0 0.2rem; }
-p, ul { margin: 0.6rem 0; }
-ul { padding-left: 1.2rem; }
-li { margin: 0.35rem 0; }
-a { color: var(--legatura); }
-a:hover { color: var(--text); }
-a:focus-visible, code:focus-visible { outline: 2px solid var(--secundar); outline-offset: 2px; }
-code, pre {
-  font: 0.9rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  background: var(--panou);
-  border: 1px solid var(--linie);
-  border-radius: 6px;
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(45, 82, 255, 0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 85% 85%, rgba(124, 92, 252, 0.10) 0%, transparent 70%);
 }
-code { padding: 0.1em 0.4em; overflow-wrap: anywhere; }
-pre { padding: 10px 12px; overflow-x: auto; margin: 0.5rem 0; }
-pre code { padding: 0; border: 0; background: none; overflow-wrap: normal; }
-.adresa {
-  display: block;
-  margin: 1rem 0;
+a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 4px; }
+a:hover { color: #fff; }
+a:focus-visible, code:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+code, pre { font-family: var(--mono); }
+code {
+  background: rgba(124, 92, 252, 0.15);
+  color: var(--albastru-deschis);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.86em;
+  overflow-wrap: anywhere;
+}
+pre {
+  margin: 12px 0 0;
   padding: 14px 16px;
-  border-color: var(--primar);
-  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--margine-albastra);
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+pre code { background: none; padding: 0; color: var(--text); overflow-wrap: normal; }
+strong { color: #fff; }
+
+.bara {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.marca {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 4px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+.marca span { color: var(--albastru-deschis); }
+.marca:hover { color: #fff; border-color: var(--accent-text); }
+.limbi { font-family: var(--mono); font-size: 0.85rem; color: var(--estompat); }
+.limbi a { color: var(--estompat); text-decoration: none; padding: 4px 6px; }
+.limbi a:hover { color: #fff; }
+
+main { max-width: 960px; margin: 0 auto; padding: 0 16px 48px; }
+
+.erou { text-align: center; padding: 40px 0 48px; }
+.erou img { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 0 40px rgba(45, 82, 255, 0.35); }
+.eticheta {
+  display: block;
+  margin: 22px 0 6px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+h1 { margin: 0; font-family: var(--mono); font-size: clamp(2.2rem, 7vw, 3.2rem); line-height: 1.15; color: #fff; }
+.subtitlu { margin: 10px auto 0; max-width: 560px; font-size: 1.15rem; color: var(--estompat); }
+.insigne { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+.insigne li {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border: 1px solid var(--margine-albastra);
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(13, 20, 50, 0.55);
+}
+.adresa {
+  max-width: 620px;
+  margin: 32px auto 0;
+  padding: 20px 22px;
+  text-align: left;
+  background: rgba(13, 20, 50, 0.55);
+  border: 1px solid var(--albastru);
+  border-radius: 12px;
+  box-shadow: 0 0 32px rgba(45, 82, 255, 0.18);
+}
+.adresa .eticheta { margin: 0 0 8px; }
+.adresa code {
+  display: block;
+  padding: 0;
+  background: none;
+  color: #fff;
+  font-size: clamp(1rem, 3.6vw, 1.25rem);
   user-select: all;
   -webkit-user-select: all;
 }
+.adresa p { margin: 8px 0 0; font-size: 0.92rem; color: var(--estompat); }
+.pe-scurt {
+  max-width: 620px;
+  margin: 16px auto 0;
+  padding: 12px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(124, 92, 252, 0.07);
+  border-radius: 0 8px 8px 0;
+}
+
+.panou {
+  background: var(--panou);
+  border: 1px solid var(--margine);
+  border-radius: 12px;
+  padding: 16px 40px 40px;
+}
+.panou + .panou { margin-top: 40px; }
+.panou .pe-scurt { max-width: none; margin: 0 0 20px; }
+.limba {
+  margin: 24px 0 0;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--estompat);
+}
+h2 {
+  margin: 48px 0 20px;
+  padding-bottom: 12px;
+  font-family: var(--mono);
+  font-size: 1.45rem;
+  line-height: 1.3;
+  color: #fff;
+  border-bottom: 2px solid var(--accent);
+  scroll-margin-top: 16px;
+}
+.limba + h2 { margin-top: 16px; }
+h3 { margin: 0 0 8px; font-family: var(--mono); font-size: 1rem; color: #fff; }
+p { margin: 0 0 16px; }
 .nota { color: var(--estompat); font-size: 0.95rem; }
-hr { border: 0; border-top: 1px solid var(--linie); margin: 2.2rem 0 0; }
-footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--linie); color: var(--estompat); font-size: 0.95rem; }
-footer p { margin: 0.4rem 0; }
+
+.grila { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 20px; }
+.grila.mici { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.card {
+  background: var(--card);
+  border: 1px solid var(--margine-albastra);
+  border-radius: 12px;
+  padding: 20px 22px;
+  min-width: 0;
+}
+.card p { margin: 0; font-size: 0.97rem; }
+.card p + p { margin-top: 10px; }
+.card.lat { grid-column: 1 / -1; }
+
+.limita .eticheta { margin: 0 0 10px; font-size: 0.72rem; }
+.limita .cifra { display: block; font-family: var(--mono); font-size: 2rem; line-height: 1.1; color: #fff; }
+.limita .unitate { display: block; margin: 4px 0 12px; font-weight: 600; }
+.limita p { color: var(--estompat); font-size: 0.92rem; }
+
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  border-top: 1px solid var(--margine);
+  color: var(--estompat);
+  font-size: 0.92rem;
+  text-align: center;
+}
+footer p { margin: 6px 0; }
+footer a { color: var(--estompat); }
+footer a:hover { color: #fff; }
 .legaturi a { white-space: nowrap; }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .erou { padding: 24px 0 36px; }
+  .panou { padding: 8px 20px 28px; }
+  .grila { grid-template-columns: minmax(0, 1fr); }
+  h2 { font-size: 1.25rem; margin-top: 40px; }
+}
 </style>
 </head>
 <body>
-<main>
-<header>
-<img src="/icon.png" alt="Pictograma romana" width="72" height="72">
-<div>
-<h1>romana: server MCP pentru texte în limba română</h1>
-<p class="autor">Proiect open source al <a href="https://doitmagic.ro/">DO IT MAGIC SOFTWARE</a>, Pitești · <a href="https://doitmagic.ro/">doitmagic.ro</a></p>
-</div>
+<header class="bara">
+<a class="marca" href="https://doitmagic.ro/"><span>&lt;do.it&gt;_</span> MAGIC</a>
+<nav class="limbi" aria-label="Limba"><a href="#ro">Română</a> · <a href="#en" lang="en">English</a></nav>
 </header>
 
-<section lang="ro">
-<p>Serverul dă asistentului tău de AI două unelte. <code>verifica_greseli</code> găsește în textele românești greșelile sigure, cele care nu depind de context: ș și ț cu sedilă, grafia veche cu „î” în interiorul cuvintelor și „sînt”, „vroiam”, spațiile dinaintea semnelor de punctuație și spațiile duble, fiecare cu regula și sursa ei. <code>cauta_regula</code> caută în cele 854 de reguli ale skillului romana, după ID (<code>RO-TIP-027</code>) sau după cuvinte („a face sens”).</p>
-<p>Serverul nu judecă sensul, acordul, coerența sau stilul, iar dicționarul dexonline nu e pe el. E gratuit, doar de citire și nu cere cont. Cele mai bune rezultate le dă împreună cu skillul romana.</p>
+<main>
+<div class="erou">
+<img src="/icon.png" alt="Pictograma romana" width="88" height="88">
+<span class="eticheta">Server MCP public · DO IT MAGIC SOFTWARE</span>
+<h1>romana</h1>
+<p class="subtitlu">Server MCP pentru texte în limba română: greșelile sigure, textul corectat și cele 854 de reguli de scriere.</p>
+<ul class="insigne">
+<li>Gratuit</li>
+<li>Doar de citire</li>
+<li>Fără cont</li>
+<li>Open source</li>
+</ul>
+<div class="adresa">
+<span class="eticheta">Adresa serverului</span>
+<code>https://mcp.doitmagic.ro/mcp</code>
+<p>Streamable HTTP, fără autentificare.</p>
+</div>
+<p class="pe-scurt">Cel mult 200.000 de caractere pe apel și 2.000 de apeluri pe zi de la aceeași adresă IP. <a href="#limite">Toate limitele</a></p>
+</div>
 
-<h2>Adresa serverului</h2>
-<code class="adresa">https://mcp.doitmagic.ro/mcp</code>
-<p class="nota">Streamable HTTP, fără autentificare.</p>
+<section class="panou" id="ro" lang="ro">
+<p class="limba">Română</p>
+<h2>Ce face</h2>
+<div class="grila">
+<div class="card">
+<h3>verifica_greseli</h3>
+<p>Găsește greșelile sigure, cele care nu depind de context: ș și ț cu sedilă, grafia veche cu „î” în interiorul cuvintelor și „sînt”, „vroiam”, spațiile dinaintea semnelor de punctuație și spațiile duble.</p>
+<p>Întoarce textul cu aceste greșeli corectate și lista lor, fiecare cu rândul, cuvintele din jur, regula și sursa ei.</p>
+</div>
+<div class="card">
+<h3>cauta_regula</h3>
+<p>Caută în cele 854 de reguli ale skillului romana, după ID (<code>RO-TIP-027</code>) sau după cuvinte („a face sens”).</p>
+<p>Dă fiecare regulă cu nivelul ei, exemplul greșit și cel corect, explicația și sursa.</p>
+</div>
+</div>
+<p class="nota">Serverul nu judecă sensul, acordul, coerența sau stilul, iar dicționarul dexonline nu e pe el. Cele mai bune rezultate le dă împreună cu <a href="https://github.com/doITmagic/romana">skillul romana</a>.</p>
+
+<h2 id="limite">Limite</h2>
+<div class="grila mici">
+<div class="card limita">
+<span class="eticheta">Text verificat</span>
+<strong class="cifra">200.000</strong> <span class="unitate">de caractere pe apel</span>
+<p>Aproximativ 110 pagini standard. Un text mai lung îl trimiți pe bucăți.</p>
+</div>
+<div class="card limita">
+<span class="eticheta">Răspuns</span>
+<strong class="cifra">200</strong> <span class="unitate">de greșeli descrise</span>
+<p>Textul corectat le cuprinde pe toate, iar răspunsul spune câte erau în total.</p>
+</div>
+<div class="card limita">
+<span class="eticheta">Pe zi, de la aceeași adresă IP</span>
+<strong class="cifra">2.000</strong> <span class="unitate">de apeluri</span>
+<p>Și cel mult 600 de reguli diferite. Ziua se socotește după ora UTC. Toate regulile sunt și pe <a href="https://github.com/doITmagic/romana/tree/main/skills/romana/references">GitHub</a>.</p>
+</div>
+<div class="card limita">
+<span class="eticheta">Căutarea de reguli</span>
+<strong class="cifra">10</strong> <span class="unitate">reguli pe răspuns</span>
+<p>Interogarea are cel mult 200 de caractere.</p>
+</div>
+<div class="card limita">
+<span class="eticheta">Ritm</span>
+<strong class="cifra">10</strong> <span class="unitate">cereri pe secundă</span>
+<p>De la aceeași adresă.</p>
+</div>
+</div>
 
 <h2>Cum îl adaugi</h2>
+<div class="grila">
+<div class="card">
 <h3>claude.ai</h3>
 <p>Din <a href="https://claude.ai/directory/romana">directorul Claude</a> sau, în aplicația web ori pe desktop: Customize → Connectors → <em>Add custom connector</em>, cu adresa de mai sus și fără autentificare.</p>
+</div>
+<div class="card">
+<h3>ChatGPT</h3>
+<p>Instalează arhiva <a href="https://github.com/doITmagic/romana/releases/latest/download/romana-plugin.zip"><code>romana-plugin.zip</code></a> (Plugins → Add → <em>Upload plugin archive</em>); ea conține deja serverul.</p>
+</div>
+<div class="card lat">
 <h3>Claude Code</h3>
 <pre><code>claude mcp add --transport http romana-public https://mcp.doitmagic.ro/mcp</code></pre>
+</div>
+<div class="card lat">
 <h3>Codex</h3>
 <p>Pluginul instalat din <code>doITmagic/romana</code> îl include deja. Manual, în <code>~/.codex/config.toml</code>:</p>
 <pre><code>[mcp_servers.romana-public]
 url = "https://mcp.doitmagic.ro/mcp"</code></pre>
-<h3>ChatGPT</h3>
-<p>Instalează arhiva <a href="https://github.com/doITmagic/romana/releases/latest/download/romana-plugin.zip"><code>romana-plugin.zip</code></a> (Plugins → Add → <em>Upload plugin archive</em>); ea conține deja serverul.</p>
+</div>
+</div>
 <p class="nota">Pentru Cursor, VS Code și GitHub Copilot, vezi <a href="https://github.com/doITmagic/romana#public-mcp-server">README</a>.</p>
 
 <h2>Confidențialitate</h2>
 <p>Textele verificate rămân în memorie doar cât se calculează răspunsul și nu se păstrează. Statisticile de folosire înregistrează unealta, aplicația clientă, țara, interogările către <code>cauta_regula</code> și ID-urile regulilor găsite, nu textele. Detaliile sunt la <a href="https://doitmagic.ro/romana/confidentialitate/">confidențialitate</a> și <a href="https://doitmagic.ro/romana/conditii/">condiții</a>.</p>
 </section>
 
-<hr>
+<section class="panou" id="en" lang="en">
+<p class="limba">English</p>
+<h2>What it does</h2>
+<p class="pe-scurt">At most 200,000 characters per call and 2,000 calls per day from the same IP address. <a href="#limits">All limits</a></p>
+<div class="grila">
+<div class="card">
+<h3>verifica_greseli</h3>
+<p>Finds the errors in Romanian text that do not depend on context: ș and ț written with a cedilla, the old spelling with „î” inside words and „sînt”, „vroiam”, spaces before punctuation marks and double spaces.</p>
+<p>Returns the text with these errors corrected and a list of them, each with its line, the surrounding words, the rule and its source.</p>
+</div>
+<div class="card">
+<h3>cauta_regula</h3>
+<p>Searches the 854 rules of the romana skill, by ID (<code>RO-TIP-027</code>) or by words („a face sens”).</p>
+<p>Gives each rule with its level, the wrong and the correct example, the explanation and the source.</p>
+</div>
+</div>
+<p class="nota">The server does not judge meaning, agreement, coherence or style, and the dexonline dictionary is not on it. It works best together with the <a href="https://github.com/doITmagic/romana">romana skill</a>.</p>
 
-<section lang="en">
-<h2>English</h2>
-<p>romana is a free, read-only MCP server for Romanian text, with two tools: <code>verifica_greseli</code> finds the errors that do not depend on context (ș and ț with a cedilla, the old spelling with „î” inside words, „sînt”, „vroiam”, spaces before punctuation, double spaces), and <code>cauta_regula</code> searches the 854 rules of the romana skill by ID or by words. It does not judge meaning, agreement, coherence or style, and it keeps no texts.</p>
-<p>Add this address as a remote MCP server (Streamable HTTP, no authentication) in claude.ai (<a href="https://claude.ai/directory/romana">Claude directory</a> or Customize → Connectors → <em>Add custom connector</em>), Claude Code, Codex, ChatGPT, Cursor or VS Code:</p>
-<code class="adresa">https://mcp.doitmagic.ro/mcp</code>
-<p>Setup for each app: <a href="https://github.com/doITmagic/romana#public-mcp-server">README</a>. <a href="https://doitmagic.ro/romana/privacy/">Privacy</a> · <a href="https://doitmagic.ro/romana/terms/">Terms</a>.</p>
+<h2 id="limits">Limits</h2>
+<div class="grila mici">
+<div class="card limita">
+<span class="eticheta">Checked text</span>
+<strong class="cifra">200,000</strong> <span class="unitate">characters per call</span>
+<p>About 110 standard pages. Send a longer text in parts.</p>
+</div>
+<div class="card limita">
+<span class="eticheta">Response</span>
+<strong class="cifra">200</strong> <span class="unitate">itemized errors</span>
+<p>The corrected text includes all of them, and the response gives the total.</p>
+</div>
+<div class="card limita">
+<span class="eticheta">Per day, from the same IP address</span>
+<strong class="cifra">2,000</strong> <span class="unitate">calls</span>
+<p>And at most 600 distinct rules. The day follows UTC. All the rules are also on <a href="https://github.com/doITmagic/romana/tree/main/skills/romana/references">GitHub</a>.</p>
+</div>
+<div class="card limita">
+<span class="eticheta">Rule search</span>
+<strong class="cifra">10</strong> <span class="unitate">rules per response</span>
+<p>A query has at most 200 characters.</p>
+</div>
+<div class="card limita">
+<span class="eticheta">Rate</span>
+<strong class="cifra">10</strong> <span class="unitate">requests per second</span>
+<p>From the same address.</p>
+</div>
+</div>
+
+<h2>How to add it</h2>
+<div class="grila">
+<div class="card">
+<h3>claude.ai</h3>
+<p>From the <a href="https://claude.ai/directory/romana">Claude directory</a> or, in the web or desktop app: Customize → Connectors → <em>Add custom connector</em>, with the server address and no authentication.</p>
+</div>
+<div class="card">
+<h3>ChatGPT</h3>
+<p>Install the <a href="https://github.com/doITmagic/romana/releases/latest/download/romana-plugin.zip"><code>romana-plugin.zip</code></a> archive (Plugins → Add → <em>Upload plugin archive</em>); it already contains the server.</p>
+</div>
+<div class="card lat">
+<h3>Claude Code</h3>
+<pre><code>claude mcp add --transport http romana-public https://mcp.doitmagic.ro/mcp</code></pre>
+</div>
+<div class="card lat">
+<h3>Codex</h3>
+<p>The plugin installed from <code>doITmagic/romana</code> already includes it. Manually, in <code>~/.codex/config.toml</code>:</p>
+<pre><code>[mcp_servers.romana-public]
+url = "https://mcp.doitmagic.ro/mcp"</code></pre>
+</div>
+</div>
+<p class="nota">For Cursor, VS Code and GitHub Copilot, see the <a href="https://github.com/doITmagic/romana#public-mcp-server">README</a>.</p>
+
+<h2>Privacy</h2>
+<p>Checked texts stay in memory only while the response is computed and are not kept. Usage statistics record the tool, the client app, the country, <code>cauta_regula</code> queries and the IDs of the rules found, not the texts. Details: <a href="https://doitmagic.ro/romana/privacy/">privacy</a> and <a href="https://doitmagic.ro/romana/terms/">terms</a>.</p>
 </section>
+</main>
 
 <footer>
-<p>Un proiect <a href="https://doitmagic.ro/">DO IT MAGIC SOFTWARE</a> · <span lang="en">A project by <a href="https://doitmagic.ro/">DO IT MAGIC SOFTWARE</a></span></p>
+<p>Un proiect <a href="https://doitmagic.ro/">DO IT MAGIC SOFTWARE</a>, Pitești · <span lang="en">A project by <a href="https://doitmagic.ro/">DO IT MAGIC SOFTWARE</a></span></p>
 <p class="legaturi"><a href="https://doitmagic.ro/blog/romana-agenti-ai-scriu-corect-in-romana/">Articol</a> · <a href="https://github.com/doITmagic/romana">GitHub</a> · <a href="https://claude.ai/directory/romana">Directorul Claude</a> · <a href="https://doitmagic.ro/romana/confidentialitate/">Confidențialitate</a> · <a href="https://doitmagic.ro/romana/conditii/">Condiții</a> · <a href="https://doitmagic.ro/romana/privacy/" lang="en">Privacy</a> · <a href="https://doitmagic.ro/romana/terms/" lang="en">Terms</a></p>
 </footer>
-</main>
 </body>
 </html>

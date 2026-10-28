@@ -9,6 +9,7 @@ import (
 	"net"
 	"net/http"
 	"net/http/httptest"
+	"regexp"
 	"strings"
 	"testing"
 	"time"
@@ -105,10 +106,29 @@ func TestVerificaGreseli(t *testing.T) {
 	if !strings.Contains(r["limite"].(string), "nu înseamnă un text corect") {
 		t.Errorf("limite: %v", r["limite"])
 	}
-	// textul corect: listă goală, nu null
+	if r["text_corectat"] != "Așa când voiam." {
+		t.Errorf("text_corectat: %v", r["text_corectat"])
+	}
+	if o := obs[0].(map[string]any); o["linie"] != float64(1) || o["context"] != "Aşa cînd vroiam" {
+		t.Errorf("linie și context: %v", o)
+	}
+	// textul corect: listă goală, nu null, iar textul rămâne neschimbat
 	r = structurat(t, rezultat(t, cerere(t, h, "POST", "/mcp", apel("verifica_greseli", `{"text":"Așa e corect."}`))))
-	if o, ok := r["observatii"].([]any); !ok || len(o) != 0 {
-		t.Errorf("text corect: %v", r["observatii"])
+	if o, ok := r["observatii"].([]any); !ok || len(o) != 0 || r["text_corectat"] != "Așa e corect." {
+		t.Errorf("text corect: %v", r)
+	}
+}
+
+// Lista se taie la MaxObservatii, dar textul corectat are toate corecturile.
+func TestVerificaGreseliTextCorectatComplet(t *testing.T) {
+	h := server(t, "")
+	text := strings.Repeat("şi ", mcp.MaxObservatii+50)
+	r := structurat(t, rezultat(t, cerere(t, h, "POST", "/mcp", apel("verifica_greseli", `{"text":"`+text+`"}`))))
+	if n := len(r["observatii"].([]any)); n != mcp.MaxObservatii {
+		t.Errorf("observații: %d", n)
+	}
+	if c := r["text_corectat"].(string); c != strings.Repeat("și ", mcp.MaxObservatii+50) {
+		t.Errorf("text_corectat incomplet: %.80q…", c)
 	}
 }
 
@@ -488,5 +508,47 @@ func TestCotaZilnica(t *testing.T) {
 	zi = zi.Add(2 * time.Minute)
 	if w := cerere(t, h, "POST", "/mcp", apel("verifica_greseli", `{"text":"x"}`), de("203.0.113.8")...); w.Code != 200 {
 		t.Fatalf("a doua zi: %d", w.Code)
+	}
+}
+
+// Limitele se văd peste tot: în schema și descrierea uneltelor, în
+// instrucțiunile serverului, pe pagina web și în răspunsul text de la „/”.
+func TestLimiteVizibile(t *testing.T) {
+	h := server(t, "")
+	r := rezultat(t, cerere(t, h, "POST", "/mcp", `{"jsonrpc":"2.0","id":2,"method":"tools/list"}`))
+	vrut := map[string]struct {
+		camp string
+		max  float64
+	}{"verifica_greseli": {"text", 200000}, "cauta_regula": {"interogare", 200}}
+	for _, u := range r["tools"].([]any) {
+		m := u.(map[string]any)
+		v := vrut[m["name"].(string)]
+		p := m["inputSchema"].(map[string]any)["properties"].(map[string]any)[v.camp].(map[string]any)
+		if p["maxLength"] != v.max {
+			t.Errorf("%s: maxLength = %v, aștept %v", m["name"], p["maxLength"], v.max)
+		}
+		if !strings.Contains(m["description"].(string), "Limite:") {
+			t.Errorf("%s: descrierea nu spune limitele", m["name"])
+		}
+	}
+	init := rezultat(t, cerere(t, h, "POST", "/mcp", `{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}`))
+	if s := init["instructions"].(string); !strings.Contains(s, "200.000 de caractere") || !strings.Contains(s, "2.000 de apeluri") {
+		t.Errorf("instrucțiunile nu spun limitele: %s", s)
+	}
+	pagina := cerere(t, h, "GET", "/", "", "Accept", "text/html").Body.String()
+	for _, s := range []string{`id="limite"`, `id="limits"`, `href="#limite"`, `href="#limits"`} {
+		if !strings.Contains(pagina, s) {
+			t.Errorf("pagina nu conține %q", s)
+		}
+	}
+	// textul vizibil, fără etichete: cifrele pot sta în elemente proprii
+	vizibil := strings.Join(strings.Fields(regexp.MustCompile(`<[^>]+>`).ReplaceAllString(pagina, "")), " ")
+	for _, s := range []string{"200.000 de caractere", "2.000 de apeluri", "600 de reguli", "200,000 characters", "2,000 calls", "600 distinct rules"} {
+		if !strings.Contains(vizibil, s) {
+			t.Errorf("pagina nu arată %q", s)
+		}
+	}
+	if txt := cerere(t, h, "GET", "/", "", "Accept", "text/plain").Body.String(); !strings.Contains(txt, "200.000 de caractere") {
+		t.Errorf("textul de la / nu spune limitele: %s", txt)
 	}
 }

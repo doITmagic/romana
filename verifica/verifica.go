@@ -54,10 +54,13 @@ type Necunoscut struct {
 
 // Raport adună rezultatul verificării unui text.
 type Raport struct {
-	Necunoscute []Necunoscut      `json:"necunoscute"`
-	Lint        []lint.Observatie `json:"lint"`
-	Limite      string            `json:"limite"` // mereu Limite: ce nu verifică unealta
-	Trunchiat   *Trunchiere       `json:"trunchiat,omitempty"`
+	// TextCorectat: textul primit, cu toate greșelile sigure (Lint)
+	// corectate; cuvintele necunoscute rămân cum sunt.
+	TextCorectat string            `json:"text_corectat"`
+	Necunoscute  []Necunoscut      `json:"necunoscute"`
+	Lint         []lint.Observatie `json:"lint"`
+	Limite       string            `json:"limite"` // mereu Limite: ce nu verifică unealta
+	Trunchiat    *Trunchiere       `json:"trunchiat,omitempty"`
 	// FaraDiacritice: textul nu are deloc diacritice, iar mai multe cuvinte
 	// există doar cu ele. E o singură problemă, a întregului text; nota o spune,
 	// ca lista de necunoscute să nu fie citită ca greșeli separate.
@@ -244,6 +247,7 @@ func Text(ctx context.Context, c Cautator, text string) (Raport, error) {
 	if rap.Lint == nil {
 		rap.Lint = []lint.Observatie{} // listă goală, nu null, în JSON
 	}
+	rap.TextCorectat = lint.Aplica(text, rap.Lint)
 	ignorat := lint.Ignorat(text)
 	memo := map[string]bool{}
 	memoSug := map[string][]string{}

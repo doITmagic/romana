@@ -70,10 +70,11 @@ const descriereVerifica = `Trecere mecanică peste un text în română: caută 
 	`„Necunoscut” nu înseamnă „greșit”: înseamnă doar că dicționarul nu are forma. ` +
 	`Când textul nu are deloc diacritice, „fara_diacritice” o spune o dată: e o singură problemă, a întregului text, nu câte una pentru fiecare cuvânt din listă. ` +
 	`„neverificat” = true marchează ce dicționarul nu poate judeca (nume proprii, numere, adrese, cod, cuvinte în alt alfabet); „motiv” spune de ce. ` +
-	`„lint” are greșelile sigure, independente de context (de exemplu ș și ț scrise cu sedilă): fiecare cu fragmentul, propunerea, un mesaj care explică greșeala și, uneori, o notă despre excepții (de exemplu citatul exact). ` +
-	`Unealta nu corectează textul și nu decide: dă materialul, iar cuvintele necunoscute trebuie judecate din context. ` +
+	`„lint” are greșelile sigure, independente de context (de exemplu ș și ț scrise cu sedilă): fiecare cu fragmentul, propunerea, linia, contextul (câteva cuvinte din jur), un mesaj care explică greșeala și, uneori, o notă despre excepții (de exemplu citatul exact). ` +
+	`„text_corectat” e textul primit, cu toate greșelile sigure corectate, chiar și când lista e tăiată. ` +
+	`Cuvintele necunoscute nu se corectează: unealta dă materialul, iar ele trebuie judecate din context. ` +
 	`Nu verifică acordul, sensul, coerența, punctuația sau stilul: un raport fără observații nu înseamnă un text corect („limite” o spune în fiecare răspuns). ` +
-	`Textul poate avea cel mult ` + maxCaractereTxt + ` de caractere. Fiecare listă are cel mult 200 de elemente; „trunchiat”, dacă apare, spune câte erau în total.`
+	`Limite: textul poate avea cel mult ` + maxCaractereTxt + ` de caractere. Fiecare listă are cel mult 200 de elemente; „trunchiat”, dacă apare, spune câte erau în total.`
 
 // MaxObservatii: câte elemente are cel mult fiecare listă din răspunsul
 // verifica_text; un text vechi, plin de sedile, ar da altfel zeci de MB.
@@ -115,6 +116,13 @@ func schema(camp, descriere string) map[string]any {
 	}
 }
 
+// schemaMax: ca schema, cu lungimea maximă a câmpului, în caractere.
+func schemaMax(camp, descriere string, max int) map[string]any {
+	s := schema(camp, descriere)
+	s["properties"].(map[string]any)[camp].(map[string]any)["maxLength"] = max
+	return s
+}
+
 var lista = []unealta{
 	{
 		Name:        "cauta_cuvant",
@@ -127,7 +135,7 @@ var lista = []unealta{
 		Name:        "verifica_text",
 		Title:       "Verifică un text în română",
 		Description: descriereVerifica,
-		InputSchema: schema("text", "Textul de verificat, în română. Markdown, cod inline și blocuri de cod sunt acceptate; codul nu se verifică."),
+		InputSchema: schemaMax("text", "Textul de verificat, în română, de cel mult "+maxCaractereTxt+" de caractere. Markdown, cod inline și blocuri de cod sunt acceptate; codul nu se verifică.", verifica.MaxCaractere),
 		Annotations: doarCitire("Verifică un text în română"),
 	},
 }

@@ -89,8 +89,10 @@ No binary and no network.
 
 `https://mcp.doitmagic.ro/mcp` (Streamable HTTP), free, read-only, nothing to install, open to any AI assistant. Two tools that need no dictionary:
 
-- `verifica_greseli`: the errors that do not depend on context (ș and ț with a cedilla, the old spelling with „î” inside words and „sînt”, „vroiam”, spaces before punctuation and double spaces), each with its rule and source;
+- `verifica_greseli`: the errors that do not depend on context (ș and ț with a cedilla, the old spelling with „î” inside words and „sînt”, „vroiam”, spaces before punctuation and double spaces). It returns `text_corectat`, the whole text with these errors corrected, and each error with its line, the surrounding words (`context`), the fix, the rule and its source;
 - `cauta_regula`: the 854 rules of the skill, by ID (`RO-TIP-027`) or by words („a face sens”), with level, examples and source.
+
+**Limits:** at most 200,000 characters per call (send a longer text in parts); at most 200 itemized errors per response, while `text_corectat` covers all of them; a rule query of at most 200 characters and at most 10 rules per response; from the same IP address, at most 2,000 calls and 600 distinct rules per day (UTC) and 10 requests per second.
 
 The dexonline dictionary is not on the server: its license does not allow serving it to others, so `cauta_cuvant` stays with the [local binary](#mcp-server-only). For the best results, use the server together with the skill.
 

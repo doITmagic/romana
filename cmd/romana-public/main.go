@@ -214,6 +214,7 @@ func Server(cfg Config) *echo.Echo {
 			(strings.Contains(acc, "text/plain") || strings.Contains(acc, "application/json")) {
 			return c.String(http.StatusOK, "romana: server MCP pentru texte în limba română (verifica_greseli, cauta_regula).\n"+
 				"Adresa MCP: https://mcp.doitmagic.ro/mcp (Streamable HTTP, POST)\n"+
+				"Limite: cel mult 200.000 de caractere pe text; de la aceeași adresă IP, cel mult 2.000 de apeluri și 600 de reguli diferite pe zi (UTC).\n"+
 				"Un proiect DO IT MAGIC SOFTWARE: https://doitmagic.ro/\n"+
 				"Cod sursă: https://github.com/doITmagic/romana\n")
 		}

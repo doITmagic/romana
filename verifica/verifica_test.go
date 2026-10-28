@@ -331,3 +331,15 @@ func TestGrafieVecheFaraSugestieZgomotoasa(t *testing.T) {
 		t.Error("linterul ar trebui să marcheze sînt")
 	}
 }
+
+// Raportul are textul cu greșelile sigure corectate; cuvintele necunoscute
+// rămân neatinse, pentru că nu sunt greșeli sigure.
+func TestTextCorectat(t *testing.T) {
+	r, err := Text(context.Background(), baza, "Aşa  e zzz .")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if r.TextCorectat != "Așa e zzz." {
+		t.Errorf("text_corectat = %q", r.TextCorectat)
+	}
+}

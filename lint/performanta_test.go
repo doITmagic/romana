@@ -68,3 +68,25 @@ func TestVerificaMaxPastreazaPrimele(t *testing.T) {
 		}
 	}
 }
+
+// Linia și contextul fiecărei observații nu au voie să recitească textul:
+// un rând lung plin de greșeli, cu toate observațiile cerute (CLI, hook).
+func TestToateObservatiileRamanLiniare(t *testing.T) {
+	if testing.Short() {
+		t.Skip("durează câteva secunde")
+	}
+	prag := 2 * time.Second
+	if curse {
+		prag *= 20
+	}
+	text := strings.Repeat("ş ", 100_000)
+	start := time.Now()
+	obs := Verifica(text)
+	corectat := Corecteaza(text)
+	if d := time.Since(start); d > prag {
+		t.Errorf("%v pentru %d observații", d, len(obs))
+	}
+	if strings.Contains(corectat, "ş") {
+		t.Error("textul corectat mai are sedile")
+	}
+}
